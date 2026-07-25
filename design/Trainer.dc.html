@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/classical-2e6c62b8-ac98-438f-ba83-7403479472bd/styles.css">
+<script src="_ds/classical-2e6c62b8-ac98-438f-ba83-7403479472bd/_ds_bundle.js"></script>
+<style>
+.lt-app{container-type:inline-size;min-height:100%}
+.lt-wrap{width:100%;max-width:860px;margin:0 auto;padding:clamp(16px,4cqw,40px)}
+input[type=range]{-webkit-appearance:none;appearance:none;height:18px;border-radius:2px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:var(--color-divider)}
+input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:var(--color-divider)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--color-bg);border:2px solid var(--color-accent);cursor:pointer;margin-top:-7px}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--color-bg);border:2px solid var(--color-accent);cursor:pointer}
+.lt-topic:hover{border-color:var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,transparent)}
+.lt-grid{display:block}.lt-stack{display:none}
+.lt-chip{display:inline-flex;flex-direction:column;align-items:center;gap:1px;cursor:pointer;padding:6px 12px;border-radius:var(--radius-md);border:1px solid var(--color-divider);line-height:1.2;user-select:none;background:var(--color-bg)}
+.lt-chip:hover{border-color:var(--color-accent)}
+@container (max-width:719px){.lt-grid{display:none}.lt-stack{display:block}}
+</style>
+</helmet>
+<div class="lt-app" style="font-family:var(--font-body);color:var(--color-text);background:var(--color-bg)">
+
+  <sc-if value="{{ isTopics }}" hint-placeholder-val="{{ true }}">
+    <div class="lt-wrap">
+      <div style="margin-bottom:var(--space-6)">
+        <div class="card-kicker">Тренажер литовська</div>
+        <h1 style="font-size:clamp(30px,6cqw,46px);margin:2px 0 4px">Оберіть тему</h1>
+        <p class="text-muted" style="max-width:44ch">Учіться у власному темпі. Без балів і перевірок — вводите свій варіант, розкриваєте правильний, порівнюєте самі.</p>
+      </div>
+      <div style="display:grid;gap:var(--space-3)">
+        <div class="lt-topic" role="button" tabindex="0" onClick="{{ goTopic }}" style="cursor:pointer;border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:var(--space-4);background:var(--color-surface);transition:border-color .15s,background .15s;display:flex;align-items:center;gap:var(--space-4)">
+          <div style="font-family:var(--font-heading);font-size:44px;line-height:1;color:var(--color-accent);width:64px;text-align:center;flex:none">Įn.</div>
+          <div style="flex:1">
+            <div class="card-kicker">Тема 1</div>
+            <h3 style="margin:0 0 4px">Відмінки</h3>
+            <p class="text-muted" style="margin:0;font-size:13px">Відмінювання іменників · 6 відмінків · 12 типів</p>
+          </div>
+          <div class="text-muted" style="font-size:26px">›</div>
+        </div>
+        <div style="border:1px dashed var(--color-divider);border-radius:var(--radius-lg);padding:var(--space-4);text-align:center" class="text-muted">
+          <span style="font-size:13px">Наступні теми — згодом</span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isTrainer }}">
+    <div class="lt-wrap">
+
+      <div style="display:flex;align-items:center;gap:var(--space-3);padding-block:var(--space-2) var(--space-3)">
+        <button class="btn btn-secondary btn-icon" onClick="{{ goBack }}" aria-label="Назад до тем">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
+        </button>
+        <div>
+          <div class="card-kicker">Відмінки</div>
+          <h2 style="margin:0;font-size:clamp(22px,3.6cqw,32px)">Відмінювання іменників</h2>
+        </div>
+      </div>
+      <hr class="hr" style="margin-block:0 var(--space-4)">
+
+      <!-- МАТЕРІАЛИ (довідник) — над завданням -->
+      <div style="margin-bottom:var(--space-6)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:var(--space-3)">
+          <div style="display:flex;align-items:baseline;gap:12px">
+            <span class="card-kicker" style="margin:0">Матеріали</span>
+            <button class="btn btn-ghost" onClick="{{ toggleTable }}" style="font-size:14px">{{ tableBtnLabel }}</button>
+          </div>
+          <sc-if value="{{ tableOpen }}">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="text-muted" style="font-size:12px">Показати:</span>
+              <div class="seg">
+                <label class="seg-opt"><input type="radio" name="lt-viewnum" checked="{{ viewSg }}" onChange="{{ onViewSg }}">Однина</label>
+                <label class="seg-opt"><input type="radio" name="lt-viewnum" checked="{{ viewPl }}" onChange="{{ onViewPl }}">Множина</label>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{ tableOpen }}" hint-placeholder-val="{{ true }}">
+          <div class="lt-grid">
+            <div style="overflow-x:auto;border:1px solid var(--color-divider);border-radius:var(--radius-md);background:var(--color-bg)">
+              <table class="table" style="min-width:880px;font-size:13px;border-collapse:separate;border-spacing:0">
+                <thead>
+                  <tr>
+                    <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider)"></th>
+                    <th colspan="{{ maleSpan }}" style="text-align:center;background:#f7e6c9;color:var(--color-accent-800);border-bottom:1px solid var(--color-divider)">Чоловічий рід</th>
+                    <th colspan="{{ femaleSpan }}" style="text-align:center;background:#e7dff0;color:#574a71;border-bottom:1px solid var(--color-divider)">Жіночий рід</th>
+                  </tr>
+                  <tr>
+                    <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider);vertical-align:bottom;text-align:left"><span style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--color-text)">Відмінок</span></th>
+                    <sc-for list="{{ tableCols }}" as="col" hint-placeholder-count="12">
+                      <th style="{{ col.style }}">
+                        <div style="line-height:1.15"><span style="font-weight:600;color:var(--color-text)">{{ col.ending }}</span><br><span class="text-muted" style="font-weight:400;text-transform:none;letter-spacing:0">{{ col.sample }}</span></div>
+                      </th>
+                    </sc-for>
+                  </tr>
+                </thead>
+                <tbody>
+                  <sc-for list="{{ tableRows }}" as="row" hint-placeholder-count="6">
+                    <tr>
+                      <th style="{{ row.style }}">
+                        <div style="text-transform:none;letter-spacing:0;white-space:nowrap">
+                          <span style="font-weight:600;color:var(--color-text)">{{ row.abbr }}</span> <span style="font-style:italic;color:var(--color-neutral-600)">{{ row.q }}</span><br>
+                          <span style="font-weight:400;color:var(--color-text)">{{ row.name }}</span>
+                          <sc-if value="{{ row.hasPreps }}"><br><span class="text-muted" style="font-size:10.5px;font-weight:400">{{ row.preps }}</span></sc-if>
+                        </div>
+                      </th>
+                      <sc-for list="{{ row.cells }}" as="cell" hint-placeholder-count="12">
+                        <td style="{{ cell.style }}">{{ cell.el }}</td>
+                      </sc-for>
+                    </tr>
+                  </sc-for>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="lt-stack">
+            <div style="border:1px solid var(--color-divider);border-radius:var(--radius-md);overflow:hidden">
+              <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--color-surface);border-bottom:1px solid var(--color-divider)">
+                <span class="card-kicker" style="margin:0;white-space:nowrap">Тип</span>
+                <select value="{{ focusType }}" onChange="{{ onFocusType }}" class="input" style="flex:1;min-height:34px;font-family:var(--font-heading);font-size:14px">
+                  <sc-for list="{{ focusOptions }}" as="op" hint-placeholder-count="12">
+                    <option value="{{ op.id }}">{{ op.label }}</option>
+                  </sc-for>
+                </select>
+              </div>
+              <sc-for list="{{ focusRows }}" as="fr" hint-placeholder-count="6">
+                <div style="{{ fr.style }}">
+                  <span style="white-space:nowrap"><span style="font-family:var(--font-heading);font-weight:600">{{ fr.abbr }}</span> <span style="font-style:italic;color:var(--color-neutral-600);font-size:12px">{{ fr.q }}</span> · <span style="font-size:12px">{{ fr.name }}</span></span>
+                  <span style="font-family:var(--font-heading);font-size:20px">{{ fr.el }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- ЗАВДАННЯ -->
+      <div style="border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:clamp(20px,4.5cqw,44px);background:var(--color-surface);box-shadow:var(--shadow-sm);margin-bottom:var(--space-6)">
+        <sc-if value="{{ hasTask }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;min-height:24px">
+            <sc-if value="{{ task.hasName }}"><span class="tag tag-outline">{{ task.name }}</span></sc-if>
+            <sc-if value="{{ task.hasQuestion }}"><span class="tag tag-accent">{{ task.question }}</span></sc-if>
+            <sc-if value="{{ task.hasPrep }}"><span class="tag tag-neutral">прийменник · {{ task.prep }}</span></sc-if>
+          </div>
+
+          <div style="text-align:center;margin:clamp(16px,3.5cqw,28px) 0">
+            <div style="font-family:var(--font-heading);font-size:clamp(38px,8cqw,64px);line-height:1.02">{{ task.promptEl }}</div>
+            <sc-if value="{{ task.hasNote }}"><div class="text-muted" style="font-size:13px;margin-top:8px">{{ task.promptNote }}</div></sc-if>
+          </div>
+
+          <div style="display:flex;justify-content:center;margin-bottom:var(--space-3)">
+            <div style="display:inline-flex;align-items:baseline;gap:8px;font-family:var(--font-heading);font-size:clamp(24px,4.5cqw,34px)">
+              <sc-if value="{{ task.hasPrep }}"><span class="text-muted">{{ task.prep }}</span></sc-if>
+              <div style="display:inline-flex;align-items:baseline;border-bottom:2px solid var(--color-accent);padding:0 4px 2px">
+                <span style="color:var(--color-neutral-500);white-space:pre">{{ task.stemPrefix }}</span>
+                <input value="{{ userInput }}" onInput="{{ onInput }}" placeholder="…" autocomplete="off" autocapitalize="off" spellcheck="false" style="border:0;background:transparent;font:inherit;color:var(--color-text);caret-color:var(--color-accent);width:clamp(80px,22cqw,170px);outline:none;padding:0">
+              </div>
+            </div>
+          </div>
+
+          <div style="min-height:clamp(124px,18cqw,152px);border-top:1px solid var(--color-divider);margin-top:var(--space-3);padding-top:var(--space-4)">
+            <div style="text-align:center;transition:opacity .18s;{{ revealStyle }}">
+              <div class="card-kicker">Правильна форма</div>
+              <div style="font-family:var(--font-heading);font-size:clamp(30px,6cqw,50px);line-height:1.02;margin:6px 0 12px">
+                <sc-if value="{{ task.hasPrep }}"><span style="color:var(--color-neutral-500);font-size:.68em">{{ task.prep }} </span></sc-if>{{ answerEl }}
+              </div>
+              <div class="text-muted" style="font-size:14px">Твій варіант:&nbsp;<span style="color:var(--color-text);font-family:var(--font-heading);font-size:18px">{{ userEcho }}</span></div>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:center;margin-top:var(--space-4)">
+            <button class="btn btn-primary" onClick="{{ primaryAction }}" style="min-width:190px">{{ primaryLabel }}</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ poolEmpty }}">
+          <div class="text-muted" style="text-align:center;padding:var(--space-8) 0;font-size:15px">Оберіть нижче хоча б один відмінок, один тип відмінювання та число.</div>
+        </sc-if>
+      </div>
+
+      <!-- ЩО ВИВЧАЄМО (селектор чіпами) — під завданням -->
+      <div style="border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:clamp(16px,3cqw,26px);margin-bottom:var(--space-8)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:var(--space-4)">
+          <h4 style="margin:0">Що вивчаємо</h4>
+          <span class="text-muted" style="font-size:12px">задає, що випадає у завданнях</span>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+
+          <div>
+            <div style="margin-bottom:8px"><span class="card-kicker" style="margin:0">Складність · {{ levelHuman }}</span></div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <span class="text-muted" style="font-size:12px">просто</span>
+              <input type="range" min="0" max="5" step="1" value="{{ level }}" onInput="{{ onLevel }}" style="flex:1">
+              <span class="text-muted" style="font-size:12px">складно</span>
+            </div>
+          </div>
+
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px">
+              <span class="card-kicker" style="margin:0">Відмінки</span>
+              <button class="btn btn-ghost" style="font-size:12px;padding:2px 8px" onClick="{{ mCases.onToggle }}">{{ mCases.allLabel }}</button>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ caseChips }}" as="ch" hint-placeholder-count="6">
+                <label class="lt-chip" style="{{ ch.style }}">
+                  <input type="checkbox" checked="{{ ch.checked }}" onChange="{{ ch.onToggle }}" style="display:none">
+                  <span style="font-family:var(--font-heading);font-weight:600;font-size:15px">{{ ch.abbr }}</span>
+                  <span class="text-muted" style="font-size:10px">{{ ch.name }}</span>
+                </label>
+              </sc-for>
+            </div>
+          </div>
+
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px">
+              <span class="card-kicker" style="margin:0;color:var(--color-accent-800)">Чоловічий рід</span>
+              <button class="btn btn-ghost" style="font-size:12px;padding:2px 8px" onClick="{{ mMale.onToggle }}">{{ mMale.allLabel }}</button>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ maleChips }}" as="ch" hint-placeholder-count="7">
+                <label class="lt-chip" style="{{ ch.style }}">
+                  <input type="checkbox" checked="{{ ch.checked }}" onChange="{{ ch.onToggle }}" style="display:none">
+                  <span style="font-weight:600;font-size:13px">{{ ch.ending }}</span>
+                  <span class="text-muted" style="font-size:10px">{{ ch.sample }}</span>
+                </label>
+              </sc-for>
+            </div>
+          </div>
+
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px">
+              <span class="card-kicker" style="margin:0;color:#574a71">Жіночий рід</span>
+              <button class="btn btn-ghost" style="font-size:12px;padding:2px 8px" onClick="{{ mFemale.onToggle }}">{{ mFemale.allLabel }}</button>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ femaleChips }}" as="ch" hint-placeholder-count="5">
+                <label class="lt-chip" style="{{ ch.style }}">
+                  <input type="checkbox" checked="{{ ch.checked }}" onChange="{{ ch.onToggle }}" style="display:none">
+                  <span style="font-weight:600;font-size:13px">{{ ch.ending }}</span>
+                  <span class="text-muted" style="font-size:10px">{{ ch.sample }}</span>
+                </label>
+              </sc-for>
+            </div>
+          </div>
+
+          <div>
+            <div style="margin-bottom:8px"><span class="card-kicker" style="margin:0">Число</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ numberChips }}" as="ch" hint-placeholder-count="2">
+                <label class="lt-chip" style="{{ ch.style }}">
+                  <input type="checkbox" checked="{{ ch.checked }}" onChange="{{ ch.onToggle }}" style="display:none">
+                  <span style="font-family:var(--font-heading);font-weight:600;font-size:14px">{{ ch.label }}</span>
+                </label>
+              </sc-for>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  ORDER = ['V','K','N','G','In','Vt'];
+  RED = '#b3352b';
+  CASES = [
+    {id:'V', abbr:'V.',  q:'kas?', name:'Називний',  preps:[]},
+    {id:'K', abbr:'K.',  q:'ko?',  name:'Родовий',   preps:['iš','nuo','iki','prie','be','dėl']},
+    {id:'N', abbr:'N.',  q:'kam?', name:'Давальний', preps:[]},
+    {id:'G', abbr:'G.',  q:'ką?',  name:'Знахідний', preps:['į','per','pro','apie','pas','už']},
+    {id:'In',abbr:'Įn.', q:'kuo?', name:'Орудний',   preps:['su']},
+    {id:'Vt',abbr:'Vt.', q:'kur?', name:'Місцевий',  preps:[]},
+  ];
+  TYPES = [
+    {id:'as',  gender:'m', ending:'-as',  sample:'namas',  uk:'будинок', sg:['namas','namo','namui','namą','namu','name'], pl:['namai','namų','namams','namus','namais','namuose']},
+    {id:'is_b',gender:'m', ending:'-is',  sample:'brolis', uk:'брат',    sg:['brolis','brolio','broliui','brolį','broliu','brolyje'], pl:['broliai','brolių','broliams','brolius','broliais','broliuose']},
+    {id:'is_m',gender:'m', ending:'-is*', sample:'medis',  uk:'дерево',  sg:['medis','medžio','medžiui','medį','medžiu','medyje'], pl:['medžiai','medžių','medžiams','medžius','medžiais','medžiuose']},
+    {id:'ys',  gender:'m', ending:'-ys',  sample:'arklys', uk:'кінь',    sg:['arklys','arklio','arkliui','arklį','arkliu','arklyje'], pl:['arkliai','arklių','arkliams','arklius','arkliais','arkliuose']},
+    {id:'us',  gender:'m', ending:'-us',  sample:'turgus', uk:'ринок',   sg:['turgus','turgaus','turgui','turgų','turgumi','turguje'], pl:['turgūs','turgų','turgums','turgus','turgumis','turguose']},
+    {id:'ius', gender:'m', ending:'-ius', sample:'vaisius',uk:'фрукт',   sg:['vaisius','vaisiaus','vaisiui','vaisių','vaisiumi','vaisiuje'], pl:['vaisiai','vaisių','vaisiams','vaisius','vaisiais','vaisiuose']},
+    {id:'uo_m',gender:'m', ending:'-uo',  sample:'akmuo',  uk:'камінь',  sg:['akmuo','akmens','akmeniui','akmenį','akmeniu','akmenyje'], pl:['akmenys','akmenų','akmenims','akmenis','akmenimis','akmenyse']},
+    {id:'a',   gender:'f', ending:'-a',   sample:'knyga',  uk:'книга',   sg:['knyga','knygos','knygai','knygą','knyga','knygoje'], pl:['knygos','knygų','knygoms','knygas','knygomis','knygose']},
+    {id:'ia',  gender:'f', ending:'-ia',  sample:'vyšnia', uk:'вишня',   sg:['vyšnia','vyšnios','vyšniai','vyšnią','vyšnia','vyšnioje'], pl:['vyšnios','vyšnių','vyšnioms','vyšnias','vyšniomis','vyšniose']},
+    {id:'e',   gender:'f', ending:'-ė',   sample:'upė',    uk:'річка',   sg:['upė','upės','upei','upę','upe','upėje'], pl:['upės','upių','upėms','upes','upėmis','upėse']},
+    {id:'is_f',gender:'f', ending:'-is',  sample:'pilis',  uk:'замок',   sg:['pilis','pilies','piliai','pilį','pilimi','pilyje'], pl:['pilys','pilių','pilims','pilis','pilimis','pilyse']},
+    {id:'uo_f',gender:'f', ending:'-uo',  sample:'sesuo',  uk:'сестра',  sg:['sesuo','sesers','seseriai','seserį','seserimi','seseryje'], pl:['seserys','seserų','seserims','seseris','seserimis','seseryse']},
+  ];
+  STOPS = [
+    {word:'fixed', prompt:'lt-nom',       signal:'full',   question:true},
+    {word:'pool',  prompt:'lt-nom',       signal:'full',   question:true},
+    {word:'pool',  prompt:'lt-nom',       signal:'driver', question:true},
+    {word:'pool',  prompt:'lt-othercase', signal:'driver', question:true},
+    {word:'pool',  prompt:'mix-otheruk',  signal:'driver', question:false},
+    {word:'pool',  prompt:'uk',           signal:'min',    question:false},
+  ];
+  LEVELDESC = [
+    'Одне слово · дано називний · усі підказки',
+    'Слова з пулу · дано називний · усі підказки',
+    'З пулу · називний · лише драйвер',
+    'Змінюємо відмінок · дано інше слово',
+    'Інший відмінок або укр. слово · без питання',
+    'Дано укр. слово · переклади й провідміняй',
+  ];
+  KEY = 'lt-trainer-vidminky-v1';
+
+  state = {
+    screen:'topics', level:1,
+    cases:{V:false,K:true,N:false,G:true,In:true,Vt:false},
+    types:{as:true,is_b:false,is_m:false,ys:false,us:false,ius:false,uo_m:false,a:true,ia:false,e:true,is_f:false,uo_f:false},
+    numbers:{sg:true,pl:false},
+    viewNumber:'sg', tableOpen:true, focusType:'as',
+    revealed:false, userInput:'', task:null,
+  };
+  _stem = {};
+
+  constructor(props){
+    super(props);
+    try {
+      const raw = localStorage.getItem(this.KEY);
+      if (raw) {
+        const s = JSON.parse(raw);
+        this.state = {...this.state,
+          level: s.level ?? this.state.level,
+          cases: {...this.state.cases, ...(s.cases||{})},
+          types: {...this.state.types, ...(s.types||{})},
+          numbers: {...this.state.numbers, ...(s.numbers||{})},
+          viewNumber: s.viewNumber ?? this.state.viewNumber,
+          tableOpen: s.tableOpen ?? this.state.tableOpen,
+        };
+      }
+    } catch(e){}
+  }
+  componentDidMount(){ if (!this.state.task) this.newTask(); }
+
+  persist(){
+    try {
+      const {level,cases,types,numbers,viewNumber,tableOpen} = this.state;
+      localStorage.setItem(this.KEY, JSON.stringify({level,cases,types,numbers,viewNumber,tableOpen}));
+    } catch(e){}
+  }
+
+  rnd(a){ return a[Math.floor(Math.random()*a.length)]; }
+  idx(id){ return this.ORDER.indexOf(id); }
+  commonPrefix(arr){ let p=arr[0]; for(const s of arr){ let i=0; while(i<p.length&&i<s.length&&p[i]===s[i]) i++; p=p.slice(0,i);} return p; }
+  stemOf(type,num){ const k=type.id+num; if(this._stem[k]==null) this._stem[k]=this.commonPrefix(type[num]); return this._stem[k]; }
+  mkWord(stem,tail){ return React.createElement('span',null, stem?React.createElement('span',{key:'s'},stem):null, React.createElement('span',{key:'t',style:{color:this.RED}},tail)); }
+  mkText(t){ return React.createElement('span',null,t); }
+
+  poolOk(){ const s=this.state; return this.CASES.some(c=>s.cases[c.id]) && this.TYPES.some(t=>s.types[t.id]) && (s.numbers.sg||s.numbers.pl); }
+
+  newTask(){
+    const s=this.state;
+    const ec=this.CASES.filter(c=>s.cases[c.id]);
+    const et=this.TYPES.filter(t=>s.types[t.id]);
+    const en=['sg','pl'].filter(n=>s.numbers[n]);
+    if(!ec.length||!et.length||!en.length){ this.setState({task:null,revealed:false,userInput:''}); return; }
+    const stop=this.STOPS[s.level];
+    const number=this.rnd(en);
+    const type = stop.word==='fixed' ? (et.find(t=>t.id==='as')||et[0]) : this.rnd(et);
+    let mode=stop.prompt;
+    if(mode==='mix-otheruk') mode=this.rnd(['lt-othercase','uk']);
+    let casePool=ec.slice();
+    if(mode==='lt-nom' && casePool.length>1) casePool=casePool.filter(c=>c.id!=='V');
+    const target=this.rnd(casePool);
+    const ti=this.idx(target.id);
+    const forms=type[number];
+    const stem=this.stemOf(type,number);
+    const targetForm=forms[ti];
+    const tail=targetForm.slice(stem.length);
+
+    let promptEl, note=null, hasNote=false;
+    if(mode==='lt-nom'){ const f=forms[0]; promptEl=this.mkWord(stem,f.slice(stem.length)); }
+    else if(mode==='lt-othercase'){ let si=Math.floor(Math.random()*5); if(si>=ti) si++; const f=forms[si]; promptEl=this.mkWord(stem,f.slice(stem.length)); note='дано у відмінку: '+this.CASES[si].abbr+' '+this.CASES[si].name; hasNote=true; }
+    else { promptEl=this.mkText(type.uk); note='переклади й провідміняй'; hasNote=true; }
+
+    const hasPrep=target.preps.length>0;
+    const prepWord=hasPrep?this.rnd(target.preps):null;
+    const q=target.abbr+' '+target.q;
+    let sig={name:null,question:null,prep:null};
+    if(stop.signal==='full'){ sig.name=target.name; if(stop.question) sig.question=q; if(hasPrep) sig.prep=prepWord; }
+    else if(stop.signal==='driver'){ if(hasPrep) sig.prep=prepWord; if(!hasPrep||stop.question) sig.question=q; }
+    else { if(hasPrep) sig.prep=prepWord; else sig.question=q; }
+    if(!sig.name&&!sig.question&&!sig.prep) sig.question=q;
+
+    const stemPrefill = mode!=='uk';
+    this.setState({ revealed:false, userInput:'', focusType:type.id, task:{
+      caseId:target.id, typeId:type.id, number, mode,
+      promptEl, promptNote:note, hasNote,
+      hasName:!!sig.name, name:sig.name,
+      hasQuestion:!!sig.question, question:sig.question,
+      hasPrep:!!sig.prep, prep:sig.prep,
+      stemPrefill, stemPrefix: stemPrefill?stem:'',
+      stem, tail, targetForm,
+    }});
+  }
+
+  ensureTask(){
+    if(!this.poolOk()){ this.setState({task:null}); return; }
+    const s=this.state, t=s.task;
+    if(!t || !s.cases[t.caseId] || !s.types[t.typeId] || !s.numbers[t.number]) this.newTask();
+  }
+
+  setLevel(v){ this.setState({level:v},()=>{ this.persist(); this.newTask(); }); }
+  toggleKey(group,id){ this.setState(s=>({[group]:{...s[group],[id]:!s[group][id]}}),()=>{ this.persist(); this.ensureTask(); }); }
+  setView(n){ this.setState({viewNumber:n},()=>this.persist()); }
+  toggleTable(){ this.setState(s=>({tableOpen:!s.tableOpen}),()=>this.persist()); }
+  setCases(v){ const cs={}; this.CASES.forEach(c=>cs[c.id]=v); this.setState({cases:cs},()=>{this.persist();this.ensureTask();}); }
+  setTypes(ids,v){ this.setState(s=>{const t={...s.types}; ids.forEach(id=>t[id]=v); return {types:t};},()=>{this.persist();this.ensureTask();}); }
+  setFocus(id){ this.setState({focusType:id}); }
+  mkRef(indet){ return (el)=>{ if(el) el.indeterminate=!!indet; }; }
+
+  renderVals(){
+    const s=this.state, t=s.task;
+    const view=s.viewNumber;
+    const activeType = t ? t.typeId : null;
+    const activeCase = t ? t.caseId : null;
+
+    const tableCols=this.TYPES.map(tp=>{
+      const active = tp.id===activeType;
+      const base = tp.gender==='m' ? '#fdf7ee' : '#f6f2f9';
+      const hot  = tp.gender==='m' ? '#f4e3c6' : '#e7ddf0';
+      let style=`padding:8px 10px;text-align:center;vertical-align:bottom;background:${base};border-bottom:1px solid var(--color-divider);`;
+      return { ending:tp.ending, sample:tp.sample, style };
+    });
+
+    const tableRows=this.CASES.map((c,ri)=>{
+      const active = c.id===activeCase;
+      let rstyle=`position:sticky;left:0;z-index:2;background:var(--color-bg);text-align:left;vertical-align:top;border-bottom:1px solid var(--color-divider);`;
+      const cells=this.TYPES.map(tp=>{
+        const stem=this.stemOf(tp,view);
+        const form=tp[view][ri];
+        const tail=form.slice(stem.length);
+        const base = tp.gender==='m' ? '#fdf9f2' : '#f8f5fb';
+        let cs=`padding:6px 10px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--color-divider);background:${base};`;
+        return { key:tp.id, el:this.mkWord(stem,tail), style:cs };
+      });
+      return {
+        abbr:c.abbr, q:c.q, name:c.name,
+        preps:c.preps.join(', '), hasPreps:c.preps.length>0,
+        style:rstyle, cells,
+      };
+    });
+
+    const allCasesOn=this.CASES.every(c=>s.cases[c.id]), anyCasesOn=this.CASES.some(c=>s.cases[c.id]);
+    const maleTypes=this.TYPES.filter(x=>x.gender==='m'), femaleTypes=this.TYPES.filter(x=>x.gender==='f');
+    const maleIds=maleTypes.map(x=>x.id), femaleIds=femaleTypes.map(x=>x.id);
+    const maleOn=maleTypes.every(x=>s.types[x.id]);
+    const femaleOn=femaleTypes.every(x=>s.types[x.id]);
+    const mCases={ onToggle:()=>this.setCases(!allCasesOn), allLabel:allCasesOn?'зняти всі':'обрати всі'};
+    const mMale={ onToggle:()=>this.setTypes(maleIds,!maleOn), allLabel:maleOn?'зняти':'усі'};
+    const mFemale={ onToggle:()=>this.setTypes(femaleIds,!femaleOn), allLabel:femaleOn?'зняти':'усі'};
+
+    const caseChips=this.CASES.map(c=>({ abbr:c.abbr, name:c.name, checked:s.cases[c.id], onToggle:()=>this.toggleKey('cases',c.id), style: s.cases[c.id]?'border-color:var(--color-accent);background:#fff3e4;':'' }));
+    const chipType=(x)=>{ const on=s.types[x.id]; const base=x.gender==='m'?'#fdf7ee':'#f6f2f9'; const hot=x.gender==='m'?'#f4e3c6':'#e7ddf0'; return { ending:x.ending, sample:x.sample, checked:on, onToggle:()=>this.toggleKey('types',x.id), style:`background:${on?hot:base};`+(on?'border-color:var(--color-accent);':'') }; };
+    const maleChips=maleTypes.map(chipType), femaleChips=femaleTypes.map(chipType);
+    const numberChips=[
+      {label:'Однина', checked:s.numbers.sg, onToggle:()=>this.toggleKey('numbers','sg'), style:s.numbers.sg?'border-color:var(--color-accent);background:#fff3e4;':''},
+      {label:'Множина', checked:s.numbers.pl, onToggle:()=>this.toggleKey('numbers','pl'), style:s.numbers.pl?'border-color:var(--color-accent);background:#fff3e4;':''},
+    ];
+
+    const focusOptions=this.TYPES.map(x=>({id:x.id,label:x.ending+' · '+x.sample}));
+    const ftype=this.TYPES.find(x=>x.id===s.focusType)||this.TYPES[0];
+    const fstem=this.stemOf(ftype,view);
+    const focusRows=this.CASES.map((c,ri)=>{ const form=ftype[view][ri]; const bg=ftype.gender==='m'?'#fdf9f2':'#f8f5fb'; return { abbr:c.abbr, q:c.q, name:c.name, el:this.mkWord(fstem,form.slice(fstem.length)), style:`display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 13px;border-bottom:1px solid var(--color-divider);background:${bg};` }; });
+
+    let answerEl=null, userEcho=null;
+    if(t){
+      answerEl=this.mkWord(t.stem,t.tail);
+      const typed = t.stemPrefill ? (t.stem+s.userInput) : s.userInput;
+      userEcho = typed.trim() ? this.mkText(typed) : this.mkText('—');
+    }
+
+    return {
+      isTopics: s.screen==='topics',
+      isTrainer: s.screen==='trainer',
+      goTopic:()=>this.setState({screen:'trainer'},()=>{ if(!this.state.task) this.newTask(); }),
+      goBack:()=>this.setState({screen:'topics'}),
+
+      level:s.level, levelHuman:(s.level+1)+' / 6', levelDesc:this.LEVELDESC[s.level],
+      onLevel:(e)=>this.setLevel(+e.target.value),
+
+      hasTask:!!t, task:t, answerEl, userEcho,
+      userInput:s.userInput, onInput:(e)=>this.setState({userInput:e.target.value}),
+      revealed:s.revealed,
+      primaryLabel: s.revealed?'Далі →':'Показати відповідь',
+      primaryAction: s.revealed?()=>this.newTask():()=>this.setState({revealed:true}),
+      revealStyle: s.revealed?'opacity:1':'opacity:0;pointer-events:none',
+      poolEmpty: s.screen==='trainer' && !t,
+
+      tableOpen:s.tableOpen, toggleTable:()=>this.toggleTable(),
+      tableBtnLabel: s.tableOpen ? 'Сховати таблицю' : 'Показати таблицю',
+      viewSg:view==='sg', viewPl:view==='pl',
+      onViewSg:()=>this.setView('sg'), onViewPl:()=>this.setView('pl'),
+
+      tableCols, tableRows, maleSpan:7, femaleSpan:5,
+      mCases, mMale, mFemale,
+      caseChips, maleChips, femaleChips, numberChips,
+      focusType:s.focusType, focusOptions, focusRows, onFocusType:(e)=>this.setFocus(e.target.value),
+    };
+  }
+}
+</script>
+</body>
+</html>
