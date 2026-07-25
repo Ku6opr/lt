@@ -29,7 +29,7 @@
         {#if task.hasPrep}<span class="text-muted">{task.prep}</span>{/if}
         <div style="display:inline-flex;align-items:baseline;border-bottom:2px solid var(--color-accent);padding:0 4px 2px">
           <span style="color:var(--color-text);white-space:pre">{task.stemPrefix}</span>
-          <input value={userInput} on:input={onInput} on:keydown={onKey} placeholder="…" autocomplete="off" autocapitalize="off" spellcheck="false" style="border:0;background:transparent;font:inherit;color:var(--color-text);caret-color:var(--color-accent);width:clamp(80px,22cqw,170px);outline:none;padding:0">
+          <input value={userInput} on:input={onInput} on:keydown={onKey} placeholder="…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" inputmode="text" style="border:0;background:transparent;font:inherit;color:var(--color-text);caret-color:var(--color-accent);width:clamp(80px,22cqw,170px);outline:none;padding:0">
         </div>
       </div>
     </label>

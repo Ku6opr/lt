@@ -1,6 +1,7 @@
 import { CASES } from '../data/cases.js';
-import { TYPES } from '../data/types.js';
-import { STOPS } from '../data/stops.js';
+import { WORDS } from '../data/words.js';
+import { DECLENSIONS } from '../data/declensions.js';
+import { LEVELS } from '../data/levels.js';
 import { PREPS } from '../data/prepositions.js';
 import { idx, stemOf } from './stem.js';
 
@@ -9,20 +10,30 @@ function rnd(a) {
 }
 
 export function poolOk(state) {
-  return CASES.some((c) => state.cases[c.id]) && TYPES.some((t) => state.types[t.id]) && (state.numbers.sg || state.numbers.pl);
+  return CASES.some((c) => state.cases[c.id]) && WORDS.some((w) => state.types[w.type]) && (state.numbers.sg || state.numbers.pl);
 }
 
-export function newTask(state) {
+export function newTask(state, lastWordId) {
   const ec = CASES.filter((c) => state.cases[c.id]);
-  const et = TYPES.filter((t) => state.types[t.id]);
+  const ew = WORDS.filter((w) => state.types[w.type]);
   const en = ['sg', 'pl'].filter((n) => state.numbers[n]);
-  if (!ec.length || !et.length || !en.length) return null;
+  if (!ec.length || !ew.length || !en.length) return null;
 
   const CASEKEY = { V: 'nom', K: 'gen', N: 'dat', G: 'acc', In: 'ins', Vt: 'loc' };
 
-  const stop = STOPS[state.level];
+  const stop = LEVELS[state.level];
   const number = rnd(en);
-  const type = stop.word === 'fixed' ? et.find((t) => t.id === 'as') || et[0] : rnd(et);
+  let pool;
+  if (stop.word === 'fixed') {
+    const samples = DECLENSIONS.filter((t) => ew.some((w) => w.type === t.id)).map((t) => t.sample);
+    pool = ew.filter((w) => samples.includes(w.id));
+    if (!pool.length) pool = ew;
+  } else {
+    pool = ew;
+  }
+  let pick = pool;
+  if (lastWordId && pool.length > 1) pick = pool.filter((w) => w.id !== lastWordId);
+  const type = rnd(pick);
   let mode = stop.prompt;
   if (mode === 'mix-otheruk') mode = rnd(['lt-othercase', 'uk']);
 
@@ -84,7 +95,8 @@ export function newTask(state) {
   return {
     caseId: target.id,
     caseBound,
-    typeId: type.id,
+    typeId: type.type,
+    wordId: type.id,
     number,
     mode,
     prompt,

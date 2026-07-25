@@ -1,14 +1,14 @@
 <script>
   import { CASES } from '../data/cases.js';
-  import { TYPES } from '../data/types.js';
-  import { STOPS } from '../data/stops.js';
+  import { DECLENSIONS } from '../data/declensions.js';
+  import { LEVELS } from '../data/levels.js';
   import { settings } from '../stores/settings.js';
 
   export let onPoolChange;
   export let onLevelChange;
 
-  const maleTypes = TYPES.filter((x) => x.gender === 'm');
-  const femaleTypes = TYPES.filter((x) => x.gender === 'f');
+  const maleTypes = DECLENSIONS.filter((x) => x.gender === 'm');
+  const femaleTypes = DECLENSIONS.filter((x) => x.gender === 'f');
   const maleIds = maleTypes.map((x) => x.id);
   const femaleIds = femaleTypes.map((x) => x.id);
 
@@ -59,7 +59,7 @@
       <div style="margin-bottom:8px"><span class="card-kicker" style="margin:0">Складність</span></div>
       <div style="display:flex;align-items:center;gap:12px">
         <span class="text-muted" style="font-size:12px">просто</span>
-        <input type="range" min="0" max={STOPS.length - 1} step="1" value={s.level} on:input={(e) => setLevel(+e.target.value)} style="flex:1">
+        <input type="range" min="0" max={LEVELS.length - 1} step="1" value={s.level} on:input={(e) => setLevel(+e.target.value)} style="flex:1">
         <span class="text-muted" style="font-size:12px">складно</span>
       </div>
     </div>

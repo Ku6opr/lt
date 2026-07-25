@@ -1,4 +1,4 @@
-export const TYPES = [
+export const DECLENSIONS = [
   { id: 'as', gender: 'm', ending: '-as', sample: 'namas', uk: 'будинок', ukForms: { nom: 'будинок', gen: 'будинку', dat: 'будинку', acc: 'будинок', ins: 'будинком', loc: 'в будинку' }, sg: ['namas', 'namo', 'namui', 'namą', 'namu', 'name'], pl: ['namai', 'namų', 'namams', 'namus', 'namais', 'namuose'] },
   { id: 'is_b', gender: 'm', ending: '-is', sample: 'brolis', uk: 'брат', ukForms: { nom: 'брат', gen: 'брата', dat: 'братові', acc: 'брата', ins: 'братом', loc: 'у браті' }, sg: ['brolis', 'brolio', 'broliui', 'brolį', 'broliu', 'brolyje'], pl: ['broliai', 'brolių', 'broliams', 'brolius', 'broliais', 'broliuose'] },
   { id: 'is_m', gender: 'm', ending: '-is*', sample: 'medis', uk: 'дерево', ukForms: { nom: 'дерево', gen: 'дерева', dat: 'дереву', acc: 'дерево', ins: 'деревом', loc: 'на дереві' }, sg: ['medis', 'medžio', 'medžiui', 'medį', 'medžiu', 'medyje'], pl: ['medžiai', 'medžių', 'medžiams', 'medžius', 'medžiais', 'medžiuose'] },

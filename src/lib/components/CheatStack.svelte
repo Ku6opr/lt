@@ -1,15 +1,15 @@
 <script>
   import { CASES } from '../data/cases.js';
-  import { TYPES } from '../data/types.js';
+  import { DECLENSIONS } from '../data/declensions.js';
   import { stemOf } from '../engine/stem.js';
   import WordForm from './WordForm.svelte';
 
   export let view = 'sg';
   export let focusType = 'as';
 
-  const focusOptions = TYPES.map((x) => ({ id: x.id, label: x.ending + ' · ' + x.sample }));
+  const focusOptions = DECLENSIONS.map((x) => ({ id: x.id, label: x.ending + ' · ' + x.sample }));
 
-  $: ftype = TYPES.find((x) => x.id === focusType) || TYPES[0];
+  $: ftype = DECLENSIONS.find((x) => x.id === focusType) || DECLENSIONS[0];
   $: fstem = stemOf(ftype, view);
   $: focusRows = CASES.map((c, ri) => {
     const form = ftype[view][ri];

@@ -20,7 +20,7 @@
   $: s = $settings;
 
   function makeNewTask() {
-    const t = newTask($settings);
+    const t = newTask($settings, task && task.wordId);
     task = t;
     revealed = false;
     userInput = '';
@@ -65,6 +65,8 @@
   </div>
   <hr class="hr" style="margin-block:0 var(--space-4)">
 
+  <TaskCard {task} {revealed} {userInput} onInput={(e) => (userInput = e.target.value)} onPrimary={primaryAction} />
+
   <div style="margin-bottom:var(--space-6)">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:var(--space-3)">
       <div style="display:flex;align-items:baseline;gap:12px">
@@ -87,8 +89,6 @@
       <CheatStack view={s.viewNumber} bind:focusType />
     {/if}
   </div>
-
-  <TaskCard {task} {revealed} {userInput} onInput={(e) => (userInput = e.target.value)} onPrimary={primaryAction} />
 
   <StudySelector onPoolChange={ensureTask} onLevelChange={makeNewTask} />
 </div>

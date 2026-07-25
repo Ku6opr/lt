@@ -1,15 +1,15 @@
 <script>
   import { CASES } from '../data/cases.js';
-  import { TYPES } from '../data/types.js';
+  import { DECLENSIONS } from '../data/declensions.js';
   import { stemOf } from '../engine/stem.js';
   import WordForm from './WordForm.svelte';
 
   export let view = 'sg';
 
-  const maleSpan = TYPES.filter((t) => t.gender === 'm').length;
-  const femaleSpan = TYPES.filter((t) => t.gender === 'f').length;
+  const maleSpan = DECLENSIONS.filter((t) => t.gender === 'm').length;
+  const femaleSpan = DECLENSIONS.filter((t) => t.gender === 'f').length;
 
-  $: cols = TYPES.map((tp) => ({
+  $: cols = DECLENSIONS.map((tp) => ({
     ending: tp.ending,
     sample: tp.sample,
     base: tp.gender === 'm' ? '#fdf7ee' : '#f6f2f9'
@@ -21,7 +21,7 @@
     name: c.name,
     preps: c.preps.join(', '),
     hasPreps: c.preps.length > 0,
-    cells: TYPES.map((tp) => {
+    cells: DECLENSIONS.map((tp) => {
       const stem = stemOf(tp, view);
       const form = tp[view][ri];
       return {

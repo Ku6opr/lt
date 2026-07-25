@@ -1,3 +1,3 @@
-import { casesTopic } from './cases.js';
+import { vidminkyTopic } from './vidminky.js';
 
-export const topics = [casesTopic];
+export const topics = [vidminkyTopic];
