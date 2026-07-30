@@ -1,0 +1,202 @@
+[
+  {
+    "lemma": "šviesoforas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šviesoforas",
+      "šviesoforo",
+      "šviesoforui",
+      "šviesoforą",
+      "šviesoforu",
+      "šviesofore"
+    ],
+    "pl": [
+      "šviesoforai",
+      "šviesoforų",
+      "šviesoforams",
+      "šviesoforus",
+      "šviesoforais",
+      "šviesoforuose"
+    ]
+  },
+  {
+    "lemma": "perėja",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "absent on en.wiktionary and lt.wiktionary"
+  },
+  {
+    "lemma": "fontanas",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "en.wiktionary has only Spanish entry; absent on lt.wiktionary"
+  },
+  {
+    "lemma": "paminklas",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "en.wiktionary Lithuanian noun entry has no declension table; absent on lt.wiktionary"
+  },
+  {
+    "lemma": "suoliukas",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "absent on en.wiktionary and lt.wiktionary"
+  },
+  {
+    "lemma": "viešbutis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "viešbutis",
+      "viešbučio",
+      "viešbučiui",
+      "viešbutį",
+      "viešbučiu",
+      "viešbutyje"
+    ],
+    "pl": [
+      "viešbučiai",
+      "viešbučių",
+      "viešbučiams",
+      "viešbučius",
+      "viešbučiais",
+      "viešbučiuose"
+    ]
+  },
+  {
+    "lemma": "stotis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "stotis",
+      "stoties",
+      "stočiai",
+      "stotį",
+      "stotimi",
+      "stotyje"
+    ],
+    "pl": [
+      "stotys",
+      "stočių",
+      "stotims",
+      "stotis",
+      "stotimis",
+      "stotyse"
+    ]
+  },
+  {
+    "lemma": "bažnyčia",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "bažnyčia",
+      "bažnyčios",
+      "bažnyčiai",
+      "bažnyčią",
+      "bažnyčia",
+      "bažnyčioje"
+    ],
+    "pl": [
+      "bažnyčios",
+      "bažnyčių",
+      "bažnyčioms",
+      "bažnyčias",
+      "bažnyčiomis",
+      "bažnyčiose"
+    ]
+  },
+  {
+    "lemma": "muziejus",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "muziejus",
+      "muziejaus",
+      "muziejui",
+      "muziejų",
+      "muziejumi",
+      "muziejuje"
+    ],
+    "pl": [
+      "muziejai",
+      "muziejų",
+      "muziejams",
+      "muziejus",
+      "muziejais",
+      "muziejuose"
+    ]
+  },
+  {
+    "lemma": "teatras",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "teatras",
+      "teatro",
+      "teatrui",
+      "teatrą",
+      "teatru",
+      "teatre"
+    ],
+    "pl": [
+      "teatrai",
+      "teatrų",
+      "teatrams",
+      "teatrus",
+      "teatrais",
+      "teatruose"
+    ]
+  },
+  {
+    "lemma": "vaistinė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vaistinė",
+      "vaistinės",
+      "vaistinei",
+      "vaistinę",
+      "vaistine",
+      "vaistinėje"
+    ],
+    "pl": [
+      "vaistinės",
+      "vaistinių",
+      "vaistinėms",
+      "vaistines",
+      "vaistinėmis",
+      "vaistinėse"
+    ]
+  },
+  {
+    "lemma": "bankas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "bankas",
+      "banko",
+      "bankui",
+      "banką",
+      "banku",
+      "banke"
+    ],
+    "pl": [
+      "bankai",
+      "bankų",
+      "bankams",
+      "bankus",
+      "bankais",
+      "bankuose"
+    ]
+  }
+]

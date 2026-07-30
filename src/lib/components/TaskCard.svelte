@@ -26,7 +26,7 @@
 
     <label style="display:flex;justify-content:center;margin-bottom:var(--space-3);cursor:text;padding:6px 0">
       <div style="display:inline-flex;align-items:baseline;gap:8px;font-family:var(--font-heading);font-size:clamp(24px,4.5cqw,34px)">
-        {#if task.hasPrep}<span class="text-muted">{task.prep}</span>{/if}
+        {#if task.hasLead}<span class="text-muted">{task.lead}</span>{/if}
         <div style="display:inline-flex;align-items:baseline;border-bottom:2px solid var(--color-accent);padding:0 4px 2px">
           <span style="color:var(--color-text);white-space:pre">{task.stemPrefix}</span>
           <input value={userInput} on:input={onInput} on:keydown={onKey} placeholder="…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" inputmode="text" style="border:0;background:transparent;font:inherit;color:var(--color-text);caret-color:var(--color-accent);width:clamp(80px,22cqw,170px);outline:none;padding:0">
@@ -41,8 +41,9 @@
         <div style="text-align:center">
           <div class="card-kicker">Правильна форма</div>
           <div style="font-family:var(--font-heading);font-size:clamp(30px,6cqw,50px);line-height:1.02;margin:6px 0 12px">
-            {#if task.hasPrep}<span style="color:var(--color-neutral-500);font-size:.68em">{task.prep} </span>{/if}<WordForm stem={task.stem} tail={task.tail} />
+            {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{task.lead} </span>{/if}<WordForm stem={task.stem} tail={task.tail} />
           </div>
+          {#if task.revealUk}<div class="text-muted" style="font-size:14px">{task.revealUk}</div>{/if}
         </div>
       {/if}
     </div>

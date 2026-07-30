@@ -1,0 +1,157 @@
+[
+  {
+    "lemma": "sekmadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sekmadienis",
+      "sekmadienio",
+      "sekmadieniui",
+      "sekmadienį",
+      "sekmadieniu",
+      "sekmadienyje"
+    ],
+    "pl": [
+      "sekmadieniai",
+      "sekmadienių",
+      "sekmadieniams",
+      "sekmadienius",
+      "sekmadieniais",
+      "sekmadieniuose"
+    ]
+  },
+  {
+    "lemma": "pirmadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pirmadienis",
+      "pirmadienio",
+      "pirmadieniui",
+      "pirmadienį",
+      "pirmadieniu",
+      "pirmadienyje"
+    ],
+    "pl": [
+      "pirmadieniai",
+      "pirmadienių",
+      "pirmadieniams",
+      "pirmadienius",
+      "pirmadieniais",
+      "pirmadieniuose"
+    ]
+  },
+  {
+    "lemma": "šeštadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šeštadienis",
+      "šeštadienio",
+      "šeštadieniui",
+      "šeštadienį",
+      "šeštadieniu",
+      "šeštadienyje"
+    ],
+    "pl": [
+      "šeštadieniai",
+      "šeštadienių",
+      "šeštadieniams",
+      "šeštadienius",
+      "šeštadieniais",
+      "šeštadieniuose"
+    ]
+  },
+  {
+    "lemma": "šventė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šventė",
+      "šventės",
+      "šventei",
+      "šventę",
+      "švente",
+      "šventėje"
+    ],
+    "pl": [
+      "šventės",
+      "švenčių",
+      "šventėms",
+      "šventes",
+      "šventėmis",
+      "šventėse"
+    ]
+  },
+  {
+    "lemma": "gimtadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "gimtadienis",
+      "gimtadienio",
+      "gimtadieniui",
+      "gimtadienį",
+      "gimtadieniu",
+      "gimtadienyje"
+    ],
+    "pl": [
+      "gimtadieniai",
+      "gimtadienių",
+      "gimtadieniams",
+      "gimtadienius",
+      "gimtadieniais",
+      "gimtadieniuose"
+    ]
+  },
+  {
+    "lemma": "sekundė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sekundė",
+      "sekundės",
+      "sekundei",
+      "sekundę",
+      "sekunde",
+      "sekundėje"
+    ],
+    "pl": [
+      "sekundės",
+      "sekundžių",
+      "sekundėms",
+      "sekundes",
+      "sekundėmis",
+      "sekundėse"
+    ]
+  },
+  {
+    "lemma": "akimirka",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "Not found on en.wiktionary.org or lt.wiktionary.org"
+  },
+  {
+    "lemma": "amžius",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "amžius",
+      "amžiaus",
+      "amžiui",
+      "amžių",
+      "amžiumi",
+      "amžiuje"
+    ],
+    "pl": [
+      "amžiai",
+      "amžių",
+      "amžiams",
+      "amžius",
+      "amžiais",
+      "amžiuose"
+    ]
+  }
+]

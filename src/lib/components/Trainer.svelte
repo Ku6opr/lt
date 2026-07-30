@@ -33,7 +33,8 @@
       return;
     }
     const st = $settings;
-    if (!task || (task.caseBound && !st.cases[task.caseId]) || !st.types[task.typeId] || !st.numbers[task.number]) makeNewTask();
+    const themeOk = st.theme === 'all' || (task && task.themes && task.themes.includes(st.theme));
+    if (!task || (task.caseBound && !st.cases[task.caseId]) || !st.types[task.typeId] || !st.numbers[task.number] || !themeOk) makeNewTask();
   }
 
   function primaryAction() {

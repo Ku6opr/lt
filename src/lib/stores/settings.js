@@ -7,6 +7,7 @@ const defaults = {
   cases: { V: false, K: true, N: false, G: false, In: false, Vt: false },
   types: { as: true, is_b: true, is_m: true, ys: true, us: true, ius: true, uo_m: true, a: true, ia: true, e: true, is_f: true, uo_f: true },
   numbers: { sg: true, pl: false },
+  theme: 'all',
   viewNumber: 'sg',
   tableOpen: true
 };
@@ -21,6 +22,7 @@ function load() {
         cases: { ...defaults.cases, ...(s.cases || {}) },
         types: { ...defaults.types, ...(s.types || {}) },
         numbers: { ...defaults.numbers, ...(s.numbers || {}) },
+        theme: s.theme ?? defaults.theme,
         viewNumber: s.viewNumber ?? defaults.viewNumber,
         tableOpen: s.tableOpen ?? defaults.tableOpen
       };
@@ -33,7 +35,7 @@ export const settings = writable(load());
 
 settings.subscribe((s) => {
   try {
-    const { level, cases, types, numbers, viewNumber, tableOpen } = s;
-    localStorage.setItem(KEY, JSON.stringify({ level, cases, types, numbers, viewNumber, tableOpen }));
+    const { level, cases, types, numbers, theme, viewNumber, tableOpen } = s;
+    localStorage.setItem(KEY, JSON.stringify({ level, cases, types, numbers, theme, viewNumber, tableOpen }));
   } catch (e) {}
 });

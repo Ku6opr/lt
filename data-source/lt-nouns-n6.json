@@ -1,0 +1,254 @@
+[
+ {
+  "lemma": "teta",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "teta",
+   "tetos",
+   "tetai",
+   "tetą",
+   "teta",
+   "tetoje"
+  ],
+  "pl": [
+   "tetos",
+   "tetų",
+   "tetoms",
+   "tetas",
+   "tetomis",
+   "tetose"
+  ]
+ },
+ {
+  "lemma": "dėdė",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "dėdė",
+   "dėdės",
+   "dėdei",
+   "dėdę",
+   "dėde",
+   "dėdėje"
+  ],
+  "pl": [
+   "dėdės",
+   "dėdžių",
+   "dėdėms",
+   "dėdes",
+   "dėdėmis",
+   "dėdėse"
+  ]
+ },
+ {
+  "lemma": "senelė",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "senelė",
+   "senelės",
+   "senelei",
+   "senelę",
+   "senele",
+   "senelėje"
+  ],
+  "pl": [
+   "senelės",
+   "senelių",
+   "senelėms",
+   "seneles",
+   "senelėmis",
+   "senelėse"
+  ]
+ },
+ {
+  "lemma": "anūkas",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "anūkas",
+   "anūko",
+   "anūkui",
+   "anūką",
+   "anūku",
+   "anūke"
+  ],
+  "pl": [
+   "anūkai",
+   "anūkų",
+   "anūkams",
+   "anūkus",
+   "anūkais",
+   "anūkuose"
+  ]
+ },
+ {
+  "lemma": "virėjas",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "virėjas",
+   "virėjo",
+   "virėjui",
+   "virėją",
+   "virėju",
+   "virėjuje"
+  ],
+  "pl": [
+   "virėjai",
+   "virėjų",
+   "virėjams",
+   "virėjus",
+   "virėjais",
+   "virėjuose"
+  ]
+ },
+ {
+  "lemma": "pardavėjas",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "pardavėjas",
+   "pardavėjo",
+   "pardavėjui",
+   "pardavėją",
+   "pardavėju",
+   "pardavėjuje"
+  ],
+  "pl": [
+   "pardavėjai",
+   "pardavėjų",
+   "pardavėjams",
+   "pardavėjus",
+   "pardavėjais",
+   "pardavėjuose"
+  ]
+ },
+ {
+  "lemma": "vairuotojas",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "vairuotojas",
+   "vairuotojo",
+   "vairuotojui",
+   "vairuotoją",
+   "vairuotoju",
+   "vairuotojuje"
+  ],
+  "pl": [
+   "vairuotojai",
+   "vairuotojų",
+   "vairuotojams",
+   "vairuotojus",
+   "vairuotojais",
+   "vairuotojuose"
+  ]
+ },
+ {
+  "lemma": "studentas",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "studentas",
+   "studento",
+   "studentui",
+   "studentą",
+   "studentu",
+   "studente"
+  ],
+  "pl": [
+   "studentai",
+   "studentų",
+   "studentams",
+   "studentus",
+   "studentais",
+   "studentuose"
+  ]
+ },
+ {
+  "lemma": "mokinys",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "mokinys",
+   "mokinio",
+   "mokiniui",
+   "mokinį",
+   "mokiniu",
+   "mokinyje"
+  ],
+  "pl": [
+   "mokiniai",
+   "mokinių",
+   "mokiniams",
+   "mokinius",
+   "mokiniais",
+   "mokiniuose"
+  ]
+ },
+ {
+  "lemma": "policininkas",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "policininkas",
+   "policininko",
+   "policininkui",
+   "policininką",
+   "policininku",
+   "policininke"
+  ],
+  "pl": [
+   "policininkai",
+   "policininkų",
+   "policininkams",
+   "policininkus",
+   "policininkais",
+   "policininkuose"
+  ]
+ },
+ {
+  "lemma": "ūkininkas",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "ūkininkas",
+   "ūkininko",
+   "ūkininkui",
+   "ūkininką",
+   "ūkininku",
+   "ūkininke"
+  ],
+  "pl": [
+   "ūkininkai",
+   "ūkininkų",
+   "ūkininkams",
+   "ūkininkus",
+   "ūkininkais",
+   "ūkininkuose"
+  ]
+ },
+ {
+  "lemma": "draugė",
+  "found": true,
+  "pluralOnly": false,
+  "sg": [
+   "draugė",
+   "draugės",
+   "draugei",
+   "draugę",
+   "drauge",
+   "draugėje"
+  ],
+  "pl": [
+   "draugės",
+   "draugių",
+   "draugėms",
+   "drauges",
+   "draugėmis",
+   "draugėse"
+  ]
+ }
+]

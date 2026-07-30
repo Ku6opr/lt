@@ -1,11 +1,22 @@
 <script>
   import { CASES } from '../data/cases.js';
   import { DECLENSIONS } from '../data/declensions.js';
-  import { LEVELS } from '../data/levels.js';
+  import { LEVELS, PHRASE_TIERS } from '../data/levels.js';
   import { settings } from '../stores/settings.js';
 
   export let onPoolChange;
   export let onLevelChange;
+
+  const THEMES = [
+    { id: 'all', label: 'Всі слова' },
+    { id: 'prod', label: 'Продукти' },
+    { id: 'cafe', label: 'У кафе' },
+    { id: 'street', label: 'На вулиці' },
+    { id: 'home', label: 'Дім' },
+    { id: 'nature', label: 'Природа' },
+    { id: 'people', label: 'Люди і родина' },
+    { id: 'time', label: 'Час' }
+  ];
 
   const maleTypes = DECLENSIONS.filter((x) => x.gender === 'm');
   const femaleTypes = DECLENSIONS.filter((x) => x.gender === 'f');
@@ -13,6 +24,7 @@
   const femaleIds = femaleTypes.map((x) => x.id);
 
   $: s = $settings;
+  $: maxLevel = (s.theme === 'all' ? LEVELS.length : PHRASE_TIERS.length) - 1;
   $: allCasesOn = CASES.every((c) => s.cases[c.id]);
   $: maleOn = maleTypes.every((x) => s.types[x.id]);
   $: femaleOn = femaleTypes.every((x) => s.types[x.id]);
@@ -20,6 +32,11 @@
   function setLevel(v) {
     settings.update((st) => ({ ...st, level: v }));
     onLevelChange();
+  }
+  function setTheme(id) {
+    const cap = (id === 'all' ? LEVELS.length : PHRASE_TIERS.length) - 1;
+    settings.update((st) => ({ ...st, theme: id, level: Math.min(st.level, cap) }));
+    onPoolChange();
   }
   function toggleKey(group, id) {
     settings.update((st) => ({ ...st, [group]: { ...st[group], [id]: !st[group][id] } }));
@@ -59,11 +76,12 @@
       <div style="margin-bottom:8px"><span class="card-kicker" style="margin:0">Складність</span></div>
       <div style="display:flex;align-items:center;gap:12px">
         <span class="text-muted" style="font-size:12px">просто</span>
-        <input type="range" min="0" max={LEVELS.length - 1} step="1" value={s.level} on:input={(e) => setLevel(+e.target.value)} style="flex:1">
+        <input type="range" min="0" max={maxLevel} step="1" value={s.level} on:input={(e) => setLevel(+e.target.value)} style="flex:1">
         <span class="text-muted" style="font-size:12px">складно</span>
       </div>
     </div>
 
+    {#if s.theme === 'all'}
     <div>
       <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px">
         <span class="card-kicker" style="margin:0">Відмінки</span>
@@ -123,6 +141,18 @@
           <input type="checkbox" checked={s.numbers.pl} on:change={() => toggleKey('numbers', 'pl')} style="display:none">
           <span style="font-family:var(--font-heading);font-weight:600;font-size:14px">Множина</span>
         </label>
+      </div>
+    </div>
+    {/if}
+
+    <div>
+      <div style="margin-bottom:8px"><span class="card-kicker" style="margin:0">Тема</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        {#each THEMES as th}
+          <button class="lt-chip" style="cursor:pointer;{s.theme === th.id ? 'border-color:var(--color-accent);background:#fff3e4;' : ''}" on:click={() => setTheme(th.id)}>
+            <span style="font-family:var(--font-heading);font-weight:600;font-size:14px">{th.label}</span>
+          </button>
+        {/each}
       </div>
     </div>
   </div>

@@ -1,0 +1,1452 @@
+[
+  {
+    "lemma": "tortas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "tortas",
+      "torto",
+      "tortui",
+      "tortą",
+      "tortu",
+      "torte"
+    ],
+    "pl": [
+      "tortai",
+      "tortų",
+      "tortams",
+      "tortus",
+      "tortais",
+      "tortuose"
+    ]
+  },
+  {
+    "lemma": "šokoladas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šokoladas",
+      "šokolado",
+      "šokoladui",
+      "šokoladą",
+      "šokoladu",
+      "šokolade"
+    ],
+    "pl": [
+      "šokoladai",
+      "šokoladų",
+      "šokoladams",
+      "šokoladus",
+      "šokoladais",
+      "šokoladuose"
+    ]
+  },
+  {
+    "lemma": "alus",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "alus",
+      "alaus",
+      "alui",
+      "alų",
+      "alumi",
+      "aluje"
+    ],
+    "pl": [
+      "alūs",
+      "alų",
+      "alums",
+      "alus",
+      "alumis",
+      "aluose"
+    ]
+  },
+  {
+    "lemma": "vynas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vynas",
+      "vyno",
+      "vynui",
+      "vyną",
+      "vynu",
+      "vyne"
+    ],
+    "pl": [
+      "vynai",
+      "vynų",
+      "vynams",
+      "vynus",
+      "vynais",
+      "vynuose"
+    ]
+  },
+  {
+    "lemma": "lėkštė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "lėkštė",
+      "lėkštės",
+      "lėkštei",
+      "lėkštę",
+      "lėkšte",
+      "lėkštėje"
+    ],
+    "pl": [
+      "lėkštės",
+      "lėkščių",
+      "lėkštėms",
+      "lėkštes",
+      "lėkštėmis",
+      "lėkštėse"
+    ],
+    "note": "2 accent-paradigm variants on wiktionary; using first (primary) paradigm"
+  },
+  {
+    "lemma": "šaukštas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šaukštas",
+      "šaukšto",
+      "šaukštui",
+      "šaukštą",
+      "šaukštu",
+      "šaukšte"
+    ],
+    "pl": [
+      "šaukštai",
+      "šaukštų",
+      "šaukštams",
+      "šaukštus",
+      "šaukštais",
+      "šaukštuose"
+    ]
+  },
+  {
+    "lemma": "stiklinė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "stiklinė",
+      "stiklinės",
+      "stiklinei",
+      "stiklinę",
+      "stikline",
+      "stiklinėje"
+    ],
+    "pl": [
+      "stiklinės",
+      "stiklinių",
+      "stiklinėms",
+      "stiklines",
+      "stiklinėmis",
+      "stiklinėse"
+    ]
+  },
+  {
+    "lemma": "sąskaita",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sąskaita",
+      "sąskaitos",
+      "sąskaitai",
+      "sąskaitą",
+      "sąskaita",
+      "sąskaitoje"
+    ],
+    "pl": [
+      "sąskaitos",
+      "sąskaitų",
+      "sąskaitoms",
+      "sąskaitas",
+      "sąskaitomis",
+      "sąskaitose"
+    ]
+  },
+  {
+    "lemma": "ledas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ledas",
+      "ledo",
+      "ledui",
+      "ledą",
+      "ledu",
+      "lede"
+    ],
+    "pl": [
+      "ledai",
+      "ledų",
+      "ledams",
+      "ledus",
+      "ledais",
+      "leduose"
+    ]
+  },
+  {
+    "lemma": "servetėlė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "servetėlė",
+      "servetėlės",
+      "servetėlei",
+      "servetėlę",
+      "servetėle",
+      "servetėlėje"
+    ],
+    "pl": [
+      "servetėlės",
+      "servetėlių",
+      "servetėlėms",
+      "servetėles",
+      "servetėlėmis",
+      "servetėlėse"
+    ]
+  },
+  {
+    "lemma": "bananas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "bananas",
+      "banano",
+      "bananui",
+      "bananą",
+      "bananu",
+      "banane"
+    ],
+    "pl": [
+      "bananai",
+      "bananų",
+      "bananams",
+      "bananus",
+      "bananais",
+      "bananuose"
+    ]
+  },
+  {
+    "lemma": "apelsinas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "apelsinas",
+      "apelsino",
+      "apelsinui",
+      "apelsiną",
+      "apelsinu",
+      "apelsine"
+    ],
+    "pl": [
+      "apelsinai",
+      "apelsinų",
+      "apelsinams",
+      "apelsinus",
+      "apelsinais",
+      "apelsinuose"
+    ]
+  },
+  {
+    "lemma": "citrina",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "citrina",
+      "citrinos",
+      "citrinai",
+      "citriną",
+      "citrina",
+      "citrinoje"
+    ],
+    "pl": [
+      "citrinos",
+      "citrinų",
+      "citrinoms",
+      "citrinas",
+      "citrinomis",
+      "citrinose"
+    ]
+  },
+  {
+    "lemma": "kopūstas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kopūstas",
+      "kopūsto",
+      "kopūstui",
+      "kopūstą",
+      "kopūstu",
+      "kopūste"
+    ],
+    "pl": [
+      "kopūstai",
+      "kopūstų",
+      "kopūstams",
+      "kopūstus",
+      "kopūstais",
+      "kopūstuose"
+    ]
+  },
+  {
+    "lemma": "svogūnas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "svogūnas",
+      "svogūno",
+      "svogūnui",
+      "svogūną",
+      "svogūnu",
+      "svogūne"
+    ],
+    "pl": [
+      "svogūnai",
+      "svogūnų",
+      "svogūnams",
+      "svogūnus",
+      "svogūnais",
+      "svogūnuose"
+    ]
+  },
+  {
+    "lemma": "česnakas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "česnakas",
+      "česnako",
+      "česnakui",
+      "česnaką",
+      "česnaku",
+      "česnake"
+    ],
+    "pl": [
+      "česnakai",
+      "česnakų",
+      "česnakams",
+      "česnakus",
+      "česnakais",
+      "česnakuose"
+    ]
+  },
+  {
+    "lemma": "riešutas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "riešutas",
+      "riešuto",
+      "riešutui",
+      "riešutą",
+      "riešutu",
+      "riešute"
+    ],
+    "pl": [
+      "riešutai",
+      "riešutų",
+      "riešutams",
+      "riešutus",
+      "riešutais",
+      "riešutuose"
+    ]
+  },
+  {
+    "lemma": "uoga",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "uoga",
+      "uogos",
+      "uogai",
+      "uogą",
+      "uoga",
+      "uogoje"
+    ],
+    "pl": [
+      "uogos",
+      "uogų",
+      "uogoms",
+      "uogas",
+      "uogomis",
+      "uogose"
+    ]
+  },
+  {
+    "lemma": "grybas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "grybas",
+      "grybo",
+      "grybui",
+      "grybą",
+      "grybu",
+      "grybe"
+    ],
+    "pl": [
+      "grybai",
+      "grybų",
+      "grybams",
+      "grybus",
+      "grybais",
+      "grybuose"
+    ]
+  },
+  {
+    "lemma": "kumpis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kumpis",
+      "kumpio",
+      "kumpiui",
+      "kumpį",
+      "kumpiu",
+      "kumpyje"
+    ],
+    "pl": [
+      "kumpiai",
+      "kumpių",
+      "kumpiams",
+      "kumpius",
+      "kumpiais",
+      "kumpiuose"
+    ]
+  },
+  {
+    "lemma": "braškė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "braškė",
+      "braškės",
+      "braškei",
+      "braškę",
+      "braške",
+      "braškėje"
+    ],
+    "pl": [
+      "braškės",
+      "braškių",
+      "braškėms",
+      "braškes",
+      "braškėmis",
+      "braškėse"
+    ]
+  },
+  {
+    "lemma": "šviesoforas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šviesoforas",
+      "šviesoforo",
+      "šviesoforui",
+      "šviesoforą",
+      "šviesoforu",
+      "šviesofore"
+    ],
+    "pl": [
+      "šviesoforai",
+      "šviesoforų",
+      "šviesoforams",
+      "šviesoforus",
+      "šviesoforais",
+      "šviesoforuose"
+    ]
+  },
+  {
+    "lemma": "viešbutis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "viešbutis",
+      "viešbučio",
+      "viešbučiui",
+      "viešbutį",
+      "viešbučiu",
+      "viešbutyje"
+    ],
+    "pl": [
+      "viešbučiai",
+      "viešbučių",
+      "viešbučiams",
+      "viešbučius",
+      "viešbučiais",
+      "viešbučiuose"
+    ]
+  },
+  {
+    "lemma": "stotis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "stotis",
+      "stoties",
+      "stočiai",
+      "stotį",
+      "stotimi",
+      "stotyje"
+    ],
+    "pl": [
+      "stotys",
+      "stočių",
+      "stotims",
+      "stotis",
+      "stotimis",
+      "stotyse"
+    ]
+  },
+  {
+    "lemma": "bažnyčia",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "bažnyčia",
+      "bažnyčios",
+      "bažnyčiai",
+      "bažnyčią",
+      "bažnyčia",
+      "bažnyčioje"
+    ],
+    "pl": [
+      "bažnyčios",
+      "bažnyčių",
+      "bažnyčioms",
+      "bažnyčias",
+      "bažnyčiomis",
+      "bažnyčiose"
+    ]
+  },
+  {
+    "lemma": "muziejus",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "muziejus",
+      "muziejaus",
+      "muziejui",
+      "muziejų",
+      "muziejumi",
+      "muziejuje"
+    ],
+    "pl": [
+      "muziejai",
+      "muziejų",
+      "muziejams",
+      "muziejus",
+      "muziejais",
+      "muziejuose"
+    ]
+  },
+  {
+    "lemma": "teatras",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "teatras",
+      "teatro",
+      "teatrui",
+      "teatrą",
+      "teatru",
+      "teatre"
+    ],
+    "pl": [
+      "teatrai",
+      "teatrų",
+      "teatrams",
+      "teatrus",
+      "teatrais",
+      "teatruose"
+    ]
+  },
+  {
+    "lemma": "vaistinė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vaistinė",
+      "vaistinės",
+      "vaistinei",
+      "vaistinę",
+      "vaistine",
+      "vaistinėje"
+    ],
+    "pl": [
+      "vaistinės",
+      "vaistinių",
+      "vaistinėms",
+      "vaistines",
+      "vaistinėmis",
+      "vaistinėse"
+    ]
+  },
+  {
+    "lemma": "bankas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "bankas",
+      "banko",
+      "bankui",
+      "banką",
+      "banku",
+      "banke"
+    ],
+    "pl": [
+      "bankai",
+      "bankų",
+      "bankams",
+      "bankus",
+      "bankais",
+      "bankuose"
+    ]
+  },
+  {
+    "lemma": "vonia",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vonia",
+      "vonios",
+      "voniai",
+      "vonią",
+      "vonia",
+      "vonioje"
+    ],
+    "pl": [
+      "vonios",
+      "vonių",
+      "vonioms",
+      "vonias",
+      "voniomis",
+      "voniose"
+    ]
+  },
+  {
+    "lemma": "krėslas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "krėslas",
+      "krėslo",
+      "krėslui",
+      "krėslą",
+      "krėslu",
+      "krėsle"
+    ],
+    "pl": [
+      "krėslai",
+      "krėslų",
+      "krėslams",
+      "krėslus",
+      "krėslais",
+      "krėsluose"
+    ]
+  },
+  {
+    "lemma": "sofa",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sofa",
+      "sofos",
+      "sofai",
+      "sofą",
+      "sofa",
+      "sofoje"
+    ],
+    "pl": [
+      "sofos",
+      "sofų",
+      "sofoms",
+      "sofas",
+      "sofomis",
+      "sofose"
+    ]
+  },
+  {
+    "lemma": "paveikslas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "paveikslas",
+      "paveikslo",
+      "paveikslui",
+      "paveikslą",
+      "paveikslu",
+      "paveiksle"
+    ],
+    "pl": [
+      "paveikslai",
+      "paveikslų",
+      "paveikslams",
+      "paveikslus",
+      "paveikslais",
+      "paveiksluose"
+    ]
+  },
+  {
+    "lemma": "kilimas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kilimas",
+      "kilimo",
+      "kilimui",
+      "kilimą",
+      "kilimu",
+      "kilime"
+    ],
+    "pl": [
+      "kilimai",
+      "kilimų",
+      "kilimams",
+      "kilimus",
+      "kilimais",
+      "kilimuose"
+    ]
+  },
+  {
+    "lemma": "puodas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "puodas",
+      "puodo",
+      "puodui",
+      "puodą",
+      "puodu",
+      "puode"
+    ],
+    "pl": [
+      "puodai",
+      "puodų",
+      "puodams",
+      "puodus",
+      "puodais",
+      "puoduose"
+    ]
+  },
+  {
+    "lemma": "šaldytuvas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šaldytuvas",
+      "šaldytuvo",
+      "šaldytuvui",
+      "šaldytuvą",
+      "šaldytuvu",
+      "šaldytuve"
+    ],
+    "pl": [
+      "šaldytuvai",
+      "šaldytuvų",
+      "šaldytuvams",
+      "šaldytuvus",
+      "šaldytuvais",
+      "šaldytuvuose"
+    ]
+  },
+  {
+    "lemma": "viryklė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "viryklė",
+      "viryklės",
+      "viryklei",
+      "viryklę",
+      "virykle",
+      "viryklėje"
+    ],
+    "pl": [
+      "viryklės",
+      "viryklių",
+      "viryklėms",
+      "virykles",
+      "viryklėmis",
+      "viryklėse"
+    ]
+  },
+  {
+    "lemma": "siena",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "siena",
+      "sienos",
+      "sienai",
+      "sieną",
+      "siena",
+      "sienoje"
+    ],
+    "pl": [
+      "sienos",
+      "sienų",
+      "sienoms",
+      "sienas",
+      "sienomis",
+      "sienose"
+    ]
+  },
+  {
+    "lemma": "žolė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "žolė",
+      "žolės",
+      "žolei",
+      "žolę",
+      "žole",
+      "žolėje"
+    ],
+    "pl": [
+      "žolės",
+      "žolių",
+      "žolėms",
+      "žoles",
+      "žolėmis",
+      "žolėse"
+    ]
+  },
+  {
+    "lemma": "lapas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "lapas",
+      "lapo",
+      "lapui",
+      "lapą",
+      "lapu",
+      "lape"
+    ],
+    "pl": [
+      "lapai",
+      "lapų",
+      "lapams",
+      "lapus",
+      "lapais",
+      "lapuose"
+    ]
+  },
+  {
+    "lemma": "šaka",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šaka",
+      "šakos",
+      "šakai",
+      "šaką",
+      "šaka",
+      "šakoje"
+    ],
+    "pl": [
+      "šakos",
+      "šakų",
+      "šakoms",
+      "šakas",
+      "šakomis",
+      "šakose"
+    ]
+  },
+  {
+    "lemma": "krūmas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "krūmas",
+      "krūmo",
+      "krūmui",
+      "krūmą",
+      "krūmu",
+      "krūme"
+    ],
+    "pl": [
+      "krūmai",
+      "krūmų",
+      "krūmams",
+      "krūmus",
+      "krūmais",
+      "krūmuose"
+    ]
+  },
+  {
+    "lemma": "drugelis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "drugelis",
+      "drugelio",
+      "drugeliui",
+      "drugelį",
+      "drugeliu",
+      "drugelyje"
+    ],
+    "pl": [
+      "drugeliai",
+      "drugelių",
+      "drugeliams",
+      "drugelius",
+      "drugeliais",
+      "drugeliuose"
+    ]
+  },
+  {
+    "lemma": "bitė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "bitė",
+      "bitės",
+      "bitei",
+      "bitę",
+      "bite",
+      "bitėje"
+    ],
+    "pl": [
+      "bitės",
+      "bičių",
+      "bitėms",
+      "bites",
+      "bitėmis",
+      "bitėse"
+    ]
+  },
+  {
+    "lemma": "lapė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "lapė",
+      "lapės",
+      "lapei",
+      "lapę",
+      "lape",
+      "lapėje"
+    ],
+    "pl": [
+      "lapės",
+      "lapių",
+      "lapėms",
+      "lapes",
+      "lapėmis",
+      "lapėse"
+    ]
+  },
+  {
+    "lemma": "meška",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "meška",
+      "meškos",
+      "meškai",
+      "mešką",
+      "meška",
+      "meškoje"
+    ],
+    "pl": [
+      "meškos",
+      "meškų",
+      "meškoms",
+      "meškas",
+      "meškomis",
+      "meškose"
+    ]
+  },
+  {
+    "lemma": "vilkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vilkas",
+      "vilko",
+      "vilkui",
+      "vilką",
+      "vilku",
+      "vilke"
+    ],
+    "pl": [
+      "vilkai",
+      "vilkų",
+      "vilkams",
+      "vilkus",
+      "vilkais",
+      "vilkuose"
+    ]
+  },
+  {
+    "lemma": "kiškis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kiškis",
+      "kiškio",
+      "kiškiui",
+      "kiškį",
+      "kiškiu",
+      "kiškyje"
+    ],
+    "pl": [
+      "kiškiai",
+      "kiškių",
+      "kiškiams",
+      "kiškius",
+      "kiškiais",
+      "kiškiuose"
+    ]
+  },
+  {
+    "lemma": "voverė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "voverė",
+      "voverės",
+      "voverei",
+      "voverę",
+      "vovere",
+      "voverėje"
+    ],
+    "pl": [
+      "voverės",
+      "voverių",
+      "voverėms",
+      "voveres",
+      "voverėmis",
+      "voverėse"
+    ]
+  },
+  {
+    "lemma": "gyvatė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "gyvatė",
+      "gyvatės",
+      "gyvatei",
+      "gyvatę",
+      "gyvate",
+      "gyvatėje"
+    ],
+    "pl": [
+      "gyvatės",
+      "gyvačių",
+      "gyvatėms",
+      "gyvates",
+      "gyvatėmis",
+      "gyvatėse"
+    ]
+  },
+  {
+    "lemma": "teta",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "teta",
+      "tetos",
+      "tetai",
+      "tetą",
+      "teta",
+      "tetoje"
+    ],
+    "pl": [
+      "tetos",
+      "tetų",
+      "tetoms",
+      "tetas",
+      "tetomis",
+      "tetose"
+    ]
+  },
+  {
+    "lemma": "dėdė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "dėdė",
+      "dėdės",
+      "dėdei",
+      "dėdę",
+      "dėde",
+      "dėdėje"
+    ],
+    "pl": [
+      "dėdės",
+      "dėdžių",
+      "dėdėms",
+      "dėdes",
+      "dėdėmis",
+      "dėdėse"
+    ]
+  },
+  {
+    "lemma": "senelė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "senelė",
+      "senelės",
+      "senelei",
+      "senelę",
+      "senele",
+      "senelėje"
+    ],
+    "pl": [
+      "senelės",
+      "senelių",
+      "senelėms",
+      "seneles",
+      "senelėmis",
+      "senelėse"
+    ]
+  },
+  {
+    "lemma": "anūkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "anūkas",
+      "anūko",
+      "anūkui",
+      "anūką",
+      "anūku",
+      "anūke"
+    ],
+    "pl": [
+      "anūkai",
+      "anūkų",
+      "anūkams",
+      "anūkus",
+      "anūkais",
+      "anūkuose"
+    ]
+  },
+  {
+    "lemma": "virėjas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "virėjas",
+      "virėjo",
+      "virėjui",
+      "virėją",
+      "virėju",
+      "virėjuje"
+    ],
+    "pl": [
+      "virėjai",
+      "virėjų",
+      "virėjams",
+      "virėjus",
+      "virėjais",
+      "virėjuose"
+    ]
+  },
+  {
+    "lemma": "pardavėjas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pardavėjas",
+      "pardavėjo",
+      "pardavėjui",
+      "pardavėją",
+      "pardavėju",
+      "pardavėjuje"
+    ],
+    "pl": [
+      "pardavėjai",
+      "pardavėjų",
+      "pardavėjams",
+      "pardavėjus",
+      "pardavėjais",
+      "pardavėjuose"
+    ]
+  },
+  {
+    "lemma": "vairuotojas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vairuotojas",
+      "vairuotojo",
+      "vairuotojui",
+      "vairuotoją",
+      "vairuotoju",
+      "vairuotojuje"
+    ],
+    "pl": [
+      "vairuotojai",
+      "vairuotojų",
+      "vairuotojams",
+      "vairuotojus",
+      "vairuotojais",
+      "vairuotojuose"
+    ]
+  },
+  {
+    "lemma": "studentas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "studentas",
+      "studento",
+      "studentui",
+      "studentą",
+      "studentu",
+      "studente"
+    ],
+    "pl": [
+      "studentai",
+      "studentų",
+      "studentams",
+      "studentus",
+      "studentais",
+      "studentuose"
+    ]
+  },
+  {
+    "lemma": "mokinys",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "mokinys",
+      "mokinio",
+      "mokiniui",
+      "mokinį",
+      "mokiniu",
+      "mokinyje"
+    ],
+    "pl": [
+      "mokiniai",
+      "mokinių",
+      "mokiniams",
+      "mokinius",
+      "mokiniais",
+      "mokiniuose"
+    ]
+  },
+  {
+    "lemma": "policininkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "policininkas",
+      "policininko",
+      "policininkui",
+      "policininką",
+      "policininku",
+      "policininke"
+    ],
+    "pl": [
+      "policininkai",
+      "policininkų",
+      "policininkams",
+      "policininkus",
+      "policininkais",
+      "policininkuose"
+    ]
+  },
+  {
+    "lemma": "ūkininkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ūkininkas",
+      "ūkininko",
+      "ūkininkui",
+      "ūkininką",
+      "ūkininku",
+      "ūkininke"
+    ],
+    "pl": [
+      "ūkininkai",
+      "ūkininkų",
+      "ūkininkams",
+      "ūkininkus",
+      "ūkininkais",
+      "ūkininkuose"
+    ]
+  },
+  {
+    "lemma": "draugė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "draugė",
+      "draugės",
+      "draugei",
+      "draugę",
+      "drauge",
+      "draugėje"
+    ],
+    "pl": [
+      "draugės",
+      "draugių",
+      "draugėms",
+      "drauges",
+      "draugėmis",
+      "draugėse"
+    ]
+  },
+  {
+    "lemma": "sekmadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sekmadienis",
+      "sekmadienio",
+      "sekmadieniui",
+      "sekmadienį",
+      "sekmadieniu",
+      "sekmadienyje"
+    ],
+    "pl": [
+      "sekmadieniai",
+      "sekmadienių",
+      "sekmadieniams",
+      "sekmadienius",
+      "sekmadieniais",
+      "sekmadieniuose"
+    ]
+  },
+  {
+    "lemma": "pirmadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pirmadienis",
+      "pirmadienio",
+      "pirmadieniui",
+      "pirmadienį",
+      "pirmadieniu",
+      "pirmadienyje"
+    ],
+    "pl": [
+      "pirmadieniai",
+      "pirmadienių",
+      "pirmadieniams",
+      "pirmadienius",
+      "pirmadieniais",
+      "pirmadieniuose"
+    ]
+  },
+  {
+    "lemma": "šeštadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šeštadienis",
+      "šeštadienio",
+      "šeštadieniui",
+      "šeštadienį",
+      "šeštadieniu",
+      "šeštadienyje"
+    ],
+    "pl": [
+      "šeštadieniai",
+      "šeštadienių",
+      "šeštadieniams",
+      "šeštadienius",
+      "šeštadieniais",
+      "šeštadieniuose"
+    ]
+  },
+  {
+    "lemma": "šventė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šventė",
+      "šventės",
+      "šventei",
+      "šventę",
+      "švente",
+      "šventėje"
+    ],
+    "pl": [
+      "šventės",
+      "švenčių",
+      "šventėms",
+      "šventes",
+      "šventėmis",
+      "šventėse"
+    ]
+  },
+  {
+    "lemma": "gimtadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "gimtadienis",
+      "gimtadienio",
+      "gimtadieniui",
+      "gimtadienį",
+      "gimtadieniu",
+      "gimtadienyje"
+    ],
+    "pl": [
+      "gimtadieniai",
+      "gimtadienių",
+      "gimtadieniams",
+      "gimtadienius",
+      "gimtadieniais",
+      "gimtadieniuose"
+    ]
+  },
+  {
+    "lemma": "sekundė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sekundė",
+      "sekundės",
+      "sekundei",
+      "sekundę",
+      "sekunde",
+      "sekundėje"
+    ],
+    "pl": [
+      "sekundės",
+      "sekundžių",
+      "sekundėms",
+      "sekundes",
+      "sekundėmis",
+      "sekundėse"
+    ]
+  },
+  {
+    "lemma": "amžius",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "amžius",
+      "amžiaus",
+      "amžiui",
+      "amžių",
+      "amžiumi",
+      "amžiuje"
+    ],
+    "pl": [
+      "amžiai",
+      "amžių",
+      "amžiams",
+      "amžius",
+      "amžiais",
+      "amžiuose"
+    ]
+  }
+]

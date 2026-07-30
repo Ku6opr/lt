@@ -1,0 +1,241 @@
+[
+  {
+    "lemma": "bananas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "bananas",
+      "banano",
+      "bananui",
+      "bananą",
+      "bananu",
+      "banane"
+    ],
+    "pl": [
+      "bananai",
+      "bananų",
+      "bananams",
+      "bananus",
+      "bananais",
+      "bananuose"
+    ]
+  },
+  {
+    "lemma": "apelsinas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "apelsinas",
+      "apelsino",
+      "apelsinui",
+      "apelsiną",
+      "apelsinu",
+      "apelsine"
+    ],
+    "pl": [
+      "apelsinai",
+      "apelsinų",
+      "apelsinams",
+      "apelsinus",
+      "apelsinais",
+      "apelsinuose"
+    ]
+  },
+  {
+    "lemma": "citrina",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "citrina",
+      "citrinos",
+      "citrinai",
+      "citriną",
+      "citrina",
+      "citrinoje"
+    ],
+    "pl": [
+      "citrinos",
+      "citrinų",
+      "citrinoms",
+      "citrinas",
+      "citrinomis",
+      "citrinose"
+    ]
+  },
+  {
+    "lemma": "kopūstas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kopūstas",
+      "kopūsto",
+      "kopūstui",
+      "kopūstą",
+      "kopūstu",
+      "kopūste"
+    ],
+    "pl": [
+      "kopūstai",
+      "kopūstų",
+      "kopūstams",
+      "kopūstus",
+      "kopūstais",
+      "kopūstuose"
+    ]
+  },
+  {
+    "lemma": "svogūnas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "svogūnas",
+      "svogūno",
+      "svogūnui",
+      "svogūną",
+      "svogūnu",
+      "svogūne"
+    ],
+    "pl": [
+      "svogūnai",
+      "svogūnų",
+      "svogūnams",
+      "svogūnus",
+      "svogūnais",
+      "svogūnuose"
+    ]
+  },
+  {
+    "lemma": "česnakas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "česnakas",
+      "česnako",
+      "česnakui",
+      "česnaką",
+      "česnaku",
+      "česnake"
+    ],
+    "pl": [
+      "česnakai",
+      "česnakų",
+      "česnakams",
+      "česnakus",
+      "česnakais",
+      "česnakuose"
+    ]
+  },
+  {
+    "lemma": "pipiras",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "absent from en.wiktionary and lt.wiktionary (no entry); not invented"
+  },
+  {
+    "lemma": "riešutas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "riešutas",
+      "riešuto",
+      "riešutui",
+      "riešutą",
+      "riešutu",
+      "riešute"
+    ],
+    "pl": [
+      "riešutai",
+      "riešutų",
+      "riešutams",
+      "riešutus",
+      "riešutais",
+      "riešutuose"
+    ]
+  },
+  {
+    "lemma": "uoga",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "uoga",
+      "uogos",
+      "uogai",
+      "uogą",
+      "uoga",
+      "uogoje"
+    ],
+    "pl": [
+      "uogos",
+      "uogų",
+      "uogoms",
+      "uogas",
+      "uogomis",
+      "uogose"
+    ]
+  },
+  {
+    "lemma": "grybas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "grybas",
+      "grybo",
+      "grybui",
+      "grybą",
+      "grybu",
+      "grybe"
+    ],
+    "pl": [
+      "grybai",
+      "grybų",
+      "grybams",
+      "grybus",
+      "grybais",
+      "grybuose"
+    ]
+  },
+  {
+    "lemma": "kumpis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kumpis",
+      "kumpio",
+      "kumpiui",
+      "kumpį",
+      "kumpiu",
+      "kumpyje"
+    ],
+    "pl": [
+      "kumpiai",
+      "kumpių",
+      "kumpiams",
+      "kumpius",
+      "kumpiais",
+      "kumpiuose"
+    ]
+  },
+  {
+    "lemma": "braškė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "braškė",
+      "braškės",
+      "braškei",
+      "braškę",
+      "braške",
+      "braškėje"
+    ],
+    "pl": [
+      "braškės",
+      "braškių",
+      "braškėms",
+      "braškes",
+      "braškėmis",
+      "braškėse"
+    ]
+  }
+]

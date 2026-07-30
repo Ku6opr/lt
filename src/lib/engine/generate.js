@@ -1,21 +1,79 @@
 import { CASES } from '../data/cases.js';
 import { WORDS } from '../data/words.js';
 import { DECLENSIONS } from '../data/declensions.js';
-import { LEVELS } from '../data/levels.js';
+import { LEVELS, PHRASE_TIERS } from '../data/levels.js';
 import { PREPS } from '../data/prepositions.js';
+import { VERBS } from '../data/verbs.js';
+import { PHRASES } from '../data/phrases.js';
 import { idx, stemOf } from './stem.js';
 
 function rnd(a) {
   return a[Math.floor(Math.random() * a.length)];
 }
 
+function inTheme(w, theme) {
+  return !theme || theme === 'all' || (w.themes && w.themes.includes(theme));
+}
+
 export function poolOk(state) {
-  return CASES.some((c) => state.cases[c.id]) && WORDS.some((w) => state.types[w.type]) && (state.numbers.sg || state.numbers.pl);
+  if (PHRASES[state.theme] && PHRASES[state.theme].length) return true;
+  return CASES.some((c) => state.cases[c.id]) && WORDS.some((w) => state.types[w.type] && inTheme(w, state.theme)) && (state.numbers.sg || state.numbers.pl);
+}
+
+function phraseTask(state, bank, lastWordId) {
+  let pick = bank;
+  if (lastWordId && bank.length > 1) {
+    const alt = bank.filter((p) => p.w !== lastWordId);
+    if (alt.length) pick = alt;
+  }
+  const p = pick[Math.floor(Math.random() * pick.length)];
+  const word = WORDS.find((w) => w.id === p.w);
+  const target = CASES.find((c) => c.id === p.c);
+  const ti = idx(target.id);
+  const forms = word.sg;
+  const stem = stemOf(word, 'sg');
+  const tail = forms[ti].slice(stem.length);
+  const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
+  const useUk = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
+  const hintMode = tier.hint;
+  const prompt = useUk ? { text: word.uk } : { stem, tail: forms[0].slice(stem.length) };
+  const qStr = '(' + target.qUk + ' / ' + target.q + ')';
+  let hint = null;
+  if (hintMode === 'fullq') hint = (p.ukPre ? p.ukPre + ' ' : '') + qStr + ' ' + p.ukForm;
+  else if (hintMode === 'full') hint = p.uk;
+  else if (hintMode === 'q') hint = qStr;
+  const showsPhrase = hintMode === 'fullq' || hintMode === 'full';
+  const revealUk = showsPhrase ? null : p.uk;
+  return {
+    caseId: target.id,
+    caseBound: false,
+    typeId: word.type,
+    wordId: word.id,
+    themes: [state.theme],
+    number: 'sg',
+    mode: 'phrase',
+    prompt,
+    promptNote: null,
+    hasNote: false,
+    wordUk: null,
+    hasLead: true,
+    lead: p.lead,
+    hint,
+    revealUk,
+    stemPrefill: !useUk,
+    stemPrefix: useUk ? '' : stem,
+    stem,
+    tail,
+    targetForm: forms[ti]
+  };
 }
 
 export function newTask(state, lastWordId) {
+  const bank = PHRASES[state.theme];
+  if (bank && bank.length) return phraseTask(state, bank, lastWordId);
+
   const ec = CASES.filter((c) => state.cases[c.id]);
-  const ew = WORDS.filter((w) => state.types[w.type]);
+  const ew = WORDS.filter((w) => state.types[w.type] && inTheme(w, state.theme));
   const en = ['sg', 'pl'].filter((n) => state.numbers[n]);
   if (!ec.length || !ew.length || !en.length) return null;
 
@@ -36,6 +94,7 @@ export function newTask(state, lastWordId) {
   const type = rnd(pick);
   let mode = stop.prompt;
   if (mode === 'mix-otheruk') mode = rnd(['lt-othercase', 'uk']);
+  if (mode === 'mix-all') mode = rnd(['lt-nom', 'lt-tonom', 'lt-othercase', 'uk']);
 
   const caseBound = mode !== 'lt-tonom';
   let target;
@@ -75,19 +134,31 @@ export function newTask(state, lastWordId) {
     hasNote = true;
   }
 
-  const allowedPreps = stop.preps ? target.preps.filter((p) => stop.preps.includes(p)) : target.preps;
-  const hasPrep = allowedPreps.length > 0;
-  const prepWord = hasPrep ? rnd(allowedPreps) : null;
+  const ck = CASEKEY[target.id];
+  const cats = type.cat || [];
+  const accepts = (d) => d.accepts === '*' || d.accepts.some((c) => cats.includes(c));
+  let drivers = [];
+  if (mode !== 'uk' || stop.ukDrivers) {
+    const preps = stop.preps || [];
+    for (const p of preps) {
+      const pd = PREPS[p];
+      if (pd.case === ck && accepts(pd)) drivers.push({ lt: p, uk: pd.uk, ukCase: pd.ukCase });
+    }
+    if (stop.verbs) {
+      for (const v of VERBS) {
+        if (v.case === ck && accepts(v)) drivers.push({ lt: v.id, uk: v.uk, ukCase: v.ukCase });
+      }
+    }
+  }
+  const driver = drivers.length ? rnd(drivers) : null;
 
-  const qStr = '(' + target.qUk + ' / ' + target.q + ')';
   let hint = null;
-  if (prepWord) {
-    const p = PREPS[prepWord];
-    const uform = uf[p.case];
-    if (uform) hint = p.uk + (stop.question ? ' ' + qStr : '') + ' ' + uform;
+  if (driver) {
+    const dform = uf[driver.ukCase] || uf[ck];
+    if (dform) hint = driver.uk + (stop.question ? ' (' + target.q + ')' : '') + ' ' + dform;
   } else {
-    const uform = uf[CASEKEY[target.id]];
-    if (uform) hint = qStr + ' ' + uform;
+    const uform = uf[ck];
+    if (uform) hint = '(' + target.qUk + ' / ' + target.q + ') ' + uform;
   }
   const wordUk = promptCaseId ? uf[CASEKEY[promptCaseId]] : null;
 
@@ -97,14 +168,15 @@ export function newTask(state, lastWordId) {
     caseBound,
     typeId: type.type,
     wordId: type.id,
+    themes: type.themes || [],
     number,
     mode,
     prompt,
     promptNote: note,
     hasNote,
     wordUk,
-    hasPrep,
-    prep: prepWord,
+    hasLead: !!driver,
+    lead: driver ? driver.lt : null,
     hint,
     stemPrefill,
     stemPrefix: stemPrefill ? stem : '',

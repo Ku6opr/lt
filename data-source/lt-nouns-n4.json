@@ -1,0 +1,215 @@
+[
+  {
+    "lemma": "vonia",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vonia",
+      "vonios",
+      "voniai",
+      "vonią",
+      "vonia",
+      "vonioje"
+    ],
+    "pl": [
+      "vonios",
+      "vonių",
+      "vonioms",
+      "vonias",
+      "voniomis",
+      "voniose"
+    ]
+  },
+  {
+    "lemma": "krėslas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "krėslas",
+      "krėslo",
+      "krėslui",
+      "krėslą",
+      "krėslu",
+      "krėsle"
+    ],
+    "pl": [
+      "krėslai",
+      "krėslų",
+      "krėslams",
+      "krėslus",
+      "krėslais",
+      "krėsluose"
+    ]
+  },
+  {
+    "lemma": "sofa",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sofa",
+      "sofos",
+      "sofai",
+      "sofą",
+      "sofa",
+      "sofoje"
+    ],
+    "pl": [
+      "sofos",
+      "sofų",
+      "sofoms",
+      "sofas",
+      "sofomis",
+      "sofose"
+    ]
+  },
+  {
+    "lemma": "lentyna",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "not on en.wiktionary or lt.wiktionary"
+  },
+  {
+    "lemma": "paveikslas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "paveikslas",
+      "paveikslo",
+      "paveikslui",
+      "paveikslą",
+      "paveikslu",
+      "paveiksle"
+    ],
+    "pl": [
+      "paveikslai",
+      "paveikslų",
+      "paveikslams",
+      "paveikslus",
+      "paveikslais",
+      "paveiksluose"
+    ]
+  },
+  {
+    "lemma": "kilimas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kilimas",
+      "kilimo",
+      "kilimui",
+      "kilimą",
+      "kilimu",
+      "kilime"
+    ],
+    "pl": [
+      "kilimai",
+      "kilimų",
+      "kilimams",
+      "kilimus",
+      "kilimais",
+      "kilimuose"
+    ]
+  },
+  {
+    "lemma": "užuolaida",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "not on en.wiktionary or lt.wiktionary"
+  },
+  {
+    "lemma": "puodas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "puodas",
+      "puodo",
+      "puodui",
+      "puodą",
+      "puodu",
+      "puode"
+    ],
+    "pl": [
+      "puodai",
+      "puodų",
+      "puodams",
+      "puodus",
+      "puodais",
+      "puoduose"
+    ]
+  },
+  {
+    "lemma": "keptuvė",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "not on en.wiktionary or lt.wiktionary"
+  },
+  {
+    "lemma": "šaldytuvas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šaldytuvas",
+      "šaldytuvo",
+      "šaldytuvui",
+      "šaldytuvą",
+      "šaldytuvu",
+      "šaldytuve"
+    ],
+    "pl": [
+      "šaldytuvai",
+      "šaldytuvų",
+      "šaldytuvams",
+      "šaldytuvus",
+      "šaldytuvais",
+      "šaldytuvuose"
+    ]
+  },
+  {
+    "lemma": "viryklė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "viryklė",
+      "viryklės",
+      "viryklei",
+      "viryklę",
+      "virykle",
+      "viryklėje"
+    ],
+    "pl": [
+      "viryklės",
+      "viryklių",
+      "viryklėms",
+      "virykles",
+      "viryklėmis",
+      "viryklėse"
+    ]
+  },
+  {
+    "lemma": "siena",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "siena",
+      "sienos",
+      "sienai",
+      "sieną",
+      "siena",
+      "sienoje"
+    ],
+    "pl": [
+      "sienos",
+      "sienų",
+      "sienoms",
+      "sienas",
+      "sienomis",
+      "sienose"
+    ]
+  }
+]
