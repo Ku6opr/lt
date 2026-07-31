@@ -20,11 +20,13 @@ export function poolOk(state) {
   return CASES.some((c) => state.cases[c.id]) && WORDS.some((w) => state.types[w.type] && inTheme(w, state.theme)) && (state.numbers.sg || state.numbers.pl);
 }
 
-function phraseTask(state, bank, lastWordId) {
+function phraseTask(state, bank, prev) {
   let pick = bank;
-  if (lastWordId && bank.length > 1) {
-    const alt = bank.filter((p) => p.w !== lastWordId);
-    if (alt.length) pick = alt;
+  if (prev && bank.length > 1) {
+    let a = bank.filter((p) => p.w !== prev.wordId && p.c !== prev.caseId);
+    if (!a.length) a = bank.filter((p) => p.w !== prev.wordId);
+    if (!a.length) a = bank.filter((p) => p.c !== prev.caseId);
+    if (a.length) pick = a;
   }
   const p = pick[Math.floor(Math.random() * pick.length)];
   const word = WORDS.find((w) => w.id === p.w);
@@ -68,9 +70,9 @@ function phraseTask(state, bank, lastWordId) {
   };
 }
 
-export function newTask(state, lastWordId) {
+export function newTask(state, prev) {
   const bank = PHRASES[state.theme];
-  if (bank && bank.length) return phraseTask(state, bank, lastWordId);
+  if (bank && bank.length) return phraseTask(state, bank, prev);
 
   const ec = CASES.filter((c) => state.cases[c.id]);
   const ew = WORDS.filter((w) => state.types[w.type] && inTheme(w, state.theme));
@@ -81,16 +83,21 @@ export function newTask(state, lastWordId) {
 
   const stop = LEVELS[state.level];
   const number = rnd(en);
+  let avail = ew.filter((w) => number === 'sg' || (w.pl && w.pl.length === 6));
+  if (!avail.length) avail = ew;
   let pool;
   if (stop.word === 'fixed') {
-    const samples = DECLENSIONS.filter((t) => ew.some((w) => w.type === t.id)).map((t) => t.sample);
-    pool = ew.filter((w) => samples.includes(w.id));
-    if (!pool.length) pool = ew;
+    const samples = DECLENSIONS.filter((t) => avail.some((w) => w.type === t.id)).map((t) => t.sample);
+    pool = avail.filter((w) => samples.includes(w.id));
+    if (!pool.length) pool = avail;
   } else {
-    pool = ew;
+    pool = avail;
   }
   let pick = pool;
-  if (lastWordId && pool.length > 1) pick = pool.filter((w) => w.id !== lastWordId);
+  if (prev && prev.wordId && pool.length > 1) {
+    const a = pool.filter((w) => w.id !== prev.wordId);
+    if (a.length) pick = a;
+  }
   const type = rnd(pick);
   let mode = stop.prompt;
   if (mode === 'mix-otheruk') mode = rnd(['lt-othercase', 'uk']);
@@ -103,6 +110,10 @@ export function newTask(state, lastWordId) {
   } else {
     let casePool = ec.slice();
     if (mode === 'lt-nom' && casePool.length > 1) casePool = casePool.filter((c) => c.id !== 'V');
+    if (prev && prev.caseId && casePool.length > 1) {
+      const a = casePool.filter((c) => c.id !== prev.caseId);
+      if (a.length) casePool = a;
+    }
     target = rnd(casePool);
   }
   const ti = idx(target.id);

@@ -33,14 +33,24 @@ export const PHRASES = {
     ...gen('puodelis', 'K', 'чашка', 'gen', ['kava', 'arbata']),
     ...gen('stiklinė', 'K', 'склянка', 'gen', ['vanduo', 'alus', 'vynas', 'pienas']),
     ...gen('mėgti', 'G', 'любити', 'acc', ['kava', 'arbata', 'šokoladas', 'tortas', 'ledas', 'pyragas']),
-    ...gen('be', 'K', 'без', 'gen', ['cukrus', 'pienas', 'ledas'])
+    ...gen('be', 'K', 'без', 'gen', ['cukrus', 'pienas', 'ledas']),
+    ...head('bandelė', 'булка', ['uogienė']),
+    ...head('arbata', 'чай', ['medus']),
+    ...gen('užsakyti', 'G', 'замовити', 'acc', ['pica', 'kokteilis', 'limonadas', 'kakava', 'sausainis', 'spurga', 'jogurtas']),
+    ...gen('gerti', 'G', 'пити', 'acc', ['kakava', 'limonadas', 'kokteilis']),
+    ...gen('valgyti', 'G', 'їсти', 'acc', ['pica', 'spurga', 'sausainis', 'uogienė', 'jogurtas', 'medus']),
+    ...gen('mėgti', 'G', 'любити', 'acc', ['medus', 'uogienė', 'sausainis', 'pica'])
   ],
   prod: [
     ...gen('pirkti', 'G', 'купувати', 'acc', ['duona', 'pienas', 'sūris', 'mėsa', 'sviestas', 'kiaušinis', 'bananas', 'apelsinas', 'citrina', 'kopūstas', 'svogūnas', 'česnakas', 'morka', 'obuolys', 'pomidoras', 'agurkas', 'dešra', 'kumpis', 'grybas', 'uoga', 'braškė', 'riešutas']),
     ...gen('kilogramas', 'K', 'кілограм', 'gen', ['sūris', 'mėsa', 'obuolys', 'bananas', 'pomidoras', 'bulvė', 'svogūnas', 'morka', 'riešutas', 'grybas', 'braškė']),
     ...gen('butelis', 'K', 'пляшка', 'gen', ['pienas', 'vanduo', 'vynas', 'alus']),
     ...gen('be', 'K', 'без', 'gen', ['cukrus', 'mėsa']),
-    ...gen('valgyti', 'G', 'їсти', 'acc', ['bananas', 'obuolys', 'riešutas', 'uoga', 'braškė', 'grybas', 'sūris', 'dešra', 'kumpis', 'morka'])
+    ...gen('valgyti', 'G', 'їсти', 'acc', ['bananas', 'obuolys', 'riešutas', 'uoga', 'braškė', 'grybas', 'sūris', 'dešra', 'kumpis', 'morka']),
+    ...gen('pirkti', 'G', 'купувати', 'acc', ['kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'ropė', 'silkė', 'vištiena', 'jautiena', 'kiauliena', 'aliejus', 'actas', 'medus', 'jogurtas']),
+    ...gen('kilogramas', 'K', 'кілограм', 'gen', ['kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'ropė', 'silkė', 'vištiena', 'jautiena', 'kiauliena']),
+    ...gen('valgyti', 'G', 'їсти', 'acc', ['kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'silkė']),
+    ...gen('butelis', 'K', 'пляшка', 'gen', ['aliejus', 'limonadas'])
   ],
   street: [
     ...gen('eiti į', 'G', 'йти в', 'acc', ['parkas', 'parduotuvė', 'mokykla', 'muziejus', 'teatras', 'bažnyčia', 'vaistinė', 'bankas', 'viešbutis', 'miestas', 'turgus']),
@@ -48,7 +58,11 @@ export const PHRASES = {
     ...gen('prie', 'K', 'біля', 'gen', ['tiltas', 'stotelė', 'stotis', 'namas', 'parduotuvė', 'šviesoforas', 'bažnyčia', 'muziejus', 'aikštė']),
     ...gen('per', 'G', 'через', 'acc', ['gatvė', 'aikštė', 'tiltas', 'miestas']),
     ...gen('matyti', 'G', 'бачити', 'acc', ['muziejus', 'teatras', 'tiltas', 'bažnyčia', 'viešbutis', 'stotis']),
-    ...gen('iki', 'K', 'до', 'gen', ['stotelė', 'miestas', 'parkas', 'muziejus', 'bažnyčia'])
+    ...gen('iki', 'K', 'до', 'gen', ['stotelė', 'miestas', 'parkas', 'muziejus', 'bažnyčia']),
+    ...gen('eiti į', 'G', 'йти в', 'acc', ['universitetas', 'biblioteka', 'paštas', 'stadionas', 'baseinas', 'restoranas', 'pastatas', 'skveras']),
+    ...gen('važiuoti', 'In', 'їхати', 'ins', ['traukinys', 'lėktuvas', 'laivas', 'motociklas', 'sunkvežimis']),
+    ...gen('prie', 'K', 'біля', 'gen', ['universitetas', 'biblioteka', 'paštas', 'stadionas', 'restoranas', 'žibintas', 'ženklas', 'pastatas']),
+    ...gen('matyti', 'G', 'бачити', 'acc', ['traukinys', 'lėktuvas', 'laivas', 'motociklas', 'žibintas', 'ženklas', 'pastatas', 'skveras', 'universitetas'])
   ],
   home: [
     ...ant('knyga', 'книга', ['stalas']),
@@ -60,7 +74,12 @@ export const PHRASES = {
     ...gen('būti', 'Vt', 'бути', 'loc', ['kambarys', 'virtuvė', 'vonia', 'sodas']),
     ...gen('raktas nuo', 'K', 'ключ від', 'gen', ['namas', 'spinta', 'viešbutis']),
     ...gen('prie', 'K', 'біля', 'gen', ['siena', 'langas', 'stalas', 'spinta']),
-    ...gen('valyti', 'G', 'прибирати', 'acc', ['kambarys', 'virtuvė', 'vonia'])
+    ...gen('valyti', 'G', 'прибирати', 'acc', ['kambarys', 'virtuvė', 'vonia']),
+    ...ant('televizorius', 'телевізор', ['stalas']),
+    ...ant('kompiuteris', "комп'ютер", ['stalas']),
+    ...gen('pirkti', 'G', 'купувати', 'acc', ['virdulys', 'televizorius', 'kompiuteris', 'muilas', 'rankšluostis', 'antklodė', 'krėslas', 'sofa']),
+    ...gen('būti', 'Vt', 'бути', 'loc', ['koridorius', 'dušas']),
+    ...gen('prie', 'K', 'біля', 'gen', ['dušas', 'koridorius'])
   ],
   nature: [
     ...gen('eiti į', 'G', 'йти в', 'acc', ['miškas', 'parkas', 'sodas']),
@@ -72,14 +91,24 @@ export const PHRASES = {
     ...ant('lapas', 'листок', ['medis', 'šaka']),
     ...gen('plaukti', 'In', 'плисти', 'ins', ['jūra', 'ežeras', 'upė']),
     ...gen('prie', 'K', 'біля', 'gen', ['ežeras', 'upė', 'jūra', 'miškas', 'kalnas']),
-    ...gen('matyti', 'G', 'бачити', 'acc', ['saulė', 'mėnulis', 'žvaigždė', 'dangus', 'debesis', 'sniegas'])
+    ...gen('matyti', 'G', 'бачити', 'acc', ['saulė', 'mėnulis', 'žvaigždė', 'dangus', 'debesis', 'sniegas']),
+    ...gen('bijoti', 'K', 'боятися', 'gen', ['gyvatė', 'voras', 'uodas', 'šernas', 'vilkas', 'pelė']),
+    ...gen('matyti', 'G', 'бачити', 'acc', ['karvė', 'kiaulė', 'avis', 'ožka', 'višta', 'gaidys', 'antis', 'triušis', 'pelė', 'ežys', 'varna', 'gulbė', 'varlė', 'uodas', 'voras', 'laukas', 'pieva', 'kalva', 'sala', 'krantas', 'planeta']),
+    ...gen('eiti į', 'G', 'йти в', 'acc', ['laukas', 'pieva']),
+    ...gen('prie', 'K', 'біля', 'gen', ['krantas', 'sala', 'kalva', 'laukas', 'pieva', 'ugnis']),
+    ...gen('po', 'In', 'під', 'ins', ['krūmas', 'žemė'])
   ],
   people: [
     ...gen('skambinti', 'N', 'дзвонити', 'dat', ['draugas', 'brolis', 'sesuo', 'motina', 'tėvas', 'senelis', 'senelė', 'teta', 'dėdė', 'kaimynas', 'gydytojas', 'draugė']),
     ...gen('padėti', 'N', 'допомагати', 'dat', ['motina', 'tėvas', 'brolis', 'sesuo', 'draugas', 'senelė', 'mokytojas', 'kaimynas', 'anūkas']),
     ...gen('mylėti', 'G', 'любити', 'acc', ['motina', 'tėvas', 'sesuo', 'brolis', 'vaikas', 'senelė', 'draugė']),
     ...gen('kalbėti su', 'In', 'говорити з', 'ins', ['draugas', 'mokytojas', 'gydytojas', 'kaimynas', 'tėvas', 'pardavėjas']),
-    ...gen('laiškas nuo', 'K', 'лист від', 'gen', ['brolis', 'sesuo', 'draugas', 'senelis', 'teta', 'dėdė'])
+    ...gen('laiškas nuo', 'K', 'лист від', 'gen', ['brolis', 'sesuo', 'draugas', 'senelis', 'teta', 'dėdė']),
+    ...gen('skambinti', 'N', 'дзвонити', 'dat', ['pusbrolis', 'žentas', 'dvynys', 'kirpėjas', 'teisėjas', 'advokatas']),
+    ...gen('padėti', 'N', 'допомагати', 'dat', ['pusbrolis', 'žentas', 'statybininkas', 'inžinierius', 'kareivis', 'jūreivis', 'anūkas']),
+    ...gen('mylėti', 'G', 'любити', 'acc', ['pusbrolis', 'žentas', 'dvynys', 'anūkas']),
+    ...gen('kalbėti su', 'In', 'говорити з', 'ins', ['kirpėjas', 'teisėjas', 'advokatas', 'inžinierius', 'rašytojas', 'klientas', 'pardavėjas', 'vairuotojas']),
+    ...gen('matyti', 'G', 'бачити', 'acc', ['kirpėjas', 'statybininkas', 'inžinierius', 'teisėjas', 'advokatas', 'verslininkas', 'menininkas', 'rašytojas', 'dainininkas', 'sportininkas', 'kareivis', 'jūreivis', 'ugniagesys', 'pardavėjas', 'vairuotojas'])
   ],
   time: [
     ...gen('po', 'K', 'через', 'acc', ['savaitė', 'valanda', 'minutė', 'mėnuo']),
@@ -87,6 +116,9 @@ export const PHRASES = {
     ...gen('per', 'G', 'за', 'acc', ['diena', 'savaitė', 'vasara', 'žiema', 'naktis']),
     ...gen('prieš', 'G', 'перед', 'ins', ['žiema', 'vasara', 'šventė', 'vakaras']),
     ...gen('iki', 'K', 'до', 'gen', ['žiema', 'vasara', 'mėnuo', 'sekmadienis', 'ruduo']),
-    ...gen('po', 'K', 'через', 'acc', ['diena', 'vakaras', 'naktis', 'sekundė'])
+    ...gen('po', 'K', 'через', 'acc', ['diena', 'vakaras', 'naktis', 'sekundė']),
+    ...gen('iki', 'K', 'до', 'gen', ['antradienis', 'trečiadienis', 'ketvirtadienis', 'penktadienis', 'savaitgalis', 'vidurdienis']),
+    ...gen('per', 'G', 'за', 'acc', ['savaitgalis', 'vidurdienis', 'valanda', 'minutė']),
+    ...gen('po', 'K', 'через', 'acc', ['savaitgalis', 'minutė', 'valanda'])
   ]
 };

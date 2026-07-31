@@ -1,0 +1,325 @@
+[
+  {
+    "lemma": "universitetas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "universitetas",
+      "universiteto",
+      "universitetui",
+      "universitetą",
+      "universitetu",
+      "universitete"
+    ],
+    "pl": [
+      "universitetai",
+      "universitetų",
+      "universitetams",
+      "universitetus",
+      "universitetais",
+      "universitetuose"
+    ]
+  },
+  {
+    "lemma": "biblioteka",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "biblioteka",
+      "bibliotekos",
+      "bibliotekai",
+      "biblioteką",
+      "biblioteka",
+      "bibliotekoje"
+    ],
+    "pl": [
+      "bibliotekos",
+      "bibliotekų",
+      "bibliotekoms",
+      "bibliotekas",
+      "bibliotekomis",
+      "bibliotekose"
+    ]
+  },
+  {
+    "lemma": "paštas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "paštas",
+      "pašto",
+      "paštui",
+      "paštą",
+      "paštu",
+      "pašte"
+    ],
+    "pl": [
+      "paštai",
+      "paštų",
+      "paštams",
+      "paštus",
+      "paštais",
+      "paštuose"
+    ]
+  },
+  {
+    "lemma": "stadionas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "stadionas",
+      "stadiono",
+      "stadionui",
+      "stadioną",
+      "stadionu",
+      "stadione"
+    ],
+    "pl": [
+      "stadionai",
+      "stadionų",
+      "stadionams",
+      "stadionus",
+      "stadionais",
+      "stadionuose"
+    ]
+  },
+  {
+    "lemma": "baseinas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "baseinas",
+      "baseino",
+      "baseinui",
+      "baseiną",
+      "baseinu",
+      "baseine"
+    ],
+    "pl": [
+      "baseinai",
+      "baseinų",
+      "baseinams",
+      "baseinus",
+      "baseinais",
+      "baseinuose"
+    ]
+  },
+  {
+    "lemma": "restoranas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "restoranas",
+      "restorano",
+      "restoranui",
+      "restoraną",
+      "restoranu",
+      "restorane"
+    ],
+    "pl": [
+      "restoranai",
+      "restoranų",
+      "restoranams",
+      "restoranus",
+      "restoranais",
+      "restoranuose"
+    ]
+  },
+  {
+    "lemma": "darželis",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "No entry with Lithuanian declension on en.wiktionary.org or lt.wiktionary.org"
+  },
+  {
+    "lemma": "traukinys",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "traukinys",
+      "traukinio",
+      "traukiniui",
+      "traukinį",
+      "traukiniu",
+      "traukinyje"
+    ],
+    "pl": [
+      "traukiniai",
+      "traukinių",
+      "traukiniams",
+      "traukinius",
+      "traukiniais",
+      "traukiniuose"
+    ]
+  },
+  {
+    "lemma": "lėktuvas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "lėktuvas",
+      "lėktuvo",
+      "lėktuvui",
+      "lėktuvą",
+      "lėktuvu",
+      "lėktuve"
+    ],
+    "pl": [
+      "lėktuvai",
+      "lėktuvų",
+      "lėktuvams",
+      "lėktuvus",
+      "lėktuvais",
+      "lėktuvuose"
+    ]
+  },
+  {
+    "lemma": "laivas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "laivas",
+      "laivo",
+      "laivui",
+      "laivą",
+      "laivu",
+      "laive"
+    ],
+    "pl": [
+      "laivai",
+      "laivų",
+      "laivams",
+      "laivus",
+      "laivais",
+      "laivuose"
+    ]
+  },
+  {
+    "lemma": "motociklas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "motociklas",
+      "motociklo",
+      "motociklui",
+      "motociklą",
+      "motociklu",
+      "motocikle"
+    ],
+    "pl": [
+      "motociklai",
+      "motociklų",
+      "motociklams",
+      "motociklus",
+      "motociklais",
+      "motocikluose"
+    ]
+  },
+  {
+    "lemma": "sunkvežimis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sunkvežimis",
+      "sunkvežimio",
+      "sunkvežimiui",
+      "sunkvežimį",
+      "sunkvežimiu",
+      "sunkvežimyje"
+    ],
+    "pl": [
+      "sunkvežimiai",
+      "sunkvežimių",
+      "sunkvežimiams",
+      "sunkvežimius",
+      "sunkvežimiais",
+      "sunkvežimiuose"
+    ]
+  },
+  {
+    "lemma": "ženklas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ženklas",
+      "ženklo",
+      "ženklui",
+      "ženklą",
+      "ženklu",
+      "ženkle"
+    ],
+    "pl": [
+      "ženklai",
+      "ženklų",
+      "ženklams",
+      "ženklus",
+      "ženklais",
+      "ženkluose"
+    ]
+  },
+  {
+    "lemma": "žibintas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "žibintas",
+      "žibinto",
+      "žibintui",
+      "žibintą",
+      "žibintu",
+      "žibinte"
+    ],
+    "pl": [
+      "žibintai",
+      "žibintų",
+      "žibintams",
+      "žibintus",
+      "žibintais",
+      "žibintuose"
+    ]
+  },
+  {
+    "lemma": "pastatas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pastatas",
+      "pastato",
+      "pastatui",
+      "pastatą",
+      "pastatu",
+      "pastate"
+    ],
+    "pl": [
+      "pastatai",
+      "pastatų",
+      "pastatams",
+      "pastatus",
+      "pastatais",
+      "pastatuose"
+    ]
+  },
+  {
+    "lemma": "skveras",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "skveras",
+      "skvero",
+      "skverui",
+      "skverą",
+      "skveru",
+      "skvere"
+    ],
+    "pl": [
+      "skverai",
+      "skverų",
+      "skverams",
+      "skverus",
+      "skverais",
+      "skveruose"
+    ]
+  }
+]

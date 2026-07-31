@@ -1,0 +1,261 @@
+[
+  {
+    "lemma": "kakava",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kakava",
+      "kakavos",
+      "kakavai",
+      "kakavą",
+      "kakava",
+      "kakavoje"
+    ],
+    "pl": [],
+    "note": "singularia tantum (no plural in source)"
+  },
+  {
+    "lemma": "limonadas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "limonadas",
+      "limonado",
+      "limonadui",
+      "limonadą",
+      "limonadu",
+      "limonade"
+    ],
+    "pl": [],
+    "note": "singularia tantum (no plural in source)"
+  },
+  {
+    "lemma": "kokteilis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kokteilis",
+      "kokteilio",
+      "kokteiliui",
+      "kokteilį",
+      "kokteiliu",
+      "kokteilyje"
+    ],
+    "pl": [
+      "kokteiliai",
+      "kokteilių",
+      "kokteiliams",
+      "kokteilius",
+      "kokteiliais",
+      "kokteiliuose"
+    ]
+  },
+  {
+    "lemma": "kompotas",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "no Lithuanian declension table found"
+  },
+  {
+    "lemma": "pica",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pica",
+      "picos",
+      "picai",
+      "picą",
+      "pica",
+      "picoje"
+    ],
+    "pl": [
+      "picos",
+      "picų",
+      "picoms",
+      "picas",
+      "picomis",
+      "picose"
+    ]
+  },
+  {
+    "lemma": "mėsainis",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "no Lithuanian declension table found"
+  },
+  {
+    "lemma": "kepsnys",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "no Lithuanian declension table found"
+  },
+  {
+    "lemma": "spurga",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "spurga",
+      "spurgos",
+      "spurgai",
+      "spurgą",
+      "spurga",
+      "spurgoje"
+    ],
+    "pl": [
+      "spurgos",
+      "spurgų",
+      "spurgoms",
+      "spurgas",
+      "spurgomis",
+      "spurgose"
+    ]
+  },
+  {
+    "lemma": "sausainis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sausainis",
+      "sausainio",
+      "sausainiui",
+      "sausainį",
+      "sausainiu",
+      "sausainyje"
+    ],
+    "pl": [
+      "sausainiai",
+      "sausainių",
+      "sausainiams",
+      "sausainius",
+      "sausainiais",
+      "sausainiuose"
+    ]
+  },
+  {
+    "lemma": "medus",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "medus",
+      "medaus",
+      "medui",
+      "medų",
+      "medumi",
+      "meduje"
+    ],
+    "pl": [
+      "medūs",
+      "medų",
+      "medums",
+      "medus",
+      "medumis",
+      "meduose"
+    ]
+  },
+  {
+    "lemma": "uogienė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "uogienė",
+      "uogienės",
+      "uogienei",
+      "uogienę",
+      "uogiene",
+      "uogienėje"
+    ],
+    "pl": [
+      "uogienės",
+      "uogienių",
+      "uogienėms",
+      "uogienes",
+      "uogienėmis",
+      "uogienėse"
+    ]
+  },
+  {
+    "lemma": "jogurtas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "jogurtas",
+      "jogurto",
+      "jogurtui",
+      "jogurtą",
+      "jogurtu",
+      "jogurte"
+    ],
+    "pl": [
+      "jogurtai",
+      "jogurtų",
+      "jogurtams",
+      "jogurtus",
+      "jogurtais",
+      "jogurtuose"
+    ]
+  },
+  {
+    "lemma": "desertas",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "no Lithuanian declension table found"
+  },
+  {
+    "lemma": "peilis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "peilis",
+      "peilio",
+      "peiliui",
+      "peilį",
+      "peiliu",
+      "peilyje"
+    ],
+    "pl": [
+      "peiliai",
+      "peilių",
+      "peiliams",
+      "peilius",
+      "peiliais",
+      "peiliuose"
+    ]
+  },
+  {
+    "lemma": "šakutė",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "no Lithuanian declension table found"
+  },
+  {
+    "lemma": "klientas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "klientas",
+      "kliento",
+      "klientui",
+      "klientą",
+      "klientu",
+      "kliente"
+    ],
+    "pl": [
+      "klientai",
+      "klientų",
+      "klientams",
+      "klientus",
+      "klientais",
+      "klientuose"
+    ]
+  }
+]

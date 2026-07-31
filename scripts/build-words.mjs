@@ -5,7 +5,8 @@ const OUT = 'src/lib/data/words.js';
 const fetched = [
   ...JSON.parse(fs.readFileSync('data-source/lt-declensions.json')),
   ...JSON.parse(fs.readFileSync('data-source/lt-declensions-themes.json')),
-  ...JSON.parse(fs.readFileSync('data-source/lt-declensions-more.json'))
+  ...JSON.parse(fs.readFileSync('data-source/lt-declensions-more.json')),
+  ...JSON.parse(fs.readFileSync('data-source/lt-nouns-more2.json'))
 ];
 
 const DROP = new Set(['druska']);
@@ -288,6 +289,131 @@ THEME_MEMBERS.nature.push('žolė', 'lapas', 'šaka', 'krūmas', 'drugelis', 'bi
 THEME_MEMBERS.people.push('teta', 'dėdė', 'senelė', 'anūkas', 'virėjas', 'pardavėjas', 'vairuotojas', 'studentas', 'mokinys', 'policininkas', 'ūkininkas', 'draugė');
 THEME_MEMBERS.time.push('sekmadienis', 'pirmadienis', 'šeštadienis', 'šventė', 'gimtadienis', 'sekundė', 'amžius');
 
+Object.assign(META, {
+  kakava: { t: 'a', uk: 'какао', f: ['какао', 'какао', 'какао', 'какао', 'у какао'] },
+  limonadas: { t: 'as', uk: 'лимонад', f: ['лимонаду', 'лимонаду', 'лимонад', 'лимонадом', 'у лимонаді'] },
+  kokteilis: { t: 'is_b', uk: 'коктейль', f: ['коктейлю', 'коктейлю', 'коктейль', 'коктейлем', 'у коктейлі'] },
+  pica: { t: 'a', uk: 'піца', f: ['піци', 'піці', 'піцу', 'піцою', 'у піці'] },
+  spurga: { t: 'a', uk: 'пампушка', f: ['пампушки', 'пампушці', 'пампушку', 'пампушкою', 'у пампушці'] },
+  sausainis: { t: 'is_b', uk: 'печиво', f: ['печива', 'печиву', 'печиво', 'печивом', 'у печиві'] },
+  medus: { t: 'us', uk: 'мед', f: ['меду', 'меду', 'мед', 'медом', 'у меді'] },
+  uogienė: { t: 'e', uk: 'варення', f: ['варення', 'варенню', 'варення', 'варенням', 'у варенні'] },
+  jogurtas: { t: 'as', uk: 'йогурт', f: ['йогурту', 'йогурту', 'йогурт', 'йогуртом', 'у йогурті'] },
+  peilis: { t: 'is_b', uk: 'ніж', f: ['ножа', 'ножеві', 'ніж', 'ножем', 'у ножі'] },
+  klientas: { t: 'as', uk: 'клієнт', f: ['клієнта', 'клієнтові', 'клієнта', 'клієнтом', 'у клієнтові'] },
+  kriaušė: { t: 'e', uk: 'груша', f: ['груші', 'груші', 'грушу', 'грушею', 'на груші'] },
+  slyva: { t: 'a', uk: 'слива', f: ['сливи', 'сливі', 'сливу', 'сливою', 'на сливі'] },
+  vynuogė: { t: 'e', uk: 'виноград', f: ['винограду', 'винограду', 'виноград', 'виноградом', 'у винограді'] },
+  arbūzas: { t: 'as', uk: 'кавун', f: ['кавуна', 'кавуну', 'кавун', 'кавуном', 'у кавуні'] },
+  ananasas: { t: 'as', uk: 'ананас', f: ['ананаса', 'ананасу', 'ананас', 'ананасом', 'в ананасі'] },
+  avietė: { t: 'e', uk: 'малина', f: ['малини', 'малині', 'малину', 'малиною', 'у малині'] },
+  ropė: { t: 'e', uk: 'ріпа', f: ['ріпи', 'ріпі', 'ріпу', 'ріпою', 'у ріпі'] },
+  vištiena: { t: 'a', uk: 'курятина', f: ['курятини', 'курятині', 'курятину', 'курятиною', 'у курятині'] },
+  jautiena: { t: 'a', uk: 'яловичина', f: ['яловичини', 'яловичині', 'яловичину', 'яловичиною', 'у яловичині'] },
+  kiauliena: { t: 'a', uk: 'свинина', f: ['свинини', 'свинині', 'свинину', 'свининою', 'у свинині'] },
+  silkė: { t: 'e', uk: 'оселедець', f: ['оселедця', 'оселедцеві', 'оселедець', 'оселедцем', 'в оселедці'] },
+  aliejus: { t: 'us', uk: 'олія', f: ['олії', 'олії', 'олію', 'олією', 'в олії'] },
+  actas: { t: 'as', uk: 'оцет', f: ['оцту', 'оцту', 'оцет', 'оцтом', 'в оцті'] },
+  universitetas: { t: 'as', uk: 'університет', f: ['університету', 'університету', 'університет', 'університетом', 'в університеті'] },
+  biblioteka: { t: 'a', uk: 'бібліотека', f: ['бібліотеки', 'бібліотеці', 'бібліотеку', 'бібліотекою', 'у бібліотеці'] },
+  paštas: { t: 'as', uk: 'пошта', f: ['пошти', 'пошті', 'пошту', 'поштою', 'на пошті'] },
+  stadionas: { t: 'as', uk: 'стадіон', f: ['стадіону', 'стадіону', 'стадіон', 'стадіоном', 'на стадіоні'] },
+  baseinas: { t: 'as', uk: 'басейн', f: ['басейну', 'басейну', 'басейн', 'басейном', 'у басейні'] },
+  restoranas: { t: 'as', uk: 'ресторан', f: ['ресторану', 'ресторану', 'ресторан', 'рестораном', 'у ресторані'] },
+  traukinys: { t: 'ys', uk: 'потяг', f: ['потяга', 'потягу', 'потяг', 'потягом', 'у потягу'] },
+  lėktuvas: { t: 'as', uk: 'літак', f: ['літака', 'літаку', 'літак', 'літаком', 'у літаку'] },
+  laivas: { t: 'as', uk: 'корабель', f: ['корабля', 'кораблеві', 'корабель', 'кораблем', 'на кораблі'] },
+  motociklas: { t: 'as', uk: 'мотоцикл', f: ['мотоцикла', 'мотоциклу', 'мотоцикл', 'мотоциклом', 'на мотоциклі'] },
+  sunkvežimis: { t: 'is_b', uk: 'вантажівка', f: ['вантажівки', 'вантажівці', 'вантажівку', 'вантажівкою', 'у вантажівці'] },
+  ženklas: { t: 'as', uk: 'знак', f: ['знака', 'знаку', 'знак', 'знаком', 'на знаку'] },
+  žibintas: { t: 'as', uk: 'ліхтар', f: ['ліхтаря', 'ліхтареві', 'ліхтар', 'ліхтарем', 'на ліхтарі'] },
+  pastatas: { t: 'as', uk: 'будівля', f: ['будівлі', 'будівлі', 'будівлю', 'будівлею', 'у будівлі'] },
+  skveras: { t: 'as', uk: 'сквер', f: ['скверу', 'скверу', 'сквер', 'сквером', 'у сквері'] },
+  virdulys: { t: 'ys', uk: 'чайник', f: ['чайника', 'чайнику', 'чайник', 'чайником', 'у чайнику'] },
+  televizorius: { t: 'us', uk: 'телевізор', f: ['телевізора', 'телевізору', 'телевізор', 'телевізором', 'на телевізорі'] },
+  kompiuteris: { t: 'is_b', uk: "комп'ютер", f: ["комп'ютера", "комп'ютеру", "комп'ютер", "комп'ютером", "на комп'ютері"] },
+  muilas: { t: 'as', uk: 'мило', f: ['мила', 'милу', 'мило', 'милом', 'у милі'] },
+  rankšluostis: { t: 'is_m', uk: 'рушник', f: ['рушника', 'рушнику', 'рушник', 'рушником', 'на рушнику'] },
+  antklodė: { t: 'e', uk: 'ковдра', f: ['ковдри', 'ковдрі', 'ковдру', 'ковдрою', 'на ковдрі'] },
+  dušas: { t: 'as', uk: 'душ', f: ['душу', 'душу', 'душ', 'душем', 'у душі'] },
+  koridorius: { t: 'us', uk: 'коридор', f: ['коридору', 'коридору', 'коридор', 'коридором', 'у коридорі'] },
+  antradienis: { t: 'is_b', uk: 'вівторок', f: ['вівторка', 'вівторку', 'вівторок', 'вівторком', 'у вівторку'] },
+  trečiadienis: { t: 'is_b', uk: 'середа', f: ['середи', 'середі', 'середу', 'середою', 'у середі'] },
+  ketvirtadienis: { t: 'is_b', uk: 'четвер', f: ['четверга', 'четвергу', 'четвер', 'четвергом', 'у четвергу'] },
+  penktadienis: { t: 'is_b', uk: "п'ятниця", f: ["п'ятниці", "п'ятниці", "п'ятницю", "п'ятницею", "у п'ятниці"] },
+  savaitgalis: { t: 'is_b', uk: 'вихідний', f: ['вихідного', 'вихідному', 'вихідний', 'вихідним', 'у вихідному'] },
+  vidurdienis: { t: 'is_b', uk: 'полудень', f: ['полудня', 'полудню', 'полудень', 'полуднем', 'у полудні'] },
+  karvė: { t: 'e', uk: 'корова', f: ['корови', 'корові', 'корову', 'коровою', 'на корові'] },
+  kiaulė: { t: 'e', uk: 'свиня', f: ['свині', 'свині', 'свиню', 'свинею', 'на свині'] },
+  avis: { t: 'is_f', uk: 'вівця', f: ['вівці', 'вівці', 'вівцю', 'вівцею', 'на вівці'] },
+  ožka: { t: 'a', uk: 'коза', f: ['кози', 'козі', 'козу', 'козою', 'на козі'] },
+  višta: { t: 'a', uk: 'курка', f: ['курки', 'курці', 'курку', 'куркою', 'на курці'] },
+  gaidys: { t: 'ys', uk: 'півень', f: ['півня', 'півневі', 'півня', 'півнем', 'на півні'] },
+  antis: { t: 'is_f', uk: 'качка', f: ['качки', 'качці', 'качку', 'качкою', 'на качці'] },
+  triušis: { t: 'is_b', uk: 'кролик', f: ['кролика', 'кроликові', 'кролика', 'кроликом', 'на кролику'] },
+  pelė: { t: 'e', uk: 'миша', f: ['миші', 'миші', 'мишу', 'мишею', 'на миші'] },
+  ežys: { t: 'ys', uk: 'їжак', f: ['їжака', 'їжакові', 'їжака', 'їжаком', 'на їжаку'] },
+  šernas: { t: 'as', uk: 'кабан', f: ['кабана', 'кабанові', 'кабана', 'кабаном', 'на кабані'] },
+  varna: { t: 'a', uk: 'ворона', f: ['ворони', 'вороні', 'ворону', 'вороною', 'на вороні'] },
+  gulbė: { t: 'e', uk: 'лебідь', f: ['лебедя', 'лебедеві', 'лебедя', 'лебедем', 'на лебеді'] },
+  varlė: { t: 'e', uk: 'жаба', f: ['жаби', 'жабі', 'жабу', 'жабою', 'на жабі'] },
+  uodas: { t: 'as', uk: 'комар', f: ['комара', 'комареві', 'комара', 'комаром', 'на комарі'] },
+  voras: { t: 'as', uk: 'павук', f: ['павука', 'павукові', 'павука', 'павуком', 'на павуку'] },
+  pieva: { t: 'a', uk: 'лука', f: ['луки', 'луці', 'луку', 'лукою', 'на луці'] },
+  laukas: { t: 'as', uk: 'поле', f: ['поля', 'полю', 'поле', 'полем', 'у полі'] },
+  kalva: { t: 'a', uk: 'пагорб', f: ['пагорба', 'пагорбу', 'пагорб', 'пагорбом', 'на пагорбі'] },
+  sala: { t: 'a', uk: 'острів', f: ['острова', 'острову', 'острів', 'островом', 'на острові'] },
+  krantas: { t: 'as', uk: 'берег', f: ['берега', 'берегу', 'берег', 'берегом', 'на березі'] },
+  smėlis: { t: 'is_b', uk: 'пісок', f: ['піску', 'піску', 'пісок', 'піском', 'у піску'] },
+  žemė: { t: 'e', uk: 'земля', f: ['землі', 'землі', 'землю', 'землею', 'на землі'] },
+  ugnis: { t: 'is_f', uk: 'вогонь', f: ['вогню', 'вогню', 'вогонь', 'вогнем', 'у вогні'] },
+  planeta: { t: 'a', uk: 'планета', f: ['планети', 'планеті', 'планету', 'планетою', 'на планеті'] },
+  pusbrolis: { t: 'is_b', uk: 'кузен', f: ['кузена', 'кузенові', 'кузена', 'кузеном', 'у кузенові'] },
+  žentas: { t: 'as', uk: 'зять', f: ['зятя', 'зятеві', 'зятя', 'зятем', 'у зятеві'] },
+  dvynys: { t: 'ys', uk: 'близнюк', f: ['близнюка', 'близнюкові', 'близнюка', 'близнюком', 'у близнюку'] },
+  kirpėjas: { t: 'as', uk: 'перукар', f: ['перукаря', 'перукареві', 'перукаря', 'перукарем', 'у перукареві'] },
+  statybininkas: { t: 'as', uk: 'будівельник', f: ['будівельника', 'будівельникові', 'будівельника', 'будівельником', 'у будівельникові'] },
+  inžinierius: { t: 'us', uk: 'інженер', f: ['інженера', 'інженерові', 'інженера', 'інженером', 'в інженерові'] },
+  teisėjas: { t: 'as', uk: 'суддя', f: ['судді', 'судді', 'суддю', 'суддею', 'у судді'] },
+  advokatas: { t: 'as', uk: 'адвокат', f: ['адвоката', 'адвокатові', 'адвоката', 'адвокатом', 'в адвокатові'] },
+  verslininkas: { t: 'as', uk: 'бізнесмен', f: ['бізнесмена', 'бізнесменові', 'бізнесмена', 'бізнесменом', 'у бізнесменові'] },
+  menininkas: { t: 'as', uk: 'митець', f: ['митця', 'митцеві', 'митця', 'митцем', 'у митцеві'] },
+  rašytojas: { t: 'as', uk: 'письменник', f: ['письменника', 'письменникові', 'письменника', 'письменником', 'у письменникові'] },
+  dainininkas: { t: 'as', uk: 'співак', f: ['співака', 'співакові', 'співака', 'співаком', 'у співакові'] },
+  sportininkas: { t: 'as', uk: 'спортсмен', f: ['спортсмена', 'спортсменові', 'спортсмена', 'спортсменом', 'у спортсменові'] },
+  kareivis: { t: 'is_b', uk: 'солдат', f: ['солдата', 'солдатові', 'солдата', 'солдатом', 'у солдатові'] },
+  jūreivis: { t: 'is_b', uk: 'моряк', f: ['моряка', 'морякові', 'моряка', 'моряком', 'у морякові'] },
+  ugniagesys: { t: 'ys', uk: 'пожежник', f: ['пожежника', 'пожежникові', 'пожежника', 'пожежником', 'у пожежникові'] }
+});
+Object.assign(CAT, {
+  kakava: ['drink'], limonadas: ['drink'], kokteilis: ['drink'], pica: ['food'], spurga: ['food'],
+  sausainis: ['food'], medus: ['food'], uogienė: ['food'], jogurtas: ['food'], peilis: ['thing'], klientas: ['person'],
+  kriaušė: ['food'], slyva: ['food'], vynuogė: ['food'], arbūzas: ['food'], ananasas: ['food'], avietė: ['food'],
+  ropė: ['food'], vištiena: ['food'], jautiena: ['food'], kiauliena: ['food'], silkė: ['food'], aliejus: ['food'], actas: ['food'],
+  universitetas: ['place'], biblioteka: ['place'], paštas: ['place'], stadionas: ['place'], baseinas: ['place'],
+  restoranas: ['place'], traukinys: ['thing'], lėktuvas: ['thing'], laivas: ['thing'], motociklas: ['thing'],
+  sunkvežimis: ['thing'], ženklas: ['thing'], žibintas: ['thing'], pastatas: ['place'], skveras: ['place'],
+  virdulys: ['thing'], televizorius: ['thing'], kompiuteris: ['thing'], muilas: ['thing'], rankšluostis: ['thing'],
+  antklodė: ['thing'], dušas: ['thing'], koridorius: ['place'],
+  antradienis: ['time'], trečiadienis: ['time'], ketvirtadienis: ['time'], penktadienis: ['time'],
+  savaitgalis: ['time'], vidurdienis: ['time'],
+  karvė: ['animal'], kiaulė: ['animal'], avis: ['animal'], ožka: ['animal'], višta: ['animal'], gaidys: ['animal'],
+  antis: ['animal'], triušis: ['animal'], pelė: ['animal'], ežys: ['animal'], šernas: ['animal'], varna: ['animal'],
+  gulbė: ['animal'], varlė: ['animal'], uodas: ['animal'], voras: ['animal'],
+  pieva: ['nature'], laukas: ['nature'], kalva: ['nature'], sala: ['nature'], krantas: ['nature'], smėlis: ['nature'],
+  žemė: ['nature'], ugnis: ['nature'], planeta: ['nature'],
+  pusbrolis: ['person'], žentas: ['person'], dvynys: ['person'], kirpėjas: ['person'], statybininkas: ['person'],
+  inžinierius: ['person'], teisėjas: ['person'], advokatas: ['person'], verslininkas: ['person'], menininkas: ['person'],
+  rašytojas: ['person'], dainininkas: ['person'], sportininkas: ['person'], kareivis: ['person'], jūreivis: ['person'], ugniagesys: ['person']
+});
+THEME_MEMBERS.cafe.push('kakava', 'limonadas', 'kokteilis', 'pica', 'spurga', 'sausainis', 'medus', 'uogienė', 'jogurtas', 'peilis', 'klientas');
+THEME_MEMBERS.prod.push('kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'ropė', 'vištiena', 'jautiena', 'kiauliena', 'silkė', 'aliejus', 'actas', 'medus', 'uogienė', 'jogurtas');
+THEME_MEMBERS.street.push('universitetas', 'biblioteka', 'paštas', 'stadionas', 'baseinas', 'restoranas', 'traukinys', 'lėktuvas', 'laivas', 'motociklas', 'sunkvežimis', 'ženklas', 'žibintas', 'pastatas', 'skveras');
+THEME_MEMBERS.home.push('virdulys', 'televizorius', 'kompiuteris', 'muilas', 'rankšluostis', 'antklodė', 'dušas', 'koridorius');
+THEME_MEMBERS.nature.push('karvė', 'kiaulė', 'avis', 'ožka', 'višta', 'gaidys', 'antis', 'triušis', 'pelė', 'ežys', 'šernas', 'varna', 'gulbė', 'varlė', 'uodas', 'voras', 'pieva', 'laukas', 'kalva', 'sala', 'krantas', 'smėlis', 'žemė', 'ugnis', 'planeta');
+THEME_MEMBERS.people.push('klientas', 'pusbrolis', 'žentas', 'dvynys', 'kirpėjas', 'statybininkas', 'inžinierius', 'teisėjas', 'advokatas', 'verslininkas', 'menininkas', 'rašytojas', 'dainininkas', 'sportininkas', 'kareivis', 'jūreivis', 'ugniagesys');
+THEME_MEMBERS.time.push('antradienis', 'trečiadienis', 'ketvirtadienis', 'penktadienis', 'savaitgalis', 'vidurdienis');
+
 const THEMES_OF = {};
 for (const [t, ls] of Object.entries(THEME_MEMBERS)) for (const l of ls) (THEMES_OF[l] ||= []).push(t);
 
@@ -302,7 +428,9 @@ for (const w of source) {
   const m = META[w.lemma];
   if (!m) { problems.push('no META: ' + w.lemma); continue; }
   if (!VALID_TYPES.has(m.t)) { problems.push('bad type ' + m.t + ': ' + w.lemma); continue; }
-  if (!w.sg || w.sg.length !== 6 || !w.pl || w.pl.length !== 6 || [...w.sg, ...w.pl].some((x) => x == null)) {
+  const pl = w.pl || [];
+  const plOk = pl.length === 0 || pl.length === 6;
+  if (!w.sg || w.sg.length !== 6 || !plOk || w.sg.some((x) => x == null) || pl.some((x) => x == null)) {
     problems.push('bad forms: ' + w.lemma); continue;
   }
   const cat = CAT[w.lemma];
@@ -311,7 +439,7 @@ for (const w of source) {
   words.push({
     id: w.lemma, type: m.t, cat, themes: THEMES_OF[w.lemma] || [], uk: m.uk,
     ukForms: { nom: m.uk, gen, dat, acc, ins, loc },
-    sg: w.sg, pl: w.pl
+    sg: w.sg, pl
   });
   if (m.flag) flagged.push(w.lemma);
 }

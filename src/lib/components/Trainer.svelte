@@ -20,7 +20,8 @@
   $: s = $settings;
 
   function makeNewTask() {
-    const t = newTask($settings, task && task.wordId);
+    const prev = task ? { wordId: task.wordId, caseId: task.caseId } : null;
+    const t = newTask($settings, prev);
     task = t;
     revealed = false;
     userInput = '';

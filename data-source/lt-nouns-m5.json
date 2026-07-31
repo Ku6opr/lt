@@ -1,0 +1,285 @@
+[
+  {
+    "lemma": "karvė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "karvė",
+      "karvės",
+      "karvei",
+      "karvę",
+      "karve",
+      "karvėje"
+    ],
+    "pl": [
+      "karvės",
+      "karvių",
+      "karvėms",
+      "karves",
+      "karvėmis",
+      "karvėse"
+    ]
+  },
+  {
+    "lemma": "kiaulė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kiaulė",
+      "kiaulės",
+      "kiaulei",
+      "kiaulę",
+      "kiaule",
+      "kiaulėje"
+    ],
+    "pl": [
+      "kiaulės",
+      "kiaulių",
+      "kiaulėms",
+      "kiaules",
+      "kiaulėmis",
+      "kiaulėse"
+    ]
+  },
+  {
+    "lemma": "avis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "avis",
+      "avies",
+      "aviai",
+      "avį",
+      "avimi",
+      "avyje"
+    ],
+    "pl": [
+      "avys",
+      "avių",
+      "avims",
+      "avis",
+      "avimis",
+      "avyse"
+    ]
+  },
+  {
+    "lemma": "ožka",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ožka",
+      "ožkos",
+      "ožkai",
+      "ožką",
+      "ožka",
+      "ožkoje"
+    ],
+    "pl": [
+      "ožkos",
+      "ožkų",
+      "ožkoms",
+      "ožkas",
+      "ožkomis",
+      "ožkose"
+    ]
+  },
+  {
+    "lemma": "višta",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "višta",
+      "vištos",
+      "vištai",
+      "vištą",
+      "višta",
+      "vištoje"
+    ],
+    "pl": [
+      "vištos",
+      "vištų",
+      "vištoms",
+      "vištas",
+      "vištomis",
+      "vištose"
+    ]
+  },
+  {
+    "lemma": "gaidys",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "gaidys",
+      "gaidžio",
+      "gaidžiui",
+      "gaidį",
+      "gaidžiu",
+      "gaidyje"
+    ],
+    "pl": [
+      "gaidžiai",
+      "gaidžių",
+      "gaidžiams",
+      "gaidžius",
+      "gaidžiais",
+      "gaidžiuose"
+    ]
+  },
+  {
+    "lemma": "antis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "antis",
+      "anties",
+      "ančiai",
+      "antį",
+      "antimi",
+      "antyje"
+    ],
+    "pl": [
+      "antys",
+      "ančių",
+      "antims",
+      "antis",
+      "antimis",
+      "antyse"
+    ],
+    "note": "gen.sg variants: anties, ančio (using first); dat.sg variants: ančiai, ančiui (using first); ins.sg variants: antimi, ančiu (using first); nom.pl variants: antys, ančiai (using first); dat.pl variants: antims, ančiams (using first); acc.pl variants: antis, ančius (using first); ins.pl variants: antimis, ančiais (using first); loc.pl variants: antyse, ančiuose (using first)"
+  },
+  {
+    "lemma": "triušis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "triušis",
+      "triušio",
+      "triušiui",
+      "triušį",
+      "triušiu",
+      "triušyje"
+    ],
+    "pl": [
+      "triušiai",
+      "triušių",
+      "triušiams",
+      "triušius",
+      "triušiais",
+      "triušiuose"
+    ]
+  },
+  {
+    "lemma": "pelė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pelė",
+      "pelės",
+      "pelei",
+      "pelę",
+      "pele",
+      "pelėje"
+    ],
+    "pl": [
+      "pelės",
+      "pelių",
+      "pelėms",
+      "peles",
+      "pelėmis",
+      "pelėse"
+    ]
+  },
+  {
+    "lemma": "ežys",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ežys",
+      "ežio",
+      "ežiui",
+      "ežį",
+      "ežiu",
+      "ežyje"
+    ],
+    "pl": [
+      "ežiai",
+      "ežių",
+      "ežiams",
+      "ežius",
+      "ežiais",
+      "ežiuose"
+    ]
+  },
+  {
+    "lemma": "stirna",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "en.wiktionary.org has a Lithuanian entry but no declension/inflection table; no lt.wiktionary.org page"
+  },
+  {
+    "lemma": "šernas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "šernas",
+      "šerno",
+      "šernui",
+      "šerną",
+      "šernu",
+      "šerne"
+    ],
+    "pl": [
+      "šernai",
+      "šernų",
+      "šernams",
+      "šernus",
+      "šernais",
+      "šernuose"
+    ],
+    "note": "[lt.wiktionary]"
+  },
+  {
+    "lemma": "varna",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "varna",
+      "varnos",
+      "varnai",
+      "varną",
+      "varna",
+      "varnoje"
+    ],
+    "pl": [
+      "varnos",
+      "varnų",
+      "varnoms",
+      "varnas",
+      "varnomis",
+      "varnose"
+    ]
+  },
+  {
+    "lemma": "gulbė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "gulbė",
+      "gulbės",
+      "gulbei",
+      "gulbę",
+      "gulbe",
+      "gulbėje"
+    ],
+    "pl": [
+      "gulbės",
+      "gulbių",
+      "gulbėms",
+      "gulbes",
+      "gulbėmis",
+      "gulbėse"
+    ]
+  }
+]

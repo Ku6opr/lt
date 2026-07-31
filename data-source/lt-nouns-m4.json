@@ -1,0 +1,312 @@
+[
+  {
+    "lemma": "virdulys",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "virdulys",
+      "virdulio",
+      "virduliui",
+      "virdulį",
+      "virduliu",
+      "virdulyje"
+    ],
+    "pl": [
+      "virduliai",
+      "virdulių",
+      "virduliams",
+      "virdulius",
+      "virduliais",
+      "virduliuose"
+    ]
+  },
+  {
+    "lemma": "televizorius",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "televizorius",
+      "televizoriaus",
+      "televizoriui",
+      "televizorių",
+      "televizoriumi",
+      "televizoriuje"
+    ],
+    "pl": [
+      "televizoriai",
+      "televizorių",
+      "televizoriams",
+      "televizorius",
+      "televizoriais",
+      "televizoriuose"
+    ]
+  },
+  {
+    "lemma": "kompiuteris",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kompiuteris",
+      "kompiuterio",
+      "kompiuteriui",
+      "kompiuterį",
+      "kompiuteriu",
+      "kompiuteryje"
+    ],
+    "pl": [
+      "kompiuteriai",
+      "kompiuterių",
+      "kompiuteriams",
+      "kompiuterius",
+      "kompiuteriais",
+      "kompiuteriuose"
+    ]
+  },
+  {
+    "lemma": "muilas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "muilas",
+      "muilo",
+      "muilui",
+      "muilą",
+      "muilu",
+      "muile"
+    ],
+    "pl": [
+      "muilai",
+      "muilų",
+      "muilams",
+      "muilus",
+      "muilais",
+      "muiluose"
+    ]
+  },
+  {
+    "lemma": "rankšluostis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "rankšluostis",
+      "rankšluosčio",
+      "rankšluosčiui",
+      "rankšluostį",
+      "rankšluosčiu",
+      "rankšluostyje"
+    ],
+    "pl": [
+      "rankšluosčiai",
+      "rankšluosčių",
+      "rankšluosčiams",
+      "rankšluosčius",
+      "rankšluosčiais",
+      "rankšluosčiuose"
+    ]
+  },
+  {
+    "lemma": "pagalvė",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "lemma exists but no declension table on en.wiktionary (flagged missing) nor lt.wiktionary; not inventing"
+  },
+  {
+    "lemma": "antklodė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "antklodė",
+      "antklodės",
+      "antklodei",
+      "antklodę",
+      "antklode",
+      "antklodėje"
+    ],
+    "pl": [
+      "antklodės",
+      "antklodžių",
+      "antklodėms",
+      "antklodes",
+      "antklodėmis",
+      "antklodėse"
+    ]
+  },
+  {
+    "lemma": "dušas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "dušas",
+      "dušo",
+      "dušui",
+      "dušą",
+      "dušu",
+      "duše"
+    ],
+    "pl": [
+      "dušai",
+      "dušų",
+      "dušams",
+      "dušus",
+      "dušais",
+      "dušuose"
+    ]
+  },
+  {
+    "lemma": "koridorius",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "koridorius",
+      "koridoriaus",
+      "koridoriui",
+      "koridorių",
+      "koridoriumi",
+      "koridoriuje"
+    ],
+    "pl": [
+      "koridoriai",
+      "koridorių",
+      "koridoriams",
+      "koridorius",
+      "koridoriais",
+      "koridoriuose"
+    ]
+  },
+  {
+    "lemma": "antradienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "antradienis",
+      "antradienio",
+      "antradieniui",
+      "antradienį",
+      "antradieniu",
+      "antradienyje"
+    ],
+    "pl": [
+      "antradieniai",
+      "antradienių",
+      "antradieniams",
+      "antradienius",
+      "antradieniais",
+      "antradieniuose"
+    ]
+  },
+  {
+    "lemma": "trečiadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "trečiadienis",
+      "trečiadienio",
+      "trečiadieniui",
+      "trečiadienį",
+      "trečiadieniu",
+      "trečiadienyje"
+    ],
+    "pl": [
+      "trečiadieniai",
+      "trečiadienių",
+      "trečiadieniams",
+      "trečiadienius",
+      "trečiadieniais",
+      "trečiadieniuose"
+    ]
+  },
+  {
+    "lemma": "ketvirtadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ketvirtadienis",
+      "ketvirtadienio",
+      "ketvirtadieniui",
+      "ketvirtadienį",
+      "ketvirtadieniu",
+      "ketvirtadienyje"
+    ],
+    "pl": [
+      "ketvirtadieniai",
+      "ketvirtadienių",
+      "ketvirtadieniams",
+      "ketvirtadienius",
+      "ketvirtadieniais",
+      "ketvirtadieniuose"
+    ]
+  },
+  {
+    "lemma": "penktadienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "penktadienis",
+      "penktadienio",
+      "penktadieniui",
+      "penktadienį",
+      "penktadieniu",
+      "penktadienyje"
+    ],
+    "pl": [
+      "penktadieniai",
+      "penktadienių",
+      "penktadieniams",
+      "penktadienius",
+      "penktadieniais",
+      "penktadieniuose"
+    ]
+  },
+  {
+    "lemma": "savaitgalis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "savaitgalis",
+      "savaitgalio",
+      "savaitgaliui",
+      "savaitgalį",
+      "savaitgaliu",
+      "savaitgalyje"
+    ],
+    "pl": [
+      "savaitgaliai",
+      "savaitgalių",
+      "savaitgaliams",
+      "savaitgalius",
+      "savaitgaliais",
+      "savaitgaliuose"
+    ]
+  },
+  {
+    "lemma": "vidurdienis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "vidurdienis",
+      "vidurdienio",
+      "vidurdieniui",
+      "vidurdienį",
+      "vidurdieniu",
+      "vidurdienyje"
+    ],
+    "pl": [
+      "vidurdieniai",
+      "vidurdienių",
+      "vidurdieniams",
+      "vidurdienius",
+      "vidurdieniais",
+      "vidurdieniuose"
+    ]
+  },
+  {
+    "lemma": "vidurnaktis",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "lemma exists but no declension table on en.wiktionary (flagged missing) nor lt.wiktionary; not inventing"
+  }
+]

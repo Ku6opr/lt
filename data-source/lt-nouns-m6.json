@@ -1,0 +1,256 @@
+[
+  {
+    "lemma": "varlė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "varlė",
+      "varlės",
+      "varlei",
+      "varlę",
+      "varle",
+      "varlėje"
+    ],
+    "pl": [
+      "varlės",
+      "varlių",
+      "varlėms",
+      "varles",
+      "varlėmis",
+      "varlėse"
+    ]
+  },
+  {
+    "lemma": "uodas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "uodas",
+      "uodo",
+      "uodui",
+      "uodą",
+      "uodu",
+      "uode"
+    ],
+    "pl": [
+      "uodai",
+      "uodų",
+      "uodams",
+      "uodus",
+      "uodais",
+      "uoduose"
+    ]
+  },
+  {
+    "lemma": "voras",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "voras",
+      "voro",
+      "vorui",
+      "vorą",
+      "voru",
+      "vore"
+    ],
+    "pl": [
+      "vorai",
+      "vorų",
+      "vorams",
+      "vorus",
+      "vorais",
+      "voruose"
+    ]
+  },
+  {
+    "lemma": "pieva",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pieva",
+      "pievos",
+      "pievai",
+      "pievą",
+      "pieva",
+      "pievoje"
+    ],
+    "pl": [
+      "pievos",
+      "pievų",
+      "pievoms",
+      "pievas",
+      "pievomis",
+      "pievose"
+    ]
+  },
+  {
+    "lemma": "laukas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "laukas",
+      "lauko",
+      "laukui",
+      "lauką",
+      "lauku",
+      "lauke"
+    ],
+    "pl": [
+      "laukai",
+      "laukų",
+      "laukams",
+      "laukus",
+      "laukais",
+      "laukuose"
+    ]
+  },
+  {
+    "lemma": "kalva",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kalva",
+      "kalvos",
+      "kalvai",
+      "kalvą",
+      "kalva",
+      "kalvoje"
+    ],
+    "pl": [
+      "kalvos",
+      "kalvų",
+      "kalvoms",
+      "kalvas",
+      "kalvomis",
+      "kalvose"
+    ]
+  },
+  {
+    "lemma": "sala",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sala",
+      "salos",
+      "salai",
+      "salą",
+      "sala",
+      "saloje"
+    ],
+    "pl": [
+      "salos",
+      "salų",
+      "saloms",
+      "salas",
+      "salomis",
+      "salose"
+    ],
+    "note": "multiple tables/accent paradigms on wiktionary; using first"
+  },
+  {
+    "lemma": "krantas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "krantas",
+      "kranto",
+      "krantui",
+      "krantą",
+      "krantu",
+      "krante"
+    ],
+    "pl": [
+      "krantai",
+      "krantų",
+      "krantams",
+      "krantus",
+      "krantais",
+      "krantuose"
+    ]
+  },
+  {
+    "lemma": "smėlis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "smėlis",
+      "smėlio",
+      "smėliui",
+      "smėlį",
+      "smėliu",
+      "smėlyje"
+    ],
+    "pl": [
+      "smėliai",
+      "smėlių",
+      "smėliams",
+      "smėlius",
+      "smėliais",
+      "smėliuose"
+    ]
+  },
+  {
+    "lemma": "žemė",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "žemė",
+      "žemės",
+      "žemei",
+      "žemę",
+      "žeme",
+      "žemėje"
+    ],
+    "pl": [
+      "žemės",
+      "žemių",
+      "žemėms",
+      "žemes",
+      "žemėmis",
+      "žemėse"
+    ]
+  },
+  {
+    "lemma": "ugnis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ugnis",
+      "ugnies",
+      "ugniai",
+      "ugnį",
+      "ugnimi",
+      "ugnyje"
+    ],
+    "pl": [
+      "ugnys",
+      "ugnių",
+      "ugnims",
+      "ugnis",
+      "ugnimis",
+      "ugnyse"
+    ]
+  },
+  {
+    "lemma": "planeta",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "planeta",
+      "planetos",
+      "planetai",
+      "planetą",
+      "planeta",
+      "planetoje"
+    ],
+    "pl": [
+      "planetos",
+      "planetų",
+      "planetoms",
+      "planetas",
+      "planetomis",
+      "planetose"
+    ],
+    "note": "multiple tables/accent paradigms on wiktionary; using first"
+  }
+]

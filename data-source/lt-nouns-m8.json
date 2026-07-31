@@ -1,0 +1,199 @@
+[
+  {
+    "lemma": "advokatas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "advokatas",
+      "advokato",
+      "advokatui",
+      "advokatą",
+      "advokatu",
+      "advokate"
+    ],
+    "pl": [
+      "advokatai",
+      "advokatų",
+      "advokatams",
+      "advokatus",
+      "advokatais",
+      "advokatuose"
+    ]
+  },
+  {
+    "lemma": "verslininkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "verslininkas",
+      "verslininko",
+      "verslininkui",
+      "verslininką",
+      "verslininku",
+      "verslininke"
+    ],
+    "pl": [
+      "verslininkai",
+      "verslininkų",
+      "verslininkams",
+      "verslininkus",
+      "verslininkais",
+      "verslininkuose"
+    ]
+  },
+  {
+    "lemma": "menininkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "menininkas",
+      "menininko",
+      "menininkui",
+      "menininką",
+      "menininku",
+      "menininke"
+    ],
+    "pl": [
+      "menininkai",
+      "menininkų",
+      "menininkams",
+      "menininkus",
+      "menininkais",
+      "menininkuose"
+    ]
+  },
+  {
+    "lemma": "rašytojas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "rašytojas",
+      "rašytojo",
+      "rašytojui",
+      "rašytoją",
+      "rašytoju",
+      "rašytojuje"
+    ],
+    "pl": [
+      "rašytojai",
+      "rašytojų",
+      "rašytojams",
+      "rašytojus",
+      "rašytojais",
+      "rašytojuose"
+    ]
+  },
+  {
+    "lemma": "muzikantas",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "No entry on en.wiktionary.org or lt.wiktionary.org"
+  },
+  {
+    "lemma": "dainininkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "dainininkas",
+      "dainininko",
+      "dainininkui",
+      "dainininką",
+      "dainininku",
+      "dainininke"
+    ],
+    "pl": [
+      "dainininkai",
+      "dainininkų",
+      "dainininkams",
+      "dainininkus",
+      "dainininkais",
+      "dainininkuose"
+    ]
+  },
+  {
+    "lemma": "sportininkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "sportininkas",
+      "sportininko",
+      "sportininkui",
+      "sportininką",
+      "sportininku",
+      "sportininke"
+    ],
+    "pl": [
+      "sportininkai",
+      "sportininkų",
+      "sportininkams",
+      "sportininkus",
+      "sportininkais",
+      "sportininkuose"
+    ]
+  },
+  {
+    "lemma": "kareivis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kareivis",
+      "kareivio",
+      "kareiviui",
+      "kareivį",
+      "kareiviu",
+      "kareivyje"
+    ],
+    "pl": [
+      "kareiviai",
+      "kareivių",
+      "kareiviams",
+      "kareivius",
+      "kareiviais",
+      "kareiviuose"
+    ]
+  },
+  {
+    "lemma": "jūreivis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "jūreivis",
+      "jūreivio",
+      "jūreiviui",
+      "jūreivį",
+      "jūreiviu",
+      "jūreivyje"
+    ],
+    "pl": [
+      "jūreiviai",
+      "jūreivių",
+      "jūreiviams",
+      "jūreivius",
+      "jūreiviais",
+      "jūreiviuose"
+    ]
+  },
+  {
+    "lemma": "ugniagesys",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "ugniagesys",
+      "ugniagesio",
+      "ugniagesiui",
+      "ugniagesį",
+      "ugniagesiu",
+      "ugniagesyje"
+    ],
+    "pl": [
+      "ugniagesiai",
+      "ugniagesių",
+      "ugniagesiams",
+      "ugniagesius",
+      "ugniagesiais",
+      "ugniagesiuose"
+    ]
+  }
+]

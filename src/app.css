@@ -19,7 +19,7 @@ input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 
 .lt-bleed { width: 96cqw; margin-left: calc(50% - 48cqw); }
 .lt-scroll { width: fit-content; max-width: 100%; margin: 0 auto; }
 
-.lt-chip { display: inline-flex; flex-direction: column; align-items: center; gap: 1px; cursor: pointer; padding: 6px 12px; border-radius: var(--radius-md); border: 1px solid var(--color-divider); line-height: 1.2; user-select: none; background: var(--color-bg); }
+.lt-chip { display: inline-flex; flex-direction: column; align-items: center; gap: 1px; cursor: pointer; padding: 6px 12px; border-radius: var(--radius-md); border: 1px solid var(--color-divider); line-height: 1.2; user-select: none; background: var(--color-bg); color: var(--color-text); font: inherit; -webkit-appearance: none; appearance: none; }
 .lt-chip:hover { border-color: var(--color-accent); }
 
 @container (max-width: 719px) {

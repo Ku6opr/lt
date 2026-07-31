@@ -1,0 +1,173 @@
+[
+  {
+    "lemma": "anūkė",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "No entry on en.wiktionary or lt.wiktionary; not fetched (do not invent)."
+  },
+  {
+    "lemma": "pusbrolis",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "pusbrolis",
+      "pusbrolio",
+      "pusbroliui",
+      "pusbrolį",
+      "pusbroliu",
+      "pusbrolyje"
+    ],
+    "pl": [
+      "pusbroliai",
+      "pusbrolių",
+      "pusbroliams",
+      "pusbrolius",
+      "pusbroliais",
+      "pusbroliuose"
+    ]
+  },
+  {
+    "lemma": "pusseserė",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "en.wiktionary entry exists but its inflection table has a corrupted stem (pussesserė, doubled s) not matching the lemma pusseserė; lt.wiktionary absent. Data untrusted; not emitted (do not invent)."
+  },
+  {
+    "lemma": "žentas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "žentas",
+      "žento",
+      "žentui",
+      "žentą",
+      "žentu",
+      "žente"
+    ],
+    "pl": [
+      "žentai",
+      "žentų",
+      "žentams",
+      "žentus",
+      "žentais",
+      "žentuose"
+    ]
+  },
+  {
+    "lemma": "dvynys",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "dvynys",
+      "dvynio",
+      "dvyniui",
+      "dvynį",
+      "dvyniu",
+      "dvynyje"
+    ],
+    "pl": [
+      "dvyniai",
+      "dvynių",
+      "dvyniams",
+      "dvynius",
+      "dvyniais",
+      "dvyniuose"
+    ]
+  },
+  {
+    "lemma": "kirpėjas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "kirpėjas",
+      "kirpėjo",
+      "kirpėjui",
+      "kirpėją",
+      "kirpėju",
+      "kirpėje"
+    ],
+    "pl": [
+      "kirpėjai",
+      "kirpėjų",
+      "kirpėjams",
+      "kirpėjus",
+      "kirpėjais",
+      "kirpėjuose"
+    ]
+  },
+  {
+    "lemma": "siuvėjas",
+    "found": false,
+    "pluralOnly": false,
+    "sg": [],
+    "pl": [],
+    "note": "No entry on en.wiktionary or lt.wiktionary; not fetched (do not invent)."
+  },
+  {
+    "lemma": "statybininkas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "statybininkas",
+      "statybininko",
+      "statybininkui",
+      "statybininką",
+      "statybininku",
+      "statybininke"
+    ],
+    "pl": [
+      "statybininkai",
+      "statybininkų",
+      "statybininkams",
+      "statybininkus",
+      "statybininkais",
+      "statybininkuose"
+    ]
+  },
+  {
+    "lemma": "inžinierius",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "inžinierius",
+      "inžinieriaus",
+      "inžinieriui",
+      "inžinierių",
+      "inžinieriumi",
+      "inžinieriuje"
+    ],
+    "pl": [
+      "inžinieriai",
+      "inžinierių",
+      "inžinieriams",
+      "inžinierius",
+      "inžinieriais",
+      "inžinieriuose"
+    ]
+  },
+  {
+    "lemma": "teisėjas",
+    "found": true,
+    "pluralOnly": false,
+    "sg": [
+      "teisėjas",
+      "teisėjo",
+      "teisėjui",
+      "teisėją",
+      "teisėju",
+      "teisėjuje"
+    ],
+    "pl": [
+      "teisėjai",
+      "teisėjų",
+      "teisėjams",
+      "teisėjus",
+      "teisėjais",
+      "teisėjuose"
+    ]
+  }
+]
