@@ -6,6 +6,7 @@
   export let userInput = '';
   export let onInput;
   export let onPrimary;
+  export let onReport = null;
 
   $: hasTask = !!task;
 
@@ -31,6 +32,7 @@
           <span style="color:var(--color-text);white-space:pre">{task.stemPrefix}</span>
           <input value={userInput} on:input={onInput} on:keydown={onKey} placeholder="…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" inputmode="text" style="border:0;background:transparent;font:inherit;color:var(--color-text);caret-color:var(--color-accent);width:clamp(80px,22cqw,170px);outline:none;padding:0">
         </div>
+        {#if task.trail}<span style="color:var(--color-text)">{task.trail}</span>{/if}
       </div>
     </label>
 
@@ -41,7 +43,7 @@
         <div style="text-align:center">
           <div class="card-kicker">Правильна форма</div>
           <div style="font-family:var(--font-heading);font-size:clamp(30px,6cqw,50px);line-height:1.02;margin:6px 0 12px">
-            {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{task.lead} </span>{/if}<WordForm stem={task.stem} tail={task.tail} />
+            {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{task.lead} </span>{/if}<WordForm stem={task.stem} tail={task.tail} />{#if task.trail}<span style="margin-left:0.3em">{task.trail}</span>{/if}
           </div>
           {#if task.revealUk}<div class="text-muted" style="font-size:14px">{task.revealUk}</div>{/if}
         </div>
@@ -51,6 +53,11 @@
     <div style="display:flex;justify-content:center;margin-top:var(--space-4)">
       <button class="btn btn-primary" on:click={onPrimary} style="min-width:190px">{revealed ? 'Далі →' : 'Показати відповідь'}</button>
     </div>
+    {#if onReport}
+      <div style="display:flex;justify-content:center;margin-top:var(--space-2)">
+        <button class="btn btn-ghost" on:click={onReport} style="font-size:12px;color:var(--color-neutral-500)" title="Повідомити про помилку у цьому завданні">⚑ Повідомити про помилку</button>
+      </div>
+    {/if}
   {:else}
     <div class="text-muted" style="text-align:center;padding:var(--space-8) 0;font-size:15px">Оберіть нижче хоча б один відмінок, один тип відмінювання та число.</div>
   {/if}

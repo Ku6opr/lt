@@ -2,6 +2,64 @@ import fs from 'fs';
 
 const OUT = 'src/lib/data/words.js';
 
+const UK_MASC_ANIM = new Set(['батько', 'дядько', 'собака', 'суддя']);
+const UK_FEM_ODD = new Set(['ніч', 'любов', 'осінь', 'мати']);
+const UK_NEUTER_YA = new Set(['життя', 'обличчя', 'повітря', 'варення']);
+function ukGender(uk) {
+  const w = uk.trim().split(' ')[0];
+  if (UK_MASC_ANIM.has(w)) return 'm';
+  if (UK_FEM_ODD.has(w)) return 'f';
+  if (UK_NEUTER_YA.has(w)) return 'n';
+  const last = w.slice(-1);
+  if (last === 'о' || last === 'е') return 'n';
+  if (last === 'а' || last === 'я') return 'f';
+  return 'm';
+}
+
+const UK_PL = {
+  людина: 'люди', дитина: 'діти', око: 'очі', вухо: 'вуха', мати: 'матері',
+  батько: 'батьки', дядько: 'дядьки', друг: 'друзі', син: 'сини', брат: 'брати',
+  будинок: 'будинки', ранок: 'ранки', вечір: 'вечори', вітер: 'вітри', день: 'дні',
+  огірок: 'огірки', пісок: 'піски', кінь: 'коні', заєць: 'зайці', півень: 'півні',
+  ведмідь: 'ведмеді', лебідь: 'лебеді', водій: 'водії', суддя: 'судді', зять: 'зяті',
+  ніч: 'ночі', осінь: 'осені', вогонь: 'вогні', собака: 'собаки', вовк: 'вовки',
+  рот: 'роти', ніж: 'ножі', гість: 'гості', листок: 'листки', обличчя: 'обличчя',
+  повітря: 'повітря', життя: 'життя', молоко: 'молоко', "м'ясо": "м'ясо", ковбаса: 'ковбаси',
+  варення: 'варення', вихідний: 'вихідні', вівторок: 'вівторки', замок: 'замки', какао: 'какао',
+  камінь: 'камені', кафе: 'кафе', корабель: 'кораблі', лід: 'льоди', любов: 'любові',
+  митець: 'митці', міст: 'мости', оселедець: 'оселедці', оцет: 'оцет', полудень: 'полудні',
+  понеділок: 'понеділки', поліцейський: 'поліцейські', продавець: 'продавці', рахунок: 'рахунки',
+  ринок: 'ринки', "сім'я": "сім'ї", стіл: 'столи', стілець: 'стільці', тиждень: 'тижні',
+  учень: 'учні', цукор: 'цукор', четвер: 'четверги', мед: 'мед', сонце: 'сонця', серце: 'серця'
+};
+function ukPlural(uk) {
+  const w = uk.trim();
+  if (w.includes(' ')) return w;
+  if (UK_PL[w]) return UK_PL[w];
+  const n = w.length, l = w[n - 1], p = w[n - 2];
+  const hush = 'жчшщ';
+  if (l === 'а') {
+    if (p === 'к') return w.slice(0, -2) + 'ки';
+    if (p === 'г') return w.slice(0, -2) + 'ги';
+    if (p === 'х') return w.slice(0, -2) + 'хи';
+    if (hush.includes(p) || p === 'ц') return w.slice(0, -1) + 'і';
+    return w.slice(0, -1) + 'и';
+  }
+  if (l === 'я') return p === 'і' ? w.slice(0, -1) + 'ї' : w.slice(0, -1) + 'і';
+  if (l === 'о') return w.slice(0, -1) + 'а';
+  if (l === 'е') return w.slice(0, -1) + 'я';
+  if (l === 'й') return w.slice(0, -1) + 'ї';
+  if (l === 'ь') return w.slice(0, -1) + 'і';
+  if (hush.includes(l)) return w + 'і';
+  return w + 'и';
+}
+
+const SG_ONLY = new Set([
+  'pienas', 'sviestas', 'mėsa', 'cukrus', 'oras', 'medus', 'aliejus', 'actas',
+  'gyvenimas', 'meilė', 'vištiena', 'jautiena', 'kiauliena', 'kakava', 'šokoladas',
+  'druska', 'smėlis', 'kava', 'arbata'
+]);
+
 const fetched = [
   ...JSON.parse(fs.readFileSync('data-source/lt-declensions.json')),
   ...JSON.parse(fs.readFileSync('data-source/lt-declensions-themes.json')),
@@ -437,7 +495,8 @@ for (const w of source) {
   if (!cat) { problems.push('no CAT: ' + w.lemma); continue; }
   const [gen, dat, acc, ins, loc] = m.f;
   words.push({
-    id: w.lemma, type: m.t, cat, themes: THEMES_OF[w.lemma] || [], uk: m.uk,
+    id: w.lemma, type: m.t, cat, themes: THEMES_OF[w.lemma] || [], uk: m.uk, ukG: ukGender(m.uk), ukPl: ukPlural(m.uk),
+    num: pl.length === 0 || SG_ONLY.has(w.lemma) ? 'sg' : 'both',
     ukForms: { nom: m.uk, gen, dat, acc, ins, loc },
     sg: w.sg, pl
   });

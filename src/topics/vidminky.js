@@ -1,8 +1,9 @@
 export const vidminkyTopic = {
   id: 'vidminky',
   kicker: 'Тема 1',
-  title: 'Відмінки',
+  title: 'Відмінки іменників',
   trainerTitle: 'Відмінювання іменників',
-  subtitle: 'Відмінювання іменників · 6 відмінків · 12 типів',
-  glyph: 'Įn.'
+  subtitle: 'Іменник змінює закінчення за відмінком. 6 відмінків, приклади з життя.',
+  glyph: 'Įn.',
+  accent: 'gold'
 };

@@ -82,9 +82,11 @@ export function newTask(state, prev) {
   const CASEKEY = { V: 'nom', K: 'gen', N: 'dat', G: 'acc', In: 'ins', Vt: 'loc' };
 
   const stop = LEVELS[state.level];
-  const number = rnd(en);
-  let avail = ew.filter((w) => number === 'sg' || (w.pl && w.pl.length === 6));
-  if (!avail.length) avail = ew;
+  const supports = (w, nn) => (nn === 'sg' ? w.num !== 'pl' : w.num !== 'sg' && w.pl && w.pl.length === 6);
+  let number = rnd(en);
+  let avail = ew.filter((w) => supports(w, number));
+  if (!avail.length) { number = number === 'pl' ? 'sg' : 'pl'; avail = ew.filter((w) => supports(w, number)); }
+  if (!avail.length) { number = 'sg'; avail = ew; }
   let pool;
   if (stop.word === 'fixed') {
     const samples = DECLENSIONS.filter((t) => avail.some((w) => w.type === t.id)).map((t) => t.sample);
@@ -163,15 +165,16 @@ export function newTask(state, prev) {
   }
   const driver = drivers.length ? rnd(drivers) : null;
 
+  const ukNoun = (key) => (number === 'pl' ? type.ukPl : uf[key]);
   let hint = null;
   if (driver) {
-    const dform = uf[driver.ukCase] || uf[ck];
+    const dform = ukNoun(driver.ukCase) || ukNoun(ck);
     if (dform) hint = driver.uk + (stop.question ? ' (' + target.q + ')' : '') + ' ' + dform;
   } else {
-    const uform = uf[ck];
+    const uform = ukNoun(ck);
     if (uform) hint = '(' + target.qUk + ' / ' + target.q + ') ' + uform;
   }
-  const wordUk = promptCaseId ? uf[CASEKEY[promptCaseId]] : null;
+  const wordUk = promptCaseId ? (number === 'pl' ? type.ukPl : uf[CASEKEY[promptCaseId]]) : null;
 
   const stemPrefill = mode !== 'uk';
   return {

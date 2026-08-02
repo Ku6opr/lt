@@ -1,0 +1,1322 @@
+[
+  {
+    "lemma": "geras",
+    "found": true,
+    "m": {
+      "sg": [
+        "geras",
+        "gero",
+        "geram",
+        "gerą",
+        "geru",
+        "gerame"
+      ],
+      "pl": [
+        "geri",
+        "gerų",
+        "geriems",
+        "gerus",
+        "gerais",
+        "geruose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "gera",
+        "geros",
+        "gerai",
+        "gerą",
+        "gera",
+        "geroje"
+      ],
+      "pl": [
+        "geros",
+        "gerų",
+        "geroms",
+        "geras",
+        "geromis",
+        "gerose"
+      ]
+    }
+  },
+  {
+    "lemma": "blogas",
+    "found": true,
+    "m": {
+      "sg": [
+        "blogas",
+        "blogo",
+        "blogam",
+        "blogą",
+        "blogu",
+        "blogame"
+      ],
+      "pl": [
+        "blogi",
+        "blogų",
+        "blogiems",
+        "blogus",
+        "blogais",
+        "bloguose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "bloga",
+        "blogos",
+        "blogai",
+        "blogą",
+        "bloga",
+        "blogoje"
+      ],
+      "pl": [
+        "blogos",
+        "blogų",
+        "blogoms",
+        "blogas",
+        "blogomis",
+        "blogose"
+      ]
+    }
+  },
+  {
+    "lemma": "mažas",
+    "found": true,
+    "m": {
+      "sg": [
+        "mažas",
+        "mažo",
+        "mažam",
+        "mažą",
+        "mažu",
+        "mažame"
+      ],
+      "pl": [
+        "maži",
+        "mažų",
+        "mažiems",
+        "mažus",
+        "mažais",
+        "mažuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "maža",
+        "mažos",
+        "mažai",
+        "mažą",
+        "maža",
+        "mažoje"
+      ],
+      "pl": [
+        "mažos",
+        "mažų",
+        "mažoms",
+        "mažas",
+        "mažomis",
+        "mažose"
+      ]
+    }
+  },
+  {
+    "lemma": "naujas",
+    "found": true,
+    "m": {
+      "sg": [
+        "naujas",
+        "naujo",
+        "naujam",
+        "naują",
+        "nauju",
+        "naujame"
+      ],
+      "pl": [
+        "nauji",
+        "naujų",
+        "naujiems",
+        "naujus",
+        "naujais",
+        "naujuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "nauja",
+        "naujos",
+        "naujai",
+        "naują",
+        "nauja",
+        "naujoje"
+      ],
+      "pl": [
+        "naujos",
+        "naujų",
+        "naujoms",
+        "naujas",
+        "naujomis",
+        "naujose"
+      ]
+    }
+  },
+  {
+    "lemma": "senas",
+    "found": true,
+    "m": {
+      "sg": [
+        "senas",
+        "seno",
+        "senam",
+        "seną",
+        "senu",
+        "sename"
+      ],
+      "pl": [
+        "seni",
+        "senų",
+        "seniems",
+        "senus",
+        "senais",
+        "senuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "sena",
+        "senos",
+        "senai",
+        "seną",
+        "sena",
+        "senoje"
+      ],
+      "pl": [
+        "senos",
+        "senų",
+        "senoms",
+        "senas",
+        "senomis",
+        "senose"
+      ]
+    }
+  },
+  {
+    "lemma": "jaunas",
+    "found": true,
+    "m": {
+      "sg": [
+        "jaunas",
+        "jauno",
+        "jaunam",
+        "jauną",
+        "jaunu",
+        "jauname"
+      ],
+      "pl": [
+        "jauni",
+        "jaunų",
+        "jauniems",
+        "jaunus",
+        "jaunais",
+        "jaunuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "jauna",
+        "jaunos",
+        "jaunai",
+        "jauną",
+        "jauna",
+        "jaunoje"
+      ],
+      "pl": [
+        "jaunos",
+        "jaunų",
+        "jaunoms",
+        "jaunas",
+        "jaunomis",
+        "jaunose"
+      ]
+    }
+  },
+  {
+    "lemma": "ilgas",
+    "found": true,
+    "m": {
+      "sg": [
+        "ilgas",
+        "ilgo",
+        "ilgam",
+        "ilgą",
+        "ilgu",
+        "ilgame"
+      ],
+      "pl": [
+        "ilgi",
+        "ilgų",
+        "ilgiems",
+        "ilgus",
+        "ilgais",
+        "ilguose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "ilga",
+        "ilgos",
+        "ilgai",
+        "ilgą",
+        "ilga",
+        "ilgoje"
+      ],
+      "pl": [
+        "ilgos",
+        "ilgų",
+        "ilgoms",
+        "ilgas",
+        "ilgomis",
+        "ilgose"
+      ]
+    }
+  },
+  {
+    "lemma": "trumpas",
+    "found": true,
+    "m": {
+      "sg": [
+        "trumpas",
+        "trumpo",
+        "trumpam",
+        "trumpą",
+        "trumpu",
+        "trumpame"
+      ],
+      "pl": [
+        "trumpi",
+        "trumpų",
+        "trumpiems",
+        "trumpus",
+        "trumpais",
+        "trumpuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "trumpa",
+        "trumpos",
+        "trumpai",
+        "trumpą",
+        "trumpa",
+        "trumpoje"
+      ],
+      "pl": [
+        "trumpos",
+        "trumpų",
+        "trumpoms",
+        "trumpas",
+        "trumpomis",
+        "trumpose"
+      ]
+    }
+  },
+  {
+    "lemma": "aukštas",
+    "found": true,
+    "m": {
+      "sg": [
+        "aukštas",
+        "aukšto",
+        "aukštam",
+        "aukštą",
+        "aukštu",
+        "aukštame"
+      ],
+      "pl": [
+        "aukšti",
+        "aukštų",
+        "aukštiems",
+        "aukštus",
+        "aukštais",
+        "aukštuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "aukšta",
+        "aukštos",
+        "aukštai",
+        "aukštą",
+        "aukšta",
+        "aukštoje"
+      ],
+      "pl": [
+        "aukštos",
+        "aukštų",
+        "aukštoms",
+        "aukštas",
+        "aukštomis",
+        "aukštose"
+      ]
+    }
+  },
+  {
+    "lemma": "žemas",
+    "found": true,
+    "m": {
+      "sg": [
+        "žemas",
+        "žemo",
+        "žemam",
+        "žemą",
+        "žemu",
+        "žemame"
+      ],
+      "pl": [
+        "žemi",
+        "žemų",
+        "žemiems",
+        "žemus",
+        "žemais",
+        "žemuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "žema",
+        "žemos",
+        "žemai",
+        "žemą",
+        "žema",
+        "žemoje"
+      ],
+      "pl": [
+        "žemos",
+        "žemų",
+        "žemoms",
+        "žemas",
+        "žemomis",
+        "žemose"
+      ]
+    }
+  },
+  {
+    "lemma": "greitas",
+    "found": true,
+    "m": {
+      "sg": [
+        "greitas",
+        "greito",
+        "greitam",
+        "greitą",
+        "greitu",
+        "greitame"
+      ],
+      "pl": [
+        "greiti",
+        "greitų",
+        "greitiems",
+        "greitus",
+        "greitais",
+        "greituose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "greita",
+        "greitos",
+        "greitai",
+        "greitą",
+        "greita",
+        "greitoje"
+      ],
+      "pl": [
+        "greitos",
+        "greitų",
+        "greitoms",
+        "greitas",
+        "greitomis",
+        "greitose"
+      ]
+    }
+  },
+  {
+    "lemma": "šiltas",
+    "found": true,
+    "m": {
+      "sg": [
+        "šiltas",
+        "šilto",
+        "šiltam",
+        "šiltą",
+        "šiltu",
+        "šiltame"
+      ],
+      "pl": [
+        "šilti",
+        "šiltų",
+        "šiltiems",
+        "šiltus",
+        "šiltais",
+        "šiltuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "šilta",
+        "šiltos",
+        "šiltai",
+        "šiltą",
+        "šilta",
+        "šiltoje"
+      ],
+      "pl": [
+        "šiltos",
+        "šiltų",
+        "šiltoms",
+        "šiltas",
+        "šiltomis",
+        "šiltose"
+      ]
+    }
+  },
+  {
+    "lemma": "šaltas",
+    "found": true,
+    "m": {
+      "sg": [
+        "šaltas",
+        "šalto",
+        "šaltam",
+        "šaltą",
+        "šaltu",
+        "šaltame"
+      ],
+      "pl": [
+        "šalti",
+        "šaltų",
+        "šaltiems",
+        "šaltus",
+        "šaltais",
+        "šaltuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "šalta",
+        "šaltos",
+        "šaltai",
+        "šaltą",
+        "šalta",
+        "šaltoje"
+      ],
+      "pl": [
+        "šaltos",
+        "šaltų",
+        "šaltoms",
+        "šaltas",
+        "šaltomis",
+        "šaltose"
+      ]
+    }
+  },
+  {
+    "lemma": "baltas",
+    "found": true,
+    "m": {
+      "sg": [
+        "baltas",
+        "balto",
+        "baltam",
+        "baltą",
+        "baltu",
+        "baltame"
+      ],
+      "pl": [
+        "balti",
+        "baltų",
+        "baltiems",
+        "baltus",
+        "baltais",
+        "baltuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "balta",
+        "baltos",
+        "baltai",
+        "baltą",
+        "balta",
+        "baltoje"
+      ],
+      "pl": [
+        "baltos",
+        "baltų",
+        "baltoms",
+        "baltas",
+        "baltomis",
+        "baltose"
+      ]
+    }
+  },
+  {
+    "lemma": "juodas",
+    "found": true,
+    "m": {
+      "sg": [
+        "juodas",
+        "juodo",
+        "juodam",
+        "juodą",
+        "juodu",
+        "juodame"
+      ],
+      "pl": [
+        "juodi",
+        "juodų",
+        "juodiems",
+        "juodus",
+        "juodais",
+        "juoduose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "juoda",
+        "juodos",
+        "juodai",
+        "juodą",
+        "juoda",
+        "juodoje"
+      ],
+      "pl": [
+        "juodos",
+        "juodų",
+        "juodoms",
+        "juodas",
+        "juodomis",
+        "juodose"
+      ]
+    }
+  },
+  {
+    "lemma": "raudonas",
+    "found": true,
+    "m": {
+      "sg": [
+        "raudonas",
+        "raudono",
+        "raudonam",
+        "raudoną",
+        "raudonu",
+        "raudoname"
+      ],
+      "pl": [
+        "raudoni",
+        "raudonų",
+        "raudoniems",
+        "raudonus",
+        "raudonais",
+        "raudonuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "raudona",
+        "raudonos",
+        "raudonai",
+        "raudoną",
+        "raudona",
+        "raudonoje"
+      ],
+      "pl": [
+        "raudonos",
+        "raudonų",
+        "raudonoms",
+        "raudonas",
+        "raudonomis",
+        "raudonose"
+      ]
+    }
+  },
+  {
+    "lemma": "geltonas",
+    "found": true,
+    "m": {
+      "sg": [
+        "geltonas",
+        "geltono",
+        "geltonam",
+        "geltoną",
+        "geltonu",
+        "geltoname"
+      ],
+      "pl": [
+        "geltoni",
+        "geltonų",
+        "geltoniems",
+        "geltonus",
+        "geltonais",
+        "geltonuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "geltona",
+        "geltonos",
+        "geltonai",
+        "geltoną",
+        "geltona",
+        "geltonoje"
+      ],
+      "pl": [
+        "geltonos",
+        "geltonų",
+        "geltonoms",
+        "geltonas",
+        "geltonomis",
+        "geltonose"
+      ]
+    }
+  },
+  {
+    "lemma": "žalias",
+    "found": true,
+    "m": {
+      "sg": [
+        "žalias",
+        "žalio",
+        "žaliam",
+        "žalią",
+        "žaliu",
+        "žaliame"
+      ],
+      "pl": [
+        "žali",
+        "žalių",
+        "žaliems",
+        "žalius",
+        "žaliais",
+        "žaliuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "žalia",
+        "žalios",
+        "žaliai",
+        "žalią",
+        "žalia",
+        "žalioje"
+      ],
+      "pl": [
+        "žalios",
+        "žalių",
+        "žalioms",
+        "žalias",
+        "žaliomis",
+        "žaliose"
+      ]
+    }
+  },
+  {
+    "lemma": "gražus",
+    "found": true,
+    "m": {
+      "sg": [
+        "gražus",
+        "gražaus",
+        "gražiam",
+        "gražų",
+        "gražiu",
+        "gražiame"
+      ],
+      "pl": [
+        "gražūs",
+        "gražių",
+        "gražiems",
+        "gražius",
+        "gražiais",
+        "gražiuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "graži",
+        "gražios",
+        "gražiai",
+        "gražią",
+        "gražia",
+        "gražioje"
+      ],
+      "pl": [
+        "gražios",
+        "gražių",
+        "gražioms",
+        "gražias",
+        "gražiomis",
+        "gražiose"
+      ]
+    }
+  },
+  {
+    "lemma": "brangus",
+    "found": true,
+    "m": {
+      "sg": [
+        "brangus",
+        "brangaus",
+        "brangiam",
+        "brangų",
+        "brangiu",
+        "brangiame"
+      ],
+      "pl": [
+        "brangūs",
+        "brangių",
+        "brangiems",
+        "brangius",
+        "brangiais",
+        "brangiuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "brangi",
+        "brangios",
+        "brangiai",
+        "brangią",
+        "brangia",
+        "brangioje"
+      ],
+      "pl": [
+        "brangios",
+        "brangių",
+        "brangioms",
+        "brangias",
+        "brangiomis",
+        "brangiose"
+      ]
+    }
+  },
+  {
+    "lemma": "pigus",
+    "found": true,
+    "m": {
+      "sg": [
+        "pigus",
+        "pigaus",
+        "pigiam",
+        "pigų",
+        "pigiu",
+        "pigiame"
+      ],
+      "pl": [
+        "pigūs",
+        "pigių",
+        "pigiems",
+        "pigius",
+        "pigiais",
+        "pigiuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "pigi",
+        "pigios",
+        "pigiai",
+        "pigią",
+        "pigia",
+        "pigioje"
+      ],
+      "pl": [
+        "pigios",
+        "pigių",
+        "pigioms",
+        "pigias",
+        "pigiomis",
+        "pigiose"
+      ]
+    }
+  },
+  {
+    "lemma": "sunkus",
+    "found": true,
+    "m": {
+      "sg": [
+        "sunkus",
+        "sunkaus",
+        "sunkiam",
+        "sunkų",
+        "sunkiu",
+        "sunkiame"
+      ],
+      "pl": [
+        "sunkūs",
+        "sunkių",
+        "sunkiems",
+        "sunkius",
+        "sunkiais",
+        "sunkiuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "sunki",
+        "sunkios",
+        "sunkiai",
+        "sunkią",
+        "sunkia",
+        "sunkioje"
+      ],
+      "pl": [
+        "sunkios",
+        "sunkių",
+        "sunkioms",
+        "sunkias",
+        "sunkiomis",
+        "sunkiose"
+      ]
+    }
+  },
+  {
+    "lemma": "stiprus",
+    "found": true,
+    "m": {
+      "sg": [
+        "stiprus",
+        "stipraus",
+        "stipriam",
+        "stiprų",
+        "stipriu",
+        "stipriame"
+      ],
+      "pl": [
+        "stiprūs",
+        "stiprių",
+        "stipriems",
+        "stiprius",
+        "stipriais",
+        "stipriuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "stipri",
+        "stiprios",
+        "stipriai",
+        "stiprią",
+        "stipria",
+        "stiprioje"
+      ],
+      "pl": [
+        "stiprios",
+        "stiprių",
+        "stiprioms",
+        "stiprias",
+        "stipriomis",
+        "stipriose"
+      ]
+    }
+  },
+  {
+    "lemma": "švarus",
+    "found": true,
+    "m": {
+      "sg": [
+        "švarus",
+        "švaraus",
+        "švariam",
+        "švarų",
+        "švariu",
+        "švariame"
+      ],
+      "pl": [
+        "švarūs",
+        "švarių",
+        "švariems",
+        "švarius",
+        "švariais",
+        "švariuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "švari",
+        "švarios",
+        "švariai",
+        "švarią",
+        "švaria",
+        "švarioje"
+      ],
+      "pl": [
+        "švarios",
+        "švarių",
+        "švarioms",
+        "švarias",
+        "švariomis",
+        "švariose"
+      ]
+    }
+  },
+  {
+    "lemma": "saldus",
+    "found": true,
+    "m": {
+      "sg": [
+        "saldus",
+        "saldaus",
+        "saldžiam",
+        "saldų",
+        "saldžiu",
+        "saldžiame"
+      ],
+      "pl": [
+        "saldūs",
+        "saldžių",
+        "saldiems",
+        "saldžius",
+        "saldžiais",
+        "saldžiuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "saldi",
+        "saldžios",
+        "saldžiai",
+        "saldžią",
+        "saldžia",
+        "saldžioje"
+      ],
+      "pl": [
+        "saldžios",
+        "saldžių",
+        "saldžioms",
+        "saldžias",
+        "saldžiomis",
+        "saldžiose"
+      ]
+    }
+  },
+  {
+    "lemma": "gilus",
+    "found": true,
+    "m": {
+      "sg": [
+        "gilus",
+        "gilaus",
+        "giliam",
+        "gilų",
+        "giliu",
+        "giliame"
+      ],
+      "pl": [
+        "gilūs",
+        "gilių",
+        "giliems",
+        "gilius",
+        "giliais",
+        "giliuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "gili",
+        "gilios",
+        "giliai",
+        "gilią",
+        "gilia",
+        "gilioje"
+      ],
+      "pl": [
+        "gilios",
+        "gilių",
+        "gilioms",
+        "gilias",
+        "giliomis",
+        "giliose"
+      ]
+    }
+  },
+  {
+    "lemma": "didelis",
+    "found": true,
+    "m": {
+      "sg": [
+        "didelis",
+        "didelio",
+        "dideliam",
+        "didelį",
+        "dideliu",
+        "dideliame"
+      ],
+      "pl": [
+        "dideli",
+        "didelių",
+        "dideliems",
+        "didelius",
+        "dideliais",
+        "dideliuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "didelė",
+        "didelės",
+        "didelei",
+        "didelę",
+        "didele",
+        "didelėje"
+      ],
+      "pl": [
+        "didelės",
+        "didelių",
+        "didelėms",
+        "dideles",
+        "didelėmis",
+        "didelėse"
+      ]
+    }
+  },
+  {
+    "lemma": "naminis",
+    "found": true,
+    "m": {
+      "sg": [
+        "naminis",
+        "naminio",
+        "naminiam",
+        "naminį",
+        "naminiu",
+        "naminiame"
+      ],
+      "pl": [
+        "naminiai",
+        "naminių",
+        "naminiams",
+        "naminius",
+        "naminiais",
+        "naminiuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "naminė",
+        "naminės",
+        "naminei",
+        "naminę",
+        "namine",
+        "naminėje"
+      ],
+      "pl": [
+        "naminės",
+        "naminių",
+        "naminėms",
+        "namines",
+        "naminėmis",
+        "naminėse"
+      ]
+    }
+  },
+  {
+    "lemma": "medinis",
+    "found": true,
+    "m": {
+      "sg": [
+        "medinis",
+        "medinio",
+        "mediniam",
+        "medinį",
+        "mediniu",
+        "mediniame"
+      ],
+      "pl": [
+        "mediniai",
+        "medinių",
+        "mediniams",
+        "medinius",
+        "mediniais",
+        "mediniuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "medinė",
+        "medinės",
+        "medinei",
+        "medinę",
+        "medine",
+        "medinėje"
+      ],
+      "pl": [
+        "medinės",
+        "medinių",
+        "medinėms",
+        "medines",
+        "medinėmis",
+        "medinėse"
+      ]
+    }
+  },
+  {
+    "lemma": "paskutinis",
+    "found": true,
+    "m": {
+      "sg": [
+        "paskutinis",
+        "paskutinio",
+        "paskutiniam",
+        "paskutinį",
+        "paskutiniu",
+        "paskutiniame"
+      ],
+      "pl": [
+        "paskutiniai",
+        "paskutinių",
+        "paskutiniams",
+        "paskutinius",
+        "paskutiniais",
+        "paskutiniuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "paskutinė",
+        "paskutinės",
+        "paskutinei",
+        "paskutinę",
+        "paskutine",
+        "paskutinėje"
+      ],
+      "pl": [
+        "paskutinės",
+        "paskutinių",
+        "paskutinėms",
+        "paskutines",
+        "paskutinėmis",
+        "paskutinėse"
+      ]
+    }
+  },
+  {
+    "lemma": "vidutinis",
+    "found": true,
+    "m": {
+      "sg": [
+        "vidutinis",
+        "vidutinio",
+        "vidutiniam",
+        "vidutinį",
+        "vidutiniu",
+        "vidutiniame"
+      ],
+      "pl": [
+        "vidutiniai",
+        "vidutinių",
+        "vidutiniams",
+        "vidutinius",
+        "vidutiniais",
+        "vidutiniuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "vidutinė",
+        "vidutinės",
+        "vidutinei",
+        "vidutinę",
+        "vidutine",
+        "vidutinėje"
+      ],
+      "pl": [
+        "vidutinės",
+        "vidutinių",
+        "vidutinėms",
+        "vidutines",
+        "vidutinėmis",
+        "vidutinėse"
+      ]
+    }
+  },
+  {
+    "lemma": "auksinis",
+    "found": true,
+    "m": {
+      "sg": [
+        "auksinis",
+        "auksinio",
+        "auksiniam",
+        "auksinį",
+        "auksiniu",
+        "auksiniame"
+      ],
+      "pl": [
+        "auksiniai",
+        "auksinių",
+        "auksiniams",
+        "auksinius",
+        "auksiniais",
+        "auksiniuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "auksinė",
+        "auksinės",
+        "auksinei",
+        "auksinę",
+        "auksine",
+        "auksinėje"
+      ],
+      "pl": [
+        "auksinės",
+        "auksinių",
+        "auksinėms",
+        "auksines",
+        "auksinėmis",
+        "auksinėse"
+      ]
+    }
+  },
+  {
+    "lemma": "rytinis",
+    "found": true,
+    "m": {
+      "sg": [
+        "rytinis",
+        "rytinio",
+        "rytiniam",
+        "rytinį",
+        "rytiniu",
+        "rytiniame"
+      ],
+      "pl": [
+        "rytiniai",
+        "rytinių",
+        "rytiniams",
+        "rytinius",
+        "rytiniais",
+        "rytiniuose"
+      ]
+    },
+    "f": {
+      "sg": [
+        "rytinė",
+        "rytinės",
+        "rytinei",
+        "rytinę",
+        "rytine",
+        "rytinėje"
+      ],
+      "pl": [
+        "rytinės",
+        "rytinių",
+        "rytinėms",
+        "rytines",
+        "rytinėmis",
+        "rytinėse"
+      ]
+    }
+  }
+]
