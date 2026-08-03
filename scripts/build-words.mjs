@@ -17,6 +17,7 @@ function ukGender(uk) {
 }
 
 const UK_PL = {
+  'день народження': 'дні народження', піца: 'піци',
   людина: 'люди', дитина: 'діти', око: 'очі', вухо: 'вуха', мати: 'матері',
   батько: 'батьки', дядько: 'дядьки', друг: 'друзі', син: 'сини', брат: 'брати',
   будинок: 'будинки', ранок: 'ранки', вечір: 'вечори', вітер: 'вітри', день: 'дні',
@@ -34,8 +35,8 @@ const UK_PL = {
 };
 function ukPlural(uk) {
   const w = uk.trim();
-  if (w.includes(' ')) return w;
   if (UK_PL[w]) return UK_PL[w];
+  if (w.includes(' ')) return w;
   const n = w.length, l = w[n - 1], p = w[n - 2];
   const hush = 'жчшщ';
   if (l === 'а') {
@@ -477,6 +478,10 @@ for (const [t, ls] of Object.entries(THEME_MEMBERS)) for (const l of ls) (THEMES
 
 const VALID_TYPES = new Set(['as', 'is_b', 'is_m', 'ys', 'us', 'ius', 'uo_m', 'a', 'ia', 'e', 'is_f', 'uo_f']);
 
+const RU_EN = JSON.parse(fs.readFileSync('data-source/ru-en-nouns.json', 'utf8'));
+const RU_UK_PL = fs.existsSync('data-source/ru-uk-plural.json') ? JSON.parse(fs.readFileSync('data-source/ru-uk-plural.json', 'utf8')) : {};
+const plForms = (arr) => (arr && arr.length === 5 ? { gen: arr[0], dat: arr[1], acc: arr[2], ins: arr[3], loc: arr[4] } : null);
+
 const source = [...fetched, ...EXTRA].filter((w) => !DROP.has(w.lemma));
 const problems = [];
 const words = [];
@@ -494,12 +499,23 @@ for (const w of source) {
   const cat = CAT[w.lemma];
   if (!cat) { problems.push('no CAT: ' + w.lemma); continue; }
   const [gen, dat, acc, ins, loc] = m.f;
-  words.push({
+  const re = RU_EN[w.lemma] || {};
+  const rf = re.ruF || [];
+  const plf = RU_UK_PL[w.lemma] || {};
+  const ruPlForms = plForms(plf.ruPlF);
+  const ukPlForms = plForms(plf.ukPlF);
+  const word = {
     id: w.lemma, type: m.t, cat, themes: THEMES_OF[w.lemma] || [], uk: m.uk, ukG: ukGender(m.uk), ukPl: ukPlural(m.uk),
+    ru: re.ru || m.uk, ruG: re.ruG || ukGender(m.uk), ruPl: re.ruPl || '',
+    en: re.en || m.uk, enPl: re.enPl || '',
     num: pl.length === 0 || SG_ONLY.has(w.lemma) ? 'sg' : 'both',
     ukForms: { nom: m.uk, gen, dat, acc, ins, loc },
+    ruForms: { nom: re.ru || m.uk, gen: rf[0] || '', dat: rf[1] || '', acc: rf[2] || '', ins: rf[3] || '', loc: rf[4] || '' },
     sg: w.sg, pl
-  });
+  };
+  if (ruPlForms) word.ruPlForms = ruPlForms;
+  if (ukPlForms) word.ukPlForms = ukPlForms;
+  words.push(word);
   if (m.flag) flagged.push(w.lemma);
 }
 

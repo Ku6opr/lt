@@ -1,7 +1,11 @@
 <script>
   import { ADJECTIVES } from '../data/adjectives.js';
   import { boundedPrefix, idx } from '../engine/stem.js';
+  import { lang } from '../stores/lang.js';
+  import { UI } from '../i18n/ui.js';
   import WordForm from './WordForm.svelte';
+
+  $: L = UI[$lang];
 
   export let view = 'sg';
   export let caseIds = null;
@@ -25,11 +29,10 @@
   ];
   const CASES = caseIds ? ALL_CASES.filter((c) => caseIds.includes(c.id)) : ALL_CASES;
 
-  const NUM_LABEL = { sg: 'однина', pl: 'множина' };
   const buildRow = (cs, nn) => {
     const ri = idx(cs.id);
     return {
-      abbr: cs.abbr, q: cs[nn], numLabel: both ? NUM_LABEL[nn] : null,
+      abbr: cs.abbr, q: cs[nn], num: both ? nn : null,
       cells: COLS.map((c) => {
         const adj = byId[EX[c.t]];
         const forms = adj[c.g][nn];
@@ -40,7 +43,7 @@
   };
   $: cols = COLS.map((c) => {
     const adj = byId[EX[c.t]];
-    return { label: c.t + (c.g === 'm' ? ' (ч.)' : ' (ж.)'), sample: adj[c.g][both ? 'sg' : view][0], base: c.g === 'm' ? '#fdf7ee' : '#f6f2f9' };
+    return { label: c.t, sample: adj[c.g][both ? 'sg' : view][0], base: c.g === 'm' ? '#fdf7ee' : '#f6f2f9' };
   });
   $: rows = both ? CASES.flatMap((cs) => ['sg', 'pl'].map((nn) => buildRow(cs, nn))) : CASES.map((cs) => buildRow(cs, view));
 </script>
@@ -51,11 +54,11 @@
       <thead>
         <tr>
           <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider)"></th>
-          <th colspan="3" style="text-align:center;background:#f7e6c9;color:var(--color-accent-800);border-bottom:1px solid var(--color-divider)">Чоловічий рід</th>
-          <th colspan="3" style="text-align:center;background:#e7dff0;color:#574a71;border-bottom:1px solid var(--color-divider)">Жіночий рід</th>
+          <th colspan="3" style="text-align:center;background:#f7e6c9;color:var(--color-accent-800);border-bottom:1px solid var(--color-divider)">{L.mascRow}</th>
+          <th colspan="3" style="text-align:center;background:#e7dff0;color:#574a71;border-bottom:1px solid var(--color-divider)">{L.femRow}</th>
         </tr>
         <tr>
-          <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider);vertical-align:bottom;text-align:left"><span style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--color-text)">Відмінок</span></th>
+          <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider);vertical-align:bottom;text-align:left"><span style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--color-text)">{L.caseCol}</span></th>
           {#each cols as col}
             <th style="padding:8px 10px;text-align:center;vertical-align:middle;background:{col.base};border-bottom:1px solid var(--color-divider);">
               <div style="line-height:1.15"><span style="font-weight:600;color:var(--color-text)">{col.label}</span><br><span class="text-muted" style="font-weight:400;text-transform:none;letter-spacing:0">{col.sample}</span></div>
@@ -68,7 +71,7 @@
           <tr>
             <th style="position:sticky;left:0;z-index:2;background:var(--color-bg);text-align:left;vertical-align:top;border-bottom:1px solid var(--color-divider);">
               <div style="text-transform:none;letter-spacing:0;white-space:nowrap">
-                <span style="font-weight:600;color:var(--color-text)">{row.abbr}</span>{#if row.numLabel}<span class="text-muted" style="font-size:11px"> · {row.numLabel}</span>{/if}<br>
+                <span style="font-weight:600;color:var(--color-text)">{row.abbr}</span>{#if row.num}<span class="text-muted" style="font-size:11px"> · {row.num === 'sg' ? L.numSg : L.numPl}</span>{/if}<br>
                 <span style="font-style:italic;color:var(--color-neutral-600);font-size:11px">{row.q}</span>
               </div>
             </th>

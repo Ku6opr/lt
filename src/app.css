@@ -1,6 +1,7 @@
 @import './styles/classical.css';
 
 html, body, #app { min-height: 100%; }
+html, body { touch-action: manipulation; }
 
 .lt-app { container-type: inline-size; min-height: 100%; }
 .lt-wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: clamp(16px, 4cqw, 40px); }

@@ -1,19 +1,32 @@
 <script>
   import { topics } from '../../topics/index.js';
+  import { lang, LANGS } from '../stores/lang.js';
+  import { UI } from '../i18n/ui.js';
   export let onEnter;
+
+  $: L = UI[$lang];
 
   const TINT = {
     gold: { bg: 'linear-gradient(140deg,#f8e8cd,#fdf4e4)', fg: '#a86f18', ring: '#ecd6ab' },
     violet: { bg: 'linear-gradient(140deg,#e8e0f1,#f5f1fb)', fg: '#67568e', ring: '#d8cbec' }
   };
   const tint = (t) => TINT[t] || TINT.gold;
+
+  function setLang(id) { lang.set(id); }
 </script>
 
 <div class="lt-wrap lt-home">
   <header class="hero">
-    <div class="card-kicker">Тренажер литовської</div>
-    <h1>Оберіть тему</h1>
-    <p class="lead">Вивчай литовську граматику у власному темпі. Обери тему — і тренуйся без оцінок, таймерів і покарань.</p>
+    <div class="topbar">
+      <div class="card-kicker">{L.appKicker}</div>
+      <div class="langsel" role="group" aria-label={L.language}>
+        {#each LANGS as lg}
+          <button class="lang-opt" class:active={$lang === lg.id} type="button" on:click={() => setLang(lg.id)} title={lg.label}>{lg.short}</button>
+        {/each}
+      </div>
+    </div>
+    <h1>{L.chooseTopic}</h1>
+    <p class="lead">{L.homeLead}</p>
   </header>
 
   <div class="grid">
@@ -26,15 +39,15 @@
       >
         <span class="tile" style="background:{tint(topic.accent).bg}">{topic.glyph}</span>
         <span class="body">
-          <span class="kicker">{topic.kicker}</span>
-          <span class="title">{topic.title}</span>
-          <span class="sub">{topic.subtitle}</span>
+          <span class="kicker">{L.topicWord} {topic.n}</span>
+          <span class="title">{topic.title[$lang]}</span>
+          <span class="sub">{topic.subtitle[$lang]}</span>
         </span>
         <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     {/each}
 
-    <div class="soon">Наступні теми — згодом</div>
+    <div class="soon">{L.soon}</div>
   </div>
 </div>
 
@@ -42,8 +55,19 @@
   .lt-home { padding-block: clamp(20px, 6cqw, 56px); }
 
   .hero { margin-bottom: clamp(24px, 5cqw, 44px); }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 2px; }
   .hero h1 { font-size: clamp(32px, 6.4cqw, 50px); line-height: 1.04; margin: 4px 0 12px; }
   .lead { color: var(--color-neutral-600); font-size: clamp(15px, 2.4cqw, 18px); line-height: 1.55; max-width: 52ch; margin: 0; }
+
+  .langsel { display: inline-flex; flex: none; border: 1px solid var(--color-divider); border-radius: 999px; overflow: hidden; background: var(--color-surface); }
+  .lang-opt {
+    -webkit-appearance: none; appearance: none; border: 0; cursor: pointer;
+    padding: 6px 12px; font-family: var(--font-heading); font-size: 12px; font-weight: 600;
+    letter-spacing: .05em; color: var(--color-neutral-500); background: transparent; transition: color .15s, background .15s;
+  }
+  .lang-opt + .lang-opt { border-left: 1px solid var(--color-divider); }
+  .lang-opt:hover { color: var(--color-text); }
+  .lang-opt.active { background: var(--color-accent); color: #fff; }
 
   .grid { display: grid; gap: clamp(12px, 2cqw, 16px); }
 

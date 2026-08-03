@@ -5,7 +5,33 @@ import { LEVELS, PHRASE_TIERS } from '../data/levels.js';
 import { PREPS } from '../data/prepositions.js';
 import { VERBS } from '../data/verbs.js';
 import { PHRASES } from '../data/phrases.js';
+import { UI } from '../i18n/ui.js';
 import { idx, stemOf } from './stem.js';
+
+const CASEKEY = { V: 'nom', K: 'gen', N: 'dat', G: 'acc', In: 'ins', Vt: 'loc' };
+function langBits(state) {
+  const lang = state.lang || 'uk';
+  return {
+    lang,
+    tKey: lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk',
+    qKey: lang === 'ru' ? 'qRu' : lang === 'en' ? 'qEn' : 'qUk',
+    U: UI[lang]
+  };
+}
+function nounForm(word, key, number, lang) {
+  if (lang === 'en') return number === 'pl' ? word.enPl || word.en : word.en;
+  if (number === 'pl') {
+    const nomPl = lang === 'ru' ? word.ruPl : word.ukPl;
+    if (key === 'nom') return nomPl;
+    const pf = lang === 'ru' ? word.ruPlForms : word.ukPlForms;
+    return (pf && pf[key]) || nomPl;
+  }
+  return (lang === 'ru' ? word.ruForms : word.ukForms)[key];
+}
+function caseQ(target, lang) {
+  const loc = lang === 'ru' ? target.qRu : lang === 'en' ? target.qEn : target.qUk;
+  return lang === 'en' ? '(' + loc + ')' : '(' + loc + ' / ' + target.q + ')';
+}
 
 function rnd(a) {
   return a[Math.floor(Math.random() * a.length)];
@@ -38,14 +64,23 @@ function phraseTask(state, bank, prev) {
   const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
   const useUk = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
   const hintMode = tier.hint;
-  const prompt = useUk ? { text: word.uk } : { stem, tail: forms[0].slice(stem.length) };
-  const qStr = '(' + target.qUk + ' / ' + target.q + ')';
-  let hint = null;
-  if (hintMode === 'fullq') hint = (p.ukPre ? p.ukPre + ' ' : '') + qStr + ' ' + p.ukForm;
-  else if (hintMode === 'full') hint = p.uk;
-  else if (hintMode === 'q') hint = qStr;
+  const { lang, tKey } = langBits(state);
+  const prompt = useUk ? { text: word[tKey] } : { stem, tail: forms[0].slice(stem.length) };
+  const qStr = caseQ(target, lang);
   const showsPhrase = hintMode === 'fullq' || hintMode === 'full';
-  const revealUk = showsPhrase ? null : p.uk;
+  let hint = null, revealUk = null;
+  if (lang === 'uk') {
+    if (hintMode === 'fullq') hint = (p.ukPre ? p.ukPre + ' ' : '') + qStr + ' ' + p.ukForm;
+    else if (hintMode === 'full') hint = p.uk;
+    else if (hintMode === 'q') hint = qStr;
+    revealUk = showsPhrase ? null : p.uk;
+  } else {
+    const tn = nounForm(word, CASEKEY[target.id], 'sg', lang);
+    if (hintMode === 'fullq') hint = qStr + ' ' + tn;
+    else if (hintMode === 'full') hint = tn;
+    else if (hintMode === 'q') hint = qStr;
+    revealUk = showsPhrase ? null : tn;
+  }
   return {
     caseId: target.id,
     caseBound: false,
@@ -79,7 +114,8 @@ export function newTask(state, prev) {
   const en = ['sg', 'pl'].filter((n) => state.numbers[n]);
   if (!ec.length || !ew.length || !en.length) return null;
 
-  const CASEKEY = { V: 'nom', K: 'gen', N: 'dat', G: 'acc', In: 'ins', Vt: 'loc' };
+  const { lang, tKey, U } = langBits(state);
+  const caseName = (id) => U.caseNames[id];
 
   const stop = LEVELS[state.level];
   const supports = (w, nn) => (nn === 'sg' ? w.num !== 'pl' : w.num !== 'sg' && w.pl && w.pl.length === 6);
@@ -122,7 +158,6 @@ export function newTask(state, prev) {
   const forms = type[number];
   const stem = stemOf(type, number);
   const tail = forms[ti].slice(stem.length);
-  const uf = type.ukForms || {};
 
   let prompt, note = null, hasNote = false, promptCaseId = null;
   if (mode === 'lt-nom') {
@@ -131,50 +166,52 @@ export function newTask(state, prev) {
   } else if (mode === 'lt-tonom') {
     const si = 1 + Math.floor(Math.random() * 5);
     prompt = { stem, tail: forms[si].slice(stem.length) };
-    note = 'дано ' + CASES[si].name + ' → зроби ' + target.name;
+    note = U.noteGiven + ' ' + caseName(CASES[si].id) + ' → ' + U.noteMake + ' ' + caseName(target.id);
     hasNote = true;
     promptCaseId = CASES[si].id;
   } else if (mode === 'lt-othercase') {
     let si = Math.floor(Math.random() * 5);
     if (si >= ti) si++;
     prompt = { stem, tail: forms[si].slice(stem.length) };
-    note = 'дано ' + CASES[si].name + ' → зроби ' + target.name;
+    note = U.noteGiven + ' ' + caseName(CASES[si].id) + ' → ' + U.noteMake + ' ' + caseName(target.id);
     hasNote = true;
     promptCaseId = CASES[si].id;
   } else {
-    prompt = { text: type.uk };
-    note = 'переклади й провідміняй';
+    prompt = { text: type[tKey] };
+    note = U.noteTranslate;
     hasNote = true;
   }
 
   const ck = CASEKEY[target.id];
   const cats = type.cat || [];
   const accepts = (d) => d.accepts === '*' || d.accepts.some((c) => cats.includes(c));
+  const dKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
+  const dCaseKey = lang === 'ru' ? 'ruCase' : 'ukCase';
   let drivers = [];
   if (mode !== 'uk' || stop.ukDrivers) {
     const preps = stop.preps || [];
     for (const p of preps) {
       const pd = PREPS[p];
-      if (pd.case === ck && accepts(pd)) drivers.push({ lt: p, uk: pd.uk, ukCase: pd.ukCase });
+      if (pd.case === ck && accepts(pd)) drivers.push({ lt: p, word: pd[dKey], dCase: lang === 'en' ? ck : pd[dCaseKey] });
     }
     if (stop.verbs) {
       for (const v of VERBS) {
-        if (v.case === ck && accepts(v)) drivers.push({ lt: v.id, uk: v.uk, ukCase: v.ukCase });
+        if (v.case === ck && accepts(v)) drivers.push({ lt: v.id, word: v[dKey], dCase: lang === 'en' ? ck : v[dCaseKey] });
       }
     }
   }
   const driver = drivers.length ? rnd(drivers) : null;
 
-  const ukNoun = (key) => (number === 'pl' ? type.ukPl : uf[key]);
+  const gNoun = (key) => nounForm(type, key, number, lang);
   let hint = null;
   if (driver) {
-    const dform = ukNoun(driver.ukCase) || ukNoun(ck);
-    if (dform) hint = driver.uk + (stop.question ? ' (' + target.q + ')' : '') + ' ' + dform;
+    const dform = gNoun(driver.dCase) || gNoun(ck);
+    if (dform) hint = driver.word + (stop.question ? ' (' + target.q + ')' : '') + ' ' + dform;
   } else {
-    const uform = ukNoun(ck);
-    if (uform) hint = '(' + target.qUk + ' / ' + target.q + ') ' + uform;
+    const uform = gNoun(ck);
+    if (uform) hint = caseQ(target, lang) + ' ' + uform;
   }
-  const wordUk = promptCaseId ? (number === 'pl' ? type.ukPl : uf[CASEKEY[promptCaseId]]) : null;
+  const wordUk = promptCaseId ? gNoun(CASEKEY[promptCaseId]) : null;
 
   const stemPrefill = mode !== 'uk';
   return {

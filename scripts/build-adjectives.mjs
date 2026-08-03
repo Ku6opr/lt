@@ -3,6 +3,7 @@ import fs from 'fs';
 const SOURCE = 'data-source/lt-adjectives.json';
 const OUT = 'src/lib/data/adjectives.js';
 const fetched = JSON.parse(fs.readFileSync(SOURCE));
+const RU_EN = JSON.parse(fs.readFileSync('data-source/ru-en-adj.json', 'utf8'));
 
 const META = {
   geras: { t: 'I', m: 'добрий', f: 'добра', n: 'добре' },
@@ -73,7 +74,11 @@ for (const a of fetched) {
   if (!VALID.has(m.t)) { problems.push('bad type: ' + a.lemma); continue; }
   const ok = ['m', 'f'].every((g) => a[g] && a[g].sg.length === 6 && a[g].pl.length === 6 && [...a[g].sg, ...a[g].pl].every((x) => x));
   if (!ok) { problems.push('bad forms: ' + a.lemma); continue; }
-  adjs.push({ id: a.lemma, type: m.t, uk: m.m, ukM: m.m, ukF: m.f, ukN: m.n, ukPl: m.m.replace(/[иі]й$/, 'і'), for: FOR[a.lemma] || '*', m: a.m, f: a.f });
+  const re = RU_EN[a.lemma] || {};
+  const ru = re.ru || {};
+  adjs.push({ id: a.lemma, type: m.t, uk: m.m, ukM: m.m, ukF: m.f, ukN: m.n, ukPl: m.m.replace(/[иі]й$/, 'і'),
+    ru: ru.m || m.m, ruM: ru.m || m.m, ruF: ru.f || m.f, ruN: ru.n || m.n, en: re.en || m.m,
+    for: FOR[a.lemma] || '*', m: a.m, f: a.f });
 }
 
 if (problems.length) { console.error('PROBLEMS:\n' + problems.join('\n')); process.exit(1); }

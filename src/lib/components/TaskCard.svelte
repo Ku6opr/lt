@@ -1,5 +1,9 @@
 <script>
   import WordForm from './WordForm.svelte';
+  import { lang } from '../stores/lang.js';
+  import { UI } from '../i18n/ui.js';
+
+  $: L = UI[$lang];
 
   export let task = null;
   export let revealed = false;
@@ -41,7 +45,7 @@
     <div style="min-height:clamp(124px,18cqw,152px);border-top:1px solid var(--color-divider);margin-top:var(--space-3);padding-top:var(--space-4)">
       {#if revealed}
         <div style="text-align:center">
-          <div class="card-kicker">Правильна форма</div>
+          <div class="card-kicker">{L.correctForm}</div>
           <div style="font-family:var(--font-heading);font-size:clamp(30px,6cqw,50px);line-height:1.02;margin:6px 0 12px">
             {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{task.lead} </span>{/if}<WordForm stem={task.stem} tail={task.tail} />{#if task.trail}<span style="margin-left:0.3em">{task.trail}</span>{/if}
           </div>
@@ -51,14 +55,14 @@
     </div>
 
     <div style="display:flex;justify-content:center;margin-top:var(--space-4)">
-      <button class="btn btn-primary" on:click={onPrimary} style="min-width:190px">{revealed ? 'Далі →' : 'Показати відповідь'}</button>
+      <button class="btn btn-primary" on:click={onPrimary} style="min-width:190px">{revealed ? L.next : L.reveal}</button>
     </div>
     {#if onReport}
       <div style="display:flex;justify-content:center;margin-top:var(--space-2)">
-        <button class="btn btn-ghost" on:click={onReport} style="font-size:12px;color:var(--color-neutral-500)" title="Повідомити про помилку у цьому завданні">⚑ Повідомити про помилку</button>
+        <button class="btn btn-ghost" on:click={onReport} style="font-size:12px;color:var(--color-neutral-500)" title={L.reportTitle}>⚑ {L.report}</button>
       </div>
     {/if}
   {:else}
-    <div class="text-muted" style="text-align:center;padding:var(--space-8) 0;font-size:15px">Оберіть нижче хоча б один відмінок, один тип відмінювання та число.</div>
+    <div class="text-muted" style="text-align:center;padding:var(--space-8) 0;font-size:15px">{L.emptyAdj}</div>
   {/if}
 </div>

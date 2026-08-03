@@ -25,16 +25,19 @@ const ALL_PAIRS = [];
 
 const ORDER = ['V', 'K', 'N', 'G', 'In', 'Vt'];
 const ADJ_Q = {
-  V: { sg: { m: ['Koks?', 'який?'], f: ['Kokia?', 'яка?'] }, pl: { m: ['Kokie?', 'які?'], f: ['Kokios?', 'які?'] } },
-  K: { sg: { m: ['Kokio?', 'якого?'], f: ['Kokios?', 'якої?'] }, pl: { m: ['Kokių?', 'яких?'], f: ['Kokių?', 'яких?'] } },
-  N: { sg: { m: ['Kokiam?', 'якому?'], f: ['Kokiai?', 'якій?'] }, pl: { m: ['Kokiems?', 'яким?'], f: ['Kokioms?', 'яким?'] } },
-  G: { sg: { m: ['Kokį?', 'який?'], f: ['Kokią?', 'яку?'] }, pl: { m: ['Kokius?', 'які?'], f: ['Kokias?', 'які?'] } },
-  In: { sg: { m: ['Kokiu?', 'яким?'], f: ['Kokia?', 'якою?'] }, pl: { m: ['Kokiais?', 'якими?'], f: ['Kokiomis?', 'якими?'] } },
-  Vt: { sg: { m: ['Kokiame?', 'у якому?'], f: ['Kokioje?', 'у якій?'] }, pl: { m: ['Kokiuose?', 'у яких?'], f: ['Kokiose?', 'у яких?'] } }
+  V: { sg: { m: ['Koks?', 'який?', 'какой?'], f: ['Kokia?', 'яка?', 'какая?'] }, pl: { m: ['Kokie?', 'які?', 'какие?'], f: ['Kokios?', 'які?', 'какие?'] } },
+  K: { sg: { m: ['Kokio?', 'якого?', 'какого?'], f: ['Kokios?', 'якої?', 'какой?'] }, pl: { m: ['Kokių?', 'яких?', 'каких?'], f: ['Kokių?', 'яких?', 'каких?'] } },
+  N: { sg: { m: ['Kokiam?', 'якому?', 'какому?'], f: ['Kokiai?', 'якій?', 'какой?'] }, pl: { m: ['Kokiems?', 'яким?', 'каким?'], f: ['Kokioms?', 'яким?', 'каким?'] } },
+  G: { sg: { m: ['Kokį?', 'який?', 'какой?'], f: ['Kokią?', 'яку?', 'какую?'] }, pl: { m: ['Kokius?', 'які?', 'какие?'], f: ['Kokias?', 'які?', 'какие?'] } },
+  In: { sg: { m: ['Kokiu?', 'яким?', 'каким?'], f: ['Kokia?', 'якою?', 'какой?'] }, pl: { m: ['Kokiais?', 'якими?', 'какими?'], f: ['Kokiomis?', 'якими?', 'какими?'] } },
+  Vt: { sg: { m: ['Kokiame?', 'у якому?', 'о каком?'], f: ['Kokioje?', 'у якій?', 'о какой?'] }, pl: { m: ['Kokiuose?', 'у яких?', 'о каких?'], f: ['Kokiose?', 'у яких?', 'о каких?'] } }
 };
+const Q_IDX = { uk: 1, ru: 2 };
 
 const CASE_UK = { V: 'naz', K: 'rod', N: 'dav', G: 'znah', In: 'oru', Vt: 'misc' };
+const CASE_RU = { V: 'nom', K: 'gen', N: 'dat', G: 'acc', In: 'ins', Vt: 'prep' };
 const CASE_NOUNKEY = { V: 'nom', K: 'gen', N: 'dat', G: 'acc', In: 'ins', Vt: 'loc' };
+
 const UK_END = {
   hard: {
     m: { naz: 'ий', rod: 'ого', dav: 'ому', oru: 'им', misc: 'ому' },
@@ -50,34 +53,87 @@ const UK_END = {
   }
 };
 
-function ukAdjForm(adj, ukG, number, caseId, animate) {
+function ukAdjForm(adj, g3, number, caseId, animate) {
   const base = adj.ukM;
   const E = UK_END[/ій$/.test(base) ? 'soft' : 'hard'];
   const stem = base.slice(0, -2);
   const uc = CASE_UK[caseId];
-  if (number === 'pl') {
-    const end = uc === 'znah' ? (animate ? E.pl.rod : E.pl.naz) : E.pl[uc];
-    return stem + end;
-  }
-  const g = ukG === 'n' ? 'n' : ukG === 'f' ? 'f' : 'm';
-  let end;
-  if (uc === 'znah' && g === 'm') end = animate ? E.m.rod : E.m.naz;
-  else end = E[g][uc];
+  if (number === 'pl') return stem + (uc === 'znah' ? (animate ? E.pl.rod : E.pl.naz) : E.pl[uc]);
+  const g = g3 === 'n' ? 'n' : g3 === 'f' ? 'f' : 'm';
+  const end = uc === 'znah' && g === 'm' ? (animate ? E.m.rod : E.m.naz) : E[g][uc];
   return stem + end;
 }
 
-function ukAdjPhrase(adj, noun, number, caseId) {
-  if (number === 'pl') {
-    if (caseId === 'V') return adj.ukPl + ' ' + noun.ukPl;
-    return adj.ukPl + ' · ' + noun.ukPl;
+const RU_HARD = {
+  m: { nom: 'ый', gen: 'ого', dat: 'ому', ins: 'ым', prep: 'ом' },
+  f: { nom: 'ая', gen: 'ой', dat: 'ой', acc: 'ую', ins: 'ой', prep: 'ой' },
+  n: { nom: 'ое', gen: 'ого', dat: 'ому', ins: 'ым', prep: 'ом' },
+  pl: { nom: 'ые', gen: 'ых', dat: 'ым', ins: 'ыми', prep: 'ых' }
+};
+const RU_SOFT = {
+  m: { nom: 'ий', gen: 'его', dat: 'ему', ins: 'им', prep: 'ем' },
+  f: { nom: 'яя', gen: 'ей', dat: 'ей', acc: 'юю', ins: 'ей', prep: 'ей' },
+  n: { nom: 'ее', gen: 'его', dat: 'ему', ins: 'им', prep: 'ем' },
+  pl: { nom: 'ие', gen: 'их', dat: 'им', ins: 'ими', prep: 'их' }
+};
+const RU_VELHUSH = /[кгхжшчщ]$/;
+
+function ruAdjForm(adj, g3, number, caseId, animate) {
+  const base = adj.ruM;
+  let mNom, table;
+  if (/ой$/.test(base)) { mNom = 'ой'; table = RU_HARD; }
+  else if (/ний$/.test(base)) { mNom = 'ий'; table = RU_SOFT; }
+  else if (/ий$/.test(base)) { mNom = 'ий'; table = RU_HARD; }
+  else { mNom = 'ый'; table = RU_HARD; }
+  const stem = base.slice(0, -2);
+  const uc = CASE_RU[caseId];
+  let end;
+  if (number === 'pl') end = uc === 'acc' ? (animate ? table.pl.gen : table.pl.nom) : table.pl[uc];
+  else {
+    const g = g3 === 'n' ? 'n' : g3 === 'f' ? 'f' : 'm';
+    if (uc === 'nom' && g === 'm') end = mNom;
+    else if (uc === 'acc') end = g === 'm' ? (animate ? table.m.gen : mNom) : g === 'n' ? table.n.nom : table.f.acc;
+    else end = table[g][uc];
   }
-  const animate = noun.ukForms.acc === noun.ukForms.gen;
-  const ukAdj = ukAdjForm(adj, noun.ukG, 'sg', caseId, animate);
-  let nf = noun.ukForms[CASE_NOUNKEY[caseId]];
-  const mp = nf.match(/^(у|в|на|при|по|о|об)\s+/);
-  const prep = mp ? mp[0] : '';
-  if (mp) nf = nf.slice(mp[0].length);
-  return prep + ukAdj + ' ' + nf;
+  if (table === RU_HARD && RU_VELHUSH.test(stem)) end = end.replace(/^ы/, 'и');
+  return stem + end;
+}
+
+const PREP_RE = /^(у|в|во|на|при|по|о|об|обо)\s+/;
+
+function splitPrep(nf) {
+  const mp = nf.match(PREP_RE);
+  return mp ? [mp[0], nf.slice(mp[0].length)] : ['', nf];
+}
+
+const EN_PREP = { V: '', K: 'of ', N: 'to ', G: '', In: 'with ', Vt: 'in ' };
+
+function adjPhrase(lang, adj, noun, number, caseId) {
+  if (lang === 'en') {
+    const a = adj.en;
+    const n = number === 'pl' ? noun.enPl || noun.en : noun.en;
+    return EN_PREP[caseId] + a + ' ' + n;
+  }
+  const g3 = lang === 'ru' ? noun.ruG : noun.ukG;
+  const key = CASE_NOUNKEY[caseId];
+  let nounF, animate;
+  if (number === 'pl') {
+    const pf = lang === 'ru' ? noun.ruPlForms : noun.ukPlForms;
+    const nomPl = lang === 'ru' ? noun.ruPl : noun.ukPl;
+    animate = pf ? pf.acc === pf.gen : false;
+    nounF = caseId === 'V' || !pf ? nomPl : pf[key] || nomPl;
+    if (!pf && caseId !== 'V') {
+      const adjPl = lang === 'ru' ? ruAdjForm(adj, g3, 'pl', caseId, animate) : adj.ukPl;
+      return adjPl + ' · ' + nomPl;
+    }
+  } else {
+    const forms = lang === 'ru' ? noun.ruForms : noun.ukForms;
+    animate = forms.acc === forms.gen;
+    nounF = forms[key];
+  }
+  const dAdj = lang === 'ru' ? ruAdjForm(adj, g3, number, caseId, animate) : ukAdjForm(adj, g3, number, caseId, animate);
+  const [prep, nf] = splitPrep(nounF);
+  return prep + dAdj + ' ' + nf;
 }
 
 function rnd(a) {
@@ -135,17 +191,21 @@ export function newAdjTask(state, prev) {
   const tail = forms[ci].slice(stem.length);
   const nounForm = noun[number][ci];
 
+  const lang = state.lang || 'uk';
+  const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
   const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
-  const useUk = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
-  const [qLt, qUk] = ADJ_Q[caseId][number][gender];
-  const ukPhrase = ukAdjPhrase(adj, noun, number, caseId);
-  const prompt = useUk ? { text: adj.uk } : { text: adj.m.sg[0] };
+  const useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
+  const q = ADJ_Q[caseId][number][gender];
+  const qLt = q[0];
+  const qLoc = lang === 'en' ? '' : q[Q_IDX[lang]];
+  const trPhrase = adjPhrase(lang, adj, noun, number, caseId);
+  const prompt = useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] };
 
-  const qStr = '(' + qUk + ' / ' + qLt + ')';
+  const qStr = lang === 'en' ? '(' + qLt + ')' : '(' + qLoc + ' / ' + qLt + ')';
   let hint = null;
-  if (tier.hint === 'fullq') hint = ukPhrase + ' ' + qStr;
+  if (tier.hint === 'fullq') hint = trPhrase + ' ' + qStr;
   else if (tier.hint === 'q') hint = qStr;
-  const revealUk = tier.hint === 'fullq' ? null : ukPhrase;
+  const revealUk = tier.hint === 'fullq' ? null : trPhrase;
 
   return {
     caseId,
@@ -164,8 +224,8 @@ export function newAdjTask(state, prev) {
     trail: nounForm,
     hint,
     revealUk,
-    stemPrefill: !useUk,
-    stemPrefix: useUk ? '' : stem,
+    stemPrefill: !useTr,
+    stemPrefix: useTr ? '' : stem,
     stem,
     tail,
     targetForm: forms[ci]

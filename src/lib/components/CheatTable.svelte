@@ -2,7 +2,11 @@
   import { CASES } from '../data/cases.js';
   import { DECLENSIONS } from '../data/declensions.js';
   import { stemOf } from '../engine/stem.js';
+  import { lang } from '../stores/lang.js';
+  import { UI } from '../i18n/ui.js';
   import WordForm from './WordForm.svelte';
+
+  $: L = UI[$lang];
 
   export let view = 'sg';
 
@@ -18,7 +22,7 @@
   $: rows = CASES.map((c, ri) => ({
     abbr: c.abbr,
     q: c.q,
-    name: c.name,
+    name: L.caseNames[c.id],
     preps: c.preps.join(', '),
     hasPreps: c.preps.length > 0,
     cells: DECLENSIONS.map((tp) => {
@@ -39,11 +43,11 @@
       <thead>
         <tr>
           <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider)"></th>
-          <th colspan={maleSpan} style="text-align:center;background:#f7e6c9;color:var(--color-accent-800);border-bottom:1px solid var(--color-divider)">Чоловічий рід</th>
-          <th colspan={femaleSpan} style="text-align:center;background:#e7dff0;color:#574a71;border-bottom:1px solid var(--color-divider)">Жіночий рід</th>
+          <th colspan={maleSpan} style="text-align:center;background:#f7e6c9;color:var(--color-accent-800);border-bottom:1px solid var(--color-divider)">{L.mascRow}</th>
+          <th colspan={femaleSpan} style="text-align:center;background:#e7dff0;color:#574a71;border-bottom:1px solid var(--color-divider)">{L.femRow}</th>
         </tr>
         <tr>
-          <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider);vertical-align:bottom;text-align:left"><span style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--color-text)">Відмінок</span></th>
+          <th style="position:sticky;left:0;background:var(--color-bg);z-index:3;border-bottom:1px solid var(--color-divider);vertical-align:bottom;text-align:left"><span style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--color-text)">{L.caseCol}</span></th>
           {#each cols as col}
             <th style="padding:8px 10px;text-align:center;vertical-align:middle;background:{col.base};border-bottom:1px solid var(--color-divider);">
               <div style="line-height:1.15"><span style="font-weight:600;color:var(--color-text)">{col.ending}</span></div>

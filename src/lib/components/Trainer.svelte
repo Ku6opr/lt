@@ -1,6 +1,8 @@
 <script>
   import { onMount } from 'svelte';
   import { settingsFor } from '../stores/settings.js';
+  import { lang } from '../stores/lang.js';
+  import { UI } from '../i18n/ui.js';
   import { newTask, poolOk } from '../engine/generate.js';
   import { newAdjTask, adjPoolOk } from '../engine/adjectives.js';
   import CheatTable from './CheatTable.svelte';
@@ -22,7 +24,7 @@
   const cheatCases = isAdj ? topic.cheatCases : null;
   const fixedFilters = isAdj && topic.fixedFilters;
   const cheatBoth = isAdj && topic.cheatBoth;
-  const stateOf = (st) => (isAdj ? { ...st, caseScope: topic.scopeCases } : st);
+  const stateOf = (st) => ({ ...st, lang: $lang, ...(isAdj ? { caseScope: topic.scopeCases } : {}) });
 
   let task = null;
   let revealed = false;
@@ -30,6 +32,10 @@
   let focusType = 'as';
 
   $: s = $settings;
+  $: L = UI[$lang];
+
+  let lastLang = $lang;
+  $: if ($lang !== lastLang) { lastLang = $lang; if (task) makeNewTask(); }
 
   function makeNewTask() {
     const prev = task ? { wordId: task.wordId, caseId: task.caseId } : null;
@@ -70,9 +76,9 @@
     const promptShown = task.prompt.text || task.stem + (task.prompt.tail || '');
     const gloss = task.hint || task.revealUk || '';
     const title = 'Помилка: ' + answer;
-    const info = { topic: topic.id, theme: st.theme, level: st.level + 1, promptShown, answer, gloss, task };
+    const info = { topic: topic.id, lang: $lang, theme: st.theme, level: st.level + 1, promptShown, answer, gloss, task };
     const body =
-      '**Урок:** ' + topic.title + '\n' +
+      '**Урок:** ' + topic.id + ' (' + $lang + ')\n' +
       '**Тема:** ' + (st.theme || 'all') + '\n' +
       '**Рівень:** ' + (st.level + 1) + '\n' +
       '**Показано:** ' + promptShown + '\n' +
@@ -97,12 +103,12 @@
 
 <div class="lt-wrap">
   <div style="display:flex;align-items:center;gap:var(--space-3);padding-block:var(--space-2) var(--space-3)">
-    <button class="btn btn-secondary btn-icon" on:click={onBack} aria-label="Назад до тем">
+    <button class="btn btn-secondary btn-icon" on:click={onBack} aria-label={L.back}>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
     </button>
     <div>
-      <div class="card-kicker">{topic.title}</div>
-      <h2 style="margin:0;font-size:clamp(22px,3.6cqw,32px)">{topic.trainerTitle}</h2>
+      <div class="card-kicker">{topic.title[$lang]}</div>
+      <h2 style="margin:0;font-size:clamp(22px,3.6cqw,32px)">{topic.trainerTitle[$lang]}</h2>
     </div>
   </div>
   <hr class="hr" style="margin-block:0 var(--space-4)">
@@ -112,15 +118,15 @@
   <div style="margin-bottom:var(--space-6)">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:var(--space-3)">
       <div style="display:flex;align-items:baseline;gap:12px">
-        <span class="card-kicker" style="margin:0">Матеріали</span>
-        <button class="btn btn-ghost" on:click={toggleTable} style="font-size:14px">{s.tableOpen ? 'Сховати таблицю' : 'Показати таблицю'}</button>
+        <span class="card-kicker" style="margin:0">{L.materials}</span>
+        <button class="btn btn-ghost" on:click={toggleTable} style="font-size:14px">{s.tableOpen ? L.hideTable : L.showTable}</button>
       </div>
       {#if s.tableOpen && !cheatBoth}
         <div style="display:flex;align-items:center;gap:10px">
-          <span class="text-muted" style="font-size:12px">Показати:</span>
+          <span class="text-muted" style="font-size:12px">{L.show}</span>
           <div class="seg">
-            <label class="seg-opt"><input type="radio" name="lt-viewnum" checked={s.viewNumber === 'sg'} on:change={() => setView('sg')}>Однина</label>
-            <label class="seg-opt"><input type="radio" name="lt-viewnum" checked={s.viewNumber === 'pl'} on:change={() => setView('pl')}>Множина</label>
+            <label class="seg-opt"><input type="radio" name="lt-viewnum" checked={s.viewNumber === 'sg'} on:change={() => setView('sg')}>{L.numSg}</label>
+            <label class="seg-opt"><input type="radio" name="lt-viewnum" checked={s.viewNumber === 'pl'} on:change={() => setView('pl')}>{L.numPl}</label>
           </div>
         </div>
       {/if}

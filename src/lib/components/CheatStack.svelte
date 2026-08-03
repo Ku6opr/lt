@@ -2,7 +2,11 @@
   import { CASES } from '../data/cases.js';
   import { DECLENSIONS } from '../data/declensions.js';
   import { stemOf } from '../engine/stem.js';
+  import { lang } from '../stores/lang.js';
+  import { UI } from '../i18n/ui.js';
   import WordForm from './WordForm.svelte';
+
+  $: L = UI[$lang];
 
   export let view = 'sg';
   export let focusType = 'as';
@@ -16,7 +20,7 @@
     return {
       abbr: c.abbr,
       q: c.q,
-      name: c.name,
+      name: L.caseNames[c.id],
       stem: fstem,
       tail: form.slice(fstem.length),
       bg: ftype.gender === 'm' ? '#fdf9f2' : '#f8f5fb'
@@ -27,7 +31,7 @@
 <div class="lt-stack">
   <div style="border:1px solid var(--color-divider);border-radius:var(--radius-md);overflow:hidden">
     <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--color-surface);border-bottom:1px solid var(--color-divider)">
-      <span class="card-kicker" style="margin:0;white-space:nowrap">Тип</span>
+      <span class="card-kicker" style="margin:0;white-space:nowrap">{L.nounType}</span>
       <select bind:value={focusType} class="input" style="flex:1;min-height:34px;font-family:var(--font-heading);font-size:14px">
         {#each focusOptions as op}
           <option value={op.id}>{op.label}</option>
