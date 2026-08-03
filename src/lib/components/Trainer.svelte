@@ -3,6 +3,7 @@
   import { settingsFor } from '../stores/settings.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
+  import { record, candidateWeight, dimWeight, fold, keysFor } from '../stores/progress.js';
   import { newTask, poolOk } from '../engine/generate.js';
   import { newAdjTask, adjPoolOk } from '../engine/adjectives.js';
   import CheatTable from './CheatTable.svelte';
@@ -12,6 +13,7 @@
   import TaskCard from './TaskCard.svelte';
   import StudySelector from './StudySelector.svelte';
   import AdjSelector from './AdjSelector.svelte';
+  import StatsPanel from './StatsPanel.svelte';
 
   export let topic;
   export let onBack;
@@ -30,6 +32,25 @@
   let revealed = false;
   let userInput = '';
   let focusType = 'as';
+  let correctMark = false;
+  let statsOpen = false;
+
+  const typePrefix = isAdj ? 'atype|' : 'ntype|';
+
+  function pickWeighted(items, ws) {
+    const sum = ws.reduce((a, b) => a + b, 0);
+    let r = Math.random() * sum;
+    for (let i = 0; i < items.length; i++) { r -= ws[i]; if (r <= 0) return items[i]; }
+    return items[items.length - 1];
+  }
+  function weightedPick(cands) {
+    return pickWeighted(cands, cands.map((c) => candidateWeight(topic.id, keysFor(c, isAdj))));
+  }
+  // тип обираємо зважено за «слабкістю/непокриттям» типу — щоб рідкісні типи (мало слів)
+  // з'являлися нарівні, а не пропорційно кількості слів
+  function pickType(types) {
+    return pickWeighted(types, types.map((t) => dimWeight(topic.id, typePrefix + t)));
+  }
 
   $: s = $settings;
   $: L = UI[$lang];
@@ -39,10 +60,21 @@
 
   function makeNewTask() {
     const prev = task ? { wordId: task.wordId, caseId: task.caseId } : null;
-    const t = genTask(stateOf($settings), prev);
+    const state = stateOf($settings);
+    const typeKeys = Object.keys(state.types || {}).filter((k) => state.types[k]);
+    const cands = [];
+    // стратифікація за типом: кожен кандидат — з обраного (зважено) типу, щоб усі закінчення брали участь
+    for (let i = 0; i < 8 && typeKeys.length; i++) {
+      const ty = pickType(typeKeys);
+      const c = genTask({ ...state, types: { [ty]: true } }, prev);
+      if (c) cands.push(c);
+    }
+    while (cands.length < 3) { const c = genTask(state, prev); if (c) cands.push(c); else break; }
+    const t = cands.length ? weightedPick(cands) : null;
     task = t;
     revealed = false;
     userInput = '';
+    correctMark = false;
     if (t && !isAdj) focusType = t.typeId;
   }
 
@@ -65,8 +97,13 @@
   }
 
   function primaryAction() {
-    if (revealed) makeNewTask();
-    else revealed = true;
+    if (revealed) { makeNewTask(); return; }
+    revealed = true;
+    if (!task) return;
+    const inp = userInput.trim();
+    const correct = inp ? fold((task.stemPrefix || '') + inp) === fold(task.targetForm) : null;
+    correctMark = correct === true;
+    record(topic.id, keysFor(task, isAdj), correct);
   }
 
   function reportError() {
@@ -113,7 +150,7 @@
   </div>
   <hr class="hr" style="margin-block:0 var(--space-4)">
 
-  <TaskCard {task} {revealed} {userInput} onInput={(e) => (userInput = e.target.value)} onPrimary={primaryAction} onReport={reportError} />
+  <TaskCard {task} {revealed} {userInput} {correctMark} onInput={(e) => (userInput = e.target.value)} onPrimary={primaryAction} onReport={reportError} />
 
   <div style="margin-bottom:var(--space-6)">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:var(--space-3)">
@@ -141,6 +178,11 @@
         <CheatStack view={s.viewNumber} bind:focusType />
       {/if}
     {/if}
+  </div>
+
+  <div style="margin-bottom:var(--space-6)">
+    <button class="btn btn-ghost" on:click={() => (statsOpen = !statsOpen)} style="font-size:14px"><span class="card-kicker" style="margin:0">{statsOpen ? L.hideStats : L.showStats}</span></button>
+    {#if statsOpen}<div style="margin-top:var(--space-3)"><StatsPanel {topic} /></div>{/if}
   </div>
 
   {#if isAdj}

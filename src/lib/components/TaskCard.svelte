@@ -11,6 +11,7 @@
   export let onInput;
   export let onPrimary;
   export let onReport = null;
+  export let correctMark = false;
 
   $: hasTask = !!task;
 
@@ -45,7 +46,7 @@
     <div style="min-height:clamp(124px,18cqw,152px);border-top:1px solid var(--color-divider);margin-top:var(--space-3);padding-top:var(--space-4)">
       {#if revealed}
         <div style="text-align:center">
-          <div class="card-kicker">{L.correctForm}</div>
+          <div class="card-kicker">{L.correctForm}{#if correctMark}<span style="color:#4a9d5b;margin-left:6px" title="Збіглося з вашим варіантом">✓</span>{/if}</div>
           <div style="font-family:var(--font-heading);font-size:clamp(30px,6cqw,50px);line-height:1.02;margin:6px 0 12px">
             {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{task.lead} </span>{/if}<WordForm stem={task.stem} tail={task.tail} />{#if task.trail}<span style="margin-left:0.3em">{task.trail}</span>{/if}
           </div>

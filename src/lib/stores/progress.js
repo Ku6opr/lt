@@ -1,0 +1,84 @@
+import { writable, get } from 'svelte/store';
+
+const KEY = 'lt-progress-v1';
+const FOLD = { 'ą': 'a', 'č': 'c', 'ę': 'e', 'ė': 'e', 'į': 'i', 'š': 's', 'ų': 'u', 'ū': 'u', 'ž': 'z' };
+
+export function fold(s) {
+  return (s || '').toLowerCase().trim().replace(/[ąčęėįšųūž]/g, (c) => FOLD[c] || c);
+}
+
+// Ключі-виміри однієї задачі. cell = парадигмова клітинка (тип×відмінок×число) = закінчення;
+// form = конкретне слово; dims = окремі осі для агрегації/дашборду.
+export function keysFor(t, isAdj) {
+  if (isAdj) {
+    return {
+      form: `w|${t.wordId}|${t.gender}|${t.caseId}|${t.number}`,
+      cell: `tc|${t.adjType}|${t.gender}|${t.caseId}|${t.number}`,
+      dims: [`case|${t.caseId}`, `atype|${t.adjType}`, `gender|${t.gender}`, `num|${t.number}`]
+    };
+  }
+  return {
+    form: `w|${t.wordId}|${t.caseId}|${t.number}`,
+    cell: `tc|${t.typeId}|${t.caseId}|${t.number}`,
+    dims: [`case|${t.caseId}`, `ntype|${t.typeId}`, `num|${t.number}`]
+  };
+}
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+}
+
+export const progress = writable(load());
+progress.subscribe((v) => {
+  try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {}
+});
+
+function bump(tt, k, correct) {
+  const r = tt.forms[k] || (tt.forms[k] = { s: 0, o: 0, m: 0, t: 0 });
+  r.s += 1;
+  if (correct === true) r.o += 1;
+  else if (correct === false) r.m += 1;
+  r.t = tt.tick;
+}
+
+// correct: true | false | null (null = seen without a typed answer)
+export function record(topic, keys, correct) {
+  progress.update((all) => {
+    const tt = all[topic] || (all[topic] = { forms: {}, tick: 0 });
+    tt.tick += 1;
+    bump(tt, keys.form, correct);
+    bump(tt, keys.cell, correct);
+    for (const d of keys.dims) bump(tt, d, correct);
+    return all;
+  });
+}
+
+// weakness of a single key: unseen ≈ 1.0, weak/missed ↑, mastered ↓, resurfaces with time
+function keyWeight(tt, k) {
+  const r = tt && tt.forms[k];
+  if (!r || r.s === 0) return 1;
+  const missRate = r.m / r.s;
+  const gap = tt.tick - r.t;
+  const strength = r.o - r.m;
+  let w = 0.25 + 1.4 * missRate;
+  if (strength <= 0) w += 0.4;
+  w += Math.min(0.5, gap / 40);
+  return Math.max(0.1, Math.min(2.5, w));
+}
+
+// вага кандидата: клітинка-закінчення домінує, слово — довесок (вокабуляр/покриття)
+export function candidateWeight(topic, keys) {
+  const tt = get(progress)[topic];
+  if (!tt) return 1;
+  return 0.6 * keyWeight(tt, keys.cell) + 0.4 * keyWeight(tt, keys.form);
+}
+
+export function keyStat(topic, key) {
+  const tt = get(progress)[topic];
+  return (tt && tt.forms[key]) || null;
+}
+
+// вага виміру (напр. `ntype|as`) — для стратифікації кандидатів за типом
+export function dimWeight(topic, key) {
+  return keyWeight(get(progress)[topic], key);
+}

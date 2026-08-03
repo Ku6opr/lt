@@ -9,6 +9,7 @@ export const UI = {
 
     materials: 'Матеріали',
     showTable: 'Показати таблицю',
+    showStats: 'Показати статистику', hideStats: 'Сховати статистику', statsReset: 'Скинути', answered: 'відповідей', accuracy: 'точність', weakWords: 'Слабкі слова', coverage: 'форм побачено',
     hideTable: 'Сховати таблицю',
     show: 'Показати:',
     back: 'Назад до тем',
@@ -63,6 +64,7 @@ export const UI = {
 
     materials: 'Материалы',
     showTable: 'Показать таблицу',
+    showStats: 'Показать статистику', hideStats: 'Скрыть статистику', statsReset: 'Сбросить', answered: 'ответов', accuracy: 'точность', weakWords: 'Слабые слова', coverage: 'форм показано',
     hideTable: 'Скрыть таблицу',
     show: 'Показать:',
     back: 'Назад к темам',
@@ -117,6 +119,7 @@ export const UI = {
 
     materials: 'Reference',
     showTable: 'Show table',
+    showStats: 'Show stats', hideStats: 'Hide stats', statsReset: 'Reset', answered: 'answers', accuracy: 'accuracy', weakWords: 'Weak words', coverage: 'forms seen',
     hideTable: 'Hide table',
     show: 'Show:',
     back: 'Back to topics',
