@@ -236,7 +236,7 @@ Object.assign(META, {
   spinta: { t: 'a', uk: 'шафа', f: ['шафи', 'шафі', 'шафу', 'шафою', 'у шафі'] },
   veidrodis: { t: 'is_m', uk: 'дзеркало', f: ['дзеркала', 'дзеркалу', 'дзеркало', 'дзеркалом', 'у дзеркалі'] },
   kalnas: { t: 'as', uk: 'гора', f: ['гори', 'горі', 'гору', 'горою', 'на горі'] },
-  debesis: { t: 'is_f', uk: 'хмара', f: ['хмари', 'хмарі', 'хмару', 'хмарою', 'на хмарі'] }
+  debesis: { t: 'is_m', uk: 'хмара', f: ['хмари', 'хмарі', 'хмару', 'хмарою', 'на хмарі'] }
 });
 Object.assign(CAT, {
   kavinė: ['place'], sumuštinis: ['food'], pyragas: ['food'], bandelė: ['food'], sriuba: ['food'],
@@ -480,6 +480,7 @@ const VALID_TYPES = new Set(['as', 'is_b', 'is_m', 'ys', 'us', 'ius', 'uo_m', 'a
 
 const RU_EN = JSON.parse(fs.readFileSync('data-source/ru-en-nouns.json', 'utf8'));
 const RU_UK_PL = fs.existsSync('data-source/ru-uk-plural.json') ? JSON.parse(fs.readFileSync('data-source/ru-uk-plural.json', 'utf8')) : {};
+const ACC = fs.existsSync('data-source/lt-accents-nouns.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-nouns.json', 'utf8')) : {};
 const plForms = (arr) => (arr && arr.length === 5 ? { gen: arr[0], dat: arr[1], acc: arr[2], ins: arr[3], loc: arr[4] } : null);
 
 const source = [...fetched, ...EXTRA].filter((w) => !DROP.has(w.lemma));
@@ -498,6 +499,7 @@ for (const w of source) {
   }
   const cat = CAT[w.lemma];
   if (!cat) { problems.push('no CAT: ' + w.lemma); continue; }
+  if (w.lemma === 'dviratis') { w.sg[2] = 'dviračiui'; w.sg[5] = 'dviratyje'; }
   const [gen, dat, acc, ins, loc] = m.f;
   const re = RU_EN[w.lemma] || {};
   const rf = re.ruF || [];
@@ -515,6 +517,11 @@ for (const w of source) {
   };
   if (ruPlForms) word.ruPlForms = ruPlForms;
   if (ukPlForms) word.ukPlForms = ukPlForms;
+  const ac = ACC[w.lemma];
+  if (ac && ac.sgA && ac.sgA.length === 6) {
+    word.sgA = ac.sgA;
+    if (pl.length === 6 && ac.plA && ac.plA.length === 6) word.plA = ac.plA;
+  }
   words.push(word);
   if (m.flag) flagged.push(w.lemma);
 }

@@ -23,6 +23,19 @@ export function boundedPrefix(arr) {
   return p;
 }
 
+// ділить наголошену форму на [основа, хвіст] за довжиною ОСНОВИ (у базових літерах),
+// щоб хвіст лишався червоним навіть з наголосами. Комбіновані знаки йдуть з попередньою літерою.
+export function accentSplit(acc, stemLen) {
+  const s = (acc || '').normalize('NFD');
+  let i = 0, base = 0;
+  while (i < s.length && base < stemLen) {
+    i++;
+    while (i < s.length && /[̀-ͯ]/.test(s[i])) i++;
+    base++;
+  }
+  return [s.slice(0, i).normalize('NFC'), s.slice(i).normalize('NFC')];
+}
+
 export function stemOf(type, num) {
   const k = type.id + num;
   if (stemCache[k] == null) stemCache[k] = commonPrefix(type[num]);

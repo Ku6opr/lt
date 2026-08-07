@@ -2,8 +2,10 @@
   import WordForm from './WordForm.svelte';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
+  import { accentSplit } from '../engine/stem.js';
 
   $: L = UI[$lang];
+  $: acc = task && task.targetFormA ? accentSplit(task.targetFormA, task.stem.length) : null;
 
   export let task = null;
   export let revealed = false;
@@ -48,7 +50,7 @@
         <div style="text-align:center">
           <div class="card-kicker">{L.correctForm}{#if correctMark}<span style="color:#4a9d5b;margin-left:6px" title="Збіглося з вашим варіантом">✓</span>{/if}</div>
           <div style="font-family:var(--font-heading);font-size:clamp(30px,6cqw,50px);line-height:1.02;margin:6px 0 12px">
-            {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{task.lead} </span>{/if}<WordForm stem={task.stem} tail={task.tail} />{#if task.trail}<span style="margin-left:0.3em">{task.trail}</span>{/if}
+            {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{task.lead} </span>{/if}{#if acc}<WordForm stem={acc[0]} tail={acc[1]} />{:else}<WordForm stem={task.stem} tail={task.tail} />{/if}{#if task.trail}<span style="margin-left:0.3em">{task.trail}</span>{/if}
           </div>
           {#if task.revealUk}<div class="text-muted" style="font-size:14px">{task.revealUk}</div>{/if}
         </div>

@@ -3,14 +3,21 @@
   import { DECLENSIONS } from '../data/declensions.js';
   import { WORDS } from '../data/words.js';
   import { ADJECTIVES } from '../data/adjectives.js';
+  import { PRONOUNS } from '../data/pronouns.js';
+  import { VERBS, PERSON_COLS, PERSON_LABEL } from '../data/verbsConj.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
 
   export let topic;
 
   const isAdj = topic.kind === 'adj';
+  const isDeg = topic.mode === 'degrees';
+  const isAdverb = topic.mode === 'adverbs';
+  const isPron = topic.kind === 'pron';
+  const isConj = topic.kind === 'conj';
   const ALL_CASES = ['V', 'K', 'N', 'G', 'In', 'Vt'];
-  const cols = isAdj ? topic.cheatCases : ALL_CASES;
+  const cols = isConj ? PERSON_COLS : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
+  const colLabel = (c) => (isConj ? PERSON_LABEL[c] : isAdverb ? (c === 'pos' ? 'зв.' : c === 'comp' ? 'вищ' : 'найв') : isDeg ? (c === 'comp' ? 'вищ' : 'найвищ') : c);
   const ADJ_ROWS = [
     { t: 'I', ex: 'geras' }, { t: 'II', ex: 'gražus' }, { t: 'III', ex: 'naminis' }
   ];
@@ -18,6 +25,8 @@
   for (const w of WORDS) nounName[w.id] = w;
   const adjName = {};
   for (const a of ADJECTIVES) adjName[a.id] = a;
+  const verbName = {};
+  for (const v of VERBS) verbName[v.id] = v;
 
   let viewNum = 'sg';
   $: L = UI[$lang];
@@ -45,6 +54,24 @@
 
   function buildRows(d, vn) {
     const g = (k) => d[k] || null;
+    if (isAdverb) {
+      return [{ t: 'I', ex: 'geras' }, { t: 'II', ex: 'gražus' }, { t: 'III', ex: 'didelis' }].map((r) => ({
+        label: r.t,
+        cells: cols.map((c) => ({ m: mastery(g(`tc|${r.t}|-|${c}|sg`)) }))
+      }));
+    }
+    if (isConj) {
+      return VERBS.map((v) => ({
+        label: v.inf,
+        cells: cols.map((c) => ({ m: mastery(g(`w|${v.id}|${c}`)) }))
+      }));
+    }
+    if (isPron) {
+      return PRONOUNS.map((p) => ({
+        label: p.lt[0],
+        cells: cols.map((c) => ({ m: mastery(g(`w|${p.id}|${c}|${p.num}`)) }))
+      }));
+    }
     return isAdj
       ? ADJ_ROWS.flatMap((t) => ['m', 'f'].map((gd) => ({
           label: t.t + ' ' + (gd === 'm' ? 'ч' : 'ж'),
@@ -75,7 +102,8 @@
   $: totals = buildTotals(data);
   $: weakWords = buildWeak(data);
 
-  const tr = (id) => (isAdj ? adjName[id] && adjName[id][$lang === 'ru' ? 'ru' : $lang === 'en' ? 'en' : 'uk'] : nounName[id] && nounName[id][$lang === 'ru' ? 'ru' : $lang === 'en' ? 'en' : 'uk']) || id;
+  const glossKey = $lang === 'ru' ? 'ru' : $lang === 'en' ? 'en' : 'uk';
+  const tr = (id) => { const src = isConj ? verbName : isAdj ? adjName : nounName; return (src[id] && src[id][glossKey]) || id; };
 
   function reset() { progress.update((all) => { delete all[topic.id]; return all; }); }
 </script>
@@ -86,10 +114,12 @@
       <b>{totals.graded}</b> {L.answered} · {L.accuracy} <b>{Math.round(totals.acc * 100)}%</b> · {L.coverage} <b>{totals.forms}</b>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
+      {#if !isConj && !isPron}
       <div class="seg">
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'sg'} on:change={() => (viewNum = 'sg')}>{L.numSg}</label>
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'pl'} on:change={() => (viewNum = 'pl')}>{L.numPl}</label>
       </div>
+      {/if}
       <button class="btn btn-ghost" style="font-size:12px" on:click={reset}>{L.statsReset}</button>
     </div>
   </div>
@@ -99,7 +129,7 @@
       <thead>
         <tr>
           <th style="text-align:left;padding:4px 8px;color:var(--color-neutral-600)"></th>
-          {#each cols as c}<th style="padding:4px 8px;font-family:var(--font-heading);color:var(--color-neutral-600)">{c}</th>{/each}
+          {#each cols as c}<th style="padding:4px 8px;font-family:var(--font-heading);color:var(--color-neutral-600)">{colLabel(c)}</th>{/each}
         </tr>
       </thead>
       <tbody>

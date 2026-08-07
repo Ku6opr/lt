@@ -101,7 +101,8 @@ function phraseTask(state, bank, prev) {
     stemPrefix: useUk ? '' : stem,
     stem,
     tail,
-    targetForm: forms[ti]
+    targetForm: forms[ti],
+    targetFormA: (word.sgA || [])[ti]
   };
 }
 
@@ -233,6 +234,7 @@ export function newTask(state, prev) {
     stemPrefix: stemPrefill ? stem : '',
     stem,
     tail,
-    targetForm: forms[ti]
+    targetForm: forms[ti],
+    targetFormA: ((number === 'pl' ? type.plA : type.sgA) || [])[ti]
   };
 }

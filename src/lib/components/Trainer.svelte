@@ -5,7 +5,9 @@
   import { UI } from '../i18n/ui.js';
   import { record, candidateWeight, dimWeight, fold, keysFor } from '../stores/progress.js';
   import { newTask, poolOk } from '../engine/generate.js';
-  import { newAdjTask, adjPoolOk } from '../engine/adjectives.js';
+  import { newAdjTask, adjPoolOk, newDegreeTask, degreePoolOk, newAdverbTask, adverbPoolOk } from '../engine/adjectives.js';
+  import { newPronounTask, pronounPoolOk } from '../engine/pronouns.js';
+  import { newConjTask, conjPoolOk } from '../engine/conjugation.js';
   import CheatTable from './CheatTable.svelte';
   import CheatStack from './CheatStack.svelte';
   import AdjCheatTable from './AdjCheatTable.svelte';
@@ -13,15 +15,26 @@
   import TaskCard from './TaskCard.svelte';
   import StudySelector from './StudySelector.svelte';
   import AdjSelector from './AdjSelector.svelte';
+  import DegreeSelector from './DegreeSelector.svelte';
+  import DegreeCheat from './DegreeCheat.svelte';
+  import AdverbCheat from './AdverbCheat.svelte';
+  import PronounSelector from './PronounSelector.svelte';
+  import PronounCheat from './PronounCheat.svelte';
+  import ConjSelector from './ConjSelector.svelte';
+  import ConjCheat from './ConjCheat.svelte';
   import StatsPanel from './StatsPanel.svelte';
 
   export let topic;
   export let onBack;
 
   const isAdj = topic.kind === 'adj';
+  const isDeg = topic.mode === 'degrees';
+  const isAdverb = topic.mode === 'adverbs';
+  const isPron = topic.kind === 'pron';
+  const isConj = topic.kind === 'conj';
   const settings = settingsFor(topic.id);
-  const genTask = isAdj ? newAdjTask : newTask;
-  const genOk = isAdj ? adjPoolOk : poolOk;
+  const genTask = isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
+  const genOk = isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
   const selectorCases = isAdj ? topic.scopeCases : null;
   const cheatCases = isAdj ? topic.cheatCases : null;
   const fixedFilters = isAdj && topic.fixedFilters;
@@ -59,7 +72,7 @@
   $: if ($lang !== lastLang) { lastLang = $lang; if (task) makeNewTask(); }
 
   function makeNewTask() {
-    const prev = task ? { wordId: task.wordId, caseId: task.caseId } : null;
+    const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver } : null;
     const state = stateOf($settings);
     const typeKeys = Object.keys(state.types || {}).filter((k) => state.types[k]);
     const cands = [];
@@ -83,7 +96,15 @@
     const st = $settings, t = task;
     if (!t) { makeNewTask(); return; }
     let invalid;
-    if (isAdj) {
+    if (isConj) {
+      invalid = false;
+    } else if (isAdverb) {
+      invalid = !st.degrees[t.degree] || (st.types && !st.types[t.adjType]);
+    } else if (isPron) {
+      invalid = !st.cases[t.caseId] || !st.numbers[t.number];
+    } else if (isDeg) {
+      invalid = !st.degrees[t.degree] || !st.numbers[t.number] || (st.theme !== 'all' && t.theme !== st.theme) || (st.theme === 'all' && t.theme !== 'all');
+    } else if (isAdj) {
       if (st.theme && st.theme !== 'all') {
         invalid = t.theme !== st.theme || !st.numbers[t.number];
       } else {
@@ -158,7 +179,7 @@
         <span class="card-kicker" style="margin:0">{L.materials}</span>
         <button class="btn btn-ghost" on:click={toggleTable} style="font-size:14px">{s.tableOpen ? L.hideTable : L.showTable}</button>
       </div>
-      {#if s.tableOpen && !cheatBoth}
+      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj}
         <div style="display:flex;align-items:center;gap:10px">
           <span class="text-muted" style="font-size:12px">{L.show}</span>
           <div class="seg">
@@ -170,7 +191,15 @@
     </div>
 
     {#if s.tableOpen}
-      {#if isAdj}
+      {#if isConj}
+        <ConjCheat />
+      {:else if isPron}
+        <PronounCheat />
+      {:else if isAdverb}
+        <AdverbCheat />
+      {:else if isDeg}
+        <DegreeCheat />
+      {:else if isAdj}
         <AdjCheatTable view={s.viewNumber} caseIds={cheatCases} both={cheatBoth} />
         <AdjCheatStack {settings} view={s.viewNumber} caseIds={cheatCases} both={cheatBoth} />
       {:else}
@@ -185,7 +214,15 @@
     {#if statsOpen}<div style="margin-top:var(--space-3)"><StatsPanel {topic} /></div>{/if}
   </div>
 
-  {#if isAdj}
+  {#if isConj}
+    <ConjSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+  {:else if isPron}
+    <PronounSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+  {:else if isAdverb}
+    <DegreeSelector {settings} degreeKeys={['pos', 'comp', 'sup']} showTheme={false} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+  {:else if isDeg}
+    <DegreeSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+  {:else if isAdj}
     <AdjSelector {settings} caseIds={selectorCases} {fixedFilters} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
   {:else}
     <StudySelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />

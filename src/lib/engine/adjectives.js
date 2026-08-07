@@ -53,8 +53,7 @@ const UK_END = {
   }
 };
 
-function ukAdjForm(adj, g3, number, caseId, animate) {
-  const base = adj.ukM;
+function ukAdjFormBase(base, g3, number, caseId, animate) {
   const E = UK_END[/ій$/.test(base) ? 'soft' : 'hard'];
   const stem = base.slice(0, -2);
   const uc = CASE_UK[caseId];
@@ -62,6 +61,9 @@ function ukAdjForm(adj, g3, number, caseId, animate) {
   const g = g3 === 'n' ? 'n' : g3 === 'f' ? 'f' : 'm';
   const end = uc === 'znah' && g === 'm' ? (animate ? E.m.rod : E.m.naz) : E[g][uc];
   return stem + end;
+}
+function ukAdjForm(adj, g3, number, caseId, animate) {
+  return ukAdjFormBase(adj.ukM, g3, number, caseId, animate);
 }
 
 const RU_HARD = {
@@ -79,7 +81,9 @@ const RU_SOFT = {
 const RU_VELHUSH = /[кгхжшчщ]$/;
 
 function ruAdjForm(adj, g3, number, caseId, animate) {
-  const base = adj.ruM;
+  return ruAdjFormBase(adj.ruM, g3, number, caseId, animate);
+}
+function ruAdjFormBase(base, g3, number, caseId, animate) {
   let mNom, table;
   if (/ой$/.test(base)) { mNom = 'ой'; table = RU_HARD; }
   else if (/ний$/.test(base)) { mNom = 'ий'; table = RU_SOFT; }
@@ -228,6 +232,165 @@ export function newAdjTask(state, prev) {
     stemPrefix: useTr ? '' : stem,
     stem,
     tail,
-    targetForm: forms[ci]
+    targetForm: forms[ci],
+    targetFormA: (adj[gender + 'A'] && adj[gender + 'A'][number] || [])[ci]
+  };
+}
+
+// ── Прислівники та їх ступені (звичайний/вищий/найвищий) ──
+const ADV_LIST = ADJECTIVES.filter((a) => a.adv);
+const ADV_POS = { uk: 'прислівник', ru: 'наречие', en: 'adverb' };
+
+export function adverbPoolOk(state) {
+  const degs = ['pos', 'comp', 'sup'].filter((d) => state.degrees && state.degrees[d]);
+  return degs.length > 0 && ADV_LIST.some((a) => !state.types || state.types[a.type]);
+}
+
+export function newAdverbTask(state, prev) {
+  const lang = state.lang || 'uk';
+  const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
+  let pool = ADV_LIST.filter((a) => !state.types || state.types[a.type]);
+  if (!pool.length) pool = ADV_LIST;
+  let pick = pool;
+  if (prev && prev.wordId && pool.length > 1) { const a = pool.filter((x) => x.id !== prev.wordId); if (a.length) pick = a; }
+  const adj = rnd(pick);
+
+  let dpool = ['pos', 'comp', 'sup'].filter((d) => state.degrees[d]);
+  if (!dpool.length) dpool = ['pos', 'comp', 'sup'];
+  if (prev && prev.degree && dpool.length > 1) { const a = dpool.filter((d) => d !== prev.degree); if (a.length) dpool = a; }
+  const degree = rnd(dpool);
+
+  const target = adj.adv[degree];
+  const stem = boundedPrefix([adj.adv.pos, adj.adv.comp, adj.adv.sup]);
+  const tail = target.slice(stem.length);
+  const tr = adj.advTr[transKey][degree];
+  const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
+  const useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
+
+  return {
+    caseId: 'V',
+    degree,
+    gender: '-',
+    adjType: adj.type,
+    wordId: adj.id,
+    typeId: adj.type,
+    number: 'sg',
+    theme: 'all',
+    prompt: useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] },
+    promptNote: degree === 'pos' ? ADV_POS[lang] : DEG_LABEL[degree][lang],
+    hasNote: true,
+    wordUk: null,
+    hasLead: false,
+    lead: null,
+    trail: null,
+    hint: tier.hint === 'fullq' ? tr : null,
+    revealUk: tier.hint === 'fullq' ? null : tr,
+    stemPrefill: !useTr,
+    stemPrefix: useTr ? '' : stem,
+    stem,
+    tail,
+    targetForm: target
+  };
+}
+
+// ── Ступені порівняння (тільки називний; вищий + найвищий) ──
+const DEG_LABEL = {
+  comp: { uk: 'вищий ступінь', ru: 'сравнительная степень', en: 'comparative' },
+  sup: { uk: 'найвищий ступінь', ru: 'превосходная степень', en: 'superlative' }
+};
+const SAMYJ = { m: { sg: 'самый', pl: 'самые' }, f: { sg: 'самая', pl: 'самые' }, n: { sg: 'самое', pl: 'самые' } };
+const RU_COMP_IRR = { didelis: 'больший', mažas: 'меньший', geras: 'лучший', blogas: 'худший' };
+
+function degreePool(state) {
+  return poolFor(state).filter((p) => ADJ[p.a] && ADJ[p.a].comp);
+}
+
+function degreePhrase(lang, adj, noun, number, degree) {
+  const pl = number === 'pl';
+  if (lang === 'en') {
+    const a = degree === 'comp' ? adj.enComp : adj.enSup;
+    return a + ' ' + (pl ? noun.enPl || noun.en : noun.en);
+  }
+  if (lang === 'ru') {
+    const pos = ruAdjFormBase(adj.ruM, noun.ruG, number, 'V', false);
+    const n = pl ? noun.ruPl : noun.ru;
+    if (degree === 'comp') {
+      const irr = RU_COMP_IRR[adj.id];
+      return (irr ? ruAdjFormBase(irr, noun.ruG, number, 'V', false) : 'более ' + pos) + ' ' + n;
+    }
+    const g = noun.ruG === 'n' ? 'n' : noun.ruG === 'f' ? 'f' : 'm';
+    return SAMYJ[g][pl ? 'pl' : 'sg'] + ' ' + pos + ' ' + n;
+  }
+  const base = degree === 'comp' ? adj.ukComp : adj.ukSup;
+  const a = ukAdjFormBase(base, noun.ukG, number, 'V', false);
+  return a + ' ' + (pl ? noun.ukPl : noun.uk);
+}
+
+export function degreePoolOk(state) {
+  const degs = ['comp', 'sup'].filter((d) => state.degrees && state.degrees[d]);
+  return degs.length > 0 && degreePool(state).length > 0;
+}
+
+export function newDegreeTask(state, prev) {
+  const themed = state.theme && state.theme !== 'all';
+  const pool = degreePool(state);
+  if (!pool.length) return null;
+
+  const wants = ['sg', 'pl'].filter((nn) => state.numbers[nn]);
+  const supports = (n, nn) => (nn === 'sg' ? n.num !== 'pl' : n.num !== 'sg' && n.pl && n.pl.length === 6);
+  let feas = pool.filter((p) => { const n = NOUN[p.n]; return wants.some((nn) => supports(n, nn)); });
+  if (!feas.length) feas = pool;
+
+  let pick = feas;
+  if (prev && prev.wordId && feas.length > 1) { const a = feas.filter((x) => x.a !== prev.wordId); if (a.length) pick = a; }
+  const pair = rnd(pick);
+  const adj = ADJ[pair.a];
+  const noun = NOUN[pair.n];
+  if (!adj || !noun) return null;
+  const gender = GENDER[noun.type];
+  const nums = wants.filter((nn) => supports(noun, nn));
+  const number = nums.length ? rnd(nums) : (supports(noun, 'sg') ? 'sg' : 'pl');
+
+  let dpool = ['comp', 'sup'].filter((d) => state.degrees[d]);
+  if (!dpool.length) dpool = ['comp', 'sup'];
+  if (prev && prev.degree && dpool.length > 1) { const a = dpool.filter((d) => d !== prev.degree); if (a.length) dpool = a; }
+  const degree = rnd(dpool);
+
+  const forms = adj[degree][gender];
+  const target = forms[number === 'pl' ? 1 : 0];
+  const stem = boundedPrefix(forms);
+  const tail = target.slice(stem.length);
+  const nounForm = noun[number][0];
+
+  const lang = state.lang || 'uk';
+  const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
+  const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
+  const useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
+  const phrase = degreePhrase(lang, adj, noun, number, degree);
+  const prompt = useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] };
+
+  return {
+    caseId: 'V',
+    degree,
+    adjType: adj.type,
+    wordId: adj.id,
+    nounId: noun.id,
+    theme: themed ? state.theme : 'all',
+    number,
+    gender,
+    prompt,
+    promptNote: DEG_LABEL[degree][lang],
+    hasNote: true,
+    wordUk: null,
+    hasLead: false,
+    lead: null,
+    trail: nounForm,
+    hint: tier.hint === 'fullq' ? phrase : null,
+    revealUk: tier.hint === 'fullq' ? null : phrase,
+    stemPrefill: !useTr,
+    stemPrefix: useTr ? '' : stem,
+    stem,
+    tail,
+    targetForm: target
   };
 }

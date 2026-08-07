@@ -1,7 +1,7 @@
 export const adjNomTopic = {
   id: 'adj-nom',
   kind: 'adj',
-  n: 2,
+  n: 3,
   accent: 'violet',
   glyph: 'Koks?',
   scopeCases: ['V'],
@@ -17,10 +17,44 @@ export const adjNomTopic = {
   trainerTitle: { uk: 'Прикметники — називний відмінок', ru: 'Прилагательные — именительный падеж', en: 'Adjectives — nominative case' }
 };
 
+export const adjDegreesTopic = {
+  id: 'adj-degrees',
+  kind: 'adj',
+  mode: 'degrees',
+  n: 4,
+  accent: 'violet',
+  glyph: 'esnis',
+  scopeCases: ['V'],
+  cheatCases: ['V'],
+  title: { uk: 'Прикметники: ступені', ru: 'Прилагательные: степени', en: 'Adjectives: degrees' },
+  subtitle: {
+    uk: 'Вищий і найвищий ступінь порівняння. Тільки називний, однина і множина.',
+    ru: 'Сравнительная и превосходная степень. Только именительный, ед. и мн.',
+    en: 'Comparative and superlative degree. Nominative only, singular and plural.'
+  },
+  trainerTitle: { uk: 'Ступені порівняння прикметників', ru: 'Степени сравнения прилагательных', en: 'Adjective degrees of comparison' }
+};
+
+export const adverbsTopic = {
+  id: 'adverbs',
+  kind: 'adj',
+  mode: 'adverbs',
+  n: 7,
+  accent: 'violet',
+  glyph: 'greitai',
+  title: { uk: 'Прислівники', ru: 'Наречия', en: 'Adverbs' },
+  subtitle: {
+    uk: 'Прислівники та ступені порівняння: gerai → geriau → geriausiai.',
+    ru: 'Наречия и степени сравнения: gerai → geriau → geriausiai.',
+    en: 'Adverbs and their degrees: gerai → geriau → geriausiai.'
+  },
+  trainerTitle: { uk: 'Прислівники та ступені', ru: 'Наречия и степени', en: 'Adverbs and degrees' }
+};
+
 export const adjCasesTopic = {
   id: 'adj-cases',
   kind: 'adj',
-  n: 3,
+  n: 5,
   accent: 'violet',
   glyph: 'Kokio?',
   scopeCases: ['K', 'N', 'G', 'In', 'Vt'],

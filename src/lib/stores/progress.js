@@ -1,15 +1,30 @@
 import { writable, get } from 'svelte/store';
 
 const KEY = 'lt-progress-v1';
-const FOLD = { 'ą': 'a', 'č': 'c', 'ę': 'e', 'ė': 'e', 'į': 'i', 'š': 's', 'ų': 'u', 'ū': 'u', 'ž': 'z' };
 
+// згортає ВСЮ діакритику (литовські ą č ę ė į š ų ū ž + наголоси ´ ` ˜) до базової літери —
+// щоб ввід без діакритики збігався з відповіддю (у т.ч. з наголосами)
 export function fold(s) {
-  return (s || '').toLowerCase().trim().replace(/[ąčęėįšųūž]/g, (c) => FOLD[c] || c);
+  return (s || '').toLowerCase().trim().normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
 
 // Ключі-виміри однієї задачі. cell = парадигмова клітинка (тип×відмінок×число) = закінчення;
 // form = конкретне слово; dims = окремі осі для агрегації/дашборду.
 export function keysFor(t, isAdj) {
+  if (t.conj) {
+    return {
+      form: `w|${t.wordId}|${t.person}`,
+      cell: `tc|${t.person}`,
+      dims: [`person|${t.person}`, `num|${t.number}`]
+    };
+  }
+  if (t.degree) {
+    return {
+      form: `w|${t.wordId}|${t.gender}|${t.degree}|${t.number}`,
+      cell: `tc|${t.adjType}|${t.gender}|${t.degree}|${t.number}`,
+      dims: [`deg|${t.degree}`, `atype|${t.adjType}`, `gender|${t.gender}`, `num|${t.number}`]
+    };
+  }
   if (isAdj) {
     return {
       form: `w|${t.wordId}|${t.gender}|${t.caseId}|${t.number}`,

@@ -4,6 +4,10 @@ const SOURCE = 'data-source/lt-adjectives.json';
 const OUT = 'src/lib/data/adjectives.js';
 const fetched = JSON.parse(fs.readFileSync(SOURCE));
 const RU_EN = JSON.parse(fs.readFileSync('data-source/ru-en-adj.json', 'utf8'));
+const DEG = fs.existsSync('data-source/adj-degrees.json') ? JSON.parse(fs.readFileSync('data-source/adj-degrees.json', 'utf8')) : {};
+const ADV = fs.existsSync('data-source/adv-degrees.json') ? JSON.parse(fs.readFileSync('data-source/adv-degrees.json', 'utf8')) : {};
+const NO_ADV = new Set(['baltas', 'juodas', 'raudonas', 'geltonas', 'žalias', 'pilkas', 'rudas', 'mėlynas']);
+const ACC = fs.existsSync('data-source/lt-accents-adj.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-adj.json', 'utf8')) : {};
 
 const META = {
   geras: { t: 'I', m: 'добрий', f: 'добра', n: 'добре' },
@@ -38,7 +42,23 @@ const META = {
   paskutinis: { t: 'III', m: 'останній', f: 'остання', n: 'останнє' },
   vidutinis: { t: 'III', m: 'середній', f: 'середня', n: 'середнє' },
   auksinis: { t: 'III', m: 'золотий', f: 'золота', n: 'золоте' },
-  rytinis: { t: 'III', m: 'ранковий', f: 'ранкова', n: 'ранкове' }
+  rytinis: { t: 'III', m: 'ранковий', f: 'ранкова', n: 'ранкове' },
+  sausas: { t: 'I', m: 'сухий', f: 'суха', n: 'сухе' },
+  pilnas: { t: 'I', m: 'повний', f: 'повна', n: 'повне' },
+  storas: { t: 'I', m: 'товстий', f: 'товста', n: 'товсте' },
+  plonas: { t: 'I', m: 'тонкий', f: 'тонка', n: 'тонке' },
+  linksmas: { t: 'I', m: 'веселий', f: 'весела', n: 'веселе' },
+  pilkas: { t: 'I', m: 'сірий', f: 'сіра', n: 'сіре' },
+  mėlynas: { t: 'I', m: 'синій', f: 'синя', n: 'синє' },
+  rudas: { t: 'I', m: 'коричневий', f: 'коричнева', n: 'коричневе' },
+  lengvas: { t: 'I', m: 'легкий', f: 'легка', n: 'легке' },
+  siauras: { t: 'I', m: 'вузький', f: 'вузька', n: 'вузьке' },
+  platus: { t: 'II', m: 'широкий', f: 'широка', n: 'широке' },
+  aštrus: { t: 'II', m: 'гострий', f: 'гостра', n: 'гостре' },
+  garsus: { t: 'II', m: 'гучний', f: 'гучна', n: 'гучне' },
+  svarbus: { t: 'II', m: 'важливий', f: 'важлива', n: 'важливе' },
+  stiklinis: { t: 'III', m: 'скляний', f: 'скляна', n: 'скляне' },
+  vakarinis: { t: 'III', m: 'вечірній', f: 'вечірня', n: 'вечірнє' }
 };
 
 const FOR = {
@@ -76,9 +96,27 @@ for (const a of fetched) {
   if (!ok) { problems.push('bad forms: ' + a.lemma); continue; }
   const re = RU_EN[a.lemma] || {};
   const ru = re.ru || {};
-  adjs.push({ id: a.lemma, type: m.t, uk: m.m, ukM: m.m, ukF: m.f, ukN: m.n, ukPl: m.m.replace(/[иі]й$/, 'і'),
+  const w = { id: a.lemma, type: m.t, uk: m.m, ukM: m.m, ukF: m.f, ukN: m.n, ukPl: m.m.replace(/[иі]й$/, 'і'),
     ru: ru.m || m.m, ruM: ru.m || m.m, ruF: ru.f || m.f, ruN: ru.n || m.n, en: re.en || m.m,
-    for: FOR[a.lemma] || '*', m: a.m, f: a.f });
+    for: FOR[a.lemma] || '*', m: a.m, f: a.f };
+  const dg = DEG[a.lemma];
+  if (dg) {
+    Object.assign(w, { comp: dg.comp, sup: dg.sup, ukComp: dg.ukComp, ukSup: dg.ukSup, enComp: dg.enComp, enSup: dg.enSup });
+    const supM = dg.sup.m[0];
+    const adv = {
+      pos: m.t === 'I' ? a.m.sg[0].replace(/as$/, 'ai') : supM.replace(/ausias$/, 'ai'),
+      comp: supM.replace(/ausias$/, 'au'),
+      sup: supM.replace(/ausias$/, 'ausiai')
+    };
+    const at = ADV[a.lemma];
+    if (at && !NO_ADV.has(a.lemma)) Object.assign(w, { adv, advTr: { uk: at.uk, ru: at.ru, en: at.en } });
+  }
+  const ac = ACC[a.lemma];
+  if (ac && ac.mA && ac.mA.sg && ac.mA.sg.length === 6) {
+    w.mA = ac.mA;
+    w.fA = ac.fA;
+  }
+  adjs.push(w);
 }
 
 if (problems.length) { console.error('PROBLEMS:\n' + problems.join('\n')); process.exit(1); }
