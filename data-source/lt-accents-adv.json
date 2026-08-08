@@ -1,0 +1,15 @@
+{
+  "geras": {"posA": "geraĩ", "compA": "geriaũ", "supA": "geriáusiai"},
+  "blogas": {"posA": "blõgai", "compA": "blogiaũ", "supA": "blogiáusiai"},
+  "mažas": {"posA": "mažaĩ", "supA": "mažiáusiai"},
+  "senas": {"compA": "seniaũ", "supA": "seniáusiai"},
+  "ilgas": {"posA": "ilgaĩ"},
+  "aukštas": {"compA": "aukščiaũ", "supA": "aukščiáusiai"},
+  "žemas": {"compA": "žemiaũ"},
+  "greitas": {"posA": "greĩtai", "compA": "greičiaũ", "supA": "greičiáusiai"},
+  "gražus": {"posA": "gražiaĩ", "compA": "gražiaũ", "supA": "gražiáusiai"},
+  "sunkus": {"posA": "suñkiai", "compA": "sunkiaũ", "supA": "sunkiáusiai"},
+  "gilus": {"posA": "giliaĩ", "compA": "giliaũ", "supA": "giliáusiai"},
+  "lengvas": {"compA": "lengviaũ", "supA": "lengviáusiai"},
+  "garsus": {"posA": "gar̃siai", "compA": "garsiaũ", "supA": "garsiáusiai"}
+}

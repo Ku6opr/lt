@@ -46,7 +46,6 @@
 <div style="border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:clamp(16px,3cqw,26px);margin-bottom:var(--space-8)">
   <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:var(--space-4)">
     <h4 style="margin:0">{L.studyTitle}</h4>
-    <span class="text-muted" style="font-size:12px">{L.studyHint}</span>
   </div>
 
   <div style="display:flex;flex-direction:column;gap:var(--space-4)">

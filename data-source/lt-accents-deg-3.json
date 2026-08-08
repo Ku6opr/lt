@@ -1,0 +1,244 @@
+{
+ "pilnas": {
+  "compA": {
+   "m": [
+    "pilnèsnis",
+    "pilnesnì"
+   ],
+   "f": [
+    "pilnèsnė",
+    "pilnèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "pilniáusias",
+    "pilniáusi"
+   ],
+   "f": [
+    "pilniáusia",
+    "pilniáusios"
+   ]
+  }
+ },
+ "storas": {
+  "compA": {
+   "m": [
+    "storèsnis",
+    "storesnì"
+   ],
+   "f": [
+    "storèsnė",
+    "storèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "storiáusias",
+    "storiáusi"
+   ],
+   "f": [
+    "storiáusia",
+    "storiáusios"
+   ]
+  }
+ },
+ "plonas": {
+  "compA": {
+   "m": [
+    "plonèsnis",
+    "plonesnì"
+   ],
+   "f": [
+    "plonèsnė",
+    "plonèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "ploniáusias",
+    "ploniáusi"
+   ],
+   "f": [
+    "ploniáusia",
+    "ploniáusios"
+   ]
+  }
+ },
+ "linksmas": {
+  "compA": {
+   "m": [
+    "linksmèsnis",
+    "linksmesnì"
+   ],
+   "f": [
+    "linksmèsnė",
+    "linksmèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "linksmiáusias",
+    "linksmiáusi"
+   ],
+   "f": [
+    "linksmiáusia",
+    "linksmiáusios"
+   ]
+  }
+ },
+ "pilkas": {
+  "compA": {
+   "m": [
+    "pilkèsnis",
+    "pilkesnì"
+   ],
+   "f": [
+    "pilkèsnė",
+    "pilkèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "pilkiáusias",
+    "pilkiáusi"
+   ],
+   "f": [
+    "pilkiáusia",
+    "pilkiáusios"
+   ]
+  }
+ },
+ "rudas": {
+  "compA": {
+   "m": [
+    "rudèsnis",
+    "rudesnì"
+   ],
+   "f": [
+    "rudèsnė",
+    "rudèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    null,
+    "rudžiáusi"
+   ],
+   "f": [
+    "rudžiáusia",
+    "rudžiáusios"
+   ]
+  }
+ },
+ "lengvas": {
+  "compA": {
+   "m": [
+    "lengvèsnis",
+    "lengvesnì"
+   ],
+   "f": [
+    "lengvèsnė",
+    "lengvèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "lengviáusias",
+    "lengviáusi"
+   ],
+   "f": [
+    "lengviáusia",
+    "lengviáusios"
+   ]
+  }
+ },
+ "siauras": {
+  "compA": {
+   "m": [
+    "siaurèsnis",
+    "siauresnì"
+   ],
+   "f": [
+    "siaurèsnė",
+    "siaurèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "siauriáusias",
+    "siauriáusi"
+   ],
+   "f": [
+    "siauriáusia",
+    "siauriáusios"
+   ]
+  }
+ },
+ "platus": {
+  "compA": {
+   "m": [
+    "platèsnis",
+    "platesnì"
+   ],
+   "f": [
+    "platèsnė",
+    "platèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "plačiáusias",
+    "plačiáusi"
+   ],
+   "f": [
+    "plačiáusia",
+    "plačiáusios"
+   ]
+  }
+ },
+ "aštrus": {
+  "compA": {
+   "m": [
+    "aštrèsnis",
+    "aštresnì"
+   ],
+   "f": [
+    "aštrèsnė",
+    "aštrèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "aštriáusias",
+    "aštriáusi"
+   ],
+   "f": [
+    "aštriáusia",
+    "aštriáusios"
+   ]
+  }
+ },
+ "svarbus": {
+  "compA": {
+   "m": [
+    "svarbèsnis",
+    "svarbesnì"
+   ],
+   "f": [
+    "svarbèsnė",
+    "svarbèsnės"
+   ]
+  },
+  "supA": {
+   "m": [
+    "svarbiáusias",
+    "svarbiáusi"
+   ],
+   "f": [
+    "svarbiáusia",
+    "svarbiáusios"
+   ]
+  }
+ }
+}

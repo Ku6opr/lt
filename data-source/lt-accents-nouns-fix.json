@@ -1,0 +1,398 @@
+{
+ "tortas": {
+  "sgA": [
+   "tòrtas",
+   "tòrto",
+   "tòrtui",
+   "tòrtą",
+   "tòrtu",
+   "tòrte"
+  ],
+  "plA": [
+   "tòrtai",
+   "tòrtų",
+   "tòrtams",
+   "tòrtus",
+   "tòrtais",
+   "tòrtuose"
+  ]
+ },
+ "šokoladas": {
+  "sgA": [
+   "šokolãdas",
+   "šokolãdo",
+   "šokolãdui",
+   "šokolãdą",
+   "šokoladù",
+   "šokoladè"
+  ],
+  "plA": [
+   "šokolãdai",
+   "šokolãdų",
+   "šokolãdams",
+   "šokoladùs",
+   "šokolãdais",
+   "šokolãduose"
+  ]
+ },
+ "alus": {
+  "sgA": [
+   "alùs",
+   "alaũs",
+   "ãlui",
+   "ãlų",
+   "alumì",
+   "alujè"
+  ],
+  "plA": [
+   "ãlūs",
+   "alų̃",
+   "alùms",
+   "alùs",
+   "alumìs",
+   "aluosè"
+  ]
+ },
+ "vynas": {
+  "sgA": [
+   "vỹnas",
+   "vỹno",
+   "vỹnui",
+   "vỹną",
+   "vynù",
+   "vynè"
+  ],
+  "plA": [
+   "vỹnai",
+   "vỹnų",
+   "vỹnams",
+   "vynùs",
+   "vỹnais",
+   "vỹnuose"
+  ]
+ },
+ "lėkštė": {
+  "sgA": [
+   "lėkštė̃",
+   "lėkštė̃s",
+   "lė̃kštei",
+   "lė̃kštę",
+   "lėkštè",
+   "lėkštėjè"
+  ],
+  "plA": [
+   "lė̃kštės",
+   "lėkščių̃",
+   "lėkštė́ms",
+   "lėkštès",
+   "lėkštėmìs",
+   "lėkštėsè"
+  ]
+ },
+ "svogūnas": {
+  "sgA": [
+   "svogū̃nas",
+   "svogū̃no",
+   "svogū̃nui",
+   "svogū̃ną",
+   "svogūnù",
+   "svogūnè"
+  ],
+  "plA": [
+   "svogū̃nai",
+   "svogū̃nų",
+   "svogū̃nams",
+   "svogūnùs",
+   "svogū̃nais",
+   "svogū̃nuose"
+  ]
+ },
+ "česnakas": {
+  "sgA": [
+   "česnãkas",
+   "česnãko",
+   "česnãkui",
+   "česnãką",
+   "česnakù",
+   "česnakè"
+  ],
+  "plA": [
+   "česnãkai",
+   "česnãkų",
+   "česnãkams",
+   "česnakùs",
+   "česnãkais",
+   "česnãkuose"
+  ]
+ },
+ "riešutas": {
+  "sgA": [
+   "ríešutas",
+   "ríešuto",
+   "ríešutui",
+   "ríešutą",
+   "ríešutu",
+   "riešutè"
+  ],
+  "plA": [
+   "riešutaĩ",
+   "riešutų̃",
+   "riešutáms",
+   "ríešutus",
+   "riešutaĩs",
+   "riešutuosè"
+  ]
+ },
+ "uoga": {
+  "sgA": [
+   "úoga",
+   "úogos",
+   "úogai",
+   "úogą",
+   "úoga",
+   "úogoje"
+  ],
+  "plA": [
+   "úogos",
+   "úogų",
+   "úogoms",
+   "úogas",
+   "úogomis",
+   "úogose"
+  ]
+ },
+ "grybas": {
+  "sgA": [
+   "grỹbas",
+   "grỹbo",
+   "grỹbui",
+   "grỹbą",
+   "grybù",
+   "grybè"
+  ],
+  "plA": [
+   "grỹbai",
+   "grỹbų",
+   "grỹbams",
+   "grybùs",
+   "grỹbais",
+   "grỹbuose"
+  ]
+ },
+ "bankas": {
+  "sgA": [
+   "bánkas",
+   "bánko",
+   "bánkui",
+   "bánką",
+   "bánku",
+   "bánke"
+  ],
+  "plA": [
+   "bánkai",
+   "bánkų",
+   "bánkams",
+   "bánkus",
+   "bánkais",
+   "bánkuose"
+  ]
+ },
+ "vonia": {
+  "sgA": [
+   "vonià",
+   "voniõs",
+   "võniai",
+   "võnią",
+   "vonià",
+   "voniojè"
+  ],
+  "plA": [
+   "võnios",
+   "vonių̃",
+   "vonióms",
+   "voniàs",
+   "voniomìs",
+   "voniosè"
+  ]
+ },
+ "krėslas": {
+  "sgA": [
+   "krė́slas",
+   "krė́slo",
+   "krė́slui",
+   "krė́slą",
+   "krė́slu",
+   "krėslè"
+  ],
+  "plA": [
+   "krėslaĩ",
+   "krėslų̃",
+   "krėsláms",
+   "krė́slus",
+   "krėslaĩs",
+   "krėsluosè"
+  ]
+ },
+ "sofa": {
+  "sgA": [
+   "sofà",
+   "sòfos",
+   "sòfai",
+   "sòfą",
+   "sofà",
+   "sòfoje"
+  ],
+  "plA": [
+   "sòfos",
+   "sòfų",
+   "sòfoms",
+   "sofàs",
+   "sòfomis",
+   "sòfose"
+  ]
+ },
+ "paveikslas": {
+  "sgA": [
+   "pavéikslas",
+   "pavéikslo",
+   "pavéikslui",
+   "pavéikslą",
+   "pavéikslu",
+   "pavéiksle"
+  ],
+  "plA": [
+   "pavéikslai",
+   "pavéikslų",
+   "pavéikslams",
+   "pavéikslus",
+   "pavéikslais",
+   "pavéiksluose"
+  ]
+ },
+ "drugelis": {
+  "sgA": [
+   "drugẽlis",
+   "drugẽlio",
+   "drugẽliui",
+   "drugẽlį",
+   "drugeliù",
+   "drugẽlyje"
+  ],
+  "plA": [
+   "drugẽliai",
+   "drugẽlių",
+   "drugẽliams",
+   "drugeliùs",
+   "drugẽliais",
+   "drugẽliuose"
+  ]
+ },
+ "bitė": {
+  "sgA": [
+   "bìtė",
+   "bìtės",
+   "bìtei",
+   "bìtę",
+   "bitè",
+   "bìtėje"
+  ],
+  "plA": [
+   "bìtės",
+   "bìčių",
+   "bìtėms",
+   "bitès",
+   "bìtėmis",
+   "bìtėse"
+  ]
+ },
+ "lapė": {
+  "sgA": [
+   "lãpė",
+   "lãpės",
+   "lãpei",
+   "lãpę",
+   "lapè",
+   "lãpėje"
+  ],
+  "plA": [
+   "lãpės",
+   "lãpių",
+   "lãpėms",
+   "lapès",
+   "lãpėmis",
+   "lãpėse"
+  ]
+ },
+ "meška": {
+  "sgA": [
+   "meškà",
+   "meškõs",
+   "mẽškai",
+   "mẽšką",
+   "meškà",
+   "meškojè"
+  ],
+  "plA": [
+   "mẽškos",
+   "meškų̃",
+   "meškóms",
+   "meškàs",
+   "meškomìs",
+   "meškosè"
+  ]
+ },
+ "vilkas": {
+  "sgA": [
+   "vil̃kas",
+   "vil̃ko",
+   "vil̃kui",
+   "vil̃ką",
+   "vilkù",
+   "vilkè"
+  ],
+  "plA": [
+   "vilkaĩ",
+   "vilkų̃",
+   "vilkáms",
+   "vilkùs",
+   "vilkaĩs",
+   "vilkuosè"
+  ]
+ },
+ "sala": {
+  "sgA": [
+   "salà",
+   "salõs",
+   "sãlai",
+   "sãlą",
+   "salà",
+   "salojè"
+  ],
+  "plA": [
+   "sãlos",
+   "salų̃",
+   "salóms",
+   "salàs",
+   "salomìs",
+   "salosè"
+  ]
+ },
+ "dviratis": {
+  "sgA": [
+   "dvìratis",
+   "dvìračio",
+   "dvìračiui",
+   "dvìratį",
+   "dvìračiu",
+   "dvìratyje"
+  ],
+  "plA": [
+   "dvìračiai",
+   "dvìračių",
+   "dvìračiams",
+   "dvìračius",
+   "dvìračiais",
+   "dvìračiuose"
+  ]
+ }
+}

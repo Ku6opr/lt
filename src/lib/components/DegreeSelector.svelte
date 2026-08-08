@@ -1,5 +1,5 @@
 <script>
-  import { PHRASE_TIERS } from '../data/levels.js';
+  import { DEG_TIERS } from '../engine/adjectives.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
 
@@ -13,7 +13,7 @@
 
   $: L = UI[$lang];
   $: s = $settings;
-  $: maxLevel = PHRASE_TIERS.length - 1;
+  $: maxLevel = DEG_TIERS.length - 1;
   const degLabel = (d) => (d === 'pos' ? L.degPos : d === 'comp' ? L.degComp : L.degSup);
 
   function setLevel(v) { settings.update((st) => ({ ...st, level: v })); onLevelChange(); }
@@ -25,7 +25,6 @@
 <div style="border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:clamp(16px,3cqw,26px);margin-bottom:var(--space-8)">
   <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:var(--space-4)">
     <h4 style="margin:0">{L.studyTitle}</h4>
-    <span class="text-muted" style="font-size:12px">{L.studyHint}</span>
   </div>
 
   <div style="display:flex;flex-direction:column;gap:var(--space-4)">

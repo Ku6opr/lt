@@ -8,6 +8,19 @@ const DEG = fs.existsSync('data-source/adj-degrees.json') ? JSON.parse(fs.readFi
 const ADV = fs.existsSync('data-source/adv-degrees.json') ? JSON.parse(fs.readFileSync('data-source/adv-degrees.json', 'utf8')) : {};
 const NO_ADV = new Set(['baltas', 'juodas', 'raudonas', 'geltonas', 'žalias', 'pilkas', 'rudas', 'mėlynas']);
 const ACC = fs.existsSync('data-source/lt-accents-adj.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-adj.json', 'utf8')) : {};
+const ACC_FIX = fs.existsSync('data-source/lt-accents-adj-fix.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-adj-fix.json', 'utf8')) : {};
+const DEGA = {};
+for (const p of ['data-source/lt-accents-deg-1.json', 'data-source/lt-accents-deg-2.json', 'data-source/lt-accents-deg-3.json']) {
+  if (fs.existsSync(p)) Object.assign(DEGA, JSON.parse(fs.readFileSync(p, 'utf8')));
+}
+const ADVA = fs.existsSync('data-source/lt-accents-adv.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-adv.json', 'utf8')) : {};
+const foldA = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const guard1 = (acc, base) => (acc && base && foldA(acc) === foldA(base) ? acc : null);
+const guardPair = (accArr, baseArr) => {
+  if (!accArr || !baseArr) return null;
+  const out = baseArr.map((b, i) => guard1(accArr[i], b));
+  return out.some(Boolean) ? out.map((v, i) => v || baseArr[i]) : null;
+};
 
 const META = {
   geras: { t: 'I', m: 'добрий', f: 'добра', n: 'добре' },
@@ -109,12 +122,30 @@ for (const a of fetched) {
       sup: supM.replace(/ausias$/, 'ausiai')
     };
     const at = ADV[a.lemma];
-    if (at && !NO_ADV.has(a.lemma)) Object.assign(w, { adv, advTr: { uk: at.uk, ru: at.ru, en: at.en } });
+    if (at && !NO_ADV.has(a.lemma)) {
+      Object.assign(w, { adv, advTr: { uk: at.uk, ru: at.ru, en: at.en } });
+      const av = ADVA[a.lemma];
+      if (av) {
+        const advA = { pos: guard1(av.posA, adv.pos), comp: guard1(av.compA, adv.comp), sup: guard1(av.supA, adv.sup) };
+        if (advA.pos || advA.comp || advA.sup) w.advA = advA;
+      }
+    }
+    const da = DEGA[a.lemma];
+    if (da) {
+      const compA = da.compA && { m: guardPair(da.compA.m, dg.comp.m), f: guardPair(da.compA.f, dg.comp.f) };
+      const supA = da.supA && { m: guardPair(da.supA.m, dg.sup.m), f: guardPair(da.supA.f, dg.sup.f) };
+      if (compA && (compA.m || compA.f)) w.compA = { m: compA.m || dg.comp.m, f: compA.f || dg.comp.f };
+      if (supA && (supA.m || supA.f)) w.supA = { m: supA.m || dg.sup.m, f: supA.f || dg.sup.f };
+    }
   }
-  const ac = ACC[a.lemma];
+  const ac = ACC_FIX[a.lemma] || ACC[a.lemma];
   if (ac && ac.mA && ac.mA.sg && ac.mA.sg.length === 6) {
-    w.mA = ac.mA;
-    w.fA = ac.fA;
+    const mA = { sg: guardPair(ac.mA.sg, a.m.sg), pl: guardPair(ac.mA.pl, a.m.pl) };
+    const fA = { sg: guardPair(ac.fA && ac.fA.sg, a.f.sg), pl: guardPair(ac.fA && ac.fA.pl, a.f.pl) };
+    if (mA.sg && fA.sg) {
+      w.mA = { sg: mA.sg, pl: mA.pl || a.m.pl };
+      w.fA = { sg: fA.sg, pl: fA.pl || a.f.pl };
+    }
   }
   adjs.push(w);
 }

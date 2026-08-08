@@ -90,6 +90,9 @@ function phraseTask(state, bank, prev) {
     number: 'sg',
     mode: 'phrase',
     prompt,
+    promptA: useUk ? null : (word.sgA || [])[0] || null,
+    leadA: null,
+    trailA: null,
     promptNote: null,
     hasNote: false,
     wordUk: null,
@@ -97,7 +100,6 @@ function phraseTask(state, bank, prev) {
     lead: p.lead,
     hint,
     revealUk,
-    stemPrefill: !useUk,
     stemPrefix: useUk ? '' : stem,
     stem,
     tail,
@@ -141,6 +143,7 @@ export function newTask(state, prev) {
   let mode = stop.prompt;
   if (mode === 'mix-otheruk') mode = rnd(['lt-othercase', 'uk']);
   if (mode === 'mix-all') mode = rnd(['lt-nom', 'lt-tonom', 'lt-othercase', 'uk']);
+  if (mode === 'lt-nom' && ec.length === 1 && ec[0].id === 'V') mode = 'lt-tonom';
 
   const caseBound = mode !== 'lt-tonom';
   let target;
@@ -148,7 +151,10 @@ export function newTask(state, prev) {
     target = CASES[0];
   } else {
     let casePool = ec.slice();
-    if (mode === 'lt-nom' && casePool.length > 1) casePool = casePool.filter((c) => c.id !== 'V');
+    if (mode === 'lt-nom' && casePool.length > 1) {
+      const a = casePool.filter((c) => c.id !== 'V' && type[number][idx(c.id)] !== type[number][0]);
+      if (a.length) casePool = a;
+    }
     if (prev && prev.caseId && casePool.length > 1) {
       const a = casePool.filter((c) => c.id !== prev.caseId);
       if (a.length) casePool = a;
@@ -160,20 +166,25 @@ export function newTask(state, prev) {
   const stem = stemOf(type, number);
   const tail = forms[ti].slice(stem.length);
 
-  let prompt, note = null, hasNote = false, promptCaseId = null;
+  const accArr = (number === 'pl' ? type.plA : type.sgA) || [];
+  let prompt, note = null, hasNote = false, promptCaseId = null, promptA = null;
   if (mode === 'lt-nom') {
     prompt = { stem, tail: forms[0].slice(stem.length) };
+    promptA = accArr[0] || null;
     promptCaseId = 'V';
   } else if (mode === 'lt-tonom') {
-    const si = 1 + Math.floor(Math.random() * 5);
+    const opts = [1, 2, 3, 4, 5].filter((k) => forms[k] !== forms[0]);
+    const si = opts.length ? rnd(opts) : 1;
     prompt = { stem, tail: forms[si].slice(stem.length) };
+    promptA = accArr[si] || null;
     note = U.noteGiven + ' ' + caseName(CASES[si].id) + ' → ' + U.noteMake + ' ' + caseName(target.id);
     hasNote = true;
     promptCaseId = CASES[si].id;
   } else if (mode === 'lt-othercase') {
-    let si = Math.floor(Math.random() * 5);
-    if (si >= ti) si++;
+    const opts = [0, 1, 2, 3, 4, 5].filter((k) => k !== ti && forms[k] !== forms[ti]);
+    let si = opts.length ? rnd(opts) : (ti === 0 ? 1 : 0);
     prompt = { stem, tail: forms[si].slice(stem.length) };
+    promptA = accArr[si] || null;
     note = U.noteGiven + ' ' + caseName(CASES[si].id) + ' → ' + U.noteMake + ' ' + caseName(target.id);
     hasNote = true;
     promptCaseId = CASES[si].id;
@@ -214,7 +225,6 @@ export function newTask(state, prev) {
   }
   const wordUk = promptCaseId ? gNoun(CASEKEY[promptCaseId]) : null;
 
-  const stemPrefill = mode !== 'uk';
   return {
     caseId: target.id,
     caseBound,
@@ -224,14 +234,16 @@ export function newTask(state, prev) {
     number,
     mode,
     prompt,
+    promptA,
+    leadA: null,
+    trailA: null,
     promptNote: note,
     hasNote,
     wordUk,
     hasLead: !!driver,
     lead: driver ? driver.lt : null,
     hint,
-    stemPrefill,
-    stemPrefix: stemPrefill ? stem : '',
+    stemPrefix: mode !== 'uk' ? stem : '',
     stem,
     tail,
     targetForm: forms[ti],

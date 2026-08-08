@@ -1,0 +1,278 @@
+{
+  "juodas": {
+    "compA": {
+      "m": [
+        "juodèsnis",
+        "juodesnì"
+      ],
+      "f": [
+        "juodèsnė",
+        "juodèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "juodžiáusias",
+        "juodžiáusi"
+      ],
+      "f": [
+        "juodžiáusia",
+        "juodžiáusios"
+      ]
+    }
+  },
+  "raudonas": {
+    "compA": {
+      "m": [
+        "raudonèsnis",
+        "raudonesnì"
+      ],
+      "f": [
+        "raudonèsnė",
+        "raudonèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "raudoniáusias",
+        "raudoniáusi"
+      ],
+      "f": [
+        "raudoniáusia",
+        "raudoniáusios"
+      ]
+    }
+  },
+  "geltonas": {
+    "compA": {
+      "m": [
+        "geltonèsnis",
+        "geltonesnì"
+      ],
+      "f": [
+        "geltonèsnė",
+        "geltonèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "geltoniáusias",
+        "geltoniáusi"
+      ],
+      "f": [
+        "geltoniáusia",
+        "geltoniáusios"
+      ]
+    }
+  },
+  "žalias": {
+    "supA": {
+      "m": [
+        "žaliáusias",
+        "žaliáusi"
+      ],
+      "f": [
+        "žaliáusia",
+        "žaliáusios"
+      ]
+    }
+  },
+  "gražus": {
+    "compA": {
+      "m": [
+        "gražèsnis",
+        "gražesnì"
+      ],
+      "f": [
+        "gražèsnė",
+        "gražèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "gražiáusias",
+        "gražiáusi"
+      ],
+      "f": [
+        "gražiáusia",
+        "gražiáusios"
+      ]
+    }
+  },
+  "brangus": {
+    "compA": {
+      "m": [
+        "brangèsnis",
+        "brangesnì"
+      ],
+      "f": [
+        "brangèsnė",
+        "brangèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "brangiáusias",
+        "brangiáusi"
+      ],
+      "f": [
+        "brangiáusia",
+        "brangiáusios"
+      ]
+    }
+  },
+  "pigus": {
+    "compA": {
+      "m": [
+        "pigèsnis",
+        "pigesnì"
+      ],
+      "f": [
+        "pigèsnė",
+        "pigèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "pigiáusias",
+        "pigiáusi"
+      ],
+      "f": [
+        "pigiáusia",
+        "pigiáusios"
+      ]
+    }
+  },
+  "sunkus": {
+    "compA": {
+      "m": [
+        "sunkèsnis",
+        "sunkesnì"
+      ],
+      "f": [
+        "sunkèsnė",
+        "sunkèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "sunkiáusias",
+        "sunkiáusi"
+      ],
+      "f": [
+        "sunkiáusia",
+        "sunkiáusios"
+      ]
+    }
+  },
+  "stiprus": {
+    "compA": {
+      "m": [
+        "stiprèsnis",
+        "stipresnì"
+      ],
+      "f": [
+        "stiprèsnė",
+        "stiprèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "stipriáusias",
+        "stipriáusi"
+      ],
+      "f": [
+        "stipriáusia",
+        "stipriáusios"
+      ]
+    }
+  },
+  "švarus": {
+    "compA": {
+      "m": [
+        "švarèsnis",
+        "švaresnì"
+      ],
+      "f": [
+        "švarèsnė",
+        "švarèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "švariáusias",
+        "švariáusi"
+      ],
+      "f": [
+        "švariáusia",
+        "švariáusios"
+      ]
+    }
+  },
+  "saldus": {
+    "compA": {
+      "m": [
+        "saldèsnis",
+        "saldesnì"
+      ],
+      "f": [
+        "saldèsnė",
+        "saldèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "saldžiáusias",
+        "saldžiáusi"
+      ],
+      "f": [
+        "saldžiáusia",
+        "saldžiáusios"
+      ]
+    }
+  },
+  "gilus": {
+    "compA": {
+      "m": [
+        "gilèsnis",
+        "gilesnì"
+      ],
+      "f": [
+        "gilèsnė",
+        "gilèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "giliáusias",
+        "giliáusi"
+      ],
+      "f": [
+        "giliáusia",
+        "giliáusios"
+      ]
+    }
+  },
+  "sausas": {
+    "compA": {
+      "m": [
+        "sausèsnis",
+        "sausesnì"
+      ],
+      "f": [
+        "sausèsnė",
+        "sausèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "sausiáusias",
+        "sausiáusi"
+      ],
+      "f": [
+        "sausiáusia",
+        "sausiáusios"
+      ]
+    }
+  }
+}

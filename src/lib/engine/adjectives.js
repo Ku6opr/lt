@@ -182,23 +182,26 @@ export function newAdjTask(state, prev) {
   if (!adj || !noun) return null;
   const gender = GENDER[noun.type];
   const nums = wants.filter((nn) => supports(noun, nn));
-  const number = nums.length ? rnd(nums) : (supports(noun, 'sg') ? 'sg' : 'pl');
+  let number = nums.length ? rnd(nums) : (supports(noun, 'sg') ? 'sg' : 'pl');
 
   let cpool = themed ? scope.slice() : scope.filter((c) => state.cases[c]);
   if (!cpool.length) cpool = scope.slice();
   if (prev && prev.caseId && cpool.length > 1) { const a = cpool.filter((c) => c !== prev.caseId); if (a.length) cpool = a; }
   const caseId = rnd(cpool);
 
+  const lang = state.lang || 'uk';
+  const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
+  const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
+  let useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
+  if (!useTr && caseId === 'V' && gender === 'm' && number === 'sg') {
+    if (nums.includes('pl')) number = 'pl'; else useTr = true;
+  }
+
   const ci = idx(caseId);
   const forms = adj[gender][number];
   const stem = boundedPrefix(forms);
   const tail = forms[ci].slice(stem.length);
   const nounForm = noun[number][ci];
-
-  const lang = state.lang || 'uk';
-  const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
-  const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
-  const useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
   const q = ADJ_Q[caseId][number][gender];
   const qLt = q[0];
   const qLoc = lang === 'en' ? '' : q[Q_IDX[lang]];
@@ -220,6 +223,9 @@ export function newAdjTask(state, prev) {
     number,
     gender,
     prompt,
+    promptA: useTr ? null : (adj.mA && adj.mA.sg || [])[0] || null,
+    leadA: null,
+    trailA: ((number === 'pl' ? noun.plA : noun.sgA) || [])[ci] || null,
     promptNote: null,
     hasNote: false,
     wordUk: null,
@@ -228,7 +234,6 @@ export function newAdjTask(state, prev) {
     trail: nounForm,
     hint,
     revealUk,
-    stemPrefill: !useTr,
     stemPrefix: useTr ? '' : stem,
     stem,
     tail,
@@ -238,6 +243,12 @@ export function newAdjTask(state, prev) {
 }
 
 // ── Прислівники та їх ступені (звичайний/вищий/найвищий) ──
+export const DEG_TIERS = [
+  { prompt: 'lt', hint: 'full' },
+  { prompt: 'lt', hint: null },
+  { prompt: 'uk', hint: null },
+  { prompt: 'mix', hint: null }
+];
 const ADV_LIST = ADJECTIVES.filter((a) => a.adv);
 const ADV_POS = { uk: 'прислівник', ru: 'наречие', en: 'adverb' };
 
@@ -264,7 +275,7 @@ export function newAdverbTask(state, prev) {
   const stem = boundedPrefix([adj.adv.pos, adj.adv.comp, adj.adv.sup]);
   const tail = target.slice(stem.length);
   const tr = adj.advTr[transKey][degree];
-  const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
+  const tier = DEG_TIERS[Math.min(state.level, DEG_TIERS.length - 1)];
   const useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
 
   return {
@@ -277,19 +288,22 @@ export function newAdverbTask(state, prev) {
     number: 'sg',
     theme: 'all',
     prompt: useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] },
+    promptA: useTr ? null : (adj.mA && adj.mA.sg || [])[0] || null,
+    leadA: null,
+    trailA: null,
     promptNote: degree === 'pos' ? ADV_POS[lang] : DEG_LABEL[degree][lang],
     hasNote: true,
     wordUk: null,
     hasLead: false,
     lead: null,
     trail: null,
-    hint: tier.hint === 'fullq' ? tr : null,
-    revealUk: tier.hint === 'fullq' ? null : tr,
-    stemPrefill: !useTr,
+    hint: tier.hint === 'full' ? tr : null,
+    revealUk: tier.hint === 'full' ? null : tr,
     stemPrefix: useTr ? '' : stem,
     stem,
     tail,
-    targetForm: target
+    targetForm: target,
+    targetFormA: (adj.advA && adj.advA[degree]) || null
   };
 }
 
@@ -358,13 +372,13 @@ export function newDegreeTask(state, prev) {
 
   const forms = adj[degree][gender];
   const target = forms[number === 'pl' ? 1 : 0];
-  const stem = boundedPrefix(forms);
+  const stem = boundedPrefix([adj[gender].sg[0], ...forms]);
   const tail = target.slice(stem.length);
   const nounForm = noun[number][0];
 
   const lang = state.lang || 'uk';
   const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
-  const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
+  const tier = DEG_TIERS[Math.min(state.level, DEG_TIERS.length - 1)];
   const useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
   const phrase = degreePhrase(lang, adj, noun, number, degree);
   const prompt = useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] };
@@ -379,18 +393,21 @@ export function newDegreeTask(state, prev) {
     number,
     gender,
     prompt,
+    promptA: useTr ? null : (adj.mA && adj.mA.sg || [])[0] || null,
+    leadA: null,
+    trailA: ((number === 'pl' ? noun.plA : noun.sgA) || [])[0] || null,
     promptNote: DEG_LABEL[degree][lang],
     hasNote: true,
     wordUk: null,
     hasLead: false,
     lead: null,
     trail: nounForm,
-    hint: tier.hint === 'fullq' ? phrase : null,
-    revealUk: tier.hint === 'fullq' ? null : phrase,
-    stemPrefill: !useTr,
+    hint: tier.hint === 'full' ? phrase : null,
+    revealUk: tier.hint === 'full' ? null : phrase,
     stemPrefix: useTr ? '' : stem,
     stem,
     tail,
-    targetForm: target
+    targetForm: target,
+    targetFormA: (adj[degree + 'A'] && adj[degree + 'A'][gender] || [])[number === 'pl' ? 1 : 0] || null
   };
 }

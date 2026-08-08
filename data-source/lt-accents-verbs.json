@@ -1,0 +1,128 @@
+{
+  "buti": {
+    "sg1A": "esù",
+    "sg2A": "esì",
+    "p3A": "yrà",
+    "pl1A": "ẽsame",
+    "pl2A": "ẽsate"
+  },
+  "tureti": {
+    "sg1A": "turiù",
+    "sg2A": "turì",
+    "p3A": "tùri",
+    "pl1A": "tùrime",
+    "pl2A": "tùrite"
+  },
+  "noreti": {
+    "sg1A": "nóriu",
+    "sg2A": "nóri",
+    "p3A": "nóri",
+    "pl1A": "nórime",
+    "pl2A": "nórite"
+  },
+  "galeti": {
+    "sg1A": "galiù",
+    "sg2A": "galì",
+    "p3A": "gãli",
+    "pl1A": "gãlime",
+    "pl2A": "gãlite"
+  },
+  "eiti": {
+    "sg1A": "einù",
+    "sg2A": "einì",
+    "p3A": "eĩna",
+    "pl1A": "eĩname",
+    "pl2A": "eĩnate"
+  },
+  "daryti": {
+    "sg1A": "daraũ",
+    "sg2A": "daraĩ",
+    "p3A": "dãro",
+    "pl1A": "dãrome",
+    "pl2A": "dãrote"
+  },
+  "zinoti": {
+    "sg1A": "žinaũ",
+    "sg2A": "žinaĩ",
+    "p3A": "žìno",
+    "pl1A": "žìnome",
+    "pl2A": "žìnote"
+  },
+  "matyti": {
+    "sg1A": "mataũ",
+    "sg2A": "mataĩ",
+    "p3A": "mãto",
+    "pl1A": "mãtome",
+    "pl2A": "mãtote"
+  },
+  "kalbeti": {
+    "sg1A": "kalbù",
+    "sg2A": "kalbì",
+    "p3A": "kal̃ba",
+    "pl1A": "kal̃bame",
+    "pl2A": "kal̃bate"
+  },
+  "gyventi": {
+    "sg1A": "gyvenù",
+    "sg2A": "gyvenì",
+    "p3A": "gyvẽna",
+    "pl1A": "gyvẽname",
+    "pl2A": "gyvẽnate"
+  },
+  "dirbti": {
+    "sg1A": "dìrbu",
+    "sg2A": "dìrbi",
+    "p3A": "dìrba",
+    "pl1A": "dìrbame",
+    "pl2A": "dìrbate"
+  },
+  "skaityti": {
+    "sg1A": "skaitaũ",
+    "sg2A": "skaitaĩ",
+    "p3A": "skaĩto",
+    "pl1A": "skaĩtome",
+    "pl2A": "skaĩtote"
+  },
+  "rasyti": {
+    "sg1A": "rašaũ",
+    "sg2A": "rašaĩ",
+    "p3A": "rãšo",
+    "pl1A": "rãšome",
+    "pl2A": "rãšote"
+  },
+  "valgyti": {
+    "sg1A": "válgau",
+    "sg2A": "válgai",
+    "p3A": "válgo",
+    "pl1A": "válgome",
+    "pl2A": "válgote"
+  },
+  "gerti": {
+    "sg1A": "geriù",
+    "sg2A": "gerì",
+    "p3A": "gẽria",
+    "pl1A": "gẽriame",
+    "pl2A": "gẽriate"
+  },
+  "myleti": {
+    "sg1A": "mýliu",
+    "sg2A": "mýli",
+    "p3A": "mýli",
+    "pl1A": "mýlime",
+    "pl2A": "mýlite"
+  },
+  "suprasti": {
+    "sg1A": "suprantù",
+    "sg2A": "suprantì",
+    "p3A": "suprañta",
+    "pl1A": "suprañtame",
+    "pl2A": "suprañtate"
+  },
+  "moketi": {
+    "sg1A": "móku",
+    "sg2A": "móki",
+    "p3A": "móka",
+    "pl1A": "mókame",
+    "pl2A": "mókate"
+  }
+}

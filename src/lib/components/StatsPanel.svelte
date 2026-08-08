@@ -17,10 +17,7 @@
   const isConj = topic.kind === 'conj';
   const ALL_CASES = ['V', 'K', 'N', 'G', 'In', 'Vt'];
   const cols = isConj ? PERSON_COLS : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
-  const colLabel = (c) => (isConj ? PERSON_LABEL[c] : isAdverb ? (c === 'pos' ? 'зв.' : c === 'comp' ? 'вищ' : 'найв') : isDeg ? (c === 'comp' ? 'вищ' : 'найвищ') : c);
-  const ADJ_ROWS = [
-    { t: 'I', ex: 'geras' }, { t: 'II', ex: 'gražus' }, { t: 'III', ex: 'naminis' }
-  ];
+  const ADJ_ROWS = [{ t: 'I' }, { t: 'II' }, { t: 'III' }];
   const nounName = {};
   for (const w of WORDS) nounName[w.id] = w;
   const adjName = {};
@@ -30,6 +27,7 @@
 
   let viewNum = 'sg';
   $: L = UI[$lang];
+  $: colLabel = (c) => (isConj ? PERSON_LABEL[c] : isAdverb || isDeg ? L[c === 'pos' ? 'degPos' : c === 'comp' ? 'degComp' : 'degSup'] : c);
   $: data = ($progress[topic.id] && $progress[topic.id].forms) || {};
 
   const cellKey = (type, gender, c, vn) => (isAdj ? `tc|${type}|${gender}|${c}|${vn}` : `tc|${type}|${c}|${vn}`);
@@ -55,7 +53,7 @@
   function buildRows(d, vn) {
     const g = (k) => d[k] || null;
     if (isAdverb) {
-      return [{ t: 'I', ex: 'geras' }, { t: 'II', ex: 'gražus' }, { t: 'III', ex: 'didelis' }].map((r) => ({
+      return ADJ_ROWS.map((r) => ({
         label: r.t,
         cells: cols.map((c) => ({ m: mastery(g(`tc|${r.t}|-|${c}|sg`)) }))
       }));
@@ -74,7 +72,7 @@
     }
     return isAdj
       ? ADJ_ROWS.flatMap((t) => ['m', 'f'].map((gd) => ({
-          label: t.t + ' ' + (gd === 'm' ? 'ч' : 'ж'),
+          label: t.t + ' ' + (gd === 'm' ? L.genderMAb : L.genderFAb),
           cells: cols.map((c) => ({ m: mastery(g(cellKey(t.t, gd, c, vn))) }))
         })))
       : DECLENSIONS.map((t) => ({
@@ -102,8 +100,14 @@
   $: totals = buildTotals(data);
   $: weakWords = buildWeak(data);
 
+  const pronName = {};
+  for (const p of PRONOUNS) pronName[p.id] = p;
   const glossKey = $lang === 'ru' ? 'ru' : $lang === 'en' ? 'en' : 'uk';
-  const tr = (id) => { const src = isConj ? verbName : isAdj ? adjName : nounName; return (src[id] && src[id][glossKey]) || id; };
+  const tr = (id) => {
+    if (isPron) return (pronName[id] && pronName[id][glossKey][0]) || id;
+    const src = isConj ? verbName : isAdj ? adjName : nounName;
+    return (src[id] && src[id][glossKey]) || id;
+  };
 
   function reset() { progress.update((all) => { delete all[topic.id]; return all; }); }
 </script>
@@ -114,7 +118,7 @@
       <b>{totals.graded}</b> {L.answered} · {L.accuracy} <b>{Math.round(totals.acc * 100)}%</b> · {L.coverage} <b>{totals.forms}</b>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
-      {#if !isConj && !isPron}
+      {#if !isConj && !isPron && !isAdverb}
       <div class="seg">
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'sg'} on:change={() => (viewNum = 'sg')}>{L.numSg}</label>
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'pl'} on:change={() => (viewNum = 'pl')}>{L.numPl}</label>

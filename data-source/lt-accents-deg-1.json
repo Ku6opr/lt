@@ -1,0 +1,310 @@
+{
+  "geras": {
+    "compA": {
+      "m": [
+        "gerèsnis",
+        "geresnì"
+      ],
+      "f": [
+        "gerèsnė",
+        "gerèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "geriáusias",
+        "geriáusi"
+      ],
+      "f": [
+        "geriáusia",
+        "geriáusios"
+      ]
+    }
+  },
+  "blogas": {
+    "compA": {
+      "m": [
+        "blogèsnis",
+        "blogesnì"
+      ],
+      "f": [
+        "blogèsnė",
+        "blogèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "blogiáusias",
+        "blogiáusi"
+      ],
+      "f": [
+        "blogiáusia",
+        "blogiáusios"
+      ]
+    }
+  },
+  "mažas": {
+    "compA": {
+      "m": [
+        "mažèsnis",
+        "mažesnì"
+      ],
+      "f": [
+        "mažèsnė",
+        "mažèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "mažiáusias",
+        "mažiáusi"
+      ],
+      "f": [
+        "mažiáusia",
+        "mažiáusios"
+      ]
+    }
+  },
+  "naujas": {
+    "compA": {
+      "m": [
+        "naujèsnis",
+        "naujesnì"
+      ],
+      "f": [
+        "naujèsnė",
+        "naujèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "naujáusias",
+        "naujáusi"
+      ],
+      "f": [
+        "naujáusia",
+        "naujáusios"
+      ]
+    }
+  },
+  "senas": {
+    "compA": {
+      "m": [
+        "senèsnis",
+        "senesnì"
+      ],
+      "f": [
+        "senèsnė",
+        "senèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "seniáusias",
+        "seniáusi"
+      ],
+      "f": [
+        "seniáusia",
+        "seniáusios"
+      ]
+    }
+  },
+  "jaunas": {
+    "compA": {
+      "m": [
+        "jaunèsnis",
+        "jaunesnì"
+      ],
+      "f": [
+        "jaunèsnė",
+        "jaunèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "jauniáusias",
+        "jauniáusi"
+      ],
+      "f": [
+        "jauniáusia",
+        "jauniáusios"
+      ]
+    }
+  },
+  "ilgas": {
+    "compA": {
+      "m": [
+        "ilgèsnis",
+        "ilgesnì"
+      ],
+      "f": [
+        "ilgèsnė",
+        "ilgèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "ilgiáusias",
+        "ilgiáusi"
+      ],
+      "f": [
+        "ilgiáusia",
+        "ilgiáusios"
+      ]
+    }
+  },
+  "trumpas": {
+    "compA": {
+      "m": [
+        "trumpèsnis",
+        "trumpesnì"
+      ],
+      "f": [
+        "trumpèsnė",
+        "trumpèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "trumpiáusias",
+        "trumpiáusi"
+      ],
+      "f": [
+        "trumpiáusia",
+        "trumpiáusios"
+      ]
+    }
+  },
+  "aukštas": {
+    "compA": {
+      "m": [
+        "aukštèsnis",
+        "aukštesnì"
+      ],
+      "f": [
+        "aukštèsnė",
+        "aukštèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "aukščiáusias",
+        "aukščiáusi"
+      ],
+      "f": [
+        "aukščiáusia",
+        "aukščiáusios"
+      ]
+    }
+  },
+  "žemas": {
+    "compA": {
+      "m": [
+        "žemèsnis",
+        "žemesnì"
+      ],
+      "f": [
+        "žemèsnė",
+        "žemèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "žemiáusias",
+        "žemiáusi"
+      ],
+      "f": [
+        "žemiáusia",
+        "žemiáusios"
+      ]
+    }
+  },
+  "greitas": {
+    "compA": {
+      "m": [
+        "greitèsnis",
+        "greitesnì"
+      ],
+      "f": [
+        "greitèsnė",
+        "greitèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "greičiáusias",
+        "greičiáusi"
+      ],
+      "f": [
+        "greičiáusia",
+        "greičiáusios"
+      ]
+    }
+  },
+  "šiltas": {
+    "compA": {
+      "m": [
+        "šiltèsnis",
+        "šiltesnì"
+      ],
+      "f": [
+        "šiltèsnė",
+        "šiltèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "šilčiáusias",
+        "šilčiáusi"
+      ],
+      "f": [
+        "šilčiáusia",
+        "šilčiáusios"
+      ]
+    }
+  },
+  "šaltas": {
+    "compA": {
+      "m": [
+        "šaltèsnis",
+        "šaltesnì"
+      ],
+      "f": [
+        "šaltèsnė",
+        "šaltèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "šalčiáusias",
+        "šalčiáusi"
+      ],
+      "f": [
+        "šalčiáusia",
+        "šalčiáusios"
+      ]
+    }
+  },
+  "baltas": {
+    "compA": {
+      "m": [
+        "baltèsnis",
+        "baltesnì"
+      ],
+      "f": [
+        "baltèsnė",
+        "baltèsnės"
+      ]
+    },
+    "supA": {
+      "m": [
+        "balčiáusias",
+        "balčiáusi"
+      ],
+      "f": [
+        "balčiáusia",
+        "balčiáusios"
+      ]
+    }
+  }
+}

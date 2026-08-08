@@ -86,3 +86,25 @@ export const SRC_PRON = {
 
 export const PERSON_COLS = ['sg1', 'sg2', 'p3', 'pl1', 'pl2'];
 export const PERSON_LABEL = { sg1: 'aš', sg2: 'tu', p3: 'jis, ji', pl1: 'mes', pl2: 'jūs' };
+
+const _A = {
+  buti: { sg1: 'esù', sg2: 'esì', p3: 'yrà', pl1: 'ẽsame', pl2: 'ẽsate' },
+  tureti: { sg1: 'turiù', sg2: 'turì', p3: 'tùri', pl1: 'tùrime', pl2: 'tùrite' },
+  noreti: { sg1: 'nóriu', sg2: 'nóri', p3: 'nóri', pl1: 'nórime', pl2: 'nórite' },
+  galeti: { sg1: 'galiù', sg2: 'galì', p3: 'gãli', pl1: 'gãlime', pl2: 'gãlite' },
+  eiti: { sg1: 'einù', sg2: 'einì', p3: 'eĩna', pl1: 'eĩname', pl2: 'eĩnate' },
+  daryti: { sg1: 'daraũ', sg2: 'daraĩ', p3: 'dãro', pl1: 'dãrome', pl2: 'dãrote' },
+  zinoti: { sg1: 'žinaũ', sg2: 'žinaĩ', p3: 'žìno', pl1: 'žìnome', pl2: 'žìnote' },
+  matyti: { sg1: 'mataũ', sg2: 'mataĩ', p3: 'mãto', pl1: 'mãtome', pl2: 'mãtote' },
+  kalbeti: { sg1: 'kalbù', sg2: 'kalbì', p3: 'kal̃ba', pl1: 'kal̃bame', pl2: 'kal̃bate' },
+  gyventi: { sg1: 'gyvenù', sg2: 'gyvenì', p3: 'gyvẽna', pl1: 'gyvẽname', pl2: 'gyvẽnate' },
+  dirbti: { sg1: 'dìrbu', sg2: 'dìrbi', p3: 'dìrba', pl1: 'dìrbame', pl2: 'dìrbate' },
+  skaityti: { sg1: 'skaitaũ', sg2: 'skaitaĩ', p3: 'skaĩto', pl1: 'skaĩtome', pl2: 'skaĩtote' },
+  rasyti: { sg1: 'rašaũ', sg2: 'rašaĩ', p3: 'rãšo', pl1: 'rãšome', pl2: 'rãšote' },
+  valgyti: { sg1: 'válgau', sg2: 'válgai', p3: 'válgo', pl1: 'válgome', pl2: 'válgote' },
+  gerti: { sg1: 'geriù', sg2: 'gerì', p3: 'gẽria', pl1: 'gẽriame', pl2: 'gẽriate' },
+  myleti: { sg1: 'mýliu', sg2: 'mýli', p3: 'mýli', pl1: 'mýlime', pl2: 'mýlite' },
+  suprasti: { sg1: 'suprantù', sg2: 'suprantì', p3: 'suprañta', pl1: 'suprañtame', pl2: 'suprañtate' },
+  moketi: { sg1: 'móku', sg2: 'móki', p3: 'móka', pl1: 'mókame', pl2: 'mókate' }
+};
+for (const v of VERBS) v.fA = _A[v.id];

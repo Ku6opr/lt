@@ -72,7 +72,7 @@
   $: if ($lang !== lastLang) { lastLang = $lang; if (task) makeNewTask(); }
 
   function makeNewTask() {
-    const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver } : null;
+    const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver, pronId: task.pronId } : null;
     const state = stateOf($settings);
     const typeKeys = Object.keys(state.types || {}).filter((k) => state.types[k]);
     const cands = [];
@@ -215,7 +215,7 @@
   </div>
 
   {#if isConj}
-    <ConjSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+    <ConjSelector {settings} onLevelChange={makeNewTask} />
   {:else if isPron}
     <PronounSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
   {:else if isAdverb}

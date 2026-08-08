@@ -24,8 +24,6 @@ export const adjDegreesTopic = {
   n: 4,
   accent: 'violet',
   glyph: 'esnis',
-  scopeCases: ['V'],
-  cheatCases: ['V'],
   title: { uk: 'Прикметники: ступені', ru: 'Прилагательные: степени', en: 'Adjectives: degrees' },
   subtitle: {
     uk: 'Вищий і найвищий ступінь порівняння. Тільки називний, однина і множина.',
@@ -41,7 +39,7 @@ export const adverbsTopic = {
   mode: 'adverbs',
   n: 7,
   accent: 'violet',
-  glyph: 'greitai',
+  glyph: 'gerai',
   title: { uk: 'Прислівники', ru: 'Наречия', en: 'Adverbs' },
   subtitle: {
     uk: 'Прислівники та ступені порівняння: gerai → geriau → geriausiai.',

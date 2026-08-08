@@ -1,4 +1,8 @@
 import { VERBS, PRON_PERSON, SRC_PRON } from '../data/verbsConj.js';
+import { PRONOUNS } from '../data/pronouns.js';
+
+const PRON_A = {};
+for (const p of PRONOUNS) PRON_A[p.id] = (p.ltA || [])[0] || null;
 
 const rnd = (a) => a[Math.floor(Math.random() * a.length)];
 
@@ -25,8 +29,8 @@ export function newConjTask(state, prev) {
   if (prev && prev.wordId && vpool.length > 1) { const a = vpool.filter((v) => v.id !== prev.wordId); if (a.length) vpool = a; }
   const verb = rnd(vpool);
 
-  // на рівні з показом 3-ї особи не питаємо 3-тю особу (інакше відповідь = показаному слову)
-  let ppool = tier.cue === 'p3' ? PRON_PERSON.filter((p) => p.slot !== 'p3') : PRON_PERSON.slice();
+  // на рівні з показом 3-ї особи не питаємо особу з тією САМОЮ формою (у II дієвідміні sg2 = p3: tu myli / jis myli)
+  let ppool = tier.cue === 'p3' ? PRON_PERSON.filter((p) => verb.f[p.slot] !== verb.f.p3) : PRON_PERSON.slice();
   if (prev && prev.pronId && ppool.length > 1) { const a = ppool.filter((p) => p.id !== prev.pronId); if (a.length) ppool = a; }
   const pron = rnd(ppool);
 
@@ -46,6 +50,9 @@ export function newConjTask(state, prev) {
     number: pron.num,
     theme: 'all',
     prompt: { text: headword },
+    promptA: tier.cue === 'p3' ? (verb.fA && verb.fA.p3) || null : null,
+    leadA: PRON_A[pron.id] || null,
+    trailA: null,
     promptNote: note,
     hasNote: !!note,
     wordUk: null,
@@ -54,11 +61,10 @@ export function newConjTask(state, prev) {
     trail: null,
     hint: null,
     revealUk: tier.cue === 'gloss' ? null : phrase,
-    stemPrefill: false,
     stemPrefix: '',
     stem: targetForm,
     tail: '',
     targetForm,
-    targetFormA: null
+    targetFormA: (verb.fA && verb.fA[pron.slot]) || null
   };
 }

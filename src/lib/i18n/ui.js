@@ -24,11 +24,9 @@ export const UI = {
     next: 'Далі →',
     correctForm: 'Правильна форма',
     emptyAdj: 'Оберіть нижче хоча б один відмінок, один тип відмінювання та число.',
-    emptyNoun: 'Оберіть нижче хоча б один відмінок, один тип відмінювання та число.',
     noteGiven: 'дано', noteMake: 'зроби', noteTranslate: 'переклади й провідміняй',
 
     studyTitle: 'Що вивчаємо',
-    studyHint: 'задає, що випадає у завданнях',
     difficulty: 'Складність',
     easy: 'просто',
     hard: 'складно',
@@ -43,10 +41,13 @@ export const UI = {
 
     genderM: 'Чоловічий',
     genderF: 'Жіночий',
+    genderMAb: 'ч', genderFAb: 'ж',
     genderBoth: 'Обидва',
     mascRow: 'Чоловічий рід',
     femRow: 'Жіночий рід',
     caseCol: 'Відмінок',
+    pronounCol: 'Займенник',
+    matchedYours: 'Збіглося з вашим варіантом',
 
     numSg: 'Однина',
     numPl: 'Множина',
@@ -83,11 +84,9 @@ export const UI = {
     next: 'Дальше →',
     correctForm: 'Правильная форма',
     emptyAdj: 'Выберите ниже хотя бы один падеж, один тип склонения и число.',
-    emptyNoun: 'Выберите ниже хотя бы один падеж, один тип склонения и число.',
     noteGiven: 'дано', noteMake: 'сделай', noteTranslate: 'переведи и просклоняй',
 
     studyTitle: 'Что изучаем',
-    studyHint: 'задаёт, что выпадает в заданиях',
     difficulty: 'Сложность',
     easy: 'просто',
     hard: 'сложно',
@@ -102,10 +101,13 @@ export const UI = {
 
     genderM: 'Мужской',
     genderF: 'Женский',
+    genderMAb: 'м', genderFAb: 'ж',
     genderBoth: 'Оба',
     mascRow: 'Мужской род',
     femRow: 'Женский род',
     caseCol: 'Падеж',
+    pronounCol: 'Местоимение',
+    matchedYours: 'Совпало с вашим вариантом',
 
     numSg: 'Единственное',
     numPl: 'Множественное',
@@ -142,11 +144,9 @@ export const UI = {
     next: 'Next →',
     correctForm: 'Correct form',
     emptyAdj: 'Select at least one case, one declension type and a number below.',
-    emptyNoun: 'Select at least one case, one declension type and a number below.',
     noteGiven: 'given', noteMake: 'make', noteTranslate: 'translate and decline',
 
     studyTitle: 'What to study',
-    studyHint: 'controls what appears in tasks',
     difficulty: 'Difficulty',
     easy: 'easy',
     hard: 'hard',
@@ -161,10 +161,13 @@ export const UI = {
 
     genderM: 'Masculine',
     genderF: 'Feminine',
+    genderMAb: 'm', genderFAb: 'f',
     genderBoth: 'Both',
     mascRow: 'Masculine',
     femRow: 'Feminine',
     caseCol: 'Case',
+    pronounCol: 'Pronoun',
+    matchedYours: 'Matches your answer',
 
     numSg: 'Singular',
     numPl: 'Plural',

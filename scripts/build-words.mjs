@@ -481,6 +481,12 @@ const VALID_TYPES = new Set(['as', 'is_b', 'is_m', 'ys', 'us', 'ius', 'uo_m', 'a
 const RU_EN = JSON.parse(fs.readFileSync('data-source/ru-en-nouns.json', 'utf8'));
 const RU_UK_PL = fs.existsSync('data-source/ru-uk-plural.json') ? JSON.parse(fs.readFileSync('data-source/ru-uk-plural.json', 'utf8')) : {};
 const ACC = fs.existsSync('data-source/lt-accents-nouns.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-nouns.json', 'utf8')) : {};
+const ACC_FIX = fs.existsSync('data-source/lt-accents-nouns-fix.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-nouns-fix.json', 'utf8')) : {};
+const foldA = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const guardA = (accArr, baseArr) => {
+  if (!accArr || !baseArr || accArr.length !== baseArr.length) return null;
+  return accArr.map((f, i) => (foldA(f) === foldA(baseArr[i]) ? f : baseArr[i]));
+};
 const plForms = (arr) => (arr && arr.length === 5 ? { gen: arr[0], dat: arr[1], acc: arr[2], ins: arr[3], loc: arr[4] } : null);
 
 const source = [...fetched, ...EXTRA].filter((w) => !DROP.has(w.lemma));
@@ -517,10 +523,11 @@ for (const w of source) {
   };
   if (ruPlForms) word.ruPlForms = ruPlForms;
   if (ukPlForms) word.ukPlForms = ukPlForms;
-  const ac = ACC[w.lemma];
-  if (ac && ac.sgA && ac.sgA.length === 6) {
-    word.sgA = ac.sgA;
-    if (pl.length === 6 && ac.plA && ac.plA.length === 6) word.plA = ac.plA;
+  const ac = { ...(ACC[w.lemma] || {}), ...(ACC_FIX[w.lemma] || {}) };
+  const sgA = guardA(ac.sgA, w.sg);
+  if (sgA) {
+    word.sgA = sgA;
+    if (pl.length === 6) { const plA = guardA(ac.plA, pl); if (plA) word.plA = plA; }
   }
   words.push(word);
   if (m.flag) flagged.push(w.lemma);
