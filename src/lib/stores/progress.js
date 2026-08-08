@@ -11,6 +11,13 @@ export function fold(s) {
 // Ключі-виміри однієї задачі. cell = парадигмова клітинка (тип×відмінок×число) = закінчення;
 // form = конкретне слово; dims = окремі осі для агрегації/дашборду.
 export function keysFor(t, isAdj) {
+  if (t.vforms) {
+    return {
+      form: `w|${t.wordId}|${t.formTarget}`,
+      cell: `tc|${t.formTarget}`,
+      dims: [`vf|${t.formTarget}`]
+    };
+  }
   if (t.conj) {
     return {
       form: `w|${t.wordId}|${t.person}`,

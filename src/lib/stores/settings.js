@@ -23,6 +23,15 @@ function persisted(key, defaults) {
   return store;
 }
 
+const vformsSettings = persisted('lt-trainer-verb-forms-v1', {
+  level: 0,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
 const conjSettings = persisted('lt-trainer-conj-v1', {
   level: 0,
   cases: {},
@@ -102,7 +111,7 @@ const pronounSettings = persisted('lt-trainer-pronouns-v1', {
   tableOpen: true
 });
 
-const byTopic = { conj: conjSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
+const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
 
 export function settingsFor(topicId) {
   return byTopic[topicId] || nounSettings;

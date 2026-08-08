@@ -8,6 +8,7 @@
   import { newAdjTask, adjPoolOk, newDegreeTask, degreePoolOk, newAdverbTask, adverbPoolOk } from '../engine/adjectives.js';
   import { newPronounTask, pronounPoolOk } from '../engine/pronouns.js';
   import { newConjTask, conjPoolOk } from '../engine/conjugation.js';
+  import { newVFormsTask, vformsPoolOk } from '../engine/verbForms.js';
   import CheatTable from './CheatTable.svelte';
   import CheatStack from './CheatStack.svelte';
   import AdjCheatTable from './AdjCheatTable.svelte';
@@ -22,6 +23,7 @@
   import PronounCheat from './PronounCheat.svelte';
   import ConjSelector from './ConjSelector.svelte';
   import ConjCheat from './ConjCheat.svelte';
+  import VFormsSelector from './VFormsSelector.svelte';
   import StatsPanel from './StatsPanel.svelte';
 
   export let topic;
@@ -32,9 +34,10 @@
   const isAdverb = topic.mode === 'adverbs';
   const isPron = topic.kind === 'pron';
   const isConj = topic.kind === 'conj';
+  const isVF = topic.kind === 'vforms';
   const settings = settingsFor(topic.id);
-  const genTask = isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
-  const genOk = isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
+  const genTask = isVF ? newVFormsTask : isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
+  const genOk = isVF ? vformsPoolOk : isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
   const selectorCases = isAdj ? topic.scopeCases : null;
   const cheatCases = isAdj ? topic.cheatCases : null;
   const fixedFilters = isAdj && topic.fixedFilters;
@@ -72,7 +75,7 @@
   $: if ($lang !== lastLang) { lastLang = $lang; if (task) makeNewTask(); }
 
   function makeNewTask() {
-    const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver, pronId: task.pronId } : null;
+    const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver, pronId: task.pronId, formTarget: task.formTarget } : null;
     const state = stateOf($settings);
     const typeKeys = Object.keys(state.types || {}).filter((k) => state.types[k]);
     const cands = [];
@@ -96,7 +99,7 @@
     const st = $settings, t = task;
     if (!t) { makeNewTask(); return; }
     let invalid;
-    if (isConj) {
+    if (isConj || isVF) {
       invalid = false;
     } else if (isAdverb) {
       invalid = !st.degrees[t.degree] || (st.types && !st.types[t.adjType]);
@@ -173,13 +176,14 @@
 
   <TaskCard {task} {revealed} {userInput} {correctMark} onInput={(e) => (userInput = e.target.value)} onPrimary={primaryAction} onReport={reportError} />
 
+  {#if !isVF}
   <div style="margin-bottom:var(--space-6)">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:var(--space-3)">
       <div style="display:flex;align-items:baseline;gap:12px">
         <span class="card-kicker" style="margin:0">{L.materials}</span>
         <button class="btn btn-ghost" on:click={toggleTable} style="font-size:14px">{s.tableOpen ? L.hideTable : L.showTable}</button>
       </div>
-      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj}
+      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj && !isVF}
         <div style="display:flex;align-items:center;gap:10px">
           <span class="text-muted" style="font-size:12px">{L.show}</span>
           <div class="seg">
@@ -208,13 +212,16 @@
       {/if}
     {/if}
   </div>
+  {/if}
 
   <div style="margin-bottom:var(--space-6)">
     <button class="btn btn-ghost" on:click={() => (statsOpen = !statsOpen)} style="font-size:14px"><span class="card-kicker" style="margin:0">{statsOpen ? L.hideStats : L.showStats}</span></button>
     {#if statsOpen}<div style="margin-top:var(--space-3)"><StatsPanel {topic} /></div>{/if}
   </div>
 
-  {#if isConj}
+  {#if isVF}
+    <VFormsSelector {settings} onLevelChange={makeNewTask} />
+  {:else if isConj}
     <ConjSelector {settings} onLevelChange={makeNewTask} />
   {:else if isPron}
     <PronounSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />

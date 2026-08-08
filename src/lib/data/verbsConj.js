@@ -108,3 +108,27 @@ const _A = {
   moketi: { sg1: 'móku', sg2: 'móki', p3: 'móka', pl1: 'mókame', pl2: 'mókate' }
 };
 for (const v of VERBS) v.fA = _A[v.id];
+
+const _P = {
+  buti: { p3p: 'buvo', p3pA: 'bùvo', gp: { uk: 'був', ru: 'был', en: 'was' } },
+  tureti: { p3p: 'turėjo', p3pA: 'turė́jo', gp: { uk: 'мав', ru: 'имел', en: 'had' } },
+  noreti: { p3p: 'norėjo', p3pA: 'norė́jo', gp: { uk: 'хотів', ru: 'хотел', en: 'wanted' } },
+  galeti: { p3p: 'galėjo', p3pA: 'galė́jo', gp: { uk: 'міг', ru: 'мог', en: 'could' } },
+  eiti: { p3p: 'ėjo', p3pA: 'ė̃jo', gp: { uk: 'ішов', ru: 'шёл', en: 'went' } },
+  daryti: { p3p: 'darė', p3pA: 'dãrė', gp: { uk: 'робив', ru: 'делал', en: 'did' } },
+  zinoti: { p3p: 'žinojo', p3pA: 'žinójo', gp: { uk: 'знав', ru: 'знал', en: 'knew' } },
+  matyti: { p3p: 'matė', p3pA: 'mãtė', gp: { uk: 'бачив', ru: 'видел', en: 'saw' } },
+  kalbeti: { p3p: 'kalbėjo', p3pA: 'kalbė́jo', gp: { uk: 'говорив', ru: 'говорил', en: 'spoke' } },
+  gyventi: { p3p: 'gyveno', p3pA: 'gyvẽno', gp: { uk: 'жив', ru: 'жил', en: 'lived' } },
+  dirbti: { p3p: 'dirbo', p3pA: 'dìrbo', gp: { uk: 'працював', ru: 'работал', en: 'worked' } },
+  skaityti: { p3p: 'skaitė', p3pA: 'skaĩtė', gp: { uk: 'читав', ru: 'читал', en: 'read' } },
+  rasyti: { p3p: 'rašė', p3pA: 'rãšė', gp: { uk: 'писав', ru: 'писал', en: 'wrote' } },
+  valgyti: { p3p: 'valgė', p3pA: 'válgė', gp: { uk: 'їв', ru: 'ел', en: 'ate' } },
+  gerti: { p3p: 'gėrė', p3pA: 'gė́rė', gp: { uk: 'пив', ru: 'пил', en: 'drank' } },
+  myleti: { p3p: 'mylėjo', p3pA: 'mylė́jo', gp: { uk: 'любив', ru: 'любил', en: 'loved' } },
+  suprasti: { p3p: 'suprato', p3pA: 'suprãto', gp: { uk: 'розумів', ru: 'понимал', en: 'understood' } },
+  klausti: { p3p: 'klausė', gp: { uk: 'запитував', ru: 'спрашивал', en: 'asked' } },
+  moketi: { p3p: 'mokėjo', p3pA: 'mokė́jo', gp: { uk: 'умів', ru: 'умел', en: 'knew how' } },
+  dainuoti: { p3p: 'dainavo', gp: { uk: 'співав', ru: 'пел', en: 'sang' } }
+};
+for (const v of VERBS) Object.assign(v, _P[v.id] || {});
