@@ -11,6 +11,20 @@ export function fold(s) {
 // Ключі-виміри однієї задачі. cell = парадигмова клітинка (тип×відмінок×число) = закінчення;
 // form = конкретне слово; dims = окремі осі для агрегації/дашборду.
 export function keysFor(t, isAdj) {
+  if (t.numqty) {
+    return {
+      form: `w|${t.wordId}|${t.gender}`,
+      cell: `tc|${t.wordId}`,
+      dims: []
+    };
+  }
+  if (t.numeral) {
+    return {
+      form: `w|${t.wordId}|${t.gender}|${t.caseId}`,
+      cell: `tc|${t.wordId}|${t.caseId}`,
+      dims: [`case|${t.caseId}`]
+    };
+  }
   if (t.vforms) {
     return {
       form: `w|${t.wordId}|${t.formTarget}`,

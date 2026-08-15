@@ -1,6 +1,7 @@
-import { verbFormsTopic, verbsTopic } from './verbs.js';
+import { verbFormsTopic, verbsTopic, conjPastTopic, conjFutTopic } from './verbs.js';
 import { vidminkyTopic } from './vidminky.js';
 import { adjNomTopic, adjDegreesTopic, adjCasesTopic, adverbsTopic } from './adjectives.js';
 import { pronounsTopic } from './pronouns.js';
+import { numQtyTopic, numeralsTopic } from './numerals.js';
 
-export const topics = [verbFormsTopic, verbsTopic, vidminkyTopic, adjNomTopic, adjDegreesTopic, adjCasesTopic, pronounsTopic, adverbsTopic];
+export const topics = [verbFormsTopic, verbsTopic, conjPastTopic, conjFutTopic, vidminkyTopic, adjNomTopic, adjDegreesTopic, adjCasesTopic, pronounsTopic, adverbsTopic, numQtyTopic, numeralsTopic];

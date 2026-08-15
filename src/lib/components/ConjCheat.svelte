@@ -5,21 +5,38 @@
   import { UI } from '../i18n/ui.js';
   import WordForm from './WordForm.svelte';
 
+  export let tense = 'pres';
+
   const byId = {};
   for (const v of VERBS) byId[v.id] = v;
   const buti = byId['buti'];
+  const F = (v) => (tense === 'past' ? v.past : tense === 'fut' ? v.fut : v.f) || v.f;
 
-  // По одному прикладу на кожну дієвідміну теперішнього часу (за закінченням 3-ї особи):
-  // I → -a, II → -i, III → -o. Окончання виділене червоним.
-  const cols = [
-    { tag: 'I', v: byId['dirbti'] },
-    { tag: 'II', v: byId['tureti'] },
-    { tag: 'III', v: byId['zinoti'] }
-  ].map((c) => {
-    const forms = PERSON_COLS.map((s) => c.v.f[s]);
+  // Приклади показують РІЗНІ моделі закінчень часу: теперішній -a/-i/-o, минулий -o/-ė/-ėjo,
+  // майбутній — одна модель -s на різних основах. Окончання виділене червоним.
+  // būti окремим стовпцем лише в теперішньому (суплетив esu/yra); buvo/bus — регулярні
+  const EX = {
+    pres: ['dirbti', 'tureti', 'zinoti'],
+    past: ['dirbti', 'rasyti'],
+    fut: ['dirbti']
+  };
+  const showButi = tense === 'pres';
+  const cols = EX[tense].map((id) => byId[id]).map((v) => {
+    const cf = F(v);
+    const forms = PERSON_COLS.map((s) => cf[s]);
     const stem = boundedPrefix(forms);
-    return { ...c, stem, end3: c.v.f.p3.slice(stem.length) };
+    // майбутнє утворюється від інфінітива (dirb|ti → dirb+s) — у шапці показуємо інфінітив,
+    // червоним -ti (те, що відкидається); в інших часах — 3-тю особу
+    const h = tense === 'fut' ? { stem: v.inf.slice(0, -2), tail: 'ti' } : { stem, tail: cf.p3.slice(stem.length) };
+    return { v, f: cf, stem, hStem: h.stem, hTail: h.tail };
   });
+  const butiF = F(buti);
+
+  const trOf = (v, tk) => {
+    if (tense === 'past') return tk === 'en' ? (v.gp ? v.gp.en : v.en) : v.pt ? v.pt[tk].m : v[tk];
+    if (tense === 'fut') return v[tk];
+    return v.g[tk][2];
+  };
 
   const ROWS = [
     { lt: 'aš', slot: 'sg1' },
@@ -40,14 +57,16 @@
       <thead>
         <tr>
           <th style="background:var(--color-bg);border-bottom:1px solid var(--color-divider);text-align:left"><span style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--color-text)">{L.pronounCol}</span></th>
+          {#if showButi}
           <th style="text-align:center;background:#f7e6c9;border-bottom:1px solid var(--color-divider);border-right:1px solid var(--color-divider);padding:6px 8px">
-            <span style="font-family:var(--font-heading);font-weight:600;font-size:15px;text-transform:none;letter-spacing:0;color:var(--color-accent-800)">būti</span>
-            <span style="display:block;font-style:italic;font-weight:400;font-size:11px;text-transform:none;letter-spacing:0;color:var(--color-neutral-600)">{buti[tKey]}</span>
+            <span style="font-family:var(--font-heading);font-weight:600;font-size:15px;text-transform:none;letter-spacing:0;color:var(--color-accent-800)">{butiF.p3}</span>
+            <span style="display:block;font-style:italic;font-weight:400;font-size:11px;text-transform:none;letter-spacing:0;color:var(--color-neutral-600)">{trOf(buti, tKey)}</span>
           </th>
+          {/if}
           {#each cols as c}
             <th style="text-align:center;background:#f7e6c9;border-bottom:1px solid var(--color-divider);padding:6px 8px">
-              <span style="font-family:var(--font-heading);font-weight:600;font-size:15px;text-transform:none;letter-spacing:0;color:var(--color-accent-800)"><WordForm stem={c.stem} tail={c.end3} /></span>
-              <span style="display:block;font-style:italic;font-weight:400;font-size:11px;text-transform:none;letter-spacing:0;color:var(--color-neutral-600)">{c.v[tKey]}</span>
+              <span style="font-family:var(--font-heading);font-weight:600;font-size:15px;text-transform:none;letter-spacing:0;color:var(--color-accent-800)"><WordForm stem={c.hStem} tail={c.hTail} /></span>
+              <span style="display:block;font-style:italic;font-weight:400;font-size:11px;text-transform:none;letter-spacing:0;color:var(--color-neutral-600)">{trOf(c.v, tKey)}</span>
             </th>
           {/each}
         </tr>
@@ -56,9 +75,9 @@
         {#each ROWS as r}
           <tr>
             <th style="text-align:left;padding:6px 10px;white-space:nowrap;font-family:var(--font-heading);font-weight:600;font-size:15px;text-transform:none;letter-spacing:0;color:var(--color-text);border-bottom:1px solid var(--color-divider)">{r.lt}</th>
-            <td style="padding:6px 8px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--color-divider);border-right:1px solid var(--color-divider);font-family:var(--font-heading);font-size:16px;color:var(--color-text);background:#fdf9f2">{buti.f[r.slot]}</td>
+            {#if showButi}<td style="padding:6px 8px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--color-divider);border-right:1px solid var(--color-divider);font-family:var(--font-heading);font-size:16px;color:var(--color-text);background:#fdf9f2">{butiF[r.slot]}</td>{/if}
             {#each cols as c}
-              <td style="padding:6px 8px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--color-divider);font-family:var(--font-heading);font-size:16px;color:var(--color-text);background:#fdf9f2"><WordForm stem={c.stem} tail={c.v.f[r.slot].slice(c.stem.length)} /></td>
+              <td style="padding:6px 8px;text-align:center;white-space:nowrap;border-bottom:1px solid var(--color-divider);font-family:var(--font-heading);font-size:16px;color:var(--color-text);background:#fdf9f2"><WordForm stem={c.stem} tail={c.f[r.slot].slice(c.stem.length)} /></td>
             {/each}
           </tr>
         {/each}

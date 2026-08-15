@@ -23,6 +23,7 @@ export function newVFormsTask(state, prev) {
 
   let vpool = VERBS.filter((v) => v.p3p);
   if (!vpool.length) vpool = VERBS.slice();
+  if (state.focusWordId) { const f = vpool.filter((v) => v.id === state.focusWordId); if (f.length) vpool = f; }
   if (prev && prev.wordId && vpool.length > 1) { const a = vpool.filter((v) => v.id !== prev.wordId); if (a.length) vpool = a; }
   const verb = rnd(vpool);
 

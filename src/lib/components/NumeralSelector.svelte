@@ -1,5 +1,5 @@
 <script>
-  import { PHRASE_TIERS } from '../data/levels.js';
+  import { NUM_TIERS } from '../engine/numerals.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
 
@@ -14,7 +14,7 @@
 
   $: L = UI[$lang];
   $: s = $settings;
-  $: maxLevel = PHRASE_TIERS.length - 1;
+  $: maxLevel = NUM_TIERS.length - 1;
   $: allCasesOn = CASES.every((c) => s.cases[c.id]);
 
   function setLevel(v) { settings.update((st) => ({ ...st, level: v })); onLevelChange(); }
@@ -52,20 +52,6 @@
             <span class="text-muted" style="font-size:10px">{L.caseNames[c.id]}</span>
           </label>
         {/each}
-      </div>
-    </div>
-
-    <div>
-      <div style="margin-bottom:8px"><span class="card-kicker" style="margin:0">{L.number}</span></div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px">
-        <label class="lt-chip" style={tint(s.numbers.sg)}>
-          <input type="checkbox" checked={s.numbers.sg} on:change={() => toggleKey('numbers', 'sg')} style="display:none">
-          <span style="font-family:var(--font-heading);font-weight:600;font-size:14px">{L.numSg}</span>
-        </label>
-        <label class="lt-chip" style={tint(s.numbers.pl)}>
-          <input type="checkbox" checked={s.numbers.pl} on:change={() => toggleKey('numbers', 'pl')} style="display:none">
-          <span style="font-family:var(--font-heading);font-weight:600;font-size:14px">{L.numPl}</span>
-        </label>
       </div>
     </div>
   </div>

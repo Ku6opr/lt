@@ -47,6 +47,8 @@ export const UI = {
     femRow: 'Жіночий рід',
     caseCol: 'Відмінок',
     pronounCol: 'Займенник',
+    autoLevel: 'авто',
+    review: 'Повторити помилки',
     matchedYours: 'Збіглося з вашим варіантом',
 
     numSg: 'Однина',
@@ -107,6 +109,8 @@ export const UI = {
     femRow: 'Женский род',
     caseCol: 'Падеж',
     pronounCol: 'Местоимение',
+    autoLevel: 'авто',
+    review: 'Повторить ошибки',
     matchedYours: 'Совпало с вашим вариантом',
 
     numSg: 'Единственное',
@@ -167,6 +171,8 @@ export const UI = {
     femRow: 'Feminine',
     caseCol: 'Case',
     pronounCol: 'Pronoun',
+    autoLevel: 'auto',
+    review: 'Review mistakes',
     matchedYours: 'Matches your answer',
 
     numSg: 'Singular',

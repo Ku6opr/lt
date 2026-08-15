@@ -1,0 +1,567 @@
+{
+  "buti": {
+    "past": {
+      "sg1": "buvau",
+      "sg2": "buvai",
+      "p3": "buvo",
+      "pl1": "buvome",
+      "pl2": "buvote"
+    },
+    "pastA": {
+      "sg1": "buvaũ",
+      "sg2": "buvaĩ",
+      "p3": "bùvo",
+      "pl1": "bùvome",
+      "pl2": "bùvote"
+    },
+    "fut": {
+      "sg1": "būsiu",
+      "sg2": "būsi",
+      "p3": "bus",
+      "pl1": "būsime",
+      "pl2": "būsite"
+    },
+    "futA": {
+      "sg1": "bū́siu",
+      "sg2": "bū́si",
+      "p3": "bùs",
+      "pl1": "bū́sime",
+      "pl2": "bū́site"
+    }
+  },
+  "tureti": {
+    "past": {
+      "sg1": "turėjau",
+      "sg2": "turėjai",
+      "p3": "turėjo",
+      "pl1": "turėjome",
+      "pl2": "turėjote"
+    },
+    "pastA": {
+      "sg1": "turė́jau",
+      "sg2": "turė́jai",
+      "p3": "turė́jo",
+      "pl1": "turė́jome",
+      "pl2": "turė́jote"
+    },
+    "fut": {
+      "sg1": "turėsiu",
+      "sg2": "turėsi",
+      "p3": "turės",
+      "pl1": "turėsime",
+      "pl2": "turėsite"
+    },
+    "futA": {
+      "sg1": "turė́siu",
+      "sg2": "turė́si",
+      "p3": "turė̃s",
+      "pl1": "turė́sime",
+      "pl2": "turė́site"
+    }
+  },
+  "noreti": {
+    "past": {
+      "sg1": "norėjau",
+      "sg2": "norėjai",
+      "p3": "norėjo",
+      "pl1": "norėjome",
+      "pl2": "norėjote"
+    },
+    "pastA": {
+      "sg1": "norė́jau",
+      "sg2": "norė́jai",
+      "p3": "norė́jo",
+      "pl1": "norė́jome",
+      "pl2": "norė́jote"
+    },
+    "fut": {
+      "sg1": "norėsiu",
+      "sg2": "norėsi",
+      "p3": "norės",
+      "pl1": "norėsime",
+      "pl2": "norėsite"
+    },
+    "futA": {
+      "sg1": "norė́siu",
+      "sg2": "norė́si",
+      "p3": "norė́s",
+      "pl1": "norė́sime",
+      "pl2": "norė́site"
+    }
+  },
+  "galeti": {
+    "past": {
+      "sg1": "galėjau",
+      "sg2": "galėjai",
+      "p3": "galėjo",
+      "pl1": "galėjome",
+      "pl2": "galėjote"
+    },
+    "pastA": {
+      "sg1": "galė́jau",
+      "sg2": "galė́jai",
+      "p3": "galė́jo",
+      "pl1": "galė́jome",
+      "pl2": "galė́jote"
+    },
+    "fut": {
+      "sg1": "galėsiu",
+      "sg2": "galėsi",
+      "p3": "galės",
+      "pl1": "galėsime",
+      "pl2": "galėsite"
+    },
+    "futA": {
+      "sg1": "galė́siu",
+      "sg2": "galė́si",
+      "p3": "galė̃s",
+      "pl1": "galė́sime",
+      "pl2": "galė́site"
+    }
+  },
+  "eiti": {
+    "past": {
+      "sg1": "ėjau",
+      "sg2": "ėjai",
+      "p3": "ėjo",
+      "pl1": "ėjome",
+      "pl2": "ėjote"
+    },
+    "pastA": {
+      "sg1": "ėjaũ",
+      "sg2": "ėjaĩ",
+      "p3": "ė̃jo",
+      "pl1": "ė̃jome",
+      "pl2": "ė̃jote"
+    },
+    "fut": {
+      "sg1": "eisiu",
+      "sg2": "eisi",
+      "p3": "eis",
+      "pl1": "eisime",
+      "pl2": "eisite"
+    },
+    "futA": {
+      "sg1": "eĩsiu",
+      "sg2": "eĩsi",
+      "p3": "eĩs",
+      "pl1": "eĩsime",
+      "pl2": "eĩsite"
+    }
+  },
+  "daryti": {
+    "past": {
+      "sg1": "dariau",
+      "sg2": "darei",
+      "p3": "darė",
+      "pl1": "darėme",
+      "pl2": "darėte"
+    },
+    "pastA": {
+      "sg1": "dariaũ",
+      "sg2": "dareĩ",
+      "p3": "dãrė",
+      "pl1": "dãrėme",
+      "pl2": "dãrėte"
+    },
+    "fut": {
+      "sg1": "darysiu",
+      "sg2": "darysi",
+      "p3": "darys",
+      "pl1": "darysime",
+      "pl2": "darysite"
+    },
+    "futA": {
+      "sg1": "darýsiu",
+      "sg2": "darýsi",
+      "p3": "darỹs",
+      "pl1": "darýsime",
+      "pl2": "darýsite"
+    }
+  },
+  "zinoti": {
+    "past": {
+      "sg1": "žinojau",
+      "sg2": "žinojai",
+      "p3": "žinojo",
+      "pl1": "žinojome",
+      "pl2": "žinojote"
+    },
+    "pastA": {
+      "sg1": "žinójau",
+      "sg2": "žinójai",
+      "p3": "žinójo",
+      "pl1": "žinójome",
+      "pl2": "žinójote"
+    },
+    "fut": {
+      "sg1": "žinosiu",
+      "sg2": "žinosi",
+      "p3": "žinos",
+      "pl1": "žinosime",
+      "pl2": "žinosite"
+    },
+    "futA": {
+      "sg1": "žinósiu",
+      "sg2": "žinósi",
+      "p3": "žinós",
+      "pl1": "žinósime",
+      "pl2": "žinósite"
+    }
+  },
+  "matyti": {
+    "past": {
+      "sg1": "mačiau",
+      "sg2": "matei",
+      "p3": "matė",
+      "pl1": "matėme",
+      "pl2": "matėte"
+    },
+    "pastA": {
+      "sg1": "mačiaũ",
+      "sg2": "mateĩ",
+      "p3": "mãtė",
+      "pl1": "mãtėme",
+      "pl2": "mãtėte"
+    },
+    "fut": {
+      "sg1": "matysiu",
+      "sg2": "matysi",
+      "p3": "matys",
+      "pl1": "matysime",
+      "pl2": "matysite"
+    },
+    "futA": {
+      "sg1": "matýsiu",
+      "sg2": "matýsi",
+      "p3": "matýs",
+      "pl1": "matýsime",
+      "pl2": "matýsite"
+    }
+  },
+  "kalbeti": {
+    "past": {
+      "sg1": "kalbėjau",
+      "sg2": "kalbėjai",
+      "p3": "kalbėjo",
+      "pl1": "kalbėjome",
+      "pl2": "kalbėjote"
+    },
+    "pastA": {
+      "sg1": "kalbė́jau",
+      "sg2": "kalbė́jai",
+      "p3": "kalbė́jo",
+      "pl1": "kalbė́jome",
+      "pl2": "kalbė́jote"
+    },
+    "fut": {
+      "sg1": "kalbėsiu",
+      "sg2": "kalbėsi",
+      "p3": "kalbės",
+      "pl1": "kalbėsime",
+      "pl2": "kalbėsite"
+    },
+    "futA": {
+      "sg1": "kalbė́siu",
+      "sg2": "kalbė́si",
+      "p3": "kalbė́s",
+      "pl1": "kalbė́sime",
+      "pl2": "kalbė́site"
+    }
+  },
+  "gyventi": {
+    "past": {
+      "sg1": "gyvenau",
+      "sg2": "gyvenai",
+      "p3": "gyveno",
+      "pl1": "gyvenome",
+      "pl2": "gyvenote"
+    },
+    "pastA": {
+      "sg1": "gyvenaũ",
+      "sg2": "gyvenaĩ",
+      "p3": "gyvẽno",
+      "pl1": "gyvẽnome",
+      "pl2": "gyvẽnote"
+    },
+    "fut": {
+      "sg1": "gyvensiu",
+      "sg2": "gyvensi",
+      "p3": "gyvens",
+      "pl1": "gyvensime",
+      "pl2": "gyvensite"
+    },
+    "futA": {
+      "sg1": "gyvénsiu",
+      "sg2": "gyvénsi",
+      "p3": "gyveñs",
+      "pl1": "gyvénsime",
+      "pl2": "gyvénsite"
+    }
+  },
+  "dirbti": {
+    "past": {
+      "sg1": "dirbau",
+      "sg2": "dirbai",
+      "p3": "dirbo",
+      "pl1": "dirbome",
+      "pl2": "dirbote"
+    },
+    "pastA": {
+      "sg1": "dìrbau",
+      "sg2": "dìrbai",
+      "p3": "dìrbo",
+      "pl1": "dìrbome",
+      "pl2": "dìrbote"
+    },
+    "fut": {
+      "sg1": "dirbsiu",
+      "sg2": "dirbsi",
+      "p3": "dirbs",
+      "pl1": "dirbsime",
+      "pl2": "dirbsite"
+    },
+    "futA": {
+      "sg1": "dìrbsiu",
+      "sg2": "dìrbsi",
+      "p3": "dìrbs",
+      "pl1": "dìrbsime",
+      "pl2": "dìrbsite"
+    }
+  },
+  "skaityti": {
+    "past": {
+      "sg1": "skaičiau",
+      "sg2": "skaitei",
+      "p3": "skaitė",
+      "pl1": "skaitėme",
+      "pl2": "skaitėte"
+    },
+    "pastA": {
+      "sg1": "skaičiaũ",
+      "sg2": "skaiteĩ",
+      "p3": "skaĩtė",
+      "pl1": "skaĩtėme",
+      "pl2": "skaĩtėte"
+    },
+    "fut": {
+      "sg1": "skaitysiu",
+      "sg2": "skaitysi",
+      "p3": "skaitys",
+      "pl1": "skaitysime",
+      "pl2": "skaitysite"
+    },
+    "futA": {
+      "sg1": "skaitýsiu",
+      "sg2": "skaitýsi",
+      "p3": "skaitýs",
+      "pl1": "skaitýsime",
+      "pl2": "skaitýsite"
+    }
+  },
+  "rasyti": {
+    "past": {
+      "sg1": "rašiau",
+      "sg2": "rašei",
+      "p3": "rašė",
+      "pl1": "rašėme",
+      "pl2": "rašėte"
+    },
+    "pastA": {
+      "sg1": "rašiaũ",
+      "sg2": "rašeĩ",
+      "p3": "rãšė",
+      "pl1": "rãšėme",
+      "pl2": "rãšėte"
+    },
+    "fut": {
+      "sg1": "rašysiu",
+      "sg2": "rašysi",
+      "p3": "rašys",
+      "pl1": "rašysime",
+      "pl2": "rašysite"
+    },
+    "futA": {
+      "sg1": "rašýsiu",
+      "sg2": "rašýsi",
+      "p3": "rašỹs",
+      "pl1": "rašýsime",
+      "pl2": "rašýsite"
+    }
+  },
+  "valgyti": {
+    "past": {
+      "sg1": "valgiau",
+      "sg2": "valgei",
+      "p3": "valgė",
+      "pl1": "valgėme",
+      "pl2": "valgėte"
+    },
+    "pastA": {
+      "sg1": "válgiau",
+      "sg2": "válgei",
+      "p3": "válgė",
+      "pl1": "válgėme",
+      "pl2": "válgėte"
+    },
+    "fut": {
+      "sg1": "valgysiu",
+      "sg2": "valgysi",
+      "p3": "valgys",
+      "pl1": "valgysime",
+      "pl2": "valgysite"
+    },
+    "futA": {
+      "sg1": "válgysiu",
+      "sg2": "válgysi",
+      "p3": "válgys",
+      "pl1": "válgysime",
+      "pl2": "válgysite"
+    }
+  },
+  "gerti": {
+    "past": {
+      "sg1": "gėriau",
+      "sg2": "gėrei",
+      "p3": "gėrė",
+      "pl1": "gėrėme",
+      "pl2": "gėrėte"
+    },
+    "pastA": {
+      "sg1": "gė́riau",
+      "sg2": "gė́rei",
+      "p3": "gė́rė",
+      "pl1": "gė́rėme",
+      "pl2": "gė́rėte"
+    },
+    "fut": {
+      "sg1": "gersiu",
+      "sg2": "gersi",
+      "p3": "gers",
+      "pl1": "gersime",
+      "pl2": "gersite"
+    },
+    "futA": {
+      "sg1": "gérsiu",
+      "sg2": "gérsi",
+      "p3": "gérs",
+      "pl1": "gérsime",
+      "pl2": "gérsite"
+    }
+  },
+  "myleti": {
+    "past": {
+      "sg1": "mylėjau",
+      "sg2": "mylėjai",
+      "p3": "mylėjo",
+      "pl1": "mylėjome",
+      "pl2": "mylėjote"
+    },
+    "pastA": {
+      "sg1": "mylė́jau",
+      "sg2": "mylė́jai",
+      "p3": "mylė́jo",
+      "pl1": "mylė́jome",
+      "pl2": "mylė́jote"
+    },
+    "fut": {
+      "sg1": "mylėsiu",
+      "sg2": "mylėsi",
+      "p3": "mylės",
+      "pl1": "mylėsime",
+      "pl2": "mylėsite"
+    }
+  },
+  "suprasti": {
+    "past": {
+      "sg1": "supratau",
+      "sg2": "supratai",
+      "p3": "suprato",
+      "pl1": "supratome",
+      "pl2": "supratote"
+    },
+    "pastA": {
+      "sg1": "suprataũ",
+      "sg2": "suprataĩ",
+      "p3": "suprãto",
+      "pl1": "suprãtome",
+      "pl2": "suprãtote"
+    },
+    "fut": {
+      "sg1": "suprasiu",
+      "sg2": "suprasi",
+      "p3": "supras",
+      "pl1": "suprasime",
+      "pl2": "suprasite"
+    },
+    "futA": {
+      "sg1": "supràsiu",
+      "sg2": "supràsi",
+      "p3": "supràs",
+      "pl1": "supràsime",
+      "pl2": "supràsite"
+    }
+  },
+  "klausti": {
+    "past": {
+      "sg1": "klausiau",
+      "sg2": "klausei",
+      "p3": "klausė",
+      "pl1": "klausėme",
+      "pl2": "klausėte"
+    },
+    "fut": {
+      "sg1": "klausiu",
+      "sg2": "klausi",
+      "p3": "klaus",
+      "pl1": "klausime",
+      "pl2": "klausite"
+    }
+  },
+  "moketi": {
+    "past": {
+      "sg1": "mokėjau",
+      "sg2": "mokėjai",
+      "p3": "mokėjo",
+      "pl1": "mokėjome",
+      "pl2": "mokėjote"
+    },
+    "pastA": {
+      "sg1": "mokė́jau",
+      "sg2": "mokė́jai",
+      "p3": "mokė́jo",
+      "pl1": "mokė́jome",
+      "pl2": "mokė́jote"
+    },
+    "fut": {
+      "sg1": "mokėsiu",
+      "sg2": "mokėsi",
+      "p3": "mokės",
+      "pl1": "mokėsime",
+      "pl2": "mokėsite"
+    },
+    "futA": {
+      "sg1": "mokė́siu",
+      "sg2": "mokė́si",
+      "p3": "mokė́s",
+      "pl1": "mokė́sime",
+      "pl2": "mokė́site"
+    }
+  },
+  "dainuoti": {
+    "past": {
+      "sg1": "dainavau",
+      "sg2": "dainavai",
+      "p3": "dainavo",
+      "pl1": "dainavome",
+      "pl2": "dainavote"
+    },
+    "fut": {
+      "sg1": "dainuosiu",
+      "sg2": "dainuosi",
+      "p3": "dainuos",
+      "pl1": "dainuosime",
+      "pl2": "dainuosite"
+    }
+  }
+}

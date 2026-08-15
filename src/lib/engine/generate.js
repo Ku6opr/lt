@@ -134,6 +134,7 @@ export function newTask(state, prev) {
   } else {
     pool = avail;
   }
+  if (state.focusWordId) { const f = pool.filter((w) => w.id === state.focusWordId); if (f.length) pool = f; }
   let pick = pool;
   if (prev && prev.wordId && pool.length > 1) {
     const a = pool.filter((w) => w.id !== prev.wordId);

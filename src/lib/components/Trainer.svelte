@@ -3,12 +3,18 @@
   import { settingsFor } from '../stores/settings.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
-  import { record, candidateWeight, dimWeight, fold, keysFor } from '../stores/progress.js';
+  import { record, candidateWeight, dimWeight, fold, keysFor, progress } from '../stores/progress.js';
+  import { weakFormKeys } from '../stores/mastery.js';
+  import { LEVELS, PHRASE_TIERS } from '../data/levels.js';
+  import { CONJ_TIERS } from '../engine/conjugation.js';
+  import { DEG_TIERS } from '../engine/adjectives.js';
+  import { VF_TIERS } from '../engine/verbForms.js';
   import { newTask, poolOk } from '../engine/generate.js';
   import { newAdjTask, adjPoolOk, newDegreeTask, degreePoolOk, newAdverbTask, adverbPoolOk } from '../engine/adjectives.js';
   import { newPronounTask, pronounPoolOk } from '../engine/pronouns.js';
   import { newConjTask, conjPoolOk } from '../engine/conjugation.js';
   import { newVFormsTask, vformsPoolOk } from '../engine/verbForms.js';
+  import { newNumeralTask, numeralPoolOk, newNumQtyTask, numQtyPoolOk, NUMQ_TIERS, NUM_TIERS } from '../engine/numerals.js';
   import CheatTable from './CheatTable.svelte';
   import CheatStack from './CheatStack.svelte';
   import AdjCheatTable from './AdjCheatTable.svelte';
@@ -24,6 +30,10 @@
   import ConjSelector from './ConjSelector.svelte';
   import ConjCheat from './ConjCheat.svelte';
   import VFormsSelector from './VFormsSelector.svelte';
+  import NumeralSelector from './NumeralSelector.svelte';
+  import NumeralCheat from './NumeralCheat.svelte';
+  import NumQtySelector from './NumQtySelector.svelte';
+  import NumQtyCheat from './NumQtyCheat.svelte';
   import StatsPanel from './StatsPanel.svelte';
 
   export let topic;
@@ -35,14 +45,16 @@
   const isPron = topic.kind === 'pron';
   const isConj = topic.kind === 'conj';
   const isVF = topic.kind === 'vforms';
+  const isNum = topic.kind === 'num';
+  const isNumQty = topic.kind === 'numqty';
   const settings = settingsFor(topic.id);
-  const genTask = isVF ? newVFormsTask : isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
-  const genOk = isVF ? vformsPoolOk : isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
+  const genTask = isNumQty ? newNumQtyTask : isNum ? newNumeralTask : isVF ? newVFormsTask : isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
+  const genOk = isNumQty ? numQtyPoolOk : isNum ? numeralPoolOk : isVF ? vformsPoolOk : isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
   const selectorCases = isAdj ? topic.scopeCases : null;
   const cheatCases = isAdj ? topic.cheatCases : null;
   const fixedFilters = isAdj && topic.fixedFilters;
   const cheatBoth = isAdj && topic.cheatBoth;
-  const stateOf = (st) => ({ ...st, lang: $lang, ...(isAdj ? { caseScope: topic.scopeCases } : {}) });
+  const stateOf = (st) => ({ ...st, lang: $lang, ...(isAdj ? { caseScope: topic.scopeCases } : {}), ...(isConj ? { tense: topic.tense || 'pres' } : {}) });
 
   let task = null;
   let revealed = false;
@@ -50,6 +62,47 @@
   let focusType = 'as';
   let correctMark = false;
   let statsOpen = false;
+  let reviewMode = false;
+  let autoWin = [];
+
+  const rnd = (a) => a[Math.floor(Math.random() * a.length)];
+  $: weakKeys = weakFormKeys($progress, topic.id);
+  $: if (reviewMode && !weakKeys.length) { reviewMode = false; }
+
+  function maxLevelNow(st) {
+    if (isVF) return VF_TIERS.length - 1;
+    if (isNumQty) return NUMQ_TIERS.length - 1;
+    if (isNum) return NUM_TIERS.length - 1;
+    if (isConj) return CONJ_TIERS.length - 1;
+    if (isAdverb || isDeg) return DEG_TIERS.length - 1;
+    if (isAdj || isPron) return PHRASE_TIERS.length - 1;
+    return st.theme === 'all' ? LEVELS.length - 1 : PHRASE_TIERS.length - 1;
+  }
+  function noteAuto(correct) {
+    const st = $settings;
+    if (!st.autoLevel || correct === null) return;
+    autoWin = [...autoWin, correct ? 1 : 0].slice(-10);
+    if (autoWin.length < 6) return;
+    const acc = autoWin.reduce((a, b) => a + b, 0) / autoWin.length;
+    if (acc >= 0.85 && st.level < maxLevelNow(st)) { settings.update((x) => ({ ...x, level: x.level + 1 })); autoWin = []; }
+    else if (acc <= 0.5 && st.level > 0) { settings.update((x) => ({ ...x, level: x.level - 1 })); autoWin = []; }
+  }
+  function reviewOverrides(key) {
+    const p = key.split('|');
+    if (isNumQty) return { focusWordId: p[1] };
+    if (isNum) return { focusWordId: p[1], cases: { [p[3]]: true } };
+    if (isVF) return { focusWordId: p[1] };
+    if (isConj) return { focusWordId: p[1], focusPerson: p[2] };
+    if (isPron) return { focusWordId: p[1], cases: { [p[2]]: true } };
+    if (isAdverb) return { focusWordId: p[1], degrees: { [p[3]]: true }, theme: 'all' };
+    if (isDeg) return { focusWordId: p[1], degrees: { [p[3]]: true }, numbers: { [p[4]]: true }, theme: 'all' };
+    if (isAdj) return { focusWordId: p[1], cases: { [p[3]]: true }, numbers: { [p[4]]: true }, theme: 'all' };
+    return { focusWordId: p[1], cases: { [p[2]]: true }, numbers: { [p[3]]: true }, theme: 'all' };
+  }
+  function toggleReview() {
+    reviewMode = !reviewMode;
+    makeNewTask();
+  }
 
   const typePrefix = isAdj ? 'atype|' : 'ntype|';
 
@@ -76,6 +129,24 @@
 
   function makeNewTask() {
     const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver, pronId: task.pronId, formTarget: task.formTarget } : null;
+    if (reviewMode && weakKeys.length) {
+      const fresh = weakKeys.filter((k) => !prev || k.split('|')[1] !== prev.wordId);
+      const key = rnd(fresh.length ? fresh : weakKeys);
+      const st = stateOf({ ...$settings, ...reviewOverrides(key) });
+      let t = null;
+      for (let i = 0; i < 12; i++) {
+        const c = genTask(st, prev);
+        if (!c) continue;
+        if (keysFor(c, isAdj).form === key) { t = c; break; }
+        if (!t) t = c;
+      }
+      task = t;
+      revealed = false;
+      userInput = '';
+      correctMark = false;
+      if (t && !isAdj) focusType = t.typeId;
+      return;
+    }
     const state = stateOf($settings);
     const typeKeys = Object.keys(state.types || {}).filter((k) => state.types[k]);
     const cands = [];
@@ -99,8 +170,10 @@
     const st = $settings, t = task;
     if (!t) { makeNewTask(); return; }
     let invalid;
-    if (isConj || isVF) {
+    if (isConj || isVF || isNumQty) {
       invalid = false;
+    } else if (isNum) {
+      invalid = !st.cases[t.caseId];
     } else if (isAdverb) {
       invalid = !st.degrees[t.degree] || (st.types && !st.types[t.adjType]);
     } else if (isPron) {
@@ -128,6 +201,7 @@
     const correct = inp ? fold((task.stemPrefix || '') + inp) === fold(task.targetForm) : null;
     correctMark = correct === true;
     record(topic.id, keysFor(task, isAdj), correct);
+    noteAuto(correct);
   }
 
   function reportError() {
@@ -183,7 +257,7 @@
         <span class="card-kicker" style="margin:0">{L.materials}</span>
         <button class="btn btn-ghost" on:click={toggleTable} style="font-size:14px">{s.tableOpen ? L.hideTable : L.showTable}</button>
       </div>
-      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj && !isVF}
+      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj && !isVF && !isNum && !isNumQty}
         <div style="display:flex;align-items:center;gap:10px">
           <span class="text-muted" style="font-size:12px">{L.show}</span>
           <div class="seg">
@@ -195,8 +269,12 @@
     </div>
 
     {#if s.tableOpen}
-      {#if isConj}
-        <ConjCheat />
+      {#if isNumQty}
+        <NumQtyCheat />
+      {:else if isNum}
+        <NumeralCheat />
+      {:else if isConj}
+        <ConjCheat tense={topic.tense || 'pres'} />
       {:else if isPron}
         <PronounCheat />
       {:else if isAdverb}
@@ -215,11 +293,20 @@
   {/if}
 
   <div style="margin-bottom:var(--space-6)">
-    <button class="btn btn-ghost" on:click={() => (statsOpen = !statsOpen)} style="font-size:14px"><span class="card-kicker" style="margin:0">{statsOpen ? L.hideStats : L.showStats}</span></button>
+    <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+      <button class="btn btn-ghost" on:click={() => (statsOpen = !statsOpen)} style="font-size:14px"><span class="card-kicker" style="margin:0">{statsOpen ? L.hideStats : L.showStats}</span></button>
+      {#if weakKeys.length}
+        <button class="btn btn-ghost" on:click={toggleReview} style="font-size:14px;border-radius:999px;padding-inline:10px;{reviewMode ? 'border:1px solid var(--color-accent);background:#fff3e4;' : 'border:1px solid transparent;'}"><span class="card-kicker" style="margin:0">↻ {L.review} ({weakKeys.length})</span></button>
+      {/if}
+    </div>
     {#if statsOpen}<div style="margin-top:var(--space-3)"><StatsPanel {topic} /></div>{/if}
   </div>
 
-  {#if isVF}
+  {#if isNumQty}
+    <NumQtySelector {settings} onLevelChange={makeNewTask} />
+  {:else if isNum}
+    <NumeralSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+  {:else if isVF}
     <VFormsSelector {settings} onLevelChange={makeNewTask} />
   {:else if isConj}
     <ConjSelector {settings} onLevelChange={makeNewTask} />

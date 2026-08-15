@@ -1,5 +1,5 @@
 <script>
-  import { VF_TIERS } from '../engine/verbForms.js';
+  import { NUMQ_TIERS } from '../engine/numerals.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
 
@@ -8,7 +8,7 @@
 
   $: L = UI[$lang];
   $: s = $settings;
-  $: maxLevel = VF_TIERS.length - 1;
+  $: maxLevel = NUMQ_TIERS.length - 1;
 
   function setLevel(v) { settings.update((st) => ({ ...st, level: v })); onLevelChange(); }
   function toggleAuto() { settings.update((st) => ({ ...st, autoLevel: !st.autoLevel })); }

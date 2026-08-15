@@ -4,6 +4,7 @@
   import { WORDS } from '../data/words.js';
   import { ADJECTIVES } from '../data/adjectives.js';
   import { PRONOUNS } from '../data/pronouns.js';
+  import { NUMERALS, TEENS } from '../data/numerals.js';
   import { VERBS, PERSON_COLS, PERSON_LABEL } from '../data/verbsConj.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
@@ -16,8 +17,10 @@
   const isPron = topic.kind === 'pron';
   const isConj = topic.kind === 'conj';
   const isVF = topic.kind === 'vforms';
+  const isNum = topic.kind === 'num';
+  const isNumQty = topic.kind === 'numqty';
   const ALL_CASES = ['V', 'K', 'N', 'G', 'In', 'Vt'];
-  const cols = isVF ? ['pres'] : isConj ? PERSON_COLS : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
+  const cols = isNumQty ? ['V'] : isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isVF ? ['pres'] : isConj ? PERSON_COLS : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
   const ADJ_ROWS = [{ t: 'I' }, { t: 'II' }, { t: 'III' }];
   const nounName = {};
   for (const w of WORDS) nounName[w.id] = w;
@@ -71,6 +74,18 @@
         cells: cols.map((c) => ({ m: mastery(g(`w|${p.id}|${c}|${p.num}`)) }))
       }));
     }
+    if (isNum) {
+      return NUMERALS.map((n) => ({
+        label: n.lt,
+        cells: cols.map((c) => ({ m: mastery(g(`tc|${n.id}|${c}`)) }))
+      }));
+    }
+    if (isNumQty) {
+      return [...NUMERALS, ...TEENS].map((n) => ({
+        label: n.id + ' · ' + n.lt,
+        cells: [{ m: mastery(g(`tc|${n.id}`)) }]
+      }));
+    }
     return isAdj
       ? ADJ_ROWS.flatMap((t) => ['m', 'f'].map((gd) => ({
           label: t.t + ' ' + (gd === 'm' ? L.genderMAb : L.genderFAb),
@@ -104,8 +119,12 @@
   const pronName = {};
   for (const p of PRONOUNS) pronName[p.id] = p;
   const glossKey = $lang === 'ru' ? 'ru' : $lang === 'en' ? 'en' : 'uk';
+  const numName = {};
+  for (const n of NUMERALS) numName[n.id] = n;
+  for (const n of TEENS) numName[n.id] = n;
   const tr = (id) => {
     if (isPron) return (pronName[id] && pronName[id][glossKey][0]) || id;
+    if (isNum || isNumQty) { const n = numName[id]; if (!n) return id; const v = n[glossKey]; return glossKey === 'en' ? n.en : typeof v === 'string' ? v : v.m[0]; }
     const src = isConj || isVF ? verbName : isAdj ? adjName : nounName;
     return (src[id] && src[id][glossKey]) || id;
   };
@@ -119,7 +138,7 @@
       <b>{totals.graded}</b> {L.answered} · {L.accuracy} <b>{Math.round(totals.acc * 100)}%</b> · {L.coverage} <b>{totals.forms}</b>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
-      {#if !isConj && !isPron && !isAdverb && !isVF}
+      {#if !isConj && !isPron && !isAdverb && !isVF && !isNum && !isNumQty}
       <div class="seg">
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'sg'} on:change={() => (viewNum = 'sg')}>{L.numSg}</label>
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'pl'} on:change={() => (viewNum = 'pl')}>{L.numPl}</label>

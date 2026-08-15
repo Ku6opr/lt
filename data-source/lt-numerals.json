@@ -1,0 +1,269 @@
+{
+  "1": {
+    "lt": "vienas",
+    "m": [
+      "vienas",
+      "vieno",
+      "vienam",
+      "vieną",
+      "vienu",
+      "viename"
+    ],
+    "f": [
+      "viena",
+      "vienos",
+      "vienai",
+      "vieną",
+      "viena",
+      "vienoje"
+    ],
+    "mA": [
+      "víenas",
+      "víeno",
+      "vienám",
+      "víeną",
+      "víenu",
+      "vienamè"
+    ],
+    "fA": [
+      "vienà",
+      "vienõs",
+      "víenai",
+      "víeną",
+      "víena",
+      "vienojè"
+    ]
+  },
+  "2": {
+    "lt": "du",
+    "m": [
+      "du",
+      "dviejų",
+      "dviem",
+      "du",
+      "dviem",
+      "dviejuose"
+    ],
+    "f": [
+      "dvi",
+      "dviejų",
+      "dviem",
+      "dvi",
+      "dviem",
+      "dviejose"
+    ],
+    "mA": [
+      "dù",
+      "dviejų̃",
+      "dvíem",
+      "dù",
+      "dviẽm",
+      "dviejuosè"
+    ],
+    "fA": [
+      "dvì",
+      "dviejų̃",
+      "dvíem",
+      "dvì",
+      "dviẽm",
+      "dviejosè"
+    ]
+  },
+  "3": {
+    "lt": "trys",
+    "m": [
+      "trys",
+      "trijų",
+      "trims",
+      "tris",
+      "trimis",
+      "trijuose"
+    ],
+    "f": [
+      "trys",
+      "trijų",
+      "trims",
+      "tris",
+      "trimis",
+      "trijose"
+    ],
+    "mA": [
+      "trỹs",
+      "trijų̃",
+      "trìms",
+      "trìs",
+      "trimìs",
+      "trijuosè"
+    ],
+    "fA": [
+      "trỹs",
+      "trijų̃",
+      "trìms",
+      "trìs",
+      "trimìs",
+      "trijosè"
+    ]
+  },
+  "4": {
+    "lt": "keturi",
+    "m": [
+      "keturi",
+      "keturių",
+      "keturiems",
+      "keturis",
+      "keturiais",
+      "keturiuose"
+    ],
+    "f": [
+      "keturios",
+      "keturių",
+      "keturioms",
+      "keturias",
+      "keturiomis",
+      "keturiose"
+    ],
+    "mA": [
+      "keturì",
+      "keturių̃",
+      "keturíems",
+      "keturìs",
+      "keturiaĩs",
+      "keturiuosè"
+    ],
+    "fA": [
+      "kẽturios",
+      "keturių̃",
+      "keturióms",
+      "kẽturias",
+      "keturiomìs",
+      "keturiosè"
+    ]
+  },
+  "5": {
+    "lt": "penki",
+    "m": [
+      "penki",
+      "penkių",
+      "penkiems",
+      "penkis",
+      "penkiais",
+      "penkiuose"
+    ],
+    "f": [
+      "penkios",
+      "penkių",
+      "penkioms",
+      "penkias",
+      "penkiomis",
+      "penkiose"
+    ],
+    "mA": [
+      "penkì",
+      "penkių̃",
+      "penkíems",
+      "penkìs",
+      "penkiaĩs",
+      "penkiuosè"
+    ],
+    "fA": [
+      "peñkios",
+      "penkių̃",
+      "penkióms",
+      "penkiàs",
+      "penkiomìs",
+      "penkiosè"
+    ]
+  },
+  "6": {
+    "lt": "šeši",
+    "m": [
+      "šeši",
+      "šešių",
+      "šešiems",
+      "šešis",
+      "šešiais",
+      "šešiuose"
+    ],
+    "f": [
+      "šešios",
+      "šešių",
+      "šešioms",
+      "šešias",
+      "šešiomis",
+      "šešiose"
+    ],
+    "mA": [
+      "šešì",
+      "šešių̃",
+      "šešíems",
+      "šešìs",
+      "šešiaĩs",
+      "šešiuosè"
+    ],
+    "fA": [
+      "šẽšios",
+      "šešių̃",
+      "šešióms",
+      "šešiàs",
+      "šešiomìs",
+      "šešiosè"
+    ]
+  },
+  "7": {
+    "lt": "septyni",
+    "m": [
+      "septyni",
+      "septynių",
+      "septyniems",
+      "septynis",
+      "septyniais",
+      "septyniuose"
+    ],
+    "f": [
+      "septynios",
+      "septynių",
+      "septynioms",
+      "septynias",
+      "septyniomis",
+      "septyniose"
+    ]
+  },
+  "8": {
+    "lt": "aštuoni",
+    "m": [
+      "aštuoni",
+      "aštuonių",
+      "aštuoniems",
+      "aštuonis",
+      "aštuoniais",
+      "aštuoniuose"
+    ],
+    "f": [
+      "aštuonios",
+      "aštuonių",
+      "aštuonioms",
+      "aštuonias",
+      "aštuoniomis",
+      "aštuoniose"
+    ]
+  },
+  "9": {
+    "lt": "devyni",
+    "m": [
+      "devyni",
+      "devynių",
+      "devyniems",
+      "devynis",
+      "devyniais",
+      "devyniuose"
+    ],
+    "f": [
+      "devynios",
+      "devynių",
+      "devynioms",
+      "devynias",
+      "devyniomis",
+      "devyniose"
+    ]
+  }
+}

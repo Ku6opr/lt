@@ -17,6 +17,7 @@
   const degLabel = (d) => (d === 'pos' ? L.degPos : d === 'comp' ? L.degComp : L.degSup);
 
   function setLevel(v) { settings.update((st) => ({ ...st, level: v })); onLevelChange(); }
+  function toggleAuto() { settings.update((st) => ({ ...st, autoLevel: !st.autoLevel })); }
   function toggleDeg(d) { settings.update((st) => ({ ...st, degrees: { ...st.degrees, [d]: !st.degrees[d] } })); onPoolChange(); }
   function setTheme(id) { settings.update((st) => ({ ...st, theme: id })); onPoolChange(); }
   const tint = (on) => (on ? 'border-color:var(--color-accent);background:#fff3e4;' : '');
@@ -29,10 +30,10 @@
 
   <div style="display:flex;flex-direction:column;gap:var(--space-4)">
     <div>
-      <div style="margin-bottom:8px"><span class="card-kicker" style="margin:0">{L.difficulty}</span></div>
+      <div style="margin-bottom:8px;display:flex;align-items:center;justify-content:space-between"><span class="card-kicker" style="margin:0">{L.difficulty}</span><label style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--color-neutral-600);cursor:pointer"><input type="checkbox" checked={s.autoLevel} on:change={toggleAuto}> {L.autoLevel}</label></div>
       <div style="display:flex;align-items:center;gap:12px">
         <span class="text-muted" style="font-size:12px">{L.easy}</span>
-        <input type="range" min="0" max={maxLevel} step="1" value={s.level} on:input={(e) => setLevel(+e.target.value)} style="flex:1">
+        <input type="range" min="0" max={maxLevel} step="1" value={s.level} disabled={s.autoLevel} on:input={(e) => setLevel(+e.target.value)} style="flex:1;{s.autoLevel ? 'opacity:.45' : ''}">
         <span class="text-muted" style="font-size:12px">{L.hard}</span>
       </div>
     </div>

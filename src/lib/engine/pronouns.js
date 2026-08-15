@@ -19,6 +19,7 @@ export function newPronounTask(state, prev) {
   const nums = ['sg', 'pl'].filter((n) => state.numbers[n]);
   let pool = PRONOUNS.filter((p) => nums.includes(p.num));
   if (!pool.length) pool = PRONOUNS;
+  if (state.focusWordId) { const f = pool.filter((p) => p.id === state.focusWordId); if (f.length) pool = f; }
 
   let pick = pool;
   if (prev && prev.wordId && pool.length > 1) { const a = pool.filter((p) => p.id !== prev.wordId); if (a.length) pick = a; }

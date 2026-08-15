@@ -25,6 +25,7 @@ function persisted(key, defaults) {
 
 const vformsSettings = persisted('lt-trainer-verb-forms-v1', {
   level: 0,
+  autoLevel: false,
   cases: {},
   types: {},
   numbers: { sg: true, pl: true },
@@ -34,7 +35,48 @@ const vformsSettings = persisted('lt-trainer-verb-forms-v1', {
 
 const conjSettings = persisted('lt-trainer-conj-v1', {
   level: 0,
+  autoLevel: false,
   cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
+const conjPastSettings = persisted('lt-trainer-conj-past-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
+const conjFutSettings = persisted('lt-trainer-conj-fut-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
+const numQtySettings = persisted('lt-trainer-num-qty-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
+const numeralSettings = persisted('lt-trainer-numerals-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: { V: false, K: true, N: true, G: true, In: true, Vt: true },
   types: {},
   numbers: { sg: true, pl: true },
   theme: 'all',
@@ -43,6 +85,7 @@ const conjSettings = persisted('lt-trainer-conj-v1', {
 
 const nounSettings = persisted('lt-trainer-vidminky-v1', {
   level: 0,
+  autoLevel: false,
   cases: { V: false, K: true, N: false, G: false, In: false, Vt: false },
   types: { as: true, is_b: true, is_m: true, ys: true, us: true, ius: true, uo_m: true, a: true, ia: true, e: true, is_f: true, uo_f: true },
   numbers: { sg: true, pl: false },
@@ -53,6 +96,7 @@ const nounSettings = persisted('lt-trainer-vidminky-v1', {
 
 const adjNomSettings = persisted('lt-trainer-adj-nom-v1', {
   level: 0,
+  autoLevel: false,
   cases: { V: true, K: false, N: false, G: false, In: false, Vt: false },
   types: { I: true, II: true, III: true },
   gender: 'both',
@@ -66,6 +110,7 @@ const adjNomSettings = persisted('lt-trainer-adj-nom-v1', {
 
 const adjCasesSettings = persisted('lt-trainer-adj-cases-v1', {
   level: 0,
+  autoLevel: false,
   cases: { V: false, K: true, N: false, G: true, In: false, Vt: false },
   types: { I: true, II: true, III: true },
   gender: 'both',
@@ -79,6 +124,7 @@ const adjCasesSettings = persisted('lt-trainer-adj-cases-v1', {
 
 const adjDegSettings = persisted('lt-trainer-adj-degrees-v1', {
   level: 0,
+  autoLevel: false,
   cases: { V: true, K: false, N: false, G: false, In: false, Vt: false },
   types: { I: true, II: true, III: true },
   gender: 'both',
@@ -92,6 +138,7 @@ const adjDegSettings = persisted('lt-trainer-adj-degrees-v1', {
 
 const adverbSettings = persisted('lt-trainer-adverbs-v1', {
   level: 0,
+  autoLevel: false,
   cases: {},
   types: { I: true, II: true, III: true },
   numbers: { sg: true, pl: false },
@@ -103,6 +150,7 @@ const adverbSettings = persisted('lt-trainer-adverbs-v1', {
 
 const pronounSettings = persisted('lt-trainer-pronouns-v1', {
   level: 0,
+  autoLevel: false,
   cases: { V: false, K: true, N: true, G: true, In: true, Vt: true },
   types: {},
   numbers: { sg: true, pl: true },
@@ -111,7 +159,7 @@ const pronounSettings = persisted('lt-trainer-pronouns-v1', {
   tableOpen: true
 });
 
-const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
+const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, numerals: numeralSettings, 'num-qty': numQtySettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
 
 export function settingsFor(topicId) {
   return byTopic[topicId] || nounSettings;

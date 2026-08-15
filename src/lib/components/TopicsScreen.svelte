@@ -2,9 +2,14 @@
   import { topics } from '../../topics/index.js';
   import { lang, LANGS } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
+  import { progress } from '../stores/progress.js';
+  import { masteryOf } from '../stores/mastery.js';
   export let onEnter;
 
   $: L = UI[$lang];
+  $: pctOf = (id) => masteryOf($progress, id).pct;
+  const R = 10.5;
+  const CIRC = 2 * Math.PI * R;
 
   const TINT = {
     gold: { bg: 'linear-gradient(140deg,#f8e8cd,#fdf4e4)', fg: '#a86f18', ring: '#ecd6ab' },
@@ -43,6 +48,16 @@
           <span class="title">{topic.title[$lang]}</span>
           <span class="sub">{topic.subtitle[$lang]}</span>
         </span>
+        {#if pctOf(topic.id) > 0}
+          <span class="ring" title={Math.round(pctOf(topic.id) * 100) + '%'}>
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <circle cx="15" cy="15" r={R} fill="none" stroke="var(--color-divider)" stroke-width="3"/>
+              <circle cx="15" cy="15" r={R} fill="none" stroke="var(--fg)" stroke-width="3" stroke-linecap="round"
+                stroke-dasharray="{CIRC * pctOf(topic.id)} {CIRC}" transform="rotate(-90 15 15)"/>
+            </svg>
+            <span class="ring-pct">{Math.round(pctOf(topic.id) * 100)}</span>
+          </span>
+        {/if}
         <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     {/each}
@@ -98,6 +113,12 @@
   }
   .title { font-family: var(--font-heading); font-size: clamp(19px, 3.2cqw, 25px); line-height: 1.12; color: var(--color-text); }
   .sub { font-size: clamp(13px, 1.9cqw, 14px); line-height: 1.45; color: var(--color-neutral-600); }
+
+  .ring { position: relative; flex: none; width: 30px; height: 30px; }
+  .ring-pct {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading); font-size: 8.5px; font-weight: 600; color: var(--color-neutral-600);
+  }
 
   .chev { flex: none; color: var(--color-neutral-400); transition: transform .16s, color .16s; }
   .topic:hover .chev { color: var(--fg); transform: translateX(3px); }

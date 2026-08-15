@@ -1,0 +1,13 @@
+{
+  "10": { "lt": "dešimt", "ltA": "dẽšimt", "uk": "десять", "ru": "десять", "en": "ten" },
+  "11": { "lt": "vienuolika", "ltA": "vienúolika", "uk": "одинадцять", "ru": "одиннадцать", "en": "eleven" },
+  "12": { "lt": "dvylika", "ltA": "dvýlika", "uk": "дванадцять", "ru": "двенадцать", "en": "twelve" },
+  "13": { "lt": "trylika", "ltA": "trýlika", "uk": "тринадцять", "ru": "тринадцать", "en": "thirteen" },
+  "14": { "lt": "keturiolika", "ltA": "keturiólika", "uk": "чотирнадцять", "ru": "четырнадцать", "en": "fourteen" },
+  "15": { "lt": "penkiolika", "ltA": "penkiólika", "uk": "п'ятнадцять", "ru": "пятнадцать", "en": "fifteen" },
+  "16": { "lt": "šešiolika", "ltA": "šešiólika", "uk": "шістнадцять", "ru": "шестнадцать", "en": "sixteen" },
+  "17": { "lt": "septyniolika", "ltA": "septyniólika", "uk": "сімнадцять", "ru": "семнадцать", "en": "seventeen" },
+  "18": { "lt": "aštuoniolika", "ltA": "aštuoniólika", "uk": "вісімнадцять", "ru": "восемнадцать", "en": "eighteen" },
+  "19": { "lt": "devyniolika", "ltA": "devyniólika", "uk": "дев'ятнадцять", "ru": "девятнадцать", "en": "nineteen" },
+  "20": { "lt": "dvidešimt", "ltA": "dvìdešimt", "uk": "двадцять", "ru": "двадцать", "en": "twenty" }
+}

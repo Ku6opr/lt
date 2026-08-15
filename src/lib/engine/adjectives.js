@@ -173,6 +173,7 @@ export function newAdjTask(state, prev) {
   const supports = (n, nn) => (nn === 'sg' ? n.num !== 'pl' : n.num !== 'sg' && n.pl && n.pl.length === 6);
   let feas = pool.filter((p) => { const n = NOUN[p.n]; return wants.some((nn) => supports(n, nn)); });
   if (!feas.length) feas = pool;
+  if (state.focusWordId) { const f = feas.filter((p) => p.a === state.focusWordId); if (f.length) feas = f; }
 
   let pick = feas;
   if (prev && prev.wordId && feas.length > 1) { const a = feas.filter((x) => x.a !== prev.wordId); if (a.length) pick = a; }
@@ -262,6 +263,7 @@ export function newAdverbTask(state, prev) {
   const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
   let pool = ADV_LIST.filter((a) => !state.types || state.types[a.type]);
   if (!pool.length) pool = ADV_LIST;
+  if (state.focusWordId) { const f = pool.filter((a) => a.id === state.focusWordId); if (f.length) pool = f; }
   let pick = pool;
   if (prev && prev.wordId && pool.length > 1) { const a = pool.filter((x) => x.id !== prev.wordId); if (a.length) pick = a; }
   const adj = rnd(pick);
@@ -354,6 +356,7 @@ export function newDegreeTask(state, prev) {
   const supports = (n, nn) => (nn === 'sg' ? n.num !== 'pl' : n.num !== 'sg' && n.pl && n.pl.length === 6);
   let feas = pool.filter((p) => { const n = NOUN[p.n]; return wants.some((nn) => supports(n, nn)); });
   if (!feas.length) feas = pool;
+  if (state.focusWordId) { const f = feas.filter((p) => p.a === state.focusWordId); if (f.length) feas = f; }
 
   let pick = feas;
   if (prev && prev.wordId && feas.length > 1) { const a = feas.filter((x) => x.a !== prev.wordId); if (a.length) pick = a; }
