@@ -1,0 +1,838 @@
+{
+ "tas": {
+  "m": {
+   "sg": [
+    "tas",
+    "to",
+    "tam",
+    "tą",
+    "tuo",
+    "tame"
+   ],
+   "pl": [
+    "tie",
+    "tų",
+    "tiems",
+    "tuos",
+    "tais",
+    "tuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "tàs",
+    "tõ",
+    "tám",
+    "tą̃",
+    "tuõ",
+    "tamè"
+   ],
+   "pl": [
+    "tiẽ",
+    "tų̃",
+    "tíems",
+    "tuõs",
+    "taĩs",
+    "tuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "ta",
+    "tos",
+    "tai",
+    "tą",
+    "ta",
+    "toje"
+   ],
+   "pl": [
+    "tos",
+    "tų",
+    "toms",
+    "tas",
+    "tomis",
+    "tose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "tà",
+    "tõs",
+    "tái",
+    "tą̃",
+    "tà",
+    "tojè"
+   ],
+   "pl": [
+    "tõs",
+    "tų̃",
+    "tóms",
+    "tàs",
+    "tomìs",
+    "tosè"
+   ]
+  }
+ },
+ "šitas": {
+  "m": {
+   "sg": [
+    "šitas",
+    "šito",
+    "šitam",
+    "šitą",
+    "šituo",
+    "šitame"
+   ],
+   "pl": [
+    "šitie",
+    "šitų",
+    "šitiems",
+    "šituos",
+    "šitais",
+    "šituose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "šìtas",
+    "šìto",
+    "šitám",
+    "šìtą",
+    "šituõ",
+    "šitamè"
+   ],
+   "pl": [
+    "šìtie",
+    "šitų̃",
+    "šitíems",
+    "šituõs",
+    "šitaĩs",
+    "šituõse"
+   ]
+  },
+  "f": {
+   "sg": [
+    "šita",
+    "šitos",
+    "šitai",
+    "šitą",
+    "šita",
+    "šitoje"
+   ],
+   "pl": [
+    "šitos",
+    "šitų",
+    "šitoms",
+    "šitas",
+    "šitomis",
+    "šitose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "šità",
+    "šitõs",
+    "šìtai",
+    "šitą̃",
+    "šità",
+    "šitõje"
+   ],
+   "pl": [
+    "šitõs",
+    "šitų̃",
+    "šitóms",
+    "šitàs",
+    "šitomìs",
+    "šìtose"
+   ]
+  }
+ },
+ "anas": {
+  "m": {
+   "sg": [
+    "anas",
+    "ano",
+    "anam",
+    "aną",
+    "anuo",
+    "aname"
+   ],
+   "pl": [
+    "anie",
+    "anų",
+    "aniems",
+    "anuos",
+    "anais",
+    "anuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "anàs",
+    "anõ",
+    "anám",
+    "aną̃",
+    "anuõ",
+    "anamè"
+   ],
+   "pl": [
+    "aniẽ",
+    "anų̃",
+    "aníems",
+    "anuõs",
+    "anaĩs",
+    "anuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "ana",
+    "anos",
+    "anai",
+    "aną",
+    "ana",
+    "anoje"
+   ],
+   "pl": [
+    "anos",
+    "anų",
+    "anoms",
+    "anas",
+    "anomis",
+    "anose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "anà",
+    "anõs",
+    "anái",
+    "aną̃",
+    "anà",
+    "anojè"
+   ],
+   "pl": [
+    "anõs",
+    "anų̃",
+    "anóms",
+    "anàs",
+    "anomìs",
+    "anosè"
+   ]
+  }
+ },
+ "kas": {
+  "m": {
+   "sg": [
+    "kas",
+    "ko",
+    "kam",
+    "ką",
+    "kuo",
+    "kame"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "kàs",
+    "kõ",
+    "kám",
+    "ką̃",
+    "kuõ",
+    "kamè"
+   ]
+  }
+ },
+ "kitas": {
+  "m": {
+   "sg": [
+    "kitas",
+    "kito",
+    "kitam",
+    "kitą",
+    "kitu",
+    "kitame"
+   ],
+   "pl": [
+    "kiti",
+    "kitų",
+    "kitiems",
+    "kitus",
+    "kitais",
+    "kituose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "kìtas",
+    "kìto",
+    "kitám",
+    "kìtą",
+    "kitù",
+    "kitamè"
+   ],
+   "pl": [
+    "kitì",
+    "kitų̃",
+    "kitíems",
+    "kitùs",
+    "kitaĩs",
+    "kituosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "kita",
+    "kitos",
+    "kitai",
+    "kitą",
+    "kita",
+    "kitoje"
+   ],
+   "pl": [
+    "kitos",
+    "kitų",
+    "kitoms",
+    "kitas",
+    "kitomis",
+    "kitose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "kità",
+    "kitõs",
+    "kìtai",
+    "kìtą",
+    "kità",
+    "kitojè"
+   ],
+   "pl": [
+    "kìtos",
+    "kitų̃",
+    "kitóms",
+    "kitàs",
+    "kitomìs",
+    "kitosè"
+   ]
+  }
+ },
+ "visas": {
+  "m": {
+   "sg": [
+    "visas",
+    "viso",
+    "visam",
+    "visą",
+    "visu",
+    "visame"
+   ],
+   "pl": [
+    "visi",
+    "visų",
+    "visiems",
+    "visus",
+    "visais",
+    "visuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "vìsas",
+    "vìso",
+    "visám",
+    "vìsą",
+    "visù",
+    "visamè"
+   ],
+   "pl": [
+    "visì",
+    "visų̃",
+    "visíems",
+    "visùs",
+    "visaĩs",
+    "visuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "visa",
+    "visos",
+    "visai",
+    "visą",
+    "visa",
+    "visoje"
+   ],
+   "pl": [
+    "visos",
+    "visų",
+    "visoms",
+    "visas",
+    "visomis",
+    "visose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "visà",
+    "visõs",
+    "vìsai",
+    "vìsą",
+    "visà",
+    "visojè"
+   ],
+   "pl": [
+    "vìsos",
+    "visų̃",
+    "visóms",
+    "visàs",
+    "visomìs",
+    "visosè"
+   ]
+  }
+ },
+ "toks": {
+  "m": {
+   "sg": [
+    "toks",
+    "tokio",
+    "tokiam",
+    "tokį",
+    "tokiu",
+    "tokiame"
+   ],
+   "pl": [
+    "tokie",
+    "tokių",
+    "tokiems",
+    "tokius",
+    "tokiais",
+    "tokiuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "tóks",
+    "tókio",
+    "tokiám",
+    "tókį",
+    "tókiu",
+    "tokiamè"
+   ],
+   "pl": [
+    "tokiẽ",
+    "tokių̃",
+    "tokíems",
+    "tókius",
+    "tokiaĩs",
+    "tokiuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "tokia",
+    "tokios",
+    "tokiai",
+    "tokią",
+    "tokia",
+    "tokioje"
+   ],
+   "pl": [
+    "tokios",
+    "tokių",
+    "tokioms",
+    "tokias",
+    "tokiomis",
+    "tokiose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "tokià",
+    "tokiõs",
+    "tókiai",
+    "tókią",
+    "tókia",
+    "tokiojè"
+   ],
+   "pl": [
+    "tókios",
+    "tokių̃",
+    "tokióms",
+    "tókias",
+    "tokiomìs",
+    "tokiosè"
+   ]
+  }
+ },
+ "joks": {
+  "m": {
+   "sg": [
+    "joks",
+    "jokio",
+    "jokiam",
+    "jokį",
+    "jokiu",
+    "jokiame"
+   ],
+   "pl": [
+    "jokie",
+    "jokių",
+    "jokiems",
+    "jokius",
+    "jokiais",
+    "jokiuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "jóks",
+    "jókio",
+    "jokiám",
+    "jókį",
+    "jókiu",
+    "jokiamè"
+   ],
+   "pl": [
+    "jokiẽ",
+    "jokių̃",
+    "jokíems",
+    "jókius",
+    "jokiaĩs",
+    "jokiuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "jokia",
+    "jokios",
+    "jokiai",
+    "jokią",
+    "jokia",
+    "jokioje"
+   ],
+   "pl": [
+    "jokios",
+    "jokių",
+    "jokioms",
+    "jokias",
+    "jokiomis",
+    "jokiose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "jokià",
+    "jokiõs",
+    "jókiai",
+    "jókią",
+    "jókia",
+    "jokiojè"
+   ],
+   "pl": [
+    "jókios",
+    "jokių̃",
+    "jokióms",
+    "jókias",
+    "jokiomìs",
+    "jokiosè"
+   ]
+  }
+ },
+ "visoks": {
+  "m": {
+   "sg": [
+    "visoks",
+    "visokio",
+    "visokiam",
+    "visokį",
+    "visokiu",
+    "visokiame"
+   ],
+   "pl": [
+    "visokie",
+    "visokių",
+    "visokiems",
+    "visokius",
+    "visokiais",
+    "visokiuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "visóks",
+    "visókio",
+    "visokiám",
+    "visókį",
+    "visókiu",
+    "visokiamè"
+   ],
+   "pl": [
+    "visokiẽ",
+    "visokių̃",
+    "visokíems",
+    "visókius",
+    "visokiaĩs",
+    "visokiuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "visokia",
+    "visokios",
+    "visokiai",
+    "visokią",
+    "visokia",
+    "visokioje"
+   ],
+   "pl": [
+    "visokios",
+    "visokių",
+    "visokioms",
+    "visokias",
+    "visokiomis",
+    "visokiose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "visokià",
+    "visokiõs",
+    "visókiai",
+    "visókią",
+    "visókia",
+    "visokiojè"
+   ],
+   "pl": [
+    "visókios",
+    "visokių̃",
+    "visokióms",
+    "visókias",
+    "visokiomìs",
+    "visokiosè"
+   ]
+  }
+ },
+ "kuris": {
+  "m": {
+   "sg": [
+    "kuris",
+    "kurio",
+    "kuriam",
+    "kurį",
+    "kuriuo",
+    "kuriame"
+   ],
+   "pl": [
+    "kurie",
+    "kurių",
+    "kuriems",
+    "kuriuos",
+    "kuriais",
+    "kuriuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "kurìs",
+    "kuriõ",
+    "kuriám",
+    "kurį̃",
+    "kuriuõ",
+    "kuriamè"
+   ],
+   "pl": [
+    "kuriẽ",
+    "kurių̃",
+    "kuríems",
+    "kuriuõs",
+    "kuriaĩs",
+    "kuriuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "kuri",
+    "kurios",
+    "kuriai",
+    "kurią",
+    "kuria",
+    "kurioje"
+   ],
+   "pl": [
+    "kurios",
+    "kurių",
+    "kurioms",
+    "kurias",
+    "kuriomis",
+    "kuriose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "kurì",
+    "kuriõs",
+    "kuriái",
+    "kurią̃",
+    "kurià",
+    "kuriojè"
+   ],
+   "pl": [
+    "kuriõs",
+    "kurių̃",
+    "kurióms",
+    "kuriàs",
+    "kuriomìs",
+    "kuriosè"
+   ]
+  }
+ },
+ "šis": {
+  "m": {
+   "sg": [
+    "šis",
+    "šio",
+    "šiam",
+    "šį",
+    "šiuo",
+    "šiame"
+   ],
+   "pl": [
+    "šie",
+    "šių",
+    "šiems",
+    "šiuos",
+    "šiais",
+    "šiuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "šìs",
+    "šiõ",
+    "šiám",
+    "šį̃",
+    "šiuõ",
+    "šiamè"
+   ],
+   "pl": [
+    "šiẽ",
+    "šių̃",
+    "šíems",
+    "šiuõs",
+    "šiaĩs",
+    "šiuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "ši",
+    "šios",
+    "šiai",
+    "šią",
+    "šia",
+    "šioje"
+   ],
+   "pl": [
+    "šios",
+    "šių",
+    "šioms",
+    "šias",
+    "šiomis",
+    "šiose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "šì",
+    "šiõs",
+    "šiái",
+    "šią̃",
+    "šià",
+    "šiojè"
+   ],
+   "pl": [
+    "šiõs",
+    "šių̃",
+    "šióms",
+    "šiàs",
+    "šiomìs",
+    "šiosè"
+   ]
+  }
+ },
+ "pats": {
+  "m": {
+   "sg": [
+    "pats",
+    "paties",
+    "pačiam",
+    "patį",
+    "pačiu",
+    "pačiame"
+   ],
+   "pl": [
+    "patys",
+    "pačių",
+    "patiems",
+    "pačius",
+    "pačiais",
+    "pačiuose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "pàts",
+    "patiẽs",
+    "pačiám",
+    "pãtį",
+    "pačiù",
+    "pačiamè"
+   ],
+   "pl": [
+    "pãtys",
+    "pačių̃",
+    "patíems",
+    "pačiùs",
+    "pačiaĩs",
+    "pačiuosè"
+   ]
+  },
+  "f": {
+   "sg": [
+    "pati",
+    "pačios",
+    "pačiai",
+    "pačią",
+    "pačia",
+    "pačioje"
+   ],
+   "pl": [
+    "pačios",
+    "pačių",
+    "pačioms",
+    "pačias",
+    "pačiomis",
+    "pačiose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "patì",
+    "pačiõs",
+    "pãčiai",
+    "pãčią",
+    "pačià",
+    "pačiojè"
+   ],
+   "pl": [
+    "pãčios",
+    "pačių̃",
+    "pačióms",
+    "pačiàs",
+    "pačiomìs",
+    "pačiosè"
+   ]
+  }
+ }
+}

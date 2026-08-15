@@ -26,6 +26,8 @@ function computeTotal(topicId) {
     case 'conj-fut': return { prefix: 'w|', total: VERBS.filter((v) => v.fut).length * 5 };
     case 'numerals': return { prefix: 'tc|', total: 9 * 5 };
     case 'num-qty': return { prefix: 'tc|', total: 20 };
+    case 'dem-nom': return { prefix: 'tc|', total: 11 * 2 };
+    case 'dem-cases': return { prefix: 'tc|', total: 11 * 5 * 2 };
     case 'vidminky': return { prefix: 'tc|', total: nounTotal() };
     case 'adj-nom': return { prefix: 'tc|', total: 3 * 2 * 1 * 2 };
     case 'adj-cases': return { prefix: 'tc|', total: 3 * 2 * 5 * 2 };

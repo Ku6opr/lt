@@ -83,6 +83,26 @@ const numeralSettings = persisted('lt-trainer-numerals-v1', {
   tableOpen: true
 });
 
+const demNomSettings = persisted('lt-trainer-dem-nom-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
+const demCaseSettings = persisted('lt-trainer-dem-cases-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: { V: false, K: true, N: true, G: true, In: true, Vt: true },
+  types: { tas: true, kitas: true, toks: true, kuris: true, pats: true },
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
 const nounSettings = persisted('lt-trainer-vidminky-v1', {
   level: 0,
   autoLevel: false,
@@ -159,7 +179,7 @@ const pronounSettings = persisted('lt-trainer-pronouns-v1', {
   tableOpen: true
 });
 
-const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, numerals: numeralSettings, 'num-qty': numQtySettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
+const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, numerals: numeralSettings, 'num-qty': numQtySettings, 'dem-nom': demNomSettings, 'dem-cases': demCaseSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
 
 export function settingsFor(topicId) {
   return byTopic[topicId] || nounSettings;

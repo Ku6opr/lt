@@ -5,6 +5,7 @@
   import { ADJECTIVES } from '../data/adjectives.js';
   import { PRONOUNS } from '../data/pronouns.js';
   import { NUMERALS, TEENS } from '../data/numerals.js';
+  import { DEM_PRONOUNS } from '../data/demPronouns.js';
   import { VERBS, PERSON_COLS, PERSON_LABEL } from '../data/verbsConj.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
@@ -19,8 +20,10 @@
   const isVF = topic.kind === 'vforms';
   const isNum = topic.kind === 'num';
   const isNumQty = topic.kind === 'numqty';
+  const isDemNom = topic.kind === 'demnom';
+  const isDemCase = topic.kind === 'demcase';
   const ALL_CASES = ['V', 'K', 'N', 'G', 'In', 'Vt'];
-  const cols = isNumQty ? ['V'] : isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isVF ? ['pres'] : isConj ? PERSON_COLS : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
+  const cols = isDemNom ? ['sg', 'pl'] : isDemCase || isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isNumQty ? ['V'] : isVF ? ['pres'] : isConj ? PERSON_COLS : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
   const ADJ_ROWS = [{ t: 'I' }, { t: 'II' }, { t: 'III' }];
   const nounName = {};
   for (const w of WORDS) nounName[w.id] = w;
@@ -31,7 +34,7 @@
 
   let viewNum = 'sg';
   $: L = UI[$lang];
-  $: colLabel = (c) => (isVF ? 'jis, ji' : isConj ? PERSON_LABEL[c] : isAdverb || isDeg ? L[c === 'pos' ? 'degPos' : c === 'comp' ? 'degComp' : 'degSup'] : c);
+  $: colLabel = (c) => (isDemNom ? (c === 'sg' ? L.numSg : L.numPl) : isVF ? 'jis, ji' : isConj ? PERSON_LABEL[c] : isAdverb || isDeg ? L[c === 'pos' ? 'degPos' : c === 'comp' ? 'degComp' : 'degSup'] : c);
   $: data = ($progress[topic.id] && $progress[topic.id].forms) || {};
 
   const cellKey = (type, gender, c, vn) => (isAdj ? `tc|${type}|${gender}|${c}|${vn}` : `tc|${type}|${c}|${vn}`);
@@ -86,6 +89,18 @@
         cells: [{ m: mastery(g(`tc|${n.id}`)) }]
       }));
     }
+    if (isDemNom) {
+      return DEM_PRONOUNS.filter((p) => p.f).map((p) => ({
+        label: p.lt,
+        cells: cols.map((n) => ({ m: mastery(g(`tc|${p.id}|V|${n}`)) }))
+      }));
+    }
+    if (isDemCase) {
+      return DEM_PRONOUNS.filter((p) => p.f).map((p) => ({
+        label: p.lt,
+        cells: cols.map((c) => ({ m: mastery(g(`tc|${p.id}|${c}|${vn}`)) }))
+      }));
+    }
     return isAdj
       ? ADJ_ROWS.flatMap((t) => ['m', 'f'].map((gd) => ({
           label: t.t + ' ' + (gd === 'm' ? L.genderMAb : L.genderFAb),
@@ -122,8 +137,11 @@
   const numName = {};
   for (const n of NUMERALS) numName[n.id] = n;
   for (const n of TEENS) numName[n.id] = n;
+  const demName = {};
+  for (const p of DEM_PRONOUNS) demName[p.id] = p;
   const tr = (id) => {
     if (isPron) return (pronName[id] && pronName[id][glossKey][0]) || id;
+    if (isDemNom || isDemCase) { const p = demName[id]; return p ? (glossKey === 'en' ? p.en : p[glossKey].m.sg[0]) : id; }
     if (isNum || isNumQty) { const n = numName[id]; if (!n) return id; const v = n[glossKey]; return glossKey === 'en' ? n.en : typeof v === 'string' ? v : v.m[0]; }
     const src = isConj || isVF ? verbName : isAdj ? adjName : nounName;
     return (src[id] && src[id][glossKey]) || id;
@@ -138,7 +156,7 @@
       <b>{totals.graded}</b> {L.answered} · {L.accuracy} <b>{Math.round(totals.acc * 100)}%</b> · {L.coverage} <b>{totals.forms}</b>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
-      {#if !isConj && !isPron && !isAdverb && !isVF && !isNum && !isNumQty}
+      {#if !isConj && !isPron && !isAdverb && !isVF && !isNum && !isNumQty && !isDemNom}
       <div class="seg">
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'sg'} on:change={() => (viewNum = 'sg')}>{L.numSg}</label>
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'pl'} on:change={() => (viewNum = 'pl')}>{L.numPl}</label>

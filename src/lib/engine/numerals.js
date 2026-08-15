@@ -5,17 +5,22 @@ import { idx, boundedPrefix } from './stem.js';
 
 const OBLIQUE = ['K', 'N', 'G', 'In', 'Vt'];
 const rnd = (a) => a[Math.floor(Math.random() * a.length)];
-const FEM_LT = new Set(['a', 'ia', 'e', 'is_f', 'uo_f']);
+export const FEM_LT = new Set(['a', 'ia', 'e', 'is_f', 'uo_f']);
 const CASEKEY = { V: 'nom', K: 'gen', N: 'dat', G: 'acc', In: 'ins', Vt: 'loc' };
 
-// лічильні іменники: мають множину і не singularia tantum
-const COUNTABLE = WORDS.filter((w) => w.num === 'both' && w.pl && w.pl.length === 6);
+// лічильні іменники: мають множину, не singularia tantum і не маси/збірні
+// (маси кшталту «капуста/варення» дають кашу в рахунку: «п'ять капуст»)
+export const COUNTABLE = WORDS.filter((w) => w.num === 'both' && w.pl && w.pl.length === 6 && !w.mass);
 
-const srcG = (g) => (g === 'f' ? 'f' : 'm');
-const stripPrep = (s) => (s || '').replace(/^(у|в|об|о|на)\s+/, '');
+export const srcG = (g) => (g === 'f' ? 'f' : 'm');
+// литовський рід іменника: тип відміни, АЛЕ з винятками (dėdė — ч.р. попри -ė;
+// dantis — ч.р. попри i-відміну)
+const MASC_EXC = new Set(['dėdė', 'dantis']);
+export const ltGender = (w) => (MASC_EXC.has(w.id) ? 'm' : FEM_LT.has(w.type) ? 'f' : 'm');
+export const stripPrep = (s) => (s || '').replace(/^(у|в|об|о|на)\s+/, '');
 
 // іменник джерельною мовою у потрібній формі (мн. непрямі — з ukPlForms/ruPlForms)
-function nounSrc(noun, lang, number, caseId) {
+export function nounSrc(noun, lang, number, caseId) {
   const key = CASEKEY[caseId];
   if (lang === 'en') return number === 'pl' ? noun.enPl || noun.en : noun.en;
   const f = lang === 'ru' ? 'ru' : 'uk';
@@ -49,7 +54,7 @@ export function newNumeralTask(state, prev) {
   const num = rnd(pick);
 
   const noun = rnd(COUNTABLE);
-  const gender = FEM_LT.has(noun.type) ? 'f' : 'm';
+  const gender = ltGender(noun);
   const number = num.id === '1' ? 'sg' : 'pl';
   const forms = num[gender];
 
@@ -168,7 +173,7 @@ export function newNumQtyTask(state, prev) {
   const num = rnd(pick);
 
   const noun = rnd(COUNTABLE);
-  const gender = FEM_LT.has(noun.type) ? 'f' : 'm';
+  const gender = ltGender(noun);
   const nl = qtyNounLt(noun, num);
 
   const numLt = num.kind === 'teen' ? num.lt : num[gender][0];

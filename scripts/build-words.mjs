@@ -17,7 +17,7 @@ function ukGender(uk) {
 }
 
 const UK_PL = {
-  'день народження': 'дні народження', піца: 'піци',
+  'день народження': 'дні народження', піца: 'піци', острів: 'острови',
   людина: 'люди', дитина: 'діти', око: 'очі', вухо: 'вуха', мати: 'матері',
   батько: 'батьки', дядько: 'дядьки', друг: 'друзі', син: 'сини', брат: 'брати',
   будинок: 'будинки', ранок: 'ранки', вечір: 'вечори', вітер: 'вітри', день: 'дні',
@@ -482,6 +482,7 @@ const RU_EN = JSON.parse(fs.readFileSync('data-source/ru-en-nouns.json', 'utf8')
 const RU_UK_PL = fs.existsSync('data-source/ru-uk-plural.json') ? JSON.parse(fs.readFileSync('data-source/ru-uk-plural.json', 'utf8')) : {};
 const ACC = fs.existsSync('data-source/lt-accents-nouns.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-nouns.json', 'utf8')) : {};
 const ACC_FIX = fs.existsSync('data-source/lt-accents-nouns-fix.json') ? JSON.parse(fs.readFileSync('data-source/lt-accents-nouns-fix.json', 'utf8')) : {};
+const MASS = new Set(fs.existsSync('data-source/mass-nouns.json') ? JSON.parse(fs.readFileSync('data-source/mass-nouns.json', 'utf8')) : []);
 const foldA = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const guardA = (accArr, baseArr) => {
   if (!accArr || !baseArr || accArr.length !== baseArr.length) return null;
@@ -523,6 +524,7 @@ for (const w of source) {
   };
   if (ruPlForms) word.ruPlForms = ruPlForms;
   if (ukPlForms) word.ukPlForms = ukPlForms;
+  if (MASS.has(w.lemma)) word.mass = true;
   const ac = { ...(ACC[w.lemma] || {}), ...(ACC_FIX[w.lemma] || {}) };
   const sgA = guardA(ac.sgA, w.sg);
   if (sgA) {
