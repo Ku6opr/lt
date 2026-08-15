@@ -46,7 +46,9 @@ export function newPronounTask(state, prev) {
   const usePrep = driver && driver.pos === 'pre';
   const src = usePrep && pron[tKey + 'P'] ? pron[tKey + 'P'] : pron[tKey];
   const pronBare = lang === 'en' ? EN_OBJ[pron.id] : src[ci];
-  const phrase = driver ? driver.tpl[lang].replace('{p}', pronBare) : pron[tKey][ci];
+  // евфонія: укр «з мною» → «зі мною», рос «с мной» → «со мной»
+  const phrase = (driver ? driver.tpl[lang].replace('{p}', pronBare) : pron[tKey][ci])
+    .replace('з мною', 'зі мною').replace('с мной', 'со мной');
   const qLoc = lang === 'ru' ? target.qRu : lang === 'en' ? target.qEn : target.qUk;
   const qStr = lang === 'en' ? '(' + qLoc + ')' : '(' + qLoc + ' / ' + target.q + ')';
 
