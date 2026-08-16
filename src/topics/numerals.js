@@ -1,7 +1,7 @@
 export const numQtyTopic = {
   id: 'num-qty',
   kind: 'numqty',
-  n: 11,
+  n: 13,
   accent: 'gold',
   glyph: 'trys',
   title: { uk: 'Числівники: скільки?', ru: 'Числительные: сколько?', en: 'Numerals: how many?' },
@@ -16,7 +16,7 @@ export const numQtyTopic = {
 export const numeralsTopic = {
   id: 'numerals',
   kind: 'num',
-  n: 12,
+  n: 14,
   accent: 'gold',
   glyph: 'du, dvi',
   title: { uk: 'Числівники: відмінки', ru: 'Числительные: падежи', en: 'Numerals: cases' },

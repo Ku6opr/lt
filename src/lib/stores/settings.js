@@ -63,6 +63,26 @@ const conjFutSettings = persisted('lt-trainer-conj-fut-v1', {
   tableOpen: true
 });
 
+const conjImpSettings = persisted('lt-trainer-conj-imp-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
+const conjCondSettings = persisted('lt-trainer-conj-cond-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
 const numQtySettings = persisted('lt-trainer-num-qty-v1', {
   level: 0,
   autoLevel: false,
@@ -179,7 +199,7 @@ const pronounSettings = persisted('lt-trainer-pronouns-v1', {
   tableOpen: true
 });
 
-const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, numerals: numeralSettings, 'num-qty': numQtySettings, 'dem-nom': demNomSettings, 'dem-cases': demCaseSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
+const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, 'conj-imp': conjImpSettings, 'conj-cond': conjCondSettings, numerals: numeralSettings, 'num-qty': numQtySettings, 'dem-nom': demNomSettings, 'dem-cases': demCaseSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
 
 export function settingsFor(topicId) {
   return byTopic[topicId] || nounSettings;

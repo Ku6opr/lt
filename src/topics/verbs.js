@@ -59,3 +59,35 @@ export const conjFutTopic = {
   },
   trainerTitle: { uk: 'Дієвідмінювання в майбутньому часі', ru: 'Спряжение в будущем времени', en: 'Future-tense conjugation' }
 };
+
+export const conjImpTopic = {
+  id: 'conj-imp',
+  kind: 'conj',
+  tense: 'imp',
+  n: 5,
+  accent: 'gold',
+  glyph: 'dirbk!',
+  title: { uk: 'Дієслово: наказовий', ru: 'Глагол: повелительное', en: 'Verb: imperative' },
+  subtitle: {
+    uk: 'Наказовий спосіб: dirbk! dirbkite! Утворюється від інфінітива.',
+    ru: 'Повелительное наклонение: dirbk! dirbkite! Образуется от инфинитива.',
+    en: 'Imperative mood: dirbk! dirbkite! Formed from the infinitive.'
+  },
+  trainerTitle: { uk: 'Наказовий спосіб', ru: 'Повелительное наклонение', en: 'Imperative mood' }
+};
+
+export const conjCondTopic = {
+  id: 'conj-cond',
+  kind: 'conj',
+  tense: 'cond',
+  n: 6,
+  accent: 'gold',
+  glyph: 'dirbtų',
+  title: { uk: 'Дієслово: умовний («би»)', ru: 'Глагол: условное («бы»)', en: 'Verb: conditional' },
+  subtitle: {
+    uk: 'Умовний спосіб за особами: norėčiau — «хотів би», dirbtume — «ми працювали б».',
+    ru: 'Условное наклонение по лицам: norėčiau — «хотел бы», dirbtume — «мы работали бы».',
+    en: 'Conditional mood by person: norėčiau — “I would like”, dirbtume — “we would work”.'
+  },
+  trainerTitle: { uk: 'Умовний спосіб', ru: 'Условное наклонение', en: 'Conditional mood' }
+};

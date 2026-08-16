@@ -1,7 +1,7 @@
 export const pronounsTopic = {
   id: 'pronouns',
   kind: 'pron',
-  n: 9,
+  n: 11,
   accent: 'gold',
   glyph: 'aš',
   title: { uk: 'Особові займенники', ru: 'Личные местоимения', en: 'Personal pronouns' },

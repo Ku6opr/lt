@@ -1,0 +1,449 @@
+{
+  "buti": {
+    "imp": {
+      "sg2": "būk",
+      "pl2": "būkite"
+    },
+    "cond": {
+      "sg1": "būčiau",
+      "sg2": "būtum",
+      "p3": "būtų",
+      "pl1": "būtumėme",
+      "pl2": "būtumėte"
+    },
+    "impA": {
+      "sg2": "bū́k",
+      "pl2": "bū́kite"
+    },
+    "condA": {
+      "sg1": "bū́čiau",
+      "sg2": "bū́tum",
+      "p3": "bū́tų",
+      "pl1": "bū́tumėme",
+      "pl2": "bū́tumėte"
+    }
+  },
+  "tureti": {
+    "imp": {
+      "sg2": "turėk",
+      "pl2": "turėkite"
+    },
+    "cond": {
+      "sg1": "turėčiau",
+      "sg2": "turėtum",
+      "p3": "turėtų",
+      "pl1": "turėtume",
+      "pl2": "turėtumėte"
+    },
+    "impA": {
+      "sg2": "turė́k",
+      "pl2": "turė́kite"
+    },
+    "condA": {
+      "sg1": "turė́čiau",
+      "sg2": "turė́tum",
+      "p3": "turė́tų",
+      "pl1": "turė́tume",
+      "pl2": "turė́tumėte"
+    }
+  },
+  "noreti": {
+    "imp": {
+      "sg2": "norėk",
+      "pl2": "norėkite"
+    },
+    "cond": {
+      "sg1": "norėčiau",
+      "sg2": "norėtum",
+      "p3": "norėtų",
+      "pl1": "norėtume",
+      "pl2": "norėtumėte"
+    },
+    "impA": {
+      "sg2": "norė́k",
+      "pl2": "norė́kite"
+    },
+    "condA": {
+      "sg1": "norė́čiau",
+      "sg2": "norė́tum",
+      "p3": "norė́tų",
+      "pl1": "norė́tume",
+      "pl2": "norė́tumėte"
+    }
+  },
+  "galeti": {
+    "imp": {
+      "sg2": "galėk",
+      "pl2": "galėkite"
+    },
+    "cond": {
+      "sg1": "galėčiau",
+      "sg2": "galėtum",
+      "p3": "galėtų",
+      "pl1": "galėtume",
+      "pl2": "galėtumėte"
+    },
+    "impA": {
+      "sg2": "galė́k",
+      "pl2": "galė́kite"
+    },
+    "condA": {
+      "sg1": "galė́čiau",
+      "sg2": "galė́tum",
+      "p3": "galė́tų",
+      "pl1": "galė́tume",
+      "pl2": "galė́tumėte"
+    }
+  },
+  "eiti": {
+    "imp": {
+      "sg2": "eik",
+      "pl2": "eikite"
+    },
+    "cond": {
+      "sg1": "eičiau",
+      "sg2": "eitum",
+      "p3": "eitų",
+      "pl1": "eitume",
+      "pl2": "eitumėte"
+    },
+    "impA": {
+      "sg2": "eĩk",
+      "pl2": "eĩkite"
+    },
+    "condA": {
+      "sg1": "eĩčiau",
+      "sg2": "eĩtum",
+      "p3": "eĩtų",
+      "pl1": "eĩtume",
+      "pl2": "eĩtumėte"
+    }
+  },
+  "daryti": {
+    "imp": {
+      "sg2": "daryk",
+      "pl2": "darykite"
+    },
+    "cond": {
+      "sg1": "daryčiau",
+      "sg2": "darytum",
+      "p3": "darytų",
+      "pl1": "darytume",
+      "pl2": "darytumėte"
+    },
+    "impA": {
+      "sg2": "darýk",
+      "pl2": "darýkite"
+    },
+    "condA": {
+      "sg1": "darýčiau",
+      "sg2": "darýtum",
+      "p3": "darýtų",
+      "pl1": "darýtume",
+      "pl2": "darýtumėte"
+    }
+  },
+  "zinoti": {
+    "imp": {
+      "sg2": "žinok",
+      "pl2": "žinokite"
+    },
+    "cond": {
+      "sg1": "žinočiau",
+      "sg2": "žinotum",
+      "p3": "žinotų",
+      "pl1": "žinotume",
+      "pl2": "žinotumėte"
+    },
+    "impA": {
+      "sg2": "žinók",
+      "pl2": "žinókite"
+    },
+    "condA": {
+      "sg1": "žinóčiau",
+      "sg2": "žinótum",
+      "p3": "žinótų",
+      "pl1": "žinótume",
+      "pl2": "žinótumėte"
+    }
+  },
+  "matyti": {
+    "imp": {
+      "sg2": "matyk",
+      "pl2": "matykite"
+    },
+    "cond": {
+      "sg1": "matyčiau",
+      "sg2": "matytum",
+      "p3": "matytų",
+      "pl1": "matytume",
+      "pl2": "matytumėte"
+    },
+    "impA": {
+      "sg2": "matýk",
+      "pl2": "matýkite"
+    },
+    "condA": {
+      "sg1": "matýčiau",
+      "sg2": "matýtum",
+      "p3": "matýtų",
+      "pl1": "matýtume",
+      "pl2": "matýtumėte"
+    }
+  },
+  "kalbeti": {
+    "imp": {
+      "sg2": "kalbėk",
+      "pl2": "kalbėkite"
+    },
+    "cond": {
+      "sg1": "kalbėčiau",
+      "sg2": "kalbėtum",
+      "p3": "kalbėtų",
+      "pl1": "kalbėtume",
+      "pl2": "kalbėtumėte"
+    },
+    "impA": {
+      "sg2": "kalbė́k",
+      "pl2": "kalbė́kite"
+    },
+    "condA": {
+      "sg1": "kalbė́čiau",
+      "sg2": "kalbė́tum",
+      "p3": "kalbė́tų",
+      "pl1": "kalbė́tume",
+      "pl2": "kalbė́tumėte"
+    }
+  },
+  "gyventi": {
+    "imp": {
+      "sg2": "gyvenk",
+      "pl2": "gyvenkite"
+    },
+    "cond": {
+      "sg1": "gyvenčiau",
+      "sg2": "gyventum",
+      "p3": "gyventų",
+      "pl1": "gyventume",
+      "pl2": "gyventumėte"
+    },
+    "impA": {
+      "sg2": "gyvénk",
+      "pl2": "gyvénkite"
+    },
+    "condA": {
+      "sg1": "gyvénčiau",
+      "sg2": "gyvéntum",
+      "p3": "gyvéntų",
+      "pl1": "gyvéntume",
+      "pl2": "gyvéntumėte"
+    }
+  },
+  "dirbti": {
+    "imp": {
+      "sg2": "dirbk",
+      "pl2": "dirbkite"
+    },
+    "cond": {
+      "sg1": "dirbčiau",
+      "sg2": "dirbtum",
+      "p3": "dirbtų",
+      "pl1": "dirbtume",
+      "pl2": "dirbtumėte"
+    },
+    "impA": {
+      "sg2": "dìrbk",
+      "pl2": "dìrbkite"
+    },
+    "condA": {
+      "sg1": "dìrbčiau",
+      "sg2": "dìrbtum",
+      "p3": "dìrbtų",
+      "pl1": "dìrbtume",
+      "pl2": "dìrbtumėte"
+    }
+  },
+  "skaityti": {
+    "imp": {
+      "sg2": "skaityk",
+      "pl2": "skaitykite"
+    },
+    "cond": {
+      "sg1": "skaityčiau",
+      "sg2": "skaitytum",
+      "p3": "skaitytų",
+      "pl1": "skaitytume",
+      "pl2": "skaitytumėte"
+    },
+    "impA": {
+      "sg2": "skaitýk",
+      "pl2": "skaitýkite"
+    },
+    "condA": {
+      "sg1": "skaitýčiau",
+      "sg2": "skaitýtum",
+      "p3": "skaitýtų",
+      "pl1": "skaitýtume",
+      "pl2": "skaitýtumėte"
+    }
+  },
+  "rasyti": {
+    "imp": {
+      "sg2": "rašyk",
+      "pl2": "rašykite"
+    },
+    "cond": {
+      "sg1": "rašyčiau",
+      "sg2": "rašytum",
+      "p3": "rašytų",
+      "pl1": "rašytume",
+      "pl2": "rašytumėte"
+    },
+    "impA": {
+      "sg2": "rašýk",
+      "pl2": "rašýkite"
+    },
+    "condA": {
+      "sg1": "rašýčiau",
+      "sg2": "rašýtum",
+      "p3": "rašýtų",
+      "pl1": "rašýtume",
+      "pl2": "rašýtumėte"
+    }
+  },
+  "valgyti": {
+    "imp": {
+      "sg2": "valgyk",
+      "pl2": "valgykite"
+    },
+    "cond": {
+      "sg1": "valgyčiau",
+      "sg2": "valgytum",
+      "p3": "valgytų",
+      "pl1": "valgytume",
+      "pl2": "valgytumėte"
+    },
+    "impA": {
+      "sg2": "válgyk",
+      "pl2": "válgykite"
+    },
+    "condA": {
+      "sg1": "válgyčiau",
+      "sg2": "válgytum",
+      "p3": "válgytų",
+      "pl1": "válgytume",
+      "pl2": "válgytumėte"
+    }
+  },
+  "gerti": {
+    "imp": {
+      "sg2": "gerk",
+      "pl2": "gerkite"
+    },
+    "cond": {
+      "sg1": "gerčiau",
+      "sg2": "gertum",
+      "p3": "gertų",
+      "pl1": "gertume",
+      "pl2": "gertumėte"
+    },
+    "impA": {
+      "sg2": "gérk",
+      "pl2": "gérkite"
+    },
+    "condA": {
+      "sg1": "gérčiau",
+      "sg2": "gértum",
+      "p3": "gértų",
+      "pl1": "gértume",
+      "pl2": "gértumėte"
+    }
+  },
+  "myleti": {
+    "imp": {
+      "sg2": "mylėk",
+      "pl2": "mylėkite"
+    },
+    "cond": {
+      "sg1": "mylėčiau",
+      "sg2": "mylėtum",
+      "p3": "mylėtų",
+      "pl1": "mylėtume",
+      "pl2": "mylėtumėte"
+    }
+  },
+  "suprasti": {
+    "imp": {
+      "sg2": "suprask",
+      "pl2": "supraskite"
+    },
+    "cond": {
+      "sg1": "suprasčiau",
+      "sg2": "suprastum",
+      "p3": "suprastų",
+      "pl1": "suprastume",
+      "pl2": "suprastumėte"
+    },
+    "impA": {
+      "sg2": "supràsk",
+      "pl2": "supràskite"
+    },
+    "condA": {
+      "sg1": "supràsčiau",
+      "sg2": "supràstum",
+      "p3": "supràstų",
+      "pl1": "supràstume",
+      "pl2": "supràstumėte"
+    }
+  },
+  "klausti": {
+    "imp": {
+      "sg2": "klausk",
+      "pl2": "klauskite"
+    },
+    "cond": {
+      "sg1": "klausčiau",
+      "sg2": "klaustum",
+      "p3": "klaustų",
+      "pl1": "klaustume",
+      "pl2": "klaustumėte"
+    }
+  },
+  "moketi": {
+    "imp": {
+      "sg2": "mokėk",
+      "pl2": "mokėkite"
+    },
+    "cond": {
+      "sg1": "mokėčiau",
+      "sg2": "mokėtum",
+      "p3": "mokėtų",
+      "pl1": "mokėtume",
+      "pl2": "mokėtumėte"
+    },
+    "impA": {
+      "sg2": "mokė́k",
+      "pl2": "mokė́kite"
+    },
+    "condA": {
+      "sg1": "mokė́čiau",
+      "sg2": "mokė́tum",
+      "p3": "mokė́tų",
+      "pl1": "mokė́tume",
+      "pl2": "mokė́tumėte"
+    }
+  },
+  "dainuoti": {
+    "imp": {
+      "sg2": "dainuok",
+      "pl2": "dainuokite"
+    },
+    "cond": {
+      "sg1": "dainuočiau",
+      "sg2": "dainuotum",
+      "p3": "dainuotų",
+      "pl1": "dainuotume",
+      "pl2": "dainuotumėte"
+    }
+  }
+}

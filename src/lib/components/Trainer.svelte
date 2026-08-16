@@ -6,7 +6,7 @@
   import { record, candidateWeight, dimWeight, fold, keysFor, progress } from '../stores/progress.js';
   import { weakFormKeys } from '../stores/mastery.js';
   import { LEVELS, PHRASE_TIERS } from '../data/levels.js';
-  import { CONJ_TIERS } from '../engine/conjugation.js';
+  import { conjTiersFor } from '../engine/conjugation.js';
   import { DEG_TIERS } from '../engine/adjectives.js';
   import { VF_TIERS } from '../engine/verbForms.js';
   import { newTask, poolOk } from '../engine/generate.js';
@@ -82,7 +82,7 @@
     if (isNum) return NUM_TIERS.length - 1;
     if (isDemNom) return DEMNOM_TIERS.length - 1;
     if (isDemCase) return DEMCASE_TIERS.length - 1;
-    if (isConj) return CONJ_TIERS.length - 1;
+    if (isConj) return conjTiersFor(topic.tense || 'pres').length - 1;
     if (isAdverb || isDeg) return DEG_TIERS.length - 1;
     if (isAdj || isPron) return PHRASE_TIERS.length - 1;
     return st.theme === 'all' ? LEVELS.length - 1 : PHRASE_TIERS.length - 1;
@@ -330,7 +330,7 @@
   {:else if isVF}
     <VFormsSelector {settings} onLevelChange={makeNewTask} />
   {:else if isConj}
-    <ConjSelector {settings} onLevelChange={makeNewTask} />
+    <ConjSelector {settings} tense={topic.tense || 'pres'} onLevelChange={makeNewTask} />
   {:else if isPron}
     <PronounSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
   {:else if isAdverb}

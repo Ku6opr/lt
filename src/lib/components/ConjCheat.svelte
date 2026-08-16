@@ -10,35 +10,38 @@
   const byId = {};
   for (const v of VERBS) byId[v.id] = v;
   const buti = byId['buti'];
-  const F = (v) => (tense === 'past' ? v.past : tense === 'fut' ? v.fut : v.f) || v.f;
+  const F = (v) => (tense === 'past' ? v.past : tense === 'fut' ? v.fut : tense === 'imp' ? v.imp : tense === 'cond' ? v.cond : v.f) || v.f;
 
   // Приклади показують РІЗНІ моделі закінчень часу: теперішній -a/-i/-o, минулий -o/-ė/-ėjo,
-  // майбутній — одна модель -s на різних основах. Окончання виділене червоним.
-  // būti окремим стовпцем лише в теперішньому (суплетив esu/yra); buvo/bus — регулярні
+  // майбутній/наказовий/умовний — одна модель від інфінітива. Окончання виділене червоним.
+  // būti окремим стовпцем лише в теперішньому (суплетив esu/yra); buvo/bus/būk/būtų — регулярні
   const EX = {
     pres: ['dirbti', 'tureti', 'zinoti'],
     past: ['dirbti', 'rasyti'],
-    fut: ['dirbti']
+    fut: ['dirbti'],
+    imp: ['dirbti'],
+    cond: ['dirbti']
   };
+  const fromInf = tense === 'fut' || tense === 'imp' || tense === 'cond';
   const showButi = tense === 'pres';
   const cols = EX[tense].map((id) => byId[id]).map((v) => {
     const cf = F(v);
-    const forms = PERSON_COLS.map((s) => cf[s]);
+    const forms = PERSON_COLS.map((s) => cf[s]).filter(Boolean);
     const stem = boundedPrefix(forms);
-    // майбутнє утворюється від інфінітива (dirb|ti → dirb+s) — у шапці показуємо інфінітив,
-    // червоним -ti (те, що відкидається); в інших часах — 3-тю особу
-    const h = tense === 'fut' ? { stem: v.inf.slice(0, -2), tail: 'ti' } : { stem, tail: cf.p3.slice(stem.length) };
+    // майбутнє/наказовий/умовний утворюються від інфінітива (dirb|ti → dirb+s/+k/+tų) —
+    // у шапці показуємо інфінітив, червоним -ti (те, що відкидається); в інших часах — 3-тю особу
+    const h = fromInf ? { stem: v.inf.slice(0, -2), tail: 'ti' } : { stem, tail: cf.p3.slice(stem.length) };
     return { v, f: cf, stem, hStem: h.stem, hTail: h.tail };
   });
   const butiF = F(buti);
 
   const trOf = (v, tk) => {
     if (tense === 'past') return tk === 'en' ? (v.gp ? v.gp.en : v.en) : v.pt ? v.pt[tk].m : v[tk];
-    if (tense === 'fut') return v[tk];
+    if (fromInf) return v[tk];
     return v.g[tk][2];
   };
 
-  const ROWS = [
+  const ALL_ROWS = [
     { lt: 'aš', slot: 'sg1' },
     { lt: 'tu', slot: 'sg2' },
     { lt: 'jis, ji', slot: 'p3' },
@@ -46,6 +49,8 @@
     { lt: 'jūs', slot: 'pl2' },
     { lt: 'jie, jos', slot: 'p3' }
   ];
+  // у наказовому є лише tu/jūs — рядки без форм ховаємо
+  const ROWS = ALL_ROWS.filter((r) => cols[0].f[r.slot]);
 
   $: tKey = $lang === 'ru' ? 'ru' : $lang === 'en' ? 'en' : 'uk';
   $: L = UI[$lang];

@@ -1,14 +1,15 @@
 <script>
-  import { CONJ_TIERS } from '../engine/conjugation.js';
+  import { conjTiersFor } from '../engine/conjugation.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
 
   export let settings;
   export let onLevelChange;
+  export let tense = 'pres';
 
   $: L = UI[$lang];
   $: s = $settings;
-  $: maxLevel = CONJ_TIERS.length - 1;
+  $: maxLevel = conjTiersFor(tense).length - 1;
 
   function setLevel(v) { settings.update((st) => ({ ...st, level: v })); onLevelChange(); }
   function toggleAuto() { settings.update((st) => ({ ...st, autoLevel: !st.autoLevel })); }

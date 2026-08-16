@@ -1,7 +1,7 @@
 export const vidminkyTopic = {
   id: 'vidminky',
   kind: 'noun',
-  n: 5,
+  n: 7,
   accent: 'gold',
   glyph: 'Įn.',
   title: { uk: 'Відмінки іменників', ru: 'Падежи существительных', en: 'Noun cases' },

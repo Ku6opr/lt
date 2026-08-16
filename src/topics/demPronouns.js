@@ -1,7 +1,7 @@
 export const demNomTopic = {
   id: 'dem-nom',
   kind: 'demnom',
-  n: 13,
+  n: 15,
   accent: 'violet',
   glyph: 'tas, ta',
   title: { uk: 'Займенники: вказівні', ru: 'Местоимения: указательные', en: 'Pronouns: demonstrative' },
@@ -16,7 +16,7 @@ export const demNomTopic = {
 export const demCasesTopic = {
   id: 'dem-cases',
   kind: 'demcase',
-  n: 14,
+  n: 16,
   accent: 'violet',
   glyph: 'tam',
   title: { uk: 'Займенники: відмінювання', ru: 'Местоимения: склонение', en: 'Pronouns: declension' },

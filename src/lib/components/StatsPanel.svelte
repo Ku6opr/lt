@@ -23,7 +23,7 @@
   const isDemNom = topic.kind === 'demnom';
   const isDemCase = topic.kind === 'demcase';
   const ALL_CASES = ['V', 'K', 'N', 'G', 'In', 'Vt'];
-  const cols = isDemNom ? ['sg', 'pl'] : isDemCase || isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isNumQty ? ['V'] : isVF ? ['pres'] : isConj ? PERSON_COLS : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
+  const cols = isDemNom ? ['sg', 'pl'] : isDemCase || isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isNumQty ? ['V'] : isVF ? ['pres'] : isConj ? (topic.tense === 'imp' ? ['sg2', 'pl2'] : PERSON_COLS) : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
   const ADJ_ROWS = [{ t: 'I' }, { t: 'II' }, { t: 'III' }];
   const nounName = {};
   for (const w of WORDS) nounName[w.id] = w;

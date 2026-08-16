@@ -24,6 +24,8 @@ function computeTotal(topicId) {
     case 'conj': return { prefix: 'w|', total: VERBS.length * 5 };
     case 'conj-past': return { prefix: 'w|', total: VERBS.filter((v) => v.past).length * 5 };
     case 'conj-fut': return { prefix: 'w|', total: VERBS.filter((v) => v.fut).length * 5 };
+    case 'conj-imp': return { prefix: 'w|', total: VERBS.filter((v) => v.imp && v.it).length * 2 };
+    case 'conj-cond': return { prefix: 'w|', total: VERBS.filter((v) => v.cond).length * 5 };
     case 'numerals': return { prefix: 'tc|', total: 9 * 5 };
     case 'num-qty': return { prefix: 'tc|', total: 20 };
     case 'dem-nom': return { prefix: 'tc|', total: 11 * 2 };
