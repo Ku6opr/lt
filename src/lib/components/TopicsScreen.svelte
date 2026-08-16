@@ -7,15 +7,21 @@
   export let onEnter;
 
   $: L = UI[$lang];
-  $: pctOf = (id) => masteryOf($progress, id).pct;
-  const R = 10.5;
-  const CIRC = 2 * Math.PI * R;
+  $: pctOf = (id) => Math.round(masteryOf($progress, id).pct * 100);
+  const ISSUE_TITLE = { uk: 'Запит уроку: ', ru: 'Запрос урока: ', en: 'Lesson request: ' };
+  $: issueUrl = 'https://github.com/Ku6opr/lt/issues/new?title=' + encodeURIComponent(ISSUE_TITLE[$lang] || ISSUE_TITLE.uk);
 
-  const TINT = {
-    gold: { bg: 'linear-gradient(140deg,#f8e8cd,#fdf4e4)', fg: '#a86f18', ring: '#ecd6ab' },
-    violet: { bg: 'linear-gradient(140deg,#e8e0f1,#f5f1fb)', fg: '#67568e', ring: '#d8cbec' }
-  };
-  const tint = (t) => TINT[t] || TINT.gold;
+  const CATS = [
+    { id: 'verb', c: 'var(--color-accent-500)', tint: 'var(--color-accent-100)', line: 'solid', w: '3px' },
+    { id: 'noun', c: 'var(--color-accent-800)', tint: 'var(--color-accent-200)', line: 'solid', w: '2px' },
+    { id: 'adj', c: 'var(--color-neutral-700)', tint: 'var(--color-neutral-100)', line: 'solid', w: '1px' },
+    { id: 'pron', c: 'var(--color-accent-600)', tint: 'var(--color-accent-100)', line: 'dashed', w: '3px' },
+    { id: 'num', c: 'var(--color-neutral-500)', tint: 'var(--color-neutral-200)', line: 'dashed', w: '2px' },
+    { id: 'adv', c: 'var(--color-neutral-800)', tint: 'var(--color-neutral-100)', line: 'dotted', w: '3px' }
+  ];
+  const DEPTH = Math.max(...topics.map((t) => t.depth)) + 1;
+  const rows = [];
+  for (let d = 0; d < DEPTH; d++) rows.push(CATS.map((cat) => ({ cat, topic: topics.find((t) => t.cat === cat.id && t.depth === d) || null })));
 
   function setLang(id) { lang.set(id); }
 </script>
@@ -34,36 +40,39 @@
     <p class="lead">{L.homeLead}</p>
   </header>
 
-  <div class="grid">
-    {#each topics as topic}
-      <button
-        class="topic"
-        type="button"
-        on:click={() => onEnter(topic.id)}
-        style="--fg:{tint(topic.accent).fg};--ring:{tint(topic.accent).ring}"
-      >
-        <span class="tile" style="background:{tint(topic.accent).bg}">{topic.glyph}</span>
-        <span class="body">
-          <span class="kicker">{L.topicWord} {topic.n}</span>
-          <span class="title">{topic.title[$lang]}</span>
-          <span class="sub">{topic.subtitle[$lang]}</span>
-        </span>
-        {#if pctOf(topic.id) > 0}
-          <span class="ring" title={Math.round(pctOf(topic.id) * 100) + '%'}>
-            <svg width="30" height="30" viewBox="0 0 30 30">
-              <circle cx="15" cy="15" r={R} fill="none" stroke="var(--color-divider)" stroke-width="3"/>
-              <circle cx="15" cy="15" r={R} fill="none" stroke="var(--fg)" stroke-width="3" stroke-linecap="round"
-                stroke-dasharray="{CIRC * pctOf(topic.id)} {CIRC}" transform="rotate(-90 15 15)"/>
-            </svg>
-            <span class="ring-pct">{Math.round(pctOf(topic.id) * 100)}</span>
-          </span>
-        {/if}
-        <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
-    {/each}
-
-    <div class="soon">{L.soon}</div>
+  <div class="map lt-scroll">
+    <div class="mapgrid">
+      {#each CATS as cat}
+        <div class="cathead" style="color:{cat.c};border-bottom:{cat.w} {cat.line} {cat.c}">{L.catNames[cat.id]}</div>
+      {/each}
+      {#each rows as row}
+        {#each row as cell}
+          {#if cell.topic}
+            <button
+              class="cell"
+              type="button"
+              on:click={() => onEnter(cell.topic.id)}
+              title={cell.topic.title[$lang] + (pctOf(cell.topic.id) > 0 ? ' · ' + pctOf(cell.topic.id) + '%' : '')}
+              style="border-left:3px {cell.cat.line} {cell.cat.c};background:{cell.cat.tint}"
+            >
+              <span class="sym">{cell.topic.glyph}</span>
+              <span class="short">{cell.topic.short[$lang]}</span>
+              {#if pctOf(cell.topic.id) > 0}
+                <span class="bar"><span class="bar-fill" style="width:{pctOf(cell.topic.id)}%;background:{pctOf(cell.topic.id) >= 100 ? 'var(--color-accent-700)' : cell.cat.c}"></span></span>
+              {/if}
+            </button>
+          {:else}
+            <div class="gapcell"></div>
+          {/if}
+        {/each}
+      {/each}
+    </div>
   </div>
+
+  <a class="soon" href={issueUrl} target="_blank" rel="noopener noreferrer">
+    <span>{L.soon}</span>
+    <span class="soon-ask">{L.soonAsk}</span>
+  </a>
 </div>
 
 <style>
@@ -84,48 +93,50 @@
   .lang-opt:hover { color: var(--color-text); }
   .lang-opt.active { background: var(--color-accent); color: #fff; }
 
-  .grid { display: grid; gap: clamp(12px, 2cqw, 16px); }
-
-  .topic {
-    display: flex; align-items: center; gap: clamp(14px, 2.6cqw, 22px);
-    width: 100%; text-align: left; cursor: pointer;
-    padding: clamp(16px, 2.6cqw, 22px);
-    border: 1px solid var(--color-divider); border-radius: var(--radius-lg);
-    background: var(--color-surface); box-shadow: var(--shadow-sm);
-    transition: border-color .16s, box-shadow .16s, transform .16s;
-  }
-  .topic:hover { border-color: var(--ring); box-shadow: 0 6px 20px rgba(60,45,20,.09); transform: translateY(-1px); }
-  .topic:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-
-  .tile {
-    display: inline-flex; align-items: center; justify-content: center;
-    flex: none; width: clamp(64px, 13cqw, 84px); aspect-ratio: 1;
-    border-radius: 18px; border: 1px solid var(--ring);
-    color: var(--fg); font-family: var(--font-heading);
-    font-size: clamp(15px, 3cqw, 21px); line-height: 1;
-    padding: 0 6px; overflow: hidden; white-space: nowrap;
+  .map { overflow-x: auto; }
+  .mapgrid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(104px, 1fr));
+    gap: clamp(8px, 1.4cqw, 10px);
+    min-width: max-content;
+    width: 100%;
   }
 
-  .body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
-  .kicker {
-    font-family: var(--font-heading); font-size: 11px; font-weight: 600;
-    letter-spacing: .12em; text-transform: uppercase; color: var(--fg);
-  }
-  .title { font-family: var(--font-heading); font-size: clamp(19px, 3.2cqw, 25px); line-height: 1.12; color: var(--color-text); }
-  .sub { font-size: clamp(13px, 1.9cqw, 14px); line-height: 1.45; color: var(--color-neutral-600); }
-
-  .ring { position: relative; flex: none; width: 30px; height: 30px; }
-  .ring-pct {
-    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-heading); font-size: 8.5px; font-weight: 600; color: var(--color-neutral-600);
+  .cathead {
+    font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(11px, 1.7cqw, 13.5px);
+    text-align: center; padding: 0 4px 7px;
   }
 
-  .chev { flex: none; color: var(--color-neutral-400); transition: transform .16s, color .16s; }
-  .topic:hover .chev { color: var(--fg); transform: translateX(3px); }
+  .cell {
+    display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch;
+    text-align: left; width: 100%; min-height: clamp(70px, 12cqw, 96px);
+    padding: clamp(7px, 1.4cqw, 11px) clamp(8px, 1.6cqw, 12px);
+    border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: border-color .14s, transform .14s, box-shadow .14s;
+  }
+  .cell:hover { border-color: var(--color-accent); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+  .cell:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+  .sym { font-family: var(--font-heading); font-size: clamp(15px, 2.4cqw, 21px); line-height: 1.1; color: var(--color-text); }
+  .short { font-size: clamp(9.5px, 1.5cqw, 11.5px); line-height: 1.3; color: var(--color-neutral-700); margin-top: 3px; }
+
+  .bar { display: block; height: 3px; border-radius: 2px; background: var(--color-neutral-300); overflow: hidden; margin-top: clamp(6px, 1cqw, 8px); }
+  .bar-fill { display: block; height: 100%; }
+
+  .gapcell { border: 1px dashed var(--color-divider); border-radius: var(--radius-md); min-height: clamp(70px, 12cqw, 96px); }
 
   .soon {
+    display: flex; flex-direction: column; gap: 4px; align-items: center;
     border: 1px dashed var(--color-divider); border-radius: var(--radius-lg);
     padding: clamp(16px, 2.6cqw, 22px); text-align: center;
     color: var(--color-neutral-500); font-size: 13px;
+    text-decoration: none; cursor: pointer; margin-top: clamp(12px, 2cqw, 16px);
+    transition: border-color .16s, box-shadow .16s, transform .16s;
   }
+  .soon:hover { border-color: var(--color-accent); box-shadow: 0 6px 20px rgba(60,45,20,.09); transform: translateY(-1px); }
+  .soon:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .soon-ask { font-family: var(--font-heading); font-weight: 600; font-size: 13px; color: var(--color-accent); }
+  .soon:hover .soon-ask { text-decoration: underline; }
 </style>

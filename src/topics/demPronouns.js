@@ -1,5 +1,8 @@
 export const demNomTopic = {
   id: 'dem-nom',
+  cat: 'pron',
+  depth: 2,
+  short: { uk: 'Вказівні', ru: 'Указательные', en: 'Demonstrative' },
   kind: 'demnom',
   n: 15,
   accent: 'violet',
@@ -15,6 +18,9 @@ export const demNomTopic = {
 
 export const demCasesTopic = {
   id: 'dem-cases',
+  cat: 'pron',
+  depth: 4,
+  short: { uk: 'Відмінювання', ru: 'Склонение', en: 'Declension' },
   kind: 'demcase',
   n: 16,
   accent: 'violet',

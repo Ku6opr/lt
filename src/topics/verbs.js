@@ -1,5 +1,8 @@
 export const verbFormsTopic = {
   id: 'verb-forms',
+  cat: 'verb',
+  depth: 0,
+  short: { uk: 'Три форми', ru: 'Три формы', en: 'Three forms' },
   kind: 'vforms',
   n: 1,
   accent: 'gold',
@@ -15,6 +18,9 @@ export const verbFormsTopic = {
 
 export const verbsTopic = {
   id: 'conj',
+  cat: 'verb',
+  depth: 1,
+  short: { uk: 'Теперішній', ru: 'Настоящее', en: 'Present' },
   kind: 'conj',
   n: 2,
   accent: 'gold',
@@ -30,6 +36,9 @@ export const verbsTopic = {
 
 export const conjPastTopic = {
   id: 'conj-past',
+  cat: 'verb',
+  depth: 2,
+  short: { uk: 'Минулий', ru: 'Прошедшее', en: 'Past' },
   kind: 'conj',
   tense: 'past',
   n: 3,
@@ -46,6 +55,9 @@ export const conjPastTopic = {
 
 export const conjFutTopic = {
   id: 'conj-fut',
+  cat: 'verb',
+  depth: 3,
+  short: { uk: 'Майбутній', ru: 'Будущее', en: 'Future' },
   kind: 'conj',
   tense: 'fut',
   n: 4,
@@ -62,6 +74,9 @@ export const conjFutTopic = {
 
 export const conjImpTopic = {
   id: 'conj-imp',
+  cat: 'verb',
+  depth: 4,
+  short: { uk: 'Наказовий', ru: 'Повелительное', en: 'Imperative' },
   kind: 'conj',
   tense: 'imp',
   n: 5,
@@ -78,6 +93,9 @@ export const conjImpTopic = {
 
 export const conjCondTopic = {
   id: 'conj-cond',
+  cat: 'verb',
+  depth: 5,
+  short: { uk: 'Умовний («би»)', ru: 'Условное («бы»)', en: 'Conditional' },
   kind: 'conj',
   tense: 'cond',
   n: 6,

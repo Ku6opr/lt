@@ -1,5 +1,8 @@
 export const pronounsTopic = {
   id: 'pronouns',
+  cat: 'pron',
+  depth: 1,
+  short: { uk: 'Особові', ru: 'Личные', en: 'Personal' },
   kind: 'pron',
   n: 11,
   accent: 'gold',

@@ -5,6 +5,8 @@ export const UI = {
     chooseTopic: 'Оберіть тему',
     homeLead: 'Вивчай литовську граматику у власному темпі. Обери тему — і тренуйся без оцінок, таймерів і покарань.',
     soon: 'Наступні теми — згодом',
+    soonAsk: 'Бракує конкретної теми? Залишити запит →',
+    catNames: { verb: 'Дієслово', noun: 'Іменник', adj: 'Прикметник', pron: 'Займенник', num: 'Числівник', adv: 'Прислівник' },
     language: 'Мова',
 
     materials: 'Матеріали',
@@ -68,6 +70,8 @@ export const UI = {
     chooseTopic: 'Выберите тему',
     homeLead: 'Изучай литовскую грамматику в своём темпе. Выбери тему — и тренируйся без оценок, таймеров и наказаний.',
     soon: 'Следующие темы — позже',
+    soonAsk: 'Не хватает конкретной темы? Оставить запрос →',
+    catNames: { verb: 'Глагол', noun: 'Существительное', adj: 'Прилагательное', pron: 'Местоимение', num: 'Числительное', adv: 'Наречие' },
     language: 'Язык',
 
     materials: 'Материалы',
@@ -131,6 +135,8 @@ export const UI = {
     chooseTopic: 'Choose a topic',
     homeLead: 'Learn Lithuanian grammar at your own pace. Pick a topic and practice — no scores, timers, or penalties.',
     soon: 'More topics — coming soon',
+    soonAsk: 'Missing a specific topic? Leave a request →',
+    catNames: { verb: 'Verb', noun: 'Noun', adj: 'Adjective', pron: 'Pronoun', num: 'Numeral', adv: 'Adverb' },
     language: 'Language',
 
     materials: 'Reference',

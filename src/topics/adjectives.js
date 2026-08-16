@@ -1,9 +1,12 @@
 export const adjNomTopic = {
   id: 'adj-nom',
+  cat: 'adj',
+  depth: 1,
+  short: { uk: 'Називний', ru: 'Именительный', en: 'Nominative' },
   kind: 'adj',
   n: 8,
   accent: 'violet',
-  glyph: 'Koks?',
+  glyph: 'koks?',
   scopeCases: ['V'],
   cheatCases: ['V'],
   fixedFilters: true,
@@ -19,6 +22,9 @@ export const adjNomTopic = {
 
 export const adjDegreesTopic = {
   id: 'adj-degrees',
+  cat: 'adj',
+  depth: 2,
+  short: { uk: 'Ступені', ru: 'Степени', en: 'Degrees' },
   kind: 'adj',
   mode: 'degrees',
   n: 9,
@@ -35,6 +41,9 @@ export const adjDegreesTopic = {
 
 export const adverbsTopic = {
   id: 'adverbs',
+  cat: 'adv',
+  depth: 2,
+  short: { uk: 'Ступені', ru: 'Степени', en: 'Degrees' },
   kind: 'adj',
   mode: 'adverbs',
   n: 12,
@@ -51,10 +60,13 @@ export const adverbsTopic = {
 
 export const adjCasesTopic = {
   id: 'adj-cases',
+  cat: 'adj',
+  depth: 3,
+  short: { uk: 'Відмінки', ru: 'Падежи', en: 'Cases' },
   kind: 'adj',
   n: 10,
   accent: 'violet',
-  glyph: 'Kokio?',
+  glyph: 'kokio?',
   scopeCases: ['K', 'N', 'G', 'In', 'Vt'],
   cheatCases: ['V', 'K', 'N', 'G', 'In', 'Vt'],
   title: { uk: 'Прикметники: відмінки', ru: 'Прилагательные: падежи', en: 'Adjectives: cases' },

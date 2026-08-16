@@ -1,9 +1,12 @@
 export const vidminkyTopic = {
   id: 'vidminky',
+  cat: 'noun',
+  depth: 2,
+  short: { uk: 'Відмінки', ru: 'Падежи', en: 'Cases' },
   kind: 'noun',
   n: 7,
   accent: 'gold',
-  glyph: 'Įn.',
+  glyph: 'namo',
   title: { uk: 'Відмінки іменників', ru: 'Падежи существительных', en: 'Noun cases' },
   subtitle: {
     uk: 'Іменник змінює закінчення за відмінком. 6 відмінків, приклади з життя.',
