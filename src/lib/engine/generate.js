@@ -41,6 +41,11 @@ function inTheme(w, theme) {
   return !theme || theme === 'all' || (w.themes && w.themes.includes(theme));
 }
 
+const wordById = {};
+for (const w of WORDS) wordById[w.id] = w;
+const ALL_PHRASES = Object.values(PHRASES).flat();
+const ALL_PHRASE_CHANCE = 0.25;
+
 export function poolOk(state) {
   if (PHRASES[state.theme] && PHRASES[state.theme].length) return true;
   return CASES.some((c) => state.cases[c.id]) && WORDS.some((w) => state.types[w.type] && inTheme(w, state.theme)) && (state.numbers.sg || state.numbers.pl);
@@ -57,9 +62,11 @@ function phraseTask(state, bank, prev) {
   const p = pick[Math.floor(Math.random() * pick.length)];
   const word = WORDS.find((w) => w.id === p.w);
   const target = CASES.find((c) => c.id === p.c);
+  const num = p.number || 'sg';
   const ti = idx(target.id);
-  const forms = word.sg;
-  const stem = stemOf(word, 'sg');
+  const forms = word[num];
+  const formsA = word[num + 'A'] || [];
+  const stem = stemOf(word, num);
   const tail = forms[ti].slice(stem.length);
   const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
   const useUk = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
@@ -75,7 +82,7 @@ function phraseTask(state, bank, prev) {
     else if (hintMode === 'q') hint = qStr;
     revealUk = showsPhrase ? null : p.uk;
   } else {
-    const tn = nounForm(word, CASEKEY[target.id], 'sg', lang);
+    const tn = nounForm(word, CASEKEY[target.id], num, lang);
     if (hintMode === 'fullq') hint = qStr + ' ' + tn;
     else if (hintMode === 'full') hint = tn;
     else if (hintMode === 'q') hint = qStr;
@@ -87,10 +94,10 @@ function phraseTask(state, bank, prev) {
     typeId: word.type,
     wordId: word.id,
     themes: [state.theme],
-    number: 'sg',
+    number: num,
     mode: 'phrase',
     prompt,
-    promptA: useUk ? null : (word.sgA || [])[0] || null,
+    promptA: useUk ? null : formsA[0] || null,
     leadA: null,
     trailA: null,
     promptNote: null,
@@ -104,13 +111,18 @@ function phraseTask(state, bank, prev) {
     stem,
     tail,
     targetForm: forms[ti],
-    targetFormA: (word.sgA || [])[ti]
+    targetFormA: formsA[ti]
   };
 }
 
 export function newTask(state, prev) {
   const bank = PHRASES[state.theme];
   if (bank && bank.length) return phraseTask(state, bank, prev);
+
+  if (state.theme === 'all' && Math.random() < ALL_PHRASE_CHANCE) {
+    const mixed = ALL_PHRASES.filter((p) => state.cases[p.c] && state.numbers[p.number || 'sg'] && wordById[p.w] && state.types[wordById[p.w].type]);
+    if (mixed.length) return phraseTask(state, mixed, prev);
+  }
 
   const ec = CASES.filter((c) => state.cases[c.id]);
   const ew = WORDS.filter((w) => state.types[w.type] && inTheme(w, state.theme));

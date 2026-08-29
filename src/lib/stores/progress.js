@@ -18,6 +18,13 @@ export function keysFor(t, isAdj) {
       dims: [`case|${t.caseId}`, `num|${t.number}`]
     };
   }
+  if (t.quest) {
+    return {
+      form: `w|${t.wordId}|${t.qw}`,
+      cell: `tc|${t.qw}|${t.g}|${t.number}`,
+      dims: [`qw|${t.qw}`, `num|${t.number}`]
+    };
+  }
   if (t.numqty) {
     return {
       form: `w|${t.wordId}|${t.gender}`,

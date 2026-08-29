@@ -58,7 +58,7 @@ export const EN_OBJ = { as: 'me', tu: 'you', jis: 'him', ji: 'her', mes: 'us', j
 export const PRON_DRIVERS = {
   K: [
     { lt: 'be', pos: 'pre', tpl: { uk: 'без {p}', ru: 'без {p}', en: 'without {p}' } },
-    { lt: 'iš', pos: 'pre', tpl: { uk: 'від {p}', ru: 'от {p}', en: 'from {p}' } },
+    { lt: 'iš', pos: 'pre', tpl: { uk: 'з {p}', ru: 'из {p}', en: 'from {p}' } },
     { lt: 'prie', pos: 'pre', tpl: { uk: 'біля {p}', ru: 'возле {p}', en: 'near {p}' } }
   ],
   N: [
@@ -66,7 +66,7 @@ export const PRON_DRIVERS = {
     { lt: 'reikia', pos: 'post', tpl: { uk: '{p} потрібно', ru: '{p} нужно', en: 'needs {p}' } }
   ],
   G: [
-    { lt: 'pas', pos: 'pre', tpl: { uk: 'у {p}', ru: 'у {p}', en: 'at {p}' } }
+    { lt: 'pas', pos: 'pre', tpl: { uk: 'до {p}', ru: 'к {p}', en: 'to {p}' } }
   ],
   In: [
     { lt: 'su', pos: 'pre', tpl: { uk: 'з {p}', ru: 'с {p}', en: 'with {p}' } }

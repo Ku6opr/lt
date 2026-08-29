@@ -19,6 +19,18 @@ function head(lt, uk, ws) {
 function ant(lt, uk, ws) {
   return ws.map((w) => mk(lt + ' ant', w, 'K', uk, 'loc')).filter(Boolean);
 }
+// вага дискретних предметів рахується у множині («кілограм яблук», не «яблука»);
+// маса/збірне (word.mass) і одна велика штука вагою на вагу (кавун, ананас) лишаються в однині
+const MEASURE_SINGULAR = new Set(['arbūzas', 'ananasas']);
+function kg(lt, uk, ws) {
+  return ws.map((w) => {
+    const word = byId[w];
+    if (!word) return null;
+    const forceSingular = word.mass || word.num === 'sg' || MEASURE_SINGULAR.has(w) || !word.pl || word.pl.length !== 6 || !word.ukPlForms;
+    if (forceSingular) return mk(lt, w, 'K', uk, 'gen');
+    return { lead: lt, w, c: 'K', number: 'pl', ukPre: uk, ukForm: word.ukPlForms.gen, uk: uk + ' ' + word.ukPlForms.gen };
+  }).filter(Boolean);
+}
 
 export const PHRASES = {
   cafe: [
@@ -43,12 +55,12 @@ export const PHRASES = {
   ],
   prod: [
     ...gen('pirkti', 'G', 'купувати', 'acc', ['duona', 'pienas', 'sūris', 'mėsa', 'sviestas', 'kiaušinis', 'bananas', 'apelsinas', 'citrina', 'kopūstas', 'svogūnas', 'česnakas', 'morka', 'obuolys', 'pomidoras', 'agurkas', 'dešra', 'kumpis', 'grybas', 'uoga', 'braškė', 'riešutas']),
-    ...gen('kilogramas', 'K', 'кілограм', 'gen', ['sūris', 'mėsa', 'obuolys', 'bananas', 'pomidoras', 'bulvė', 'svogūnas', 'morka', 'riešutas', 'grybas', 'braškė']),
+    ...kg('kilogramas', 'кілограм', ['sūris', 'mėsa', 'obuolys', 'bananas', 'pomidoras', 'bulvė', 'svogūnas', 'morka', 'riešutas', 'grybas', 'braškė']),
     ...gen('butelis', 'K', 'пляшка', 'gen', ['pienas', 'vanduo', 'vynas', 'alus']),
     ...gen('be', 'K', 'без', 'gen', ['cukrus', 'mėsa']),
     ...gen('valgyti', 'G', 'їсти', 'acc', ['bananas', 'obuolys', 'riešutas', 'uoga', 'braškė', 'grybas', 'sūris', 'dešra', 'kumpis', 'morka']),
     ...gen('pirkti', 'G', 'купувати', 'acc', ['kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'ropė', 'silkė', 'vištiena', 'jautiena', 'kiauliena', 'aliejus', 'actas', 'medus', 'jogurtas']),
-    ...gen('kilogramas', 'K', 'кілограм', 'gen', ['kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'ropė', 'silkė', 'vištiena', 'jautiena', 'kiauliena']),
+    ...kg('kilogramas', 'кілограм', ['kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'ropė', 'silkė', 'vištiena', 'jautiena', 'kiauliena']),
     ...gen('valgyti', 'G', 'їсти', 'acc', ['kriaušė', 'slyva', 'vynuogė', 'arbūzas', 'ananasas', 'avietė', 'silkė']),
     ...gen('butelis', 'K', 'пляшка', 'gen', ['aliejus', 'limonadas'])
   ],
@@ -60,7 +72,9 @@ export const PHRASES = {
     ...gen('matyti', 'G', 'бачити', 'acc', ['muziejus', 'teatras', 'tiltas', 'bažnyčia', 'viešbutis', 'stotis']),
     ...gen('iki', 'K', 'до', 'gen', ['stotelė', 'miestas', 'parkas', 'muziejus', 'bažnyčia']),
     ...gen('eiti į', 'G', 'йти в', 'acc', ['universitetas', 'biblioteka', 'paštas', 'stadionas', 'baseinas', 'restoranas', 'pastatas', 'skveras']),
-    ...gen('važiuoti', 'In', 'їхати', 'ins', ['traukinys', 'lėktuvas', 'laivas', 'motociklas', 'sunkvežimis']),
+    ...gen('važiuoti', 'In', 'їхати', 'ins', ['traukinys', 'motociklas', 'sunkvežimis']),
+    ...gen('skristi', 'In', 'летіти', 'ins', ['lėktuvas']),
+    ...gen('plaukti', 'In', 'плисти', 'ins', ['laivas']),
     ...gen('prie', 'K', 'біля', 'gen', ['universitetas', 'biblioteka', 'paštas', 'stadionas', 'restoranas', 'žibintas', 'ženklas', 'pastatas']),
     ...gen('matyti', 'G', 'бачити', 'acc', ['traukinys', 'lėktuvas', 'laivas', 'motociklas', 'žibintas', 'ženklas', 'pastatas', 'skveras', 'universitetas'])
   ],

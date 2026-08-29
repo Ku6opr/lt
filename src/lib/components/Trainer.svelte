@@ -16,6 +16,7 @@
   import { newVFormsTask, vformsPoolOk } from '../engine/verbForms.js';
   import { newNumeralTask, numeralPoolOk, newNumQtyTask, numQtyPoolOk, NUMQ_TIERS, NUM_TIERS } from '../engine/numerals.js';
   import { newDemNomTask, demNomPoolOk, newDemCaseTask, demCasePoolOk, DEMNOM_TIERS, DEMCASE_TIERS, DEM_GROUP } from '../engine/demPronouns.js';
+  import { newQuestTask, questPoolOk, QUEST_TIERS } from '../engine/questions.js';
   import CheatTable from './CheatTable.svelte';
   import CheatStack from './CheatStack.svelte';
   import AdjCheatTable from './AdjCheatTable.svelte';
@@ -39,6 +40,8 @@
   import DemCaseSelector from './DemCaseSelector.svelte';
   import DemNomCheat from './DemNomCheat.svelte';
   import DemCaseCheat from './DemCaseCheat.svelte';
+  import QuestSelector from './QuestSelector.svelte';
+  import QuestCheat from './QuestCheat.svelte';
   import StatsPanel from './StatsPanel.svelte';
 
   export let topic;
@@ -54,9 +57,10 @@
   const isNumQty = topic.kind === 'numqty';
   const isDemNom = topic.kind === 'demnom';
   const isDemCase = topic.kind === 'demcase';
+  const isQuest = topic.kind === 'quest';
   const settings = settingsFor(topic.id);
-  const genTask = isDemNom ? newDemNomTask : isDemCase ? newDemCaseTask : isNumQty ? newNumQtyTask : isNum ? newNumeralTask : isVF ? newVFormsTask : isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
-  const genOk = isDemNom ? demNomPoolOk : isDemCase ? demCasePoolOk : isNumQty ? numQtyPoolOk : isNum ? numeralPoolOk : isVF ? vformsPoolOk : isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
+  const genTask = isQuest ? newQuestTask : isDemNom ? newDemNomTask : isDemCase ? newDemCaseTask : isNumQty ? newNumQtyTask : isNum ? newNumeralTask : isVF ? newVFormsTask : isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
+  const genOk = isQuest ? questPoolOk : isDemNom ? demNomPoolOk : isDemCase ? demCasePoolOk : isNumQty ? numQtyPoolOk : isNum ? numeralPoolOk : isVF ? vformsPoolOk : isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
   const selectorCases = isAdj ? topic.scopeCases : null;
   const cheatCases = isAdj ? topic.cheatCases : null;
   const fixedFilters = isAdj && topic.fixedFilters;
@@ -80,6 +84,7 @@
     if (isVF) return VF_TIERS.length - 1;
     if (isNumQty) return NUMQ_TIERS.length - 1;
     if (isNum) return NUM_TIERS.length - 1;
+    if (isQuest) return QUEST_TIERS.length - 1;
     if (isDemNom) return DEMNOM_TIERS.length - 1;
     if (isDemCase) return DEMCASE_TIERS.length - 1;
     if (isConj) return conjTiersFor(topic.tense || 'pres').length - 1;
@@ -98,6 +103,7 @@
   }
   function reviewOverrides(key) {
     const p = key.split('|');
+    if (isQuest) return { focusWordId: p[1], focusQw: p[2] };
     if (isNumQty) return { focusWordId: p[1] };
     if (isDemNom) return { focusWordId: p[1] };
     if (isDemCase) return { focusWordId: p[1], cases: { [p[3]]: true }, numbers: { [p[4]]: true }, types: { [DEM_GROUP[p[1]]]: true } };
@@ -139,7 +145,7 @@
   $: if ($lang !== lastLang) { lastLang = $lang; if (task) makeNewTask(); }
 
   function makeNewTask() {
-    const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver, pronId: task.pronId, formTarget: task.formTarget } : null;
+    const prev = task ? { wordId: task.wordId, caseId: task.caseId, degree: task.degree, driver: task.driver, pronId: task.pronId, formTarget: task.formTarget, qw: task.qw } : null;
     if (reviewMode && weakKeys.length) {
       const fresh = weakKeys.filter((k) => !prev || k.split('|')[1] !== prev.wordId);
       const key = rnd(fresh.length ? fresh : weakKeys);
@@ -183,6 +189,8 @@
     let invalid;
     if (isConj || isVF || isNumQty || isDemNom) {
       invalid = false;
+    } else if (isQuest) {
+      invalid = !st.qws[t.qw];
     } else if (isDemCase) {
       invalid = !st.cases[t.caseId] || !st.numbers[t.number] || (st.types && !st.types[DEM_GROUP[t.wordId]]);
     } else if (isNum) {
@@ -270,7 +278,7 @@
         <span class="card-kicker" style="margin:0">{L.materials}</span>
         <button class="btn btn-ghost" on:click={toggleTable} style="font-size:14px">{s.tableOpen ? L.hideTable : L.showTable}</button>
       </div>
-      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj && !isVF && !isNum && !isNumQty && !isDemNom && !isDemCase}
+      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj && !isVF && !isNum && !isNumQty && !isDemNom && !isDemCase && !isQuest}
         <div style="display:flex;align-items:center;gap:10px">
           <span class="text-muted" style="font-size:12px">{L.show}</span>
           <div class="seg">
@@ -282,7 +290,9 @@
     </div>
 
     {#if s.tableOpen}
-      {#if isDemNom}
+      {#if isQuest}
+        <QuestCheat />
+      {:else if isDemNom}
         <DemNomCheat />
       {:else if isDemCase}
         <DemCaseCheat />
@@ -319,7 +329,9 @@
     {#if statsOpen}<div style="margin-top:var(--space-3)"><StatsPanel {topic} /></div>{/if}
   </div>
 
-  {#if isDemNom}
+  {#if isQuest}
+    <QuestSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+  {:else if isDemNom}
     <DemNomSelector {settings} onLevelChange={makeNewTask} />
   {:else if isDemCase}
     <DemCaseSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />

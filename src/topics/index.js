@@ -4,5 +4,6 @@ import { adjNomTopic, adjDegreesTopic, adjCasesTopic, adverbsTopic } from './adj
 import { pronounsTopic } from './pronouns.js';
 import { numQtyTopic, numeralsTopic } from './numerals.js';
 import { demNomTopic, demCasesTopic } from './demPronouns.js';
+import { questionsTopic } from './questions.js';
 
-export const topics = [verbFormsTopic, verbsTopic, conjPastTopic, conjFutTopic, conjImpTopic, conjCondTopic, vidminkyTopic, adjNomTopic, adjDegreesTopic, adjCasesTopic, pronounsTopic, adverbsTopic, numQtyTopic, numeralsTopic, demNomTopic, demCasesTopic];
+export const topics = [verbFormsTopic, verbsTopic, conjPastTopic, conjFutTopic, conjImpTopic, conjCondTopic, vidminkyTopic, adjNomTopic, adjDegreesTopic, adjCasesTopic, pronounsTopic, adverbsTopic, numQtyTopic, numeralsTopic, demNomTopic, demCasesTopic, questionsTopic];

@@ -4,7 +4,7 @@ const OUT = 'src/lib/data/words.js';
 
 const UK_MASC_ANIM = new Set(['батько', 'дядько', 'собака', 'суддя']);
 const UK_FEM_ODD = new Set(['ніч', 'любов', 'осінь', 'мати']);
-const UK_NEUTER_YA = new Set(['життя', 'обличчя', 'повітря', 'варення']);
+const UK_NEUTER_YA = new Set(['життя', 'обличчя', 'повітря', 'варення', "ім'я"]);
 function ukGender(uk) {
   const w = uk.trim().split(' ')[0];
   if (UK_MASC_ANIM.has(w)) return 'm';
@@ -17,7 +17,7 @@ function ukGender(uk) {
 }
 
 const UK_PL = {
-  'день народження': 'дні народження', піца: 'піци', острів: 'острови',
+  'день народження': 'дні народження', "ім'я": 'імена', піца: 'піци', острів: 'острови',
   людина: 'люди', дитина: 'діти', око: 'очі', вухо: 'вуха', мати: 'матері',
   батько: 'батьки', дядько: 'дядьки', друг: 'друзі', син: 'сини', брат: 'брати',
   будинок: 'будинки', ранок: 'ранки', вечір: 'вечори', вітер: 'вітри', день: 'дні',
@@ -93,14 +93,16 @@ const CAT = {
   diena: ['time'], naktis: ['time'], rytas: ['time'], vakaras: ['time'], savaitė: ['time'],
   mėnuo: ['time'], valanda: ['time'], minutė: ['time'], laikas: ['time'], pavasaris: ['time'],
   vasara: ['time'], ruduo: ['time'], žiema: ['time'],
-  šeima: ['abstract'], meilė: ['abstract'], gyvenimas: ['abstract'], darbas: ['abstract']
+  šeima: ['abstract'], meilė: ['abstract'], gyvenimas: ['abstract'], darbas: ['abstract'], vardas: ['thing']
 };
 
 const EXTRA = [
+  { lemma: 'vardas', found: true, pluralOnly: false, sg: ['vardas', 'vardo', 'vardui', 'vardą', 'vardu', 'varde'], pl: ['vardai', 'vardų', 'vardams', 'vardus', 'vardais', 'varduose'] },
   { lemma: 'vyšnia', found: true, pluralOnly: false, sg: ['vyšnia', 'vyšnios', 'vyšniai', 'vyšnią', 'vyšnia', 'vyšnioje'], pl: ['vyšnios', 'vyšnių', 'vyšnioms', 'vyšnias', 'vyšniomis', 'vyšniose'] }
 ];
 
 const META = {
+  vardas: { t: 'as', uk: "ім'я", f: ['імені', 'імені', "ім'я", 'іменем', 'в імені'] },
   žmogus: { t: 'us', uk: 'людина', f: ['людини', 'людині', 'людину', 'людиною', 'в людині'], flag: 1 },
   vyras: { t: 'as', uk: 'чоловік', f: ['чоловіка', 'чоловікові', 'чоловіка', 'чоловіком', 'у чоловікові'] },
   moteris: { t: 'is_f', uk: 'жінка', f: ['жінки', 'жінці', 'жінку', 'жінкою', 'у жінці'], flag: 1 },

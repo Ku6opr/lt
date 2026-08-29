@@ -123,6 +123,17 @@ const demCaseSettings = persisted('lt-trainer-dem-cases-v1', {
   tableOpen: true
 });
 
+const questSettings = persisted('lt-trainer-questions-v1', {
+  level: 0,
+  autoLevel: false,
+  qws: { koks: true, kuris: true, kieno: true, kiek: true },
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
 const nounSettings = persisted('lt-trainer-vidminky-v1', {
   level: 0,
   autoLevel: false,
@@ -199,7 +210,7 @@ const pronounSettings = persisted('lt-trainer-pronouns-v1', {
   tableOpen: true
 });
 
-const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, 'conj-imp': conjImpSettings, 'conj-cond': conjCondSettings, numerals: numeralSettings, 'num-qty': numQtySettings, 'dem-nom': demNomSettings, 'dem-cases': demCaseSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
+const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, 'conj-imp': conjImpSettings, 'conj-cond': conjCondSettings, numerals: numeralSettings, 'num-qty': numQtySettings, 'dem-nom': demNomSettings, 'dem-cases': demCaseSettings, questions: questSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
 
 export function settingsFor(topicId) {
   return byTopic[topicId] || nounSettings;

@@ -71,6 +71,7 @@ function conjMastery(forms, tense) {
 function computeTotal(topicId) {
   switch (topicId) {
     case 'verb-forms': return { prefix: 'w|', total: VERBS.filter((v) => v.p3p).length };
+    case 'questions': return { prefix: 'tc|', total: 4 * 4 };
     case 'numerals': return { prefix: 'tc|', total: 9 * 5 };
     case 'num-qty': return { prefix: 'tc|', total: 20 };
     case 'dem-nom': return { prefix: 'tc|', total: 11 * 2 };

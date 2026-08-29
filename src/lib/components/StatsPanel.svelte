@@ -7,6 +7,7 @@
   import { NUMERALS, TEENS } from '../data/numerals.js';
   import { DEM_PRONOUNS } from '../data/demPronouns.js';
   import { VERBS, PERSON_COLS, PERSON_LABEL } from '../data/verbsConj.js';
+  import { Q_WORDS } from '../engine/questions.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
 
@@ -22,8 +23,9 @@
   const isNumQty = topic.kind === 'numqty';
   const isDemNom = topic.kind === 'demnom';
   const isDemCase = topic.kind === 'demcase';
+  const isQuest = topic.kind === 'quest';
   const ALL_CASES = ['V', 'K', 'N', 'G', 'In', 'Vt'];
-  const cols = isDemNom ? ['sg', 'pl'] : isDemCase || isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isNumQty ? ['V'] : isVF ? ['pres'] : isConj ? (topic.tense === 'imp' ? ['sg2', 'pl2'] : PERSON_COLS) : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
+  const cols = isQuest ? ['m|sg', 'f|sg', 'm|pl', 'f|pl'] : isDemNom ? ['sg', 'pl'] : isDemCase || isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isNumQty ? ['V'] : isVF ? ['pres'] : isConj ? (topic.tense === 'imp' ? ['sg2', 'pl2'] : PERSON_COLS) : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
   const ADJ_ROWS = [{ t: 'I' }, { t: 'II' }, { t: 'III' }];
   const nounName = {};
   for (const w of WORDS) nounName[w.id] = w;
@@ -34,7 +36,7 @@
 
   let viewNum = 'sg';
   $: L = UI[$lang];
-  $: colLabel = (c) => (isDemNom ? (c === 'sg' ? L.numSg : L.numPl) : isVF ? 'jis, ji' : isConj ? PERSON_LABEL[c] : isAdverb || isDeg ? L[c === 'pos' ? 'degPos' : c === 'comp' ? 'degComp' : 'degSup'] : c);
+  $: colLabel = (c) => (isQuest ? { 'm|sg': L.rowMsg, 'f|sg': L.rowFsg, 'm|pl': L.rowMpl, 'f|pl': L.rowFpl }[c] : isDemNom ? (c === 'sg' ? L.numSg : L.numPl) : isVF ? 'jis, ji' : isConj ? PERSON_LABEL[c] : isAdverb || isDeg ? L[c === 'pos' ? 'degPos' : c === 'comp' ? 'degComp' : 'degSup'] : c);
   $: data = ($progress[topic.id] && $progress[topic.id].forms) || {};
 
   const cellKey = (type, gender, c, vn) => (isAdj ? `tc|${type}|${gender}|${c}|${vn}` : `tc|${type}|${c}|${vn}`);
@@ -63,6 +65,12 @@
       return ADJ_ROWS.map((r) => ({
         label: r.t,
         cells: cols.map((c) => ({ m: mastery(g(`tc|${r.t}|-|${c}|sg`)) }))
+      }));
+    }
+    if (isQuest) {
+      return Q_WORDS.map((q) => ({
+        label: q.lt.m_sg + '?',
+        cells: cols.map((c) => ({ m: mastery(g(`tc|${q.id}|${c}`)) }))
       }));
     }
     if (isConj || isVF) {
@@ -156,7 +164,7 @@
       <b>{totals.graded}</b> {L.answered} · {L.accuracy} <b>{Math.round(totals.acc * 100)}%</b> · {L.coverage} <b>{totals.forms}</b>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
-      {#if !isConj && !isPron && !isAdverb && !isVF && !isNum && !isNumQty && !isDemNom}
+      {#if !isConj && !isPron && !isAdverb && !isVF && !isNum && !isNumQty && !isDemNom && !isQuest}
       <div class="seg">
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'sg'} on:change={() => (viewNum = 'sg')}>{L.numSg}</label>
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'pl'} on:change={() => (viewNum = 'pl')}>{L.numPl}</label>

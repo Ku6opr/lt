@@ -289,7 +289,7 @@ export function newAdverbTask(state, prev) {
     typeId: adj.type,
     number: 'sg',
     theme: 'all',
-    prompt: useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] },
+    prompt: useTr ? { text: adj.advTr[transKey].pos } : { text: adj.m.sg[0] },
     promptA: useTr ? null : (adj.mA && adj.mA.sg || [])[0] || null,
     leadA: null,
     trailA: null,

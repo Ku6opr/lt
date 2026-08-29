@@ -6,6 +6,11 @@ import { idx } from './stem.js';
 
 const OBLIQUE = ['K', 'N', 'G', 'In', 'Vt'];
 const rnd = (a) => a[Math.floor(Math.random() * a.length)];
+// «jie»/«jos» (вони ч.р./ж.р.) перекладом невідрізнювані («вони»/«они»/«they») — сигналимо рід у дужках
+const PL_GENDER_HINT = {
+  jie: { uk: ' (ч.р.)', ru: ' (м.р.)', en: ' (masc.)' },
+  jos: { uk: ' (ж.р.)', ru: ' (ж.р.)', en: ' (fem.)' }
+};
 
 export function pronounPoolOk(state) {
   const cs = OBLIQUE.some((c) => state.cases[c]);
@@ -59,7 +64,7 @@ export function newPronounTask(state, prev) {
     typeId: 'pron',
     number: pron.num,
     theme: 'all',
-    prompt: useTr ? { text: pron[tKey][0] } : { text: pron.lt[0] },
+    prompt: useTr ? { text: pron[tKey][0] + (PL_GENDER_HINT[pron.id] ? PL_GENDER_HINT[pron.id][lang] : '') } : { text: pron.lt[0] },
     promptA: useTr ? null : (pron.ltA || [])[0] || null,
     leadA: null,
     trailA: null,
