@@ -1,32 +1,55 @@
 import { VERBS, PRON_PERSON, SRC_PRON } from '../data/verbsConj.js';
 import { PRONOUNS } from '../data/pronouns.js';
+import { boundedPrefix } from './stem.js';
 
 const PRON_A = {};
 for (const p of PRONOUNS) PRON_A[p.id] = (p.ltA || [])[0] || null;
 
 const rnd = (a) => a[Math.floor(Math.random() * a.length)];
 
-// Рівні складності — кожен ЗНІМАЄ одну опору для виведення основи теперішнього часу.
-// 0: 3-тя особа (основа видна) + переклад — лишається додати закінчення. 3-тю особу не питаємо.
-// 1: інфінітив + переклад — треба згадати дієвідміну й вивести основу.
-// 2: лише переклад (без литовської) — згадати дієслово І провідміняти.
+// Рівні складності — кожен ЗНІМАЄ РІВНО одну опору. Дві незалежні опори: cue (скільки
+// литовського показано) і prefill (чи основа вже вписана в інпут, чи слово вводиться ПОВНІСТЮ).
+// 0: 3-тя особа (основа видна літерально) + префіл — лишається додати закінчення (3-тю особу
+// не питаємо); 1: інфінітив + переклад, слово ПОВНІСТЮ (основа з інфінітива тут НЕ виводиться
+// механічно — дієвідміна: suprasti→supranta, matyti→mačiau — сам вивід основи І Є навиком,
+// префіл на цьому рівні дав би її задарма); 2: лише переклад, слово повністю.
 export const CONJ_TIERS = [
-  { cue: 'p3' },
-  { cue: 'inf' },
-  { cue: 'gloss' }
+  { cue: 'p3', prefill: true },
+  { cue: 'inf', prefill: false },
+  { cue: 'gloss', prefill: false }
 ];
 
-// час/спосіб (state.tense): 'pres' (дефолт) | 'past' | 'fut' | 'imp' (наказовий) | 'cond' (умовний)
-const FORMS = (v, tense) => (tense === 'past' ? v.past : tense === 'fut' ? v.fut : tense === 'imp' ? v.imp : tense === 'cond' ? v.cond : v.f);
-const FORMS_A = (v, tense) => (tense === 'past' ? v.pastA : tense === 'fut' ? v.futA : tense === 'imp' ? v.impA : tense === 'cond' ? v.condA : v.fA);
+// час/спосіб (state.tense): 'pres' (дефолт) | 'past' | 'fut' | 'imp' (наказовий) | 'cond' (умовний) | 'habit' (багаторазовий минулий, -dav-)
+const FORMS = (v, tense) => (tense === 'past' ? v.past : tense === 'fut' ? v.fut : tense === 'imp' ? v.imp : tense === 'cond' ? v.cond : tense === 'habit' ? v.habit : v.f);
+const FORMS_A = (v, tense) => (tense === 'past' ? v.pastA : tense === 'fut' ? v.futA : tense === 'imp' ? v.impA : tense === 'cond' ? v.condA : tense === 'habit' ? v.habitA : v.fA);
+
+// Часи, де основа = інфінітив МІНУС «-ti» ЗАВЖДИ, без чергувань дієвідміни (регулярно для
+// всіх 20 дієслів — перевірено). Тому на рівні з інфінітивом основу МОЖНА префілити (інфінітив
+// і так її показує буквально) — і є ще один рівень, що знімає САМЕ цю опору (той самий
+// інфінітив, але вже без префілу — слово вводиш повністю сам).
+const FROM_INF_TENSES = new Set(['fut', 'imp', 'cond', 'habit']);
+
+// fut/habit мають і p3, і інфінітив як окремі опори — 4 рівні.
+export const FROMINF_TIERS = [
+  { cue: 'p3', prefill: true },
+  { cue: 'inf', prefill: true },
+  { cue: 'inf', prefill: false },
+  { cue: 'gloss', prefill: false }
+];
 
 // наказовий: нема 3-ї особи → рівень «показана p3» неможливий.
-// умовний: рівень з показом p3 (darýtų) прибрано за рішенням користувача — 2 сходинки.
+// умовний: рівень з показом p3 (darýtų) прибрано за рішенням користувача.
+// Обидва стартують з інфінітива — 3 рівні (префіл → без префілу → лише переклад).
 export const IMP_TIERS = [
-  { cue: 'inf' },
-  { cue: 'gloss' }
+  { cue: 'inf', prefill: true },
+  { cue: 'inf', prefill: false },
+  { cue: 'gloss', prefill: false }
 ];
-export const conjTiersFor = (tense) => (tense === 'imp' || tense === 'cond' ? IMP_TIERS : CONJ_TIERS);
+export const conjTiersFor = (tense) => (
+  tense === 'imp' || tense === 'cond' ? IMP_TIERS :
+  tense === 'fut' || tense === 'habit' ? FROMINF_TIERS :
+  CONJ_TIERS
+);
 
 const FUT_AUX = {
   uk: ['буду', 'будеш', 'буде', 'будемо', 'будете', 'будуть'],
@@ -40,6 +63,13 @@ function glossForm(verb, tKey, tense, pron) {
   if (tense === 'past') {
     if (tKey === 'en') return verb.gp ? verb.gp.en : verb.en;
     return verb.pt ? verb.pt[tKey][pastKey(pron.id)] : verb[tKey];
+  }
+  if (tense === 'habit') {
+    // -dav- = регулярна повторювана дія в минулому («раніше писав, тепер ні»);
+    // джерельні мови без окремої граматичної форми — сигналимо прислівником при вже-минулому дієслові
+    if (tKey === 'en') return 'used to ' + enBase(verb);
+    const base = verb.pt ? verb.pt[tKey][pastKey(pron.id)] : verb[tKey];
+    return (tKey === 'ru' ? 'раньше ' : 'раніше ') + base;
   }
   if (tense === 'fut') {
     if (tKey === 'en') return 'will ' + enBase(verb);
@@ -61,6 +91,11 @@ function glossForm(verb, tKey, tense, pron) {
 
 function glossP3(verb, tKey, tense) {
   if (tense === 'past') return verb.gp ? verb.gp[tKey] : verb[tKey];
+  if (tense === 'habit') {
+    if (tKey === 'en') return 'used to ' + enBase(verb);
+    const b3 = verb.gp ? verb.gp[tKey] : verb[tKey];
+    return (tKey === 'ru' ? 'раньше ' : 'раніше ') + b3;
+  }
   if (tense === 'fut') {
     if (tKey === 'en') return 'will ' + enBase(verb);
     return verb.id === 'buti' ? FUT_AUX[tKey][2] : FUT_AUX[tKey][2] + ' ' + verb[tKey];
@@ -111,6 +146,21 @@ export function newConjTask(state, prev) {
   const headword = tier.cue === 'gloss' ? phrase : tier.cue === 'p3' ? F.p3 : verb.inf;
   const note = tier.cue === 'p3' ? glossP3(verb, tKey, tense) : tier.cue === 'inf' ? verb[tKey] : null;
 
+  // основа для префілу інпута ТА для розкриття (кольоровий хвіст). Для fut/imp/cond/habit —
+  // інфінітив мінус «-ti» (як у шпаргалці): boundedPrefix форм тут ОБМАНЮЄ, бо маркер часу
+  // (-s-/-k-/-tų-/-dav-) спільний для ВСІХ осіб і потрапляє в «спільний префікс» разом з основою
+  // (kalbėdav+au/ai/o/ome/ote — «-dav-» з'їдається основою, хоча це і є те, що вчимо). Для
+  // pres/past основа дійсно рахується як спільний префікс форм (дієвідміна непередбачувана).
+  // Виняток: buti/fut — 3-тя особа «bus» коротша за інші («būsiu» і т.д., довгота губиться) —
+  // інфінітив-основа «bū» тут НЕ префікс форми, тому підстраховка: якщо не підходить усім
+  // формам — відкат на boundedPrefix (менш щедрий префіл, зате завжди коректний).
+  const allForms = Object.values(F).filter(Boolean);
+  const infStem = verb.inf.slice(0, -2);
+  const stemSplit = FROM_INF_TENSES.has(tense) && allForms.every((f) => f.startsWith(infStem))
+    ? infStem
+    : boundedPrefix(allForms);
+  const canPrefill = tier.prefill;
+
   return {
     conj: true,
     wordId: verb.id,
@@ -130,9 +180,9 @@ export function newConjTask(state, prev) {
     trail: null,
     hint: null,
     revealUk: tier.cue === 'gloss' ? null : phrase,
-    stemPrefix: '',
-    stem: targetForm,
-    tail: '',
+    stemPrefix: canPrefill ? stemSplit : '',
+    stem: stemSplit,
+    tail: targetForm.slice(stemSplit.length),
     targetForm,
     targetFormA: FA[pron.slot] || null
   };

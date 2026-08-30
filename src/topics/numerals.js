@@ -19,7 +19,7 @@ export const numQtyTopic = {
 export const numeralsTopic = {
   id: 'numerals',
   cat: 'num',
-  depth: 3,
+  depth: 6,
   short: { uk: 'Відмінки', ru: 'Падежи', en: 'Cases' },
   kind: 'num',
   n: 14,

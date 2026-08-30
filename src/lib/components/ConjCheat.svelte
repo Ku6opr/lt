@@ -10,7 +10,7 @@
   const byId = {};
   for (const v of VERBS) byId[v.id] = v;
   const buti = byId['buti'];
-  const F = (v) => (tense === 'past' ? v.past : tense === 'fut' ? v.fut : tense === 'imp' ? v.imp : tense === 'cond' ? v.cond : v.f) || v.f;
+  const F = (v) => (tense === 'past' ? v.past : tense === 'fut' ? v.fut : tense === 'imp' ? v.imp : tense === 'cond' ? v.cond : tense === 'habit' ? v.habit : v.f) || v.f;
 
   // Приклади показують РІЗНІ моделі закінчень часу: теперішній -a/-i/-o, минулий -o/-ė/-ėjo,
   // майбутній/наказовий/умовний — одна модель від інфінітива. Окончання виділене червоним.
@@ -20,17 +20,20 @@
     past: ['dirbti', 'rasyti'],
     fut: ['dirbti'],
     imp: ['dirbti'],
-    cond: ['dirbti']
+    cond: ['dirbti'],
+    habit: ['dirbti']
   };
-  const fromInf = tense === 'fut' || tense === 'imp' || tense === 'cond';
+  const fromInf = tense === 'fut' || tense === 'imp' || tense === 'cond' || tense === 'habit';
   const showButi = tense === 'pres';
   const cols = EX[tense].map((id) => byId[id]).map((v) => {
     const cf = F(v);
     const forms = PERSON_COLS.map((s) => cf[s]).filter(Boolean);
-    const stem = boundedPrefix(forms);
-    // майбутнє/наказовий/умовний утворюються від інфінітива (dirb|ti → dirb+s/+k/+tų) —
+    // майбутнє/наказовий/умовний/багаторазовий утворюються від інфінітива (dirb|ti → dirb+s/+k/+tų/+davo) —
+    // основа = корінь інфінітива, а НЕ спільний префікс форм: інакше маркер часу (s/dav/tų),
+    // спільний для всіх осіб, з'їдається основою і не підсвічується — а це і є те, що вчимо.
+    const stem = fromInf ? v.inf.slice(0, -2) : boundedPrefix(forms);
     // у шапці показуємо інфінітив, червоним -ti (те, що відкидається); в інших часах — 3-тю особу
-    const h = fromInf ? { stem: v.inf.slice(0, -2), tail: 'ti' } : { stem, tail: cf.p3.slice(stem.length) };
+    const h = fromInf ? { stem, tail: 'ti' } : { stem, tail: cf.p3.slice(stem.length) };
     return { v, f: cf, stem, hStem: h.stem, hTail: h.tail };
   });
   const butiF = F(buti);

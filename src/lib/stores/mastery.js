@@ -21,8 +21,8 @@ function nounTotal() {
 // Уроки дієвідмінювання: реальна вісь навички — модель закінчення × особа, а не слово.
 // Слово — лише носій моделі: клітинка «модель × особа» освоєна, коли закінчення
 // підтверджене на кількох різних словах (щоб один влучний удар не зараховувався).
-const CONJ_TENSE = { conj: 'pres', 'conj-past': 'past', 'conj-fut': 'fut', 'conj-imp': 'imp', 'conj-cond': 'cond' };
-const CONJ_SLOTS = { pres: 5, past: 5, fut: 5, imp: 2, cond: 5 };
+const CONJ_TENSE = { conj: 'pres', 'conj-past': 'past', 'conj-fut': 'fut', 'conj-imp': 'imp', 'conj-cond': 'cond', 'conj-habit': 'habit' };
+const CONJ_SLOTS = { pres: 5, past: 5, fut: 5, imp: 2, cond: 5, habit: 5 };
 
 function verbModel(v, tense) {
   if (tense === 'pres') return v.id === 'buti' ? 'buti' : v.f.p3.slice(-1);
@@ -33,7 +33,7 @@ function verbModel(v, tense) {
 function conjModels(tense) {
   const set = new Set();
   for (const v of VERBS) {
-    const F = tense === 'past' ? v.past : tense === 'fut' ? v.fut : tense === 'imp' ? v.imp && v.it : tense === 'cond' ? v.cond : v.f;
+    const F = tense === 'past' ? v.past : tense === 'fut' ? v.fut : tense === 'imp' ? v.imp && v.it : tense === 'cond' ? v.cond : tense === 'habit' ? v.habit : v.f;
     if (F) set.add(verbModel(v, tense));
   }
   return set;

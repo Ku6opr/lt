@@ -180,3 +180,29 @@ const _M = {
   dainuoti: { imp: { sg2: 'dainuok', pl2: 'dainuokite' }, cond: { sg1: 'dainuočiau', sg2: 'dainuotum', p3: 'dainuotų', pl1: 'dainuotume', pl2: 'dainuotumėte' }, it: { uk: { sg2: 'співай', pl2: 'співайте' }, ru: { sg2: 'пой', pl2: 'пойте' } } }
 };
 for (const v of VERBS) Object.assign(v, _M[v.id] || {});
+
+// Минулий багаторазовий (-dav-): від інфінітива, як fut/imp/cond. Джерело en.wiktionary (20/20);
+// без наголосу (habitA нема) — klausti, dainuoti, myleti (там само нема наголосу і в інших часах).
+const _H = {
+  buti: { habit: { sg1: 'būdavau', sg2: 'būdavai', p3: 'būdavo', pl1: 'būdavome', pl2: 'būdavote' }, habitA: { sg1: 'bū́davau', sg2: 'bū́davai', p3: 'bū́davo', pl1: 'bū́davome', pl2: 'bū́davote' } },
+  tureti: { habit: { sg1: 'turėdavau', sg2: 'turėdavai', p3: 'turėdavo', pl1: 'turėdavome', pl2: 'turėdavote' }, habitA: { sg1: 'turė́davau', sg2: 'turė́davai', p3: 'turė́davo', pl1: 'turė́davome', pl2: 'turė́davote' } },
+  noreti: { habit: { sg1: 'norėdavau', sg2: 'norėdavai', p3: 'norėdavo', pl1: 'norėdavome', pl2: 'norėdavote' }, habitA: { sg1: 'norė́davau', sg2: 'norė́davai', p3: 'norė́davo', pl1: 'norė́davome', pl2: 'norė́davote' } },
+  galeti: { habit: { sg1: 'galėdavau', sg2: 'galėdavai', p3: 'galėdavo', pl1: 'galėdavome', pl2: 'galėdavote' }, habitA: { sg1: 'galė́davau', sg2: 'galė́davai', p3: 'galė́davo', pl1: 'galė́davome', pl2: 'galė́davote' } },
+  eiti: { habit: { sg1: 'eidavau', sg2: 'eidavai', p3: 'eidavo', pl1: 'eidavome', pl2: 'eidavote' }, habitA: { sg1: 'eĩdavau', sg2: 'eĩdavai', p3: 'eĩdavo', pl1: 'eĩdavome', pl2: 'eĩdavote' } },
+  daryti: { habit: { sg1: 'darydavau', sg2: 'darydavai', p3: 'darydavo', pl1: 'darydavome', pl2: 'darydavote' }, habitA: { sg1: 'darýdavau', sg2: 'darýdavai', p3: 'darýdavo', pl1: 'darýdavome', pl2: 'darýdavote' } },
+  zinoti: { habit: { sg1: 'žinodavau', sg2: 'žinodavai', p3: 'žinodavo', pl1: 'žinodavome', pl2: 'žinodavote' }, habitA: { sg1: 'žinódavau', sg2: 'žinódavai', p3: 'žinódavo', pl1: 'žinódavome', pl2: 'žinódavote' } },
+  matyti: { habit: { sg1: 'matydavau', sg2: 'matydavai', p3: 'matydavo', pl1: 'matydavome', pl2: 'matydavote' }, habitA: { sg1: 'matýdavau', sg2: 'matýdavai', p3: 'matýdavo', pl1: 'matýdavome', pl2: 'matýdavote' } },
+  kalbeti: { habit: { sg1: 'kalbėdavau', sg2: 'kalbėdavai', p3: 'kalbėdavo', pl1: 'kalbėdavome', pl2: 'kalbėdavote' }, habitA: { sg1: 'kalbė́davau', sg2: 'kalbė́davai', p3: 'kalbė́davo', pl1: 'kalbė́davome', pl2: 'kalbė́davote' } },
+  gyventi: { habit: { sg1: 'gyvendavau', sg2: 'gyvendavai', p3: 'gyvendavo', pl1: 'gyvendavome', pl2: 'gyvendavote' }, habitA: { sg1: 'gyvéndavau', sg2: 'gyvéndavai', p3: 'gyvéndavo', pl1: 'gyvéndavome', pl2: 'gyvéndavote' } },
+  dirbti: { habit: { sg1: 'dirbdavau', sg2: 'dirbdavai', p3: 'dirbdavo', pl1: 'dirbdavome', pl2: 'dirbdavote' }, habitA: { sg1: 'dìrbdavau', sg2: 'dìrbdavai', p3: 'dìrbdavo', pl1: 'dìrbdavome', pl2: 'dìrbdavote' } },
+  skaityti: { habit: { sg1: 'skaitydavau', sg2: 'skaitydavai', p3: 'skaitydavo', pl1: 'skaitydavome', pl2: 'skaitydavote' }, habitA: { sg1: 'skaitýdavau', sg2: 'skaitýdavai', p3: 'skaitýdavo', pl1: 'skaitýdavome', pl2: 'skaitýdavote' } },
+  rasyti: { habit: { sg1: 'rašydavau', sg2: 'rašydavai', p3: 'rašydavo', pl1: 'rašydavome', pl2: 'rašydavote' }, habitA: { sg1: 'rašýdavau', sg2: 'rašýdavai', p3: 'rašýdavo', pl1: 'rašýdavome', pl2: 'rašýdavote' } },
+  valgyti: { habit: { sg1: 'valgydavau', sg2: 'valgydavai', p3: 'valgydavo', pl1: 'valgydavome', pl2: 'valgydavote' }, habitA: { sg1: 'válgydavau', sg2: 'válgydavai', p3: 'válgydavo', pl1: 'válgydavome', pl2: 'válgydavote' } },
+  gerti: { habit: { sg1: 'gerdavau', sg2: 'gerdavai', p3: 'gerdavo', pl1: 'gerdavome', pl2: 'gerdavote' }, habitA: { sg1: 'gérdavau', sg2: 'gérdavai', p3: 'gérdavo', pl1: 'gérdavome', pl2: 'gérdavote' } },
+  myleti: { habit: { sg1: 'mylėdavau', sg2: 'mylėdavai', p3: 'mylėdavo', pl1: 'mylėdavome', pl2: 'mylėdavote' } },
+  suprasti: { habit: { sg1: 'suprasdavau', sg2: 'suprasdavai', p3: 'suprasdavo', pl1: 'suprasdavome', pl2: 'suprasdavote' }, habitA: { sg1: 'supràsdavau', sg2: 'supràsdavai', p3: 'supràsdavo', pl1: 'supràsdavome', pl2: 'supràsdavote' } },
+  klausti: { habit: { sg1: 'klausdavau', sg2: 'klausdavai', p3: 'klausdavo', pl1: 'klausdavome', pl2: 'klausdavote' } },
+  moketi: { habit: { sg1: 'mokėdavau', sg2: 'mokėdavai', p3: 'mokėdavo', pl1: 'mokėdavome', pl2: 'mokėdavote' }, habitA: { sg1: 'mokė́davau', sg2: 'mokė́davai', p3: 'mokė́davo', pl1: 'mokė́davome', pl2: 'mokė́davote' } },
+  dainuoti: { habit: { sg1: 'dainuodavau', sg2: 'dainuodavai', p3: 'dainuodavo', pl1: 'dainuodavome', pl2: 'dainuodavote' } }
+};
+for (const v of VERBS) Object.assign(v, _H[v.id] || {});

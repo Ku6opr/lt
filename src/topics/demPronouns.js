@@ -19,7 +19,7 @@ export const demNomTopic = {
 export const demCasesTopic = {
   id: 'dem-cases',
   cat: 'pron',
-  depth: 4,
+  depth: 6,
   short: { uk: 'Відмінювання', ru: 'Склонение', en: 'Declension' },
   kind: 'demcase',
   n: 16,

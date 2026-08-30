@@ -109,3 +109,22 @@ export const conjCondTopic = {
   },
   trainerTitle: { uk: 'Умовний спосіб', ru: 'Условное наклонение', en: 'Conditional mood' }
 };
+
+export const conjHabitTopic = {
+  id: 'conj-habit',
+  cat: 'verb',
+  depth: 6,
+  short: { uk: 'Багаторазовий', ru: 'Привычный', en: 'Habitual' },
+  kind: 'conj',
+  tense: 'habit',
+  n: 18,
+  accent: 'gold',
+  glyph: 'eidavo',
+  title: { uk: 'Дієслово: минулий багаторазовий', ru: 'Глагол: прошедшее многократное', en: 'Verb: habitual past' },
+  subtitle: {
+    uk: 'Те, що робив раніше, а тепер уже ні: dirbdavau — «я раніше працював (регулярно)». Утворюється від інфінітива суфіксом -dav-.',
+    ru: 'То, что раньше делал регулярно, а теперь уже нет: dirbdavau — «я раньше работал (регулярно)». Образуется от инфинитива суффиксом -dav-.',
+    en: 'Something you used to do repeatedly but don’t anymore: dirbdavau — “I used to work”. Formed from the infinitive with the suffix -dav-.'
+  },
+  trainerTitle: { uk: 'Минулий багаторазовий час', ru: 'Прошедшее многократное время', en: 'Habitual past tense' }
+};

@@ -61,7 +61,7 @@ export const adverbsTopic = {
 export const adjCasesTopic = {
   id: 'adj-cases',
   cat: 'adj',
-  depth: 3,
+  depth: 6,
   short: { uk: 'Відмінки', ru: 'Падежи', en: 'Cases' },
   kind: 'adj',
   n: 10,
