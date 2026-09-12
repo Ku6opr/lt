@@ -5,6 +5,7 @@
   import { progress } from '../stores/progress.js';
   import { masteryOf } from '../stores/mastery.js';
   export let onEnter;
+  export let onReinforce;
 
   $: L = UI[$lang];
   $: pctOf = (id) => Math.round(masteryOf($progress, id).pct * 100);
@@ -30,10 +31,13 @@
   <header class="hero">
     <div class="topbar">
       <div class="card-kicker">{L.appKicker}</div>
-      <div class="langsel" role="group" aria-label={L.language}>
-        {#each LANGS as lg}
-          <button class="lang-opt" class:active={$lang === lg.id} type="button" on:click={() => setLang(lg.id)} title={lg.label}>{lg.short}</button>
-        {/each}
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="btn btn-secondary" type="button" on:click={onReinforce}>↻ {L.reinforce}</button>
+        <div class="langsel" role="group" aria-label={L.language}>
+          {#each LANGS as lg}
+            <button class="lang-opt" class:active={$lang === lg.id} type="button" on:click={() => setLang(lg.id)} title={lg.label}>{lg.short}</button>
+          {/each}
+        </div>
       </div>
     </div>
     <h1>{L.chooseTopic}</h1>

@@ -9,14 +9,10 @@
   import { conjTiersFor } from '../engine/conjugation.js';
   import { DEG_TIERS } from '../engine/adjectives.js';
   import { VF_TIERS } from '../engine/verbForms.js';
-  import { newTask, poolOk } from '../engine/generate.js';
-  import { newAdjTask, adjPoolOk, newDegreeTask, degreePoolOk, newAdverbTask, adverbPoolOk } from '../engine/adjectives.js';
-  import { newPronounTask, pronounPoolOk } from '../engine/pronouns.js';
-  import { newConjTask, conjPoolOk } from '../engine/conjugation.js';
-  import { newVFormsTask, vformsPoolOk } from '../engine/verbForms.js';
-  import { newNumeralTask, numeralPoolOk, newNumQtyTask, numQtyPoolOk, NUMQ_TIERS, NUM_TIERS } from '../engine/numerals.js';
-  import { newDemNomTask, demNomPoolOk, newDemCaseTask, demCasePoolOk, DEMNOM_TIERS, DEMCASE_TIERS, DEM_GROUP } from '../engine/demPronouns.js';
-  import { newQuestTask, questPoolOk, QUEST_TIERS } from '../engine/questions.js';
+  import { NUMQ_TIERS, NUM_TIERS } from '../engine/numerals.js';
+  import { DEMNOM_TIERS, DEMCASE_TIERS, DEM_GROUP } from '../engine/demPronouns.js';
+  import { QUEST_TIERS } from '../engine/questions.js';
+  import { engineFor, stateOfFor, reviewOverridesFor } from '../engine/topicEngine.js';
   import CheatTable from './CheatTable.svelte';
   import CheatStack from './CheatStack.svelte';
   import AdjCheatTable from './AdjCheatTable.svelte';
@@ -47,25 +43,14 @@
   export let topic;
   export let onBack;
 
-  const isAdj = topic.kind === 'adj';
-  const isDeg = topic.mode === 'degrees';
-  const isAdverb = topic.mode === 'adverbs';
-  const isPron = topic.kind === 'pron';
-  const isConj = topic.kind === 'conj';
-  const isVF = topic.kind === 'vforms';
-  const isNum = topic.kind === 'num';
-  const isNumQty = topic.kind === 'numqty';
-  const isDemNom = topic.kind === 'demnom';
-  const isDemCase = topic.kind === 'demcase';
-  const isQuest = topic.kind === 'quest';
+  const flags = engineFor(topic);
+  const { isAdj, isDeg, isAdverb, isPron, isConj, isVF, isNum, isNumQty, isDemNom, isDemCase, isQuest, genTask, genOk } = flags;
   const settings = settingsFor(topic.id);
-  const genTask = isQuest ? newQuestTask : isDemNom ? newDemNomTask : isDemCase ? newDemCaseTask : isNumQty ? newNumQtyTask : isNum ? newNumeralTask : isVF ? newVFormsTask : isConj ? newConjTask : isPron ? newPronounTask : isAdverb ? newAdverbTask : isDeg ? newDegreeTask : isAdj ? newAdjTask : newTask;
-  const genOk = isQuest ? questPoolOk : isDemNom ? demNomPoolOk : isDemCase ? demCasePoolOk : isNumQty ? numQtyPoolOk : isNum ? numeralPoolOk : isVF ? vformsPoolOk : isConj ? conjPoolOk : isPron ? pronounPoolOk : isAdverb ? adverbPoolOk : isDeg ? degreePoolOk : isAdj ? adjPoolOk : poolOk;
   const selectorCases = isAdj ? topic.scopeCases : null;
   const cheatCases = isAdj ? topic.cheatCases : null;
   const fixedFilters = isAdj && topic.fixedFilters;
   const cheatBoth = isAdj && topic.cheatBoth;
-  const stateOf = (st) => ({ ...st, lang: $lang, ...(isAdj ? { caseScope: topic.scopeCases } : {}), ...(isConj ? { tense: topic.tense || 'pres' } : {}) });
+  const stateOf = (st) => stateOfFor(topic, flags, st, $lang);
 
   let task = null;
   let revealed = false;
@@ -101,21 +86,6 @@
     if (acc >= 0.85 && st.level < maxLevelNow(st)) { settings.update((x) => ({ ...x, level: x.level + 1 })); autoWin = []; }
     else if (acc <= 0.5 && st.level > 0) { settings.update((x) => ({ ...x, level: x.level - 1 })); autoWin = []; }
   }
-  function reviewOverrides(key) {
-    const p = key.split('|');
-    if (isQuest) return { focusWordId: p[1], focusQw: p[2] };
-    if (isNumQty) return { focusWordId: p[1] };
-    if (isDemNom) return { focusWordId: p[1] };
-    if (isDemCase) return { focusWordId: p[1], cases: { [p[3]]: true }, numbers: { [p[4]]: true }, types: { [DEM_GROUP[p[1]]]: true } };
-    if (isNum) return { focusWordId: p[1], cases: { [p[3]]: true } };
-    if (isVF) return { focusWordId: p[1] };
-    if (isConj) return { focusWordId: p[1], focusPerson: p[2] };
-    if (isPron) return { focusWordId: p[1], cases: { [p[2]]: true } };
-    if (isAdverb) return { focusWordId: p[1], degrees: { [p[3]]: true }, theme: 'all' };
-    if (isDeg) return { focusWordId: p[1], degrees: { [p[3]]: true }, numbers: { [p[4]]: true }, theme: 'all' };
-    if (isAdj) return { focusWordId: p[1], cases: { [p[3]]: true }, numbers: { [p[4]]: true }, theme: 'all' };
-    return { focusWordId: p[1], cases: { [p[2]]: true }, numbers: { [p[3]]: true }, theme: 'all' };
-  }
   function toggleReview() {
     reviewMode = !reviewMode;
     makeNewTask();
@@ -149,7 +119,7 @@
     if (reviewMode && weakKeys.length) {
       const fresh = weakKeys.filter((k) => !prev || k.split('|')[1] !== prev.wordId);
       const key = rnd(fresh.length ? fresh : weakKeys);
-      const st = stateOf({ ...$settings, ...reviewOverrides(key) });
+      const st = stateOf({ ...$settings, ...reviewOverridesFor(flags, key) });
       let t = null;
       for (let i = 0; i < 12; i++) {
         const c = genTask(st, prev);
