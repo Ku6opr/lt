@@ -70,23 +70,20 @@ function phraseTask(state, bank, prev) {
   const tail = forms[ti].slice(stem.length);
   const tier = PHRASE_TIERS[Math.min(state.level, PHRASE_TIERS.length - 1)];
   const useUk = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
-  const hintMode = tier.hint;
   const { lang, tKey } = langBits(state);
   const prompt = useUk ? { text: word[tKey] } : { stem, tail: forms[0].slice(stem.length) };
+  // повне речення-значення показуємо ЗАВЖДИ (інакше незрозуміло, що саме складати — issue
+  // #18/#19/#16 і той самий формат в прикметниках/займенниках); tier.hint керує лише тим,
+  // чи додатково показано ще й питання відмінка (kuo? тощо) поверх фрази.
   const qStr = caseQ(target, lang);
-  const showsPhrase = hintMode === 'fullq' || hintMode === 'full';
-  let hint = null, revealUk = null;
+  let hint, revealUk;
   if (lang === 'uk') {
-    if (hintMode === 'fullq') hint = (p.ukPre ? p.ukPre + ' ' : '') + qStr + ' ' + p.ukForm;
-    else if (hintMode === 'full') hint = p.uk;
-    else if (hintMode === 'q') hint = qStr;
-    revealUk = showsPhrase ? null : p.uk;
+    hint = (p.ukPre ? p.ukPre + ' ' : '') + (tier.hint ? qStr + ' ' : '') + p.ukForm;
+    revealUk = p.uk;
   } else {
     const tn = nounForm(word, CASEKEY[target.id], num, lang);
-    if (hintMode === 'fullq') hint = qStr + ' ' + tn;
-    else if (hintMode === 'full') hint = tn;
-    else if (hintMode === 'q') hint = qStr;
-    revealUk = showsPhrase ? null : tn;
+    hint = (tier.hint ? qStr + ' ' : '') + tn;
+    revealUk = tn;
   }
   return {
     caseId: target.id,

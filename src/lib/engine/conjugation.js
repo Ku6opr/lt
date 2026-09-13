@@ -55,6 +55,7 @@ const FUT_AUX = {
   uk: ['буду', 'будеш', 'буде', 'будемо', 'будете', 'будуть'],
   ru: ['буду', 'будешь', 'будет', 'будем', 'будете', 'будут']
 };
+
 const enBase = (v) => (v.en === 'can' ? 'be able' : v.en.replace(/^to /, ''));
 // підмет → форма минулого джерельною мовою: aš/tu/jis → чол., ji → жін., множина → мн.
 const pastKey = (pronId) => (pronId === 'ji' ? 'f' : ['mes', 'jus', 'jie', 'jos'].includes(pronId) ? 'pl' : 'm');
@@ -89,25 +90,6 @@ function glossForm(verb, tKey, tense, pron) {
   return verb.g[tKey][pron.pi];
 }
 
-function glossP3(verb, tKey, tense) {
-  if (tense === 'past') return verb.gp ? verb.gp[tKey] : verb[tKey];
-  if (tense === 'habit') {
-    if (tKey === 'en') return 'used to ' + enBase(verb);
-    const b3 = verb.gp ? verb.gp[tKey] : verb[tKey];
-    return (tKey === 'ru' ? 'раньше ' : 'раніше ') + b3;
-  }
-  if (tense === 'fut') {
-    if (tKey === 'en') return 'will ' + enBase(verb);
-    return verb.id === 'buti' ? FUT_AUX[tKey][2] : FUT_AUX[tKey][2] + ' ' + verb[tKey];
-  }
-  if (tense === 'cond') {
-    if (tKey === 'en') return 'would ' + enBase(verb);
-    const b3 = verb.gp ? verb.gp[tKey] : verb[tKey];
-    return b3 + (tKey === 'ru' ? ' бы' : /[аеиіоуяєюї]$/.test(b3) ? ' б' : ' би');
-  }
-  return verb.g[tKey][2];
-}
-
 export function conjPoolOk(state) {
   const tense = (state && state.tense) || 'pres';
   return VERBS.some((v) => FORMS(v, tense) && (tense !== 'imp' || v.it));
@@ -138,13 +120,15 @@ export function newConjTask(state, prev) {
   const pron = rnd(ppool);
 
   const targetForm = F[pron.slot];
-  // глос-фраза, узгоджена з особою відповіді: «он видел», «вони їстимуть» — для розкриття;
+  // глос-фраза, узгоджена з особою ВІДПОВІДІ: «він питає», «вони їстимуть» — це і Є словесний
+  // опис завдання («що ввести в поле»), тому показуємо його як підказку заздалегідь, а не лише
+  // після розкриття: самої лише литовської форми/перекладу інфінітива недостатньо, щоб зрозуміти,
+  // яку саме фразу треба скласти (граблі, зловлені на практиці — див. issue #18/#19).
   // наказовий — без підмета («їж!», не «ти їж!»)
   const phrase = tense === 'imp' ? glossForm(verb, tKey, tense, pron) : SRC_PRON[tKey][pron.id] + ' ' + glossForm(verb, tKey, tense, pron);
-  // промпт і його переклад — у ТІЙ САМІЙ формі, що й показане слово, БЕЗ займенника:
-  // 0 → 3-тя особа; 1 → інфінітив; 2 → сама фраза-переклад (без нотатки).
+  // промпт: 0 → 3-тя особа; 1 → інфінітив; 2 → сама фраза-переклад (підказки вже нема, бо промпт нею і є).
   const headword = tier.cue === 'gloss' ? phrase : tier.cue === 'p3' ? F.p3 : verb.inf;
-  const note = tier.cue === 'p3' ? glossP3(verb, tKey, tense) : tier.cue === 'inf' ? verb[tKey] : null;
+  const note = tier.cue === 'gloss' ? null : phrase;
 
   // основа для префілу інпута ТА для розкриття (кольоровий хвіст). Для fut/imp/cond/habit —
   // інфінітив мінус «-ti» (як у шпаргалці): boundedPrefix форм тут ОБМАНЮЄ, бо маркер часу

@@ -210,10 +210,8 @@ export function newAdjTask(state, prev) {
   const prompt = useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] };
 
   const qStr = lang === 'en' ? '(' + qLt + ')' : '(' + qLoc + ' / ' + qLt + ')';
-  let hint = null;
-  if (tier.hint === 'fullq') hint = trPhrase + ' ' + qStr;
-  else if (tier.hint === 'q') hint = qStr;
-  const revealUk = tier.hint === 'fullq' ? null : trPhrase;
+  const hint = tier.hint ? qStr : null;
+  const revealUk = trPhrase;
 
   return {
     caseId,
@@ -227,8 +225,8 @@ export function newAdjTask(state, prev) {
     promptA: useTr ? null : (adj.mA && adj.mA.sg || [])[0] || null,
     leadA: null,
     trailA: ((number === 'pl' ? noun.plA : noun.sgA) || [])[ci] || null,
-    promptNote: null,
-    hasNote: false,
+    promptNote: trPhrase,
+    hasNote: true,
     wordUk: null,
     hasLead: false,
     lead: null,

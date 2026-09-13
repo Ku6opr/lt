@@ -6,7 +6,7 @@ export const VERBS = [
   { id: 'turėti', uk: 'мати', ru: 'иметь', en: 'to have', case: 'acc', ukCase: 'acc', ruCase: 'acc', accepts: '*' },
   { id: 'matyti', uk: 'бачити', ru: 'видеть', en: 'to see', case: 'acc', ukCase: 'acc', ruCase: 'acc', accepts: ['person', 'animal', 'place', 'thing', 'nature'] },
   { id: 'mylėti', uk: 'любити', ru: 'любить', en: 'to love', case: 'acc', ukCase: 'acc', ruCase: 'acc', accepts: ['person', 'animal', 'abstract', 'nature'] },
-  { id: 'skaityti', uk: 'читати', ru: 'читать', en: 'to read', case: 'acc', ukCase: 'acc', ruCase: 'acc', accepts: ['thing'] },
+  { id: 'skaityti', uk: 'читати', ru: 'читать', en: 'to read', case: 'acc', ukCase: 'acc', ruCase: 'acc', accepts: ['readable'] },
   { id: 'skambinti', uk: 'дзвонити', ru: 'звонить', en: 'to call', case: 'dat', ukCase: 'dat', ruCase: 'dat', accepts: ['person'] },
   { id: 'padėti', uk: 'допомагати', ru: 'помогать', en: 'to help', case: 'dat', ukCase: 'dat', ruCase: 'dat', accepts: ['person', 'animal'] },
   { id: 'ieškoti', uk: 'шукати', ru: 'искать', en: 'to look for', case: 'gen', ukCase: 'acc', ruCase: 'acc', accepts: ['person', 'animal', 'place', 'thing', 'food', 'nature'] },
