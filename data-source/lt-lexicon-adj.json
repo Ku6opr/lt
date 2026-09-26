@@ -1,0 +1,1868 @@
+[
+ {
+  "lemma": "alkanas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "hungry",
+  "m": {
+   "sg": [
+    "alkanas",
+    "alkano",
+    "alkanam",
+    "alkaną",
+    "alkanu",
+    "alkaname"
+   ],
+   "pl": [
+    "alkani",
+    "alkanų",
+    "alkaniems",
+    "alkanus",
+    "alkanais",
+    "alkanuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "alkana",
+    "alkanos",
+    "alkanai",
+    "alkaną",
+    "alkana",
+    "alkanoje"
+   ],
+   "pl": [
+    "alkanos",
+    "alkanų",
+    "alkanoms",
+    "alkanas",
+    "alkanomis",
+    "alkanose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "álkanas",
+    "álkano",
+    "alkanám",
+    "álkaną",
+    "álkanu",
+    "alkanamè"
+   ],
+   "pl": [
+    "alkanì",
+    "alkanų̃",
+    "alkaníems",
+    "álkanus",
+    "alkanaĩs",
+    "alkanuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "alkanà",
+    "alkanõs",
+    "álkanai",
+    "álkaną",
+    "álkana",
+    "alkanojè"
+   ],
+   "pl": [
+    "álkanos",
+    "alkanų̃",
+    "alkanóms",
+    "álkanas",
+    "alkanomìs",
+    "alkanosè"
+   ]
+  }
+ },
+ {
+  "lemma": "draugiškas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "įdomus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "interesting",
+  "m": {
+   "sg": [
+    "įdomus",
+    "įdomaus",
+    "įdomiam",
+    "įdomų",
+    "įdomiu",
+    "įdomiame"
+   ],
+   "pl": [
+    "įdomūs",
+    "įdomių",
+    "įdomiems",
+    "įdomius",
+    "įdomiais",
+    "įdomiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "įdomi",
+    "įdomios",
+    "įdomiai",
+    "įdomią",
+    "įdomia",
+    "įdomioje"
+   ],
+   "pl": [
+    "įdomios",
+    "įdomių",
+    "įdomioms",
+    "įdomias",
+    "įdomiomis",
+    "įdomiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "įdomùs",
+    "įdomaũs",
+    "įdomiám",
+    "įdõmų",
+    "įdomiù",
+    "įdomiamè"
+   ],
+   "pl": [
+    "įdõmūs",
+    "įdomių̃",
+    "įdomíems",
+    "įdomiùs",
+    "įdomiaĩs",
+    "įdomiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "įdomì",
+    "įdomiõs",
+    "įdõmiai",
+    "įdõmią",
+    "įdomià",
+    "įdomiojè"
+   ],
+   "pl": [
+    "įdõmios",
+    "įdomių̃",
+    "įdomióms",
+    "įdomiàs",
+    "įdomiomìs",
+    "įdomiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "karštas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "hot",
+  "m": {
+   "sg": [
+    "karštas",
+    "karšto",
+    "karštam",
+    "karštą",
+    "karštu",
+    "karštame"
+   ],
+   "pl": [
+    "karšti",
+    "karštų",
+    "karštiems",
+    "karštus",
+    "karštais",
+    "karštuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "karšta",
+    "karštos",
+    "karštai",
+    "karštą",
+    "karšta",
+    "karštoje"
+   ],
+   "pl": [
+    "karštos",
+    "karštų",
+    "karštoms",
+    "karštas",
+    "karštomis",
+    "karštose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "kárštas",
+    "káršto",
+    "karštám",
+    "kárštą",
+    "kárštu",
+    "karštamè"
+   ],
+   "pl": [
+    "karštì",
+    "karštų̃",
+    "karštíems",
+    "kárštus",
+    "karštaĩs",
+    "karštuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "karštà",
+    "karštõs",
+    "kárštai",
+    "kárštą",
+    "káršta",
+    "karštojè"
+   ],
+   "pl": [
+    "kárštos",
+    "karštų̃",
+    "karštóms",
+    "kárštas",
+    "karštomìs",
+    "karštosè"
+   ]
+  }
+ },
+ {
+  "lemma": "liūdnas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "sad, downhearted, sorrowful",
+  "m": {
+   "sg": [
+    "liūdnas",
+    "liūdno",
+    "liūdnam",
+    "liūdną",
+    "liūdnu",
+    "liūdname"
+   ],
+   "pl": [
+    "liūdni",
+    "liūdnų",
+    "liūdniems",
+    "liūdnus",
+    "liūdnais",
+    "liūdnuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "liūdna",
+    "liūdnos",
+    "liūdnai",
+    "liūdną",
+    "liūdna",
+    "liūdnoje"
+   ],
+   "pl": [
+    "liūdnos",
+    "liūdnų",
+    "liūdnoms",
+    "liūdnas",
+    "liūdnomis",
+    "liūdnose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "liū̃dnas",
+    "liū̃dno",
+    "liūdnám",
+    "liū̃dną",
+    "liūdnù",
+    "liūdnamè"
+   ],
+   "pl": [
+    "liūdnì",
+    "liūdnų̃",
+    "liūdníems",
+    "liūdnùs",
+    "liūdnaĩs",
+    "liūdnuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "liūdnà",
+    "liūdnõs",
+    "liū̃dnai",
+    "liū̃dną",
+    "liūdnà",
+    "liūdnojè"
+   ],
+   "pl": [
+    "liū̃dnos",
+    "liūdnų̃",
+    "liūdnóms",
+    "liūdnàs",
+    "liūdnomìs",
+    "liūdnosè"
+   ]
+  }
+ },
+ {
+  "lemma": "malonus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "pleasant, pleasing; agreeable",
+  "m": {
+   "sg": [
+    "malonus",
+    "malonaus",
+    "maloniam",
+    "malonų",
+    "maloniu",
+    "maloniame"
+   ],
+   "pl": [
+    "malonūs",
+    "malonių",
+    "maloniems",
+    "malonius",
+    "maloniais",
+    "maloniuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "maloni",
+    "malonios",
+    "maloniai",
+    "malonią",
+    "malonia",
+    "malonioje"
+   ],
+   "pl": [
+    "malonios",
+    "malonių",
+    "malonioms",
+    "malonias",
+    "maloniomis",
+    "maloniose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "malonùs",
+    "malonaũs",
+    "maloniám",
+    "malõnų",
+    "maloniù",
+    "maloniamè"
+   ],
+   "pl": [
+    "malõnūs",
+    "malonių̃",
+    "maloníems",
+    "maloniùs",
+    "maloniaĩs",
+    "maloniuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "malonì",
+    "maloniõs",
+    "malõniai",
+    "malõnią",
+    "malonià",
+    "maloniojè"
+   ],
+   "pl": [
+    "malõnios",
+    "malonių̃",
+    "malonióms",
+    "maloniàs",
+    "maloniomìs",
+    "maloniosè"
+   ]
+  }
+ },
+ {
+  "lemma": "mielas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "nice, sweet",
+  "m": {
+   "sg": [
+    "mielas",
+    "mielo",
+    "mielam",
+    "mielą",
+    "mielu",
+    "mielame"
+   ],
+   "pl": [
+    "mieli",
+    "mielų",
+    "mieliems",
+    "mielus",
+    "mielais",
+    "mieluose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "miela",
+    "mielos",
+    "mielai",
+    "mielą",
+    "miela",
+    "mieloje"
+   ],
+   "pl": [
+    "mielos",
+    "mielų",
+    "mieloms",
+    "mielas",
+    "mielomis",
+    "mielose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "míelas",
+    "míelo",
+    "mielám",
+    "míelą",
+    "mielù",
+    "mielamè"
+   ],
+   "pl": [
+    "mielì",
+    "mielų̃",
+    "mielíems",
+    "mielùs",
+    "mielaĩs",
+    "mieluosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "mielà",
+    "mielõs",
+    "míelai",
+    "míelą",
+    "mielà",
+    "mielojè"
+   ],
+   "pl": [
+    "míelos",
+    "mielų̃",
+    "mielóms",
+    "mielàs",
+    "mielomìs",
+    "mielosè"
+   ]
+  }
+ },
+ {
+  "lemma": "puikus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "excellent, wonderful",
+  "m": {
+   "sg": [
+    "puikus",
+    "puikaus",
+    "puikiam",
+    "puikų",
+    "puikiu",
+    "puikiame"
+   ],
+   "pl": [
+    "puikūs",
+    "puikių",
+    "puikiems",
+    "puikius",
+    "puikiais",
+    "puikiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "puiki",
+    "puikios",
+    "puikiai",
+    "puikią",
+    "puikia",
+    "puikioje"
+   ],
+   "pl": [
+    "puikios",
+    "puikių",
+    "puikioms",
+    "puikias",
+    "puikiomis",
+    "puikiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "puikùs",
+    "puikaũs",
+    "puikiám",
+    "puĩkų",
+    "puikiù",
+    "puikiamè"
+   ],
+   "pl": [
+    "puĩkūs",
+    "puikių̃",
+    "puikíems",
+    "puikiùs",
+    "puikiaĩs",
+    "puikiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "puikì",
+    "puikiõs",
+    "puĩkiai",
+    "puĩkią",
+    "puikià",
+    "puikiojè"
+   ],
+   "pl": [
+    "puĩkios",
+    "puikių̃",
+    "puikióms",
+    "puikiàs",
+    "puikiomìs",
+    "puikiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "riebus",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "rūgštus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "sour",
+  "m": {
+   "sg": [
+    "rūgštus",
+    "rūgštaus",
+    "rūgščiam",
+    "rūgštų",
+    "rūgščiu",
+    "rūgščiame"
+   ],
+   "pl": [
+    "rūgštūs",
+    "rūgščių",
+    "rūgštiems",
+    "rūgščius",
+    "rūgščiais",
+    "rūgščiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "rūgšti",
+    "rūgščios",
+    "rūgščiai",
+    "rūgščią",
+    "rūgščia",
+    "rūgščioje"
+   ],
+   "pl": [
+    "rūgščios",
+    "rūgščių",
+    "rūgščioms",
+    "rūgščias",
+    "rūgščiomis",
+    "rūgščiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "rūgštùs",
+    "rūgštaũs",
+    "rūgščiám",
+    "rū́gštų",
+    "rū́gščiu",
+    "rūgščiamè"
+   ],
+   "pl": [
+    "rū́gštūs",
+    "rūgščių̃",
+    "rūgštíems",
+    "rū́gščius",
+    "rūgščiaĩs",
+    "rūgščiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "rūgštì",
+    "rūgščiõs",
+    "rū́gščiai",
+    "rū́gščią",
+    "rū́gščia",
+    "rūgščiojè"
+   ],
+   "pl": [
+    "rū́gščios",
+    "rūgščių̃",
+    "rūgščióms",
+    "rū́gščias",
+    "rūgščiomìs",
+    "rūgščiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "rūkytas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "skanus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "delicious, tasty",
+  "m": {
+   "sg": [
+    "skanus",
+    "skanaus",
+    "skaniam",
+    "skanų",
+    "skaniu",
+    "skaniame"
+   ],
+   "pl": [
+    "skanūs",
+    "skanių",
+    "skaniems",
+    "skanius",
+    "skaniais",
+    "skaniuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "skani",
+    "skanios",
+    "skaniai",
+    "skanią",
+    "skania",
+    "skanioje"
+   ],
+   "pl": [
+    "skanios",
+    "skanių",
+    "skanioms",
+    "skanias",
+    "skaniomis",
+    "skaniose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "skanùs",
+    "skanaũs",
+    "skaniám",
+    "skãnų",
+    "skaniù",
+    "skaniamè"
+   ],
+   "pl": [
+    "skãnūs",
+    "skanių̃",
+    "skaníems",
+    "skaniùs",
+    "skaniaĩs",
+    "skaniuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "skanì",
+    "skaniõs",
+    "skãniai",
+    "skãnią",
+    "skanià",
+    "skaniojè"
+   ],
+   "pl": [
+    "skãnios",
+    "skanių̃",
+    "skanióms",
+    "skaniàs",
+    "skaniomìs",
+    "skaniosè"
+   ]
+  }
+ },
+ {
+  "lemma": "sotus",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "sūrus",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "švelnus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "soft; smooth",
+  "m": {
+   "sg": [
+    "švelnus",
+    "švelnaus",
+    "švelniam",
+    "švelnų",
+    "švelniu",
+    "švelniame"
+   ],
+   "pl": [
+    "švelnūs",
+    "švelnių",
+    "švelniems",
+    "švelnius",
+    "švelniais",
+    "švelniuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "švelni",
+    "švelnios",
+    "švelniai",
+    "švelnią",
+    "švelnia",
+    "švelnioje"
+   ],
+   "pl": [
+    "švelnios",
+    "švelnių",
+    "švelnioms",
+    "švelnias",
+    "švelniomis",
+    "švelniose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "švelnùs",
+    "švelnaũs",
+    "švelniám",
+    "švel̃nų",
+    "švelniù",
+    "švelniamè"
+   ],
+   "pl": [
+    "švel̃nūs",
+    "švelnių̃",
+    "švelníems",
+    "švelniùs",
+    "švelniaĩs",
+    "švelniuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "švelnì",
+    "švelniõs",
+    "švel̃niai",
+    "švel̃nią",
+    "švelnià",
+    "švelniojè"
+   ],
+   "pl": [
+    "švel̃nios",
+    "švelnių̃",
+    "švelnióms",
+    "švelniàs",
+    "švelniomìs",
+    "švelniosè"
+   ]
+  }
+ },
+ {
+  "lemma": "šviesus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "bright&#91;1&#93;",
+  "m": {
+   "sg": [
+    "šviesus",
+    "šviesaus",
+    "šviesiam",
+    "šviesų",
+    "šviesiu",
+    "šviesiame"
+   ],
+   "pl": [
+    "šviesūs",
+    "šviesių",
+    "šviesiems",
+    "šviesius",
+    "šviesiais",
+    "šviesiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "šviesi",
+    "šviesios",
+    "šviesiai",
+    "šviesią",
+    "šviesia",
+    "šviesioje"
+   ],
+   "pl": [
+    "šviesios",
+    "šviesių",
+    "šviesioms",
+    "šviesias",
+    "šviesiomis",
+    "šviesiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "šviesùs",
+    "šviesaũs",
+    "šviesiám",
+    "šviẽsų",
+    "šviesiù",
+    "šviesiamè"
+   ],
+   "pl": [
+    "šviẽsūs",
+    "šviesių̃",
+    "šviesíems",
+    "šviesiùs",
+    "šviesiaĩs",
+    "šviesiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "šviesì",
+    "šviesiõs",
+    "šviẽsiai",
+    "šviẽsią",
+    "šviesià",
+    "šviesiojè"
+   ],
+   "pl": [
+    "šviẽsios",
+    "šviesių̃",
+    "šviesióms",
+    "šviesiàs",
+    "šviesiomìs",
+    "šviesiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "šviežias",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "fresh",
+  "m": {
+   "sg": [
+    "šviežias",
+    "šviežio",
+    "šviežiam",
+    "šviežią",
+    "šviežiu",
+    "šviežiame"
+   ],
+   "pl": [
+    "šviežii",
+    "šviežių",
+    "šviežiiems",
+    "šviežius",
+    "šviežiais",
+    "šviežiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "šviežia",
+    "šviežios",
+    "šviežiai",
+    "šviežią",
+    "šviežia",
+    "šviežioje"
+   ],
+   "pl": [
+    "šviežios",
+    "šviežių",
+    "šviežioms",
+    "šviežias",
+    "šviežiomis",
+    "šviežiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "šviẽžias",
+    "šviẽžio",
+    "šviežiám",
+    "šviẽžią",
+    "šviežiù",
+    "šviežiamè"
+   ],
+   "pl": [
+    "šviežiì",
+    "šviežių̃",
+    "šviežiíems",
+    "šviežiùs",
+    "šviežiaĩs",
+    "šviežiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "šviežià",
+    "šviežiõs",
+    "šviẽžiai",
+    "šviẽžią",
+    "šviežià",
+    "šviežiojè"
+   ],
+   "pl": [
+    "šviẽžios",
+    "šviežių̃",
+    "šviežióms",
+    "šviežiàs",
+    "šviežiomìs",
+    "šviežiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "tamsus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "dark",
+  "m": {
+   "sg": [
+    "tamsus",
+    "tamsaus",
+    "tamsiam",
+    "tamsų",
+    "tamsiu",
+    "tamsiame"
+   ],
+   "pl": [
+    "tamsūs",
+    "tamsių",
+    "tamsiems",
+    "tamsius",
+    "tamsiais",
+    "tamsiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "tamsi",
+    "tamsios",
+    "tamsiai",
+    "tamsią",
+    "tamsia",
+    "tamsioje"
+   ],
+   "pl": [
+    "tamsios",
+    "tamsių",
+    "tamsioms",
+    "tamsias",
+    "tamsiomis",
+    "tamsiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "tamsùs",
+    "tamsaũs",
+    "tamsiám",
+    "tam̃sų",
+    "tamsiù",
+    "tamsiamè"
+   ],
+   "pl": [
+    "tam̃sūs",
+    "tamsių̃",
+    "tamsíems",
+    "tamsiùs",
+    "tamsiaĩs",
+    "tamsiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "tamsì",
+    "tamsiõs",
+    "tam̃siai",
+    "tam̃sią",
+    "tamsià",
+    "tamsiojè"
+   ],
+   "pl": [
+    "tam̃sios",
+    "tamsių̃",
+    "tamsióms",
+    "tamsiàs",
+    "tamsiomìs",
+    "tamsiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "jaukus",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "laimingas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "happy",
+  "m": {
+   "sg": [
+    "laimingas",
+    "laimingo",
+    "laimingam",
+    "laimingą",
+    "laimingu",
+    "laimingame"
+   ],
+   "pl": [
+    "laimingi",
+    "laimingų",
+    "laimingiems",
+    "laimingus",
+    "laimingais",
+    "laiminguose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "laiminga",
+    "laimingos",
+    "laimingai",
+    "laimingą",
+    "laiminga",
+    "laimingoje"
+   ],
+   "pl": [
+    "laimingos",
+    "laimingų",
+    "laimingoms",
+    "laimingas",
+    "laimingomis",
+    "laimingose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "laimìngas",
+    "laimìngo",
+    "laimìngam",
+    "laimìngą",
+    "laimìngu",
+    "laimìngame"
+   ],
+   "pl": [
+    "laimìngi",
+    "laimìngų",
+    "laimìngiems",
+    "laimìngus",
+    "laimìngais",
+    "laimìnguose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "laimìnga",
+    "laimìngos",
+    "laimìngai",
+    "laimìngą",
+    "laimìnga",
+    "laimìngoje"
+   ],
+   "pl": [
+    "laimìngos",
+    "laimìngų",
+    "laimìngoms",
+    "laimìngas",
+    "laimìngomis",
+    "laimìngose"
+   ]
+  }
+ },
+ {
+  "lemma": "laisvas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "free (unconstrained)",
+  "m": {
+   "sg": [
+    "laisvas",
+    "laisvo",
+    "laisvam",
+    "laisvą",
+    "laisvu",
+    "laisvame"
+   ],
+   "pl": [
+    "laisvi",
+    "laisvų",
+    "laisviems",
+    "laisvus",
+    "laisvais",
+    "laisvuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "laisva",
+    "laisvos",
+    "laisvai",
+    "laisvą",
+    "laisva",
+    "laisvoje"
+   ],
+   "pl": [
+    "laisvos",
+    "laisvų",
+    "laisvoms",
+    "laisvas",
+    "laisvomis",
+    "laisvose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "laĩsvas",
+    "laĩsvo",
+    "laisvám",
+    "laĩsvą",
+    "laisvù",
+    "laisvamè"
+   ],
+   "pl": [
+    "laisvì",
+    "laisvų̃",
+    "laisvíems",
+    "laisvùs",
+    "laisvaĩs",
+    "laisvuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "laisvà",
+    "laisvõs",
+    "laĩsvai",
+    "laĩsvą",
+    "laisvà",
+    "laisvojè"
+   ],
+   "pl": [
+    "laĩsvos",
+    "laisvų̃",
+    "laisvóms",
+    "laisvàs",
+    "laisvomìs",
+    "laisvosè"
+   ]
+  }
+ },
+ {
+  "lemma": "lėtas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "slow",
+  "m": {
+   "sg": [
+    "lėtas",
+    "lėto",
+    "lėtam",
+    "lėtą",
+    "lėtu",
+    "lėtame"
+   ],
+   "pl": [
+    "lėti",
+    "lėtų",
+    "lėtiems",
+    "lėtus",
+    "lėtais",
+    "lėtuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "lėta",
+    "lėtos",
+    "lėtai",
+    "lėtą",
+    "lėta",
+    "lėtoje"
+   ],
+   "pl": [
+    "lėtos",
+    "lėtų",
+    "lėtoms",
+    "lėtas",
+    "lėtomis",
+    "lėtose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "lė̃tas",
+    "lė̃to",
+    "lėtám",
+    "lė̃tą",
+    "lėtù",
+    "lėtamè"
+   ],
+   "pl": [
+    "lėtì",
+    "lėtų̃",
+    "lėtíems",
+    "lėtùs",
+    "lėtaĩs",
+    "lėtuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "lėtà",
+    "lėtõs",
+    "lė̃tai",
+    "lė̃tą",
+    "lėtà",
+    "lėtojè"
+   ],
+   "pl": [
+    "lė̃tos",
+    "lėtų̃",
+    "lėtóms",
+    "lėtàs",
+    "lėtomìs",
+    "lėtosè"
+   ]
+  }
+ },
+ {
+  "lemma": "madingas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "minkštas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "soft&#91;3&#93;",
+  "m": {
+   "sg": [
+    "minkštas",
+    "minkšto",
+    "minkštam",
+    "minkštą",
+    "minkštu",
+    "minkštame"
+   ],
+   "pl": [
+    "minkšti",
+    "minkštų",
+    "minkštiems",
+    "minkštus",
+    "minkštais",
+    "minkštuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "minkšta",
+    "minkštos",
+    "minkštai",
+    "minkštą",
+    "minkšta",
+    "minkštoje"
+   ],
+   "pl": [
+    "minkštos",
+    "minkštų",
+    "minkštoms",
+    "minkštas",
+    "minkštomis",
+    "minkštose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "mìnkštas",
+    "mìnkšto",
+    "minkštám",
+    "mìnkštą",
+    "mìnkštu",
+    "minkštamè"
+   ],
+   "pl": [
+    "minkštì",
+    "minkštų̃",
+    "minkštíems",
+    "mìnkštus",
+    "minkštaĩs",
+    "minkštuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "minkštà",
+    "minkštõs",
+    "mìnkštai",
+    "mìnkštą",
+    "mìnkšta",
+    "minkštojè"
+   ],
+   "pl": [
+    "mìnkštos",
+    "minkštų̃",
+    "minkštóms",
+    "mìnkštas",
+    "minkštomìs",
+    "minkštosè"
+   ]
+  }
+ },
+ {
+  "lemma": "patogus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "comfortable, convenient; handy, useful",
+  "m": {
+   "sg": [
+    "patogus",
+    "patogaus",
+    "patogiam",
+    "patogų",
+    "patogiu",
+    "patogiame"
+   ],
+   "pl": [
+    "patogūs",
+    "patogių",
+    "patogiems",
+    "patogius",
+    "patogiais",
+    "patogiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "patogi",
+    "patogios",
+    "patogiai",
+    "patogią",
+    "patogia",
+    "patogioje"
+   ],
+   "pl": [
+    "patogios",
+    "patogių",
+    "patogioms",
+    "patogias",
+    "patogiomis",
+    "patogiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "patogùs",
+    "patogaũs",
+    "patogiám",
+    "patõgų",
+    "patogiù",
+    "patogiamè"
+   ],
+   "pl": [
+    "patõgūs",
+    "patogių̃",
+    "patogíems",
+    "patogiùs",
+    "patogiaĩs",
+    "patogiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "patogì",
+    "patogiõs",
+    "patõgiai",
+    "patõgią",
+    "patogià",
+    "patogiojè"
+   ],
+   "pl": [
+    "patõgios",
+    "patogių̃",
+    "patogióms",
+    "patogiàs",
+    "patogiomìs",
+    "patogiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "populiarus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "popular (accessible to all, laid out in an understandable manner)",
+  "m": {
+   "sg": [
+    "populiarus",
+    "populiaraus",
+    "populiariam",
+    "populiarų",
+    "populiariu",
+    "populiariame"
+   ],
+   "pl": [
+    "populiarūs",
+    "populiarių",
+    "populiariems",
+    "populiarius",
+    "populiariais",
+    "populiariuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "populiari",
+    "populiarios",
+    "populiariai",
+    "populiarią",
+    "populiaria",
+    "populiarioje"
+   ],
+   "pl": [
+    "populiarios",
+    "populiarių",
+    "populiarioms",
+    "populiarias",
+    "populiariomis",
+    "populiariose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "populiarùs",
+    "populiaraũs",
+    "populiariám",
+    "populiãrų",
+    "populiariù",
+    "populiariamè"
+   ],
+   "pl": [
+    "populiãrūs",
+    "populiarių̃",
+    "populiaríems",
+    "populiariùs",
+    "populiariaĩs",
+    "populiariuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "populiarì",
+    "populiariõs",
+    "populiãriai",
+    "populiãrią",
+    "populiarià",
+    "populiariojè"
+   ],
+   "pl": [
+    "populiãrios",
+    "populiarių̃",
+    "populiarióms",
+    "populiariàs",
+    "populiariomìs",
+    "populiariosè"
+   ]
+  }
+ },
+ {
+  "lemma": "ramus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "calm",
+  "m": {
+   "sg": [
+    "ramus",
+    "ramaus",
+    "ramiam",
+    "ramų",
+    "ramiu",
+    "ramiame"
+   ],
+   "pl": [
+    "ramūs",
+    "ramių",
+    "ramiems",
+    "ramius",
+    "ramiais",
+    "ramiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "rami",
+    "ramios",
+    "ramiai",
+    "ramią",
+    "ramia",
+    "ramioje"
+   ],
+   "pl": [
+    "ramios",
+    "ramių",
+    "ramioms",
+    "ramias",
+    "ramiomis",
+    "ramiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "ramùs",
+    "ramaũs",
+    "ramiám",
+    "rãmų",
+    "ramiù",
+    "ramiamè"
+   ],
+   "pl": [
+    "rãmūs",
+    "ramių̃",
+    "ramíems",
+    "ramiùs",
+    "ramiaĩs",
+    "ramiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "ramì",
+    "ramiõs",
+    "rãmiai",
+    "rãmią",
+    "ramià",
+    "ramiojè"
+   ],
+   "pl": [
+    "rãmios",
+    "ramių̃",
+    "ramióms",
+    "ramiàs",
+    "ramiomìs",
+    "ramiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "sveikas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "healthy",
+  "m": {
+   "sg": [
+    "sveikas",
+    "sveiko",
+    "sveikam",
+    "sveiką",
+    "sveiku",
+    "sveikame"
+   ],
+   "pl": [
+    "sveiki",
+    "sveikų",
+    "sveikiems",
+    "sveikus",
+    "sveikais",
+    "sveikuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "sveika",
+    "sveikos",
+    "sveikai",
+    "sveiką",
+    "sveika",
+    "sveikoje"
+   ],
+   "pl": [
+    "sveikos",
+    "sveikų",
+    "sveikoms",
+    "sveikas",
+    "sveikomis",
+    "sveikose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "sveĩkas",
+    "sveĩko",
+    "sveikám",
+    "sveĩką",
+    "sveikù",
+    "sveikamè"
+   ],
+   "pl": [
+    "sveikì",
+    "sveikų̃",
+    "sveikíems",
+    "sveikùs",
+    "sveikaĩs",
+    "sveikuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "sveikà",
+    "sveikõs",
+    "sveĩkai",
+    "sveĩką",
+    "sveikà",
+    "sveikojè"
+   ],
+   "pl": [
+    "sveĩkos",
+    "sveikų̃",
+    "sveikóms",
+    "sveikàs",
+    "sveikomìs",
+    "sveikosè"
+   ]
+  }
+ },
+ {
+  "lemma": "triukšmingas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "noisy, loud",
+  "m": {
+   "sg": [
+    "triukšmingas",
+    "triukšmingo",
+    "triukšmingam",
+    "triukšmingą",
+    "triukšmingu",
+    "triukšmingame"
+   ],
+   "pl": [
+    "triukšmingi",
+    "triukšmingų",
+    "triukšmingiems",
+    "triukšmingus",
+    "triukšmingais",
+    "triukšminguose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "triukšminga",
+    "triukšmingos",
+    "triukšmingai",
+    "triukšmingą",
+    "triukšminga",
+    "triukšmingoje"
+   ],
+   "pl": [
+    "triukšmingos",
+    "triukšmingų",
+    "triukšmingoms",
+    "triukšmingas",
+    "triukšmingomis",
+    "triukšmingose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "triukšmìngas",
+    "triukšmìngo",
+    "triukšmìngam",
+    "triukšmìngą",
+    "triukšmìngu",
+    "triukšmìngame"
+   ],
+   "pl": [
+    "triukšmìngi",
+    "triukšmìngų",
+    "triukšmìngiems",
+    "triukšmìngus",
+    "triukšmìngais",
+    "triukšmìnguose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "triukšmìnga",
+    "triukšmìngos",
+    "triukšmìngai",
+    "triukšmìngą",
+    "triukšmìnga",
+    "triukšmìngoje"
+   ],
+   "pl": [
+    "triukšmìngos",
+    "triukšmìngų",
+    "triukšmìngoms",
+    "triukšmìngas",
+    "triukšmìngomis",
+    "triukšmìngose"
+   ]
+  }
+ },
+ {
+  "lemma": "tvarkingas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "neat, orderly, ordered",
+  "m": {
+   "sg": [
+    "tvarkingas",
+    "tvarkingo",
+    "tvarkingam",
+    "tvarkingą",
+    "tvarkingu",
+    "tvarkingame"
+   ],
+   "pl": [
+    "tvarkingi",
+    "tvarkingų",
+    "tvarkingiems",
+    "tvarkingus",
+    "tvarkingais",
+    "tvarkinguose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "tvarkinga",
+    "tvarkingos",
+    "tvarkingai",
+    "tvarkingą",
+    "tvarkinga",
+    "tvarkingoje"
+   ],
+   "pl": [
+    "tvarkingos",
+    "tvarkingų",
+    "tvarkingoms",
+    "tvarkingas",
+    "tvarkingomis",
+    "tvarkingose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "tvarkìngas",
+    "tvarkìngo",
+    "tvarkìngam",
+    "tvarkìngą",
+    "tvarkìngu",
+    "tvarkìngame"
+   ],
+   "pl": [
+    "tvarkìngi",
+    "tvarkìngų",
+    "tvarkìngiems",
+    "tvarkìngus",
+    "tvarkìngais",
+    "tvarkìnguose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "tvarkìnga",
+    "tvarkìngos",
+    "tvarkìngai",
+    "tvarkìngą",
+    "tvarkìnga",
+    "tvarkìngoje"
+   ],
+   "pl": [
+    "tvarkìngos",
+    "tvarkìngų",
+    "tvarkìngoms",
+    "tvarkìngas",
+    "tvarkìngomis",
+    "tvarkìngose"
+   ]
+  }
+ },
+ {
+  "lemma": "užimtas",
+  "found": false
+ },
+ {
+  "lemma": "keptas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "virtas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "margas",
+  "found": false
+ },
+ {
+  "lemma": "spalvingas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "nešvarus",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "normalus",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "mylimas",
+  "found": false
+ }
+]

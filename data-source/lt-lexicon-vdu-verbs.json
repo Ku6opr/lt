@@ -1,0 +1,1702 @@
+[
+ {
+  "lemma": "sportuoti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "sportuoju",
+   "sg2": "sportuoji",
+   "p3": "sportuoja",
+   "pl1": "sportuojame",
+   "pl2": "sportuojate"
+  },
+  "presA": {
+   "sg1": "sportúoju",
+   "sg2": "sportúoji",
+   "p3": "sportúoja",
+   "pl1": "sportúojame",
+   "pl2": "sportúojate"
+  },
+  "past": {
+   "sg1": "sportavau",
+   "sg2": "sportavai",
+   "p3": "sportavo",
+   "pl1": "sportavome",
+   "pl2": "sportavote"
+  },
+  "pastA": {
+   "sg1": "sportavaũ",
+   "sg2": "sportavaĩ",
+   "p3": "sportãvo",
+   "pl1": "sportãvome",
+   "pl2": "sportãvote"
+  },
+  "fut": {
+   "sg1": "sportuosiu",
+   "sg2": "sportuosi",
+   "p3": "sportuos",
+   "pl1": "sportuosime",
+   "pl2": "sportuosite"
+  },
+  "futA": {
+   "sg1": "sportúosiu",
+   "sg2": "sportúosi",
+   "p3": "sportuõs",
+   "pl1": "sportúosime",
+   "pl2": "sportúosite"
+  },
+  "cond": {
+   "sg1": "sportuočiau",
+   "sg2": "sportuotum",
+   "p3": "sportuotų",
+   "pl1": "sportuotume",
+   "pl2": "sportuotumėte"
+  },
+  "condA": {
+   "sg1": "sportúočiau",
+   "sg2": "sportúotum",
+   "p3": "sportúotų",
+   "pl1": "sportúotume",
+   "pl2": "sportúotumėte"
+  },
+  "habit": {
+   "sg1": "sportuodavau",
+   "sg2": "sportuodavai",
+   "p3": "sportuodavo",
+   "pl1": "sportuodavome",
+   "pl2": "sportuodavote"
+  },
+  "habitA": {
+   "sg1": "sportúodavau",
+   "sg2": "sportúodavai",
+   "p3": "sportúodavo",
+   "pl1": "sportúodavome",
+   "pl2": "sportúodavote"
+  },
+  "imp": {
+   "sg2": "sportuok",
+   "pl1": "sportuokime",
+   "pl2": "sportuokite"
+  },
+  "impA": {
+   "sg2": "sportúok",
+   "pl1": "sportúokime",
+   "pl2": "sportúokite"
+  }
+ },
+ {
+  "lemma": "ragauti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "ragauju",
+   "sg2": "ragauji",
+   "p3": "ragauja",
+   "pl1": "ragaujame",
+   "pl2": "ragaujate"
+  },
+  "presA": {
+   "sg1": "ragáuju",
+   "sg2": "ragáuji",
+   "p3": "ragáuja",
+   "pl1": "ragáujame",
+   "pl2": "ragáujate"
+  },
+  "past": {
+   "sg1": "ragavau",
+   "sg2": "ragavai",
+   "p3": "ragavo",
+   "pl1": "ragavome",
+   "pl2": "ragavote"
+  },
+  "pastA": {
+   "sg1": "ragavaũ",
+   "sg2": "ragavaĩ",
+   "p3": "ragãvo",
+   "pl1": "ragãvome",
+   "pl2": "ragãvote"
+  },
+  "fut": {
+   "sg1": "ragausiu",
+   "sg2": "ragausi",
+   "p3": "ragaus",
+   "pl1": "ragausime",
+   "pl2": "ragausite"
+  },
+  "futA": {
+   "sg1": "ragáusiu",
+   "sg2": "ragáusi",
+   "p3": "ragaũs",
+   "pl1": "ragáusime",
+   "pl2": "ragáusite"
+  },
+  "cond": {
+   "sg1": "ragaučiau",
+   "sg2": "ragautum",
+   "p3": "ragautų",
+   "pl1": "ragautume",
+   "pl2": "ragautumėte"
+  },
+  "condA": {
+   "sg1": "ragáučiau",
+   "sg2": "ragáutum",
+   "p3": "ragáutų",
+   "pl1": "ragáutume",
+   "pl2": "ragáutumėte"
+  },
+  "habit": {
+   "sg1": "ragaudavau",
+   "sg2": "ragaudavai",
+   "p3": "ragaudavo",
+   "pl1": "ragaudavome",
+   "pl2": "ragaudavote"
+  },
+  "habitA": {
+   "sg1": "ragáudavau",
+   "sg2": "ragáudavai",
+   "p3": "ragáudavo",
+   "pl1": "ragáudavome",
+   "pl2": "ragáudavote"
+  },
+  "imp": {
+   "sg2": "ragauk",
+   "pl1": "ragaukime",
+   "pl2": "ragaukite"
+  },
+  "impA": {
+   "sg2": "ragáuk",
+   "pl1": "ragáukime",
+   "pl2": "ragáukite"
+  }
+ },
+ {
+  "lemma": "pietauti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "pietauju",
+   "sg2": "pietauji",
+   "p3": "pietauja",
+   "pl1": "pietaujame",
+   "pl2": "pietaujate"
+  },
+  "presA": {
+   "sg1": "pietáuju",
+   "sg2": "pietáuji",
+   "p3": "pietáuja",
+   "pl1": "pietáujame",
+   "pl2": "pietáujate"
+  },
+  "past": {
+   "sg1": "pietavau",
+   "sg2": "pietavai",
+   "p3": "pietavo",
+   "pl1": "pietavome",
+   "pl2": "pietavote"
+  },
+  "pastA": {
+   "sg1": "pietavaũ",
+   "sg2": "pietavaĩ",
+   "p3": "pietãvo",
+   "pl1": "pietãvome",
+   "pl2": "pietãvote"
+  },
+  "fut": {
+   "sg1": "pietausiu",
+   "sg2": "pietausi",
+   "p3": "pietaus",
+   "pl1": "pietausime",
+   "pl2": "pietausite"
+  },
+  "futA": {
+   "sg1": "pietáusiu",
+   "sg2": "pietáusi",
+   "p3": "pietaũs",
+   "pl1": "pietáusime",
+   "pl2": "pietáusite"
+  },
+  "cond": {
+   "sg1": "pietaučiau",
+   "sg2": "pietautum",
+   "p3": "pietautų",
+   "pl1": "pietautume",
+   "pl2": "pietautumėte"
+  },
+  "condA": {
+   "sg1": "pietáučiau",
+   "sg2": "pietáutum",
+   "p3": "pietáutų",
+   "pl1": "pietáutume",
+   "pl2": "pietáutumėte"
+  },
+  "habit": {
+   "sg1": "pietaudavau",
+   "sg2": "pietaudavai",
+   "p3": "pietaudavo",
+   "pl1": "pietaudavome",
+   "pl2": "pietaudavote"
+  },
+  "habitA": {
+   "sg1": "pietáudavau",
+   "sg2": "pietáudavai",
+   "p3": "pietáudavo",
+   "pl1": "pietáudavome",
+   "pl2": "pietáudavote"
+  },
+  "imp": {
+   "sg2": "pietauk",
+   "pl1": "pietaukime",
+   "pl2": "pietaukite"
+  },
+  "impA": {
+   "sg2": "pietáuk",
+   "pl1": "pietáukime",
+   "pl2": "pietáukite"
+  }
+ },
+ {
+  "lemma": "pamiršti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "pamirštu",
+   "sg2": "pamiršti",
+   "p3": "pamiršta",
+   "pl1": "pamirštame",
+   "pl2": "pamirštate"
+  },
+  "presA": {
+   "sg1": "pamirštù",
+   "sg2": "pamirštì",
+   "p3": "pamir̃šta",
+   "pl1": "pamir̃štame",
+   "pl2": "pamir̃štate"
+  },
+  "past": {
+   "sg1": "pamiršau",
+   "sg2": "pamiršai",
+   "p3": "pamiršo",
+   "pl1": "pamiršome",
+   "pl2": "pamiršote"
+  },
+  "pastA": {
+   "sg1": "pamiršaũ",
+   "sg2": "pamiršaĩ",
+   "p3": "pamir̃šo",
+   "pl1": "pamir̃šome",
+   "pl2": "pamir̃šote"
+  },
+  "fut": {
+   "sg1": "pamiršiu",
+   "sg2": "pamirši",
+   "p3": "pamirš",
+   "pl1": "pamiršime",
+   "pl2": "pamiršite"
+  },
+  "futA": {
+   "sg1": "pamir̃šiu",
+   "sg2": "pamir̃ši",
+   "p3": "pamir̃š",
+   "pl1": "pamir̃šime",
+   "pl2": "pamir̃šite"
+  },
+  "cond": {
+   "sg1": "pamirščiau",
+   "sg2": "pamirštum",
+   "p3": "pamirštų",
+   "pl1": "pamirštume",
+   "pl2": "pamirštumėte"
+  },
+  "condA": {
+   "sg1": "pamir̃ščiau",
+   "sg2": "pamir̃štum",
+   "p3": "pamir̃štų",
+   "pl1": "pamir̃štume",
+   "pl2": "pamir̃štumėte"
+  },
+  "habit": {
+   "sg1": "pamiršdavau",
+   "sg2": "pamiršdavai",
+   "p3": "pamiršdavo",
+   "pl1": "pamiršdavome",
+   "pl2": "pamiršdavote"
+  },
+  "habitA": {
+   "sg1": "pamir̃šdavau",
+   "sg2": "pamir̃šdavai",
+   "p3": "pamir̃šdavo",
+   "pl1": "pamir̃šdavome",
+   "pl2": "pamir̃šdavote"
+  },
+  "imp": {
+   "sg2": "pamiršk",
+   "pl1": "pamirškime",
+   "pl2": "pamirškite"
+  },
+  "impA": {
+   "sg2": "pamir̃šk",
+   "pl1": "pamir̃škime",
+   "pl2": "pamir̃škite"
+  }
+ },
+ {
+  "lemma": "paskambinti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "paskambinu",
+   "sg2": "paskambini",
+   "p3": "paskambina",
+   "pl1": "paskambiname",
+   "pl2": "paskambinate"
+  },
+  "presA": {
+   "sg1": "paskam̃binu",
+   "sg2": "paskam̃bini",
+   "p3": "paskam̃bina",
+   "pl1": "paskam̃biname",
+   "pl2": "paskam̃binate"
+  },
+  "past": {
+   "sg1": "paskambinau",
+   "sg2": "paskambinai",
+   "p3": "paskambino",
+   "pl1": "paskambinome",
+   "pl2": "paskambinote"
+  },
+  "pastA": {
+   "sg1": "paskam̃binau",
+   "sg2": "paskam̃binai",
+   "p3": "paskam̃bino",
+   "pl1": "paskam̃binome",
+   "pl2": "paskam̃binote"
+  },
+  "fut": {
+   "sg1": "paskambinsiu",
+   "sg2": "paskambinsi",
+   "p3": "paskambins",
+   "pl1": "paskambinsime",
+   "pl2": "paskambinsite"
+  },
+  "futA": {
+   "sg1": "paskam̃binsiu",
+   "sg2": "paskam̃binsi",
+   "p3": "paskam̃bins",
+   "pl1": "paskam̃binsime",
+   "pl2": "paskam̃binsite"
+  },
+  "cond": {
+   "sg1": "paskambinčiau",
+   "sg2": "paskambintum",
+   "p3": "paskambintų",
+   "pl1": "paskambintume",
+   "pl2": "paskambintumėte"
+  },
+  "condA": {
+   "sg1": "paskam̃binčiau",
+   "sg2": "paskam̃bintum",
+   "p3": "paskam̃bintų",
+   "pl1": "paskam̃bintume",
+   "pl2": "paskam̃bintumėte"
+  },
+  "habit": {
+   "sg1": "paskambindavau",
+   "sg2": "paskambindavai",
+   "p3": "paskambindavo",
+   "pl1": "paskambindavome",
+   "pl2": "paskambindavote"
+  },
+  "habitA": {
+   "sg1": "paskam̃bindavau",
+   "sg2": "paskam̃bindavai",
+   "p3": "paskam̃bindavo",
+   "pl1": "paskam̃bindavome",
+   "pl2": "paskam̃bindavote"
+  },
+  "imp": {
+   "sg2": "paskambink",
+   "pl1": "paskambinkime",
+   "pl2": "paskambinkite"
+  },
+  "impA": {
+   "sg2": "paskam̃bink",
+   "pl1": "paskam̃binkime",
+   "pl2": "paskam̃binkite"
+  }
+ },
+ {
+  "lemma": "plaukioti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "plaukioju",
+   "sg2": "plaukioji",
+   "p3": "plaukioja",
+   "pl1": "plaukiojame",
+   "pl2": "plaukiojate"
+  },
+  "presA": {
+   "sg1": "pláukioju",
+   "sg2": "pláukioji",
+   "p3": "pláukioja",
+   "pl1": "pláukiojame",
+   "pl2": "pláukiojate"
+  },
+  "past": {
+   "sg1": "plaukiojau",
+   "sg2": "plaukiojai",
+   "p3": "plaukiojo",
+   "pl1": "plaukiojome",
+   "pl2": "plaukiojote"
+  },
+  "pastA": {
+   "sg1": "pláukiojau",
+   "sg2": "pláukiojai",
+   "p3": "pláukiojo",
+   "pl1": "pláukiojome",
+   "pl2": "pláukiojote"
+  },
+  "fut": {
+   "sg1": "plaukiosiu",
+   "sg2": "plaukiosi",
+   "p3": "plaukios",
+   "pl1": "plaukiosime",
+   "pl2": "plaukiosite"
+  },
+  "futA": {
+   "sg1": "pláukiosiu",
+   "sg2": "pláukiosi",
+   "p3": "pláukios",
+   "pl1": "pláukiosime",
+   "pl2": "pláukiosite"
+  },
+  "cond": {
+   "sg1": "plaukiočiau",
+   "sg2": "plaukiotum",
+   "p3": "plaukiotų",
+   "pl1": "plaukiotume",
+   "pl2": "plaukiotumėte"
+  },
+  "condA": {
+   "sg1": "pláukiočiau",
+   "sg2": "pláukiotum",
+   "p3": "pláukiotų",
+   "pl1": "pláukiotume",
+   "pl2": "pláukiotumėte"
+  },
+  "habit": {
+   "sg1": "plaukiodavau",
+   "sg2": "plaukiodavai",
+   "p3": "plaukiodavo",
+   "pl1": "plaukiodavome",
+   "pl2": "plaukiodavote"
+  },
+  "habitA": {
+   "sg1": "pláukiodavau",
+   "sg2": "pláukiodavai",
+   "p3": "pláukiodavo",
+   "pl1": "pláukiodavome",
+   "pl2": "pláukiodavote"
+  },
+  "imp": {
+   "sg2": "plaukiok",
+   "pl1": "plaukiokime",
+   "pl2": "plaukiokite"
+  },
+  "impA": {
+   "sg2": "pláukiok",
+   "pl1": "pláukiokime",
+   "pl2": "pláukiokite"
+  }
+ },
+ {
+  "lemma": "bėgioti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "bėgioju",
+   "sg2": "bėgioji",
+   "p3": "bėgioja",
+   "pl1": "bėgiojame",
+   "pl2": "bėgiojate"
+  },
+  "presA": {
+   "sg1": "bėgióju",
+   "sg2": "bėgióji",
+   "p3": "bėgiója",
+   "pl1": "bėgiójame",
+   "pl2": "bėgiójate"
+  },
+  "past": {
+   "sg1": "bėgiojau",
+   "sg2": "bėgiojai",
+   "p3": "bėgiojo",
+   "pl1": "bėgiojome",
+   "pl2": "bėgiojote"
+  },
+  "pastA": {
+   "sg1": "bėgiójau",
+   "sg2": "bėgiójai",
+   "p3": "bėgiójo",
+   "pl1": "bėgiójome",
+   "pl2": "bėgiójote"
+  },
+  "fut": {
+   "sg1": "bėgiosiu",
+   "sg2": "bėgiosi",
+   "p3": "bėgios",
+   "pl1": "bėgiosime",
+   "pl2": "bėgiosite"
+  },
+  "futA": {
+   "sg1": "bėgiósiu",
+   "sg2": "bėgiósi",
+   "p3": "bėgiõs",
+   "pl1": "bėgiósime",
+   "pl2": "bėgiósite"
+  },
+  "cond": {
+   "sg1": "bėgiočiau",
+   "sg2": "bėgiotum",
+   "p3": "bėgiotų",
+   "pl1": "bėgiotume",
+   "pl2": "bėgiotumėte"
+  },
+  "condA": {
+   "sg1": "bėgióčiau",
+   "sg2": "bėgiótum",
+   "p3": "bėgiótų",
+   "pl1": "bėgiótume",
+   "pl2": "bėgiótumėte"
+  },
+  "habit": {
+   "sg1": "bėgiodavau",
+   "sg2": "bėgiodavai",
+   "p3": "bėgiodavo",
+   "pl1": "bėgiodavome",
+   "pl2": "bėgiodavote"
+  },
+  "habitA": {
+   "sg1": "bėgiódavau",
+   "sg2": "bėgiódavai",
+   "p3": "bėgiódavo",
+   "pl1": "bėgiódavome",
+   "pl2": "bėgiódavote"
+  },
+  "imp": {
+   "sg2": "bėgiok",
+   "pl1": "bėgiokime",
+   "pl2": "bėgiokite"
+  },
+  "impA": {
+   "sg2": "bėgiók",
+   "pl1": "bėgiókime",
+   "pl2": "bėgiókite"
+  }
+ },
+ {
+  "lemma": "švęsti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "švenčiu",
+   "sg2": "šventi",
+   "p3": "švenčia",
+   "pl1": "švenčiame",
+   "pl2": "švenčiate"
+  },
+  "presA": {
+   "sg1": "švenčiù",
+   "sg2": "šventì",
+   "p3": "šveñčia",
+   "pl1": "šveñčiame",
+   "pl2": "šveñčiate"
+  },
+  "past": {
+   "sg1": "švenčiau",
+   "sg2": "šventei",
+   "p3": "šventė",
+   "pl1": "šventėme",
+   "pl2": "šventėte"
+  },
+  "pastA": {
+   "sg1": "švenčiaũ",
+   "sg2": "šventeĩ",
+   "p3": "šveñtė",
+   "pl1": "šveñtėme",
+   "pl2": "šveñtėte"
+  },
+  "fut": {
+   "sg1": "švęsiu",
+   "sg2": "švęsi",
+   "p3": "švęs",
+   "pl1": "švęsime",
+   "pl2": "švęsite"
+  },
+  "futA": {
+   "sg1": "švę̃siu",
+   "sg2": "švę̃si",
+   "p3": "švę̃s",
+   "pl1": "švę̃sime",
+   "pl2": "švę̃site"
+  },
+  "cond": {
+   "sg1": "švęsčiau",
+   "sg2": "švęstum",
+   "p3": "švęstų",
+   "pl1": "švęstume",
+   "pl2": "švęstumėte"
+  },
+  "condA": {
+   "sg1": "švę̃sčiau",
+   "sg2": "švę̃stum",
+   "p3": "švę̃stų",
+   "pl1": "švę̃stume",
+   "pl2": "švę̃stumėte"
+  },
+  "habit": {
+   "sg1": "švęsdavau",
+   "sg2": "švęsdavai",
+   "p3": "švęsdavo",
+   "pl1": "švęsdavome",
+   "pl2": "švęsdavote"
+  },
+  "habitA": {
+   "sg1": "švę̃sdavau",
+   "sg2": "švę̃sdavai",
+   "p3": "švę̃sdavo",
+   "pl1": "švę̃sdavome",
+   "pl2": "švę̃sdavote"
+  },
+  "imp": {
+   "sg2": "švęsk",
+   "pl1": "švęskime",
+   "pl2": "švęskite"
+  },
+  "impA": {
+   "sg2": "švę̃sk",
+   "pl1": "švę̃skime",
+   "pl2": "švę̃skite"
+  }
+ },
+ {
+  "lemma": "tvarkyti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "tvarkau",
+   "sg2": "tvarkai",
+   "p3": "tvarko",
+   "pl1": "tvarkome",
+   "pl2": "tvarkote"
+  },
+  "presA": {
+   "sg1": "tvarkaũ",
+   "sg2": "tvarkaĩ",
+   "p3": "tvar̃ko",
+   "pl1": "tvar̃kome",
+   "pl2": "tvar̃kote"
+  },
+  "past": {
+   "sg1": "tvarkiau",
+   "sg2": "tvarkei",
+   "p3": "tvarkė",
+   "pl1": "tvarkėme",
+   "pl2": "tvarkėte"
+  },
+  "pastA": {
+   "sg1": "tvarkiaũ",
+   "sg2": "tvarkeĩ",
+   "p3": "tvar̃kė",
+   "pl1": "tvar̃kėme",
+   "pl2": "tvar̃kėte"
+  },
+  "fut": {
+   "sg1": "tvarkysiu",
+   "sg2": "tvarkysi",
+   "p3": "tvarkys",
+   "pl1": "tvarkysime",
+   "pl2": "tvarkysite"
+  },
+  "futA": {
+   "sg1": "tvarkýsiu",
+   "sg2": "tvarkýsi",
+   "p3": "tvarkỹs",
+   "pl1": "tvarkýsime",
+   "pl2": "tvarkýsite"
+  },
+  "cond": {
+   "sg1": "tvarkyčiau",
+   "sg2": "tvarkytum",
+   "p3": "tvarkytų",
+   "pl1": "tvarkytume",
+   "pl2": "tvarkytumėte"
+  },
+  "condA": {
+   "sg1": "tvarkýčiau",
+   "sg2": "tvarkýtum",
+   "p3": "tvarkýtų",
+   "pl1": "tvarkýtume",
+   "pl2": "tvarkýtumėte"
+  },
+  "habit": {
+   "sg1": "tvarkydavau",
+   "sg2": "tvarkydavai",
+   "p3": "tvarkydavo",
+   "pl1": "tvarkydavome",
+   "pl2": "tvarkydavote"
+  },
+  "habitA": {
+   "sg1": "tvarkýdavau",
+   "sg2": "tvarkýdavai",
+   "p3": "tvarkýdavo",
+   "pl1": "tvarkýdavome",
+   "pl2": "tvarkýdavote"
+  },
+  "imp": {
+   "sg2": "tvarkyk",
+   "pl1": "tvarkykime",
+   "pl2": "tvarkykite"
+  },
+  "impA": {
+   "sg2": "tvarkýk",
+   "pl1": "tvarkýkime",
+   "pl2": "tvarkýkite"
+  }
+ },
+ {
+  "lemma": "dėvėti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "dėviu",
+   "sg2": "dėvi",
+   "p3": "dėvi",
+   "pl1": "dėvime",
+   "pl2": "dėvite"
+  },
+  "presA": {
+   "sg1": "dėviù",
+   "sg2": "dėvì",
+   "p3": "dė̃vi",
+   "pl1": "dė̃vime",
+   "pl2": "dė̃vite"
+  },
+  "past": {
+   "sg1": "dėvėjau",
+   "sg2": "dėvėjai",
+   "p3": "dėvėjo",
+   "pl1": "dėvėjome",
+   "pl2": "dėvėjote"
+  },
+  "pastA": {
+   "sg1": "dėvė́jau",
+   "sg2": "dėvė́jai",
+   "p3": "dėvė́jo",
+   "pl1": "dėvė́jome",
+   "pl2": "dėvė́jote"
+  },
+  "fut": {
+   "sg1": "dėvėsiu",
+   "sg2": "dėvėsi",
+   "p3": "dėvės",
+   "pl1": "dėvėsime",
+   "pl2": "dėvėsite"
+  },
+  "futA": {
+   "sg1": "dėvė́siu",
+   "sg2": "dėvė́si",
+   "p3": "dėvė̃s",
+   "pl1": "dėvė́sime",
+   "pl2": "dėvė́site"
+  },
+  "cond": {
+   "sg1": "dėvėčiau",
+   "sg2": "dėvėtum",
+   "p3": "dėvėtų",
+   "pl1": "dėvėtume",
+   "pl2": "dėvėtumėte"
+  },
+  "condA": {
+   "sg1": "dėvė́čiau",
+   "sg2": "dėvė́tum",
+   "p3": "dėvė́tų",
+   "pl1": "dėvė́tume",
+   "pl2": "dėvė́tumėte"
+  },
+  "habit": {
+   "sg1": "dėvėdavau",
+   "sg2": "dėvėdavai",
+   "p3": "dėvėdavo",
+   "pl1": "dėvėdavome",
+   "pl2": "dėvėdavote"
+  },
+  "habitA": {
+   "sg1": "dėvė́davau",
+   "sg2": "dėvė́davai",
+   "p3": "dėvė́davo",
+   "pl1": "dėvė́davome",
+   "pl2": "dėvė́davote"
+  },
+  "imp": {
+   "sg2": "dėvėk",
+   "pl1": "dėvėkime",
+   "pl2": "dėvėkite"
+  },
+  "impA": {
+   "sg2": "dėvė́k",
+   "pl1": "dėvė́kime",
+   "pl2": "dėvė́kite"
+  }
+ },
+ {
+  "lemma": "pailsėti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "pailsiu",
+   "sg2": "pailsi",
+   "p3": "pailsi",
+   "pl1": "pailsime",
+   "pl2": "pailsite"
+  },
+  "presA": {
+   "sg1": "paìlsiu",
+   "sg2": "paìlsi",
+   "p3": "paìlsi",
+   "pl1": "paìlsime",
+   "pl2": "paìlsite"
+  },
+  "past": {
+   "sg1": "pailsėjau",
+   "sg2": "pailsėjai",
+   "p3": "pailsėjo",
+   "pl1": "pailsėjome",
+   "pl2": "pailsėjote"
+  },
+  "pastA": {
+   "sg1": "pailsė́jau",
+   "sg2": "pailsė́jai",
+   "p3": "pailsė́jo",
+   "pl1": "pailsė́jome",
+   "pl2": "pailsė́jote"
+  },
+  "fut": {
+   "sg1": "pailsėsiu",
+   "sg2": "pailsėsi",
+   "p3": "pailsės",
+   "pl1": "pailsėsime",
+   "pl2": "pailsėsite"
+  },
+  "futA": {
+   "sg1": "pailsė́siu",
+   "sg2": "pailsė́si",
+   "p3": "pailsė̃s",
+   "pl1": "pailsė́sime",
+   "pl2": "pailsė́site"
+  },
+  "cond": {
+   "sg1": "pailsėčiau",
+   "sg2": "pailsėtum",
+   "p3": "pailsėtų",
+   "pl1": "pailsėtume",
+   "pl2": "pailsėtumėte"
+  },
+  "condA": {
+   "sg1": "pailsė́čiau",
+   "sg2": "pailsė́tum",
+   "p3": "pailsė́tų",
+   "pl1": "pailsė́tume",
+   "pl2": "pailsė́tumėte"
+  },
+  "habit": {
+   "sg1": "pailsėdavau",
+   "sg2": "pailsėdavai",
+   "p3": "pailsėdavo",
+   "pl1": "pailsėdavome",
+   "pl2": "pailsėdavote"
+  },
+  "habitA": {
+   "sg1": "pailsė́davau",
+   "sg2": "pailsė́davai",
+   "p3": "pailsė́davo",
+   "pl1": "pailsė́davome",
+   "pl2": "pailsė́davote"
+  },
+  "imp": {
+   "sg2": "pailsėk",
+   "pl1": "pailsėkime",
+   "pl2": "pailsėkite"
+  },
+  "impA": {
+   "sg2": "pailsė́k",
+   "pl1": "pailsė́kime",
+   "pl2": "pailsė́kite"
+  }
+ },
+ {
+  "lemma": "atvažiuoti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "atvažiuoju",
+   "sg2": "atvažiuoji",
+   "p3": "atvažiuoja",
+   "pl1": "atvažiuojame",
+   "pl2": "atvažiuojate"
+  },
+  "presA": {
+   "sg1": "atvažiúoju",
+   "sg2": "atvažiúoji",
+   "p3": "atvažiúoja",
+   "pl1": "atvažiúojame",
+   "pl2": "atvažiúojate"
+  },
+  "past": {
+   "sg1": "atvažiavau",
+   "sg2": "atvažiavai",
+   "p3": "atvažiavo",
+   "pl1": "atvažiavome",
+   "pl2": "atvažiavote"
+  },
+  "pastA": {
+   "sg1": "atvažiavaũ",
+   "sg2": "atvažiavaĩ",
+   "p3": "atvažiãvo",
+   "pl1": "atvažiãvome",
+   "pl2": "atvažiãvote"
+  },
+  "fut": {
+   "sg1": "atvažiuosiu",
+   "sg2": "atvažiuosi",
+   "p3": "atvažiuos",
+   "pl1": "atvažiuosime",
+   "pl2": "atvažiuosite"
+  },
+  "futA": {
+   "sg1": "atvažiúosiu",
+   "sg2": "atvažiúosi",
+   "p3": "atvažiuõs",
+   "pl1": "atvažiúosime",
+   "pl2": "atvažiúosite"
+  },
+  "cond": {
+   "sg1": "atvažiuočiau",
+   "sg2": "atvažiuotum",
+   "p3": "atvažiuotų",
+   "pl1": "atvažiuotume",
+   "pl2": "atvažiuotumėte"
+  },
+  "condA": {
+   "sg1": "atvažiúočiau",
+   "sg2": "atvažiúotum",
+   "p3": "atvažiúotų",
+   "pl1": "atvažiúotume",
+   "pl2": "atvažiúotumėte"
+  },
+  "habit": {
+   "sg1": "atvažiuodavau",
+   "sg2": "atvažiuodavai",
+   "p3": "atvažiuodavo",
+   "pl1": "atvažiuodavome",
+   "pl2": "atvažiuodavote"
+  },
+  "habitA": {
+   "sg1": "atvažiúodavau",
+   "sg2": "atvažiúodavai",
+   "p3": "atvažiúodavo",
+   "pl1": "atvažiúodavome",
+   "pl2": "atvažiúodavote"
+  },
+  "imp": {
+   "sg2": "atvažiuok",
+   "pl1": "atvažiuokime",
+   "pl2": "atvažiuokite"
+  },
+  "impA": {
+   "sg2": "atvažiúok",
+   "pl1": "atvažiúokime",
+   "pl2": "atvažiúokite"
+  }
+ },
+ {
+  "lemma": "parodyti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "parodau",
+   "sg2": "parodai",
+   "p3": "parodo",
+   "pl1": "parodome",
+   "pl2": "parodote"
+  },
+  "presA": {
+   "sg1": "paródau",
+   "sg2": "paródai",
+   "p3": "paródo",
+   "pl1": "paródome",
+   "pl2": "paródote"
+  },
+  "past": {
+   "sg1": "parodžiau",
+   "sg2": "parodei",
+   "p3": "parodė",
+   "pl1": "parodėme",
+   "pl2": "parodėte"
+  },
+  "pastA": {
+   "sg1": "paródžiau",
+   "sg2": "paródei",
+   "p3": "paródė",
+   "pl1": "paródėme",
+   "pl2": "paródėte"
+  },
+  "fut": {
+   "sg1": "parodysiu",
+   "sg2": "parodysi",
+   "p3": "parodys",
+   "pl1": "parodysime",
+   "pl2": "parodysite"
+  },
+  "futA": {
+   "sg1": "paródysiu",
+   "sg2": "paródysi",
+   "p3": "paródys",
+   "pl1": "paródysime",
+   "pl2": "paródysite"
+  },
+  "cond": {
+   "sg1": "parodyčiau",
+   "sg2": "parodytum",
+   "p3": "parodytų",
+   "pl1": "parodytume",
+   "pl2": "parodytumėte"
+  },
+  "condA": {
+   "sg1": "paródyčiau",
+   "sg2": "paródytum",
+   "p3": "paródytų",
+   "pl1": "paródytume",
+   "pl2": "paródytumėte"
+  },
+  "habit": {
+   "sg1": "parodydavau",
+   "sg2": "parodydavai",
+   "p3": "parodydavo",
+   "pl1": "parodydavome",
+   "pl2": "parodydavote"
+  },
+  "habitA": {
+   "sg1": "paródydavau",
+   "sg2": "paródydavai",
+   "p3": "paródydavo",
+   "pl1": "paródydavome",
+   "pl2": "paródydavote"
+  },
+  "imp": {
+   "sg2": "parodyk",
+   "pl1": "parodykime",
+   "pl2": "parodykite"
+  },
+  "impA": {
+   "sg2": "paródyk",
+   "pl1": "paródykime",
+   "pl2": "paródykite"
+  }
+ },
+ {
+  "lemma": "nusipirkti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "nusiperku",
+   "sg2": "nusiperki",
+   "p3": "nusiperka",
+   "pl1": "nusiperkame",
+   "pl2": "nusiperkate"
+  },
+  "presA": {
+   "sg1": "nusìperku",
+   "sg2": "nusìperki",
+   "p3": "nusìperka",
+   "pl1": "nusìperkame",
+   "pl2": "nusìperkate"
+  },
+  "past": {
+   "sg1": "nusipirkau",
+   "sg2": "nusipirkai",
+   "p3": "nusipirko",
+   "pl1": "nusipirkome",
+   "pl2": "nusipirkote"
+  },
+  "pastA": {
+   "sg1": "nusipirkaũ",
+   "sg2": "nusipirkaĩ",
+   "p3": "nusipir̃ko",
+   "pl1": "nusipir̃kome",
+   "pl2": "nusipir̃kote"
+  },
+  "fut": {
+   "sg1": "nusipirksiu",
+   "sg2": "nusipirksi",
+   "p3": "nusipirks",
+   "pl1": "nusipirksime",
+   "pl2": "nusipirksite"
+  },
+  "futA": {
+   "sg1": "nusipir̃ksiu",
+   "sg2": "nusipir̃ksi",
+   "p3": "nusipir̃ks",
+   "pl1": "nusipir̃ksime",
+   "pl2": "nusipir̃ksite"
+  },
+  "cond": {
+   "sg1": "nusipirkčiau",
+   "sg2": "nusipirktum",
+   "p3": "nusipirktų",
+   "pl1": "nusipirktume",
+   "pl2": "nusipirktumėte"
+  },
+  "condA": {
+   "sg1": "nusipir̃kčiau",
+   "sg2": "nusipir̃ktum",
+   "p3": "nusipir̃ktų",
+   "pl1": "nusipir̃ktume",
+   "pl2": "nusipir̃ktumėte"
+  },
+  "habit": {
+   "sg1": "nusipirkdavau",
+   "sg2": "nusipirkdavai",
+   "p3": "nusipirkdavo",
+   "pl1": "nusipirkdavome",
+   "pl2": "nusipirkdavote"
+  },
+  "habitA": {
+   "sg1": "nusipir̃kdavau",
+   "sg2": "nusipir̃kdavai",
+   "p3": "nusipir̃kdavo",
+   "pl1": "nusipir̃kdavome",
+   "pl2": "nusipir̃kdavote"
+  },
+  "imp": {
+   "sg2": "nusipirk",
+   "pl1": "nusipirkime",
+   "pl2": "nusipirkite"
+  },
+  "impA": {
+   "sg2": "nusipir̃k",
+   "pl1": "nusipir̃kime",
+   "pl2": "nusipir̃kite"
+  }
+ },
+ {
+  "lemma": "paklausti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "paklausiu",
+   "sg2": "paklausi",
+   "p3": "paklausia",
+   "pl1": "paklausiame",
+   "pl2": "paklausiate"
+  },
+  "presA": {
+   "sg1": "pakláusiu",
+   "sg2": "pakláusi",
+   "p3": "pakláusia",
+   "pl1": "pakláusiame",
+   "pl2": "pakláusiate"
+  },
+  "past": {
+   "sg1": "paklausiau",
+   "sg2": "paklausei",
+   "p3": "paklausė",
+   "pl1": "paklausėme",
+   "pl2": "paklausėte"
+  },
+  "pastA": {
+   "sg1": "paklausiaũ",
+   "sg2": "paklauseĩ",
+   "p3": "paklaũsė",
+   "pl1": "paklaũsėme",
+   "pl2": "paklaũsėte"
+  },
+  "fut": {
+   "sg1": "paklausiu",
+   "sg2": "paklausi",
+   "p3": "paklaus",
+   "pl1": "paklausime",
+   "pl2": "paklausite"
+  },
+  "futA": {
+   "sg1": "pakláusiu",
+   "sg2": "pakláusi",
+   "p3": "paklaũs",
+   "pl1": "pakláusime",
+   "pl2": "pakláusite"
+  },
+  "cond": {
+   "sg1": "paklausčiau",
+   "sg2": "paklaustum",
+   "p3": "paklaustų",
+   "pl1": "paklaustume",
+   "pl2": "paklaustumėte"
+  },
+  "condA": {
+   "sg1": "pakláusčiau",
+   "sg2": "pakláustum",
+   "p3": "pakláustų",
+   "pl1": "pakláustume",
+   "pl2": "pakláustumėte"
+  },
+  "habit": {
+   "sg1": "paklausdavau",
+   "sg2": "paklausdavai",
+   "p3": "paklausdavo",
+   "pl1": "paklausdavome",
+   "pl2": "paklausdavote"
+  },
+  "habitA": {
+   "sg1": "pakláusdavau",
+   "sg2": "pakláusdavai",
+   "p3": "pakláusdavo",
+   "pl1": "pakláusdavome",
+   "pl2": "pakláusdavote"
+  },
+  "imp": {
+   "sg2": "paklausk",
+   "pl1": "paklauskime",
+   "pl2": "paklauskite"
+  },
+  "impA": {
+   "sg2": "pakláusk",
+   "pl1": "pakláuskime",
+   "pl2": "pakláuskite"
+  }
+ },
+ {
+  "lemma": "nupirkti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "nuperku",
+   "sg2": "nuperki",
+   "p3": "nuperka",
+   "pl1": "nuperkame",
+   "pl2": "nuperkate"
+  },
+  "presA": {
+   "sg1": "nùperku",
+   "sg2": "nùperki",
+   "p3": "nùperka",
+   "pl1": "nùperkame",
+   "pl2": "nùperkate"
+  },
+  "past": {
+   "sg1": "nupirkau",
+   "sg2": "nupirkai",
+   "p3": "nupirko",
+   "pl1": "nupirkome",
+   "pl2": "nupirkote"
+  },
+  "pastA": {
+   "sg1": "nupirkaũ",
+   "sg2": "nupirkaĩ",
+   "p3": "nupir̃ko",
+   "pl1": "nupir̃kome",
+   "pl2": "nupir̃kote"
+  },
+  "fut": {
+   "sg1": "nupirksiu",
+   "sg2": "nupirksi",
+   "p3": "nupirks",
+   "pl1": "nupirksime",
+   "pl2": "nupirksite"
+  },
+  "futA": {
+   "sg1": "nupir̃ksiu",
+   "sg2": "nupir̃ksi",
+   "p3": "nupir̃ks",
+   "pl1": "nupir̃ksime",
+   "pl2": "nupir̃ksite"
+  },
+  "cond": {
+   "sg1": "nupirkčiau",
+   "sg2": "nupirktum",
+   "p3": "nupirktų",
+   "pl1": "nupirktume",
+   "pl2": "nupirktumėte"
+  },
+  "condA": {
+   "sg1": "nupir̃kčiau",
+   "sg2": "nupir̃ktum",
+   "p3": "nupir̃ktų",
+   "pl1": "nupir̃ktume",
+   "pl2": "nupir̃ktumėte"
+  },
+  "habit": {
+   "sg1": "nupirkdavau",
+   "sg2": "nupirkdavai",
+   "p3": "nupirkdavo",
+   "pl1": "nupirkdavome",
+   "pl2": "nupirkdavote"
+  },
+  "habitA": {
+   "sg1": "nupir̃kdavau",
+   "sg2": "nupir̃kdavai",
+   "p3": "nupir̃kdavo",
+   "pl1": "nupir̃kdavome",
+   "pl2": "nupir̃kdavote"
+  },
+  "imp": {
+   "sg2": "nupirk",
+   "pl1": "nupirkime",
+   "pl2": "nupirkite"
+  },
+  "impA": {
+   "sg2": "nupir̃k",
+   "pl1": "nupir̃kime",
+   "pl2": "nupir̃kite"
+  }
+ },
+ {
+  "lemma": "padovanoti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "padovanoju",
+   "sg2": "padovanoji",
+   "p3": "padovanoja",
+   "pl1": "padovanojame",
+   "pl2": "padovanojate"
+  },
+  "presA": {
+   "sg1": "padovanóju",
+   "sg2": "padovanóji",
+   "p3": "padovanója",
+   "pl1": "padovanójame",
+   "pl2": "padovanójate"
+  },
+  "past": {
+   "sg1": "padovanojau",
+   "sg2": "padovanojai",
+   "p3": "padovanojo",
+   "pl1": "padovanojome",
+   "pl2": "padovanojote"
+  },
+  "pastA": {
+   "sg1": "padovanójau",
+   "sg2": "padovanójai",
+   "p3": "padovanójo",
+   "pl1": "padovanójome",
+   "pl2": "padovanójote"
+  },
+  "fut": {
+   "sg1": "padovanosiu",
+   "sg2": "padovanosi",
+   "p3": "padovanos",
+   "pl1": "padovanosime",
+   "pl2": "padovanosite"
+  },
+  "futA": {
+   "sg1": "padovanósiu",
+   "sg2": "padovanósi",
+   "p3": "padovanõs",
+   "pl1": "padovanósime",
+   "pl2": "padovanósite"
+  },
+  "cond": {
+   "sg1": "padovanočiau",
+   "sg2": "padovanotum",
+   "p3": "padovanotų",
+   "pl1": "padovanotume",
+   "pl2": "padovanotumėte"
+  },
+  "condA": {
+   "sg1": "padovanóčiau",
+   "sg2": "padovanótum",
+   "p3": "padovanótų",
+   "pl1": "padovanótume",
+   "pl2": "padovanótumėte"
+  },
+  "habit": {
+   "sg1": "padovanodavau",
+   "sg2": "padovanodavai",
+   "p3": "padovanodavo",
+   "pl1": "padovanodavome",
+   "pl2": "padovanodavote"
+  },
+  "habitA": {
+   "sg1": "padovanódavau",
+   "sg2": "padovanódavai",
+   "p3": "padovanódavo",
+   "pl1": "padovanódavome",
+   "pl2": "padovanódavote"
+  },
+  "imp": {
+   "sg2": "padovanok",
+   "pl1": "padovanokime",
+   "pl2": "padovanokite"
+  },
+  "impA": {
+   "sg2": "padovanók",
+   "pl1": "padovanókime",
+   "pl2": "padovanókite"
+  }
+ },
+ {
+  "lemma": "išvirti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "išverdu",
+   "sg2": "išverdi",
+   "p3": "išverda",
+   "pl1": "išverdame",
+   "pl2": "išverdate"
+  },
+  "presA": {
+   "sg1": "išvérdu",
+   "sg2": "išvérdi",
+   "p3": "išvérda",
+   "pl1": "išvérdame",
+   "pl2": "išvérdate"
+  },
+  "past": {
+   "sg1": "išviriau",
+   "sg2": "išvirei",
+   "p3": "išvirė",
+   "pl1": "išvirėme",
+   "pl2": "išvirėte"
+  },
+  "pastA": {
+   "sg1": "ìšviriau",
+   "sg2": "ìšvirei",
+   "p3": "ìšvirė",
+   "pl1": "ìšvirėme",
+   "pl2": "ìšvirėte"
+  },
+  "fut": {
+   "sg1": "išvirsiu",
+   "sg2": "išvirsi",
+   "p3": "išvirs",
+   "pl1": "išvirsime",
+   "pl2": "išvirsite"
+  },
+  "futA": {
+   "sg1": "išvir̃siu",
+   "sg2": "išvir̃si",
+   "p3": "išvir̃s",
+   "pl1": "išvir̃sime",
+   "pl2": "išvir̃site"
+  },
+  "cond": {
+   "sg1": "išvirčiau",
+   "sg2": "išvirtum",
+   "p3": "išvirtų",
+   "pl1": "išvirtume",
+   "pl2": "išvirtumėte"
+  },
+  "condA": {
+   "sg1": "išvìrčiau",
+   "sg2": "išvìrtum",
+   "p3": "išvìrtų",
+   "pl1": "išvìrtume",
+   "pl2": "išvìrtumėte"
+  },
+  "habit": {
+   "sg1": "išvirdavau",
+   "sg2": "išvirdavai",
+   "p3": "išvirdavo",
+   "pl1": "išvirdavome",
+   "pl2": "išvirdavote"
+  },
+  "habitA": {
+   "sg1": "išvìrdavau",
+   "sg2": "išvìrdavai",
+   "p3": "išvìrdavo",
+   "pl1": "išvìrdavome",
+   "pl2": "išvìrdavote"
+  },
+  "imp": {
+   "sg2": "išvirk",
+   "pl1": "išvirkime",
+   "pl2": "išvirkite"
+  },
+  "impA": {
+   "sg2": "išvìrk",
+   "pl1": "išvìrkime",
+   "pl2": "išvìrkite"
+  }
+ },
+ {
+  "lemma": "iškepti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "iškepu",
+   "sg2": "iškepi",
+   "p3": "iškepa",
+   "pl1": "iškepame",
+   "pl2": "iškepate"
+  },
+  "presA": {
+   "sg1": "ìškepu",
+   "sg2": "ìškepi",
+   "p3": "ìškepa",
+   "pl1": "ìškepame",
+   "pl2": "ìškepate"
+  },
+  "past": {
+   "sg1": "iškepiau",
+   "sg2": "iškepei",
+   "p3": "iškepė",
+   "pl1": "iškepėme",
+   "pl2": "iškepėte"
+  },
+  "pastA": {
+   "sg1": "ìškepiau",
+   "sg2": "ìškepei",
+   "p3": "ìškepė",
+   "pl1": "ìškepėme",
+   "pl2": "ìškepėte"
+  },
+  "fut": {
+   "sg1": "iškepsiu",
+   "sg2": "iškepsi",
+   "p3": "iškeps",
+   "pl1": "iškepsime",
+   "pl2": "iškepsite"
+  },
+  "futA": {
+   "sg1": "iškèpsiu",
+   "sg2": "iškèpsi",
+   "p3": "iškèps",
+   "pl1": "iškèpsime",
+   "pl2": "iškèpsite"
+  },
+  "cond": {
+   "sg1": "iškepčiau",
+   "sg2": "iškeptum",
+   "p3": "iškeptų",
+   "pl1": "iškeptume",
+   "pl2": "iškeptumėte"
+  },
+  "condA": {
+   "sg1": "iškèpčiau",
+   "sg2": "iškèptum",
+   "p3": "iškèptų",
+   "pl1": "iškèptume",
+   "pl2": "iškèptumėte"
+  },
+  "habit": {
+   "sg1": "iškepdavau",
+   "sg2": "iškepdavai",
+   "p3": "iškepdavo",
+   "pl1": "iškepdavome",
+   "pl2": "iškepdavote"
+  },
+  "habitA": {
+   "sg1": "iškèpdavau",
+   "sg2": "iškèpdavai",
+   "p3": "iškèpdavo",
+   "pl1": "iškèpdavome",
+   "pl2": "iškèpdavote"
+  },
+  "imp": {
+   "sg2": "iškepk",
+   "pl1": "iškepkime",
+   "pl2": "iškepkite"
+  },
+  "impA": {
+   "sg2": "iškèpk",
+   "pl1": "iškèpkime",
+   "pl2": "iškèpkite"
+  }
+ },
+ {
+  "lemma": "pakviesti",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "pakviečiu",
+   "sg2": "pakvieti",
+   "p3": "pakviečia",
+   "pl1": "pakviečiame",
+   "pl2": "pakviečiate"
+  },
+  "presA": {
+   "sg1": "pakviečiù",
+   "sg2": "pakvietì",
+   "p3": "pakviẽčia",
+   "pl1": "pakviẽčiame",
+   "pl2": "pakviẽčiate"
+  },
+  "past": {
+   "sg1": "pakviečiau",
+   "sg2": "pakvietei",
+   "p3": "pakvietė",
+   "pl1": "pakvietėme",
+   "pl2": "pakvietėte"
+  },
+  "pastA": {
+   "sg1": "pàkviečiau",
+   "sg2": "pàkvietei",
+   "p3": "pàkvietė",
+   "pl1": "pàkvietėme",
+   "pl2": "pàkvietėte"
+  },
+  "fut": {
+   "sg1": "pakviesiu",
+   "sg2": "pakviesi",
+   "p3": "pakvies",
+   "pl1": "pakviesime",
+   "pl2": "pakviesite"
+  },
+  "futA": {
+   "sg1": "pakviẽsiu",
+   "sg2": "pakviẽsi",
+   "p3": "pakviẽs",
+   "pl1": "pakviẽsime",
+   "pl2": "pakviẽsite"
+  },
+  "cond": {
+   "sg1": "pakviesčiau",
+   "sg2": "pakviestum",
+   "p3": "pakviestų",
+   "pl1": "pakviestume",
+   "pl2": "pakviestumėte"
+  },
+  "condA": {
+   "sg1": "pakviẽsčiau",
+   "sg2": "pakviẽstum",
+   "p3": "pakviẽstų",
+   "pl1": "pakviẽstume",
+   "pl2": "pakviẽstumėte"
+  },
+  "habit": {
+   "sg1": "pakviesdavau",
+   "sg2": "pakviesdavai",
+   "p3": "pakviesdavo",
+   "pl1": "pakviesdavome",
+   "pl2": "pakviesdavote"
+  },
+  "habitA": {
+   "sg1": "pakviẽsdavau",
+   "sg2": "pakviẽsdavai",
+   "p3": "pakviẽsdavo",
+   "pl1": "pakviẽsdavome",
+   "pl2": "pakviẽsdavote"
+  },
+  "imp": {
+   "sg2": "pakviesk",
+   "pl1": "pakvieskime",
+   "pl2": "pakvieskite"
+  },
+  "impA": {
+   "sg2": "pakviẽsk",
+   "pl1": "pakviẽskime",
+   "pl2": "pakviẽskite"
+  }
+ }
+]

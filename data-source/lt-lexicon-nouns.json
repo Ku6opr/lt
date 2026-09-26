@@ -1,0 +1,4054 @@
+[
+ {
+  "lemma": "mama",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "mother",
+  "gender": "f",
+  "sg": [
+   "mama",
+   "mamos",
+   "mamai",
+   "mamą",
+   "mama",
+   "mamoje"
+  ],
+  "pl": [
+   "mamos",
+   "mamų",
+   "mamoms",
+   "mamas",
+   "mamomis",
+   "mamose"
+  ],
+  "sgA": [
+   "mamà",
+   "mamõs",
+   "mãmai",
+   "mãmą",
+   "mamà",
+   "mamojè"
+  ],
+  "plA": [
+   "mãmos",
+   "mamų̃",
+   "mamóms",
+   "mamàs",
+   "mamomìs",
+   "mamosè"
+  ],
+  "headword": "mamà f (plural mãmos)&#32;"
+ },
+ {
+  "lemma": "tėtis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "mergina",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "young woman, girl, lass",
+  "gender": "f",
+  "sg": [
+   "mergina",
+   "merginos",
+   "merginai",
+   "merginą",
+   "mergina",
+   "merginoje"
+  ],
+  "pl": [
+   "merginos",
+   "merginų",
+   "merginoms",
+   "merginas",
+   "merginomis",
+   "merginose"
+  ],
+  "sgA": [
+   "merginà",
+   "mergìnos",
+   "mergìnai",
+   "mergìną",
+   "merginà",
+   "mergìnoje"
+  ],
+  "plA": [
+   "mergìnos",
+   "mergìnų",
+   "mergìnoms",
+   "merginàs",
+   "mergìnomis",
+   "mergìnose"
+  ],
+  "headword": "merginà f (plural mergi̇̀nos)&#32;"
+ },
+ {
+  "lemma": "vaikinas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "lad, boy, guy",
+  "gender": "m",
+  "sg": [
+   "vaikinas",
+   "vaikino",
+   "vaikinui",
+   "vaikiną",
+   "vaikinu",
+   "vaikine"
+  ],
+  "pl": [
+   "vaikinai",
+   "vaikinų",
+   "vaikinams",
+   "vaikinus",
+   "vaikinais",
+   "vaikinuose"
+  ],
+  "sgA": [
+   "vaikìnas",
+   "vaikìno",
+   "vaikìnui",
+   "vaikìną",
+   "vaikinù",
+   "vaikinè"
+  ],
+  "plA": [
+   "vaikìnai",
+   "vaikìnų",
+   "vaikìnams",
+   "vaikinùs",
+   "vaikìnais",
+   "vaikìnuose"
+  ],
+  "headword": "vaiki̇̀nas m (plural vaiki̇̀nai)&#32;"
+ },
+ {
+  "lemma": "pusseserė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female cousin",
+  "gender": "f",
+  "sg": [
+   "pussesserė",
+   "pussesserės",
+   "pussesserei",
+   "pussesserę",
+   "pussessere",
+   "pussesserėje"
+  ],
+  "pl": [
+   "pussesserės",
+   "pussesserių",
+   "pussesserėms",
+   "pussesseres",
+   "pussesserėmis",
+   "pussesserėse"
+  ],
+  "sgA": [
+   "pùssesserė",
+   "pùssesserės",
+   "pùssesserei",
+   "pùssesserę",
+   "pùssessere",
+   "pùssesserėje"
+  ],
+  "plA": [
+   "pùssesserės",
+   "pùssesserių",
+   "pùssesserėms",
+   "pùssesseres",
+   "pùssesserėmis",
+   "pùssesserėse"
+  ],
+  "headword": "pùsseserė f (plural pùsseserės)&#32;"
+ },
+ {
+  "lemma": "sūnėnas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "ponas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "sir (landlord, official, privileged man)",
+  "gender": "m",
+  "sg": [
+   "ponas",
+   "pono",
+   "ponui",
+   "poną",
+   "ponu",
+   "pone"
+  ],
+  "pl": [
+   "ponai",
+   "ponų",
+   "ponams",
+   "ponus",
+   "ponais",
+   "ponuose"
+  ],
+  "sgA": [
+   "põnas",
+   "põno",
+   "põnui",
+   "põną",
+   "ponù",
+   "ponè"
+  ],
+  "plA": [
+   "põnai",
+   "põnų",
+   "põnams",
+   "ponùs",
+   "põnais",
+   "põnuose"
+  ],
+  "headword": "põnas m&#32;"
+ },
+ {
+  "lemma": "ponia",
+  "found": false
+ },
+ {
+  "lemma": "dukterėčia",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "bendradarbis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "svečias",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "guest",
+  "gender": "m",
+  "sg": [
+   "svečias",
+   "svečio",
+   "svečiui",
+   "svečią",
+   "svečiu",
+   "svetyje"
+  ],
+  "pl": [
+   "svečiai",
+   "svečių",
+   "svečiams",
+   "svečius",
+   "svečiais",
+   "svečiuose"
+  ],
+  "sgA": [
+   "svẽčias",
+   "svẽčio",
+   "svẽčiui",
+   "svẽčią",
+   "svečiù",
+   "svetyjè"
+  ],
+  "plA": [
+   "svečiaĩ",
+   "svečių̃",
+   "svečiáms",
+   "svečiùs",
+   "svečiaĩs",
+   "svečiuosè"
+  ],
+  "headword": "svẽčias m (plural svečiai̇̃)&#32;"
+ },
+ {
+  "lemma": "keleivis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "traveller, passenger",
+  "gender": "m",
+  "sg": [
+   "keleivis",
+   "keleivio",
+   "keleiviui",
+   "keleivį",
+   "keleiviu",
+   "keleivyje"
+  ],
+  "pl": [
+   "keleiviai",
+   "keleivių",
+   "keleiviams",
+   "keleivius",
+   "keleiviais",
+   "keleiviuose"
+  ],
+  "sgA": [
+   "keleĩvis",
+   "keleĩvio",
+   "keleĩviui",
+   "keleĩvį",
+   "keleiviù",
+   "keleĩvyje"
+  ],
+  "plA": [
+   "keleĩviai",
+   "keleĩvių",
+   "keleĩviams",
+   "keleiviùs",
+   "keleĩviais",
+   "keleĩviuose"
+  ],
+  "headword": "kelei̇̃vis m (plural kelei̇̃viai, feminine kelei̇̃vė)&#32;"
+ },
+ {
+  "lemma": "draugė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "a female friend",
+  "gender": "f",
+  "sg": [
+   "draugė",
+   "draugės",
+   "draugei",
+   "draugę",
+   "drauge",
+   "draugėje"
+  ],
+  "pl": [
+   "draugės",
+   "draugių",
+   "draugėms",
+   "drauges",
+   "draugėmis",
+   "draugėse"
+  ],
+  "sgA": [
+   "draũgė",
+   "draũgės",
+   "draũgei",
+   "draũgę",
+   "draugè",
+   "draũgėje"
+  ],
+  "plA": [
+   "draũgės",
+   "draũgių",
+   "draũgėms",
+   "draugès",
+   "draũgėmis",
+   "draũgėse"
+  ],
+  "headword": "draũgė f (plural draũgės, masculine draũgas)&#32;"
+ },
+ {
+  "lemma": "mokytoja",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female teacher",
+  "gender": "f",
+  "sg": [
+   "mokytoja",
+   "mokytojos",
+   "mokytojai",
+   "mokytoją",
+   "mokytoja",
+   "mokytojoje"
+  ],
+  "pl": [
+   "mokytojos",
+   "mokytojų",
+   "mokytojoms",
+   "mokytojas",
+   "mokytojomis",
+   "mokytojose"
+  ],
+  "sgA": [
+   "mókytoja",
+   "mókytojos",
+   "mókytojai",
+   "mókytoją",
+   "mókytoja",
+   "mókytojoje"
+  ],
+  "plA": [
+   "mókytojos",
+   "mókytojų",
+   "mókytojoms",
+   "mókytojas",
+   "mókytojomis",
+   "mókytojose"
+  ],
+  "headword": "mókytoja f (plural mókytojos, masculine mókytojas)&#32;"
+ },
+ {
+  "lemma": "gydytoja",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female equivalent of gydytojas (“doctor, physician”)",
+  "gender": "f",
+  "sg": [
+   "gydytoja",
+   "gydytojos",
+   "gydytojai",
+   "gydytoją",
+   "gydytoja",
+   "gydytojoje"
+  ],
+  "pl": [
+   "gydytojos",
+   "gydytojų",
+   "gydytojoms",
+   "gydytojas",
+   "gydytojomis",
+   "gydytojose"
+  ],
+  "sgA": [
+   "gýdytoja",
+   "gýdytojos",
+   "gýdytojai",
+   "gýdytoją",
+   "gýdytoja",
+   "gýdytojoje"
+  ],
+  "plA": [
+   "gýdytojos",
+   "gýdytojų",
+   "gýdytojoms",
+   "gýdytojas",
+   "gýdytojomis",
+   "gýdytojose"
+  ],
+  "headword": "gýdytoja f (plural gýdytojos, masculine gýdytojas)&#32;"
+ },
+ {
+  "lemma": "studentė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female equivalent of studentas (“(higher education) student”)",
+  "gender": "f",
+  "sg": [
+   "studentė",
+   "studentės",
+   "studentei",
+   "studentę",
+   "studente",
+   "studentėje"
+  ],
+  "pl": [
+   "studentės",
+   "studenčių",
+   "studentėms",
+   "studentes",
+   "studentėmis",
+   "studentėse"
+  ],
+  "sgA": [
+   "studeñtė",
+   "studeñtės",
+   "studeñtei",
+   "studeñtę",
+   "studentè",
+   "studeñtėje"
+  ],
+  "plA": [
+   "studeñtės",
+   "studeñčių",
+   "studeñtėms",
+   "studentès",
+   "studeñtėmis",
+   "studeñtėse"
+  ],
+  "headword": "studeñtė f (plural studeñtės, masculine studeñtas)&#32;"
+ },
+ {
+  "lemma": "kaimynė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "padavėjas",
+  "found": false
+ },
+ {
+  "lemma": "padavėja",
+  "found": false
+ },
+ {
+  "lemma": "dėstytojas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "močiutė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "grandmother",
+  "gender": "f",
+  "sg": [
+   "močiutė",
+   "močiutės",
+   "močiutei",
+   "močiutę",
+   "močiute",
+   "močiutėje"
+  ],
+  "pl": [
+   "močiutės",
+   "močiučių",
+   "močiutėms",
+   "močiutes",
+   "močiutėmis",
+   "močiutėse"
+  ],
+  "sgA": [
+   "močiùtė",
+   "močiùtės",
+   "močiùtei",
+   "močiùtę",
+   "močiutè",
+   "močiùtėje"
+  ],
+  "plA": [
+   "močiùtės",
+   "močiùčių",
+   "močiùtėms",
+   "močiutès",
+   "močiùtėmis",
+   "močiùtėse"
+  ],
+  "headword": "močiùtė f (plural močiùtės)&#32;"
+ },
+ {
+  "lemma": "butas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "flat, apartment",
+  "gender": "m",
+  "sg": [
+   "butas",
+   "buto",
+   "butui",
+   "butą",
+   "butu",
+   "bute"
+  ],
+  "pl": [
+   "butai",
+   "butų",
+   "butams",
+   "butus",
+   "butais",
+   "butuose"
+  ],
+  "sgA": [
+   "bùtas",
+   "bùto",
+   "bùtui",
+   "bùtą",
+   "butù",
+   "butè"
+  ],
+  "plA": [
+   "bùtai",
+   "bùtų",
+   "bùtams",
+   "butùs",
+   "bùtais",
+   "bùtuose"
+  ],
+  "headword": "bùtas m (plural bùtai)&#32;"
+ },
+ {
+  "lemma": "biuras",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "office",
+  "gender": "m",
+  "sg": [
+   "biuras",
+   "biuro",
+   "biurui",
+   "biurą",
+   "biuru",
+   "biure"
+  ],
+  "pl": [
+   "biurai",
+   "biurų",
+   "biurams",
+   "biurus",
+   "biurais",
+   "biuruose"
+  ],
+  "sgA": [
+   "biùras",
+   "biùro",
+   "biùrui",
+   "biùrą",
+   "biurù",
+   "biurè"
+  ],
+  "plA": [
+   "biùrai",
+   "biùrų",
+   "biùrams",
+   "biurùs",
+   "biùrais",
+   "biùruose"
+  ],
+  "headword": "biùras m (plural biurai)&#32;"
+ },
+ {
+  "lemma": "centras",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "center",
+  "gender": "m",
+  "sg": [
+   "centras",
+   "centro",
+   "centrui",
+   "centrą",
+   "centru",
+   "centre"
+  ],
+  "pl": [
+   "centrai",
+   "centrų",
+   "centrams",
+   "centrus",
+   "centrais",
+   "centruose"
+  ],
+  "sgA": [
+   "ceñtras",
+   "ceñtro",
+   "ceñtrui",
+   "ceñtrą",
+   "centrù",
+   "centrè"
+  ],
+  "plA": [
+   "ceñtrai",
+   "ceñtrų",
+   "ceñtrams",
+   "centrùs",
+   "ceñtrais",
+   "ceñtruose"
+  ],
+  "headword": "ceñtras m (plural ceñtrai)&#32;"
+ },
+ {
+  "lemma": "knygynas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "bookshop, bookstore",
+  "gender": "m",
+  "sg": [
+   "knygynas",
+   "knygyno",
+   "knygynui",
+   "knygyną",
+   "knygynu",
+   "knygyne"
+  ],
+  "pl": [
+   "knygynai",
+   "knygynų",
+   "knygynams",
+   "knygynus",
+   "knygynais",
+   "knygynuose"
+  ],
+  "sgA": [
+   "knygýnas",
+   "knygýno",
+   "knygýnui",
+   "knygýną",
+   "knygýnu",
+   "knygýne"
+  ],
+  "plA": [
+   "knygýnai",
+   "knygýnų",
+   "knygýnams",
+   "knygýnus",
+   "knygýnais",
+   "knygýnuose"
+  ],
+  "headword": "knygýnas m (plural knygýnai)&#32;"
+ },
+ {
+  "lemma": "kirpykla",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "barbershop, hair salon",
+  "gender": "f",
+  "sg": [
+   "kirpykla",
+   "kirpyklos",
+   "kirpyklai",
+   "kirpyklą",
+   "kirpykla",
+   "kirpykloje"
+  ],
+  "pl": [
+   "kirpyklos",
+   "kirpyklų",
+   "kirpykloms",
+   "kirpyklas",
+   "kirpyklomis",
+   "kirpyklose"
+  ],
+  "sgA": [
+   "kirpyklà",
+   "kirpỹklos",
+   "kirpỹklai",
+   "kirpỹklą",
+   "kirpyklà",
+   "kirpỹkloje"
+  ],
+  "plA": [
+   "kirpỹklos",
+   "kirpỹklų",
+   "kirpỹkloms",
+   "kirpyklàs",
+   "kirpỹklomis",
+   "kirpỹklose"
+  ],
+  "headword": "kirpyklà f (plural kirpỹklos)&#32;"
+ },
+ {
+  "lemma": "klinika",
+  "found": false
+ },
+ {
+  "lemma": "picerija",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "pizzeria",
+  "gender": "f",
+  "sg": [
+   "picerija",
+   "picerijos",
+   "picerijai",
+   "piceriją",
+   "picerija",
+   "picerijoje"
+  ],
+  "pl": [
+   "picerijos",
+   "picerijų",
+   "picerijoms",
+   "picerijas",
+   "picerijomis",
+   "picerijose"
+  ],
+  "sgA": [
+   "picèrija",
+   "picèrijos",
+   "picèrijai",
+   "picèriją",
+   "picèrija",
+   "picèrijoje"
+  ],
+  "plA": [
+   "picèrijos",
+   "picèrijų",
+   "picèrijoms",
+   "picèrijas",
+   "picèrijomis",
+   "picèrijose"
+  ],
+  "headword": "picèrija f (plural picèrijos)&#32;"
+ },
+ {
+  "lemma": "valgykla",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "canteen, cafeteria",
+  "gender": "f",
+  "sg": [
+   "valgykla",
+   "valgyklos",
+   "valgyklai",
+   "valgyklą",
+   "valgykla",
+   "valgykloje"
+  ],
+  "pl": [
+   "valgyklos",
+   "valgyklų",
+   "valgykloms",
+   "valgyklas",
+   "valgyklomis",
+   "valgyklose"
+  ],
+  "sgA": [
+   "valgyklà",
+   "valgỹklos",
+   "valgỹklai",
+   "valgỹklą",
+   "valgyklà",
+   "valgỹkloje"
+  ],
+  "plA": [
+   "valgỹklos",
+   "valgỹklų",
+   "valgỹkloms",
+   "valgyklàs",
+   "valgỹklomis",
+   "valgỹklose"
+  ],
+  "headword": "valgyklà f (plural valgỹklos)&#32;"
+ },
+ {
+  "lemma": "kepyklėlė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "senamiestis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "old town (older historical part of a city)",
+  "gender": "m",
+  "sg": [
+   "senamiestis",
+   "senamiesčio",
+   "senamiesčiui",
+   "senamiestį",
+   "senamiesčiu",
+   "senamiestyje"
+  ],
+  "pl": [
+   "senamiesčiai",
+   "senamiesčių",
+   "senamiesčiams",
+   "senamiesčius",
+   "senamiesčiais",
+   "senamiesčiuose"
+  ],
+  "sgA": [
+   "senãmiestis",
+   "senãmiesčio",
+   "senãmiesčiui",
+   "senãmiestį",
+   "senãmiesčiu",
+   "senãmiestyje"
+  ],
+  "plA": [
+   "senãmiesčiai",
+   "senãmiesčių",
+   "senãmiesčiams",
+   "senãmiesčius",
+   "senãmiesčiais",
+   "senãmiesčiuose"
+  ],
+  "headword": "senãmiestis m (plural senãmiesčiai)&#32;"
+ },
+ {
+  "lemma": "sostinė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "capital, capital city",
+  "gender": "f",
+  "sg": [
+   "sostinė",
+   "sostinės",
+   "sostinei",
+   "sostinę",
+   "sostine",
+   "sostinėje"
+  ],
+  "pl": [
+   "sostinės",
+   "sostinių",
+   "sostinėms",
+   "sostines",
+   "sostinėmis",
+   "sostinėse"
+  ],
+  "sgA": [
+   "sõstinė",
+   "sõstinės",
+   "sõstinei",
+   "sõstinę",
+   "sõstine",
+   "sõstinėje"
+  ],
+  "plA": [
+   "sõstinės",
+   "sõstinių",
+   "sõstinėms",
+   "sõstines",
+   "sõstinėmis",
+   "sõstinėse"
+  ],
+  "headword": "sóstinė f (plural sostinės)&#32;"
+ },
+ {
+  "lemma": "kinas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "cinema",
+  "gender": "m",
+  "sg": [
+   "kinas",
+   "kino",
+   "kinui",
+   "kiną",
+   "kinu",
+   "kine"
+  ],
+  "pl": [
+   "kinai",
+   "kinų",
+   "kinams",
+   "kinus",
+   "kinais",
+   "kinuose"
+  ],
+  "sgA": [
+   "kìnas",
+   "kìno",
+   "kìnui",
+   "kìną",
+   "kinù",
+   "kinè"
+  ],
+  "plA": [
+   "kìnai",
+   "kìnų",
+   "kìnams",
+   "kinùs",
+   "kìnais",
+   "kìnuose"
+  ],
+  "headword": "ki̇̀nas m (plural ki̇̀nai, feminine ki̇̀nė)&#32;"
+ },
+ {
+  "lemma": "prospektas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "avenue",
+  "gender": "m",
+  "sg": [
+   "prospektas",
+   "prospekto",
+   "prospektui",
+   "prospektą",
+   "prospektu",
+   "prospekte"
+  ],
+  "pl": [
+   "prospektai",
+   "prospektų",
+   "prospektams",
+   "prospektus",
+   "prospektais",
+   "prospektuose"
+  ],
+  "sgA": [
+   "prospèktas",
+   "prospèkto",
+   "prospèktui",
+   "prospèktą",
+   "prospektù",
+   "prospektè"
+  ],
+  "plA": [
+   "prospèktai",
+   "prospèktų",
+   "prospèktams",
+   "prospektùs",
+   "prospèktais",
+   "prospèktuose"
+  ],
+  "headword": "prospèktas m (plural prospektai)&#32;"
+ },
+ {
+  "lemma": "kiemas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "yard, courtyard, forecourt (open area outside or in between buildings)",
+  "gender": "m",
+  "sg": [
+   "kiemas",
+   "kiemo",
+   "kiemui",
+   "kiemą",
+   "kiemu",
+   "kieme"
+  ],
+  "pl": [
+   "kiemai",
+   "kiemų",
+   "kiemams",
+   "kiemus",
+   "kiemais",
+   "kiemuose"
+  ],
+  "sgA": [
+   "kiẽmas",
+   "kiẽmo",
+   "kiẽmui",
+   "kiẽmą",
+   "kiemù",
+   "kiemè"
+  ],
+  "plA": [
+   "kiemaĩ",
+   "kiemų̃",
+   "kiemáms",
+   "kiemùs",
+   "kiemaĩs",
+   "kiemuosè"
+  ],
+  "headword": "kiẽmas m (plural kiemai̇̃)&#32;"
+ },
+ {
+  "lemma": "sodyba",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "farmstead, homestead, estate",
+  "gender": "f",
+  "sg": [
+   "sodyba",
+   "sodybos",
+   "sodybai",
+   "sodybą",
+   "sodyba",
+   "sodyboje"
+  ],
+  "pl": [
+   "sodybos",
+   "sodybų",
+   "sodyboms",
+   "sodybas",
+   "sodybomis",
+   "sodybose"
+  ],
+  "sgA": [
+   "sodýba",
+   "sodýbos",
+   "sodýbai",
+   "sodýbą",
+   "sodýba",
+   "sodýboje"
+  ],
+  "plA": [
+   "sodýbos",
+   "sodýbų",
+   "sodýboms",
+   "sodýbas",
+   "sodýbomis",
+   "sodýbose"
+  ],
+  "headword": "sodýba f (plural sodýbos)&#32;"
+ },
+ {
+  "lemma": "balkonas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "balcony (a platform with railings protruding from the outside of the wall of a house)",
+  "gender": "m",
+  "sg": [
+   "balkonas",
+   "balkono",
+   "balkonui",
+   "balkoną",
+   "balkonu",
+   "balkone"
+  ],
+  "pl": [
+   "balkonai",
+   "balkonų",
+   "balkonams",
+   "balkonus",
+   "balkonais",
+   "balkonuose"
+  ],
+  "sgA": [
+   "balkònas",
+   "balkòno",
+   "balkònui",
+   "balkòną",
+   "balkonù",
+   "balkonè"
+  ],
+  "plA": [
+   "balkònai",
+   "balkònų",
+   "balkònams",
+   "balkonùs",
+   "balkònais",
+   "balkònuose"
+  ],
+  "headword": "balkònas m (plural balkònai)&#32;"
+ },
+ {
+  "lemma": "svetainė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "parlor/parlour, guest room, salon",
+  "gender": "f",
+  "sg": [
+   "svetainė",
+   "svetainės",
+   "svetainei",
+   "svetainę",
+   "svetaine",
+   "svetainėje"
+  ],
+  "pl": [
+   "svetainės",
+   "svetainių",
+   "svetainėms",
+   "svetaines",
+   "svetainėmis",
+   "svetainėse"
+  ],
+  "sgA": [
+   "svetaĩnė",
+   "svetaĩnės",
+   "svetaĩnei",
+   "svetaĩnę",
+   "svetainè",
+   "svetaĩnėje"
+  ],
+  "plA": [
+   "svetaĩnės",
+   "svetaĩnių",
+   "svetaĩnėms",
+   "svetainès",
+   "svetaĩnėmis",
+   "svetaĩnėse"
+  ],
+  "headword": "svetai̇̃nė f (plural svetai̇̃nės)&#32;"
+ },
+ {
+  "lemma": "kabinetas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "poliklinika",
+  "found": false
+ },
+ {
+  "lemma": "degalinė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "garažas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "garage (building or room for the storage or maintenance of vehicles)",
+  "gender": "m",
+  "sg": [
+   "garažas",
+   "garažo",
+   "garažui",
+   "garažą",
+   "garažu",
+   "garaže"
+  ],
+  "pl": [
+   "garažai",
+   "garažų",
+   "garažams",
+   "garažus",
+   "garažais",
+   "garažuose"
+  ],
+  "sgA": [
+   "garãžas",
+   "garãžo",
+   "garãžui",
+   "garãžą",
+   "garažù",
+   "garažè"
+  ],
+  "plA": [
+   "garãžai",
+   "garãžų",
+   "garãžams",
+   "garažùs",
+   "garãžais",
+   "garãžuose"
+  ],
+  "headword": "garãžas m (plural garãžai)&#32;"
+ },
+ {
+  "lemma": "salė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "hall, chamber",
+  "gender": "f",
+  "sg": [
+   "salė",
+   "salės",
+   "salei",
+   "salę",
+   "sale",
+   "salėje"
+  ],
+  "pl": [
+   "salės",
+   "salių",
+   "salėms",
+   "sales",
+   "salėmis",
+   "salėse"
+  ],
+  "sgA": [
+   "sãlė",
+   "sãlės",
+   "sãlei",
+   "sãlę",
+   "salè",
+   "sãlėje"
+  ],
+  "plA": [
+   "sãlės",
+   "sãlių",
+   "sãlėms",
+   "salès",
+   "sãlėmis",
+   "sãlėse"
+  ],
+  "headword": "sãlė f (plural salės)&#32;"
+ },
+ {
+  "lemma": "akademija",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "academy",
+  "gender": "f",
+  "sg": [
+   "akademija",
+   "akademijos",
+   "akademijai",
+   "akademiją",
+   "akademija",
+   "akademijoje"
+  ],
+  "pl": [
+   "akademijos",
+   "akademijų",
+   "akademijoms",
+   "akademijas",
+   "akademijomis",
+   "akademijose"
+  ],
+  "sgA": [
+   "akàdemija",
+   "akàdemijos",
+   "akàdemijai",
+   "akàdemiją",
+   "akàdemija",
+   "akàdemijoje"
+  ],
+  "plA": [
+   "akàdemijos",
+   "akàdemijų",
+   "akàdemijoms",
+   "akàdemijas",
+   "akàdemijomis",
+   "akàdemijose"
+  ],
+  "headword": "akàdemija f (plural akàdemijos)&#32;"
+ },
+ {
+  "lemma": "kalnas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(geography) hill, mountain",
+  "gender": "m",
+  "sg": [
+   "kalnas",
+   "kalno",
+   "kalnui",
+   "kalną",
+   "kalnu",
+   "kalne"
+  ],
+  "pl": [
+   "kalnai",
+   "kalnų",
+   "kalnams",
+   "kalnus",
+   "kalnais",
+   "kalnuose"
+  ],
+  "sgA": [
+   "kálnas",
+   "kálno",
+   "kálnui",
+   "kálną",
+   "kálnu",
+   "kalnè"
+  ],
+  "plA": [
+   "kalnaĩ",
+   "kalnų̃",
+   "kalnáms",
+   "kálnus",
+   "kalnaĩs",
+   "kalnuosè"
+  ],
+  "headword": "kálnas m (plural kalnai̇̃)&#32;"
+ },
+ {
+  "lemma": "kelionė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "journey, trip, voyage",
+  "gender": "f",
+  "sg": [
+   "kelionė",
+   "kelionės",
+   "kelionei",
+   "kelionę",
+   "kelione",
+   "kelionėje"
+  ],
+  "pl": [
+   "kelionės",
+   "kelionių",
+   "kelionėms",
+   "keliones",
+   "kelionėmis",
+   "kelionėse"
+  ],
+  "sgA": [
+   "keliõnė",
+   "keliõnės",
+   "keliõnei",
+   "keliõnę",
+   "kelionè",
+   "keliõnėje"
+  ],
+  "plA": [
+   "keliõnės",
+   "keliõnių",
+   "keliõnėms",
+   "kelionès",
+   "keliõnėmis",
+   "keliõnėse"
+  ],
+  "headword": "keliõnė f (plural keliõnės)&#32;"
+ },
+ {
+  "lemma": "atostogos",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "leave, holiday, vacation",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "atostogos",
+   "atostogų",
+   "atostogoms",
+   "atostogas",
+   "atostogomis",
+   "atostogose"
+  ],
+  "sgA": [],
+  "plA": [
+   "atóstogos",
+   "atóstogų",
+   "atóstogoms",
+   "atóstogas",
+   "atóstogomis",
+   "atóstogose"
+  ],
+  "headword": "atóstogos f pl&#32;"
+ },
+ {
+  "lemma": "darželis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "koncertas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "concert",
+  "gender": "m",
+  "sg": [
+   "koncertas",
+   "koncerto",
+   "koncertui",
+   "koncertą",
+   "koncertu",
+   "koncerte"
+  ],
+  "pl": [
+   "koncertai",
+   "koncertų",
+   "koncertams",
+   "koncertus",
+   "koncertais",
+   "koncertuose"
+  ],
+  "sgA": [
+   "koncèrtas",
+   "koncèrto",
+   "koncèrtui",
+   "koncèrtą",
+   "koncèrtu",
+   "koncèrte"
+  ],
+  "plA": [
+   "koncèrtai",
+   "koncèrtų",
+   "koncèrtams",
+   "koncèrtus",
+   "koncèrtais",
+   "koncèrtuose"
+  ],
+  "headword": "koncèrtas m (plural koncèrtai)&#32;"
+ },
+ {
+  "lemma": "paroda",
+  "found": false
+ },
+ {
+  "lemma": "baras",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "bar (place where alcoholic beverages are sold)",
+  "gender": "m",
+  "sg": [
+   "baras",
+   "baro",
+   "barui",
+   "barą",
+   "baru",
+   "bare"
+  ],
+  "pl": [
+   "barai",
+   "barų",
+   "barams",
+   "barus",
+   "barais",
+   "baruose"
+  ],
+  "sgA": [
+   "bãras",
+   "bãro",
+   "bãrui",
+   "bãrą",
+   "barù",
+   "barè"
+  ],
+  "plA": [
+   "bãrai",
+   "bãrų",
+   "bãrams",
+   "barùs",
+   "bãrais",
+   "bãruose"
+  ],
+  "headword": "bãras m (plural bãrai)&#32;"
+ },
+ {
+  "lemma": "kioskas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "ambasada",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "embassy (organization representing a foreign state)",
+  "gender": "f",
+  "sg": [
+   "ambasada",
+   "ambasados",
+   "ambasadai",
+   "ambasadą",
+   "ambasada",
+   "ambasadoje"
+  ],
+  "pl": [
+   "ambasados",
+   "ambasadų",
+   "ambasadoms",
+   "ambasadas",
+   "ambasadomis",
+   "ambasadose"
+  ],
+  "sgA": [
+   "ambasadà",
+   "ambasãdos",
+   "ambasãdai",
+   "ambasãdą",
+   "ambasadà",
+   "ambasãdoje"
+  ],
+  "plA": [
+   "ambasãdos",
+   "ambasãdų",
+   "ambasãdoms",
+   "ambasadàs",
+   "ambasãdomis",
+   "ambasãdose"
+  ],
+  "headword": "ambasadà f (plural ambasãdos)"
+ },
+ {
+  "lemma": "alėja",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "košė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(uncountable) porridge as a meal",
+  "gender": "f",
+  "sg": [
+   "košė",
+   "košės",
+   "košei",
+   "košę",
+   "koše",
+   "košėje"
+  ],
+  "pl": [
+   "košės",
+   "košių",
+   "košėms",
+   "košes",
+   "košėmis",
+   "košėse"
+  ],
+  "sgA": [
+   "kõšė",
+   "kõšės",
+   "kõšei",
+   "kõšę",
+   "košè",
+   "kõšėje"
+  ],
+  "plA": [
+   "kõšės",
+   "kõšių",
+   "kõšėms",
+   "košès",
+   "kõšėmis",
+   "kõšėse"
+  ],
+  "headword": "kõšė f (plural kõšės)&#32;"
+ },
+ {
+  "lemma": "blynas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "ledai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "ice cream",
+  "gender": null,
+  "sg": [],
+  "pl": [
+   "ledai",
+   "ledų",
+   "ledams",
+   "ledus",
+   "ledais",
+   "leduose"
+  ],
+  "sgA": [],
+  "plA": [
+   "ledaĩ",
+   "ledų̃",
+   "ledáms",
+   "ledùs",
+   "ledaĩs",
+   "leduosè"
+  ],
+  "headword": "ledai"
+ },
+ {
+  "lemma": "sultys",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "juice",
+  "gender": "f",
+  "sg": [
+   "sultys",
+   "sulčių",
+   "sultims",
+   "sultis",
+   "sultimis",
+   "sultyse"
+  ],
+  "pl": [],
+  "sgA": [
+   "sùltys",
+   "sùlčių",
+   "sùltims",
+   "sùltis",
+   "sùltimis",
+   "sùltyse"
+  ],
+  "plA": [],
+  "headword": "sùltys f pl&#32;"
+ },
+ {
+  "lemma": "salotos",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "vaisius",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "fruit",
+  "gender": "m",
+  "sg": [
+   "vaisius",
+   "vaisiaus",
+   "vaisiui",
+   "vaisių",
+   "vaisiumi",
+   "vaisiuje"
+  ],
+  "pl": [
+   "vaisiai",
+   "vaisių",
+   "vaisiams",
+   "vaisius",
+   "vaisiais",
+   "vaisiuose"
+  ],
+  "sgA": [
+   "vaĩsius",
+   "vaĩsiaus",
+   "vaĩsiui",
+   "vaĩsių",
+   "vaĩsiumi",
+   "vaĩsiuje"
+  ],
+  "plA": [
+   "vaĩsiai",
+   "vaĩsių",
+   "vaĩsiams",
+   "vaisiùs",
+   "vaĩsiais",
+   "vaĩsiuose"
+  ],
+  "headword": "vai̇̃sius m (plural vai̇̃siai)&#32;"
+ },
+ {
+  "lemma": "daržovė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "vegetable (plant raised for some edible part of it, such as the leaves, roots, fruit, or flowers, but excluding any plan",
+  "gender": "f",
+  "sg": [
+   "daržovė",
+   "daržovės",
+   "daržovei",
+   "daržovę",
+   "daržove",
+   "daržovėje"
+  ],
+  "pl": [
+   "daržovės",
+   "daržovių",
+   "daržovėms",
+   "daržoves",
+   "daržovėmis",
+   "daržovėse"
+  ],
+  "sgA": [
+   "daržóvė",
+   "daržóvės",
+   "daržóvei",
+   "daržóvę",
+   "daržóve",
+   "daržóvėje"
+  ],
+  "plA": [
+   "daržóvės",
+   "daržóvių",
+   "daržóvėms",
+   "daržóves",
+   "daržóvėmis",
+   "daržóvėse"
+  ],
+  "headword": "daržóvė f (plural daržóvės)&#32;"
+ },
+ {
+  "lemma": "uoga",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "berry&#91;3&#93;",
+  "gender": "f",
+  "sg": [
+   "uoga",
+   "uogos",
+   "uogai",
+   "uogą",
+   "uoga",
+   "uogoje"
+  ],
+  "pl": [
+   "uogos",
+   "uogų",
+   "uogoms",
+   "uogas",
+   "uogomis",
+   "uogose"
+  ],
+  "sgA": [
+   "úoga",
+   "úogos",
+   "úogai",
+   "úogą",
+   "úoga",
+   "úogoje"
+  ],
+  "plA": [
+   "úogos",
+   "úogų",
+   "úogoms",
+   "úogas",
+   "úogomis",
+   "úogose"
+  ],
+  "headword": "úoga f (plural úogos)&#32;"
+ },
+ {
+  "lemma": "braškė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "strawberry, garden strawberry (Fragaria × ananassa)",
+  "gender": "f",
+  "sg": [
+   "braškė",
+   "braškės",
+   "braškei",
+   "braškę",
+   "braške",
+   "braškėje"
+  ],
+  "pl": [
+   "braškės",
+   "braškių",
+   "braškėms",
+   "braškes",
+   "braškėmis",
+   "braškėse"
+  ],
+  "sgA": [
+   "brãškė",
+   "brãškės",
+   "brãškei",
+   "brãškę",
+   "braškè",
+   "brãškėje"
+  ],
+  "plA": [
+   "brãškės",
+   "brãškių",
+   "brãškėms",
+   "braškès",
+   "brãškėmis",
+   "brãškėse"
+  ],
+  "headword": "brãškė f (plural brãškės)&#32;"
+ },
+ {
+  "lemma": "vynuogė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "grape (fruit)",
+  "gender": "f",
+  "sg": [
+   "vynuogė",
+   "vynuogės",
+   "vynuogei",
+   "vynuogę",
+   "vynuoge",
+   "vynuogėje"
+  ],
+  "pl": [
+   "vynuogės",
+   "vynuogių",
+   "vynuogėms",
+   "vynuoges",
+   "vynuogėmis",
+   "vynuogėse"
+  ],
+  "sgA": [
+   "vỹnuogė",
+   "vỹnuogės",
+   "vỹnuogei",
+   "vỹnuogę",
+   "vỹnuoge",
+   "vỹnuogėje"
+  ],
+  "plA": [
+   "vỹnuogės",
+   "vỹnuogių",
+   "vỹnuogėms",
+   "vỹnuoges",
+   "vỹnuogėmis",
+   "vỹnuogėse"
+  ],
+  "headword": "vỹnuogė f (plural vỹnuogės)&#32;"
+ },
+ {
+  "lemma": "ryžiai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "makaronai",
+  "found": false
+ },
+ {
+  "lemma": "druska",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "salt",
+  "gender": "f",
+  "sg": [
+   "druska",
+   "druskos",
+   "druskai",
+   "druską",
+   "druska",
+   "druskoje"
+  ],
+  "pl": [],
+  "sgA": [
+   "druska",
+   "druskos",
+   "druskai",
+   "druską",
+   "druska",
+   "druskoje"
+  ],
+  "plA": [],
+  "headword": "druskà f (uncountable)&#32;"
+ },
+ {
+  "lemma": "pipirai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "grietinė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "sour cream, smetana",
+  "gender": "f",
+  "sg": [
+   "grietinė",
+   "grietinės",
+   "grietinei",
+   "grietinę",
+   "grietine",
+   "grietinėje"
+  ],
+  "pl": [
+   "grietinės",
+   "grietinių",
+   "grietinėms",
+   "grietines",
+   "grietinėmis",
+   "grietinėse"
+  ],
+  "sgA": [
+   "grietìnė",
+   "grietìnės",
+   "grietìnei",
+   "grietìnę",
+   "grietinè",
+   "grietìnėje"
+  ],
+  "plA": [
+   "grietìnės",
+   "grietìnių",
+   "grietìnėms",
+   "grietinès",
+   "grietìnėmis",
+   "grietìnėse"
+  ],
+  "headword": "grieti̇̀nė f (plural grieti̇̀nės)&#32;"
+ },
+ {
+  "lemma": "varškė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "quark, cottage cheese",
+  "gender": "f",
+  "sg": [
+   "varškė",
+   "varškės",
+   "varškei",
+   "varškę",
+   "varške",
+   "varškėje"
+  ],
+  "pl": [
+   "varškės",
+   "varškių",
+   "varškėms",
+   "varškes",
+   "varškėmis",
+   "varškėse"
+  ],
+  "sgA": [
+   "varškė̃",
+   "varškė̃s",
+   "vãrškei",
+   "vãrškę",
+   "vãrške",
+   "varškėjè"
+  ],
+  "plA": [
+   "vãrškės",
+   "varškių̃",
+   "varškė́ms",
+   "vãrškes",
+   "varškėmìs",
+   "varškėsè"
+  ],
+  "headword": "varškė̃ f (plural vãrškės)&#32;"
+ },
+ {
+  "lemma": "kepsnys",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "omletas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "desertas",
+  "found": false
+ },
+ {
+  "lemma": "pusryčiai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "breakfast",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "pusryčiai",
+   "pusryčių",
+   "pusryčiams",
+   "pusryčius",
+   "pusryčiais",
+   "pusryčiuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "pùsryčiai",
+   "pùsryčių",
+   "pùsryčiams",
+   "pùsryčius",
+   "pùsryčiais",
+   "pùsryčiuose"
+  ],
+  "headword": "pùsryčiai m pl&#32;"
+ },
+ {
+  "lemma": "pietūs",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) lunch, dinner (midday meal)&#91;5&#93;",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "pietūs",
+   "pietų",
+   "pietums",
+   "pietus",
+   "pietumis",
+   "pietuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "piẽtūs",
+   "pietų̃",
+   "pietùms",
+   "pietùs",
+   "pietumìs",
+   "pietuosè"
+  ],
+  "headword": "piẽtūs m pl&#32;"
+ },
+ {
+  "lemma": "vakarienė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "dinner (evening meal)",
+  "gender": "f",
+  "sg": [
+   "vakarienė",
+   "vakarienės",
+   "vakarienei",
+   "vakarienę",
+   "vakariene",
+   "vakarienėje"
+  ],
+  "pl": [
+   "vakarienės",
+   "vakarienių",
+   "vakarienėms",
+   "vakarienes",
+   "vakarienėmis",
+   "vakarienėse"
+  ],
+  "sgA": [
+   "vakariẽnė",
+   "vakariẽnės",
+   "vakariẽnei",
+   "vakariẽnę",
+   "vakarienè",
+   "vakariẽnėje"
+  ],
+  "plA": [
+   "vakariẽnės",
+   "vakariẽnių",
+   "vakariẽnėms",
+   "vakarienès",
+   "vakariẽnėmis",
+   "vakariẽnėse"
+  ],
+  "headword": "vakariẽnė f (plural vakariẽnės)&#32;"
+ },
+ {
+  "lemma": "gėrimas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "beverage, drink",
+  "gender": "m",
+  "sg": [
+   "gėrimas",
+   "gėrimo",
+   "gėrimui",
+   "gėrimą",
+   "gėrimu",
+   "gėrime"
+  ],
+  "pl": [
+   "gėrimai",
+   "gėrimų",
+   "gėrimams",
+   "gėrimus",
+   "gėrimais",
+   "gėrimuose"
+  ],
+  "sgA": [
+   "gė́rimas",
+   "gė́rimo",
+   "gė́rimui",
+   "gė́rimą",
+   "gė́rimu",
+   "gė́rime"
+  ],
+  "plA": [
+   "gė́rimai",
+   "gė́rimų",
+   "gė́rimams",
+   "gė́rimus",
+   "gė́rimais",
+   "gė́rimuose"
+  ],
+  "headword": "gė́rimas m (plural gė́rimai)&#32;"
+ },
+ {
+  "lemma": "patiekalas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "course, dish",
+  "gender": "m",
+  "sg": [
+   "patiekalas",
+   "patiekalo",
+   "patiekalui",
+   "patiekalą",
+   "patiekalu",
+   "patiekale"
+  ],
+  "pl": [
+   "patiekalai",
+   "patiekalų",
+   "patiekalams",
+   "patiekalus",
+   "patiekalais",
+   "patiekaluose"
+  ],
+  "sgA": [
+   "pãtiekalas",
+   "pãtiekalo",
+   "pãtiekalui",
+   "pãtiekalą",
+   "pãtiekalu",
+   "patiekalè"
+  ],
+  "plA": [
+   "patiekalaĩ",
+   "patiekalų̃",
+   "patiekaláms",
+   "pãtiekalus",
+   "patiekalaĩs",
+   "patiekaluosè"
+  ],
+  "headword": "pãtiekalas m (plural patiekalai̇̃)&#32;"
+ },
+ {
+  "lemma": "padažas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "sauce, dipping sauce",
+  "gender": "m",
+  "sg": [
+   "padažas",
+   "padažo",
+   "padažui",
+   "padažą",
+   "padažu",
+   "padaže"
+  ],
+  "pl": [
+   "padažai",
+   "padažų",
+   "padažams",
+   "padažus",
+   "padažais",
+   "padažuose"
+  ],
+  "sgA": [
+   "pãdažas",
+   "pãdažo",
+   "pãdažui",
+   "pãdažą",
+   "pãdažu",
+   "padažè"
+  ],
+  "plA": [
+   "padažaĩ",
+   "padažų̃",
+   "padažáms",
+   "pãdažus",
+   "padažaĩs",
+   "padažuosè"
+  ],
+  "headword": "pãdažas m (plural padažai)&#32;"
+ },
+ {
+  "lemma": "cepelinai",
+  "found": false
+ },
+ {
+  "lemma": "šaltibarščiai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "cold borscht (a traditional soup made of beetroot)",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "šaltibarščiai",
+   "šaltibarščių",
+   "šaltibarščiams",
+   "šaltibarščius",
+   "šaltibarščiais",
+   "šaltibarščiuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "šaltìbarščiai",
+   "šaltìbarščių",
+   "šaltìbarščiams",
+   "šaltìbarščius",
+   "šaltìbarščiais",
+   "šaltìbarščiuose"
+  ],
+  "headword": "šalti̇̀barščiai m pl (uncountable)&#32;"
+ },
+ {
+  "lemma": "kiaušinienė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "avietė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(countable) raspberry (plant)",
+  "gender": "f",
+  "sg": [
+   "avietė",
+   "avietės",
+   "avietei",
+   "avietę",
+   "aviete",
+   "avietėje"
+  ],
+  "pl": [
+   "avietės",
+   "aviečių",
+   "avietėms",
+   "avietes",
+   "avietėmis",
+   "avietėse"
+  ],
+  "sgA": [
+   "aviẽtė",
+   "aviẽtės",
+   "aviẽtei",
+   "aviẽtę",
+   "avietè",
+   "aviẽtėje"
+  ],
+  "plA": [
+   "aviẽtės",
+   "aviẽčių",
+   "aviẽtėms",
+   "avietès",
+   "aviẽtėmis",
+   "aviẽtėse"
+  ],
+  "headword": "aviẽtė f (plural aviẽtės)&#32;"
+ },
+ {
+  "lemma": "riešutas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "nut (fruit with a hard shell and edible kernel) (especially) hazelnut",
+  "gender": "m",
+  "sg": [
+   "riešutas",
+   "riešuto",
+   "riešutui",
+   "riešutą",
+   "riešutu",
+   "riešute"
+  ],
+  "pl": [
+   "riešutai",
+   "riešutų",
+   "riešutams",
+   "riešutus",
+   "riešutais",
+   "riešutuose"
+  ],
+  "sgA": [
+   "ríešutas",
+   "ríešuto",
+   "ríešutui",
+   "ríešutą",
+   "ríešutu",
+   "riešutè"
+  ],
+  "plA": [
+   "riešutaĩ",
+   "riešutų̃",
+   "riešutáms",
+   "ríešutus",
+   "riešutaĩs",
+   "riešutuosè"
+  ],
+  "headword": "ri̇́ešutas m (plural riešutai̇̃)&#32;"
+ },
+ {
+  "lemma": "gira",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "kvass (a fermented cereal-based low alcoholic beverage, often flavored with fruit, honey and herbs.)",
+  "gender": "f",
+  "sg": [
+   "gira",
+   "giros",
+   "girai",
+   "girą",
+   "gira",
+   "giroje"
+  ],
+  "pl": [
+   "giros",
+   "girų",
+   "giroms",
+   "giras",
+   "giromis",
+   "girose"
+  ],
+  "sgA": [
+   "girà",
+   "girõs",
+   "gìrai",
+   "gìrą",
+   "girà",
+   "girojè"
+  ],
+  "plA": [
+   "gìros",
+   "girų̃",
+   "giróms",
+   "giràs",
+   "giromìs",
+   "girosè"
+  ],
+  "headword": "girà f (plural gi̇̀ros)&#32;"
+ },
+ {
+  "lemma": "kefyras",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "kefir (fermented milk drink)",
+  "gender": "m",
+  "sg": [
+   "kefyras",
+   "kefyro",
+   "kefyrui",
+   "kefyrą",
+   "kefyru",
+   "kefyre"
+  ],
+  "pl": [
+   "kefyrai",
+   "kefyrų",
+   "kefyrams",
+   "kefyrus",
+   "kefyrais",
+   "kefyruose"
+  ],
+  "sgA": [
+   "kefỹras",
+   "kefỹro",
+   "kefỹrui",
+   "kefỹrą",
+   "kefyrù",
+   "kefyrè"
+  ],
+  "plA": [
+   "kefỹrai",
+   "kefỹrų",
+   "kefỹrams",
+   "kefyrùs",
+   "kefỹrais",
+   "kefỹruose"
+  ],
+  "headword": "kefỹras m (plural kefyrai)&#32;"
+ },
+ {
+  "lemma": "batonas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "pyragaitis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "saldumynai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "moliūgas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "pumpkin",
+  "gender": "m",
+  "sg": [
+   "moliūgas",
+   "moliūgo",
+   "moliūgui",
+   "moliūgą",
+   "moliūgu",
+   "moliūge"
+  ],
+  "pl": [
+   "moliūgai",
+   "moliūgų",
+   "moliūgams",
+   "moliūgus",
+   "moliūgais",
+   "moliūguose"
+  ],
+  "sgA": [
+   "moliū̃gas",
+   "moliū̃go",
+   "moliū̃gui",
+   "moliū̃gą",
+   "moliūgù",
+   "moliūgè"
+  ],
+  "plA": [
+   "moliū̃gai",
+   "moliū̃gų",
+   "moliū̃gams",
+   "moliūgùs",
+   "moliū̃gais",
+   "moliū̃guose"
+  ],
+  "headword": "moliū̃gas m (plural moliū̃gai)&#32;"
+ },
+ {
+  "lemma": "baklažanas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "eggplant, aubergine",
+  "gender": "m",
+  "sg": [
+   "baklažanas",
+   "baklažano",
+   "baklažanui",
+   "baklažaną",
+   "baklažanu",
+   "baklažane"
+  ],
+  "pl": [
+   "baklažanai",
+   "baklažanų",
+   "baklažanams",
+   "baklažanus",
+   "baklažanais",
+   "baklažanuose"
+  ],
+  "sgA": [
+   "baklažãnas",
+   "baklažãno",
+   "baklažãnui",
+   "baklažãną",
+   "baklažanù",
+   "baklažanè"
+  ],
+  "plA": [
+   "baklažãnai",
+   "baklažãnų",
+   "baklažãnams",
+   "baklažanùs",
+   "baklažãnais",
+   "baklažãnuose"
+  ],
+  "headword": "baklažãnas m (plural baklažãnai)&#32;"
+ },
+ {
+  "lemma": "cukinija",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "burokėlis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kalakutiena",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "turkey (meat)",
+  "gender": "f",
+  "sg": [
+   "kalakutiena",
+   "kalakutienos",
+   "kalakutienai",
+   "kalakutieną",
+   "kalakutiena",
+   "kalakutienoje"
+  ],
+  "pl": [],
+  "sgA": [
+   "kalakutíena",
+   "kalakutíenos",
+   "kalakutíenai",
+   "kalakutíeną",
+   "kalakutíena",
+   "kalakutíenoje"
+  ],
+  "plA": [],
+  "headword": "kalakuti̇́ena f (uncountable)&#32;"
+ },
+ {
+  "lemma": "majonezas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "automobilis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "car, automobile",
+  "gender": "m",
+  "sg": [
+   "automobilis",
+   "automobilio",
+   "automobiliui",
+   "automobilį",
+   "automobiliu",
+   "automobilyje"
+  ],
+  "pl": [
+   "automobiliai",
+   "automobilių",
+   "automobiliams",
+   "automobilius",
+   "automobiliais",
+   "automobiliuose"
+  ],
+  "sgA": [
+   "automobìlis",
+   "automobìlio",
+   "automobìliui",
+   "automobìlį",
+   "automobiliù",
+   "automobìlyje"
+  ],
+  "plA": [
+   "automobìliai",
+   "automobìlių",
+   "automobìliams",
+   "automobiliùs",
+   "automobìliais",
+   "automobìliuose"
+  ],
+  "headword": "automobi̇̀lis m (plural automobi̇̀liai)&#32;"
+ },
+ {
+  "lemma": "bilietas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "ticket",
+  "gender": "m",
+  "sg": [
+   "bilietas",
+   "bilieto",
+   "bilietui",
+   "bilietą",
+   "bilietu",
+   "biliete"
+  ],
+  "pl": [
+   "bilietai",
+   "bilietų",
+   "bilietams",
+   "bilietus",
+   "bilietais",
+   "bilietuose"
+  ],
+  "sgA": [
+   "bìlietas",
+   "bìlieto",
+   "bìlietui",
+   "bìlietą",
+   "bìlietu",
+   "bìliete"
+  ],
+  "plA": [
+   "bìlietai",
+   "bìlietų",
+   "bìlietams",
+   "bìlietus",
+   "bìlietais",
+   "bìlietuose"
+  ],
+  "headword": "bi̇̀lietas m (plural bi̇̀lietai)&#32;"
+ },
+ {
+  "lemma": "dovana",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "gift&#91;2&#93;",
+  "gender": "f",
+  "sg": [
+   "dovana",
+   "dovanos",
+   "dovanai",
+   "dovaną",
+   "dovana",
+   "dovanoje"
+  ],
+  "pl": [
+   "dovanos",
+   "dovanų",
+   "dovanoms",
+   "dovanas",
+   "dovanomis",
+   "dovanose"
+  ],
+  "sgA": [
+   "dovanà",
+   "dovanõs",
+   "dóvanai",
+   "dóvaną",
+   "dóvana",
+   "dovanojè"
+  ],
+  "plA": [
+   "dóvanos",
+   "dovanų̃",
+   "dovanóms",
+   "dóvanas",
+   "dovanomìs",
+   "dovanosè"
+  ],
+  "headword": "dovanà f (plural dóvanos)&#32;"
+ },
+ {
+  "lemma": "žodynas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "vocabulary",
+  "gender": "m",
+  "sg": [
+   "žodynas",
+   "žodyno",
+   "žodynui",
+   "žodyną",
+   "žodynu",
+   "žodyne"
+  ],
+  "pl": [
+   "žodynai",
+   "žodynų",
+   "žodynams",
+   "žodynus",
+   "žodynais",
+   "žodynuose"
+  ],
+  "sgA": [
+   "žodýnas",
+   "žodýno",
+   "žodýnui",
+   "žodýną",
+   "žodýnu",
+   "žodýne"
+  ],
+  "plA": [
+   "žodýnai",
+   "žodýnų",
+   "žodýnams",
+   "žodýnus",
+   "žodýnais",
+   "žodýnuose"
+  ],
+  "headword": "žodýnas m (plural žodýnai)&#32;"
+ },
+ {
+  "lemma": "akiniai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) glasses, spectacles, eyeglasses",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "akiniai",
+   "akinių",
+   "akiniams",
+   "akinius",
+   "akiniais",
+   "akiniuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "akiniaĩ",
+   "akinių̃",
+   "akiniáms",
+   "ãkinius",
+   "akiniaĩs",
+   "akiniuosè"
+  ],
+  "headword": "akiniai̇̃ m pl&#32;"
+ },
+ {
+  "lemma": "batas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "shoe",
+  "gender": "m",
+  "sg": [
+   "batas",
+   "bato",
+   "batui",
+   "batą",
+   "batu",
+   "bate"
+  ],
+  "pl": [],
+  "sgA": [
+   "batas",
+   "bato",
+   "batui",
+   "batą",
+   "batu",
+   "bate"
+  ],
+  "plA": [],
+  "headword": "bãtas m&#32;"
+ },
+ {
+  "lemma": "suknelė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kepurė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "cap (headwear)",
+  "gender": "f",
+  "sg": [
+   "kepurė",
+   "kepurės",
+   "kepurei",
+   "kepurę",
+   "kepure",
+   "kepurėje"
+  ],
+  "pl": [
+   "kepurės",
+   "kepurių",
+   "kepurėms",
+   "kepures",
+   "kepurėmis",
+   "kepurėse"
+  ],
+  "sgA": [
+   "kepùrė",
+   "kepùrės",
+   "kepùrei",
+   "kepùrę",
+   "kepurè",
+   "kepùrėje"
+  ],
+  "plA": [
+   "kepùrės",
+   "kepùrių",
+   "kepùrėms",
+   "kepurès",
+   "kepùrėmis",
+   "kepùrėse"
+  ],
+  "headword": "kepùrė f (plural kepùrės)&#32;"
+ },
+ {
+  "lemma": "paltas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "Overcoat, topcoat",
+  "gender": "m",
+  "sg": [
+   "paltas",
+   "palto",
+   "paltui",
+   "paltą",
+   "paltu",
+   "palte"
+  ],
+  "pl": [
+   "paltai",
+   "paltų",
+   "paltams",
+   "paltus",
+   "paltais",
+   "paltuose"
+  ],
+  "sgA": [
+   "páltas",
+   "pálto",
+   "páltui",
+   "páltą",
+   "páltu",
+   "pálte"
+  ],
+  "plA": [
+   "páltai",
+   "páltų",
+   "páltams",
+   "páltus",
+   "páltais",
+   "páltuose"
+  ],
+  "headword": "páltas m (plural páltai)&#32;"
+ },
+ {
+  "lemma": "striukė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "marškiniai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) shirt",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "marškiniai",
+   "marškinių",
+   "marškiniams",
+   "marškinius",
+   "marškiniais",
+   "marškiniuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "marškiniaĩ",
+   "marškinių̃",
+   "marškiniáms",
+   "márškinius",
+   "marškiniaĩs",
+   "marškiniuosè"
+  ],
+  "headword": "marškiniai̇̃ m pl&#32;"
+ },
+ {
+  "lemma": "džinsai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "sijonas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "skirt",
+  "gender": "m",
+  "sg": [
+   "sijonas",
+   "sijono",
+   "sijonui",
+   "sijoną",
+   "sijonu",
+   "sijone"
+  ],
+  "pl": [
+   "sijonai",
+   "sijonų",
+   "sijonams",
+   "sijonus",
+   "sijonais",
+   "sijonuose"
+  ],
+  "sgA": [
+   "sijõnas",
+   "sijõno",
+   "sijõnui",
+   "sijõną",
+   "sijonù",
+   "sijonè"
+  ],
+  "plA": [
+   "sijõnai",
+   "sijõnų",
+   "sijõnams",
+   "sijonùs",
+   "sijõnais",
+   "sijõnuose"
+  ],
+  "headword": "sijõnas m (plural sijõnai)&#32;"
+ },
+ {
+  "lemma": "megztinis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kojinė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "a sock",
+  "gender": "f",
+  "sg": [
+   "kojinė",
+   "kojinės",
+   "kojinei",
+   "kojinę",
+   "kojine",
+   "kojinėje"
+  ],
+  "pl": [
+   "kojinės",
+   "kojinių",
+   "kojinėms",
+   "kojines",
+   "kojinėmis",
+   "kojinėse"
+  ],
+  "sgA": [
+   "kójinė",
+   "kójinės",
+   "kójinei",
+   "kójinę",
+   "kójine",
+   "kójinėje"
+  ],
+  "plA": [
+   "kójinės",
+   "kójinių",
+   "kójinėms",
+   "kójines",
+   "kójinėmis",
+   "kójinėse"
+  ],
+  "headword": "kójinė f (plural kójinės)&#32;"
+ },
+ {
+  "lemma": "pirštinė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "glove",
+  "gender": "f",
+  "sg": [
+   "pirštinė",
+   "pirštinės",
+   "pirštinei",
+   "pirštinę",
+   "pirštine",
+   "pirštinėje"
+  ],
+  "pl": [
+   "pirštinės",
+   "pirštinių",
+   "pirštinėms",
+   "pirštines",
+   "pirštinėmis",
+   "pirštinėse"
+  ],
+  "sgA": [
+   "pir̃štinė",
+   "pir̃štinės",
+   "pir̃štinei",
+   "pir̃štinę",
+   "pirštinè",
+   "pir̃štinėje"
+  ],
+  "plA": [
+   "pir̃štinės",
+   "pir̃štinių",
+   "pir̃štinėms",
+   "pirštinès",
+   "pir̃štinėmis",
+   "pir̃štinėse"
+  ],
+  "headword": "pir̃štinė f (plural pir̃štinės)&#32;"
+ },
+ {
+  "lemma": "šalikas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "scarf",
+  "gender": "m",
+  "sg": [
+   "šalikas",
+   "šaliko",
+   "šalikui",
+   "šaliką",
+   "šaliku",
+   "šalike"
+  ],
+  "pl": [
+   "šalikai",
+   "šalikų",
+   "šalikams",
+   "šalikus",
+   "šalikais",
+   "šalikuose"
+  ],
+  "sgA": [
+   "šãlikas",
+   "šãliko",
+   "šãlikui",
+   "šãliką",
+   "šãliku",
+   "šalikè"
+  ],
+  "plA": [
+   "šalikaĩ",
+   "šalikų̃",
+   "šalikáms",
+   "šãlikus",
+   "šalikaĩs",
+   "šalikuosè"
+  ],
+  "headword": "šãlikas m (plural šalikai̇̃)&#32;"
+ },
+ {
+  "lemma": "kelnės",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "pants, trousers",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "kelnės",
+   "kelnių",
+   "kelnėms",
+   "kelnes",
+   "kelnėmis",
+   "kelnėse"
+  ],
+  "sgA": [],
+  "plA": [
+   "kélnės",
+   "kélnių",
+   "kélnėms",
+   "kélnes",
+   "kélnėmis",
+   "kélnėse"
+  ],
+  "headword": "kélnės f pl&#32;"
+ },
+ {
+  "lemma": "rankinė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kuprinė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "backpack",
+  "gender": "f",
+  "sg": [
+   "kuprinė",
+   "kuprinės",
+   "kuprinei",
+   "kuprinę",
+   "kuprine",
+   "kuprinėje"
+  ],
+  "pl": [
+   "kuprinės",
+   "kuprinių",
+   "kuprinėms",
+   "kuprines",
+   "kuprinėmis",
+   "kuprinėse"
+  ],
+  "sgA": [
+   "kuprìnė",
+   "kuprìnės",
+   "kuprìnei",
+   "kuprìnę",
+   "kuprinè",
+   "kuprìnėje"
+  ],
+  "plA": [
+   "kuprìnės",
+   "kuprìnių",
+   "kuprìnėms",
+   "kuprinès",
+   "kuprìnėmis",
+   "kuprìnėse"
+  ],
+  "headword": "kupri̇̀nė f (plural kupri̇̀nės)&#32;"
+ },
+ {
+  "lemma": "piniginė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "lempa",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "lamp",
+  "gender": "f",
+  "sg": [
+   "lempa",
+   "lempos",
+   "lempai",
+   "lempą",
+   "lempa",
+   "lempoje"
+  ],
+  "pl": [
+   "lempos",
+   "lempų",
+   "lempoms",
+   "lempas",
+   "lempomis",
+   "lempose"
+  ],
+  "sgA": [
+   "lémpa",
+   "lémpos",
+   "lémpai",
+   "lémpą",
+   "lémpa",
+   "lémpoje"
+  ],
+  "plA": [
+   "lémpos",
+   "lémpų",
+   "lémpoms",
+   "lémpas",
+   "lémpomis",
+   "lémpose"
+  ],
+  "headword": "lémpa f (plural lémpos)&#32;"
+ },
+ {
+  "lemma": "lentyna",
+  "found": false
+ },
+ {
+  "lemma": "fotelis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "armchair, easy chair",
+  "gender": "m",
+  "sg": [
+   "fotelis",
+   "fotelio",
+   "foteliui",
+   "fotelį",
+   "foteliu",
+   "fotelyje"
+  ],
+  "pl": [
+   "foteliai",
+   "fotelių",
+   "foteliams",
+   "fotelius",
+   "foteliais",
+   "foteliuose"
+  ],
+  "sgA": [
+   "fòtelis",
+   "fòtelio",
+   "fòteliui",
+   "fòtelį",
+   "fòteliu",
+   "fòtelyje"
+  ],
+  "plA": [
+   "fòteliai",
+   "fòtelių",
+   "fòteliams",
+   "fòtelius",
+   "fòteliais",
+   "fòteliuose"
+  ],
+  "headword": "fòtelis m (plural fòteliai)&#32;"
+ },
+ {
+  "lemma": "gitara",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(music) guitar",
+  "gender": "f",
+  "sg": [
+   "gitara",
+   "gitaros",
+   "gitarai",
+   "gitarą",
+   "gitara",
+   "gitaroje"
+  ],
+  "pl": [
+   "gitaros",
+   "gitarų",
+   "gitaroms",
+   "gitaras",
+   "gitaromis",
+   "gitarose"
+  ],
+  "sgA": [
+   "gitarà",
+   "gitãros",
+   "gitãrai",
+   "gitãrą",
+   "gitarà",
+   "gitãroje"
+  ],
+  "plA": [
+   "gitãros",
+   "gitãrų",
+   "gitãroms",
+   "gitaràs",
+   "gitãromis",
+   "gitãrose"
+  ],
+  "headword": "gitarà f (plural gitãros)&#32;"
+ },
+ {
+  "lemma": "fortepijonas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "filmas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "film, movie (cinematic work)",
+  "gender": "m",
+  "sg": [
+   "filmas",
+   "filmo",
+   "filmui",
+   "filmą",
+   "filmu",
+   "filme"
+  ],
+  "pl": [
+   "filmai",
+   "filmų",
+   "filmams",
+   "filmus",
+   "filmais",
+   "filmuose"
+  ],
+  "sgA": [
+   "fìlmas",
+   "fìlmo",
+   "fìlmui",
+   "fìlmą",
+   "fìlmu",
+   "fìlme"
+  ],
+  "plA": [
+   "fìlmai",
+   "fìlmų",
+   "fìlmams",
+   "fìlmus",
+   "fìlmais",
+   "fìlmuose"
+  ],
+  "headword": "fi̇̀lmas m (plural fi̇̀lmai)&#32;"
+ },
+ {
+  "lemma": "muzika",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "music",
+  "gender": "f",
+  "sg": [
+   "muzika",
+   "muzikos",
+   "muzikai",
+   "muziką",
+   "muzika",
+   "muzikoje"
+  ],
+  "pl": [
+   "muzikos",
+   "muzikų",
+   "muzikoms",
+   "muzikas",
+   "muzikomis",
+   "muzikose"
+  ],
+  "sgA": [
+   "mùzika",
+   "mùzikos",
+   "mùzikai",
+   "mùziką",
+   "mùzika",
+   "mùzikoje"
+  ],
+  "plA": [
+   "mùzikos",
+   "mùzikų",
+   "mùzikoms",
+   "mùzikas",
+   "mùzikomis",
+   "mùzikose"
+  ],
+  "headword": "mùzika f (plural mùzikos)&#32;"
+ },
+ {
+  "lemma": "sportas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "sport",
+  "gender": "m",
+  "sg": [
+   "sportas",
+   "sporto",
+   "sportui",
+   "sportą",
+   "sportu",
+   "sporte"
+  ],
+  "pl": [
+   "sportai",
+   "sportų",
+   "sportams",
+   "sportus",
+   "sportais",
+   "sportuose"
+  ],
+  "sgA": [
+   "spòrtas",
+   "spòrto",
+   "spòrtui",
+   "spòrtą",
+   "spòrtu",
+   "spòrte"
+  ],
+  "plA": [
+   "spòrtai",
+   "spòrtų",
+   "spòrtams",
+   "spòrtus",
+   "spòrtais",
+   "spòrtuose"
+  ],
+  "headword": "spòrtas m (plural spòrtai)&#32;"
+ },
+ {
+  "lemma": "futbolas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(sports) football (UK), soccer (US, Australia), association football",
+  "gender": "m",
+  "sg": [
+   "futbolas",
+   "futbolo",
+   "futbolui",
+   "futbolą",
+   "futbolu",
+   "futbole"
+  ],
+  "pl": [],
+  "sgA": [
+   "fùtbolas",
+   "fùtbolo",
+   "fùtbolui",
+   "fùtbolą",
+   "fùtbolu",
+   "fùtbole"
+  ],
+  "plA": [],
+  "headword": "fùtbolas m (uncountable)&#32;"
+ },
+ {
+  "lemma": "krepšinis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(sports) basketball (ball game)",
+  "gender": "m",
+  "sg": [
+   "krepšinis",
+   "krepšinio",
+   "krepšiniui",
+   "krepšinį",
+   "krepšiniu",
+   "krepšinyje"
+  ],
+  "pl": [],
+  "sgA": [
+   "krepšìnis",
+   "krepšìnio",
+   "krepšìniui",
+   "krepšìnį",
+   "krepšiniù",
+   "krepšìnyje"
+  ],
+  "plA": [],
+  "headword": "krepši̇̀nis m (uncountable)&#32;"
+ },
+ {
+  "lemma": "tenisas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(sports) tennis",
+  "gender": "m",
+  "sg": [
+   "tenisas",
+   "teniso",
+   "tenisui",
+   "tenisą",
+   "tenisu",
+   "tenise"
+  ],
+  "pl": [],
+  "sgA": [
+   "tènisas",
+   "tèniso",
+   "tènisui",
+   "tènisą",
+   "tènisu",
+   "tènise"
+  ],
+  "plA": [],
+  "headword": "tènisas m (uncountable)&#32;"
+ },
+ {
+  "lemma": "šachmatai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "chess (board game)",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "šachmatai",
+   "šachmatų",
+   "šachmatams",
+   "šachmatus",
+   "šachmatais",
+   "šachmatuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "šachmãtai",
+   "šachmãtų",
+   "šachmãtams",
+   "šachmatùs",
+   "šachmãtais",
+   "šachmãtuose"
+  ],
+  "headword": "šachmãtai m pl&#32;"
+ },
+ {
+  "lemma": "egzaminas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "exam, examination",
+  "gender": "m",
+  "sg": [
+   "egzaminas",
+   "egzamino",
+   "egzaminui",
+   "egzaminą",
+   "egzaminu",
+   "egzamine"
+  ],
+  "pl": [
+   "egzaminai",
+   "egzaminų",
+   "egzaminams",
+   "egzaminus",
+   "egzaminais",
+   "egzaminuose"
+  ],
+  "sgA": [
+   "egzãminas",
+   "egzãmino",
+   "egzãminui",
+   "egzãminą",
+   "egzãminu",
+   "egzãmine"
+  ],
+  "plA": [
+   "egzãminai",
+   "egzãminų",
+   "egzãminams",
+   "egzãminus",
+   "egzãminais",
+   "egzãminuose"
+  ],
+  "headword": "egzãminas m (plural egzãminai)&#32;"
+ },
+ {
+  "lemma": "paskaita",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "lecture",
+  "gender": "f",
+  "sg": [
+   "paskaita",
+   "paskaitos",
+   "paskaitai",
+   "paskaitą",
+   "paskaita",
+   "paskaitoje"
+  ],
+  "pl": [
+   "paskaitos",
+   "paskaitų",
+   "paskaitoms",
+   "paskaitas",
+   "paskaitomis",
+   "paskaitose"
+  ],
+  "sgA": [
+   "paskaità",
+   "paskaitõs",
+   "pãskaitai",
+   "pãskaitą",
+   "pãskaita",
+   "paskaitojè"
+  ],
+  "plA": [
+   "pãskaitos",
+   "paskaitų̃",
+   "paskaitóms",
+   "pãskaitas",
+   "paskaitomìs",
+   "paskaitosè"
+  ],
+  "headword": "paskaità f (plural pãskaitos)&#32;"
+ },
+ {
+  "lemma": "užduotis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "a task, assignment, work",
+  "gender": "f",
+  "sg": [
+   "užduotis",
+   "užduoties",
+   "užduočiai",
+   "užduotį",
+   "užduotimi",
+   "užduotyje"
+  ],
+  "pl": [
+   "užduotys",
+   "užduočių",
+   "užduotims",
+   "užduotis",
+   "užduotimis",
+   "užduotyse"
+  ],
+  "sgA": [
+   "užduotìs",
+   "užduotiẽs",
+   "ùžduočiai",
+   "ùžduotį",
+   "užduotimì",
+   "užduotyjè"
+  ],
+  "plA": [
+   "ùžduotys",
+   "užduočių̃",
+   "užduotìms",
+   "ùžduotis",
+   "užduotimìs",
+   "užduotysè"
+  ],
+  "headword": "užduoti̇̀s f (plural ùžduotys)&#32;"
+ },
+ {
+  "lemma": "klausimas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "question",
+  "gender": "m",
+  "sg": [
+   "klausimas",
+   "klausimo",
+   "klausimui",
+   "klausimą",
+   "klausimu",
+   "klausime"
+  ],
+  "pl": [
+   "klausimai",
+   "klausimų",
+   "klausimams",
+   "klausimus",
+   "klausimais",
+   "klausimuose"
+  ],
+  "sgA": [
+   "kláusimas",
+   "kláusimo",
+   "kláusimui",
+   "kláusimą",
+   "kláusimu",
+   "kláusime"
+  ],
+  "plA": [
+   "kláusimai",
+   "kláusimų",
+   "kláusimams",
+   "kláusimus",
+   "kláusimais",
+   "kláusimuose"
+  ],
+  "headword": "kláusimas m (plural kláusimai)&#32;"
+ },
+ {
+  "lemma": "kalba",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "language",
+  "gender": "f",
+  "sg": [
+   "kalba",
+   "kalbos",
+   "kalbai",
+   "kalbą",
+   "kalba",
+   "kalboje"
+  ],
+  "pl": [
+   "kalbos",
+   "kalbų",
+   "kalboms",
+   "kalbas",
+   "kalbomis",
+   "kalbose"
+  ],
+  "sgA": [
+   "kalbà",
+   "kalbõs",
+   "kal̃bai",
+   "kal̃bą",
+   "kalbà",
+   "kalbojè"
+  ],
+  "plA": [
+   "kal̃bos",
+   "kalbų̃",
+   "kalbóms",
+   "kalbàs",
+   "kalbomìs",
+   "kalbosè"
+  ],
+  "headword": "kalbà f (plural kal̃bos)&#32;"
+ },
+ {
+  "lemma": "vaistai",
+  "found": false
+ },
+ {
+  "lemma": "tabletė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "gerklė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "throat",
+  "gender": "f",
+  "sg": [
+   "gerklė",
+   "gerklės",
+   "gerklei",
+   "gerklę",
+   "gerkle",
+   "gerklėje"
+  ],
+  "pl": [
+   "gerklės",
+   "gerklių",
+   "gerklėms",
+   "gerkles",
+   "gerklėmis",
+   "gerklėse"
+  ],
+  "sgA": [
+   "gerklė̃",
+   "gerklė̃s",
+   "gérklei",
+   "gérklę",
+   "gérkle",
+   "gerklėjè"
+  ],
+  "plA": [
+   "gérklės",
+   "gerklių̃",
+   "gerklė́ms",
+   "gérkles",
+   "gerklėmìs",
+   "gerklėsè"
+  ],
+  "headword": "gerklė̃ f (plural gérklės)&#32;"
+ },
+ {
+  "lemma": "pilvas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "belly, stomach",
+  "gender": "m",
+  "sg": [
+   "pilvas",
+   "pilvo",
+   "pilvui",
+   "pilvą",
+   "pilvu",
+   "pilve"
+  ],
+  "pl": [
+   "pilvai",
+   "pilvų",
+   "pilvams",
+   "pilvus",
+   "pilvais",
+   "pilvuose"
+  ],
+  "sgA": [
+   "pil̃vas",
+   "pil̃vo",
+   "pil̃vui",
+   "pil̃vą",
+   "pilvù",
+   "pilvè"
+  ],
+  "plA": [
+   "pilvaĩ",
+   "pilvų̃",
+   "pilváms",
+   "pilvùs",
+   "pilvaĩs",
+   "pilvuosè"
+  ],
+  "headword": "pil̃vas m (plural pilvai̇̃)&#32;"
+ },
+ {
+  "lemma": "nugara",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(anatomy) back&#91;5&#93;",
+  "gender": "f",
+  "sg": [
+   "nugara",
+   "nugaros",
+   "nugarai",
+   "nugarą",
+   "nugara",
+   "nugaroje"
+  ],
+  "pl": [
+   "nugaros",
+   "nugarų",
+   "nugaroms",
+   "nugaras",
+   "nugaromis",
+   "nugarose"
+  ],
+  "sgA": [
+   "nùgara",
+   "nùgaros",
+   "nùgarai",
+   "nùgarą",
+   "nùgara",
+   "nùgaroje"
+  ],
+  "plA": [
+   "nùgaros",
+   "nùgarų",
+   "nùgaroms",
+   "nùgaras",
+   "nùgaromis",
+   "nùgarose"
+  ],
+  "headword": "nùgara f (plural nùgaros)&#32;"
+ },
+ {
+  "lemma": "nosis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(anatomy) nose",
+  "gender": "f",
+  "sg": [
+   "nosis",
+   "nosies",
+   "nosiai",
+   "nosį",
+   "nosimi",
+   "nosyje"
+  ],
+  "pl": [
+   "nosys",
+   "nosių",
+   "nosims",
+   "nosis",
+   "nosimis",
+   "nosyse"
+  ],
+  "sgA": [
+   "nósis",
+   "nósies",
+   "nósiai",
+   "nósį",
+   "nósimi",
+   "nósyje"
+  ],
+  "plA": [
+   "nósys",
+   "nósių",
+   "nósims",
+   "nósis",
+   "nósimis",
+   "nósyse"
+  ],
+  "headword": "nósis f (plural nósys)&#32;"
+ },
+ {
+  "lemma": "liga",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "illness",
+  "gender": "f",
+  "sg": [
+   "liga",
+   "ligos",
+   "ligai",
+   "ligą",
+   "liga",
+   "ligoje"
+  ],
+  "pl": [
+   "ligos",
+   "ligų",
+   "ligoms",
+   "ligas",
+   "ligomis",
+   "ligose"
+  ],
+  "sgA": [
+   "ligà",
+   "ligõs",
+   "lìgai",
+   "lìgą",
+   "ligà",
+   "ligojè"
+  ],
+  "plA": [
+   "lìgos",
+   "ligų̃",
+   "ligóms",
+   "ligàs",
+   "ligomìs",
+   "ligosè"
+  ],
+  "headword": "ligà f (plural li̇̀gos)&#32;"
+ },
+ {
+  "lemma": "sveikata",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "health",
+  "gender": "f",
+  "sg": [
+   "sveikata",
+   "sveikatos",
+   "sveikatai",
+   "sveikatą",
+   "sveikata",
+   "sveikatoje"
+  ],
+  "pl": [],
+  "sgA": [
+   "sveikatà",
+   "sveikãtos",
+   "sveikãtai",
+   "sveikãtą",
+   "sveikatà",
+   "sveikãtoje"
+  ],
+  "plA": [],
+  "headword": "sveikatà f&#32;"
+ },
+ {
+  "lemma": "metai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "year",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "metai",
+   "metų",
+   "metams",
+   "metus",
+   "metais",
+   "metuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "mẽtai",
+   "mẽtų",
+   "mẽtams",
+   "metùs",
+   "mẽtais",
+   "mẽtuose"
+  ],
+  "headword": null
+ },
+ {
+  "lemma": "eglutė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "žvakė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "candle",
+  "gender": "f",
+  "sg": [
+   "žvakė",
+   "žvakės",
+   "žvakei",
+   "žvakę",
+   "žvake",
+   "žvakėje"
+  ],
+  "pl": [
+   "žvakės",
+   "žvakių",
+   "žvakėms",
+   "žvakes",
+   "žvakėmis",
+   "žvakėse"
+  ],
+  "sgA": [
+   "žvãkė",
+   "žvãkės",
+   "žvãkei",
+   "žvãkę",
+   "žvakè",
+   "žvãkėje"
+  ],
+  "plA": [
+   "žvãkės",
+   "žvãkių",
+   "žvãkėms",
+   "žvakès",
+   "žvãkėmis",
+   "žvãkėse"
+  ],
+  "headword": "žvãkė f (plural žvãkės)&#32;"
+ },
+ {
+  "lemma": "atvirukas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "pieštukas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "pencil",
+  "gender": "m",
+  "sg": [
+   "pieštukas",
+   "pieštuko",
+   "pieštukui",
+   "pieštuką",
+   "pieštuku",
+   "pieštuke"
+  ],
+  "pl": [
+   "pieštukai",
+   "pieštukų",
+   "pieštukams",
+   "pieštukus",
+   "pieštukais",
+   "pieštukuose"
+  ],
+  "sgA": [
+   "pieštùkas",
+   "pieštùko",
+   "pieštùkui",
+   "pieštùką",
+   "pieštukù",
+   "pieštukè"
+  ],
+  "plA": [
+   "pieštùkai",
+   "pieštùkų",
+   "pieštùkams",
+   "pieštukùs",
+   "pieštùkais",
+   "pieštùkuose"
+  ],
+  "headword": "pieštùkas m (plural pieštùkai)&#32;"
+ },
+ {
+  "lemma": "sąsiuvinis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "vadovėlis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "textbook",
+  "gender": "m",
+  "sg": [
+   "vadovėlis",
+   "vadovėlio",
+   "vadovėliui",
+   "vadovėlį",
+   "vadovėliu",
+   "vadovėlyje"
+  ],
+  "pl": [
+   "vadovėliai",
+   "vadovėlių",
+   "vadovėliams",
+   "vadovėlius",
+   "vadovėliais",
+   "vadovėliuose"
+  ],
+  "sgA": [
+   "vadovė̃lis",
+   "vadovė̃lio",
+   "vadovė̃liui",
+   "vadovė̃lį",
+   "vadovėliù",
+   "vadovė̃lyje"
+  ],
+  "plA": [
+   "vadovė̃liai",
+   "vadovė̃lių",
+   "vadovė̃liams",
+   "vadovėliùs",
+   "vadovė̃liais",
+   "vadovė̃liuose"
+  ],
+  "headword": "vadovė̃lis m (plural vadovė̃liai)&#32;"
+ },
+ {
+  "lemma": "popierius",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "paper",
+  "gender": "m",
+  "sg": [
+   "popierius",
+   "popieriaus",
+   "popieriui",
+   "popierių",
+   "popieriumi",
+   "popieriuje"
+  ],
+  "pl": [
+   "popieriai",
+   "popierių",
+   "popieriams",
+   "popierius",
+   "popieriais",
+   "popieriuose"
+  ],
+  "sgA": [
+   "põpierius",
+   "põpieriaus",
+   "põpieriui",
+   "põpierių",
+   "põpieriumi",
+   "põpieriuje"
+  ],
+  "plA": [
+   "põpieriai",
+   "põpierių",
+   "põpieriams",
+   "põpierius",
+   "põpieriais",
+   "põpieriuose"
+  ],
+  "headword": "põpierius m (plural põpieriai)&#32;"
+ }
+]

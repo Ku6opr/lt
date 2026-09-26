@@ -4,8 +4,10 @@
   import { UI } from '../i18n/ui.js';
   import { progress } from '../stores/progress.js';
   import { masteryOf } from '../stores/mastery.js';
+  import DailyTask from './DailyTask.svelte';
   export let onEnter;
   export let onReinforce;
+  export let onDaily;
 
   $: L = UI[$lang];
   $: pctOf = (id) => Math.round(masteryOf($progress, id).pct * 100);
@@ -40,8 +42,10 @@
         </div>
       </div>
     </div>
-    <h1>{L.chooseTopic}</h1>
-    <p class="lead">{L.homeLead}</p>
+    <div class="headrow">
+      <h1>{L.chooseTopic}</h1>
+      <DailyTask onStart={onDaily} />
+    </div>
   </header>
 
   <div class="map lt-scroll">
@@ -84,8 +88,8 @@
 
   .hero { margin-bottom: clamp(24px, 5cqw, 44px); }
   .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 2px; }
-  .hero h1 { font-size: clamp(32px, 6.4cqw, 50px); line-height: 1.04; margin: 4px 0 12px; }
-  .lead { color: var(--color-neutral-600); font-size: clamp(15px, 2.4cqw, 18px); line-height: 1.55; max-width: 52ch; margin: 0; }
+  .headrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; margin-top: 4px; }
+  .hero h1 { font-size: clamp(32px, 6.4cqw, 50px); line-height: 1.04; margin: 0; }
 
   .langsel { display: inline-flex; flex: none; border: 1px solid var(--color-divider); border-radius: 999px; overflow: hidden; background: var(--color-surface); }
   .lang-opt {

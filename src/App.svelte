@@ -14,6 +14,9 @@
   function enterReinforce() {
     screen = 'reinforce';
   }
+  function enterDaily() {
+    screen = 'daily';
+  }
   function goBack() {
     screen = 'topics';
   }
@@ -23,7 +26,11 @@
 
 <div class="lt-app" style="font-family:var(--font-body);color:var(--color-text);background:var(--color-bg)">
   {#if screen === 'topics'}
-    <TopicsScreen onEnter={enterTopic} onReinforce={enterReinforce} />
+    <TopicsScreen onEnter={enterTopic} onReinforce={enterReinforce} onDaily={enterDaily} />
+  {:else if screen === 'daily'}
+    {#await import('./lib/components/DailyScreen.svelte') then m}
+      <svelte:component this={m.default} onBack={goBack} />
+    {/await}
   {:else if screen === 'reinforce'}
     {#key screen}
       <ReinforceScreen onBack={goBack} />

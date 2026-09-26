@@ -1,0 +1,323 @@
+{
+ "verbs": [
+  {
+   "inf": "sportuoti",
+   "pres3": "sportuoja",
+   "past3": "sportavo"
+  },
+  {
+   "inf": "ragauti",
+   "pres3": "ragauja",
+   "past3": "ragavo"
+  },
+  {
+   "inf": "pietauti",
+   "pres3": "pietauja",
+   "past3": "pietavo"
+  },
+  {
+   "inf": "pamiršti",
+   "pres3": "pamiršta",
+   "past3": "pamiršo"
+  },
+  {
+   "inf": "paskambinti",
+   "pres3": "paskambina",
+   "past3": "paskambino"
+  },
+  {
+   "inf": "plaukioti",
+   "pres3": "plaukioja",
+   "past3": "plaukiojo"
+  },
+  {
+   "inf": "bėgioti",
+   "pres3": "bėgioja",
+   "past3": "bėgiojo"
+  },
+  {
+   "inf": "švęsti",
+   "pres3": "švenčia",
+   "past3": "šventė"
+  },
+  {
+   "inf": "tvarkyti",
+   "pres3": "tvarko",
+   "past3": "tvarkė"
+  },
+  {
+   "inf": "dėvėti",
+   "pres3": "dėvi",
+   "past3": "dėvėjo"
+  },
+  {
+   "inf": "pailsėti",
+   "pres3": "pailsi",
+   "past3": "pailsėjo"
+  },
+  {
+   "inf": "atvažiuoti",
+   "pres3": "atvažiuoja",
+   "past3": "atvažiavo"
+  },
+  {
+   "inf": "parodyti",
+   "pres3": "parodo",
+   "past3": "parodė"
+  },
+  {
+   "inf": "nusipirkti",
+   "pres3": "nusiperka",
+   "past3": "nusipirko"
+  },
+  {
+   "inf": "paklausti",
+   "pres3": "paklausia",
+   "past3": "paklausė"
+  },
+  {
+   "inf": "nupirkti",
+   "pres3": "nuperka",
+   "past3": "nupirko"
+  },
+  {
+   "inf": "padovanoti",
+   "pres3": "padovanoja",
+   "past3": "padovanojo"
+  },
+  {
+   "inf": "išvirti",
+   "pres3": "išverda",
+   "past3": "išvirė"
+  },
+  {
+   "inf": "iškepti",
+   "pres3": "iškepa",
+   "past3": "iškepė"
+  },
+  {
+   "inf": "pakviesti",
+   "pres3": "pakviečia",
+   "past3": "pakvietė"
+  }
+ ],
+ "nouns": [
+  {
+   "lemma": "tėtis",
+   "gender": "m"
+  },
+  {
+   "lemma": "sūnėnas",
+   "gender": "m"
+  },
+  {
+   "lemma": "bendradarbis",
+   "gender": "m"
+  },
+  {
+   "lemma": "dėstytojas",
+   "gender": "m"
+  },
+  {
+   "lemma": "kabinetas",
+   "gender": "m"
+  },
+  {
+   "lemma": "darželis",
+   "gender": "m"
+  },
+  {
+   "lemma": "kioskas",
+   "gender": "m"
+  },
+  {
+   "lemma": "blynas",
+   "gender": "m"
+  },
+  {
+   "lemma": "kepsnys",
+   "gender": "m"
+  },
+  {
+   "lemma": "omletas",
+   "gender": "m"
+  },
+  {
+   "lemma": "batonas",
+   "gender": "m"
+  },
+  {
+   "lemma": "pyragaitis",
+   "gender": "m"
+  },
+  {
+   "lemma": "burokėlis",
+   "gender": "m"
+  },
+  {
+   "lemma": "majonezas",
+   "gender": "m"
+  },
+  {
+   "lemma": "megztinis",
+   "gender": "m"
+  },
+  {
+   "lemma": "fortepijonas",
+   "gender": "m"
+  },
+  {
+   "lemma": "atvirukas",
+   "gender": "m"
+  },
+  {
+   "lemma": "sąsiuvinis",
+   "gender": "m"
+  },
+  {
+   "lemma": "padavėjas",
+   "gender": "m"
+  },
+  {
+   "lemma": "desertas",
+   "gender": "m"
+  },
+  {
+   "lemma": "dukterėčia",
+   "gender": "f"
+  },
+  {
+   "lemma": "kaimynė",
+   "gender": "f"
+  },
+  {
+   "lemma": "kepyklėlė",
+   "gender": "f"
+  },
+  {
+   "lemma": "degalinė",
+   "gender": "f"
+  },
+  {
+   "lemma": "alėja",
+   "gender": "f"
+  },
+  {
+   "lemma": "cukinija",
+   "gender": "f"
+  },
+  {
+   "lemma": "suknelė",
+   "gender": "f"
+  },
+  {
+   "lemma": "striukė",
+   "gender": "f"
+  },
+  {
+   "lemma": "rankinė",
+   "gender": "f"
+  },
+  {
+   "lemma": "piniginė",
+   "gender": "f"
+  },
+  {
+   "lemma": "tabletė",
+   "gender": "f"
+  },
+  {
+   "lemma": "eglutė",
+   "gender": "f"
+  },
+  {
+   "lemma": "kiaušinienė",
+   "gender": "f"
+  },
+  {
+   "lemma": "ponia",
+   "gender": "f"
+  },
+  {
+   "lemma": "padavėja",
+   "gender": "f"
+  },
+  {
+   "lemma": "klinika",
+   "gender": "f"
+  },
+  {
+   "lemma": "poliklinika",
+   "gender": "f"
+  },
+  {
+   "lemma": "paroda",
+   "gender": "f"
+  },
+  {
+   "lemma": "lentyna",
+   "gender": "f"
+  },
+  {
+   "lemma": "pusseserė",
+   "gender": "f"
+  },
+  {
+   "lemma": "ryžiai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "pipirai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "saldumynai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "džinsai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "makaronai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "cepelinai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "vaistai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "salotos",
+   "gender": "f",
+   "plural": true
+  }
+ ],
+ "adjectives": [
+  "draugiškas",
+  "riebus",
+  "rūkytas",
+  "sotus",
+  "sūrus",
+  "jaukus",
+  "madingas",
+  "keptas",
+  "virtas",
+  "spalvingas",
+  "nešvarus",
+  "normalus",
+  "užimtas",
+  "margas",
+  "mylimas"
+ ]
+}

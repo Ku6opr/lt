@@ -1,0 +1,1157 @@
+[
+ {
+  "lemma": "draugiškas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "draugiškas",
+    "draugiško",
+    "draugiškam",
+    "draugišką",
+    "draugišku",
+    "draugiškame"
+   ],
+   "pl": [
+    "draugiški",
+    "draugiškų",
+    "draugiškiems",
+    "draugiškus",
+    "draugiškais",
+    "draugiškuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "draugiška",
+    "draugiškos",
+    "draugiškai",
+    "draugišką",
+    "draugiška",
+    "draugiškoje"
+   ],
+   "pl": [
+    "draugiškos",
+    "draugiškų",
+    "draugiškoms",
+    "draugiškas",
+    "draugiškomis",
+    "draugiškose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "draũgiškas",
+    "draũgiško",
+    "draũgiškam",
+    "draũgišką",
+    "draũgišku",
+    "draũgiškame"
+   ],
+   "pl": [
+    "draũgiški",
+    "draũgiškų",
+    "draũgiškiems",
+    "draũgiškus",
+    "draũgiškais",
+    "draũgiškuose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "draũgiška",
+    "draũgiškos",
+    "draũgiškai",
+    "draũgišką",
+    "draũgiška",
+    "draũgiškoje"
+   ],
+   "pl": [
+    "draũgiškos",
+    "draũgiškų",
+    "draũgiškoms",
+    "draũgiškas",
+    "draũgiškomis",
+    "draũgiškose"
+   ]
+  }
+ },
+ {
+  "lemma": "riebus",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "riebus",
+    "riebaus",
+    "riebiam",
+    "riebų",
+    "riebiu",
+    "riebiame"
+   ],
+   "pl": [
+    "riebūs",
+    "riebių",
+    "riebiems",
+    "riebius",
+    "riebiais",
+    "riebiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "riebi",
+    "riebios",
+    "riebiai",
+    "riebią",
+    "riebia",
+    "riebioje"
+   ],
+   "pl": [
+    "riebios",
+    "riebių",
+    "riebioms",
+    "riebias",
+    "riebiomis",
+    "riebiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "riebùs",
+    "riebaũs",
+    "riebiám",
+    "ríebų",
+    "ríebiu",
+    "riebiamè"
+   ],
+   "pl": [
+    "ríebūs",
+    "riebių̃",
+    "riebíems",
+    "ríebius",
+    "riebiaĩs",
+    "riebiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "riebì",
+    "riebiõs",
+    "ríebiai",
+    "ríebią",
+    "ríebia",
+    "riebiojè"
+   ],
+   "pl": [
+    "ríebios",
+    "riebių̃",
+    "riebióms",
+    "ríebias",
+    "riebiomìs",
+    "riebiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "rūkytas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "rūkytas",
+    "rūkyto",
+    "rūkytam",
+    "rūkytą",
+    "rūkytu",
+    "rūkytame"
+   ],
+   "pl": [
+    "rūkyti",
+    "rūkytų",
+    "rūkytiems",
+    "rūkytus",
+    "rūkytais",
+    "rūkytuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "rūkyta",
+    "rūkytos",
+    "rūkytai",
+    "rūkytą",
+    "rūkyta",
+    "rūkytoje"
+   ],
+   "pl": [
+    "rūkytos",
+    "rūkytų",
+    "rūkytoms",
+    "rūkytas",
+    "rūkytomis",
+    "rūkytose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "rūkýtas",
+    "rūkýto",
+    "rūkýtam",
+    "rūkýtą",
+    "rūkýtu",
+    "rūkýtame"
+   ],
+   "pl": [
+    "rūkýti",
+    "rūkýtų",
+    "rūkýtiems",
+    "rūkýtus",
+    "rūkýtais",
+    "rūkýtuose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "rūkýta",
+    "rūkýtos",
+    "rūkýtai",
+    "rūkýtą",
+    "rūkýta",
+    "rūkýtoje"
+   ],
+   "pl": [
+    "rūkýtos",
+    "rūkýtų",
+    "rūkýtoms",
+    "rūkýtas",
+    "rūkýtomis",
+    "rūkýtose"
+   ]
+  }
+ },
+ {
+  "lemma": "sotus",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "sotus",
+    "sotaus",
+    "sočiam",
+    "sotų",
+    "sočiu",
+    "sočiame"
+   ],
+   "pl": [
+    "sotūs",
+    "sočių",
+    "sotiems",
+    "sočius",
+    "sočiais",
+    "sočiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "soti",
+    "sočios",
+    "sočiai",
+    "sočią",
+    "sočia",
+    "sočioje"
+   ],
+   "pl": [
+    "sočios",
+    "sočių",
+    "sočioms",
+    "sočias",
+    "sočiomis",
+    "sočiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "sótus",
+    "sotaũs",
+    "sočiám",
+    "sótų",
+    "sóčiu",
+    "sočiamè"
+   ],
+   "pl": [
+    "sótūs",
+    "sočių̃",
+    "sotíems",
+    "sóčius",
+    "sočiaĩs",
+    "sočiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "sóti",
+    "sočiõs",
+    "sóčiai",
+    "sóčią",
+    "sóčia",
+    "sočiojè"
+   ],
+   "pl": [
+    "sóčios",
+    "sočių̃",
+    "sočióms",
+    "sóčias",
+    "sočiomìs",
+    "sočiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "sūrus",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "sūrus",
+    "sūraus",
+    "sūriam",
+    "sūrų",
+    "sūriu",
+    "sūriame"
+   ],
+   "pl": [
+    "sūrūs",
+    "sūrių",
+    "sūriems",
+    "sūrius",
+    "sūriais",
+    "sūriuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "sūri",
+    "sūrios",
+    "sūriai",
+    "sūrią",
+    "sūria",
+    "sūrioje"
+   ],
+   "pl": [
+    "sūrios",
+    "sūrių",
+    "sūrioms",
+    "sūrias",
+    "sūriomis",
+    "sūriose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "sūrùs",
+    "sūraũs",
+    "sūriám",
+    "sū́rų",
+    "sū́riu",
+    "sūriamè"
+   ],
+   "pl": [
+    "sū́rūs",
+    "sūrių̃",
+    "sūríems",
+    "sū́rius",
+    "sūriaĩs",
+    "sūriuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "sūrì",
+    "sūriõs",
+    "sū́riai",
+    "sū́rią",
+    "sū́ria",
+    "sūriojè"
+   ],
+   "pl": [
+    "sū́rios",
+    "sūrių̃",
+    "sūrióms",
+    "sū́rias",
+    "sūriomìs",
+    "sūriosè"
+   ]
+  }
+ },
+ {
+  "lemma": "jaukus",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "jaukus",
+    "jaukaus",
+    "jaukiam",
+    "jaukų",
+    "jaukiu",
+    "jaukiame"
+   ],
+   "pl": [
+    "jaukūs",
+    "jaukių",
+    "jaukiems",
+    "jaukius",
+    "jaukiais",
+    "jaukiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "jauki",
+    "jaukios",
+    "jaukiai",
+    "jaukią",
+    "jaukia",
+    "jaukioje"
+   ],
+   "pl": [
+    "jaukios",
+    "jaukių",
+    "jaukioms",
+    "jaukias",
+    "jaukiomis",
+    "jaukiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "jaukùs",
+    "jaukaũs",
+    "jaukiám",
+    "jaũkų",
+    "jaukiù",
+    "jaukiamè"
+   ],
+   "pl": [
+    "jaũkūs",
+    "jaukių̃",
+    "jaukíems",
+    "jaukiùs",
+    "jaukiaĩs",
+    "jaukiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "jaukì",
+    "jaukiõs",
+    "jaũkiai",
+    "jaũkią",
+    "jaukià",
+    "jaukiojè"
+   ],
+   "pl": [
+    "jaũkios",
+    "jaukių̃",
+    "jaukióms",
+    "jaukiàs",
+    "jaukiomìs",
+    "jaukiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "madingas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "madingas",
+    "madingo",
+    "madingam",
+    "madingą",
+    "madingu",
+    "madingame"
+   ],
+   "pl": [
+    "madingi",
+    "madingų",
+    "madingiems",
+    "madingus",
+    "madingais",
+    "madinguose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "madinga",
+    "madingos",
+    "madingai",
+    "madingą",
+    "madinga",
+    "madingoje"
+   ],
+   "pl": [
+    "madingos",
+    "madingų",
+    "madingoms",
+    "madingas",
+    "madingomis",
+    "madingose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "madìngas",
+    "madìngo",
+    "madìngam",
+    "madìngą",
+    "madìngu",
+    "madìngame"
+   ],
+   "pl": [
+    "madìngi",
+    "madìngų",
+    "madìngiems",
+    "madìngus",
+    "madìngais",
+    "madìnguose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "madìnga",
+    "madìngos",
+    "madìngai",
+    "madìngą",
+    "madìnga",
+    "madìngoje"
+   ],
+   "pl": [
+    "madìngos",
+    "madìngų",
+    "madìngoms",
+    "madìngas",
+    "madìngomis",
+    "madìngose"
+   ]
+  }
+ },
+ {
+  "lemma": "keptas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "keptas",
+    "kepto",
+    "keptam",
+    "keptą",
+    "keptu",
+    "keptame"
+   ],
+   "pl": [
+    "kepti",
+    "keptų",
+    "keptiems",
+    "keptus",
+    "keptais",
+    "keptuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "kepta",
+    "keptos",
+    "keptai",
+    "keptą",
+    "kepta",
+    "keptoje"
+   ],
+   "pl": [
+    "keptos",
+    "keptų",
+    "keptoms",
+    "keptas",
+    "keptomis",
+    "keptose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "kẽptas",
+    "kẽpto",
+    "keptám",
+    "kẽptą",
+    "keptù",
+    "keptamè"
+   ],
+   "pl": [
+    "keptì",
+    "keptų̃",
+    "keptíems",
+    "keptùs",
+    "keptaĩs",
+    "keptuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "keptà",
+    "keptõs",
+    "kẽptai",
+    "kẽptą",
+    "keptà",
+    "keptojè"
+   ],
+   "pl": [
+    "kẽptos",
+    "keptų̃",
+    "keptóms",
+    "keptàs",
+    "keptomìs",
+    "keptosè"
+   ]
+  }
+ },
+ {
+  "lemma": "virtas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "virtas",
+    "virto",
+    "virtam",
+    "virtą",
+    "virtu",
+    "virtame"
+   ],
+   "pl": [
+    "virti",
+    "virtų",
+    "virtiems",
+    "virtus",
+    "virtais",
+    "virtuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "virta",
+    "virtos",
+    "virtai",
+    "virtą",
+    "virta",
+    "virtoje"
+   ],
+   "pl": [
+    "virtos",
+    "virtų",
+    "virtoms",
+    "virtas",
+    "virtomis",
+    "virtose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "vìrtas",
+    "vìrto",
+    "virtám",
+    "vìrtą",
+    "vìrtu",
+    "virtamè"
+   ],
+   "pl": [
+    "virtì",
+    "virtų̃",
+    "virtíems",
+    "vìrtus",
+    "virtaĩs",
+    "virtuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "virtà",
+    "virtõs",
+    "vìrtai",
+    "vìrtą",
+    "vìrta",
+    "virtojè"
+   ],
+   "pl": [
+    "vìrtos",
+    "virtų̃",
+    "virtóms",
+    "vìrtas",
+    "virtomìs",
+    "virtosè"
+   ]
+  }
+ },
+ {
+  "lemma": "spalvingas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "spalvingas",
+    "spalvingo",
+    "spalvingam",
+    "spalvingą",
+    "spalvingu",
+    "spalvingame"
+   ],
+   "pl": [
+    "spalvingi",
+    "spalvingų",
+    "spalvingiems",
+    "spalvingus",
+    "spalvingais",
+    "spalvinguose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "spalvinga",
+    "spalvingos",
+    "spalvingai",
+    "spalvingą",
+    "spalvinga",
+    "spalvingoje"
+   ],
+   "pl": [
+    "spalvingos",
+    "spalvingų",
+    "spalvingoms",
+    "spalvingas",
+    "spalvingomis",
+    "spalvingose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "spalvìngas",
+    "spalvìngo",
+    "spalvìngam",
+    "spalvìngą",
+    "spalvìngu",
+    "spalvìngame"
+   ],
+   "pl": [
+    "spalvìngi",
+    "spalvìngų",
+    "spalvìngiems",
+    "spalvìngus",
+    "spalvìngais",
+    "spalvìnguose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "spalvìnga",
+    "spalvìngos",
+    "spalvìngai",
+    "spalvìngą",
+    "spalvìnga",
+    "spalvìngoje"
+   ],
+   "pl": [
+    "spalvìngos",
+    "spalvìngų",
+    "spalvìngoms",
+    "spalvìngas",
+    "spalvìngomis",
+    "spalvìngose"
+   ]
+  }
+ },
+ {
+  "lemma": "nešvarus",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "nešvarus",
+    "nešvaraus",
+    "nešvariam",
+    "nešvarų",
+    "nešvariu",
+    "nešvariame"
+   ],
+   "pl": [
+    "nešvarūs",
+    "nešvarių",
+    "nešvariems",
+    "nešvarius",
+    "nešvariais",
+    "nešvariuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "nešvari",
+    "nešvarios",
+    "nešvariai",
+    "nešvarią",
+    "nešvaria",
+    "nešvarioje"
+   ],
+   "pl": [
+    "nešvarios",
+    "nešvarių",
+    "nešvarioms",
+    "nešvarias",
+    "nešvariomis",
+    "nešvariose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "nešvarùs",
+    "nešvaraũs",
+    "nešvariám",
+    "nešvãrų",
+    "nešvariù",
+    "nešvariamè"
+   ],
+   "pl": [
+    "nešvãrūs",
+    "nešvarių̃",
+    "nešvaríems",
+    "nešvariùs",
+    "nešvariaĩs",
+    "nešvariuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "nešvarì",
+    "nešvariõs",
+    "nešvãriai",
+    "nešvãrią",
+    "nešvarià",
+    "nešvariojè"
+   ],
+   "pl": [
+    "nešvãrios",
+    "nešvarių̃",
+    "nešvarióms",
+    "nešvariàs",
+    "nešvariomìs",
+    "nešvariosè"
+   ]
+  }
+ },
+ {
+  "lemma": "normalus",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "normalus",
+    "normalaus",
+    "normaliam",
+    "normalų",
+    "normaliu",
+    "normaliame"
+   ],
+   "pl": [
+    "normalūs",
+    "normalių",
+    "normaliems",
+    "normalius",
+    "normaliais",
+    "normaliuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "normali",
+    "normalios",
+    "normaliai",
+    "normalią",
+    "normalia",
+    "normalioje"
+   ],
+   "pl": [
+    "normalios",
+    "normalių",
+    "normalioms",
+    "normalias",
+    "normaliomis",
+    "normaliose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "normalùs",
+    "normalaũs",
+    "normaliám",
+    "normãlų",
+    "normaliù",
+    "normaliamè"
+   ],
+   "pl": [
+    "normãlūs",
+    "normalių̃",
+    "normalíems",
+    "normaliùs",
+    "normaliaĩs",
+    "normaliuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "normalì",
+    "normaliõs",
+    "normãliai",
+    "normãlią",
+    "normalià",
+    "normaliojè"
+   ],
+   "pl": [
+    "normãlios",
+    "normalių̃",
+    "normalióms",
+    "normaliàs",
+    "normaliomìs",
+    "normaliosè"
+   ]
+  }
+ },
+ {
+  "lemma": "užimtas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "užimtas",
+    "užimto",
+    "užimtam",
+    "užimtą",
+    "užimtu",
+    "užimtame"
+   ],
+   "pl": [
+    "užimti",
+    "užimtų",
+    "užimtiems",
+    "užimtus",
+    "užimtais",
+    "užimtuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "užimta",
+    "užimtos",
+    "užimtai",
+    "užimtą",
+    "užimta",
+    "užimtoje"
+   ],
+   "pl": [
+    "užimtos",
+    "užimtų",
+    "užimtoms",
+    "užimtas",
+    "užimtomis",
+    "užimtose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "ùžimtas",
+    "ùžimto",
+    "užimtám",
+    "ùžimtą",
+    "ùžimtu",
+    "užimtamè"
+   ],
+   "pl": [
+    "užimtì",
+    "užimtų̃",
+    "užimtíems",
+    "ùžimtus",
+    "užimtaĩs",
+    "užimtuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "užimtà",
+    "užimtõs",
+    "ùžimtai",
+    "ùžimtą",
+    "ùžimta",
+    "užimtojè"
+   ],
+   "pl": [
+    "ùžimtos",
+    "užimtų̃",
+    "užimtóms",
+    "ùžimtas",
+    "užimtomìs",
+    "užimtosè"
+   ]
+  }
+ },
+ {
+  "lemma": "margas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "margas",
+    "margo",
+    "margam",
+    "margą",
+    "margu",
+    "margame"
+   ],
+   "pl": [
+    "margi",
+    "margų",
+    "margiems",
+    "margus",
+    "margais",
+    "marguose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "marga",
+    "margos",
+    "margai",
+    "margą",
+    "marga",
+    "margoje"
+   ],
+   "pl": [
+    "margos",
+    "margų",
+    "margoms",
+    "margas",
+    "margomis",
+    "margose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "márgas",
+    "márgo",
+    "margám",
+    "márgą",
+    "márgu",
+    "margamè"
+   ],
+   "pl": [
+    "margì",
+    "margų̃",
+    "margíems",
+    "márgus",
+    "margaĩs",
+    "marguosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "margà",
+    "margõs",
+    "márgai",
+    "márgą",
+    "márga",
+    "margojè"
+   ],
+   "pl": [
+    "márgos",
+    "margų̃",
+    "margóms",
+    "márgas",
+    "margomìs",
+    "margosè"
+   ]
+  }
+ },
+ {
+  "lemma": "mylimas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "mylimas",
+    "mylimo",
+    "mylimam",
+    "mylimą",
+    "mylimu",
+    "mylimame"
+   ],
+   "pl": [
+    "mylimi",
+    "mylimų",
+    "mylimiems",
+    "mylimus",
+    "mylimais",
+    "mylimuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "mylima",
+    "mylimos",
+    "mylimai",
+    "mylimą",
+    "mylima",
+    "mylimoje"
+   ],
+   "pl": [
+    "mylimos",
+    "mylimų",
+    "mylimoms",
+    "mylimas",
+    "mylimomis",
+    "mylimose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "mýlimas",
+    "mýlimo",
+    "mylimám",
+    "mýlimą",
+    "mýlimu",
+    "mylimamè"
+   ],
+   "pl": [
+    "mylimì",
+    "mylimų̃",
+    "mylimíems",
+    "mýlimus",
+    "mylimaĩs",
+    "mylimuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "mylimà",
+    "mylimõs",
+    "mýlimai",
+    "mýlimą",
+    "mýlima",
+    "mylimojè"
+   ],
+   "pl": [
+    "mýlimos",
+    "mylimų̃",
+    "mylimóms",
+    "mýlimas",
+    "mylimomìs",
+    "mylimosè"
+   ]
+  }
+ }
+]
