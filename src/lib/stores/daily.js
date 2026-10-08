@@ -24,8 +24,12 @@ export function completeDay(key, correct, total) {
   daily.update((v) => ({ ...v, days: { ...v.days, [key]: { correct, total } }, session: null }));
 }
 
-export function saveSession(key, results) {
-  daily.update((v) => ({ ...v, session: { date: key, results } }));
+export function saveSession(key, results, hints = []) {
+  daily.update((v) => ({ ...v, session: { date: key, results, hints } }));
+}
+
+export function addHinted(entry) {
+  daily.update((v) => ({ ...v, hinted: [...(v.hinted || []), entry] }));
 }
 
 function shift(base, n) {

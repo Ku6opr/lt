@@ -3,12 +3,14 @@
   import { get } from 'svelte/store';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
-  import { daily, dayKey, completeDay, saveSession } from '../stores/daily.js';
-  import { dailyTasks, checkAnswer } from '../engine/daily.js';
+  import { daily, dayKey, completeDay, saveSession, addHinted } from '../stores/daily.js';
+  import { dailyTasks, checkAnswer, hintedWords, nextHint } from '../engine/daily.js';
+  import { vocab } from '../stores/vocab.js';
   import { simplifyAccent } from '../engine/stem.js';
   import { fold } from '../stores/progress.js';
   import { topics } from '../../topics/index.js';
   import DayDot from './DayDot.svelte';
+  import DailyWords from './DailyWords.svelte';
 
   export let onBack;
 
@@ -18,19 +20,23 @@
   const totalWords = tasks.reduce((n, t) => n + t.size, 0);
   const saved = get(daily).session;
 
-  let results = saved && saved.date === today ? saved.results.slice(0, total) : [];
+  const resumed = saved && saved.date === today;
+  let results = resumed ? saved.results.slice(0, total) : [];
   let i = results.length;
   const finish = () => completeDay(today, results.reduce((n, r) => n + (r || 0), 0), totalWords);
   if (total && i >= total) finish();
   let input = '';
   let revealed = false;
-  let hintOpen = false;
+  let hinted = resumed && Array.isArray(saved.hints) ? saved.hints : [];
   let check = null;
   let inputEl;
+  let words = null;
 
   $: L = UI[$lang];
   $: task = tasks[i] || null;
   $: finished = i >= total;
+  $: hintAt = task && !revealed ? nextHint(input, task, hinted) : -1;
+  $: fresh = finished ? hintedWords(($daily.hinted || []).filter((h) => h.date === today), get(vocab).words) : [];
   $: guessed = results.reduce((n, r) => n + (r || 0), 0);
   $: points = totalWords ? Math.round((guessed / totalWords) * 100) : 0;
   $: scoreText = L.dailyScore.replace('{n}', points).replace('{pts}', L.points[new Intl.PluralRules($lang).select(points)]);
@@ -56,10 +62,18 @@
   }
   onMount(focusInput);
 
+  function hint() {
+    if (hintAt < 0) return;
+    addHinted({ ref: task.tokens[hintAt].ref, phrase: task.id, k: hintAt, date: today });
+    hinted = [...hinted, hintAt];
+    saveSession(today, results.slice(), hinted);
+    focusInput();
+  }
+
   function primary() {
     if (!task) return;
     if (!revealed) {
-      check = checkAnswer(input, task);
+      check = checkAnswer(input, task, hinted);
       results[i] = check.guessed;
       saveSession(today, results.slice());
       revealed = true;
@@ -68,7 +82,7 @@
     i += 1;
     input = '';
     revealed = false;
-    hintOpen = false;
+    hinted = [];
     check = null;
     if (i >= total) finish();
     else focusInput();
@@ -96,6 +110,9 @@
   }
 </script>
 
+{#if words}
+  <DailyWords {words} date={today} {onBack} />
+{:else}
 <div class="lt-wrap">
   <div class="head">
     <button class="btn btn-secondary btn-icon" type="button" on:click={onBack} aria-label={L.back}>
@@ -119,12 +136,9 @@
       <div class="source">{task[$lang]}</div>
 
       <div class="hint">
-        {#if hintOpen}
-          <div class="lemmas">
-            {#each task.tokens as t}<span class="lemma">{lemmaShown(t)}</span>{/each}
-          </div>
-        {:else if !revealed}
-          <button class="btn btn-ghost hint-btn" type="button" on:click={() => (hintOpen = true)}>{L.dailyHint}</button>
+        {#each task.tokens as t, k}{#if hinted.includes(k)}<span class="lemma">{lemmaShown(t)}</span>{/if}{/each}
+        {#if hintAt >= 0}
+          <button class="btn btn-ghost hint-btn" type="button" on:click={hint}>{hinted.length ? L.dailyHintMore : L.dailyHint}</button>
         {/if}
       </div>
 
@@ -170,10 +184,15 @@
       <DayDot share={totalWords ? guessed / totalWords : 0} size={84} />
       <div class="sum-title">{L.dailyDoneTitle}</div>
       <div class="text-muted">{scoreText}</div>
-      <button class="btn btn-primary" type="button" on:click={onBack}>{L.back}</button>
+      {#if fresh.length}
+        <button class="btn btn-primary" type="button" on:click={() => (words = fresh)}>{L.next}</button>
+      {:else}
+        <button class="btn btn-primary" type="button" on:click={onBack}>{L.back}</button>
+      {/if}
     </div>
   {/if}
 </div>
+{/if}
 
 <style>
   .head { display: flex; align-items: center; gap: var(--space-3); padding-block: var(--space-2) var(--space-3); }
@@ -192,9 +211,8 @@
 
   .source { font-family: var(--font-heading); font-size: clamp(26px, 5cqw, 40px); line-height: 1.15; text-align: center; text-wrap: balance; }
 
-  .hint { min-height: 40px; display: flex; justify-content: center; align-items: center; margin: var(--space-2) 0 var(--space-4); }
+  .hint { min-height: 40px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: var(--space-2) 0 var(--space-4); }
   .hint-btn { font-size: 13px; }
-  .lemmas { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
   .lemma {
     font-family: var(--font-heading); font-size: 15px; padding: 2px 10px;
     border: 1px solid var(--color-divider); border-radius: 999px; background: var(--color-bg); color: var(--color-neutral-700);
