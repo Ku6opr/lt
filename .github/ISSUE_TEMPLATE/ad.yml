@@ -1,0 +1,29 @@
+name: Нова реклама
+description: Фото литовської реклами, вивіски чи оголошення для «Рекламної паузи»
+title: 'Реклама'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Перетягніть фото в поле нижче — можна кілька, кожне стане окремою рекламою.
+        - Литовський текст видно повністю й чітко, без відблисків.
+        - Без перекладу іншою мовою поруч і без облич крупним планом.
+        - Issue публічний: перед завантаженням вимкніть геомітку у фото.
+  - type: textarea
+    id: photos
+    attributes:
+      label: Фото
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Текст на фото
+      description: Необов'язково — якщо щось погано видно.
+  - type: checkboxes
+    id: license
+    attributes:
+      label: Ліцензія
+      options:
+        - label: Це моє фото, і я дозволяю використати його в тренажері без умов (CC0).
+          required: true

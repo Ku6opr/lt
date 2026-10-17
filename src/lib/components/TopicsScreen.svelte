@@ -8,6 +8,7 @@
   export let onEnter;
   export let onReinforce;
   export let onDaily;
+  export let onAd;
 
   $: L = UI[$lang];
   $: pctOf = (id) => Math.round(masteryOf($progress, id).pct * 100);
@@ -31,21 +32,21 @@
 
 <div class="lt-wrap lt-home">
   <header class="hero">
-    <div class="topbar">
-      <div class="card-kicker">{L.appKicker}</div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <button class="btn btn-secondary" type="button" on:click={onReinforce}>↻ {L.reinforce}</button>
-        <div class="langsel" role="group" aria-label={L.language}>
-          {#each LANGS as lg}
-            <button class="lang-opt" class:active={$lang === lg.id} type="button" on:click={() => setLang(lg.id)} title={lg.label}>{lg.short}</button>
-          {/each}
-        </div>
-      </div>
+    <div class="card-kicker kicker">{L.appKicker}</div>
+    <div class="actions">
+      <button class="btn btn-secondary" type="button" on:click={onReinforce}>↻ {L.reinforce}</button>
+      <button class="btn btn-secondary ad-btn" type="button" on:click={onAd}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
+        {L.adButton}
+      </button>
     </div>
-    <div class="headrow">
-      <h1>{L.chooseTopic}</h1>
-      <DailyTask onStart={onDaily} />
+    <div class="langsel" role="group" aria-label={L.language}>
+      {#each LANGS as lg}
+        <button class="lang-opt" class:active={$lang === lg.id} type="button" on:click={() => setLang(lg.id)} title={lg.label}>{lg.short}</button>
+      {/each}
     </div>
+    <h1>{L.chooseTopic}</h1>
+    <div class="daily-slot"><DailyTask onStart={onDaily} /></div>
   </header>
 
   <div class="map lt-scroll">
@@ -86,10 +87,24 @@
 <style>
   .lt-home { padding-block: clamp(20px, 6cqw, 56px); }
 
-  .hero { margin-bottom: clamp(24px, 5cqw, 44px); }
-  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 2px; }
-  .headrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; margin-top: 4px; }
-  .hero h1 { font-size: clamp(32px, 6.4cqw, 50px); line-height: 1.04; margin: 0; }
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 6px 12px;
+    grid-template-areas: 'kicker actions lang' 'title daily daily';
+    margin-bottom: clamp(24px, 5cqw, 44px);
+  }
+  .kicker { grid-area: kicker; }
+  .actions { grid-area: actions; display: flex; align-items: center; gap: 12px; }
+  .langsel { grid-area: lang; }
+  .hero h1 { grid-area: title; font-size: clamp(32px, 6.4cqw, 50px); line-height: 1.04; margin: 0; }
+  .daily-slot { grid-area: daily; justify-self: end; margin-left: 20px; }
+  .ad-btn { gap: 8px; border-color: var(--color-accent); color: var(--color-accent-700); }
+
+  @container (max-width: 599px) {
+    .hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'kicker lang' 'title title' 'actions actions' 'daily daily'; row-gap: 14px; }
+    .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .actions .btn { min-height: 44px; }
+    .daily-slot { justify-self: stretch; margin-left: 0; }
+  }
 
   .langsel { display: inline-flex; flex: none; border: 1px solid var(--color-divider); border-radius: 999px; overflow: hidden; background: var(--color-surface); }
   .lang-opt {

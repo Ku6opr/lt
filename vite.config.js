@@ -9,6 +9,9 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png'],
+      workbox: {
+        runtimeCaching: [{ urlPattern: /\/ads\/[^/]+\.jpg$/, handler: 'CacheFirst', options: { cacheName: 'lt-ads' } }]
+      },
       manifest: {
         name: 'Тренажер литовської',
         short_name: 'LT',
