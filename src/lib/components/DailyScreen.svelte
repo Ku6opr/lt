@@ -1,5 +1,5 @@
 <script>
-  import { onMount, tick } from 'svelte';
+  import { onMount, onDestroy, tick } from 'svelte';
   import { get } from 'svelte/store';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
@@ -11,6 +11,7 @@
   import { topics } from '../../topics/index.js';
   import DayDot from './DayDot.svelte';
   import DailyWords from './DailyWords.svelte';
+  import HintButton from './HintButton.svelte';
 
   const today = dayKey(new Date());
 
@@ -45,6 +46,7 @@
   $: task = tasks[i] || null;
   $: finished = i >= total;
   $: hintAt = task && !revealed ? nextHint(input, task, hinted) : -1;
+  $: hintLabel = hinted.length ? L.dailyHintMore : L.dailyHint;
   $: fresh = finished ? hintedWords(($daily.hinted || []).filter((h) => h.date === today), get(vocab).words, byId) : [];
   $: guessed = results.reduce((n, r) => n + (r || 0), 0);
   $: points = totalWords ? Math.round((guessed / totalWords) * 100) : 0;
@@ -63,13 +65,28 @@
     inputEl.style.height = inputEl.scrollHeight + 'px';
   }
 
+  let cardEl;
+  const touch = typeof matchMedia === 'function' && matchMedia('(pointer: coarse)').matches;
+  const viewport = typeof window !== 'undefined' ? window.visualViewport : null;
+
+  function keepInView() {
+    if (!touch) return;
+    tick().then(() => cardEl && cardEl.scrollIntoView({ block: 'start' }));
+  }
+  const onViewport = () => document.activeElement === inputEl && keepInView();
+
   function focusInput() {
     tick().then(() => {
       grow();
       if (inputEl) inputEl.focus();
+      keepInView();
     });
   }
-  onMount(() => autofocus && focusInput());
+  onMount(() => {
+    if (autofocus) focusInput();
+    if (viewport) viewport.addEventListener('resize', onViewport);
+  });
+  onDestroy(() => viewport && viewport.removeEventListener('resize', onViewport));
 
   function hint() {
     if (hintAt < 0) return;
@@ -86,6 +103,7 @@
       results[i] = check.guessed;
       saveSession(today, results.slice());
       revealed = true;
+      keepInView();
       return;
     }
     i += 1;
@@ -141,19 +159,22 @@
   </div>
 
   <div class="layout" class:split={$$slots.media}>
-  {#if $$slots.media}<div class="media"><slot name="media" /></div>{/if}
+  {#if $$slots.media}
+    <div class="media"><slot name="media" /></div>
+  {/if}
   <div class="main">
   {#if task}
-    <div class="card">
+    <div class="card" bind:this={cardEl}>
+      {#if hintAt >= 0}<HintButton label={hintLabel} onClick={hint} />{/if}
       <div class="source">{task[$lang]}</div>
 
-      <div class="hint">
-        {#each task.tokens as t, k}{#if hinted.includes(k)}<span class="lemma">{lemmaShown(t)}</span>{/if}{/each}
-        {#if hintAt >= 0}
-          <button class="btn btn-ghost hint-btn" type="button" on:click={hint}>{hinted.length ? L.dailyHintMore : L.dailyHint}</button>
-        {/if}
-      </div>
+      {#if hinted.length}
+        <div class="hint">
+          {#each task.tokens as t, k}{#if hinted.includes(k)}<span class="lemma">{lemmaShown(t)}</span>{/if}{/each}
+        </div>
+      {/if}
 
+      <div class="answer-row">
       <textarea
         class="answer"
         rows="1"
@@ -161,6 +182,7 @@
         bind:value={input}
         on:input={grow}
         on:keydown={onKey}
+        on:focus={keepInView}
         readonly={revealed}
         autocomplete="off"
         autocapitalize="sentences"
@@ -168,6 +190,7 @@
         spellcheck="false"
         enterkeyhint="go"
       ></textarea>
+      </div>
 
       <div class="reveal">
         {#if revealed}
@@ -226,14 +249,15 @@
   .step.cur { background: var(--color-accent-300); }
 
   .card {
+    position: relative;
     border: 1px solid var(--color-divider); border-radius: var(--radius-lg);
     padding: clamp(20px, 4.5cqw, 44px); background: var(--color-surface); box-shadow: var(--shadow-sm);
   }
 
-  .source { font-family: var(--font-heading); font-size: clamp(26px, 5cqw, 40px); line-height: 1.15; text-align: center; text-wrap: balance; }
+  .source { font-family: var(--font-heading); font-size: clamp(26px, 5cqw, 40px); line-height: 1.15; text-align: center; text-wrap: balance; padding-inline: 40px; }
 
-  .hint { min-height: 40px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: var(--space-2) 0 var(--space-4); }
-  .hint-btn { font-size: 13px; }
+  .hint { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: var(--space-3) 0 0; }
+  .answer-row { margin-top: var(--space-4); }
   .lemma {
     font-family: var(--font-heading); font-size: 15px; padding: 2px 10px;
     border: 1px solid var(--color-divider); border-radius: 999px; background: var(--color-bg); color: var(--color-neutral-700);
@@ -257,6 +281,12 @@
   .tag { font-size: 10.5px; line-height: 14px; min-height: 14px; letter-spacing: .02em; color: var(--color-accent-700); }
 
   .actions { display: flex; justify-content: center; margin-top: var(--space-4); }
+  @container (max-width: 599px) {
+    .card { padding: 16px 16px 18px; scroll-margin-top: 8px; }
+    .answer-row { margin-top: var(--space-3); }
+    .reveal { min-height: 0; margin-top: var(--space-3); }
+    .actions { margin-top: var(--space-3); }
+  }
   .actions .btn { min-width: 190px; }
   .report { display: flex; justify-content: center; margin-top: var(--space-2); }
   .report .btn { font-size: 12px; color: var(--color-neutral-500); }
