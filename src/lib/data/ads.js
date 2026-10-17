@@ -1053,5 +1053,18 @@ export const ADS = [
     uk: 'Карантин. У поліклініці надаються лише послуги невідкладної медичної допомоги!',
     ru: 'Карантин. В поликлинике оказываются только услуги неотложной медицинской помощи!',
     en: 'Quarantine. The clinic provides essential medical care services only!'
+  },
+  {
+    id: 'daugiau-kaledu',
+    photo: { page: 'https://github.com/Ku6opr/lt/issues/23', file: 'https://github.com/user-attachments/assets/9696c6a6-ed30-46d9-b2ad-0080616b1489', author: 'Ku6opr', license: CC0, crop: [0, 0.3, 1, 0.8625] },
+    tokens: [
+      ['Namuose', ...NAMAI, 'Vt', 'pl'],
+      ['–'],
+      ['daugiau', 'daug', 'багато', 'много', 'much, many'],
+      ['Kalėdų', 'Kalėdos', 'Різдво', 'Рождество', 'Christmas', 'K', 'pl']
+    ],
+    uk: 'Удома — більше Різдва',
+    ru: 'Дома — больше Рождества',
+    en: 'More Christmas at home'
   }
 ];

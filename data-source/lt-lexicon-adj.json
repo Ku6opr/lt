@@ -1864,5 +1864,415 @@
  {
   "lemma": "mylimas",
   "found": false
+ },
+ {
+  "lemma": "dryžuotas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "languotas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "šlapias",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "wet",
+  "m": {
+   "sg": [
+    "šlapias",
+    "šlapio",
+    "šlapiam",
+    "šlapią",
+    "šlapiu",
+    "šlapiame"
+   ],
+   "pl": [
+    "šlapii",
+    "šlapių",
+    "šlapiiems",
+    "šlapius",
+    "šlapiais",
+    "šlapiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "šlapia",
+    "šlapios",
+    "šlapiai",
+    "šlapią",
+    "šlapia",
+    "šlapioje"
+   ],
+   "pl": [
+    "šlapios",
+    "šlapių",
+    "šlapioms",
+    "šlapias",
+    "šlapiomis",
+    "šlapiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "šlãpias",
+    "šlãpio",
+    "šlapiám",
+    "šlãpią",
+    "šlapiù",
+    "šlapiamè"
+   ],
+   "pl": [
+    "šlapiì",
+    "šlapių̃",
+    "šlapiíems",
+    "šlapiùs",
+    "šlapiaĩs",
+    "šlapiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "šlapià",
+    "šlapiõs",
+    "šlãpiai",
+    "šlãpią",
+    "šlapià",
+    "šlapiojè"
+   ],
+   "pl": [
+    "šlãpios",
+    "šlapių̃",
+    "šlapióms",
+    "šlapiàs",
+    "šlapiomìs",
+    "šlapiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "tuščias",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "empty, vacant",
+  "m": {
+   "sg": [
+    "tuščias",
+    "tuščio",
+    "tuščiam",
+    "tuščią",
+    "tuščiu",
+    "tuščiame"
+   ],
+   "pl": [
+    "tušti",
+    "tuščių",
+    "tuštiems",
+    "tuščius",
+    "tuščiais",
+    "tuščiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "tuščia",
+    "tuščios",
+    "tuščiai",
+    "tuščią",
+    "tuščia",
+    "tuščioje"
+   ],
+   "pl": [
+    "tuščios",
+    "tuščių",
+    "tuščioms",
+    "tuščias",
+    "tuščiomis",
+    "tuščiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "tùščias",
+    "tùščio",
+    "tuščiám",
+    "tùščią",
+    "tuščiù",
+    "tuščiamè"
+   ],
+   "pl": [
+    "tuštì",
+    "tuščių̃",
+    "tuštíems",
+    "tuščiùs",
+    "tuščiaĩs",
+    "tuščiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "tuščià",
+    "tuščiõs",
+    "tùščiai",
+    "tùščią",
+    "tuščià",
+    "tuščiojè"
+   ],
+   "pl": [
+    "tùščios",
+    "tuščių̃",
+    "tuščióms",
+    "tuščiàs",
+    "tuščiomìs",
+    "tuščiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "piktas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "angry",
+  "m": {
+   "sg": [
+    "piktas",
+    "pikto",
+    "piktam",
+    "piktą",
+    "piktu",
+    "piktame"
+   ],
+   "pl": [
+    "pikti",
+    "piktų",
+    "piktiems",
+    "piktus",
+    "piktais",
+    "piktuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "pikta",
+    "piktos",
+    "piktai",
+    "piktą",
+    "pikta",
+    "piktoje"
+   ],
+   "pl": [
+    "piktos",
+    "piktų",
+    "piktoms",
+    "piktas",
+    "piktomis",
+    "piktose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "pìktas",
+    "pìkto",
+    "piktám",
+    "pìktą",
+    "piktù",
+    "piktamè"
+   ],
+   "pl": [
+    "piktì",
+    "piktų̃",
+    "piktíems",
+    "piktùs",
+    "piktaĩs",
+    "piktuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "piktà",
+    "piktõs",
+    "pìktai",
+    "pìktą",
+    "piktà",
+    "piktojè"
+   ],
+   "pl": [
+    "pìktos",
+    "piktų̃",
+    "piktóms",
+    "piktàs",
+    "piktomìs",
+    "piktosè"
+   ]
+  }
+ },
+ {
+  "lemma": "apvalus",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "round",
+  "m": {
+   "sg": [
+    "apvalus",
+    "apvalaus",
+    "apvaliam",
+    "apvalų",
+    "apvaliu",
+    "apvaliame"
+   ],
+   "pl": [
+    "apvalūs",
+    "apvalių",
+    "apvaliems",
+    "apvalius",
+    "apvaliais",
+    "apvaliuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "apvali",
+    "apvalios",
+    "apvaliai",
+    "apvalią",
+    "apvalia",
+    "apvalioje"
+   ],
+   "pl": [
+    "apvalios",
+    "apvalių",
+    "apvalioms",
+    "apvalias",
+    "apvaliomis",
+    "apvaliose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "apvalùs",
+    "apvalaũs",
+    "apvaliám",
+    "apvãlų",
+    "apvaliù",
+    "apvaliamè"
+   ],
+   "pl": [
+    "apvãlūs",
+    "apvalių̃",
+    "apvalíems",
+    "apvaliùs",
+    "apvaliaĩs",
+    "apvaliuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "apvalì",
+    "apvaliõs",
+    "apvãliai",
+    "apvãlią",
+    "apvalià",
+    "apvaliojè"
+   ],
+   "pl": [
+    "apvãlios",
+    "apvalių̃",
+    "apvalióms",
+    "apvaliàs",
+    "apvaliomìs",
+    "apvaliosè"
+   ]
+  }
+ },
+ {
+  "lemma": "kietas",
+  "found": true,
+  "pos": "Adjective",
+  "gloss": "hard, solid&#91;2&#93;",
+  "m": {
+   "sg": [
+    "kietas",
+    "kieto",
+    "kietam",
+    "kietą",
+    "kietu",
+    "kietame"
+   ],
+   "pl": [
+    "kieti",
+    "kietų",
+    "kietiems",
+    "kietus",
+    "kietais",
+    "kietuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "kieta",
+    "kietos",
+    "kietai",
+    "kietą",
+    "kieta",
+    "kietoje"
+   ],
+   "pl": [
+    "kietos",
+    "kietų",
+    "kietoms",
+    "kietas",
+    "kietomis",
+    "kietose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "kíetas",
+    "kíeto",
+    "kietám",
+    "kíetą",
+    "kíetu",
+    "kietamè"
+   ],
+   "pl": [
+    "kietì",
+    "kietų̃",
+    "kietíems",
+    "kíetus",
+    "kietaĩs",
+    "kietuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "kietà",
+    "kietõs",
+    "kíetai",
+    "kíetą",
+    "kíeta",
+    "kietojè"
+   ],
+   "pl": [
+    "kíetos",
+    "kietų̃",
+    "kietóms",
+    "kíetas",
+    "kietomìs",
+    "kietosè"
+   ]
+  }
+ },
+ {
+  "lemma": "ovalus",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "akmeninis",
+  "found": false,
+  "missing": true
  }
 ]

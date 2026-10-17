@@ -10,7 +10,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png'],
       workbox: {
-        runtimeCaching: [{ urlPattern: /\/ads\/[^/]+\.jpg$/, handler: 'CacheFirst', options: { cacheName: 'lt-ads' } }]
+        runtimeCaching: [
+          { urlPattern: /\/ads\/[^/]+\.jpg$/, handler: 'CacheFirst', options: { cacheName: 'lt-ads' } },
+          { urlPattern: /\/pictures\/[^/]+\.jpg$/, handler: 'CacheFirst', options: { cacheName: 'lt-pictures', expiration: { maxEntries: 7 } } }
+        ]
       },
       manifest: {
         name: 'Тренажер литовської',

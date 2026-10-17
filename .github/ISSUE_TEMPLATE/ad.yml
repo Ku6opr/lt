@@ -20,10 +20,3 @@ body:
     attributes:
       label: Текст на фото
       description: Необов'язково — якщо щось погано видно.
-  - type: checkboxes
-    id: license
-    attributes:
-      label: Ліцензія
-      options:
-        - label: Це моє фото, і я дозволяю використати його в тренажері без умов (CC0).
-          required: true

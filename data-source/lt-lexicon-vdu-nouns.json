@@ -1710,5 +1710,2179 @@
    "salõtomis",
    "salõtose"
   ]
+ },
+ {
+  "lemma": "suolas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "suolas",
+   "suolo",
+   "suolui",
+   "suolą",
+   "suolu",
+   "suole"
+  ],
+  "pl": [
+   "suolai",
+   "suolų",
+   "suolams",
+   "suolus",
+   "suolais",
+   "suoluose"
+  ],
+  "sgA": [
+   "súolas",
+   "súolo",
+   "súolui",
+   "súolą",
+   "súolu",
+   "suolè"
+  ],
+  "plA": [
+   "suolaĩ",
+   "suolų̃",
+   "suoláms",
+   "súolus",
+   "suolaĩs",
+   "suoluosè"
+  ]
+ },
+ {
+  "lemma": "puodelis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "puodelis",
+   "puodelio",
+   "puodeliui",
+   "puodelį",
+   "puodeliu",
+   "puodelyje"
+  ],
+  "pl": [
+   "puodeliai",
+   "puodelių",
+   "puodeliams",
+   "puodelius",
+   "puodeliais",
+   "puodeliuose"
+  ],
+  "sgA": [
+   "puodẽlis",
+   "puodẽlio",
+   "puodẽliui",
+   "puodẽlį",
+   "puodeliù",
+   "puodẽlyje"
+  ],
+  "plA": [
+   "puodẽliai",
+   "puodẽlių",
+   "puodẽliams",
+   "puodeliùs",
+   "puodẽliais",
+   "puodẽliuose"
+  ]
+ },
+ {
+  "lemma": "krepšelis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "krepšelis",
+   "krepšelio",
+   "krepšeliui",
+   "krepšelį",
+   "krepšeliu",
+   "krepšelyje"
+  ],
+  "pl": [
+   "krepšeliai",
+   "krepšelių",
+   "krepšeliams",
+   "krepšelius",
+   "krepšeliais",
+   "krepšeliuose"
+  ],
+  "sgA": [
+   "krepšẽlis",
+   "krepšẽlio",
+   "krepšẽliui",
+   "krepšẽlį",
+   "krepšeliù",
+   "krepšẽlyje"
+  ],
+  "plA": [
+   "krepšẽliai",
+   "krepšẽlių",
+   "krepšẽliams",
+   "krepšeliùs",
+   "krepšẽliais",
+   "krepšẽliuose"
+  ]
+ },
+ {
+  "lemma": "kibiras",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "kibiras",
+   "kibiro",
+   "kibirui",
+   "kibirą",
+   "kibiru",
+   "kibire"
+  ],
+  "pl": [
+   "kibirai",
+   "kibirų",
+   "kibirams",
+   "kibirus",
+   "kibirais",
+   "kibiruose"
+  ],
+  "sgA": [
+   "kìbiras",
+   "kìbiro",
+   "kìbirui",
+   "kìbirą",
+   "kìbiru",
+   "kibirè"
+  ],
+  "plA": [
+   "kibiraĩ",
+   "kibirų̃",
+   "kibiráms",
+   "kìbirus",
+   "kibiraĩs",
+   "kibiruosè"
+  ]
+ },
+ {
+  "lemma": "nuotrauka",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "nuotrauka",
+   "nuotraukos",
+   "nuotraukai",
+   "nuotrauką",
+   "nuotrauka",
+   "nuotraukoje"
+  ],
+  "pl": [
+   "nuotraukos",
+   "nuotraukų",
+   "nuotraukoms",
+   "nuotraukas",
+   "nuotraukomis",
+   "nuotraukose"
+  ],
+  "sgA": [
+   "núotrauka",
+   "núotraukos",
+   "núotraukai",
+   "núotrauką",
+   "núotrauka",
+   "núotraukoje"
+  ],
+  "plA": [
+   "núotraukos",
+   "núotraukų",
+   "núotraukoms",
+   "núotraukas",
+   "núotraukomis",
+   "núotraukose"
+  ]
+ },
+ {
+  "lemma": "rašiklis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "rašiklis",
+   "rašiklio",
+   "rašikliui",
+   "rašiklį",
+   "rašikliu",
+   "rašiklyje"
+  ],
+  "pl": [
+   "rašikliai",
+   "rašiklių",
+   "rašikliams",
+   "rašiklius",
+   "rašikliais",
+   "rašikliuose"
+  ],
+  "sgA": [
+   "rašìklis",
+   "rašìklio",
+   "rašìkliui",
+   "rašìklį",
+   "rašikliù",
+   "rašìklyje"
+  ],
+  "plA": [
+   "rašìkliai",
+   "rašìklių",
+   "rašìkliams",
+   "rašikliùs",
+   "rašìkliais",
+   "rašìkliuose"
+  ]
+ },
+ {
+  "lemma": "maišelis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "maišelis",
+   "maišelio",
+   "maišeliui",
+   "maišelį",
+   "maišeliu",
+   "maišelyje"
+  ],
+  "pl": [
+   "maišeliai",
+   "maišelių",
+   "maišeliams",
+   "maišelius",
+   "maišeliais",
+   "maišeliuose"
+  ],
+  "sgA": [
+   "maišẽlis",
+   "maišẽlio",
+   "maišẽliui",
+   "maišẽlį",
+   "maišeliù",
+   "maišẽlyje"
+  ],
+  "plA": [
+   "maišẽliai",
+   "maišẽlių",
+   "maišẽliams",
+   "maišeliùs",
+   "maišẽliais",
+   "maišẽliuose"
+  ]
+ },
+ {
+  "lemma": "traktorius",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "traktorius",
+   "traktoriaus",
+   "traktoriui",
+   "traktorių",
+   "traktoriumi",
+   "traktoriuje"
+  ],
+  "pl": [
+   "traktoriai",
+   "traktorių",
+   "traktoriams",
+   "traktorius",
+   "traktoriais",
+   "traktoriuose"
+  ],
+  "sgA": [
+   "trãktorius",
+   "trãktoriaus",
+   "trãktoriui",
+   "trãktorių",
+   "trãktoriumi",
+   "trãktoriuje"
+  ],
+  "plA": [
+   "trãktoriai",
+   "trãktorių",
+   "trãktoriams",
+   "trãktorius",
+   "trãktoriais",
+   "trãktoriuose"
+  ]
+ },
+ {
+  "lemma": "šalmas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "šalmas",
+   "šalmo",
+   "šalmui",
+   "šalmą",
+   "šalmu",
+   "šalme"
+  ],
+  "pl": [
+   "šalmai",
+   "šalmų",
+   "šalmams",
+   "šalmus",
+   "šalmais",
+   "šalmuose"
+  ],
+  "sgA": [
+   "šal̃mas",
+   "šal̃mo",
+   "šal̃mui",
+   "šal̃mą",
+   "šalmù",
+   "šalmè"
+  ],
+  "plA": [
+   "šalmaĩ",
+   "šalmų̃",
+   "šalmáms",
+   "šalmùs",
+   "šalmaĩs",
+   "šalmuosè"
+  ]
+ },
+ {
+  "lemma": "mikrofonas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "mikrofonas",
+   "mikrofono",
+   "mikrofonui",
+   "mikrofoną",
+   "mikrofonu",
+   "mikrofone"
+  ],
+  "pl": [
+   "mikrofonai",
+   "mikrofonų",
+   "mikrofonams",
+   "mikrofonus",
+   "mikrofonais",
+   "mikrofonuose"
+  ],
+  "sgA": [
+   "mikrofònas",
+   "mikrofòno",
+   "mikrofònui",
+   "mikrofòną",
+   "mikrofonù",
+   "mikrofonè"
+  ],
+  "plA": [
+   "mikrofònai",
+   "mikrofònų",
+   "mikrofònams",
+   "mikrofonùs",
+   "mikrofònais",
+   "mikrofònuose"
+  ]
+ },
+ {
+  "lemma": "termometras",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "termometras",
+   "termometro",
+   "termometrui",
+   "termometrą",
+   "termometru",
+   "termometre"
+  ],
+  "pl": [
+   "termometrai",
+   "termometrų",
+   "termometrams",
+   "termometrus",
+   "termometrais",
+   "termometruose"
+  ],
+  "sgA": [
+   "termomètras",
+   "termomètro",
+   "termomètrui",
+   "termomètrą",
+   "termometrù",
+   "termometrè"
+  ],
+  "plA": [
+   "termomètrai",
+   "termomètrų",
+   "termomètrams",
+   "termometrùs",
+   "termomètrais",
+   "termomètruose"
+  ]
+ },
+ {
+  "lemma": "turistas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "turistas",
+   "turisto",
+   "turistui",
+   "turistą",
+   "turistu",
+   "turiste"
+  ],
+  "pl": [
+   "turistai",
+   "turistų",
+   "turistams",
+   "turistus",
+   "turistais",
+   "turistuose"
+  ],
+  "sgA": [
+   "turìstas",
+   "turìsto",
+   "turìstui",
+   "turìstą",
+   "turistù",
+   "turistè"
+  ],
+  "plA": [
+   "turìstai",
+   "turìstų",
+   "turìstams",
+   "turistùs",
+   "turìstais",
+   "turìstuose"
+  ]
+ },
+ {
+  "lemma": "vežimėlis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "vežimėlis",
+   "vežimėlio",
+   "vežimėliui",
+   "vežimėlį",
+   "vežimėliu",
+   "vežimėlyje"
+  ],
+  "pl": [
+   "vežimėliai",
+   "vežimėlių",
+   "vežimėliams",
+   "vežimėlius",
+   "vežimėliais",
+   "vežimėliuose"
+  ],
+  "sgA": [
+   "vežimė̃lis",
+   "vežimė̃lio",
+   "vežimė̃liui",
+   "vežimė̃lį",
+   "vežimėliù",
+   "vežimė̃lyje"
+  ],
+  "plA": [
+   "vežimė̃liai",
+   "vežimė̃lių",
+   "vežimė̃liams",
+   "vežimėliùs",
+   "vežimė̃liais",
+   "vežimė̃liuose"
+  ]
+ },
+ {
+  "lemma": "margutis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "margutis",
+   "margučio",
+   "margučiui",
+   "margutį",
+   "margučiu",
+   "margutyje"
+  ],
+  "pl": [
+   "margučiai",
+   "margučių",
+   "margučiams",
+   "margučius",
+   "margučiais",
+   "margučiuose"
+  ],
+  "sgA": [
+   "margùtis",
+   "margùčio",
+   "margùčiui",
+   "margùtį",
+   "margučiù",
+   "margùtyje"
+  ],
+  "plA": [
+   "margùčiai",
+   "margùčių",
+   "margùčiams",
+   "margučiùs",
+   "margùčiais",
+   "margùčiuose"
+  ]
+ },
+ {
+  "lemma": "šakutė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "šakutė",
+   "šakutės",
+   "šakutei",
+   "šakutę",
+   "šakute",
+   "šakutėje"
+  ],
+  "pl": [
+   "šakutės",
+   "šakučių",
+   "šakutėms",
+   "šakutes",
+   "šakutėmis",
+   "šakutėse"
+  ],
+  "sgA": [
+   "šakùtė",
+   "šakùtės",
+   "šakùtei",
+   "šakùtę",
+   "šakutè",
+   "šakùtėje"
+  ],
+  "plA": [
+   "šakùtės",
+   "šakùčių",
+   "šakùtėms",
+   "šakutès",
+   "šakùtėmis",
+   "šakùtėse"
+  ]
+ },
+ {
+  "lemma": "meškerė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "meškerė",
+   "meškerės",
+   "meškerei",
+   "meškerę",
+   "meškere",
+   "meškerėje"
+  ],
+  "pl": [
+   "meškerės",
+   "meškerių",
+   "meškerėms",
+   "meškeres",
+   "meškerėmis",
+   "meškerėse"
+  ],
+  "sgA": [
+   "meškerė̃",
+   "meškerė̃s",
+   "mẽškerei",
+   "mẽškerę",
+   "mẽškere",
+   "meškerėjè"
+  ],
+  "plA": [
+   "mẽškerės",
+   "meškerių̃",
+   "meškerė́ms",
+   "mẽškeres",
+   "meškerėmìs",
+   "meškerėsè"
+  ]
+ },
+ {
+  "lemma": "vaza",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "vaza",
+   "vazos",
+   "vazai",
+   "vazą",
+   "vaza",
+   "vazoje"
+  ],
+  "pl": [
+   "vazos",
+   "vazų",
+   "vazoms",
+   "vazas",
+   "vazomis",
+   "vazose"
+  ],
+  "sgA": [
+   "vazà",
+   "vãzos",
+   "vãzai",
+   "vãzą",
+   "vazà",
+   "vãzoje"
+  ],
+  "plA": [
+   "vãzos",
+   "vãzų",
+   "vãzoms",
+   "vazàs",
+   "vãzomis",
+   "vãzose"
+  ]
+ },
+ {
+  "lemma": "scena",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "scena",
+   "scenos",
+   "scenai",
+   "sceną",
+   "scena",
+   "scenoje"
+  ],
+  "pl": [
+   "scenos",
+   "scenų",
+   "scenoms",
+   "scenas",
+   "scenomis",
+   "scenose"
+  ],
+  "sgA": [
+   "scenà",
+   "scènos",
+   "scènai",
+   "scèną",
+   "scenà",
+   "scènoje"
+  ],
+  "plA": [
+   "scènos",
+   "scènų",
+   "scènoms",
+   "scenàs",
+   "scènomis",
+   "scènose"
+  ]
+ },
+ {
+  "lemma": "slaugytoja",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "slaugytoja",
+   "slaugytojos",
+   "slaugytojai",
+   "slaugytoją",
+   "slaugytoja",
+   "slaugytojoje"
+  ],
+  "pl": [
+   "slaugytojos",
+   "slaugytojų",
+   "slaugytojoms",
+   "slaugytojas",
+   "slaugytojomis",
+   "slaugytojose"
+  ],
+  "sgA": [
+   "slaugýtoja",
+   "slaugýtojos",
+   "slaugýtojai",
+   "slaugýtoją",
+   "slaugýtoja",
+   "slaugýtojoje"
+  ],
+  "plA": [
+   "slaugýtojos",
+   "slaugýtojų",
+   "slaugýtojoms",
+   "slaugýtojas",
+   "slaugýtojomis",
+   "slaugýtojose"
+  ]
+ },
+ {
+  "lemma": "pirkėja",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "pirkėja",
+   "pirkėjos",
+   "pirkėjai",
+   "pirkėją",
+   "pirkėja",
+   "pirkėjoje"
+  ],
+  "pl": [
+   "pirkėjos",
+   "pirkėjų",
+   "pirkėjoms",
+   "pirkėjas",
+   "pirkėjomis",
+   "pirkėjose"
+  ],
+  "sgA": [
+   "pirkė́ja",
+   "pirkė́jos",
+   "pirkė́jai",
+   "pirkė́ją",
+   "pirkė́ja",
+   "pirkė́joje"
+  ],
+  "plA": [
+   "pirkė́jos",
+   "pirkė́jų",
+   "pirkė́joms",
+   "pirkė́jas",
+   "pirkė́jomis",
+   "pirkė́jose"
+  ]
+ },
+ {
+  "lemma": "kirpėja",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "kirpėja",
+   "kirpėjos",
+   "kirpėjai",
+   "kirpėją",
+   "kirpėja",
+   "kirpėjoje"
+  ],
+  "pl": [
+   "kirpėjos",
+   "kirpėjų",
+   "kirpėjoms",
+   "kirpėjas",
+   "kirpėjomis",
+   "kirpėjose"
+  ],
+  "sgA": [
+   "kirpė́ja",
+   "kirpė́jos",
+   "kirpė́jai",
+   "kirpė́ją",
+   "kirpė́ja",
+   "kirpė́joje"
+  ],
+  "plA": [
+   "kirpė́jos",
+   "kirpė́jų",
+   "kirpė́joms",
+   "kirpė́jas",
+   "kirpė́jomis",
+   "kirpė́jose"
+  ]
+ },
+ {
+  "lemma": "pagalvė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "pagalvė",
+   "pagalvės",
+   "pagalvei",
+   "pagalvę",
+   "pagalve",
+   "pagalvėje"
+  ],
+  "pl": [
+   "pagalvės",
+   "pagalvių",
+   "pagalvėms",
+   "pagalves",
+   "pagalvėmis",
+   "pagalvėse"
+  ],
+  "sgA": [
+   "pagálvė",
+   "pagálvės",
+   "pagálvei",
+   "pagálvę",
+   "pagálve",
+   "pagálvėje"
+  ],
+  "plA": [
+   "pagálvės",
+   "pagálvių",
+   "pagálvėms",
+   "pagálves",
+   "pagálvėmis",
+   "pagálvėse"
+  ]
+ },
+ {
+  "lemma": "užuolaida",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "užuolaida",
+   "užuolaidos",
+   "užuolaidai",
+   "užuolaidą",
+   "užuolaida",
+   "užuolaidoje"
+  ],
+  "pl": [
+   "užuolaidos",
+   "užuolaidų",
+   "užuolaidoms",
+   "užuolaidas",
+   "užuolaidomis",
+   "užuolaidose"
+  ],
+  "sgA": [
+   "užúolaida",
+   "užúolaidos",
+   "užúolaidai",
+   "užúolaidą",
+   "užúolaida",
+   "užúolaidoje"
+  ],
+  "plA": [
+   "užúolaidos",
+   "užúolaidų",
+   "užúolaidoms",
+   "užúolaidas",
+   "užúolaidomis",
+   "užúolaidose"
+  ]
+ },
+ {
+  "lemma": "virėja",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "virėja",
+   "virėjos",
+   "virėjai",
+   "virėją",
+   "virėja",
+   "virėjoje"
+  ],
+  "pl": [
+   "virėjos",
+   "virėjų",
+   "virėjoms",
+   "virėjas",
+   "virėjomis",
+   "virėjose"
+  ],
+  "sgA": [
+   "virė́ja",
+   "virė́jos",
+   "virė́jai",
+   "virė́ją",
+   "virė́ja",
+   "virė́joje"
+  ],
+  "plA": [
+   "virė́jos",
+   "virė́jų",
+   "virė́joms",
+   "virė́jas",
+   "virė́jomis",
+   "virė́jose"
+  ]
+ },
+ {
+  "lemma": "turistė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "turistė",
+   "turistės",
+   "turistei",
+   "turistę",
+   "turiste",
+   "turistėje"
+  ],
+  "pl": [
+   "turistės",
+   "turisčių",
+   "turistėms",
+   "turistes",
+   "turistėmis",
+   "turistėse"
+  ],
+  "sgA": [
+   "turìstė",
+   "turìstės",
+   "turìstei",
+   "turìstę",
+   "turistè",
+   "turìstėje"
+  ],
+  "plA": [
+   "turìstės",
+   "turìsčių",
+   "turìstėms",
+   "turistès",
+   "turìstėmis",
+   "turìstėse"
+  ]
+ },
+ {
+  "lemma": "rogės",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "rogės",
+   "rogių",
+   "rogėms",
+   "roges",
+   "rogėmis",
+   "rogėse"
+  ],
+  "sgA": [],
+  "plA": [
+   "rõgės",
+   "rõgių",
+   "rõgėms",
+   "rogès",
+   "rõgėmis",
+   "rõgėse"
+  ]
+ },
+ {
+  "lemma": "slidės",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "slidės",
+   "slidžių",
+   "slidėms",
+   "slides",
+   "slidėmis",
+   "slidėse"
+  ],
+  "sgA": [],
+  "plA": [
+   "slìdės",
+   "slìdžių",
+   "slìdėms",
+   "slidès",
+   "slìdėmis",
+   "slìdėse"
+  ]
+ },
+ {
+  "lemma": "šukos",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "šukos",
+   "šukų",
+   "šukoms",
+   "šukas",
+   "šukomis",
+   "šukose"
+  ],
+  "sgA": [],
+  "plA": [
+   "šùkos",
+   "šùkų",
+   "šùkoms",
+   "šukàs",
+   "šùkomis",
+   "šùkose"
+  ]
+ },
+ {
+  "lemma": "svarstyklės",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "svarstyklės",
+   "svarstyklių",
+   "svarstyklėms",
+   "svarstykles",
+   "svarstyklėmis",
+   "svarstyklėse"
+  ],
+  "sgA": [],
+  "plA": [
+   "svarstỹklės",
+   "svarstỹklių",
+   "svarstỹklėms",
+   "svarstyklès",
+   "svarstỹklėmis",
+   "svarstỹklėse"
+  ]
+ },
+ {
+  "lemma": "plaukai",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "plaukai",
+   "plaukų",
+   "plaukams",
+   "plaukus",
+   "plaukais",
+   "plaukuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "plaukaĩ",
+   "plaukų̃",
+   "plaukáms",
+   "pláukus",
+   "plaukaĩs",
+   "plaukuosè"
+  ]
+ },
+ {
+  "lemma": "fejerverkai",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "fejerverkai",
+   "fejerverkų",
+   "fejerverkams",
+   "fejerverkus",
+   "fejerverkais",
+   "fejerverkuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "fejerver̃kai",
+   "fejerver̃kų",
+   "fejerver̃kams",
+   "fejerver̃kus",
+   "fejerver̃kais",
+   "fejerver̃kuose"
+  ]
+ },
+ {
+  "lemma": "anūkė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "anūkė",
+   "anūkės",
+   "anūkei",
+   "anūkę",
+   "anūke",
+   "anūkėje"
+  ],
+  "pl": [
+   "anūkės",
+   "anūkių",
+   "anūkėms",
+   "anūkes",
+   "anūkėmis",
+   "anūkėse"
+  ],
+  "sgA": [
+   "anū̃kė",
+   "anū̃kės",
+   "anū̃kei",
+   "anū̃kę",
+   "anūkè",
+   "anū̃kėje"
+  ],
+  "plA": [
+   "anū̃kės",
+   "anū̃kių",
+   "anū̃kėms",
+   "anūkès",
+   "anū̃kėmis",
+   "anū̃kėse"
+  ]
+ },
+ {
+  "lemma": "palangė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "palangė",
+   "palangės",
+   "palangei",
+   "palangę",
+   "palange",
+   "palangėje"
+  ],
+  "pl": [
+   "palangės",
+   "palangių",
+   "palangėms",
+   "palanges",
+   "palangėmis",
+   "palangėse"
+  ],
+  "sgA": [
+   "palángė",
+   "palángės",
+   "palángei",
+   "palángę",
+   "palánge",
+   "palángėje"
+  ],
+  "plA": [
+   "palángės",
+   "palángių",
+   "palángėms",
+   "palánges",
+   "palángėmis",
+   "palángėse"
+  ]
+ },
+ {
+  "lemma": "kreida",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "kreida",
+   "kreidos",
+   "kreidai",
+   "kreidą",
+   "kreida",
+   "kreidoje"
+  ],
+  "pl": [
+   "kreidos",
+   "kreidų",
+   "kreidoms",
+   "kreidas",
+   "kreidomis",
+   "kreidose"
+  ],
+  "sgA": [
+   "kreidà",
+   "kreidõs",
+   "kreĩdai",
+   "kreĩdą",
+   "kreidà",
+   "kreidojè"
+  ],
+  "plA": [
+   "kreĩdos",
+   "kreidų̃",
+   "kreidóms",
+   "kreidàs",
+   "kreidomìs",
+   "kreidosè"
+  ]
+ },
+ {
+  "lemma": "vaistininkė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "vaistininkė",
+   "vaistininkės",
+   "vaistininkei",
+   "vaistininkę",
+   "vaistininke",
+   "vaistininkėje"
+  ],
+  "pl": [
+   "vaistininkės",
+   "vaistininkių",
+   "vaistininkėms",
+   "vaistininkes",
+   "vaistininkėmis",
+   "vaistininkėse"
+  ],
+  "sgA": [
+   "váistininkė",
+   "váistininkės",
+   "váistininkei",
+   "váistininkę",
+   "váistininke",
+   "váistininkėje"
+  ],
+  "plA": [
+   "váistininkės",
+   "váistininkių",
+   "váistininkėms",
+   "váistininkes",
+   "váistininkėmis",
+   "váistininkėse"
+  ]
+ },
+ {
+  "lemma": "lėkštutė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "lėkštutė",
+   "lėkštutės",
+   "lėkštutei",
+   "lėkštutę",
+   "lėkštute",
+   "lėkštutėje"
+  ],
+  "pl": [
+   "lėkštutės",
+   "lėkštučių",
+   "lėkštutėms",
+   "lėkštutes",
+   "lėkštutėmis",
+   "lėkštutėse"
+  ],
+  "sgA": [
+   "lėkštùtė",
+   "lėkštùtės",
+   "lėkštùtei",
+   "lėkštùtę",
+   "lėkštutè",
+   "lėkštùtėje"
+  ],
+  "plA": [
+   "lėkštùtės",
+   "lėkštùčių",
+   "lėkštùtėms",
+   "lėkštutès",
+   "lėkštùtėmis",
+   "lėkštùtėse"
+  ]
+ },
+ {
+  "lemma": "uždanga",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "uždanga",
+   "uždangos",
+   "uždangai",
+   "uždangą",
+   "uždanga",
+   "uždangoje"
+  ],
+  "pl": [
+   "uždangos",
+   "uždangų",
+   "uždangoms",
+   "uždangas",
+   "uždangomis",
+   "uždangose"
+  ],
+  "sgA": [
+   "ùždanga",
+   "ùždangos",
+   "ùždangai",
+   "ùždangą",
+   "ùždanga",
+   "ùždangoje"
+  ],
+  "plA": [
+   "ùždangos",
+   "ùždangų",
+   "ùždangoms",
+   "ùždangas",
+   "ùždangomis",
+   "ùždangose"
+  ]
+ },
+ {
+  "lemma": "figūra",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "figūra",
+   "figūros",
+   "figūrai",
+   "figūrą",
+   "figūra",
+   "figūroje"
+  ],
+  "pl": [
+   "figūros",
+   "figūrų",
+   "figūroms",
+   "figūras",
+   "figūromis",
+   "figūrose"
+  ],
+  "sgA": [
+   "figūrà",
+   "figū̃ros",
+   "figū̃rai",
+   "figū̃rą",
+   "figūrà",
+   "figū̃roje"
+  ],
+  "plA": [
+   "figū̃ros",
+   "figū̃rų",
+   "figū̃roms",
+   "figūràs",
+   "figū̃romis",
+   "figū̃rose"
+  ]
+ },
+ {
+  "lemma": "plūdė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "plūdė",
+   "plūdės",
+   "plūdei",
+   "plūdę",
+   "plūde",
+   "plūdėje"
+  ],
+  "pl": [
+   "plūdės",
+   "plūdžių",
+   "plūdėms",
+   "plūdes",
+   "plūdėmis",
+   "plūdėse"
+  ],
+  "sgA": [
+   "plū̃dė",
+   "plū̃dės",
+   "plū̃dei",
+   "plū̃dę",
+   "plūdè",
+   "plū̃dėje"
+  ],
+  "plA": [
+   "plū̃dės",
+   "plū̃džių",
+   "plū̃dėms",
+   "plūdès",
+   "plū̃dėmis",
+   "plū̃dėse"
+  ]
+ },
+ {
+  "lemma": "skarelė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "skarelė",
+   "skarelės",
+   "skarelei",
+   "skarelę",
+   "skarele",
+   "skarelėje"
+  ],
+  "pl": [
+   "skarelės",
+   "skarelių",
+   "skarelėms",
+   "skareles",
+   "skarelėmis",
+   "skarelėse"
+  ],
+  "sgA": [
+   "skarẽlė",
+   "skarẽlės",
+   "skarẽlei",
+   "skarẽlę",
+   "skarelè",
+   "skarẽlėje"
+  ],
+  "plA": [
+   "skarẽlės",
+   "skarẽlių",
+   "skarẽlėms",
+   "skarelès",
+   "skarẽlėmis",
+   "skarẽlėse"
+  ]
+ },
+ {
+  "lemma": "registratūra",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "registratūra",
+   "registratūros",
+   "registratūrai",
+   "registratūrą",
+   "registratūra",
+   "registratūroje"
+  ],
+  "pl": [
+   "registratūros",
+   "registratūrų",
+   "registratūroms",
+   "registratūras",
+   "registratūromis",
+   "registratūrose"
+  ],
+  "sgA": [
+   "registratūrà",
+   "registratū̃ros",
+   "registratū̃rai",
+   "registratū̃rą",
+   "registratūrà",
+   "registratū̃roje"
+  ],
+  "plA": [
+   "registratū̃ros",
+   "registratū̃rų",
+   "registratū̃roms",
+   "registratūràs",
+   "registratū̃romis",
+   "registratū̃rose"
+  ]
+ },
+ {
+  "lemma": "pakaba",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "pakaba",
+   "pakabos",
+   "pakabai",
+   "pakabą",
+   "pakaba",
+   "pakaboje"
+  ],
+  "pl": [
+   "pakabos",
+   "pakabų",
+   "pakaboms",
+   "pakabas",
+   "pakabomis",
+   "pakabose"
+  ],
+  "sgA": [
+   "pakabà",
+   "pakabõs",
+   "pãkabai",
+   "pãkabą",
+   "pãkaba",
+   "pakabojè"
+  ],
+  "plA": [
+   "pãkabos",
+   "pakabų̃",
+   "pakabóms",
+   "pãkabas",
+   "pakabomìs",
+   "pakabosè"
+  ]
+ },
+ {
+  "lemma": "kolonėlė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "kolonėlė",
+   "kolonėlės",
+   "kolonėlei",
+   "kolonėlę",
+   "kolonėle",
+   "kolonėlėje"
+  ],
+  "pl": [
+   "kolonėlės",
+   "kolonėlių",
+   "kolonėlėms",
+   "kolonėles",
+   "kolonėlėmis",
+   "kolonėlėse"
+  ],
+  "sgA": [
+   "kolonė̃lė",
+   "kolonė̃lės",
+   "kolonė̃lei",
+   "kolonė̃lę",
+   "kolonėlè",
+   "kolonė̃lėje"
+  ],
+  "plA": [
+   "kolonė̃lės",
+   "kolonė̃lių",
+   "kolonė̃lėms",
+   "kolonėlès",
+   "kolonė̃lėmis",
+   "kolonė̃lėse"
+  ]
+ },
+ {
+  "lemma": "skrybėlė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "skrybėlė",
+   "skrybėlės",
+   "skrybėlei",
+   "skrybėlę",
+   "skrybėle",
+   "skrybėlėje"
+  ],
+  "pl": [
+   "skrybėlės",
+   "skrybėlių",
+   "skrybėlėms",
+   "skrybėles",
+   "skrybėlėmis",
+   "skrybėlėse"
+  ],
+  "sgA": [
+   "skrybėlė̃",
+   "skrybėlė̃s",
+   "skrýbėlei",
+   "skrýbėlę",
+   "skrýbėle",
+   "skrybėlėjè"
+  ],
+  "plA": [
+   "skrýbėlės",
+   "skrybėlių̃",
+   "skrybėlė́ms",
+   "skrýbėles",
+   "skrybėlėmìs",
+   "skrybėlėsè"
+  ]
+ },
+ {
+  "lemma": "kasininkė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "kasininkė",
+   "kasininkės",
+   "kasininkei",
+   "kasininkę",
+   "kasininke",
+   "kasininkėje"
+  ],
+  "pl": [
+   "kasininkės",
+   "kasininkių",
+   "kasininkėms",
+   "kasininkes",
+   "kasininkėmis",
+   "kasininkėse"
+  ],
+  "sgA": [
+   "kãsininkė",
+   "kãsininkės",
+   "kãsininkei",
+   "kãsininkę",
+   "kãsininke",
+   "kãsininkėje"
+  ],
+  "plA": [
+   "kãsininkės",
+   "kãsininkių",
+   "kãsininkėms",
+   "kãsininkes",
+   "kãsininkėmis",
+   "kãsininkėse"
+  ]
+ },
+ {
+  "lemma": "staltiesė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "staltiesė",
+   "staltiesės",
+   "staltiesei",
+   "staltiesę",
+   "staltiese",
+   "staltiesėje"
+  ],
+  "pl": [
+   "staltiesės",
+   "staltiesių",
+   "staltiesėms",
+   "staltieses",
+   "staltiesėmis",
+   "staltiesėse"
+  ],
+  "sgA": [
+   "stáltiesė",
+   "stáltiesės",
+   "stáltiesei",
+   "stáltiesę",
+   "stáltiese",
+   "stáltiesėje"
+  ],
+  "plA": [
+   "stáltiesės",
+   "stáltiesių",
+   "stáltiesėms",
+   "stáltieses",
+   "stáltiesėmis",
+   "stáltiesėse"
+  ]
+ },
+ {
+  "lemma": "prijuostė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "prijuostė",
+   "prijuostės",
+   "prijuostei",
+   "prijuostę",
+   "prijuoste",
+   "prijuostėje"
+  ],
+  "pl": [
+   "prijuostės",
+   "prijuosčių",
+   "prijuostėms",
+   "prijuostes",
+   "prijuostėmis",
+   "prijuostėse"
+  ],
+  "sgA": [
+   "prijuõstė",
+   "prijuõstės",
+   "prijuõstei",
+   "prijuõstę",
+   "prijuostè",
+   "prijuõstėje"
+  ],
+  "plA": [
+   "prijuõstės",
+   "prijuõsčių",
+   "prijuõstėms",
+   "prijuostès",
+   "prijuõstėmis",
+   "prijuõstėse"
+  ]
+ },
+ {
+  "lemma": "kasytė",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [
+   "kasytė",
+   "kasytės",
+   "kasytei",
+   "kasytę",
+   "kasyte",
+   "kasytėje"
+  ],
+  "pl": [
+   "kasytės",
+   "kasyčių",
+   "kasytėms",
+   "kasytes",
+   "kasytėmis",
+   "kasytėse"
+  ],
+  "sgA": [
+   "kasýtė",
+   "kasýtės",
+   "kasýtei",
+   "kasýtę",
+   "kasýte",
+   "kasýtėje"
+  ],
+  "plA": [
+   "kasýtės",
+   "kasýčių",
+   "kasýtėms",
+   "kasýtes",
+   "kasýtėmis",
+   "kasýtėse"
+  ]
+ },
+ {
+  "lemma": "kastuvas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "kastuvas",
+   "kastuvo",
+   "kastuvui",
+   "kastuvą",
+   "kastuvu",
+   "kastuve"
+  ],
+  "pl": [
+   "kastuvai",
+   "kastuvų",
+   "kastuvams",
+   "kastuvus",
+   "kastuvais",
+   "kastuvuose"
+  ],
+  "sgA": [
+   "kastùvas",
+   "kastùvo",
+   "kastùvui",
+   "kastùvą",
+   "kastuvù",
+   "kastuvè"
+  ],
+  "plA": [
+   "kastùvai",
+   "kastùvų",
+   "kastùvams",
+   "kastuvùs",
+   "kastùvais",
+   "kastùvuose"
+  ]
+ },
+ {
+  "lemma": "prekystalis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "prekystalis",
+   "prekystalio",
+   "prekystaliui",
+   "prekystalį",
+   "prekystaliu",
+   "prekystalyje"
+  ],
+  "pl": [
+   "prekystaliai",
+   "prekystalių",
+   "prekystaliams",
+   "prekystalius",
+   "prekystaliais",
+   "prekystaliuose"
+  ],
+  "sgA": [
+   "prekýstalis",
+   "prekýstalio",
+   "prekýstaliui",
+   "prekýstalį",
+   "prekýstaliu",
+   "prekýstalyje"
+  ],
+  "plA": [
+   "prekýstaliai",
+   "prekýstalių",
+   "prekýstaliams",
+   "prekýstalius",
+   "prekýstaliais",
+   "prekýstaliuose"
+  ]
+ },
+ {
+  "lemma": "vazonas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "vazonas",
+   "vazono",
+   "vazonui",
+   "vazoną",
+   "vazonu",
+   "vazone"
+  ],
+  "pl": [
+   "vazonai",
+   "vazonų",
+   "vazonams",
+   "vazonus",
+   "vazonais",
+   "vazonuose"
+  ],
+  "sgA": [
+   "vazònas",
+   "vazòno",
+   "vazònui",
+   "vazòną",
+   "vazonù",
+   "vazonè"
+  ],
+  "plA": [
+   "vazònai",
+   "vazònų",
+   "vazònams",
+   "vazonùs",
+   "vazònais",
+   "vazònuose"
+  ]
+ },
+ {
+  "lemma": "stetoskopas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "stetoskopas",
+   "stetoskopo",
+   "stetoskopui",
+   "stetoskopą",
+   "stetoskopu",
+   "stetoskope"
+  ],
+  "pl": [
+   "stetoskopai",
+   "stetoskopų",
+   "stetoskopams",
+   "stetoskopus",
+   "stetoskopais",
+   "stetoskopuose"
+  ],
+  "sgA": [
+   "stetoskòpas",
+   "stetoskòpo",
+   "stetoskòpui",
+   "stetoskòpą",
+   "stetoskopù",
+   "stetoskopè"
+  ],
+  "plA": [
+   "stetoskòpai",
+   "stetoskòpų",
+   "stetoskòpams",
+   "stetoskopùs",
+   "stetoskòpais",
+   "stetoskòpuose"
+  ]
+ },
+ {
+  "lemma": "slidininkas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "slidininkas",
+   "slidininko",
+   "slidininkui",
+   "slidininką",
+   "slidininku",
+   "slidininke"
+  ],
+  "pl": [
+   "slidininkai",
+   "slidininkų",
+   "slidininkams",
+   "slidininkus",
+   "slidininkais",
+   "slidininkuose"
+  ],
+  "sgA": [
+   "slìdininkas",
+   "slìdininko",
+   "slìdininkui",
+   "slìdininką",
+   "slìdininku",
+   "slìdininke"
+  ],
+  "plA": [
+   "slìdininkai",
+   "slìdininkų",
+   "slìdininkams",
+   "slìdininkus",
+   "slìdininkais",
+   "slìdininkuose"
+  ]
+ },
+ {
+  "lemma": "tvarstis",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "tvarstis",
+   "tvarsčio",
+   "tvarsčiui",
+   "tvarstį",
+   "tvarsčiu",
+   "tvarstyje"
+  ],
+  "pl": [
+   "tvarsčiai",
+   "tvarsčių",
+   "tvarsčiams",
+   "tvarsčius",
+   "tvarsčiais",
+   "tvarsčiuose"
+  ],
+  "sgA": [
+   "tvar̃stis",
+   "tvar̃sčio",
+   "tvar̃sčiui",
+   "tvar̃stį",
+   "tvarsčiù",
+   "tvar̃styje"
+  ],
+  "plA": [
+   "tvar̃sčiai",
+   "tvar̃sčių",
+   "tvar̃sčiams",
+   "tvarsčiùs",
+   "tvar̃sčiais",
+   "tvar̃sčiuose"
+  ]
+ },
+ {
+  "lemma": "padėklas",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [
+   "padėklas",
+   "padėklo",
+   "padėklui",
+   "padėklą",
+   "padėklu",
+   "padėkle"
+  ],
+  "pl": [
+   "padėklai",
+   "padėklų",
+   "padėklams",
+   "padėklus",
+   "padėklais",
+   "padėkluose"
+  ],
+  "sgA": [
+   "padė̃klas",
+   "padė̃klo",
+   "padė̃klui",
+   "padė̃klą",
+   "padėklù",
+   "padėklè"
+  ],
+  "plA": [
+   "padė̃klai",
+   "padė̃klų",
+   "padė̃klams",
+   "padėklùs",
+   "padė̃klais",
+   "padė̃kluose"
+  ]
+ },
+ {
+  "lemma": "rogutės",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "rogutės",
+   "rogučių",
+   "rogutėms",
+   "rogutes",
+   "rogutėmis",
+   "rogutėse"
+  ],
+  "sgA": [],
+  "plA": [
+   "rogùtės",
+   "rogùčių",
+   "rogùtėms",
+   "rogutès",
+   "rogùtėmis",
+   "rogùtėse"
+  ]
+ },
+ {
+  "lemma": "turėklai",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "turėklai",
+   "turėklų",
+   "turėklams",
+   "turėklus",
+   "turėklais",
+   "turėkluose"
+  ],
+  "sgA": [],
+  "plA": [
+   "turė̃klai",
+   "turė̃klų",
+   "turė̃klams",
+   "turėklùs",
+   "turė̃klais",
+   "turė̃kluose"
+  ]
+ },
+ {
+  "lemma": "marškinėliai",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "marškinėliai",
+   "marškinėlių",
+   "marškinėliams",
+   "marškinėlius",
+   "marškinėliais",
+   "marškinėliuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "marškinė̃liai",
+   "marškinė̃lių",
+   "marškinė̃liams",
+   "marškinėliùs",
+   "marškinė̃liais",
+   "marškinė̃liuose"
+  ]
+ },
+ {
+  "lemma": "Kalėdos",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "Kalėdos",
+   "Kalėdų",
+   "Kalėdoms",
+   "Kalėdas",
+   "Kalėdomis",
+   "Kalėdose"
+  ],
+  "sgA": [],
+  "plA": [
+   "Kalė̃dos",
+   "Kalė̃dų",
+   "Kalė̃doms",
+   "Kalėdàs",
+   "Kalė̃domis",
+   "Kalė̃dose"
+  ]
+ },
+ {
+  "lemma": "Velykos",
+  "found": true,
+  "source": "vdu",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "Velykos",
+   "Velykų",
+   "Velykoms",
+   "Velykas",
+   "Velykomis",
+   "Velykose"
+  ],
+  "sgA": [],
+  "plA": [
+   "Velýkos",
+   "Velýkų",
+   "Velýkoms",
+   "Velýkas",
+   "Velýkomis",
+   "Velýkose"
+  ]
+ },
+ {
+  "lemma": "drabužiai",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "drabužiai",
+   "drabužių",
+   "drabužiams",
+   "drabužius",
+   "drabužiais",
+   "drabužiuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "drabùžiai",
+   "drabùžių",
+   "drabùžiams",
+   "drabužiùs",
+   "drabùžiais",
+   "drabùžiuose"
+  ]
+ },
+ {
+  "lemma": "degalai",
+  "found": true,
+  "source": "vdu",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "degalai",
+   "degalų",
+   "degalams",
+   "degalus",
+   "degalais",
+   "degaluose"
+  ],
+  "sgA": [],
+  "plA": [
+   "degalaĩ",
+   "degalų̃",
+   "degaláms",
+   "dẽgalus",
+   "degalaĩs",
+   "degaluosè"
+  ]
  }
 ]

@@ -4050,5 +4050,3094 @@
    "põpieriuose"
   ],
   "headword": "põpierius m (plural põpieriai)&#32;"
+ },
+ {
+  "lemma": "suolas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kamuolys",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "clew; a ball of thread&#91;3&#93;",
+  "gender": "m",
+  "sg": [
+   "kamuolys",
+   "kamuolio",
+   "kamuoliui",
+   "kamuolį",
+   "kamuoliu",
+   "kamuolyje"
+  ],
+  "pl": [
+   "kamuoliai",
+   "kamuolių",
+   "kamuoliams",
+   "kamuolius",
+   "kamuoliais",
+   "kamuoliuose"
+  ],
+  "sgA": [
+   "kamuolỹs",
+   "kãmuolio",
+   "kãmuoliui",
+   "kãmuolį",
+   "kãmuoliu",
+   "kamuolyjè"
+  ],
+  "plA": [
+   "kamuoliaĩ",
+   "kamuolių̃",
+   "kamuoliáms",
+   "kãmuolius",
+   "kamuoliaĩs",
+   "kamuoliuosè"
+  ],
+  "headword": "kamuolỹs m (plural kamuoliai̇̃)&#32;"
+ },
+ {
+  "lemma": "skėtis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "umbrella",
+  "gender": "m",
+  "sg": [
+   "skėtis",
+   "skėčio",
+   "skėčiui",
+   "skėtį",
+   "skėčiu",
+   "skėtyje"
+  ],
+  "pl": [
+   "skėčiai",
+   "skėčių",
+   "skėčiams",
+   "skėčius",
+   "skėčiais",
+   "skėčiuose"
+  ],
+  "sgA": [
+   "skė̃tis",
+   "skė̃čio",
+   "skė̃čiui",
+   "skė̃tį",
+   "skėčiù",
+   "skė̃tyje"
+  ],
+  "plA": [
+   "skė̃čiai",
+   "skė̃čių",
+   "skė̃čiams",
+   "skėčiùs",
+   "skė̃čiais",
+   "skė̃čiuose"
+  ],
+  "headword": "skė̃tis m (plural skė̃čiai)&#32;"
+ },
+ {
+  "lemma": "lagaminas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "suitcase; portmanteau",
+  "gender": "m",
+  "sg": [
+   "lagaminas",
+   "lagamino",
+   "lagaminui",
+   "lagaminą",
+   "lagaminu",
+   "lagamine"
+  ],
+  "pl": [
+   "lagaminai",
+   "lagaminų",
+   "lagaminams",
+   "lagaminus",
+   "lagaminais",
+   "lagaminuose"
+  ],
+  "sgA": [
+   "lagamìnas",
+   "lagamìno",
+   "lagamìnui",
+   "lagamìną",
+   "lagaminù",
+   "lagaminè"
+  ],
+  "plA": [
+   "lagamìnai",
+   "lagamìnų",
+   "lagamìnams",
+   "lagaminùs",
+   "lagamìnais",
+   "lagamìnuose"
+  ],
+  "headword": "lagami̇̀nas m (plural lagami̇̀nai)&#32;"
+ },
+ {
+  "lemma": "lenta",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "board&#91;3&#93;",
+  "gender": "f",
+  "sg": [
+   "lenta",
+   "lentos",
+   "lentai",
+   "lentą",
+   "lenta",
+   "lentoje"
+  ],
+  "pl": [
+   "lentos",
+   "lentų",
+   "lentoms",
+   "lentas",
+   "lentomis",
+   "lentose"
+  ],
+  "sgA": [
+   "lentà",
+   "lentõs",
+   "leñtai",
+   "leñtą",
+   "lentà",
+   "lentojè"
+  ],
+  "plA": [
+   "leñtos",
+   "lentų̃",
+   "lentóms",
+   "lentàs",
+   "lentomìs",
+   "lentosè"
+  ],
+  "headword": "lentà f (plural leñtos)&#32;"
+ },
+ {
+  "lemma": "žaislas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "toy",
+  "gender": "m",
+  "sg": [
+   "žaislas",
+   "žaislo",
+   "žaislui",
+   "žaislą",
+   "žaislu",
+   "žaisle"
+  ],
+  "pl": [
+   "žaislai",
+   "žaislų",
+   "žaislams",
+   "žaislus",
+   "žaislais",
+   "žaisluose"
+  ],
+  "sgA": [
+   "žaĩslas",
+   "žaĩslo",
+   "žaĩslui",
+   "žaĩslą",
+   "žaislù",
+   "žaislè"
+  ],
+  "plA": [
+   "žaislaĩ",
+   "žaislų̃",
+   "žaisláms",
+   "žaislùs",
+   "žaislaĩs",
+   "žaisluosè"
+  ],
+  "headword": "žai̇̃slas m (plural žaislai̇̃)&#32;"
+ },
+ {
+  "lemma": "lėlė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "doll",
+  "gender": "f",
+  "sg": [
+   "lėlė",
+   "lėlės",
+   "lėlei",
+   "lėlę",
+   "lėle",
+   "lėlėje"
+  ],
+  "pl": [
+   "lėlės",
+   "lėlių",
+   "lėlėms",
+   "lėles",
+   "lėlėmis",
+   "lėlėse"
+  ],
+  "sgA": [
+   "lėlė̃",
+   "lėlė̃s",
+   "lė̃lei",
+   "lė̃lę",
+   "lėlè",
+   "lėlėjè"
+  ],
+  "plA": [
+   "lė̃lės",
+   "lėlių̃",
+   "lėlė́ms",
+   "lėlès",
+   "lėlėmìs",
+   "lėlėsè"
+  ],
+  "headword": "lėlė̃ f (plural lė̃lės)&#32;"
+ },
+ {
+  "lemma": "puodelis",
+  "found": false
+ },
+ {
+  "lemma": "šakutė",
+  "found": false
+ },
+ {
+  "lemma": "durys",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) door",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "durys",
+   "durų",
+   "durims",
+   "duris",
+   "durimis",
+   "duryse"
+  ],
+  "sgA": [],
+  "plA": [
+   "dùrys",
+   "dùrų",
+   "dùrims",
+   "durìs",
+   "dùrimis",
+   "dùryse"
+  ],
+  "headword": "dùrys f pl&#32;"
+ },
+ {
+  "lemma": "grindys",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) floor (bottom part of a space)",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "grindys",
+   "grindų",
+   "grindims",
+   "grindis",
+   "grindimis",
+   "grindyse"
+  ],
+  "sgA": [],
+  "plA": [
+   "griñdys",
+   "grindų̃",
+   "grindìms",
+   "grindìs",
+   "grindimìs",
+   "grindysè"
+  ],
+  "headword": "griñdys f pl&#32;"
+ },
+ {
+  "lemma": "stogas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "a roof, ceiling",
+  "gender": "m",
+  "sg": [
+   "stogas",
+   "stogo",
+   "stogui",
+   "stogą",
+   "stogu",
+   "stoge"
+  ],
+  "pl": [
+   "stogai",
+   "stogų",
+   "stogams",
+   "stogus",
+   "stogais",
+   "stoguose"
+  ],
+  "sgA": [
+   "stógas",
+   "stógo",
+   "stógui",
+   "stógą",
+   "stógu",
+   "stogè"
+  ],
+  "plA": [
+   "stogaĩ",
+   "stogų̃",
+   "stogáms",
+   "stógus",
+   "stogaĩs",
+   "stoguosè"
+  ],
+  "headword": "stógas m (plural stogai̇̃)&#32;"
+ },
+ {
+  "lemma": "rogės",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "slidės",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "palapinė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "tent&#91;1&#93;",
+  "gender": "f",
+  "sg": [
+   "palapinė",
+   "palapinės",
+   "palapinei",
+   "palapinę",
+   "palapine",
+   "palapinėje"
+  ],
+  "pl": [
+   "palapinės",
+   "palapinių",
+   "palapinėms",
+   "palapines",
+   "palapinėmis",
+   "palapinėse"
+  ],
+  "sgA": [
+   "palapìnė",
+   "palapìnės",
+   "palapìnei",
+   "palapìnę",
+   "palapinè",
+   "palapìnėje"
+  ],
+  "plA": [
+   "palapìnės",
+   "palapìnių",
+   "palapìnėms",
+   "palapinès",
+   "palapìnėmis",
+   "palapìnėse"
+  ],
+  "headword": "palapi̇̀nė f (plural palapi̇̀nės)&#32;"
+ },
+ {
+  "lemma": "valtis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "boat",
+  "gender": "f",
+  "sg": [
+   "valtis",
+   "valties",
+   "valčiai",
+   "valtį",
+   "valtimi",
+   "valtyje"
+  ],
+  "pl": [
+   "valtys",
+   "valčių",
+   "valtims",
+   "valtis",
+   "valtimis",
+   "valtyse"
+  ],
+  "sgA": [
+   "váltis",
+   "válties",
+   "válčiai",
+   "váltį",
+   "váltimi",
+   "váltyje"
+  ],
+  "plA": [
+   "váltys",
+   "válčių",
+   "váltims",
+   "váltis",
+   "váltimis",
+   "váltyse"
+  ],
+  "headword": "váltis f (plural váltys)&#32;"
+ },
+ {
+  "lemma": "meškerė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "krepšelis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kasa",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "braid",
+  "gender": "f",
+  "sg": [
+   "kasa",
+   "kasos",
+   "kasai",
+   "kasą",
+   "kasa",
+   "kasoje"
+  ],
+  "pl": [
+   "kasos",
+   "kasų",
+   "kasoms",
+   "kasas",
+   "kasomis",
+   "kasose"
+  ],
+  "sgA": [
+   "kasà",
+   "kasõs",
+   "kãsai",
+   "kãsą",
+   "kasà",
+   "kasojè"
+  ],
+  "plA": [
+   "kãsos",
+   "kasų̃",
+   "kasóms",
+   "kasàs",
+   "kasomìs",
+   "kasosè"
+  ],
+  "headword": "kasà f (plural kãsos)&#32;"
+ },
+ {
+  "lemma": "vaza",
+  "found": false
+ },
+ {
+  "lemma": "tvora",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "fence&#91;4&#93;",
+  "gender": "f",
+  "sg": [
+   "tvora",
+   "tvoros",
+   "tvorai",
+   "tvorą",
+   "tvora",
+   "tvoroje"
+  ],
+  "pl": [
+   "tvoros",
+   "tvorų",
+   "tvoroms",
+   "tvoras",
+   "tvoromis",
+   "tvorose"
+  ],
+  "sgA": [
+   "tvorà",
+   "tvorõs",
+   "tvõrai",
+   "tvõrą",
+   "tvorà",
+   "tvorojè"
+  ],
+  "plA": [
+   "tvõros",
+   "tvorų̃",
+   "tvoróms",
+   "tvoràs",
+   "tvoromìs",
+   "tvorosè"
+  ],
+  "headword": "tvorà f (plural tvõros)&#32;"
+ },
+ {
+  "lemma": "laikraštis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "newspaper (publication)",
+  "gender": "m",
+  "sg": [
+   "laikraštis",
+   "laikraščio",
+   "laikraščiui",
+   "laikraštį",
+   "laikraščiu",
+   "laikraštyje"
+  ],
+  "pl": [
+   "laikraščiai",
+   "laikraščių",
+   "laikraščiams",
+   "laikraščius",
+   "laikraščiais",
+   "laikraščiuose"
+  ],
+  "sgA": [
+   "laĩkraštis",
+   "laĩkraščio",
+   "laĩkraščiui",
+   "laĩkraštį",
+   "laĩkraščiu",
+   "laĩkraštyje"
+  ],
+  "plA": [
+   "laĩkraščiai",
+   "laĩkraščių",
+   "laĩkraščiams",
+   "laĩkraščius",
+   "laĩkraščiais",
+   "laĩkraščiuose"
+  ],
+  "headword": "lai̇̃kraštis m (plural laīkraščiai)&#32;"
+ },
+ {
+  "lemma": "kibiras",
+  "found": false
+ },
+ {
+  "lemma": "žirklės",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) scissors",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "žirklės",
+   "žirklių",
+   "žirklėms",
+   "žirkles",
+   "žirklėmis",
+   "žirklėse"
+  ],
+  "sgA": [],
+  "plA": [
+   "žìrklės",
+   "žìrklių",
+   "žìrklėms",
+   "žìrkles",
+   "žìrklėmis",
+   "žìrklėse"
+  ],
+  "headword": "ži̇̀rklės f pl&#32;"
+ },
+ {
+  "lemma": "plaukai",
+  "found": false
+ },
+ {
+  "lemma": "šukos",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "pinigai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) money (means of exchange and measure of value)",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "pinigai",
+   "pinigų",
+   "pinigams",
+   "pinigus",
+   "pinigais",
+   "piniguose"
+  ],
+  "sgA": [],
+  "plA": [
+   "pinigaĩ",
+   "pinigų̃",
+   "pinigáms",
+   "pìnigus",
+   "pinigaĩs",
+   "piniguosè"
+  ],
+  "headword": "pinigai̇̃ m pl&#32;"
+ },
+ {
+  "lemma": "nuotrauka",
+  "found": false
+ },
+ {
+  "lemma": "žemėlapis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "map (visual representation of an area)",
+  "gender": "m",
+  "sg": [
+   "žemėlapis",
+   "žemėlapio",
+   "žemėlapiui",
+   "žemėlapį",
+   "žemėlapiu",
+   "žemėlapyje"
+  ],
+  "pl": [
+   "žemėlapiai",
+   "žemėlapių",
+   "žemėlapiams",
+   "žemėlapius",
+   "žemėlapiais",
+   "žemėlapiuose"
+  ],
+  "sgA": [
+   "žemė́lapis",
+   "žemė́lapio",
+   "žemė́lapiui",
+   "žemė́lapį",
+   "žemė́lapiu",
+   "žemė́lapyje"
+  ],
+  "plA": [
+   "žemė́lapiai",
+   "žemė́lapių",
+   "žemė́lapiams",
+   "žemė́lapius",
+   "žemė́lapiais",
+   "žemė́lapiuose"
+  ],
+  "headword": "žemė́lapis m (plural žemė́lapiai)&#32;"
+ },
+ {
+  "lemma": "vartai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "gate (movable part of a fence&#59; large door)",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "vartai",
+   "vartų",
+   "vartams",
+   "vartus",
+   "vartais",
+   "vartuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "var̃tai",
+   "var̃tų",
+   "var̃tams",
+   "vartùs",
+   "var̃tais",
+   "var̃tuose"
+  ],
+  "headword": "var̃tai m pl&#32;"
+ },
+ {
+  "lemma": "scena",
+  "found": false
+ },
+ {
+  "lemma": "margutis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "fejerverkai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "administratorius",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "administrator (one who administers affairs, whether civil, political, ecclesiastical, etc.)",
+  "gender": "m",
+  "sg": [
+   "administratorius",
+   "administratoriaus",
+   "administratoriui",
+   "administratorių",
+   "administratoriumi",
+   "administratoriuje"
+  ],
+  "pl": [
+   "administratoriai",
+   "administratorių",
+   "administratoriams",
+   "administratorius",
+   "administratoriais",
+   "administratoriuose"
+  ],
+  "sgA": [
+   "administrãtorius",
+   "administrãtoriaus",
+   "administrãtoriui",
+   "administrãtorių",
+   "administrãtoriumi",
+   "administrãtoriuje"
+  ],
+  "plA": [
+   "administrãtoriai",
+   "administrãtorių",
+   "administrãtoriams",
+   "administrãtorius",
+   "administrãtoriais",
+   "administrãtoriuose"
+  ],
+  "headword": "administrãtorius m (plural administrãtoriai, feminine administrãtorė)&#32;"
+ },
+ {
+  "lemma": "veterinaras",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "veterinarian, veterinary, veterinary surgeon, vet",
+  "gender": "m",
+  "sg": [
+   "veterinaras",
+   "veterinaro",
+   "veterinarui",
+   "veterinarą",
+   "veterinaru",
+   "veterinare"
+  ],
+  "pl": [
+   "veterinarai",
+   "veterinarų",
+   "veterinarams",
+   "veterinarus",
+   "veterinarais",
+   "veterinaruose"
+  ],
+  "sgA": [
+   "veterinãras",
+   "veterinãro",
+   "veterinãrui",
+   "veterinãrą",
+   "veterinarù",
+   "veterinarè"
+  ],
+  "plA": [
+   "veterinãrai",
+   "veterinãrų",
+   "veterinãrams",
+   "veterinarùs",
+   "veterinãrais",
+   "veterinãruose"
+  ],
+  "headword": "veterinãras m (plural veterinãrai, feminine veterinãrė)&#32;"
+ },
+ {
+  "lemma": "ligonis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "patient; unhealthy, ill person",
+  "gender": "m",
+  "sg": [
+   "ligonis",
+   "ligonio",
+   "ligoniui",
+   "ligonį",
+   "ligoniu",
+   "ligonyje"
+  ],
+  "pl": [
+   "ligoniai",
+   "ligonių",
+   "ligoniams",
+   "ligonius",
+   "ligoniais",
+   "ligoniuose"
+  ],
+  "sgA": [
+   "ligónis",
+   "ligónio",
+   "ligóniui",
+   "ligónį",
+   "ligóniu",
+   "ligónyje"
+  ],
+  "plA": [
+   "ligóniai",
+   "ligónių",
+   "ligóniams",
+   "ligónius",
+   "ligóniais",
+   "ligóniuose"
+  ],
+  "headword": "ligónis m (plural ligóniai, feminine ligónė)&#32;"
+ },
+ {
+  "lemma": "slaugytoja",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "rašiklis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kopėčios",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(plural only) ladder&#91;2&#93;",
+  "gender": "f",
+  "sg": [],
+  "pl": [
+   "kopėčios",
+   "kopėčių",
+   "kopėčioms",
+   "kopėčias",
+   "kopėčiomis",
+   "kopėčiose"
+  ],
+  "sgA": [],
+  "plA": [
+   "kópėčios",
+   "kópėčių",
+   "kópėčioms",
+   "kópėčias",
+   "kópėčiomis",
+   "kópėčiose"
+  ],
+  "headword": "kópėčios f pl&#32;"
+ },
+ {
+  "lemma": "laiptai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(in the plural) stairs",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "laiptai",
+   "laiptų",
+   "laiptams",
+   "laiptus",
+   "laiptais",
+   "laiptuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "láiptai",
+   "láiptų",
+   "láiptams",
+   "láiptus",
+   "láiptais",
+   "láiptuose"
+  ],
+  "headword": "láiptai m pl&#32;"
+ },
+ {
+  "lemma": "vokas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "eyelid&#91;3&#93;",
+  "gender": "m",
+  "sg": [
+   "vokas",
+   "voko",
+   "vokui",
+   "voką",
+   "voku",
+   "voke"
+  ],
+  "pl": [
+   "vokai",
+   "vokų",
+   "vokams",
+   "vokus",
+   "vokais",
+   "vokuose"
+  ],
+  "sgA": [
+   "vókas",
+   "vóko",
+   "vókui",
+   "vóką",
+   "vóku",
+   "vokè"
+  ],
+  "plA": [
+   "vokaĩ",
+   "vokų̃",
+   "vokáms",
+   "vókus",
+   "vokaĩs",
+   "vokuosè"
+  ],
+  "headword": "vókas m (plural vokai̇̃)&#32;"
+ },
+ {
+  "lemma": "peronas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(transport) platform (of a train station etc.)",
+  "gender": "m",
+  "sg": [
+   "peronas",
+   "perono",
+   "peronui",
+   "peroną",
+   "peronu",
+   "perone"
+  ],
+  "pl": [
+   "peronai",
+   "peronų",
+   "peronams",
+   "peronus",
+   "peronais",
+   "peronuose"
+  ],
+  "sgA": [
+   "perònas",
+   "peròno",
+   "perònui",
+   "peròną",
+   "peronù",
+   "peronè"
+  ],
+  "plA": [
+   "perònai",
+   "perònų",
+   "perònams",
+   "peronùs",
+   "perònais",
+   "perònuose"
+  ],
+  "headword": "perònas m (plural peronai)&#32;"
+ },
+ {
+  "lemma": "pasas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "passport",
+  "gender": "m",
+  "sg": [
+   "pasas",
+   "paso",
+   "pasui",
+   "pasą",
+   "pasu",
+   "pase"
+  ],
+  "pl": [
+   "pasai",
+   "pasų",
+   "pasams",
+   "pasus",
+   "pasais",
+   "pasuose"
+  ],
+  "sgA": [
+   "pãsas",
+   "pãso",
+   "pãsui",
+   "pãsą",
+   "pasù",
+   "pasè"
+  ],
+  "plA": [
+   "pasaĩ",
+   "pasų̃",
+   "pasáms",
+   "pasùs",
+   "pasaĩs",
+   "pasuosè"
+  ],
+  "headword": "pãsas m (plural pasai̇̃)&#32;"
+ },
+ {
+  "lemma": "pirkėjas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "buyer, purchaser, customer",
+  "gender": "m",
+  "sg": [
+   "pirkėjas",
+   "pirkėjo",
+   "pirkėjui",
+   "pirkėją",
+   "pirkėju",
+   "pirkėjuje"
+  ],
+  "pl": [
+   "pirkėjai",
+   "pirkėjų",
+   "pirkėjams",
+   "pirkėjus",
+   "pirkėjais",
+   "pirkėjuose"
+  ],
+  "sgA": [
+   "pirkė́jas",
+   "pirkė́jo",
+   "pirkė́jui",
+   "pirkė́ją",
+   "pirkė́ju",
+   "pirkė́juje"
+  ],
+  "plA": [
+   "pirkė́jai",
+   "pirkė́jų",
+   "pirkė́jams",
+   "pirkė́jus",
+   "pirkė́jais",
+   "pirkė́juose"
+  ],
+  "headword": "pirkė́jas m (plural pirkė́jai, feminine pirkė́ja)&#32;"
+ },
+ {
+  "lemma": "pirkėja",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "butelis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "bottle",
+  "gender": "m",
+  "sg": [
+   "butelis",
+   "butelio",
+   "buteliui",
+   "butelį",
+   "buteliu",
+   "butelyje"
+  ],
+  "pl": [
+   "buteliai",
+   "butelių",
+   "buteliams",
+   "butelius",
+   "buteliais",
+   "buteliuose"
+  ],
+  "sgA": [
+   "bùtelis",
+   "bùtelio",
+   "bùteliui",
+   "bùtelį",
+   "bùteliu",
+   "bùtelyje"
+  ],
+  "plA": [
+   "bùteliai",
+   "bùtelių",
+   "bùteliams",
+   "bùtelius",
+   "bùteliais",
+   "bùteliuose"
+  ],
+  "headword": "bùtelis m (plural buteliai)&#32;"
+ },
+ {
+  "lemma": "maišelis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "svarstyklės",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kilogramas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "kilogram",
+  "gender": "m",
+  "sg": [
+   "kilogramas",
+   "kilogramo",
+   "kilogramui",
+   "kilogramą",
+   "kilogramu",
+   "kilograme"
+  ],
+  "pl": [
+   "kilogramai",
+   "kilogramų",
+   "kilogramams",
+   "kilogramus",
+   "kilogramais",
+   "kilogramuose"
+  ],
+  "sgA": [
+   "kilogrãmas",
+   "kilogrãmo",
+   "kilogrãmui",
+   "kilogrãmą",
+   "kilogramù",
+   "kilogramè"
+  ],
+  "plA": [
+   "kilogrãmai",
+   "kilogrãmų",
+   "kilogrãmams",
+   "kilogramùs",
+   "kilogrãmais",
+   "kilogrãmuose"
+  ],
+  "headword": "kilogrãmas m (plural kilogrãmai)&#32;"
+ },
+ {
+  "lemma": "arbatinukas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "teapot",
+  "gender": "m",
+  "sg": [
+   "arbatinukas",
+   "arbatinuko",
+   "arbatinukui",
+   "arbatinuką",
+   "arbatinuku",
+   "arbatinuke"
+  ],
+  "pl": [
+   "arbatinukai",
+   "arbatinukų",
+   "arbatinukams",
+   "arbatinukus",
+   "arbatinukais",
+   "arbatinukuose"
+  ],
+  "sgA": [
+   "arbatinùkas",
+   "arbatinùko",
+   "arbatinùkui",
+   "arbatinùką",
+   "arbatinukù",
+   "arbatinukè"
+  ],
+  "plA": [
+   "arbatinùkai",
+   "arbatinùkų",
+   "arbatinùkams",
+   "arbatinukùs",
+   "arbatinùkais",
+   "arbatinùkuose"
+  ],
+  "headword": "arbatinùkas m (plural arbatinùkai)&#32;"
+ },
+ {
+  "lemma": "paplūdimys",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "beach",
+  "gender": "m",
+  "sg": [
+   "paplūdimys",
+   "paplūdimio",
+   "paplūdimiui",
+   "paplūdimį",
+   "paplūdimiu",
+   "paplūdimyje"
+  ],
+  "pl": [
+   "paplūdimiai",
+   "paplūdimių",
+   "paplūdimiams",
+   "paplūdimius",
+   "paplūdimiais",
+   "paplūdimiuose"
+  ],
+  "sgA": [
+   "paplūdimỹs",
+   "páplūdimio",
+   "páplūdimiui",
+   "páplūdimį",
+   "páplūdimiu",
+   "paplūdimyjè"
+  ],
+  "plA": [
+   "paplūdimiaĩ",
+   "paplūdimių̃",
+   "paplūdimiáms",
+   "páplūdimius",
+   "paplūdimiaĩs",
+   "paplūdimiuosè"
+  ],
+  "headword": "paplūdimỹs m (plural paplūdimiai̇̃)&#32;"
+ },
+ {
+  "lemma": "banga",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "wave, billow",
+  "gender": "f",
+  "sg": [
+   "banga",
+   "bangos",
+   "bangai",
+   "bangą",
+   "banga",
+   "bangoje"
+  ],
+  "pl": [
+   "bangos",
+   "bangų",
+   "bangoms",
+   "bangas",
+   "bangomis",
+   "bangose"
+  ],
+  "sgA": [
+   "bangà",
+   "bangõs",
+   "bañgai",
+   "bañgą",
+   "bangà",
+   "bangojè"
+  ],
+  "plA": [
+   "bañgos",
+   "bangų̃",
+   "bangóms",
+   "bangàs",
+   "bangomìs",
+   "bangosè"
+  ],
+  "headword": "bangà f (plural bañgos)&#32;"
+ },
+ {
+  "lemma": "bala",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "swamp, mire, morass",
+  "gender": "f",
+  "sg": [
+   "bala",
+   "balos",
+   "balai",
+   "balą",
+   "bala",
+   "baloje"
+  ],
+  "pl": [
+   "balos",
+   "balų",
+   "baloms",
+   "balas",
+   "balomis",
+   "balose"
+  ],
+  "sgA": [
+   "balà",
+   "bãlos",
+   "bãlai",
+   "bãlą",
+   "balà",
+   "bãloje"
+  ],
+  "plA": [
+   "bãlos",
+   "bãlų",
+   "bãloms",
+   "balàs",
+   "bãlomis",
+   "bãlose"
+  ],
+  "headword": "balà f&#32;"
+ },
+ {
+  "lemma": "traktorius",
+  "found": false
+ },
+ {
+  "lemma": "plyta",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "brick",
+  "gender": "f",
+  "sg": [
+   "plyta",
+   "plytos",
+   "plytai",
+   "plytą",
+   "plyta",
+   "plytoje"
+  ],
+  "pl": [
+   "plytos",
+   "plytų",
+   "plytoms",
+   "plytas",
+   "plytomis",
+   "plytose"
+  ],
+  "sgA": [
+   "plytà",
+   "plỹtos",
+   "plỹtai",
+   "plỹtą",
+   "plytà",
+   "plỹtoje"
+  ],
+  "plA": [
+   "plỹtos",
+   "plỹtų",
+   "plỹtoms",
+   "plytàs",
+   "plỹtomis",
+   "plỹtose"
+  ],
+  "headword": "plytà f (plural plỹtos)&#32;"
+ },
+ {
+  "lemma": "šalmas",
+  "found": false
+ },
+ {
+  "lemma": "pardavėja",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female equivalent of pardavėjas",
+  "gender": "f",
+  "sg": [
+   "pardavėja",
+   "pardavėjos",
+   "pardavėjai",
+   "pardavėją",
+   "pardavėja",
+   "pardavėjoje"
+  ],
+  "pl": [
+   "pardavėjos",
+   "pardavėjų",
+   "pardavėjoms",
+   "pardavėjas",
+   "pardavėjomis",
+   "pardavėjose"
+  ],
+  "sgA": [
+   "pardavė́ja",
+   "pardavė́jos",
+   "pardavė́jai",
+   "pardavė́ją",
+   "pardavė́ja",
+   "pardavė́joje"
+  ],
+  "plA": [
+   "pardavė́jos",
+   "pardavė́jų",
+   "pardavė́joms",
+   "pardavė́jas",
+   "pardavė́jomis",
+   "pardavė́jose"
+  ],
+  "headword": "pardavė́ja f (plural pardavė́jos, masculine pardavėjas)&#32;"
+ },
+ {
+  "lemma": "ūkis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "farm",
+  "gender": "m",
+  "sg": [
+   "ūkis",
+   "ūkio",
+   "ūkiui",
+   "ūkį",
+   "ūkiu",
+   "ūkyje"
+  ],
+  "pl": [
+   "ūkiai",
+   "ūkių",
+   "ūkiams",
+   "ūkius",
+   "ūkiais",
+   "ūkiuose"
+  ],
+  "sgA": [
+   "ū́kis",
+   "ū́kio",
+   "ū́kiui",
+   "ū́kį",
+   "ū́kiu",
+   "ū́kyje"
+  ],
+  "plA": [
+   "ū́kiai",
+   "ū́kių",
+   "ū́kiams",
+   "ū́kius",
+   "ū́kiais",
+   "ū́kiuose"
+  ],
+  "headword": "ū́kis m (plural ū́kiai)&#32;"
+ },
+ {
+  "lemma": "tvartas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "building for livestock",
+  "gender": "m",
+  "sg": [
+   "tvartas",
+   "tvarto",
+   "tvartui",
+   "tvartą",
+   "tvartu",
+   "tvarte"
+  ],
+  "pl": [
+   "tvartai",
+   "tvartų",
+   "tvartams",
+   "tvartus",
+   "tvartais",
+   "tvartuose"
+  ],
+  "sgA": [
+   "tvártas",
+   "tvárto",
+   "tvártui",
+   "tvártą",
+   "tvártu",
+   "tvárte"
+  ],
+  "plA": [
+   "tvártai",
+   "tvártų",
+   "tvártams",
+   "tvártus",
+   "tvártais",
+   "tvártuose"
+  ],
+  "headword": "tvártas m (plural tvártai)&#32;"
+ },
+ {
+  "lemma": "šienas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "hay",
+  "gender": "m",
+  "sg": [
+   "šienas",
+   "šieno",
+   "šienui",
+   "šieną",
+   "šienu",
+   "šiene"
+  ],
+  "pl": [
+   "šienai",
+   "šienų",
+   "šienams",
+   "šienus",
+   "šienais",
+   "šienuose"
+  ],
+  "sgA": [
+   "šiẽnas",
+   "šiẽno",
+   "šiẽnui",
+   "šiẽną",
+   "šienù",
+   "šienè"
+  ],
+  "plA": [
+   "šienaĩ",
+   "šienų̃",
+   "šienáms",
+   "šienùs",
+   "šienaĩs",
+   "šienuosè"
+  ],
+  "headword": "šiẽnas m (plural šienai̇̃)&#32;"
+ },
+ {
+  "lemma": "mikrofonas",
+  "found": false
+ },
+ {
+  "lemma": "žiūrovas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "viewer, watcher, spectator",
+  "gender": "m",
+  "sg": [
+   "žiūrovas",
+   "žiūrovo",
+   "žiūrovui",
+   "žiūrovą",
+   "žiūrovu",
+   "žiūrove"
+  ],
+  "pl": [
+   "žiūrovai",
+   "žiūrovų",
+   "žiūrovams",
+   "žiūrovus",
+   "žiūrovais",
+   "žiūrovuose"
+  ],
+  "sgA": [
+   "žiūrõvas",
+   "žiūrõvo",
+   "žiūrõvui",
+   "žiūrõvą",
+   "žiūrovù",
+   "žiūrovè"
+  ],
+  "plA": [
+   "žiūrõvai",
+   "žiūrõvų",
+   "žiūrõvams",
+   "žiūrovùs",
+   "žiūrõvais",
+   "žiūrõvuose"
+  ],
+  "headword": "žiūrõvas m (plural žiūrõvai, feminine žiūrõvė)&#32;"
+ },
+ {
+  "lemma": "kirpėja",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "pagalvė",
+  "found": false
+ },
+ {
+  "lemma": "užuolaida",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "mokinė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female equivalent of mokinys (“pupil, apprentice, disciple”)",
+  "gender": "f",
+  "sg": [
+   "mokinė",
+   "mokinės",
+   "mokinei",
+   "mokinę",
+   "mokine",
+   "mokinėje"
+  ],
+  "pl": [
+   "mokinės",
+   "mokinių",
+   "mokinėms",
+   "mokines",
+   "mokinėmis",
+   "mokinėse"
+  ],
+  "sgA": [
+   "mokinė̃",
+   "mokinė̃s",
+   "mókinei",
+   "mókinę",
+   "mókine",
+   "mokinėjè"
+  ],
+  "plA": [
+   "mókinės",
+   "mokinių̃",
+   "mokinė́ms",
+   "mókines",
+   "mokinėmìs",
+   "mokinėsè"
+  ],
+  "headword": "mokinė̃ f (plural mókinės, masculine mokinỹs)&#32;"
+ },
+ {
+  "lemma": "klasė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "socioeconomic class",
+  "gender": "f",
+  "sg": [
+   "klasė",
+   "klasės",
+   "klasei",
+   "klasę",
+   "klase",
+   "klasėje"
+  ],
+  "pl": [
+   "klasės",
+   "klasių",
+   "klasėms",
+   "klases",
+   "klasėmis",
+   "klasėse"
+  ],
+  "sgA": [
+   "klãsė",
+   "klãsės",
+   "klãsei",
+   "klãsę",
+   "klasè",
+   "klãsėje"
+  ],
+  "plA": [
+   "klãsės",
+   "klãsių",
+   "klãsėms",
+   "klasès",
+   "klãsėmis",
+   "klãsėse"
+  ],
+  "headword": "klãsė f (plural klãsės)&#32;"
+ },
+ {
+  "lemma": "pamoka",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "lesson",
+  "gender": "f",
+  "sg": [
+   "pamoka",
+   "pamokos",
+   "pamokai",
+   "pamoką",
+   "pamoka",
+   "pamokoje"
+  ],
+  "pl": [
+   "pamokos",
+   "pamokų",
+   "pamokoms",
+   "pamokas",
+   "pamokomis",
+   "pamokose"
+  ],
+  "sgA": [
+   "pamokà",
+   "pamokõs",
+   "pãmokai",
+   "pãmoką",
+   "pãmoka",
+   "pamokojè"
+  ],
+  "plA": [
+   "pãmokos",
+   "pamokų̃",
+   "pamokóms",
+   "pãmokas",
+   "pamokomìs",
+   "pamokosè"
+  ],
+  "headword": "pamokà f (plural pãmokos)&#32;"
+ },
+ {
+  "lemma": "termometras",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "troleibusas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "trolley bus",
+  "gender": "m",
+  "sg": [
+   "troleibusas",
+   "troleibuso",
+   "troleibusui",
+   "troleibusą",
+   "troleibusu",
+   "troleibuse"
+  ],
+  "pl": [
+   "troleibusai",
+   "troleibusų",
+   "troleibusams",
+   "troleibusus",
+   "troleibusais",
+   "troleibusuose"
+  ],
+  "sgA": [
+   "troleibùsas",
+   "troleibùso",
+   "troleibùsui",
+   "troleibùsą",
+   "troleibusù",
+   "troleibusè"
+  ],
+  "plA": [
+   "troleibùsai",
+   "troleibùsų",
+   "troleibùsams",
+   "troleibusùs",
+   "troleibùsais",
+   "troleibùsuose"
+  ],
+  "headword": "troleibùsas m (plural troleibùsai)&#32;"
+ },
+ {
+  "lemma": "dainininkė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female equivalent of daininiñkas (“singer”)",
+  "gender": "f",
+  "sg": [
+   "dainininkė",
+   "dainininkės",
+   "dainininkei",
+   "dainininkę",
+   "dainininke",
+   "dainininkėje"
+  ],
+  "pl": [
+   "dainininkės",
+   "dainininkių",
+   "dainininkėms",
+   "dainininkes",
+   "dainininkėmis",
+   "dainininkėse"
+  ],
+  "sgA": [
+   "daininiñkė",
+   "daininiñkės",
+   "daininiñkei",
+   "daininiñkę",
+   "dainininkè",
+   "daininiñkėje"
+  ],
+  "plA": [
+   "daininiñkės",
+   "daininiñkių",
+   "daininiñkėms",
+   "dainininkès",
+   "daininiñkėmis",
+   "daininiñkėse"
+  ],
+  "headword": "daininiñkė f (plural daininiñkės, masculine daininiñkas)&#32;"
+ },
+ {
+  "lemma": "virėja",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "turistas",
+  "found": false
+ },
+ {
+  "lemma": "turistė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "žvejys",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "fisherman",
+  "gender": "m",
+  "sg": [
+   "žvejys",
+   "žvejo",
+   "žvejui",
+   "žvejį",
+   "žveju",
+   "žvejyje"
+  ],
+  "pl": [
+   "žvejai",
+   "žvejų",
+   "žvejams",
+   "žvejus",
+   "žvejais",
+   "žvejuose"
+  ],
+  "sgA": [
+   "žvejỹs",
+   "žvẽjo",
+   "žvẽjui",
+   "žvẽjį",
+   "žvejù",
+   "žvejyjè"
+  ],
+  "plA": [
+   "žvejaĩ",
+   "žvejų̃",
+   "žvejáms",
+   "žvejùs",
+   "žvejaĩs",
+   "žvejuosè"
+  ],
+  "headword": "žvejỹs m (plural žvejai̇̃, feminine žvejė)&#32;"
+ },
+ {
+  "lemma": "kūdikis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "baby, infant (a child of up to about a year)",
+  "gender": "m",
+  "sg": [
+   "kūdikis",
+   "kūdikio",
+   "kūdikiui",
+   "kūdikį",
+   "kūdikiu",
+   "kūdikyje"
+  ],
+  "pl": [
+   "kūdikiai",
+   "kūdikių",
+   "kūdikiams",
+   "kūdikius",
+   "kūdikiais",
+   "kūdikiuose"
+  ],
+  "sgA": [
+   "kū̃dikis",
+   "kū̃dikio",
+   "kū̃dikiui",
+   "kū̃dikį",
+   "kū̃dikiu",
+   "kū̃dikyje"
+  ],
+  "plA": [
+   "kū̃dikiai",
+   "kū̃dikių",
+   "kū̃dikiams",
+   "kū̃dikius",
+   "kū̃dikiais",
+   "kū̃dikiuose"
+  ],
+  "headword": "kū̃dikis m (plural kū̃dikiai)&#32;"
+ },
+ {
+  "lemma": "vežimėlis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "senis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "old man",
+  "gender": "m",
+  "sg": [
+   "senis",
+   "senio",
+   "seniui",
+   "senį",
+   "seniu",
+   "senyje"
+  ],
+  "pl": [
+   "seniai",
+   "senių",
+   "seniams",
+   "senius",
+   "seniais",
+   "seniuose"
+  ],
+  "sgA": [
+   "sẽnis",
+   "sẽnio",
+   "sẽniui",
+   "sẽnį",
+   "seniù",
+   "sẽnyje"
+  ],
+  "plA": [
+   "sẽniai",
+   "sẽnių",
+   "sẽniams",
+   "seniùs",
+   "sẽniais",
+   "sẽniuose"
+  ],
+  "headword": "sẽnis m (plural sẽniai)&#32;"
+ },
+ {
+  "lemma": "anūkė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "eglė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "spruce (tree from the genus Picea)",
+  "gender": "f",
+  "sg": [
+   "eglė",
+   "eglės",
+   "eglei",
+   "eglę",
+   "egle",
+   "eglėje"
+  ],
+  "pl": [
+   "eglės",
+   "eglių",
+   "eglėms",
+   "egles",
+   "eglėmis",
+   "eglėse"
+  ],
+  "sgA": [
+   "ẽglė",
+   "ẽglės",
+   "ẽglei",
+   "ẽglę",
+   "eglè",
+   "ẽglėje"
+  ],
+  "plA": [
+   "ẽglės",
+   "ẽglių",
+   "ẽglėms",
+   "eglès",
+   "ẽglėmis",
+   "ẽglėse"
+  ],
+  "headword": "ẽglė f (plural ẽglės)&#32;"
+ },
+ {
+  "lemma": "kriauklė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "shell; incrustation",
+  "gender": "f",
+  "sg": [
+   "kriauklė",
+   "kriauklės",
+   "kriauklei",
+   "kriauklę",
+   "kriaukle",
+   "kriauklėje"
+  ],
+  "pl": [
+   "kriauklės",
+   "kriauklių",
+   "kriauklėms",
+   "kriaukles",
+   "kriauklėmis",
+   "kriauklėse"
+  ],
+  "sgA": [
+   "kriauklė̃",
+   "kriauklė̃s",
+   "kriaũklei",
+   "kriaũklę",
+   "kriauklè",
+   "kriauklėjè"
+  ],
+  "plA": [
+   "kriaũklės",
+   "kriauklių̃",
+   "kriauklė́ms",
+   "kriauklès",
+   "kriauklėmìs",
+   "kriauklėsè"
+  ],
+  "headword": "kriauklė̃ f (plural kriaũklės)&#32;"
+ },
+ {
+  "lemma": "čiaupas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "tap, faucet",
+  "gender": "m",
+  "sg": [
+   "čiaupas",
+   "čiaupo",
+   "čiaupui",
+   "čiaupą",
+   "čiaupu",
+   "čiaupe"
+  ],
+  "pl": [
+   "čiaupai",
+   "čiaupų",
+   "čiaupams",
+   "čiaupus",
+   "čiaupais",
+   "čiaupuose"
+  ],
+  "sgA": [
+   "čiáupas",
+   "čiáupo",
+   "čiáupui",
+   "čiáupą",
+   "čiáupu",
+   "čiaupè"
+  ],
+  "plA": [
+   "čiaupaĩ",
+   "čiaupų̃",
+   "čiaupáms",
+   "čiáupus",
+   "čiaupaĩs",
+   "čiaupuosè"
+  ],
+  "headword": "čiáupas m (plural čiaupai̇̃)&#32;"
+ },
+ {
+  "lemma": "šluota",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "broom&#91;2&#93;",
+  "gender": "f",
+  "sg": [
+   "šluota",
+   "šluotos",
+   "šluotai",
+   "šluotą",
+   "šluota",
+   "šluotoje"
+  ],
+  "pl": [
+   "šluotos",
+   "šluotų",
+   "šluotoms",
+   "šluotas",
+   "šluotomis",
+   "šluotose"
+  ],
+  "sgA": [
+   "šlúota",
+   "šlúotos",
+   "šlúotai",
+   "šlúotą",
+   "šlúota",
+   "šlúotoje"
+  ],
+  "plA": [
+   "šlúotos",
+   "šlúotų",
+   "šlúotoms",
+   "šlúotas",
+   "šlúotomis",
+   "šlúotose"
+  ],
+  "headword": "šlúota f (plural šlúotos)&#32;"
+ },
+ {
+  "lemma": "palangė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "laistytuvas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "watering can",
+  "gender": "m",
+  "sg": [
+   "laistytuvas",
+   "laistytuvo",
+   "laistytuvui",
+   "laistytuvą",
+   "laistytuvu",
+   "laistytuve"
+  ],
+  "pl": [
+   "laistytuvai",
+   "laistytuvų",
+   "laistytuvams",
+   "laistytuvus",
+   "laistytuvais",
+   "laistytuvuose"
+  ],
+  "sgA": [
+   "laistytùvas",
+   "laistytùvo",
+   "laistytùvui",
+   "laistytùvą",
+   "laistytuvù",
+   "laistytuvè"
+  ],
+  "plA": [
+   "laistytùvai",
+   "laistytùvų",
+   "laistytùvams",
+   "laistytuvùs",
+   "laistytùvais",
+   "laistytùvuose"
+  ],
+  "headword": "laistytùvas m (plural laistytùvai)&#32;"
+ },
+ {
+  "lemma": "kastuvas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "rogutės",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "turėklai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kreida",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "chalatas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "khalat",
+  "gender": "m",
+  "sg": [
+   "chalatas",
+   "chalato",
+   "chalatui",
+   "chalatą",
+   "chalatu",
+   "chalate"
+  ],
+  "pl": [
+   "chalatai",
+   "chalatų",
+   "chalatams",
+   "chalatus",
+   "chalatais",
+   "chalatuose"
+  ],
+  "sgA": [
+   "chalãtas",
+   "chalãto",
+   "chalãtui",
+   "chalãtą",
+   "chalatù",
+   "chalatè"
+  ],
+  "plA": [
+   "chalãtai",
+   "chalãtų",
+   "chalãtams",
+   "chalatùs",
+   "chalãtais",
+   "chalãtuose"
+  ],
+  "headword": "chalãtas m (plural chalãtai)&#32;"
+ },
+ {
+  "lemma": "prekystalis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "vaistininkė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "lėkštutė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "vazonas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "markė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "brand, label, logo",
+  "gender": "f",
+  "sg": [
+   "markė",
+   "markės",
+   "markei",
+   "markę",
+   "marke",
+   "markėje"
+  ],
+  "pl": [
+   "markės",
+   "markių",
+   "markėms",
+   "markes",
+   "markėmis",
+   "markėse"
+  ],
+  "sgA": [
+   "márkė",
+   "márkės",
+   "márkei",
+   "márkę",
+   "markè",
+   "márkėje"
+  ],
+  "plA": [
+   "márkės",
+   "márkių",
+   "márkėms",
+   "markès",
+   "márkėmis",
+   "márkėse"
+  ],
+  "headword": "márkė f (plural markės)&#32;"
+ },
+ {
+  "lemma": "darbuotoja",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "female equivalent of darbuotojas (“worker, employee”)",
+  "gender": "f",
+  "sg": [
+   "darbuotoja",
+   "darbuotojos",
+   "darbuotojai",
+   "darbuotoją",
+   "darbuotoja",
+   "darbuotojoje"
+  ],
+  "pl": [
+   "darbuotojos",
+   "darbuotojų",
+   "darbuotojoms",
+   "darbuotojas",
+   "darbuotojomis",
+   "darbuotojose"
+  ],
+  "sgA": [
+   "darbúotoja",
+   "darbúotojos",
+   "darbúotojai",
+   "darbúotoją",
+   "darbúotoja",
+   "darbúotojoje"
+  ],
+  "plA": [
+   "darbúotojos",
+   "darbúotojų",
+   "darbúotojoms",
+   "darbúotojas",
+   "darbúotojomis",
+   "darbúotojose"
+  ],
+  "headword": "darbúotoja f (plural darbúotojos, masculine darbúotojas)&#32;"
+ },
+ {
+  "lemma": "stetoskopas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "vartininkas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "gatekeeper (person who guards or monitors passage through a gate)",
+  "gender": "m",
+  "sg": [
+   "vartininkas",
+   "vartininko",
+   "vartininkui",
+   "vartininką",
+   "vartininku",
+   "vartininke"
+  ],
+  "pl": [
+   "vartininkai",
+   "vartininkų",
+   "vartininkams",
+   "vartininkus",
+   "vartininkais",
+   "vartininkuose"
+  ],
+  "sgA": [
+   "var̃tininkas",
+   "var̃tininko",
+   "var̃tininkui",
+   "var̃tininką",
+   "var̃tininku",
+   "var̃tininke"
+  ],
+  "plA": [
+   "var̃tininkai",
+   "var̃tininkų",
+   "var̃tininkams",
+   "var̃tininkus",
+   "var̃tininkais",
+   "var̃tininkuose"
+  ],
+  "headword": "var̃tininkas m (plural var̃tininkai, feminine var̃tininkė)&#32;"
+ },
+ {
+  "lemma": "krepšys",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "basket",
+  "gender": "m",
+  "sg": [
+   "krepšys",
+   "krepšio",
+   "krepšiui",
+   "krepšį",
+   "krepšiu",
+   "krepšyje"
+  ],
+  "pl": [
+   "krepšiai",
+   "krepšių",
+   "krepšiams",
+   "krepšius",
+   "krepšiais",
+   "krepšiuose"
+  ],
+  "sgA": [
+   "krepšỹs",
+   "krẽpšio",
+   "krẽpšiui",
+   "krẽpšį",
+   "krepšiù",
+   "krepšyjè"
+  ],
+  "plA": [
+   "krepšiaĩ",
+   "krepšių̃",
+   "krepšiáms",
+   "krepšiùs",
+   "krepšiaĩs",
+   "krepšiuosè"
+  ],
+  "headword": "krepšỹs m (plural krepšiai̇̃)&#32;"
+ },
+ {
+  "lemma": "marškinėliai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "uždanga",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "gitaristas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "guitarist",
+  "gender": "m",
+  "sg": [
+   "gitaristas",
+   "gitaristo",
+   "gitaristui",
+   "gitaristą",
+   "gitaristu",
+   "gitariste"
+  ],
+  "pl": [
+   "gitaristai",
+   "gitaristų",
+   "gitaristams",
+   "gitaristus",
+   "gitaristais",
+   "gitaristuose"
+  ],
+  "sgA": [
+   "gitarìstas",
+   "gitarìsto",
+   "gitarìstui",
+   "gitarìstą",
+   "gitaristù",
+   "gitaristè"
+  ],
+  "plA": [
+   "gitarìstai",
+   "gitarìstų",
+   "gitarìstams",
+   "gitaristùs",
+   "gitarìstais",
+   "gitarìstuose"
+  ],
+  "headword": "gitari̇̀stas m (plural gitari̇̀stai, feminine gitari̇̀stė)&#32;"
+ },
+ {
+  "lemma": "slidininkas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "lazda",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "stick",
+  "gender": "f",
+  "sg": [
+   "lazda",
+   "lazdos",
+   "lazdai",
+   "lazdą",
+   "lazda",
+   "lazdoje"
+  ],
+  "pl": [
+   "lazdos",
+   "lazdų",
+   "lazdoms",
+   "lazdas",
+   "lazdomis",
+   "lazdose"
+  ],
+  "sgA": [
+   "lazdà",
+   "lazdõs",
+   "lãzdai",
+   "lãzdą",
+   "lazdà",
+   "lazdojè"
+  ],
+  "plA": [
+   "lãzdos",
+   "lazdų̃",
+   "lazdóms",
+   "lazdàs",
+   "lazdomìs",
+   "lazdosè"
+  ],
+  "headword": "lazdà f (plural lãzdos)&#32;"
+ },
+ {
+  "lemma": "figūra",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "barzda",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "beard&#91;2&#93;",
+  "gender": "f",
+  "sg": [
+   "barzda",
+   "barzdos",
+   "barzdai",
+   "barzdą",
+   "barzda",
+   "barzdoje"
+  ],
+  "pl": [
+   "barzdos",
+   "barzdų",
+   "barzdoms",
+   "barzdas",
+   "barzdomis",
+   "barzdose"
+  ],
+  "sgA": [
+   "barzdà",
+   "barzdõs",
+   "bar̃zdai",
+   "bar̃zdą",
+   "barzdà",
+   "barzdojè"
+  ],
+  "plA": [
+   "bar̃zdos",
+   "barzdų̃",
+   "barzdóms",
+   "barzdàs",
+   "barzdomìs",
+   "barzdosè"
+  ],
+  "headword": "barzdà f (plural bar̃zdos)&#32;"
+ },
+ {
+  "lemma": "ūsai",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "moustache",
+  "gender": "m",
+  "sg": [],
+  "pl": [
+   "ūsai",
+   "ūsų",
+   "ūsams",
+   "ūsus",
+   "ūsais",
+   "ūsuose"
+  ],
+  "sgA": [],
+  "plA": [
+   "ū̃sai",
+   "ū̃sų",
+   "ū̃sams",
+   "ūsùs",
+   "ū̃sais",
+   "ū̃suose"
+  ],
+  "headword": "ū̃sai m pl&#32;"
+ },
+ {
+  "lemma": "plūdė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "bokštas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "tower",
+  "gender": "m",
+  "sg": [
+   "bokštas",
+   "bokšto",
+   "bokštui",
+   "bokštą",
+   "bokštu",
+   "bokšte"
+  ],
+  "pl": [
+   "bokštai",
+   "bokštų",
+   "bokštams",
+   "bokštus",
+   "bokštais",
+   "bokštuose"
+  ],
+  "sgA": [
+   "bókštas",
+   "bókšto",
+   "bókštui",
+   "bókštą",
+   "bókštu",
+   "bókšte"
+  ],
+  "plA": [
+   "bókštai",
+   "bókštų",
+   "bókštams",
+   "bókštus",
+   "bókštais",
+   "bókštuose"
+  ],
+  "headword": "bókštas m (plural bókštai)&#32;"
+ },
+ {
+  "lemma": "vėliava",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "banner, flag (a piece of fabric with a distinctive design used as a sign or symbol)",
+  "gender": "f",
+  "sg": [
+   "vėliava",
+   "vėliavos",
+   "vėliavai",
+   "vėliavą",
+   "vėliava",
+   "vėliavoje"
+  ],
+  "pl": [
+   "vėliavos",
+   "vėliavų",
+   "vėliavoms",
+   "vėliavas",
+   "vėliavomis",
+   "vėliavose"
+  ],
+  "sgA": [
+   "vė̃liava",
+   "vė̃liavos",
+   "vė̃liavai",
+   "vė̃liavą",
+   "vė̃liava",
+   "vė̃liavoje"
+  ],
+  "plA": [
+   "vė̃liavos",
+   "vė̃liavų",
+   "vė̃liavoms",
+   "vė̃liavas",
+   "vė̃liavomis",
+   "vė̃liavose"
+  ],
+  "headword": "vė̃liava f (plural vė̃liavos)&#32;"
+ },
+ {
+  "lemma": "skarelė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "Kalėdos",
+  "found": false
+ },
+ {
+  "lemma": "Velykos",
+  "found": false
+ },
+ {
+  "lemma": "viršūnė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "summit&#91;2&#93;",
+  "gender": "f",
+  "sg": [
+   "viršūnė",
+   "viršūnės",
+   "viršūnei",
+   "viršūnę",
+   "viršūne",
+   "viršūnėje"
+  ],
+  "pl": [
+   "viršūnės",
+   "viršūnių",
+   "viršūnėms",
+   "viršūnes",
+   "viršūnėmis",
+   "viršūnėse"
+  ],
+  "sgA": [
+   "viršū́nė",
+   "viršū́nės",
+   "viršū́nei",
+   "viršū́nę",
+   "viršū́ne",
+   "viršū́nėje"
+  ],
+  "plA": [
+   "viršū́nės",
+   "viršū́nių",
+   "viršū́nėms",
+   "viršū́nes",
+   "viršū́nėmis",
+   "viršū́nėse"
+  ],
+  "headword": "viršū́nė f (plural viršū́nės)&#32;"
+ },
+ {
+  "lemma": "teptukas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "(painting) brush, paintbrush",
+  "gender": "m",
+  "sg": [
+   "teptukas",
+   "teptuko",
+   "teptukui",
+   "teptuką",
+   "teptuku",
+   "teptuke"
+  ],
+  "pl": [
+   "teptukai",
+   "teptukų",
+   "teptukams",
+   "teptukus",
+   "teptukais",
+   "teptukuose"
+  ],
+  "sgA": [
+   "teptùkas",
+   "teptùko",
+   "teptùkui",
+   "teptùką",
+   "teptukù",
+   "teptukè"
+  ],
+  "plA": [
+   "teptùkai",
+   "teptùkų",
+   "teptùkams",
+   "teptukùs",
+   "teptùkais",
+   "teptùkuose"
+  ],
+  "headword": "teptùkas m (plural teptùkai)&#32;"
+ },
+ {
+  "lemma": "laužas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "pile of sticks",
+  "gender": "m",
+  "sg": [
+   "laužas",
+   "laužo",
+   "laužui",
+   "laužą",
+   "laužu",
+   "lauže"
+  ],
+  "pl": [
+   "laužai",
+   "laužų",
+   "laužams",
+   "laužus",
+   "laužais",
+   "laužuose"
+  ],
+  "sgA": [
+   "láužas",
+   "láužo",
+   "láužui",
+   "láužą",
+   "láužu",
+   "laužè"
+  ],
+  "plA": [
+   "laužaĩ",
+   "laužų̃",
+   "laužáms",
+   "láužus",
+   "laužaĩs",
+   "laužuosè"
+  ],
+  "headword": "láužas m (plural laužai̇̃)&#32;"
+ },
+ {
+  "lemma": "rąstas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "log, timber,&#91;2&#93; lumber",
+  "gender": "m",
+  "sg": [
+   "rąstas",
+   "rąsto",
+   "rąstui",
+   "rąstą",
+   "rąstu",
+   "rąste"
+  ],
+  "pl": [
+   "rąstai",
+   "rąstų",
+   "rąstams",
+   "rąstus",
+   "rąstais",
+   "rąstuose"
+  ],
+  "sgA": [
+   "rą̃stas",
+   "rą̃sto",
+   "rą̃stui",
+   "rą̃stą",
+   "rąstù",
+   "rąstè"
+  ],
+  "plA": [
+   "rą̃stai",
+   "rą̃stų",
+   "rą̃stams",
+   "rąstùs",
+   "rą̃stais",
+   "rą̃stuose"
+  ],
+  "headword": "rą̃stas m (plural rą̃stai)&#32;"
+ },
+ {
+  "lemma": "registratūra",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "pakaba",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "drabužiai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "tvarstis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "uostas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "harbor, port",
+  "gender": "m",
+  "sg": [
+   "uostas",
+   "uosto",
+   "uostui",
+   "uostą",
+   "uostu",
+   "uoste"
+  ],
+  "pl": [
+   "uostai",
+   "uostų",
+   "uostams",
+   "uostus",
+   "uostais",
+   "uostuose"
+  ],
+  "sgA": [
+   "úostas",
+   "úosto",
+   "úostui",
+   "úostą",
+   "úostu",
+   "úoste"
+  ],
+  "plA": [
+   "úostai",
+   "úostų",
+   "úostams",
+   "úostus",
+   "úostais",
+   "úostuose"
+  ],
+  "headword": "úostas m (plural úostai)&#32;"
+ },
+ {
+  "lemma": "fotoaparatas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "camera",
+  "gender": "m",
+  "sg": [
+   "fotoaparatas",
+   "fotoaparato",
+   "fotoaparatui",
+   "fotoaparatą",
+   "fotoaparatu",
+   "fotoaparate"
+  ],
+  "pl": [
+   "fotoaparatai",
+   "fotoaparatų",
+   "fotoaparatams",
+   "fotoaparatus",
+   "fotoaparatais",
+   "fotoaparatuose"
+  ],
+  "sgA": [
+   "fotoaparãtas",
+   "fotoaparãto",
+   "fotoaparãtui",
+   "fotoaparãtą",
+   "fotoaparatù",
+   "fotoaparatè"
+  ],
+  "plA": [
+   "fotoaparãtai",
+   "fotoaparãtų",
+   "fotoaparãtams",
+   "fotoaparatùs",
+   "fotoaparãtais",
+   "fotoaparãtuose"
+  ],
+  "headword": "fotoaparãtas m (plural fotoaparãtai)&#32;"
+ },
+ {
+  "lemma": "benzinas",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "gasoline",
+  "gender": "m",
+  "sg": [
+   "benzinas",
+   "benzino",
+   "benzinui",
+   "benziną",
+   "benzinu",
+   "benzine"
+  ],
+  "pl": [],
+  "sgA": [
+   "benzìnas",
+   "benzìno",
+   "benzìnui",
+   "benzìną",
+   "benzinù",
+   "benzinè"
+  ],
+  "plA": [],
+  "headword": "benzi̇̀nas m (uncountable)&#32;"
+ },
+ {
+  "lemma": "degalai",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kolonėlė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "šaligatvis",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "sidewalk (US), pavement (UK)",
+  "gender": "m",
+  "sg": [
+   "šaligatvis",
+   "šaligatvio",
+   "šaligatviui",
+   "šaligatvį",
+   "šaligatviu",
+   "šaligatvyje"
+  ],
+  "pl": [
+   "šaligatviai",
+   "šaligatvių",
+   "šaligatviams",
+   "šaligatvius",
+   "šaligatviais",
+   "šaligatviuose"
+  ],
+  "sgA": [
+   "šalìgatvis",
+   "šalìgatvio",
+   "šalìgatviui",
+   "šalìgatvį",
+   "šalìgatviu",
+   "šalìgatvyje"
+  ],
+  "plA": [
+   "šalìgatviai",
+   "šalìgatvių",
+   "šalìgatviams",
+   "šalìgatvius",
+   "šalìgatviais",
+   "šalìgatviuose"
+  ],
+  "headword": "šali̇̀gatvis m (plural šali̇̀gatviai)&#32;"
+ },
+ {
+  "lemma": "skrybėlė",
+  "found": false
+ },
+ {
+  "lemma": "kasininkė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "padėklas",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "taurė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "cup, goblet, beaker",
+  "gender": "f",
+  "sg": [
+   "taurė",
+   "taurės",
+   "taurei",
+   "taurę",
+   "taure",
+   "taurėje"
+  ],
+  "pl": [
+   "taurės",
+   "taurių",
+   "taurėms",
+   "taures",
+   "taurėmis",
+   "taurėse"
+  ],
+  "sgA": [
+   "taurė̃",
+   "taurė̃s",
+   "taũrei",
+   "taũrę",
+   "taurè",
+   "taurėjè"
+  ],
+  "plA": [
+   "taũrės",
+   "taurių̃",
+   "taurė́ms",
+   "taurès",
+   "taurėmìs",
+   "taurėsè"
+  ],
+  "headword": "taurė̃ f (plural taũrės)&#32;"
+ },
+ {
+  "lemma": "staltiesė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "dėžė",
+  "found": true,
+  "pos": "Noun",
+  "gloss": "box (rectangular container)",
+  "gender": "f",
+  "sg": [
+   "dėžė",
+   "dėžės",
+   "dėžei",
+   "dėžę",
+   "dėže",
+   "dėžėje"
+  ],
+  "pl": [
+   "dėžės",
+   "dėžių",
+   "dėžėms",
+   "dėžes",
+   "dėžėmis",
+   "dėžėse"
+  ],
+  "sgA": [
+   "dėžė̃",
+   "dėžė̃s",
+   "dė̃žei",
+   "dė̃žę",
+   "dėžè",
+   "dėžėjè"
+  ],
+  "plA": [
+   "dė̃žės",
+   "dėžių̃",
+   "dėžė́ms",
+   "dėžès",
+   "dėžėmìs",
+   "dėžėsè"
+  ],
+  "headword": "dėžė̃ f (plural dė̃žės)&#32;"
+ },
+ {
+  "lemma": "prijuostė",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "kasytė",
+  "found": false,
+  "missing": true
  }
 ]

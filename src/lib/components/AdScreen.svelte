@@ -70,13 +70,13 @@
   }
 
   function reportError() {
-    const title = 'Помилка: ' + lt;
+    const title = 'Помилка: ' + (lt.length > 80 ? lt.slice(0, 80).trimEnd() + '…' : lt);
     const body =
       '**Реклама:** ' + ad.id + ' (' + $lang + ')\n' +
       '**Текст:** ' + lt + '\n' +
       '**Переклад:** ' + ad[$lang] + '\n\n' +
       'Опишіть, що не так:\n\n\n' +
-      '<details><summary>Технічні дані</summary>\n\n```json\n' + JSON.stringify({ ad: ad.id, lang: $lang, tokens: ad.tokens }, null, 2) + '\n```\n</details>\n';
+      '<details><summary>Технічні дані</summary>\n\n```json\n' + JSON.stringify({ ad: ad.id, lang: $lang }, null, 2) + '\n```\n</details>\n';
     window.open('https://github.com/Ku6opr/lt/issues/new?title=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(body), '_blank', 'noopener');
   }
 </script>

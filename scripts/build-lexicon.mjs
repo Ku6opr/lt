@@ -4,13 +4,14 @@ import { ADJECTIVES } from '../src/lib/data/adjectives.js';
 import { VERBS } from '../src/lib/data/verbsConj.js';
 
 const EXCLUDE = new Set(['pusseserė']);
+const VDU_FIRST = new Set(['šlapias', 'šviežias', 'kristi', 'mėgti', 'vėluoti', 'skristi', 'verkti', 'vesti']);
 const GENDER = { ledai: 'm' };
 const SLOTS = ['sg1', 'sg2', 'p3', 'pl1', 'pl2'];
 const TENSES = ['pres', 'past', 'habit', 'fut', 'cond', 'imp'];
 
 const load = (f) => (fs.existsSync('data-source/' + f) ? JSON.parse(fs.readFileSync('data-source/' + f, 'utf8')) : []);
 const read = (kind) => {
-  const wikt = load('lt-lexicon-' + kind + '.json').filter((x) => x.found && !EXCLUDE.has(x.lemma));
+  const wikt = load('lt-lexicon-' + kind + '.json').filter((x) => x.found && !EXCLUDE.has(x.lemma) && !VDU_FIRST.has(x.lemma));
   const have = new Set(wikt.map((x) => x.lemma));
   return [...wikt, ...load('lt-lexicon-vdu-' + kind + '.json').filter((x) => x.found && !have.has(x.lemma))];
 };

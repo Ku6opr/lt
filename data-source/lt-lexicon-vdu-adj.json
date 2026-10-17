@@ -1153,5 +1153,390 @@
     "mylimosè"
    ]
   }
+ },
+ {
+  "lemma": "dryžuotas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "dryžuotas",
+    "dryžuoto",
+    "dryžuotam",
+    "dryžuotą",
+    "dryžuotu",
+    "dryžuotame"
+   ],
+   "pl": [
+    "dryžuoti",
+    "dryžuotų",
+    "dryžuotiems",
+    "dryžuotus",
+    "dryžuotais",
+    "dryžuotuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "dryžuota",
+    "dryžuotos",
+    "dryžuotai",
+    "dryžuotą",
+    "dryžuota",
+    "dryžuotoje"
+   ],
+   "pl": [
+    "dryžuotos",
+    "dryžuotų",
+    "dryžuotoms",
+    "dryžuotas",
+    "dryžuotomis",
+    "dryžuotose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "dryžúotas",
+    "dryžúoto",
+    "dryžúotam",
+    "dryžúotą",
+    "dryžúotu",
+    "dryžúotame"
+   ],
+   "pl": [
+    "dryžúoti",
+    "dryžúotų",
+    "dryžúotiems",
+    "dryžúotus",
+    "dryžúotais",
+    "dryžúotuose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "dryžúota",
+    "dryžúotos",
+    "dryžúotai",
+    "dryžúotą",
+    "dryžúota",
+    "dryžúotoje"
+   ],
+   "pl": [
+    "dryžúotos",
+    "dryžúotų",
+    "dryžúotoms",
+    "dryžúotas",
+    "dryžúotomis",
+    "dryžúotose"
+   ]
+  }
+ },
+ {
+  "lemma": "languotas",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "languotas",
+    "languoto",
+    "languotam",
+    "languotą",
+    "languotu",
+    "languotame"
+   ],
+   "pl": [
+    "languoti",
+    "languotų",
+    "languotiems",
+    "languotus",
+    "languotais",
+    "languotuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "languota",
+    "languotos",
+    "languotai",
+    "languotą",
+    "languota",
+    "languotoje"
+   ],
+   "pl": [
+    "languotos",
+    "languotų",
+    "languotoms",
+    "languotas",
+    "languotomis",
+    "languotose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "langúotas",
+    "langúoto",
+    "langúotam",
+    "langúotą",
+    "langúotu",
+    "langúotame"
+   ],
+   "pl": [
+    "langúoti",
+    "langúotų",
+    "langúotiems",
+    "langúotus",
+    "langúotais",
+    "langúotuose"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "langúota",
+    "langúotos",
+    "langúotai",
+    "langúotą",
+    "langúota",
+    "langúotoje"
+   ],
+   "pl": [
+    "langúotos",
+    "langúotų",
+    "langúotoms",
+    "langúotas",
+    "langúotomis",
+    "langúotose"
+   ]
+  }
+ },
+ {
+  "lemma": "ovalus",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "ovalus",
+    "ovalaus",
+    "ovaliam",
+    "ovalų",
+    "ovaliu",
+    "ovaliame"
+   ],
+   "pl": [
+    "ovalūs",
+    "ovalių",
+    "ovaliems",
+    "ovalius",
+    "ovaliais",
+    "ovaliuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "ovali",
+    "ovalios",
+    "ovaliai",
+    "ovalią",
+    "ovalia",
+    "ovalioje"
+   ],
+   "pl": [
+    "ovalios",
+    "ovalių",
+    "ovalioms",
+    "ovalias",
+    "ovaliomis",
+    "ovaliose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "ovalùs",
+    "ovalaũs",
+    "ovaliám",
+    "ovãlų",
+    "ovaliù",
+    "ovaliamè"
+   ],
+   "pl": [
+    "ovãlūs",
+    "ovalių̃",
+    "ovalíems",
+    "ovaliùs",
+    "ovaliaĩs",
+    "ovaliuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "ovalì",
+    "ovaliõs",
+    "ovãliai",
+    "ovãlią",
+    "ovalià",
+    "ovaliojè"
+   ],
+   "pl": [
+    "ovãlios",
+    "ovalių̃",
+    "ovalióms",
+    "ovaliàs",
+    "ovaliomìs",
+    "ovaliosè"
+   ]
+  }
+ },
+ {
+  "lemma": "šlapias",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "šlapias",
+    "šlapio",
+    "šlapiam",
+    "šlapią",
+    "šlapiu",
+    "šlapiame"
+   ],
+   "pl": [
+    "šlapi",
+    "šlapių",
+    "šlapiems",
+    "šlapius",
+    "šlapiais",
+    "šlapiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "šlapia",
+    "šlapios",
+    "šlapiai",
+    "šlapią",
+    "šlapia",
+    "šlapioje"
+   ],
+   "pl": [
+    "šlapios",
+    "šlapių",
+    "šlapioms",
+    "šlapias",
+    "šlapiomis",
+    "šlapiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "šlãpias",
+    "šlãpio",
+    "šlapiám",
+    "šlãpią",
+    "šlapiù",
+    "šlapiamè"
+   ],
+   "pl": [
+    "šlapì",
+    "šlapių̃",
+    "šlapíems",
+    "šlapiùs",
+    "šlapiaĩs",
+    "šlapiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "šlapià",
+    "šlapiõs",
+    "šlãpiai",
+    "šlãpią",
+    "šlapià",
+    "šlapiojè"
+   ],
+   "pl": [
+    "šlãpios",
+    "šlapių̃",
+    "šlapióms",
+    "šlapiàs",
+    "šlapiomìs",
+    "šlapiosè"
+   ]
+  }
+ },
+ {
+  "lemma": "šviežias",
+  "found": true,
+  "source": "vdu",
+  "m": {
+   "sg": [
+    "šviežias",
+    "šviežio",
+    "šviežiam",
+    "šviežią",
+    "šviežiu",
+    "šviežiame"
+   ],
+   "pl": [
+    "švieži",
+    "šviežių",
+    "šviežiems",
+    "šviežius",
+    "šviežiais",
+    "šviežiuose"
+   ]
+  },
+  "f": {
+   "sg": [
+    "šviežia",
+    "šviežios",
+    "šviežiai",
+    "šviežią",
+    "šviežia",
+    "šviežioje"
+   ],
+   "pl": [
+    "šviežios",
+    "šviežių",
+    "šviežioms",
+    "šviežias",
+    "šviežiomis",
+    "šviežiose"
+   ]
+  },
+  "mA": {
+   "sg": [
+    "šviẽžias",
+    "šviẽžio",
+    "šviežiám",
+    "šviẽžią",
+    "šviežiù",
+    "šviežiamè"
+   ],
+   "pl": [
+    "šviežì",
+    "šviežių̃",
+    "šviežíems",
+    "šviežiùs",
+    "šviežiaĩs",
+    "šviežiuosè"
+   ]
+  },
+  "fA": {
+   "sg": [
+    "šviežià",
+    "šviežiõs",
+    "šviẽžiai",
+    "šviẽžią",
+    "šviežià",
+    "šviežiojè"
+   ],
+   "pl": [
+    "šviẽžios",
+    "šviežių̃",
+    "šviežióms",
+    "šviežiàs",
+    "šviežiomìs",
+    "šviežiosè"
+   ]
+  }
  }
 ]

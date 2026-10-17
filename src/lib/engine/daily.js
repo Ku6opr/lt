@@ -23,7 +23,8 @@ const TENSE = {
   habit: ['habit', 'habitA', 'conj-habit']
 };
 const PREP_CASE = { gen: 'K', dat: 'N', acc: 'G', ins: 'In', loc: 'Vt' };
-const EXTRA_PREPS = { ant: { case: 'gen' } };
+const EXTRA_PREPS = { ant: { case: 'gen' }, po: { case: 'ins' }, šalia: { case: 'gen' }, prieš: { case: 'acc' }, tarp: { case: 'gen' }, virš: { case: 'gen' } };
+const PREP_ALSO = { už: ['gen'], po: ['gen', 'acc'] };
 const prepOf = (p) => PREPS[p] || EXTRA_PREPS[p];
 const NOUNS = [...WORDS.map((w) => ({ ...w, gender: ltGender(w) })), ...LEX_NOUNS];
 const ADJS = [...ADJECTIVES, ...LEX_ADJECTIVES];
@@ -148,8 +149,8 @@ export function buildPhrase(src) {
   p.lt.forEach((tok, i) => {
     if (!tok.prep) return;
     const head = tokens.slice(i + 1).find((t) => t.kind === 'n' || t.kind === 'pr');
-    const want = prepOf(tok.prep).case;
-    if (!head || head.c !== PREP_CASE[want]) throw new Error('daily: ' + tok.prep + ' governs ' + want + ' in ' + p.id);
+    const want = [prepOf(tok.prep).case, ...(PREP_ALSO[tok.prep] || [])];
+    if (!head || !want.some((c) => head.c === PREP_CASE[c])) throw new Error('daily: ' + tok.prep + ' governs ' + want.join('/') + ' in ' + p.id);
   });
   const lt = tokens.map((t) => t.text + t.after).join(' ');
   return {
@@ -214,10 +215,10 @@ for (const ref of new Set(DAILY_POOL.flatMap((p) => p.tokens.map((t) => t.ref)))
 
 const BY_ID = new Map(DAILY_POOL.map((p) => [p.id, p]));
 
-export function hintedWords(entries, known = {}) {
+export function hintedWords(entries, known = {}, byId = BY_ID) {
   const seen = new Set();
   return entries.flatMap(({ ref, phrase, k }) => {
-    const t = BY_ID.get(phrase)?.tokens[k];
+    const t = byId.get(phrase)?.tokens[k];
     if (!t || t.ref !== ref || seen.has(ref) || known[ref]) return [];
     seen.add(ref);
     return [{ ref, lemma: t.lemma, lemmaA: t.lemmaA, gloss: glossOf(ref) }];

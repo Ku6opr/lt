@@ -3,7 +3,7 @@
   import { get } from 'svelte/store';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
-  import { daily, dayKey, completeDay, saveSession, addHinted } from '../stores/daily.js';
+  import { dailyStore, dayKey } from '../stores/daily.js';
   import { dailyTasks, checkAnswer, hintedWords, nextHint } from '../engine/daily.js';
   import { vocab } from '../stores/vocab.js';
   import { simplifyAccent } from '../engine/stem.js';
@@ -12,10 +12,19 @@
   import DayDot from './DayDot.svelte';
   import DailyWords from './DailyWords.svelte';
 
-  export let onBack;
-
   const today = dayKey(new Date());
-  const tasks = dailyTasks(today);
+
+  export let onBack;
+  export let tasks = dailyTasks(today);
+  export let store = dailyStore;
+  export let byId = undefined;
+  export let kickerKey = 'dailyTask';
+  export let titleKey = 'dailyTitle';
+  export let reportLabel = 'Завдання дня';
+  export let reportKey = 'daily';
+  export let autofocus = true;
+
+  const { state: daily, completeDay, saveSession, addHinted } = store;
   const total = tasks.length;
   const totalWords = tasks.reduce((n, t) => n + t.size, 0);
   const saved = get(daily).session;
@@ -36,7 +45,7 @@
   $: task = tasks[i] || null;
   $: finished = i >= total;
   $: hintAt = task && !revealed ? nextHint(input, task, hinted) : -1;
-  $: fresh = finished ? hintedWords(($daily.hinted || []).filter((h) => h.date === today), get(vocab).words) : [];
+  $: fresh = finished ? hintedWords(($daily.hinted || []).filter((h) => h.date === today), get(vocab).words, byId) : [];
   $: guessed = results.reduce((n, r) => n + (r || 0), 0);
   $: points = totalWords ? Math.round((guessed / totalWords) * 100) : 0;
   $: scoreText = L.dailyScore.replace('{n}', points).replace('{pts}', L.points[new Intl.PluralRules($lang).select(points)]);
@@ -60,7 +69,7 @@
       if (inputEl) inputEl.focus();
     });
   }
-  onMount(focusInput);
+  onMount(() => autofocus && focusInput());
 
   function hint() {
     if (hintAt < 0) return;
@@ -98,9 +107,9 @@
   function reportError() {
     if (!task) return;
     const title = 'Помилка: ' + task.lt;
-    const info = { daily: task.id, lang: $lang, source: task[$lang], answer: task.lt, input, tokens: task.tokens };
+    const info = { [reportKey]: task.id, lang: $lang, source: task[$lang], answer: task.lt, input };
     const body =
-      '**Завдання дня:** ' + task.id + ' (' + $lang + ')\n' +
+      '**' + reportLabel + ':** ' + task.id + ' (' + $lang + ')\n' +
       '**Показано:** ' + task[$lang] + '\n' +
       '**Відповідь:** ' + task.lt + '\n\n' +
       'Опишіть, що не так:\n\n\n' +
@@ -113,14 +122,14 @@
 {#if words}
   <DailyWords {words} date={today} {onBack} />
 {:else}
-<div class="lt-wrap">
+<div class="lt-wrap" class:wide={$$slots.media}>
   <div class="head">
     <button class="btn btn-secondary btn-icon" type="button" on:click={onBack} aria-label={L.back}>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
     </button>
     <div class="head-text">
-      <div class="card-kicker">{L.dailyTask}</div>
-      <h2>{L.dailyTitle}</h2>
+      <div class="card-kicker">{L[kickerKey]}</div>
+      <h2>{L[titleKey]}</h2>
     </div>
     {#if !finished}<div class="count">{i + 1} / {total}</div>{/if}
   </div>
@@ -131,6 +140,9 @@
     {/each}
   </div>
 
+  <div class="layout" class:split={$$slots.media}>
+  {#if $$slots.media}<div class="media"><slot name="media" /></div>{/if}
+  <div class="main">
   {#if task}
     <div class="card">
       <div class="source">{task[$lang]}</div>
@@ -191,10 +203,19 @@
       {/if}
     </div>
   {/if}
+  </div>
+  </div>
 </div>
 {/if}
 
 <style>
+  .wide { max-width: 1180px; }
+  .layout.split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(20px, 4cqw, 44px); align-items: start; }
+  .media { position: sticky; top: var(--space-3); }
+  @container (max-width: 719px) {
+    .layout.split { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+    .media { position: static; }
+  }
   .head { display: flex; align-items: center; gap: var(--space-3); padding-block: var(--space-2) var(--space-3); }
   .head-text { flex: 1; min-width: 0; }
   .head h2 { margin: 0; font-size: clamp(22px, 3.6cqw, 32px); }

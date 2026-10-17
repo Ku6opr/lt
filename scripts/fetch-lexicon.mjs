@@ -147,12 +147,19 @@ function parseVerb(sec) {
 const PARSE = { verbs: [['Verb'], parseVerb], adjectives: [['Adjective', 'Participle'], parseAdjective], nouns: [['Noun'], parseNoun] };
 
 const lemmas = JSON.parse(fs.readFileSync(SRC, 'utf8'));
-const only = process.argv[2];
+const args = process.argv.slice(2);
+const refresh = args.includes('--refresh');
+const only = args.find((a) => !a.startsWith('--'));
 for (const [kind, list] of Object.entries(lemmas)) {
   if (only && only !== kind) continue;
   const [poses, parse] = PARSE[kind];
+  const prev = !refresh && fs.existsSync(OUT[kind]) ? new Map(JSON.parse(fs.readFileSync(OUT[kind], 'utf8')).map((e) => [e.lemma, e])) : new Map();
   const res = [];
   for (const lemma of list) {
+    if (prev.has(lemma) && (prev.get(lemma).found || prev.get(lemma).missing)) {
+      res.push(prev.get(lemma));
+      continue;
+    }
     let entry = { lemma, found: false };
     try {
       const page = await fetchPage(lemma);

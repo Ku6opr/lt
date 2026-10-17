@@ -242,14 +242,14 @@ export function newAdjTask(state, prev) {
 }
 
 // ── Прислівники та їх ступені (звичайний/вищий/найвищий) ──
+// під промптом — переклад ВІДПОВІДІ («найхолодніше», «холодніший суп»), не ярлик ступеня (issue #20):
+// ярлик «найвищий ступінь» — мета-текст; тому рівні: лема+переклад → лише переклад → обидва
 export const DEG_TIERS = [
-  { prompt: 'lt', hint: 'full' },
-  { prompt: 'lt', hint: null },
-  { prompt: 'uk', hint: null },
-  { prompt: 'mix', hint: null }
+  { prompt: 'lt' },
+  { prompt: 'uk' },
+  { prompt: 'mix' }
 ];
 const ADV_LIST = ADJECTIVES.filter((a) => a.adv);
-const ADV_POS = { uk: 'прислівник', ru: 'наречие', en: 'adverb' };
 
 export function adverbPoolOk(state) {
   const degs = ['pos', 'comp', 'sup'].filter((d) => state.degrees && state.degrees[d]);
@@ -287,18 +287,18 @@ export function newAdverbTask(state, prev) {
     typeId: adj.type,
     number: 'sg',
     theme: 'all',
-    prompt: useTr ? { text: adj.advTr[transKey].pos } : { text: adj.m.sg[0] },
+    prompt: useTr ? { text: tr } : { text: adj.m.sg[0] },
     promptA: useTr ? null : (adj.mA && adj.mA.sg || [])[0] || null,
     leadA: null,
     trailA: null,
-    promptNote: degree === 'pos' ? ADV_POS[lang] : DEG_LABEL[degree][lang],
-    hasNote: true,
+    promptNote: useTr ? null : tr,
+    hasNote: !useTr,
     wordUk: null,
     hasLead: false,
     lead: null,
     trail: null,
-    hint: tier.hint === 'full' ? tr : null,
-    revealUk: tier.hint === 'full' ? null : tr,
+    hint: null,
+    revealUk: useTr ? null : tr,
     stemPrefix: useTr ? '' : stem,
     stem,
     tail,
@@ -308,10 +308,6 @@ export function newAdverbTask(state, prev) {
 }
 
 // ── Ступені порівняння (тільки називний; вищий + найвищий) ──
-const DEG_LABEL = {
-  comp: { uk: 'вищий ступінь', ru: 'сравнительная степень', en: 'comparative' },
-  sup: { uk: 'найвищий ступінь', ru: 'превосходная степень', en: 'superlative' }
-};
 const SAMYJ = { m: { sg: 'самый', pl: 'самые' }, f: { sg: 'самая', pl: 'самые' }, n: { sg: 'самое', pl: 'самые' } };
 const RU_COMP_IRR = { didelis: 'больший', mažas: 'меньший', geras: 'лучший', blogas: 'худший' };
 
@@ -378,11 +374,10 @@ export function newDegreeTask(state, prev) {
   const nounForm = noun[number][0];
 
   const lang = state.lang || 'uk';
-  const transKey = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'uk';
   const tier = DEG_TIERS[Math.min(state.level, DEG_TIERS.length - 1)];
   const useTr = tier.prompt === 'uk' || (tier.prompt === 'mix' && Math.random() < 0.5);
   const phrase = degreePhrase(lang, adj, noun, number, degree);
-  const prompt = useTr ? { text: adj[transKey] } : { text: adj.m.sg[0] };
+  const prompt = useTr ? { text: phrase } : { text: adj.m.sg[0] };
 
   return {
     caseId: 'V',
@@ -397,14 +392,14 @@ export function newDegreeTask(state, prev) {
     promptA: useTr ? null : (adj.mA && adj.mA.sg || [])[0] || null,
     leadA: null,
     trailA: ((number === 'pl' ? noun.plA : noun.sgA) || [])[0] || null,
-    promptNote: DEG_LABEL[degree][lang],
-    hasNote: true,
+    promptNote: useTr ? null : phrase,
+    hasNote: !useTr,
     wordUk: null,
     hasLead: false,
     lead: null,
     trail: nounForm,
-    hint: tier.hint === 'full' ? phrase : null,
-    revealUk: tier.hint === 'full' ? null : phrase,
+    hint: null,
+    revealUk: useTr ? null : phrase,
     stemPrefix: useTr ? '' : stem,
     stem,
     tail,

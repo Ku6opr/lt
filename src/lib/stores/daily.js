@@ -1,36 +1,35 @@
 import { writable } from 'svelte/store';
 
-const KEY = 'lt-daily-v1';
-
 export function dayKey(d) {
   return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
 }
 
-function load() {
+function load(key) {
   try {
-    const v = JSON.parse(localStorage.getItem(KEY));
+    const v = JSON.parse(localStorage.getItem(key));
     return v && v.days && typeof v.days === 'object' ? v : { days: {} };
   } catch (e) {
     return { days: {} };
   }
 }
 
-export const daily = writable(load());
-daily.subscribe((v) => {
-  try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {}
-});
-
-export function completeDay(key, correct, total) {
-  daily.update((v) => ({ ...v, days: { ...v.days, [key]: { correct, total } }, session: null }));
+export function dayStore(key) {
+  const state = writable(load(key));
+  state.subscribe((v) => {
+    try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {}
+  });
+  return {
+    state,
+    completeDay: (date, correct, total) => state.update((v) => ({ ...v, days: { ...v.days, [date]: { correct, total } }, session: null })),
+    saveSession: (date, results, hints = []) => state.update((v) => ({ ...v, session: { date, results, hints } })),
+    addHinted: (entry) => state.update((v) => ({ ...v, hinted: [...(v.hinted || []), entry] }))
+  };
 }
 
-export function saveSession(key, results, hints = []) {
-  daily.update((v) => ({ ...v, session: { date: key, results, hints } }));
-}
-
-export function addHinted(entry) {
-  daily.update((v) => ({ ...v, hinted: [...(v.hinted || []), entry] }));
-}
+export const dailyStore = dayStore('lt-daily-v1');
+export const daily = dailyStore.state;
+export const { completeDay, saveSession, addHinted } = dailyStore;
+export const pictureStore = dayStore('lt-pictures-v1');
 
 function shift(base, n) {
   return new Date(base.getFullYear(), base.getMonth(), base.getDate() + n);

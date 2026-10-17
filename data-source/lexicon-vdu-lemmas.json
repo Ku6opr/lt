@@ -99,6 +99,126 @@
    "inf": "pakviesti",
    "pres3": "pakviečia",
    "past3": "pakvietė"
+  },
+  {
+   "inf": "kabėti",
+   "pres3": "kaba",
+   "past3": "kabėjo"
+  },
+  {
+   "inf": "šviesti",
+   "pres3": "šviečia",
+   "past3": "švietė"
+  },
+  {
+   "inf": "spirti",
+   "pres3": "spiria",
+   "past3": "spyrė"
+  },
+  {
+   "inf": "sverti",
+   "pres3": "sveria",
+   "past3": "svėrė"
+  },
+  {
+   "inf": "ruošti",
+   "pres3": "ruošia",
+   "past3": "ruošė"
+  },
+  {
+   "inf": "nešioti",
+   "pres3": "nešioja",
+   "past3": "nešiojo"
+  },
+  {
+   "inf": "matuoti",
+   "pres3": "matuoja",
+   "past3": "matavo"
+  },
+  {
+   "inf": "čiuožti",
+   "pres3": "čiuožia",
+   "past3": "čiuožė"
+  },
+  {
+   "inf": "slidinėti",
+   "pres3": "slidinėja",
+   "past3": "slidinėjo"
+  },
+  {
+   "inf": "stumti",
+   "pres3": "stumia",
+   "past3": "stūmė"
+  },
+  {
+   "inf": "laistyti",
+   "pres3": "laisto",
+   "past3": "laistė"
+  },
+  {
+   "inf": "fotografuoti",
+   "pres3": "fotografuoja",
+   "past3": "fotografavo"
+  },
+  {
+   "inf": "kaboti",
+   "pres3": "kabo",
+   "past3": "kabojo"
+  },
+  {
+   "inf": "vilkėti",
+   "pres3": "vilki",
+   "past3": "vilkėjo"
+  },
+  {
+   "inf": "kloti",
+   "pres3": "kloja",
+   "past3": "klojo"
+  },
+  {
+   "inf": "mojuoti",
+   "pres3": "mojuoja",
+   "past3": "mojavo"
+  },
+  {
+   "inf": "pilti",
+   "pres3": "pila",
+   "past3": "pylė"
+  },
+  {
+   "inf": "pavakarieniauti",
+   "pres3": "pavakarieniauja",
+   "past3": "pavakarieniavo"
+  },
+  {
+   "inf": "kristi",
+   "pres3": "krinta",
+   "past3": "krito"
+  },
+  {
+   "inf": "mėgti",
+   "pres3": "mėgsta",
+   "past3": "mėgo"
+  },
+  {
+   "inf": "vėluoti",
+   "pres3": "vėluoja",
+   "past3": "vėlavo"
+  },
+  {
+   "inf": "skristi",
+   "pres3": "skrenda",
+   "past3": "skrido"
+  },
+  {
+   "inf": "verkti",
+   "pres3": "verkia",
+   "past3": "verkė"
+  },
+  {
+   "inf": "vesti",
+   "pres3": "veda",
+   "past3": "vedė"
   }
  ],
  "nouns": [
@@ -301,6 +421,267 @@
    "lemma": "salotos",
    "gender": "f",
    "plural": true
+  },
+  {
+   "lemma": "suolas",
+   "gender": "m"
+  },
+  {
+   "lemma": "puodelis",
+   "gender": "m"
+  },
+  {
+   "lemma": "krepšelis",
+   "gender": "m"
+  },
+  {
+   "lemma": "kibiras",
+   "gender": "m"
+  },
+  {
+   "lemma": "nuotrauka",
+   "gender": "f"
+  },
+  {
+   "lemma": "rašiklis",
+   "gender": "m"
+  },
+  {
+   "lemma": "maišelis",
+   "gender": "m"
+  },
+  {
+   "lemma": "traktorius",
+   "gender": "m"
+  },
+  {
+   "lemma": "šalmas",
+   "gender": "m"
+  },
+  {
+   "lemma": "mikrofonas",
+   "gender": "m"
+  },
+  {
+   "lemma": "termometras",
+   "gender": "m"
+  },
+  {
+   "lemma": "turistas",
+   "gender": "m"
+  },
+  {
+   "lemma": "vežimėlis",
+   "gender": "m"
+  },
+  {
+   "lemma": "margutis",
+   "gender": "m"
+  },
+  {
+   "lemma": "šakutė",
+   "gender": "f"
+  },
+  {
+   "lemma": "meškerė",
+   "gender": "f"
+  },
+  {
+   "lemma": "vaza",
+   "gender": "f"
+  },
+  {
+   "lemma": "scena",
+   "gender": "f"
+  },
+  {
+   "lemma": "slaugytoja",
+   "gender": "f"
+  },
+  {
+   "lemma": "pirkėja",
+   "gender": "f"
+  },
+  {
+   "lemma": "kirpėja",
+   "gender": "f"
+  },
+  {
+   "lemma": "pagalvė",
+   "gender": "f"
+  },
+  {
+   "lemma": "užuolaida",
+   "gender": "f"
+  },
+  {
+   "lemma": "virėja",
+   "gender": "f"
+  },
+  {
+   "lemma": "turistė",
+   "gender": "f"
+  },
+  {
+   "lemma": "rogės",
+   "gender": "f",
+   "plural": true
+  },
+  {
+   "lemma": "slidės",
+   "gender": "f",
+   "plural": true
+  },
+  {
+   "lemma": "šukos",
+   "gender": "f",
+   "plural": true
+  },
+  {
+   "lemma": "svarstyklės",
+   "gender": "f",
+   "plural": true
+  },
+  {
+   "lemma": "plaukai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "fejerverkai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "anūkė",
+   "gender": "f"
+  },
+  {
+   "lemma": "palangė",
+   "gender": "f"
+  },
+  {
+   "lemma": "kreida",
+   "gender": "f"
+  },
+  {
+   "lemma": "vaistininkė",
+   "gender": "f"
+  },
+  {
+   "lemma": "lėkštutė",
+   "gender": "f"
+  },
+  {
+   "lemma": "uždanga",
+   "gender": "f"
+  },
+  {
+   "lemma": "figūra",
+   "gender": "f"
+  },
+  {
+   "lemma": "plūdė",
+   "gender": "f"
+  },
+  {
+   "lemma": "skarelė",
+   "gender": "f"
+  },
+  {
+   "lemma": "registratūra",
+   "gender": "f"
+  },
+  {
+   "lemma": "pakaba",
+   "gender": "f"
+  },
+  {
+   "lemma": "kolonėlė",
+   "gender": "f"
+  },
+  {
+   "lemma": "skrybėlė",
+   "gender": "f"
+  },
+  {
+   "lemma": "kasininkė",
+   "gender": "f"
+  },
+  {
+   "lemma": "staltiesė",
+   "gender": "f"
+  },
+  {
+   "lemma": "prijuostė",
+   "gender": "f"
+  },
+  {
+   "lemma": "kasytė",
+   "gender": "f"
+  },
+  {
+   "lemma": "kastuvas",
+   "gender": "m"
+  },
+  {
+   "lemma": "prekystalis",
+   "gender": "m"
+  },
+  {
+   "lemma": "vazonas",
+   "gender": "m"
+  },
+  {
+   "lemma": "stetoskopas",
+   "gender": "m"
+  },
+  {
+   "lemma": "slidininkas",
+   "gender": "m"
+  },
+  {
+   "lemma": "tvarstis",
+   "gender": "m"
+  },
+  {
+   "lemma": "padėklas",
+   "gender": "m"
+  },
+  {
+   "lemma": "rogutės",
+   "gender": "f",
+   "plural": true
+  },
+  {
+   "lemma": "turėklai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "marškinėliai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "Kalėdos",
+   "gender": "f",
+   "plural": true
+  },
+  {
+   "lemma": "Velykos",
+   "gender": "f",
+   "plural": true
+  },
+  {
+   "lemma": "drabužiai",
+   "gender": "m",
+   "plural": true
+  },
+  {
+   "lemma": "degalai",
+   "gender": "m",
+   "plural": true
   }
  ],
  "adjectives": [
@@ -318,6 +699,11 @@
   "normalus",
   "užimtas",
   "margas",
-  "mylimas"
+  "mylimas",
+  "dryžuotas",
+  "languotas",
+  "ovalus",
+  "šlapias",
+  "šviežias"
  ]
 }

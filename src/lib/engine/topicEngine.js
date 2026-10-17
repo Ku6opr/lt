@@ -6,11 +6,7 @@ import { newVFormsTask, vformsPoolOk } from './verbForms.js';
 import { newNumeralTask, numeralPoolOk, newNumQtyTask, numQtyPoolOk } from './numerals.js';
 import { newDemNomTask, demNomPoolOk, newDemCaseTask, demCasePoolOk, DEM_GROUP } from './demPronouns.js';
 import { newQuestTask, questPoolOk } from './questions.js';
-import { keysFor } from '../stores/progress.js';
 
-// Спільна маршрутизація "тип теми -> рушій" — те саме розгалуження, що й у Trainer.svelte,
-// винесене сюди, щоб ReinforceScreen (кросс-урочний потік) міг генерувати СПРАВЖНІ задачі
-// тим самим рушієм, що й сам урок, а не дублювати цю логіку вдруге.
 export function kindFlags(topic) {
   return {
     isAdj: topic.kind === 'adj',
@@ -55,22 +51,4 @@ export function reviewOverridesFor(flags, key) {
   if (flags.isDeg) return { focusWordId: p[1], degrees: { [p[3]]: true }, numbers: { [p[4]]: true }, theme: 'all' };
   if (flags.isAdj) return { focusWordId: p[1], cases: { [p[3]]: true }, numbers: { [p[4]]: true }, theme: 'all' };
   return { focusWordId: p[1], cases: { [p[2]]: true }, numbers: { [p[3]]: true }, theme: 'all' };
-}
-
-// Генерація задачі саме на ту клітинку, де був провал (`key` — той самий `form`-ключ, що й
-// weakFormKeys): до 12 спроб знайти рушієм ТОЧНО цю клітинку (keysFor(c).form === key), не
-// просто якесь слово/відмінок — інакше "провалив medis родовий" міг би повторитись як
-// "medis давальний". Якщо за 12 спроб точного збігу нема (рідкісний рушій-виняток) —
-// перший згенерований кандидат, як у поуроковому reviewMode.
-export function genForKey(topic, flags, key, settings, lang) {
-  const merged = { ...settings, ...reviewOverridesFor(flags, key) };
-  const state = stateOfFor(topic, flags, merged, lang);
-  let fallback = null;
-  for (let i = 0; i < 12; i++) {
-    const c = flags.genTask(state, null);
-    if (!c) continue;
-    if (keysFor(c, flags.isAdj).form === key) return c;
-    if (!fallback) fallback = c;
-  }
-  return fallback;
 }

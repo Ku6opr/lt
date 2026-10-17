@@ -1,58 +1,8 @@
 import fs from 'fs';
+import { init, analyze, saveCache, CASE, GENDER, NUM } from './vdu-client.mjs';
 
 const SRC = 'data-source/lexicon-vdu-lemmas.json';
 const OUT = { verbs: 'data-source/lt-lexicon-vdu-verbs.json', adjectives: 'data-source/lt-lexicon-vdu-adj.json', nouns: 'data-source/lt-lexicon-vdu-nouns.json' };
-const PAGE = 'https://kalbu.vdu.lt/mokymosi-priemones/kirciuoklis/';
-const AJAX = 'https://kalbu.vdu.lt/ajax-call';
-const UA = 'lt-trainer/1.0 (https://github.com/Ku6opr/lt)';
-const CASE = ['vard.', 'kilm.', 'naud.', 'gal.', 'įnag.', 'viet.'];
-const GENDER = { m: 'vyr. g.', f: 'mot. g.' };
-const NUM = { sg: 'vns.', pl: 'dgs.' };
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-let nonce = null;
-let cookie = '';
-const CACHE = 'node_modules/.cache/vdu-analyze.json';
-const cache = new Map(fs.existsSync(CACHE) ? Object.entries(JSON.parse(fs.readFileSync(CACHE, 'utf8'))) : []);
-const saveCache = () => {
-  fs.mkdirSync('node_modules/.cache', { recursive: true });
-  fs.writeFileSync(CACHE, JSON.stringify(Object.fromEntries(cache)));
-};
-
-async function init() {
-  const res = await fetch(PAGE, { headers: { 'User-Agent': UA } });
-  cookie = (res.headers.getSetCookie?.() || []).map((c) => c.split(';')[0]).join('; ');
-  nonce = ((await res.text()).match(/"NONCE":"([^"]+)"/) || [])[1];
-  if (!nonce) throw new Error('no nonce');
-}
-
-async function analyze(word) {
-  if (cache.has(word)) return cache.get(word);
-  for (let attempt = 0; attempt < 5; attempt++) {
-    const body = new URLSearchParams({ action: 'word_accent', nonce, word });
-    let text = '';
-    try {
-      const res = await fetch(AJAX, { method: 'POST', body, headers: { 'User-Agent': UA, Cookie: cookie }, signal: AbortSignal.timeout(20000) });
-      text = await res.text();
-    } catch (e) {}
-    await sleep(250);
-    let j = null;
-    try { j = JSON.parse(text); } catch (e) {}
-    if (j && j.code === 200) {
-      const out = JSON.parse(j.message).flat().flatMap((g) => (g.information || []).map((i) => ({ mi: i.mi || '', accented: g.accented[0] })));
-      cache.set(word, out);
-      return out;
-    }
-    if (j && j.code === 502) {
-      cache.set(word, []);
-      return [];
-    }
-    await sleep(2000 * 2 ** attempt);
-    if (attempt === 2) await init().catch(() => {});
-  }
-  throw new Error('vdu failed: ' + word);
-}
-
 const soft = (stem) => stem.replace(/t$/, 'č').replace(/d$/, 'dž');
 const softens = (end) => /^i[aouąųė]/.test(end);
 
@@ -121,16 +71,18 @@ async function nounForms(n) {
 
 const ADJ = {
   I: { m: { sg: ['as', 'o', 'am', 'ą', 'u', 'ame'], pl: ['i', 'ų', 'iems', 'us', 'ais', 'uose'] }, f: { sg: ['a', 'os', 'ai', 'ą', 'a', 'oje'], pl: ['os', 'ų', 'oms', 'as', 'omis', 'ose'] } },
-  II: { m: { sg: ['us', 'aus', 'iam', 'ų', 'iu', 'iame'], pl: ['ūs', 'ių', 'iems', 'ius', 'iais', 'iuose'] }, f: { sg: ['i', 'ios', 'iai', 'ią', 'ia', 'ioje'], pl: ['ios', 'ių', 'ioms', 'ias', 'iomis', 'iose'] } }
+  II: { m: { sg: ['us', 'aus', 'iam', 'ų', 'iu', 'iame'], pl: ['ūs', 'ių', 'iems', 'ius', 'iais', 'iuose'] }, f: { sg: ['i', 'ios', 'iai', 'ią', 'ia', 'ioje'], pl: ['ios', 'ių', 'ioms', 'ias', 'iomis', 'iose'] } },
+  Isoft: { m: { sg: ['ias', 'io', 'iam', 'ią', 'iu', 'iame'], pl: ['i', 'ių', 'iems', 'ius', 'iais', 'iuose'] }, f: { sg: ['ia', 'ios', 'iai', 'ią', 'ia', 'ioje'], pl: ['ios', 'ių', 'ioms', 'ias', 'iomis', 'iose'] } }
 };
 
 async function adjForms(lemma) {
-  const t = lemma.endsWith('us') ? 'II' : lemma.endsWith('as') ? 'I' : null;
+  const t = lemma.endsWith('us') ? 'II' : lemma.endsWith('ias') ? 'Isoft' : lemma.endsWith('as') ? 'I' : null;
   if (!t) return null;
-  const stem = lemma.slice(0, -2);
+  const stem = lemma.slice(0, t === 'Isoft' ? -3 : -2);
   const res = { m: { sg: [], pl: [] }, f: { sg: [], pl: [] }, mA: { sg: [], pl: [] }, fA: { sg: [], pl: [] } };
   for (const g of ['m', 'f']) for (const num of ['sg', 'pl']) for (let i = 0; i < 6; i++) {
-    const cands = candidates(stem, ADJ[t][g][num][i]);
+    const end = ADJ[t][g][num][i];
+    const cands = t === 'Isoft' ? [...new Set([stem + end, unsoft(stem) + end])] : candidates(stem, end);
     const tag = (mi) => (mi.startsWith('bdv.') || mi.startsWith('dlv.')) && mi.includes(GENDER[g]) && mi.includes(NUM[num] + ' ' + CASE[i]);
     const hit = await pick(cands, tag);
     if (!hit) return null;

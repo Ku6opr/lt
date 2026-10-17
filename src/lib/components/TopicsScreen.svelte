@@ -5,10 +5,14 @@
   import { progress } from '../stores/progress.js';
   import { masteryOf } from '../stores/mastery.js';
   import DailyTask from './DailyTask.svelte';
+  import { pictureStore, dayKey } from '../stores/daily.js';
   export let onEnter;
-  export let onReinforce;
   export let onDaily;
   export let onAd;
+  export let onPicture;
+
+  const pictures = pictureStore.state;
+  $: pictureDone = !!$pictures.days[dayKey(new Date())];
 
   $: L = UI[$lang];
   $: pctOf = (id) => Math.round(masteryOf($progress, id).pct * 100);
@@ -34,10 +38,13 @@
   <header class="hero">
     <div class="card-kicker kicker">{L.appKicker}</div>
     <div class="actions">
-      <button class="btn btn-secondary" type="button" on:click={onReinforce}>↻ {L.reinforce}</button>
       <button class="btn btn-secondary ad-btn" type="button" on:click={onAd}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
         {L.adButton}
+      </button>
+      <button class="btn btn-secondary pic-btn" class:done={pictureDone} type="button" on:click={onPicture}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 17-5-5-9 8"></path></svg>
+        {L.picButton}{#if pictureDone}<span class="pic-ok" title={L.picDone}>✓</span>{/if}
       </button>
     </div>
     <div class="langsel" role="group" aria-label={L.language}>
@@ -98,6 +105,8 @@
   .hero h1 { grid-area: title; font-size: clamp(32px, 6.4cqw, 50px); line-height: 1.04; margin: 0; }
   .daily-slot { grid-area: daily; justify-self: end; margin-left: 20px; }
   .ad-btn { gap: 8px; border-color: var(--color-accent); color: var(--color-accent-700); }
+  .pic-btn { gap: 8px; border-color: var(--color-accent); color: var(--color-accent-700); }
+  .pic-ok { color: #4a9d5b; margin-left: 2px; }
 
   @container (max-width: 599px) {
     .hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'kicker lang' 'title title' 'actions actions' 'daily daily'; row-gap: 14px; }
