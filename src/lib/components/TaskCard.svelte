@@ -37,11 +37,11 @@
     </div>
 
     <label style="display:flex;justify-content:center;margin-bottom:var(--space-3);cursor:text;padding:6px 0">
-      <div style="display:inline-flex;align-items:baseline;gap:8px;font-family:var(--font-heading);font-size:clamp(24px,4.5cqw,34px)">
+      <div style="display:inline-flex;flex-wrap:wrap;justify-content:center;max-width:100%;align-items:baseline;gap:8px;font-family:var(--font-heading);font-size:clamp(24px,4.5cqw,34px)">
         {#if task.hasLead}<span class="text-muted">{lA || task.lead}</span>{/if}
         <div style="display:inline-flex;align-items:baseline;border-bottom:2px solid var(--color-accent);padding:0 4px 2px">
           <span style="color:var(--color-text);white-space:pre">{task.stemPrefix}</span>
-          <input value={userInput} on:input={onInput} on:keydown={onKey} placeholder="…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" inputmode="text" style="border:0;background:transparent;font:inherit;color:var(--color-text);caret-color:var(--color-accent);width:clamp(80px,22cqw,170px);outline:none;padding:0">
+          <input value={userInput} on:input={onInput} on:keydown={onKey} placeholder="…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" inputmode="text" style="border:0;background:transparent;font:inherit;color:var(--color-text);caret-color:var(--color-accent);width:{Math.max(6, userInput.length + 1)}ch;min-width:clamp(80px,22cqw,170px);max-width:100%;outline:none;padding:0">
         </div>
         {#if task.trail}<span style="color:var(--color-text)">{tA || task.trail}</span>{/if}
       </div>

@@ -56,6 +56,7 @@
 
   const shown = (t) => simplifyAccent(t.textA || t.text);
   const lemmaShown = (t) => simplifyAccent(t.lemmaA || t.lemma);
+  const clusters = (s) => s.normalize('NFD').match(/[^̀-ͯ][̀-ͯ]*/g).map((c) => c.normalize('NFC'));
   const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
   const shareColor = (a) => `hsl(${Math.round(10 + 110 * a ** 1.5)}, 50%, 52%)`;
 
@@ -103,6 +104,7 @@
       results[i] = check.guessed;
       saveSession(today, results.slice());
       revealed = true;
+      if (touch && inputEl) inputEl.blur();
       keepInView();
       return;
     }
@@ -198,7 +200,7 @@
           <div class="gloss">
             {#each task.tokens as t, k}
               <span class="tok">
-                <span class="form" class:missed={check.hit[k] === false}>{k === 0 ? cap(shown(t)) : shown(t)}{t.after}{k === task.tokens.length - 1 ? task.end : ''}</span>
+                <span class="form" class:missed={check.hit[k] === false}>{#if check.hit[k] === 'near'}{#each clusters(k === 0 ? cap(shown(t)) : shown(t)) as c, ci}<span class:typo={ci >= check.typo[k] && ci < check.typo[k] + 2}>{c}</span>{/each}{:else}{k === 0 ? cap(shown(t)) : shown(t)}{/if}{t.after}{k === task.tokens.length - 1 ? task.end : ''}</span>
                 <span class="lem">{fold(t.lemma) === fold(t.text) ? '' : lemmaShown(t)}</span>
                 <span class="tag">{tagOf(t)}</span>
               </span>
@@ -277,11 +279,12 @@
   .tok { display: inline-flex; flex-direction: column; align-items: center; }
   .form { font-family: var(--font-heading); font-size: clamp(24px, 4.4cqw, 34px); line-height: 1.1; }
   .form.missed { text-decoration: underline dotted var(--color-accent-500); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+  .typo { text-decoration: underline var(--color-accent-600); text-decoration-thickness: 3px; text-underline-offset: 5px; }
   .lem { font-family: var(--font-heading); font-size: 14px; line-height: 18px; min-height: 18px; color: var(--color-neutral-600); margin-top: 4px; }
   .tag { font-size: 10.5px; line-height: 14px; min-height: 14px; letter-spacing: .02em; color: var(--color-accent-700); }
 
   .actions { display: flex; justify-content: center; margin-top: var(--space-4); }
-  @container (max-width: 599px) {
+  @container (max-width: 719px) {
     .card { padding: 16px 16px 18px; scroll-margin-top: 8px; }
     .answer-row { margin-top: var(--space-3); }
     .reveal { min-height: 0; margin-top: var(--space-3); }

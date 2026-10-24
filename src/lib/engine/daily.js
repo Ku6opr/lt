@@ -231,9 +231,20 @@ export function dailyTasks(key, pool = DAILY_POOL, count = DAILY_COUNT) {
 
 const words = (s) => fold(s).replace(/[^\p{L}\s]/gu, ' ').split(/\s+/).filter(Boolean);
 
+export const NEAR_CREDIT = 0.5;
+
+export function typoAt(typed, target) {
+  if (target.length < 4 || Math.abs(typed.length - target.length) > 1) return -1;
+  let p = 0;
+  while (p < typed.length && p < target.length && typed[p] === target[p]) p++;
+  if (p > target.length - 3) return -1;
+  const rest = typed.length === target.length ? [p + 1, p + 1] : typed.length > target.length ? [p + 1, p] : [p, p + 1];
+  return typed.slice(rest[0]) === target.slice(rest[1]) ? p : -1;
+}
+
 export function checkAnswer(input, phrase, hinted = []) {
   const typed = words(input);
-  if (!typed.length) return { match: false, hit: phrase.tokens.map(() => null), guessed: 0, rest: {} };
+  if (!typed.length) return { match: false, hit: phrase.tokens.map(() => null), typo: phrase.tokens.map(() => -1), guessed: 0, rest: {} };
   const left = {};
   for (const w of typed) left[w] = (left[w] || 0) + 1;
   const hit = phrase.tokens.map(() => undefined);
@@ -260,8 +271,22 @@ export function checkAnswer(input, phrase, hinted = []) {
     left[k] -= 1;
     hit[i] = true;
   });
-  const guessed = hit.filter((h, i) => h === true && !phrase.tokens[i].opt && !hinted.includes(i)).length;
-  return { match: hit.every((h) => h !== false) && Object.values(left).every((n) => n === 0), hit, guessed, rest: left };
+  const typo = phrase.tokens.map(() => -1);
+  phrase.tokens.forEach((t, i) => {
+    if (hit[i] !== false) return;
+    for (const w of Object.keys(left)) {
+      if (!(left[w] > 0)) continue;
+      const at = t.accept.map((a) => typoAt(w, a)).find((x) => x >= 0);
+      if (at === undefined) continue;
+      left[w] -= 1;
+      hit[i] = 'near';
+      typo[i] = at;
+      return;
+    }
+  });
+  const credit = (h, i) => (phrase.tokens[i].opt || hinted.includes(i) ? 0 : h === true ? 1 : h === 'near' ? NEAR_CREDIT : 0);
+  const guessed = hit.reduce((n, h, i) => n + credit(h, i), 0);
+  return { match: hit.every((h) => h === true || h === null) && Object.values(left).every((n) => n === 0), hit, typo, guessed, rest: left };
 }
 
 const byGender = (x) => ['m', 'f'].flatMap((g) => ['sg', 'pl'].flatMap((n) => x?.[g]?.[n] || []));
@@ -298,7 +323,7 @@ function formsOf(t) {
 export function nextHint(input, phrase, hinted = []) {
   const { hit, rest } = checkAnswer(input, phrase);
   const known = phrase.tokens.map((t, k) => {
-    if (hit[k] === true) return true;
+    if (hit[k] === true || hit[k] === 'near') return true;
     const forms = formsOf(t);
     const w = Object.keys(rest).find((x) => rest[x] > 0 && (forms.has(x) || t.accept.includes(x)));
     if (!w) return false;
