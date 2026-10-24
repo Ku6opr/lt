@@ -67,12 +67,21 @@
   }
 
   let cardEl;
+  let layoutEl;
   const touch = typeof matchMedia === 'function' && matchMedia('(pointer: coarse)').matches;
   const viewport = typeof window !== 'undefined' ? window.visualViewport : null;
 
   function keepInView() {
     if (!touch) return;
-    tick().then(() => cardEl && cardEl.scrollIntoView({ block: 'start' }));
+    tick().then(() => {
+      if (!cardEl || !layoutEl) return;
+      const anchor = (revealed ? cardEl : inputEl || cardEl).getBoundingClientRect();
+      const bottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+      const needed = anchor.bottom - bottom + 12;
+      const top = layoutEl.getBoundingClientRect().top - 8;
+      const delta = Math.max(needed, top);
+      if (Math.abs(delta) > 1) window.scrollBy({ top: delta });
+    });
   }
   const onViewport = () => document.activeElement === inputEl && keepInView();
 
@@ -160,7 +169,7 @@
     {/each}
   </div>
 
-  <div class="layout" class:split={$$slots.media}>
+  <div class="layout" class:split={$$slots.media} bind:this={layoutEl}>
   {#if $$slots.media}
     <div class="media"><slot name="media" /></div>
   {/if}
