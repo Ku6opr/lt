@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 const SRC = 'data-source/lexicon-lemmas.json';
-const OUT = { verbs: 'data-source/lt-lexicon-verbs.json', adjectives: 'data-source/lt-lexicon-adj.json', nouns: 'data-source/lt-lexicon-nouns.json' };
+const OUT = { verbs: 'data-source/lt-lexicon-verbs.json', adjectives: 'data-source/lt-lexicon-adj.json', nouns: 'data-source/lt-lexicon-nouns.json', refl: 'data-source/lt-verbs-refl.json' };
 const CASES = ['nominative', 'genitive', 'dative', 'accusative', 'instrumental', 'locative'];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -144,7 +144,7 @@ function parseVerb(sec) {
   return out.pres ? out : null;
 }
 
-const PARSE = { verbs: [['Verb'], parseVerb], adjectives: [['Adjective', 'Participle'], parseAdjective], nouns: [['Noun'], parseNoun] };
+const PARSE = { verbs: [['Verb'], parseVerb], adjectives: [['Adjective', 'Participle'], parseAdjective], nouns: [['Noun'], parseNoun], refl: [['Verb'], parseVerb] };
 
 const lemmas = JSON.parse(fs.readFileSync(SRC, 'utf8'));
 const args = process.argv.slice(2);

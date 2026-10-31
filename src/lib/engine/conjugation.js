@@ -51,14 +51,25 @@ export const conjTiersFor = (tense) => (
   CONJ_TIERS
 );
 
-const FUT_AUX = {
+export const FUT_AUX = {
   uk: ['буду', 'будеш', 'буде', 'будемо', 'будете', 'будуть'],
   ru: ['буду', 'будешь', 'будет', 'будем', 'будете', 'будут']
 };
 
-const enBase = (v) => (v.en === 'can' ? 'be able' : v.en.replace(/^to /, ''));
+export const enBase = (v) => (v.en === 'can' ? 'be able' : v.en.replace(/^to /, ''));
 // підмет → форма минулого джерельною мовою: aš/tu/jis → чол., ji → жін., множина → мн.
-const pastKey = (pronId) => (pronId === 'ji' ? 'f' : ['mes', 'jus', 'jie', 'jos'].includes(pronId) ? 'pl' : 'm');
+export const pastKey = (pronId) => (pronId === 'ji' ? 'f' : ['mes', 'jus', 'jie', 'jos'].includes(pronId) ? 'pl' : 'm');
+
+const UK_VOWELS = 'аеєиіїоуюя';
+export function ukPhrase(words) {
+  const out = [];
+  for (const w of words) {
+    const prev = out[out.length - 1];
+    const alt = prev && /^[ув][^аеєиіїоуюя]/.test(w);
+    out.push(alt ? (UK_VOWELS.includes(prev.slice(-1)) ? 'в' : 'у') + w.slice(1) : w);
+  }
+  return out.join(' ');
+}
 
 function glossForm(verb, tKey, tense, pron) {
   if (tense === 'past') {

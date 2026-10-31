@@ -220,7 +220,31 @@ const pronounSettings = persisted('lt-trainer-pronouns-v1', {
   tableOpen: true
 });
 
-const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, 'conj-imp': conjImpSettings, 'conj-cond': conjCondSettings, 'conj-habit': conjHabitSettings, numerals: numeralSettings, 'num-qty': numQtySettings, 'dem-nom': demNomSettings, 'dem-cases': demCaseSettings, questions: questSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings };
+const tebeSettings = persisted('lt-trainer-tebe-nebe-v1', {
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  theme: 'all',
+  tableOpen: true
+});
+
+const reflDefaults = () => ({
+  level: 0,
+  autoLevel: false,
+  cases: {},
+  types: {},
+  numbers: { sg: true, pl: true },
+  pols: { aff: true, neg: true },
+  theme: 'all',
+  tableOpen: true
+});
+const reflSettings = persisted('lt-trainer-refl-v1', reflDefaults());
+const reflPastSettings = persisted('lt-trainer-refl-past-v1', reflDefaults());
+const reflFutSettings = persisted('lt-trainer-refl-fut-v1', reflDefaults());
+
+const byTopic = { 'verb-forms': vformsSettings, conj: conjSettings, 'conj-past': conjPastSettings, 'conj-fut': conjFutSettings, 'conj-imp': conjImpSettings, 'conj-cond': conjCondSettings, 'conj-habit': conjHabitSettings, numerals: numeralSettings, 'num-qty': numQtySettings, 'dem-nom': demNomSettings, 'dem-cases': demCaseSettings, questions: questSettings, vidminky: nounSettings, 'adj-nom': adjNomSettings, 'adj-degrees': adjDegSettings, 'adj-cases': adjCasesSettings, pronouns: pronounSettings, adverbs: adverbSettings, 'tebe-nebe': tebeSettings, refl: reflSettings, 'refl-past': reflPastSettings, 'refl-fut': reflFutSettings };
 
 export function settingsFor(topicId) {
   return byTopic[topicId] || nounSettings;

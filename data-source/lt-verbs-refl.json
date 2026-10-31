@@ -1,0 +1,475 @@
+[
+ {
+  "lemma": "mokytis",
+  "found": true,
+  "pos": "Verb",
+  "gloss": "(reflexive) to learn (to be in the process of acquiring knowledge) .mw-parser-output .object-usage-tag{font-style:italic",
+  "pres": {
+   "sg1": "mokausi",
+   "sg2": "mokaisi",
+   "p3": "mokosi",
+   "pl1": "mokomės",
+   "pl2": "mokotės"
+  },
+  "presA": {
+   "sg1": "mókausi",
+   "sg2": "mókaisi",
+   "p3": "mókosi",
+   "pl1": "mókomės",
+   "pl2": "mókotės"
+  },
+  "past": {
+   "sg1": "mokiausi",
+   "sg2": "mokeisi",
+   "p3": "mokėsi",
+   "pl1": "mokėmės",
+   "pl2": "mokėtės"
+  },
+  "pastA": {
+   "sg1": "mókiausi",
+   "sg2": "mókeisi",
+   "p3": "mókėsi",
+   "pl1": "mókėmės",
+   "pl2": "mókėtės"
+  },
+  "habit": {
+   "sg1": "mokydavausi",
+   "sg2": "mokydavaisi",
+   "p3": "mokydavosi",
+   "pl1": "mokydavomės",
+   "pl2": "mokydavotės"
+  },
+  "habitA": {
+   "sg1": "mókydavausi",
+   "sg2": "mókydavaisi",
+   "p3": "mókydavosi",
+   "pl1": "mókydavomės",
+   "pl2": "mókydavotės"
+  },
+  "fut": {
+   "sg1": "mokysiuosi",
+   "sg2": "mokysiesi",
+   "p3": "mokysis",
+   "pl1": "mokysimės",
+   "pl2": "mokysitės"
+  },
+  "futA": {
+   "sg1": "mókysiuosi",
+   "sg2": "mókysiesi",
+   "p3": "mókysis",
+   "pl1": "mókysimės",
+   "pl2": "mókysitės"
+  },
+  "cond": {
+   "sg1": "mokyčiausi",
+   "sg2": "mokytumeisi",
+   "p3": "mokytųsi",
+   "pl1": "mokytumėmės",
+   "pl2": "mokytumėtės"
+  },
+  "condA": {
+   "sg1": "mókyčiausi",
+   "sg2": "mókytumeisi",
+   "p3": "mókytųsi",
+   "pl1": "mókytumėmės",
+   "pl2": "mókytumėtės"
+  },
+  "imp": {
+   "sg2": "mokykis",
+   "pl1": "mokykimės",
+   "pl2": "mokykitės"
+  },
+  "impA": {
+   "sg2": "mókykis",
+   "pl1": "mókykimės",
+   "pl2": "mókykitės"
+  }
+ },
+ {
+  "lemma": "jaustis",
+  "found": true,
+  "pos": "Verb",
+  "gloss": "to feel",
+  "pres": {
+   "sg1": "jaučiuosi",
+   "sg2": "jautiesi",
+   "p3": "jaučiasi",
+   "pl1": "jaučiamės",
+   "pl2": "jaučiatės"
+  },
+  "presA": {
+   "sg1": "jaučiúosi",
+   "sg2": "jautíesi",
+   "p3": "jaũčiasi",
+   "pl1": "jaũčiamės",
+   "pl2": "jaũčiatės"
+  },
+  "past": {
+   "sg1": "jaučiausi",
+   "sg2": "jauteisi",
+   "p3": "jautėsi",
+   "pl1": "jautėmės",
+   "pl2": "jautėtės"
+  },
+  "pastA": {
+   "sg1": "jaučiaũsi",
+   "sg2": "jauteĩsi",
+   "p3": "jaũtėsi",
+   "pl1": "jaũtėmės",
+   "pl2": "jaũtėtės"
+  },
+  "habit": {
+   "sg1": "jausdavausi",
+   "sg2": "jausdavaisi",
+   "p3": "jausdavosi",
+   "pl1": "jausdavomės",
+   "pl2": "jausdavotės"
+  },
+  "habitA": {
+   "sg1": "jaũsdavausi",
+   "sg2": "jaũsdavaisi",
+   "p3": "jaũsdavosi",
+   "pl1": "jaũsdavomės",
+   "pl2": "jaũsdavotės"
+  },
+  "fut": {
+   "sg1": "jausiuosi",
+   "sg2": "jausiesi",
+   "p3": "jausis",
+   "pl1": "jausimės",
+   "pl2": "jausitės"
+  },
+  "futA": {
+   "sg1": "jaũsiuosi",
+   "sg2": "jaũsiesi",
+   "p3": "jaũsis",
+   "pl1": "jaũsimės",
+   "pl2": "jaũsitės"
+  },
+  "cond": {
+   "sg1": "jausčiausi",
+   "sg2": "jaustumeisi",
+   "p3": "jaustųsi",
+   "pl1": "jaustumėmės",
+   "pl2": "jaustumėtės"
+  },
+  "condA": {
+   "sg1": "jaũsčiausi",
+   "sg2": "jaũstumeisi",
+   "p3": "jaũstųsi",
+   "pl1": "jaũstumėmės",
+   "pl2": "jaũstumėtės"
+  },
+  "imp": {
+   "sg2": "jauskis",
+   "pl1": "jauskimės",
+   "pl2": "jauskitės"
+  },
+  "impA": {
+   "sg2": "jaũskis",
+   "pl1": "jaũskimės",
+   "pl2": "jaũskitės"
+  }
+ },
+ {
+  "lemma": "keltis",
+  "found": true,
+  "pos": "Verb",
+  "gloss": "to rise",
+  "pres": {
+   "sg1": "keliuosi",
+   "sg2": "keliesi",
+   "p3": "keliasi",
+   "pl1": "keliamės",
+   "pl2": "keliatės"
+  },
+  "presA": {
+   "sg1": "keliúosi",
+   "sg2": "kelíesi",
+   "p3": "kẽliasi",
+   "pl1": "kẽliamės",
+   "pl2": "kẽliatės"
+  },
+  "past": {
+   "sg1": "kėliausi",
+   "sg2": "kėleisi",
+   "p3": "kėlėsi",
+   "pl1": "kėlėmės",
+   "pl2": "kėlėtės"
+  },
+  "pastA": {
+   "sg1": "kė́liausi",
+   "sg2": "kė́leisi",
+   "p3": "kė́lėsi",
+   "pl1": "kė́lėmės",
+   "pl2": "kė́lėtės"
+  },
+  "habit": {
+   "sg1": "keldavausi",
+   "sg2": "keldavaisi",
+   "p3": "keldavosi",
+   "pl1": "keldavomės",
+   "pl2": "keldavotės"
+  },
+  "habitA": {
+   "sg1": "kéldavausi",
+   "sg2": "kéldavaisi",
+   "p3": "kéldavosi",
+   "pl1": "kéldavomės",
+   "pl2": "kéldavotės"
+  },
+  "fut": {
+   "sg1": "kelsiuosi",
+   "sg2": "kelsiesi",
+   "p3": "kelsis",
+   "pl1": "kelsimės",
+   "pl2": "kelsitės"
+  },
+  "futA": {
+   "sg1": "kélsiuosi",
+   "sg2": "kélsiesi",
+   "p3": "kélsis",
+   "pl1": "kélsimės",
+   "pl2": "kélsitės"
+  },
+  "cond": {
+   "sg1": "kelčiausi",
+   "sg2": "keltumeisi",
+   "p3": "keltųsi",
+   "pl1": "keltumėmės",
+   "pl2": "keltumėtės"
+  },
+  "condA": {
+   "sg1": "kélčiausi",
+   "sg2": "kéltumeisi",
+   "p3": "kéltųsi",
+   "pl1": "kéltumėmės",
+   "pl2": "kéltumėtės"
+  },
+  "imp": {
+   "sg2": "kelkis",
+   "pl1": "kelkimės",
+   "pl2": "kelkitės"
+  },
+  "impA": {
+   "sg2": "kélkis",
+   "pl1": "kélkimės",
+   "pl2": "kélkitės"
+  }
+ },
+ {
+  "lemma": "praustis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "rengtis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "maudytis",
+  "found": false
+ },
+ {
+  "lemma": "juoktis",
+  "found": true,
+  "pos": "Verb",
+  "gloss": "to laugh",
+  "pres": {
+   "sg1": "juokiuosi",
+   "sg2": "juokiesi",
+   "p3": "juokiasi",
+   "pl1": "juokiamės",
+   "pl2": "juokiatės"
+  },
+  "presA": {
+   "sg1": "juokiuosi",
+   "sg2": "juokiesi",
+   "p3": "juokiasi",
+   "pl1": "juokiamės",
+   "pl2": "juokiatės"
+  },
+  "past": {
+   "sg1": "juokiausi",
+   "sg2": "juokeisi",
+   "p3": "juokėsi",
+   "pl1": "juokėmės",
+   "pl2": "juokėtės"
+  },
+  "pastA": {
+   "sg1": "juokiausi",
+   "sg2": "juokeisi",
+   "p3": "juokėsi",
+   "pl1": "juokėmės",
+   "pl2": "juokėtės"
+  },
+  "habit": {
+   "sg1": "juokdavausi",
+   "sg2": "juokdavaisi",
+   "p3": "juokdavosi",
+   "pl1": "juokdavomės",
+   "pl2": "juokdavotės"
+  },
+  "habitA": {
+   "sg1": "juokdavausi",
+   "sg2": "juokdavaisi",
+   "p3": "juokdavosi",
+   "pl1": "juokdavomės",
+   "pl2": "juokdavotės"
+  },
+  "fut": {
+   "sg1": "juoksiuosi",
+   "sg2": "juoksiesi",
+   "p3": "juoksis",
+   "pl1": "juoksimės",
+   "pl2": "juoksitės"
+  },
+  "futA": {
+   "sg1": "juoksiuosi",
+   "sg2": "juoksiesi",
+   "p3": "juoksis",
+   "pl1": "juoksimės",
+   "pl2": "juoksitės"
+  },
+  "cond": {
+   "sg1": "juokčiausi",
+   "sg2": "juoktumeisi",
+   "p3": "juoktųsi",
+   "pl1": "juoktumėmės",
+   "pl2": "juoktumėtės"
+  },
+  "condA": {
+   "sg1": "juokčiausi",
+   "sg2": "juoktumeisi",
+   "p3": "juoktųsi",
+   "pl1": "juoktumėmės",
+   "pl2": "juoktumėtės"
+  },
+  "imp": {
+   "sg2": "juokis",
+   "pl1": "juokimės",
+   "pl2": "juokitės"
+  },
+  "impA": {
+   "sg2": "juokis",
+   "pl1": "juokimės",
+   "pl2": "juokitės"
+  }
+ },
+ {
+  "lemma": "šypsotis",
+  "found": true,
+  "pos": "Verb",
+  "gloss": "to smile",
+  "pres": {
+   "sg1": "šypsausi",
+   "sg2": "šypsaisi",
+   "p3": "šypsosi",
+   "pl1": "šypsomės",
+   "pl2": "šypsotės"
+  },
+  "presA": {
+   "sg1": "šypsausi",
+   "sg2": "šypsaisi",
+   "p3": "šypsosi",
+   "pl1": "šypsomės",
+   "pl2": "šypsotės"
+  },
+  "past": {
+   "sg1": "šypsojausi",
+   "sg2": "šypsojaisi",
+   "p3": "šypsojosi",
+   "pl1": "šypsojomės",
+   "pl2": "šypsojotės"
+  },
+  "pastA": {
+   "sg1": "šypsojausi",
+   "sg2": "šypsojaisi",
+   "p3": "šypsojosi",
+   "pl1": "šypsojomės",
+   "pl2": "šypsojotės"
+  },
+  "habit": {
+   "sg1": "šypsodavausi",
+   "sg2": "šypsodavaisi",
+   "p3": "šypsodavosi",
+   "pl1": "šypsodavomės",
+   "pl2": "šypsodavotės"
+  },
+  "habitA": {
+   "sg1": "šypsodavausi",
+   "sg2": "šypsodavaisi",
+   "p3": "šypsodavosi",
+   "pl1": "šypsodavomės",
+   "pl2": "šypsodavotės"
+  },
+  "fut": {
+   "sg1": "šypsosiuosi",
+   "sg2": "šypsosiesi",
+   "p3": "šypsosis",
+   "pl1": "šypsosimės",
+   "pl2": "šypsositės"
+  },
+  "futA": {
+   "sg1": "šypsosiuosi",
+   "sg2": "šypsosiesi",
+   "p3": "šypsosis",
+   "pl1": "šypsosimės",
+   "pl2": "šypsositės"
+  },
+  "cond": {
+   "sg1": "šypsočiausi",
+   "sg2": "šypsotumeisi",
+   "p3": "šypsotųsi",
+   "pl1": "šypsotumėmės",
+   "pl2": "šypsotumėtės"
+  },
+  "condA": {
+   "sg1": "šypsočiausi",
+   "sg2": "šypsotumeisi",
+   "p3": "šypsotųsi",
+   "pl1": "šypsotumėmės",
+   "pl2": "šypsotumėtės"
+  },
+  "imp": {
+   "sg2": "šypsokis",
+   "pl1": "šypsokimės",
+   "pl2": "šypsokitės"
+  },
+  "impA": {
+   "sg2": "šypsokis",
+   "pl1": "šypsokimės",
+   "pl2": "šypsokitės"
+  }
+ },
+ {
+  "lemma": "ilsėtis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "gailėtis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "ruoštis",
+  "found": false
+ },
+ {
+  "lemma": "skustis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "gultis",
+  "found": false,
+  "missing": true
+ },
+ {
+  "lemma": "sveikintis",
+  "found": false,
+  "missing": true
+ }
+]

@@ -8,6 +8,10 @@
   import { DEM_PRONOUNS } from '../data/demPronouns.js';
   import { VERBS, PERSON_COLS, PERSON_LABEL } from '../data/verbsConj.js';
   import { Q_WORDS } from '../engine/questions.js';
+  import { TEBE } from '../data/verbsTebe.js';
+  import { REFL_VERBS } from '../data/verbsRefl.js';
+  import { TEBE_PREFIXES } from '../engine/tebeNebe.js';
+  import { REFL_POLS } from '../engine/reflexive.js';
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
 
@@ -24,8 +28,10 @@
   const isDemNom = topic.kind === 'demnom';
   const isDemCase = topic.kind === 'demcase';
   const isQuest = topic.kind === 'quest';
+  const isTebe = topic.kind === 'tebe';
+  const isRefl = topic.kind === 'refl';
   const ALL_CASES = ['V', 'K', 'N', 'G', 'In', 'Vt'];
-  const cols = isQuest ? ['m|sg', 'f|sg', 'm|pl', 'f|pl'] : isDemNom ? ['sg', 'pl'] : isDemCase || isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isNumQty ? ['V'] : isVF ? ['pres'] : isConj ? (topic.tense === 'imp' ? ['sg2', 'pl2'] : PERSON_COLS) : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
+  const cols = isTebe ? TEBE_PREFIXES : isRefl ? PERSON_COLS : isQuest ? ['m|sg', 'f|sg', 'm|pl', 'f|pl'] : isDemNom ? ['sg', 'pl'] : isDemCase || isNum ? ['K', 'N', 'G', 'In', 'Vt'] : isNumQty ? ['V'] : isVF ? ['pres'] : isConj ? (topic.tense === 'imp' ? ['sg2', 'pl2'] : PERSON_COLS) : isAdverb ? ['pos', 'comp', 'sup'] : isPron ? ['K', 'N', 'G', 'In', 'Vt'] : isDeg ? ['comp', 'sup'] : isAdj ? topic.cheatCases : ALL_CASES;
   const ADJ_ROWS = [{ t: 'I' }, { t: 'II' }, { t: 'III' }];
   const nounName = {};
   for (const w of WORDS) nounName[w.id] = w;
@@ -33,10 +39,12 @@
   for (const a of ADJECTIVES) adjName[a.id] = a;
   const verbName = {};
   for (const v of VERBS) verbName[v.id] = v;
+  const reflName = {};
+  for (const v of REFL_VERBS) reflName[v.id] = v;
 
   let viewNum = 'sg';
   $: L = UI[$lang];
-  $: colLabel = (c) => (isQuest ? { 'm|sg': L.rowMsg, 'f|sg': L.rowFsg, 'm|pl': L.rowMpl, 'f|pl': L.rowFpl }[c] : isDemNom ? (c === 'sg' ? L.numSg : L.numPl) : isVF ? 'jis, ji' : isConj ? PERSON_LABEL[c] : isAdverb || isDeg ? L[c === 'pos' ? 'degPos' : c === 'comp' ? 'degComp' : 'degSup'] : c);
+  $: colLabel = (c) => (isTebe ? c + '-' : isRefl ? PERSON_LABEL[c] : isQuest ? { 'm|sg': L.rowMsg, 'f|sg': L.rowFsg, 'm|pl': L.rowMpl, 'f|pl': L.rowFpl }[c] : isDemNom ? (c === 'sg' ? L.numSg : L.numPl) : isVF ? 'jis, ji' : isConj ? PERSON_LABEL[c] : isAdverb || isDeg ? L[c === 'pos' ? 'degPos' : c === 'comp' ? 'degComp' : 'degSup'] : c);
   $: data = ($progress[topic.id] && $progress[topic.id].forms) || {};
 
   const cellKey = (type, gender, c, vn) => (isAdj ? `tc|${type}|${gender}|${c}|${vn}` : `tc|${type}|${c}|${vn}`);
@@ -59,8 +67,26 @@
     return m.o + '/' + m.g;
   }
 
+  function agg(d, keys) {
+    let s = 0, o = 0, m = 0;
+    for (const k of keys) { const r = d[k]; if (r) { s += r.s; o += r.o; m += r.m; } }
+    return s ? { s, o, m } : null;
+  }
+
   function buildRows(d, vn) {
     const g = (k) => d[k] || null;
+    if (isTebe) {
+      return VERBS.filter((v) => TEBE[v.id]).map((v) => ({
+        label: v.inf,
+        cells: cols.map((pfx) => ({ m: mastery(agg(d, PERSON_COLS.map((slot) => `w|${v.id}|${pfx}|${slot}`))) }))
+      }));
+    }
+    if (isRefl) {
+      return REFL_VERBS.map((v) => ({
+        label: v.inf,
+        cells: cols.map((slot) => ({ m: mastery(agg(d, REFL_POLS.map((p) => `w|${v.id}|${topic.tense || 'pres'}|${p}|${slot}`))) }))
+      }));
+    }
     if (isAdverb) {
       return ADJ_ROWS.map((r) => ({
         label: r.t,
@@ -151,7 +177,7 @@
     if (isPron) return (pronName[id] && pronName[id][glossKey][0]) || id;
     if (isDemNom || isDemCase) { const p = demName[id]; return p ? (glossKey === 'en' ? p.en : p[glossKey].m.sg[0]) : id; }
     if (isNum || isNumQty) { const n = numName[id]; if (!n) return id; const v = n[glossKey]; return glossKey === 'en' ? n.en : typeof v === 'string' ? v : v.m[0]; }
-    const src = isConj || isVF ? verbName : isAdj ? adjName : nounName;
+    const src = isConj || isVF || isTebe ? verbName : isRefl ? reflName : isAdj ? adjName : nounName;
     return (src[id] && src[id][glossKey]) || id;
   };
 
@@ -164,7 +190,7 @@
       <b>{totals.graded}</b> {L.answered} · {L.accuracy} <b>{Math.round(totals.acc * 100)}%</b> · {L.coverage} <b>{totals.forms}</b>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
-      {#if !isConj && !isPron && !isAdverb && !isVF && !isNum && !isNumQty && !isDemNom && !isQuest}
+      {#if !isConj && !isPron && !isAdverb && !isVF && !isNum && !isNumQty && !isDemNom && !isQuest && !isTebe && !isRefl}
       <div class="seg">
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'sg'} on:change={() => (viewNum = 'sg')}>{L.numSg}</label>
         <label class="seg-opt"><input type="radio" name="lt-statnum" checked={viewNum === 'pl'} on:change={() => (viewNum = 'pl')}>{L.numPl}</label>

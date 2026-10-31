@@ -1,0 +1,18 @@
+{
+ "refl": [
+  { "inf": "mokytis", "pres3": "mokosi", "past3": "mokėsi", "pair": true },
+  { "inf": "jaustis", "pres3": "jaučiasi", "past3": "jautėsi" },
+  { "inf": "keltis", "pres3": "keliasi", "past3": "kėlėsi", "pair": true },
+  { "inf": "praustis", "pres3": "prausiasi", "past3": "prausėsi", "pair": true },
+  { "inf": "rengtis", "pres3": "rengiasi", "past3": "rengėsi", "pair": true },
+  { "inf": "maudytis", "pres3": "maudosi", "past3": "maudėsi", "pair": true },
+  { "inf": "juoktis", "pres3": "juokiasi", "past3": "juokėsi" },
+  { "inf": "šypsotis", "pres3": "šypsosi", "past3": "šypsojosi" },
+  { "inf": "ilsėtis", "pres3": "ilsisi", "past3": "ilsėjosi" },
+  { "inf": "gailėtis", "pres3": "gailisi", "past3": "gailėjosi" },
+  { "inf": "ruoštis", "pres3": "ruošiasi", "past3": "ruošėsi", "pair": true },
+  { "inf": "skustis", "pres3": "skutasi", "past3": "skutosi", "pair": true },
+  { "inf": "gultis", "pres3": "gulasi", "past3": "gulėsi" },
+  { "inf": "sveikintis", "pres3": "sveikinasi", "past3": "sveikinosi" }
+ ]
+}

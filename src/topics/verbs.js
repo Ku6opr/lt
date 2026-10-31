@@ -128,3 +128,78 @@ export const conjHabitTopic = {
   },
   trainerTitle: { uk: 'Минулий багаторазовий час', ru: 'Прошедшее многократное время', en: 'Habitual past tense' }
 };
+
+export const tebeNebeTopic = {
+  id: 'tebe-nebe',
+  cat: 'verb',
+  depth: 7,
+  short: { uk: 'tebe- / nebe-', ru: 'tebe- / nebe-', en: 'tebe- / nebe-' },
+  kind: 'tebe',
+  n: 19,
+  accent: 'gold',
+  glyph: 'nebėra',
+  title: { uk: 'Дієслово: tebe- / nebe-', ru: 'Глагол: tebe- / nebe-', en: 'Verb: tebe- / nebe-' },
+  subtitle: {
+    uk: 'Досі й уже не: tebedirbu — «я досі працюю», nebedirbu — «я вже не працюю». yra → tebėra / nebėra.',
+    ru: 'Всё ещё и уже не: tebedirbu — «я всё ещё работаю», nebedirbu — «я уже не работаю». yra → tebėra / nebėra.',
+    en: 'Still and no longer: tebedirbu — “I still work”, nebedirbu — “I no longer work”. yra → tebėra / nebėra.'
+  },
+  trainerTitle: { uk: 'Досі (tebe-) і вже не (nebe-)', ru: 'Всё ещё (tebe-) и уже не (nebe-)', en: 'Still (tebe-) and no longer (nebe-)' }
+};
+
+export const reflTopic = {
+  id: 'refl',
+  cat: 'verb',
+  depth: 8,
+  short: { uk: 'Теперішній -si', ru: 'Настоящее -si', en: 'Present -si' },
+  kind: 'refl',
+  tense: 'pres',
+  n: 20,
+  accent: 'gold',
+  glyph: 'mokosi',
+  title: { uk: 'Зворотні дієслова: теперішній', ru: 'Возвратные глаголы: настоящее', en: 'Reflexive verbs: present' },
+  subtitle: {
+    uk: 'Зворотні дієслова в теперішньому часі: mokausi — «я вчуся», mokosi — «він учиться». Із запереченням -si- стає після ne-: nesimokau.',
+    ru: 'Возвратные глаголы в настоящем времени: mokausi — «я учусь», mokosi — «он учится». С отрицанием -si- встаёт после ne-: nesimokau.',
+    en: 'Reflexive verbs in the present: mokausi — “I study”, mokosi — “he studies”. With negation -si- moves after ne-: nesimokau.'
+  },
+  trainerTitle: { uk: 'Зворотні дієслова в теперішньому часі', ru: 'Возвратные глаголы в настоящем времени', en: 'Reflexive verbs in the present tense' }
+};
+
+export const reflPastTopic = {
+  id: 'refl-past',
+  cat: 'verb',
+  depth: 9,
+  short: { uk: 'Минулий -si', ru: 'Прошедшее -si', en: 'Past -si' },
+  kind: 'refl',
+  tense: 'past',
+  n: 21,
+  accent: 'gold',
+  glyph: 'mokėsi',
+  title: { uk: 'Зворотні дієслова: минулий', ru: 'Возвратные глаголы: прошедшее', en: 'Reflexive verbs: past' },
+  subtitle: {
+    uk: 'Зворотні дієслова в минулому часі: mokiausi — «я вчився», mokėsi — «він учився». Із запереченням: nesimokiau.',
+    ru: 'Возвратные глаголы в прошедшем времени: mokiausi — «я учился», mokėsi — «он учился». С отрицанием: nesimokiau.',
+    en: 'Reflexive verbs in the past: mokiausi — “I studied”, mokėsi — “he studied”. With negation: nesimokiau.'
+  },
+  trainerTitle: { uk: 'Зворотні дієслова в минулому часі', ru: 'Возвратные глаголы в прошедшем времени', en: 'Reflexive verbs in the past tense' }
+};
+
+export const reflFutTopic = {
+  id: 'refl-fut',
+  cat: 'verb',
+  depth: 10,
+  short: { uk: 'Майбутній -si', ru: 'Будущее -si', en: 'Future -si' },
+  kind: 'refl',
+  tense: 'fut',
+  n: 22,
+  accent: 'gold',
+  glyph: 'kelsis',
+  title: { uk: 'Зворотні дієслова: майбутній', ru: 'Возвратные глаголы: будущее', en: 'Reflexive verbs: future' },
+  subtitle: {
+    uk: 'Зворотні дієслова в майбутньому часі: mokysiuosi — «я буду вчитися», mokysis — «він буде вчитися». Із запереченням: nesimokysiu.',
+    ru: 'Возвратные глаголы в будущем времени: mokysiuosi — «я буду учиться», mokysis — «он будет учиться». С отрицанием: nesimokysiu.',
+    en: 'Reflexive verbs in the future: mokysiuosi — “I will study”, mokysis — “he will study”. With negation: nesimokysiu.'
+  },
+  trainerTitle: { uk: 'Зворотні дієслова в майбутньому часі', ru: 'Возвратные глаголы в будущем времени', en: 'Reflexive verbs in the future tense' }
+};

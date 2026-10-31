@@ -2,6 +2,8 @@ import { WORDS } from '../data/words.js';
 import { VERBS } from '../data/verbsConj.js';
 import { PRONOUNS } from '../data/pronouns.js';
 import { ADJECTIVES } from '../data/adjectives.js';
+import { TEBE } from '../data/verbsTebe.js';
+import { REFL_VERBS } from '../data/verbsRefl.js';
 
 // Обсяг уроку = скільки клітинок/форм узагалі можна освоїти.
 // Клітинкові уроки (закінчення) рахуємо за tc|-ключами, словникові — за w|-ключами.
@@ -68,6 +70,64 @@ function conjMastery(forms, tense) {
   return { done, total, pct: total ? done / total : 0 };
 }
 
+function modelCellMastery(forms, cellOf, units) {
+  const cells = {};
+  for (const [k, r] of Object.entries(forms)) {
+    if (!k.startsWith('w|')) continue;
+    const p = k.split('|');
+    const cell = cellOf(p);
+    if (!cell || !units[cell.unit]) continue;
+    const c = cells[cell.unit] || (cells[cell.unit] = { o: 0, m: 0, words: new Set() });
+    c.o += r.o;
+    c.m += r.m;
+    if (r.o > 0) c.words.add(p[1]);
+  }
+  const total = Object.keys(units).length;
+  let done = 0;
+  for (const [unit, c] of Object.entries(cells)) {
+    const g = c.o + c.m;
+    if (g >= 3 && c.o / g >= 0.8 && c.words.size >= Math.min(2, units[unit])) done++;
+  }
+  return { done, total, pct: total ? done / total : 0 };
+}
+
+const SLOTS = ['sg1', 'sg2', 'p3', 'pl1', 'pl2'];
+
+function tebeModel(v) {
+  return v.id === 'buti' || v.id === 'eiti' ? v.id : v.f.p3.slice(-1);
+}
+
+function tebeMastery(forms) {
+  const modelOf = {};
+  const units = {};
+  for (const v of VERBS) {
+    if (!TEBE[v.id]) continue;
+    modelOf[v.id] = tebeModel(v);
+    for (const pfx of ['tebe', 'nebe']) for (const s of SLOTS) {
+      const u = modelOf[v.id] + '|' + pfx + '|' + s;
+      units[u] = (units[u] || 0) + 1;
+    }
+  }
+  return modelCellMastery(forms, (p) => modelOf[p[1]] && { unit: modelOf[p[1]] + '|' + p[2] + '|' + p[3] }, units);
+}
+
+const reflModel = (v, tense) => (tense === 'fut' ? 'one' : v[tense].p3.slice(-3));
+
+function reflMastery(forms, tense) {
+  const byId = {};
+  const units = {};
+  for (const v of REFL_VERBS) {
+    byId[v.id] = v;
+    for (const pol of ['aff', 'neg']) for (const s of SLOTS) {
+      const u = reflModel(v, tense) + '|' + pol + '|' + s;
+      units[u] = (units[u] || 0) + 1;
+    }
+  }
+  return modelCellMastery(forms, (p) => byId[p[1]] && p[2] === tense && { unit: reflModel(byId[p[1]], tense) + '|' + p[3] + '|' + p[4] }, units);
+}
+
+const REFL_TENSE = { refl: 'pres', 'refl-past': 'past', 'refl-fut': 'fut' };
+
 function computeTotal(topicId) {
   switch (topicId) {
     case 'verb-forms': return { prefix: 'w|', total: VERBS.filter((v) => v.p3p).length };
@@ -90,6 +150,10 @@ function computeTotal(topicId) {
 }
 
 export function masteryOf(progressAll, topicId) {
+  if (topicId === 'tebe-nebe' || REFL_TENSE[topicId]) {
+    const forms = (progressAll[topicId] && progressAll[topicId].forms) || {};
+    return REFL_TENSE[topicId] ? reflMastery(forms, REFL_TENSE[topicId]) : tebeMastery(forms);
+  }
   if (CONJ_TENSE[topicId]) {
     const forms = (progressAll[topicId] && progressAll[topicId].forms) || {};
     return conjMastery(forms, CONJ_TENSE[topicId]);

@@ -2,7 +2,7 @@ import fs from 'fs';
 import { init, analyze, saveCache, CASE, GENDER, NUM } from './vdu-client.mjs';
 
 const SRC = 'data-source/lexicon-vdu-lemmas.json';
-const OUT = { verbs: 'data-source/lt-lexicon-vdu-verbs.json', adjectives: 'data-source/lt-lexicon-vdu-adj.json', nouns: 'data-source/lt-lexicon-vdu-nouns.json' };
+const OUT = { verbs: 'data-source/lt-lexicon-vdu-verbs.json', adjectives: 'data-source/lt-lexicon-vdu-adj.json', nouns: 'data-source/lt-lexicon-vdu-nouns.json', refl: 'data-source/lt-verbs-refl-vdu.json' };
 const soft = (stem) => stem.replace(/t$/, 'č').replace(/d$/, 'dž');
 const softens = (end) => /^i[aouąųė]/.test(end);
 
@@ -148,7 +148,54 @@ async function verbForms(v) {
   return res.pres ? res : null;
 }
 
-const RUN = { verbs: [verbForms, (v) => v.inf], adjectives: [adjForms, (a) => a], nouns: [nounForms, (n) => n.lemma] };
+const REFL_TENSES = ['pres', 'past', 'fut'];
+const sngr = (mi) => mi.split(', ').includes('sngr.');
+
+function reflForm(f, slot) {
+  if (slot === 'sg1') return /au$/.test(f) ? f + 'si' : f + 'osi';
+  if (slot === 'sg2') return /[ae]i$/.test(f) ? f + 'si' : f.slice(0, -1) + 'iesi';
+  if (slot === 'p3') return /[sš]$/.test(f) ? f + 'is' : f + 'si';
+  return f.replace(/e$/, 'ės');
+}
+
+async function reflForms(v) {
+  const base = { inf: v.inf.slice(0, -1), pres3: v.pres3.slice(0, -2), past3: v.past3.slice(0, -2) };
+  const cands = verbCandidates(base);
+  const res = {};
+  for (const t of REFL_TENSES) {
+    const out = { [t]: {}, [t + 'A']: {}, ['neg' + t]: {}, ['neg' + t + 'A']: {} };
+    if (v.pair) Object.assign(out, { ['plain' + t]: {}, ['plain' + t + 'A']: {}, ['negplain' + t]: {}, ['negplain' + t + 'A']: {} });
+    for (const [slot, cs] of Object.entries(cands[t])) {
+      const tag = (mi) => has('vksm.', TENSE[t], ...PERSON[slot])(mi) && sngr(mi);
+      let aff = null, plainHit = null;
+      for (const c of cs) {
+        aff = await pick([reflForm(c, slot)], tag);
+        if (aff) { plainHit = c; break; }
+      }
+      if (!aff) return null;
+      const neg = await pick(['nesi' + plainHit], tag);
+      if (!neg) return null;
+      out[t][slot] = aff.form;
+      out[t + 'A'][slot] = aff.accented;
+      out['neg' + t][slot] = neg.form;
+      out['neg' + t + 'A'][slot] = neg.accented;
+      if (v.pair) {
+        const plainTag = (mi) => has('vksm.', TENSE[t], ...PERSON[slot])(mi) && !sngr(mi);
+        const plain = await pick([plainHit], plainTag);
+        const negPlain = plain && await pick(['ne' + plainHit], plainTag);
+        if (!negPlain) return null;
+        out['plain' + t][slot] = plain.form;
+        out['plain' + t + 'A'][slot] = plain.accented;
+        out['negplain' + t][slot] = negPlain.form;
+        out['negplain' + t + 'A'][slot] = negPlain.accented;
+      }
+    }
+    Object.assign(res, out);
+  }
+  return res;
+}
+
+const RUN = { verbs: [verbForms, (v) => v.inf], adjectives: [adjForms, (a) => a], nouns: [nounForms, (n) => n.lemma], refl: [reflForms, (v) => v.inf] };
 
 await init();
 const lemmas = JSON.parse(fs.readFileSync(process.argv[3] || SRC, 'utf8'));

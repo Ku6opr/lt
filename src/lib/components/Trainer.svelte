@@ -12,6 +12,8 @@
   import { NUMQ_TIERS, NUM_TIERS } from '../engine/numerals.js';
   import { DEMNOM_TIERS, DEMCASE_TIERS, DEM_GROUP } from '../engine/demPronouns.js';
   import { QUEST_TIERS } from '../engine/questions.js';
+  import { TEBE_TIERS } from '../engine/tebeNebe.js';
+  import { reflTiersFor } from '../engine/reflexive.js';
   import { engineFor, stateOfFor, reviewOverridesFor } from '../engine/topicEngine.js';
   import CheatTable from './CheatTable.svelte';
   import CheatStack from './CheatStack.svelte';
@@ -38,13 +40,17 @@
   import DemCaseCheat from './DemCaseCheat.svelte';
   import QuestSelector from './QuestSelector.svelte';
   import QuestCheat from './QuestCheat.svelte';
+  import TebeSelector from './TebeSelector.svelte';
+  import TebeCheat from './TebeCheat.svelte';
+  import ReflSelector from './ReflSelector.svelte';
+  import ReflCheat from './ReflCheat.svelte';
   import StatsPanel from './StatsPanel.svelte';
 
   export let topic;
   export let onBack;
 
   const flags = engineFor(topic);
-  const { isAdj, isDeg, isAdverb, isPron, isConj, isVF, isNum, isNumQty, isDemNom, isDemCase, isQuest, genTask, genOk } = flags;
+  const { isAdj, isDeg, isAdverb, isPron, isConj, isVF, isNum, isNumQty, isDemNom, isDemCase, isQuest, isTebe, isRefl, genTask, genOk } = flags;
   const settings = settingsFor(topic.id);
   const selectorCases = isAdj ? topic.scopeCases : null;
   const cheatCases = isAdj ? topic.cheatCases : null;
@@ -66,6 +72,8 @@
   $: if (reviewMode && !weakKeys.length) { reviewMode = false; }
 
   function maxLevelNow(st) {
+    if (isTebe) return TEBE_TIERS.length - 1;
+    if (isRefl) return reflTiersFor(topic.tense || 'pres').length - 1;
     if (isVF) return VF_TIERS.length - 1;
     if (isNumQty) return NUMQ_TIERS.length - 1;
     if (isNum) return NUM_TIERS.length - 1;
@@ -157,8 +165,10 @@
     const st = $settings, t = task;
     if (!t) { makeNewTask(); return; }
     let invalid;
-    if (isConj || isVF || isNumQty || isDemNom) {
+    if (isConj || isVF || isNumQty || isDemNom || isTebe) {
       invalid = false;
+    } else if (isRefl) {
+      invalid = !st.pols[t.pol];
     } else if (isQuest) {
       invalid = !st.qws[t.qw];
     } else if (isDemCase) {
@@ -248,7 +258,7 @@
         <span class="card-kicker" style="margin:0">{L.materials}</span>
         <button class="btn btn-ghost" on:click={toggleTable} style="font-size:14px">{s.tableOpen ? L.hideTable : L.showTable}</button>
       </div>
-      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj && !isVF && !isNum && !isNumQty && !isDemNom && !isDemCase && !isQuest}
+      {#if s.tableOpen && !cheatBoth && !isDeg && !isPron && !isAdverb && !isConj && !isVF && !isNum && !isNumQty && !isDemNom && !isDemCase && !isQuest && !isTebe && !isRefl}
         <div style="display:flex;align-items:center;gap:10px">
           <span class="text-muted" style="font-size:12px">{L.show}</span>
           <div class="seg">
@@ -260,7 +270,11 @@
     </div>
 
     {#if s.tableOpen}
-      {#if isQuest}
+      {#if isTebe}
+        <TebeCheat />
+      {:else if isRefl}
+        <ReflCheat {settings} tense={topic.tense || 'pres'} />
+      {:else if isQuest}
         <QuestCheat />
       {:else if isDemNom}
         <DemNomCheat />
@@ -299,7 +313,11 @@
     {#if statsOpen}<div style="margin-top:var(--space-3)"><StatsPanel {topic} /></div>{/if}
   </div>
 
-  {#if isQuest}
+  {#if isTebe}
+    <TebeSelector {settings} onLevelChange={makeNewTask} />
+  {:else if isRefl}
+    <ReflSelector {settings} tense={topic.tense || 'pres'} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
+  {:else if isQuest}
     <QuestSelector {settings} onPoolChange={ensureTask} onLevelChange={makeNewTask} />
   {:else if isDemNom}
     <DemNomSelector {settings} onLevelChange={makeNewTask} />

@@ -46,6 +46,20 @@ export function keysFor(t, isAdj) {
       dims: [`vf|${t.formTarget}`]
     };
   }
+  if (t.tebe) {
+    return {
+      form: `w|${t.wordId}|${t.pfx}|${t.person}`,
+      cell: `tc|${t.pfx}|${t.person}`,
+      dims: [`pfx|${t.pfx}`, `person|${t.person}`, `num|${t.number}`]
+    };
+  }
+  if (t.refl) {
+    return {
+      form: `w|${t.wordId}|${t.tense}|${t.pol}|${t.person}`,
+      cell: `tc|${t.tense}|${t.pol}|${t.person}`,
+      dims: [`tense|${t.tense}`, `pol|${t.pol}`, `person|${t.person}`, `num|${t.number}`]
+    };
+  }
   if (t.conj) {
     return {
       form: `w|${t.wordId}|${t.person}`,

@@ -5,7 +5,9 @@
   import { accentSplit, simplifyAccent } from '../engine/stem.js';
 
   $: L = UI[$lang];
-  $: acc = task && task.targetFormA ? accentSplit(simplifyAccent(task.targetFormA), task.stem.length) : null;
+  $: head = (task && task.head) || '';
+  $: accH = task && task.targetFormA ? accentSplit(simplifyAccent(task.targetFormA), head.length) : null;
+  $: acc = accH ? accentSplit(accH[1], task.stem.length) : null;
   $: pA = task && task.promptA ? simplifyAccent(task.promptA) : null;
   $: pAcc = pA && task.prompt && task.prompt.text == null ? accentSplit(pA, task.prompt.stem.length) : null;
   $: lA = task && task.leadA ? simplifyAccent(task.leadA) : null;
@@ -54,7 +56,7 @@
         <div style="text-align:center">
           <div class="card-kicker">{L.correctForm}{#if correctMark}<span style="color:#4a9d5b;margin-left:6px" title={L.matchedYours}>✓</span>{/if}</div>
           <div style="font-family:var(--font-heading);font-size:clamp(30px,6cqw,50px);line-height:1.02;margin:6px 0 12px">
-            {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{lA || task.lead} </span>{/if}{#if acc}<WordForm stem={acc[0]} tail={acc[1]} />{:else}<WordForm stem={task.stem} tail={task.tail} />{/if}{#if task.trail}<span style="margin-left:0.3em">{tA || task.trail}</span>{/if}
+            {#if task.hasLead}<span style="color:var(--color-neutral-500);font-size:.68em">{lA || task.lead} </span>{/if}{#if acc}<WordForm head={accH[0]} stem={acc[0]} tail={acc[1]} />{:else}<WordForm {head} stem={task.stem} tail={task.tail} />{/if}{#if task.trail}<span style="margin-left:0.3em">{tA || task.trail}</span>{/if}
           </div>
           {#if task.revealUk}<div class="text-muted" style="font-size:14px">{task.revealUk}</div>{/if}
         </div>

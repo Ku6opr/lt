@@ -6,6 +6,8 @@ import { newVFormsTask, vformsPoolOk } from './verbForms.js';
 import { newNumeralTask, numeralPoolOk, newNumQtyTask, numQtyPoolOk } from './numerals.js';
 import { newDemNomTask, demNomPoolOk, newDemCaseTask, demCasePoolOk, DEM_GROUP } from './demPronouns.js';
 import { newQuestTask, questPoolOk } from './questions.js';
+import { newTebeTask, tebePoolOk } from './tebeNebe.js';
+import { newReflTask, reflPoolOk } from './reflexive.js';
 
 export function kindFlags(topic) {
   return {
@@ -19,19 +21,21 @@ export function kindFlags(topic) {
     isNumQty: topic.kind === 'numqty',
     isDemNom: topic.kind === 'demnom',
     isDemCase: topic.kind === 'demcase',
-    isQuest: topic.kind === 'quest'
+    isQuest: topic.kind === 'quest',
+    isTebe: topic.kind === 'tebe',
+    isRefl: topic.kind === 'refl'
   };
 }
 
 export function engineFor(topic) {
   const f = kindFlags(topic);
-  const genTask = f.isQuest ? newQuestTask : f.isDemNom ? newDemNomTask : f.isDemCase ? newDemCaseTask : f.isNumQty ? newNumQtyTask : f.isNum ? newNumeralTask : f.isVF ? newVFormsTask : f.isConj ? newConjTask : f.isPron ? newPronounTask : f.isAdverb ? newAdverbTask : f.isDeg ? newDegreeTask : f.isAdj ? newAdjTask : newTask;
-  const genOk = f.isQuest ? questPoolOk : f.isDemNom ? demNomPoolOk : f.isDemCase ? demCasePoolOk : f.isNumQty ? numQtyPoolOk : f.isNum ? numeralPoolOk : f.isVF ? vformsPoolOk : f.isConj ? conjPoolOk : f.isPron ? pronounPoolOk : f.isAdverb ? adverbPoolOk : f.isDeg ? degreePoolOk : f.isAdj ? adjPoolOk : poolOk;
+  const genTask = f.isRefl ? newReflTask : f.isTebe ? newTebeTask : f.isQuest ? newQuestTask : f.isDemNom ? newDemNomTask : f.isDemCase ? newDemCaseTask : f.isNumQty ? newNumQtyTask : f.isNum ? newNumeralTask : f.isVF ? newVFormsTask : f.isConj ? newConjTask : f.isPron ? newPronounTask : f.isAdverb ? newAdverbTask : f.isDeg ? newDegreeTask : f.isAdj ? newAdjTask : newTask;
+  const genOk = f.isRefl ? reflPoolOk : f.isTebe ? tebePoolOk : f.isQuest ? questPoolOk : f.isDemNom ? demNomPoolOk : f.isDemCase ? demCasePoolOk : f.isNumQty ? numQtyPoolOk : f.isNum ? numeralPoolOk : f.isVF ? vformsPoolOk : f.isConj ? conjPoolOk : f.isPron ? pronounPoolOk : f.isAdverb ? adverbPoolOk : f.isDeg ? degreePoolOk : f.isAdj ? adjPoolOk : poolOk;
   return { ...f, genTask, genOk };
 }
 
 export function stateOfFor(topic, flags, mergedSettings, lang) {
-  return { ...mergedSettings, lang, ...(flags.isAdj ? { caseScope: topic.scopeCases } : {}), ...(flags.isConj ? { tense: topic.tense || 'pres' } : {}) };
+  return { ...mergedSettings, lang, ...(flags.isAdj ? { caseScope: topic.scopeCases } : {}), ...(flags.isConj || flags.isRefl ? { tense: topic.tense || 'pres' } : {}) };
 }
 
 // Розбір слабкого `form`-ключа (`w|id|...`, той самий, що пише keysFor) у override для
@@ -39,6 +43,8 @@ export function stateOfFor(topic, flags, mergedSettings, lang) {
 // степінь/число), що була слабкою, а не випадкової для цього слова.
 export function reviewOverridesFor(flags, key) {
   const p = key.split('|');
+  if (flags.isRefl) return { focusWordId: p[1], pols: { [p[3]]: true }, focusPerson: p[4] };
+  if (flags.isTebe) return { focusWordId: p[1], focusPfx: p[2], focusPerson: p[3] };
   if (flags.isQuest) return { focusWordId: p[1], focusQw: p[2] };
   if (flags.isNumQty) return { focusWordId: p[1] };
   if (flags.isDemNom) return { focusWordId: p[1] };

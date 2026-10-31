@@ -1,0 +1,1836 @@
+[
+ {
+  "lemma": "mokytis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "mokausi",
+   "sg2": "mokaisi",
+   "p3": "mokosi",
+   "pl1": "mokomės",
+   "pl2": "mokotės"
+  },
+  "presA": {
+   "sg1": "mókausi",
+   "sg2": "mókaisi",
+   "p3": "mókosi",
+   "pl1": "mókomės",
+   "pl2": "mókotės"
+  },
+  "negpres": {
+   "sg1": "nesimokau",
+   "sg2": "nesimokai",
+   "p3": "nesimoko",
+   "pl1": "nesimokome",
+   "pl2": "nesimokote"
+  },
+  "negpresA": {
+   "sg1": "nesimókau",
+   "sg2": "nesimókai",
+   "p3": "nesimóko",
+   "pl1": "nesimókome",
+   "pl2": "nesimókote"
+  },
+  "plainpres": {
+   "sg1": "mokau",
+   "sg2": "mokai",
+   "p3": "moko",
+   "pl1": "mokome",
+   "pl2": "mokote"
+  },
+  "plainpresA": {
+   "sg1": "mókau",
+   "sg2": "mókai",
+   "p3": "móko",
+   "pl1": "mókome",
+   "pl2": "mókote"
+  },
+  "negplainpres": {
+   "sg1": "nemokau",
+   "sg2": "nemokai",
+   "p3": "nemoko",
+   "pl1": "nemokome",
+   "pl2": "nemokote"
+  },
+  "negplainpresA": {
+   "sg1": "nemókau",
+   "sg2": "nemókai",
+   "p3": "nemóko",
+   "pl1": "nemókome",
+   "pl2": "nemókote"
+  },
+  "past": {
+   "sg1": "mokiausi",
+   "sg2": "mokeisi",
+   "p3": "mokėsi",
+   "pl1": "mokėmės",
+   "pl2": "mokėtės"
+  },
+  "pastA": {
+   "sg1": "mókiausi",
+   "sg2": "mókeisi",
+   "p3": "mókėsi",
+   "pl1": "mókėmės",
+   "pl2": "mókėtės"
+  },
+  "negpast": {
+   "sg1": "nesimokiau",
+   "sg2": "nesimokei",
+   "p3": "nesimokė",
+   "pl1": "nesimokėme",
+   "pl2": "nesimokėte"
+  },
+  "negpastA": {
+   "sg1": "nesimókiau",
+   "sg2": "nesimókei",
+   "p3": "nesimókė",
+   "pl1": "nesimókėme",
+   "pl2": "nesimókėte"
+  },
+  "plainpast": {
+   "sg1": "mokiau",
+   "sg2": "mokei",
+   "p3": "mokė",
+   "pl1": "mokėme",
+   "pl2": "mokėte"
+  },
+  "plainpastA": {
+   "sg1": "mókiau",
+   "sg2": "mókei",
+   "p3": "mókė",
+   "pl1": "mókėme",
+   "pl2": "mókėte"
+  },
+  "negplainpast": {
+   "sg1": "nemokiau",
+   "sg2": "nemokei",
+   "p3": "nemokė",
+   "pl1": "nemokėme",
+   "pl2": "nemokėte"
+  },
+  "negplainpastA": {
+   "sg1": "nemókiau",
+   "sg2": "nemókei",
+   "p3": "nemókė",
+   "pl1": "nemókėme",
+   "pl2": "nemókėte"
+  },
+  "fut": {
+   "sg1": "mokysiuosi",
+   "sg2": "mokysiesi",
+   "p3": "mokysis",
+   "pl1": "mokysimės",
+   "pl2": "mokysitės"
+  },
+  "futA": {
+   "sg1": "mókysiuosi",
+   "sg2": "mókysiesi",
+   "p3": "mókysis",
+   "pl1": "mókysimės",
+   "pl2": "mókysitės"
+  },
+  "negfut": {
+   "sg1": "nesimokysiu",
+   "sg2": "nesimokysi",
+   "p3": "nesimokys",
+   "pl1": "nesimokysime",
+   "pl2": "nesimokysite"
+  },
+  "negfutA": {
+   "sg1": "nesimókysiu",
+   "sg2": "nesimókysi",
+   "p3": "nesimókys",
+   "pl1": "nesimókysime",
+   "pl2": "nesimókysite"
+  },
+  "plainfut": {
+   "sg1": "mokysiu",
+   "sg2": "mokysi",
+   "p3": "mokys",
+   "pl1": "mokysime",
+   "pl2": "mokysite"
+  },
+  "plainfutA": {
+   "sg1": "mókysiu",
+   "sg2": "mókysi",
+   "p3": "mókys",
+   "pl1": "mókysime",
+   "pl2": "mókysite"
+  },
+  "negplainfut": {
+   "sg1": "nemokysiu",
+   "sg2": "nemokysi",
+   "p3": "nemokys",
+   "pl1": "nemokysime",
+   "pl2": "nemokysite"
+  },
+  "negplainfutA": {
+   "sg1": "nemókysiu",
+   "sg2": "nemókysi",
+   "p3": "nemókys",
+   "pl1": "nemókysime",
+   "pl2": "nemókysite"
+  }
+ },
+ {
+  "lemma": "jaustis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "jaučiuosi",
+   "sg2": "jautiesi",
+   "p3": "jaučiasi",
+   "pl1": "jaučiamės",
+   "pl2": "jaučiatės"
+  },
+  "presA": {
+   "sg1": "jaučiúosi",
+   "sg2": "jautíesi",
+   "p3": "jaũčiasi",
+   "pl1": "jaũčiamės",
+   "pl2": "jaũčiatės"
+  },
+  "negpres": {
+   "sg1": "nesijaučiu",
+   "sg2": "nesijauti",
+   "p3": "nesijaučia",
+   "pl1": "nesijaučiame",
+   "pl2": "nesijaučiate"
+  },
+  "negpresA": {
+   "sg1": "nesijaučiù",
+   "sg2": "nesijautì",
+   "p3": "nesijaũčia",
+   "pl1": "nesijaũčiame",
+   "pl2": "nesijaũčiate"
+  },
+  "past": {
+   "sg1": "jaučiausi",
+   "sg2": "jauteisi",
+   "p3": "jautėsi",
+   "pl1": "jautėmės",
+   "pl2": "jautėtės"
+  },
+  "pastA": {
+   "sg1": "jaučiaũsi",
+   "sg2": "jauteĩsi",
+   "p3": "jaũtėsi",
+   "pl1": "jaũtėmės",
+   "pl2": "jaũtėtės"
+  },
+  "negpast": {
+   "sg1": "nesijaučiau",
+   "sg2": "nesijautei",
+   "p3": "nesijautė",
+   "pl1": "nesijautėme",
+   "pl2": "nesijautėte"
+  },
+  "negpastA": {
+   "sg1": "nesìjaučiau",
+   "sg2": "nesìjautei",
+   "p3": "nesìjautė",
+   "pl1": "nesìjautėme",
+   "pl2": "nesìjautėte"
+  },
+  "fut": {
+   "sg1": "jausiuosi",
+   "sg2": "jausiesi",
+   "p3": "jausis",
+   "pl1": "jausimės",
+   "pl2": "jausitės"
+  },
+  "futA": {
+   "sg1": "jaũsiuosi",
+   "sg2": "jaũsiesi",
+   "p3": "jaũsis",
+   "pl1": "jaũsimės",
+   "pl2": "jaũsitės"
+  },
+  "negfut": {
+   "sg1": "nesijausiu",
+   "sg2": "nesijausi",
+   "p3": "nesijaus",
+   "pl1": "nesijausime",
+   "pl2": "nesijausite"
+  },
+  "negfutA": {
+   "sg1": "nesijaũsiu",
+   "sg2": "nesijaũsi",
+   "p3": "nesijaũs",
+   "pl1": "nesijaũsime",
+   "pl2": "nesijaũsite"
+  }
+ },
+ {
+  "lemma": "keltis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "keliuosi",
+   "sg2": "keliesi",
+   "p3": "keliasi",
+   "pl1": "keliamės",
+   "pl2": "keliatės"
+  },
+  "presA": {
+   "sg1": "keliúosi",
+   "sg2": "kelíesi",
+   "p3": "kẽliasi",
+   "pl1": "kẽliamės",
+   "pl2": "kẽliatės"
+  },
+  "negpres": {
+   "sg1": "nesikeliu",
+   "sg2": "nesikeli",
+   "p3": "nesikelia",
+   "pl1": "nesikeliame",
+   "pl2": "nesikeliate"
+  },
+  "negpresA": {
+   "sg1": "nesìkeliu",
+   "sg2": "nesìkeli",
+   "p3": "nesìkelia",
+   "pl1": "nesìkeliame",
+   "pl2": "nesìkeliate"
+  },
+  "plainpres": {
+   "sg1": "keliu",
+   "sg2": "keli",
+   "p3": "kelia",
+   "pl1": "keliame",
+   "pl2": "keliate"
+  },
+  "plainpresA": {
+   "sg1": "keliù",
+   "sg2": "kelì",
+   "p3": "kẽlia",
+   "pl1": "kẽliame",
+   "pl2": "kẽliate"
+  },
+  "negplainpres": {
+   "sg1": "nekeliu",
+   "sg2": "nekeli",
+   "p3": "nekelia",
+   "pl1": "nekeliame",
+   "pl2": "nekeliate"
+  },
+  "negplainpresA": {
+   "sg1": "nèkeliu",
+   "sg2": "nèkeli",
+   "p3": "nèkelia",
+   "pl1": "nèkeliame",
+   "pl2": "nèkeliate"
+  },
+  "past": {
+   "sg1": "kėliausi",
+   "sg2": "kėleisi",
+   "p3": "kėlėsi",
+   "pl1": "kėlėmės",
+   "pl2": "kėlėtės"
+  },
+  "pastA": {
+   "sg1": "kė́liausi",
+   "sg2": "kė́leisi",
+   "p3": "kė́lėsi",
+   "pl1": "kė́lėmės",
+   "pl2": "kė́lėtės"
+  },
+  "negpast": {
+   "sg1": "nesikėliau",
+   "sg2": "nesikėlei",
+   "p3": "nesikėlė",
+   "pl1": "nesikėlėme",
+   "pl2": "nesikėlėte"
+  },
+  "negpastA": {
+   "sg1": "nesikė́liau",
+   "sg2": "nesikė́lei",
+   "p3": "nesikė́lė",
+   "pl1": "nesikė́lėme",
+   "pl2": "nesikė́lėte"
+  },
+  "plainpast": {
+   "sg1": "kėliau",
+   "sg2": "kėlei",
+   "p3": "kėlė",
+   "pl1": "kėlėme",
+   "pl2": "kėlėte"
+  },
+  "plainpastA": {
+   "sg1": "kė́liau",
+   "sg2": "kė́lei",
+   "p3": "kė́lė",
+   "pl1": "kė́lėme",
+   "pl2": "kė́lėte"
+  },
+  "negplainpast": {
+   "sg1": "nekėliau",
+   "sg2": "nekėlei",
+   "p3": "nekėlė",
+   "pl1": "nekėlėme",
+   "pl2": "nekėlėte"
+  },
+  "negplainpastA": {
+   "sg1": "nekė́liau",
+   "sg2": "nekė́lei",
+   "p3": "nekė́lė",
+   "pl1": "nekė́lėme",
+   "pl2": "nekė́lėte"
+  },
+  "fut": {
+   "sg1": "kelsiuosi",
+   "sg2": "kelsiesi",
+   "p3": "kelsis",
+   "pl1": "kelsimės",
+   "pl2": "kelsitės"
+  },
+  "futA": {
+   "sg1": "kélsiuosi",
+   "sg2": "kélsiesi",
+   "p3": "kel̃sis",
+   "pl1": "kélsimės",
+   "pl2": "kélsitės"
+  },
+  "negfut": {
+   "sg1": "nesikelsiu",
+   "sg2": "nesikelsi",
+   "p3": "nesikels",
+   "pl1": "nesikelsime",
+   "pl2": "nesikelsite"
+  },
+  "negfutA": {
+   "sg1": "nesikélsiu",
+   "sg2": "nesikélsi",
+   "p3": "nesikel̃s",
+   "pl1": "nesikélsime",
+   "pl2": "nesikélsite"
+  },
+  "plainfut": {
+   "sg1": "kelsiu",
+   "sg2": "kelsi",
+   "p3": "kels",
+   "pl1": "kelsime",
+   "pl2": "kelsite"
+  },
+  "plainfutA": {
+   "sg1": "kélsiu",
+   "sg2": "kélsi",
+   "p3": "kel̃s",
+   "pl1": "kélsime",
+   "pl2": "kélsite"
+  },
+  "negplainfut": {
+   "sg1": "nekelsiu",
+   "sg2": "nekelsi",
+   "p3": "nekels",
+   "pl1": "nekelsime",
+   "pl2": "nekelsite"
+  },
+  "negplainfutA": {
+   "sg1": "nekélsiu",
+   "sg2": "nekélsi",
+   "p3": "nekel̃s",
+   "pl1": "nekélsime",
+   "pl2": "nekélsite"
+  }
+ },
+ {
+  "lemma": "praustis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "prausiuosi",
+   "sg2": "prausiesi",
+   "p3": "prausiasi",
+   "pl1": "prausiamės",
+   "pl2": "prausiatės"
+  },
+  "presA": {
+   "sg1": "prausiúosi",
+   "sg2": "prausíesi",
+   "p3": "praũsiasi",
+   "pl1": "praũsiamės",
+   "pl2": "praũsiatės"
+  },
+  "negpres": {
+   "sg1": "nesiprausiu",
+   "sg2": "nesiprausi",
+   "p3": "nesiprausia",
+   "pl1": "nesiprausiame",
+   "pl2": "nesiprausiate"
+  },
+  "negpresA": {
+   "sg1": "nesiprausiù",
+   "sg2": "nesiprausì",
+   "p3": "nesipraũsia",
+   "pl1": "nesipraũsiame",
+   "pl2": "nesipraũsiate"
+  },
+  "plainpres": {
+   "sg1": "prausiu",
+   "sg2": "prausi",
+   "p3": "prausia",
+   "pl1": "prausiame",
+   "pl2": "prausiate"
+  },
+  "plainpresA": {
+   "sg1": "prausiù",
+   "sg2": "prausì",
+   "p3": "praũsia",
+   "pl1": "praũsiame",
+   "pl2": "praũsiate"
+  },
+  "negplainpres": {
+   "sg1": "neprausiu",
+   "sg2": "neprausi",
+   "p3": "neprausia",
+   "pl1": "neprausiame",
+   "pl2": "neprausiate"
+  },
+  "negplainpresA": {
+   "sg1": "neprausiù",
+   "sg2": "neprausì",
+   "p3": "nepraũsia",
+   "pl1": "nepraũsiame",
+   "pl2": "nepraũsiate"
+  },
+  "past": {
+   "sg1": "prausiausi",
+   "sg2": "prauseisi",
+   "p3": "prausėsi",
+   "pl1": "prausėmės",
+   "pl2": "prausėtės"
+  },
+  "pastA": {
+   "sg1": "prausiaũsi",
+   "sg2": "prauseĩsi",
+   "p3": "praũsėsi",
+   "pl1": "praũsėmės",
+   "pl2": "praũsėtės"
+  },
+  "negpast": {
+   "sg1": "nesiprausiau",
+   "sg2": "nesiprausei",
+   "p3": "nesiprausė",
+   "pl1": "nesiprausėme",
+   "pl2": "nesiprausėte"
+  },
+  "negpastA": {
+   "sg1": "nesìprausiau",
+   "sg2": "nesìprausei",
+   "p3": "nesìprausė",
+   "pl1": "nesìprausėme",
+   "pl2": "nesìprausėte"
+  },
+  "plainpast": {
+   "sg1": "prausiau",
+   "sg2": "prausei",
+   "p3": "prausė",
+   "pl1": "prausėme",
+   "pl2": "prausėte"
+  },
+  "plainpastA": {
+   "sg1": "prausiaũ",
+   "sg2": "prauseĩ",
+   "p3": "praũsė",
+   "pl1": "praũsėme",
+   "pl2": "praũsėte"
+  },
+  "negplainpast": {
+   "sg1": "neprausiau",
+   "sg2": "neprausei",
+   "p3": "neprausė",
+   "pl1": "neprausėme",
+   "pl2": "neprausėte"
+  },
+  "negplainpastA": {
+   "sg1": "nèprausiau",
+   "sg2": "nèprausei",
+   "p3": "nèprausė",
+   "pl1": "nèprausėme",
+   "pl2": "nèprausėte"
+  },
+  "fut": {
+   "sg1": "prausiuosi",
+   "sg2": "prausiesi",
+   "p3": "prausis",
+   "pl1": "prausimės",
+   "pl2": "prausitės"
+  },
+  "futA": {
+   "sg1": "praũsiuosi",
+   "sg2": "praũsiesi",
+   "p3": "praũsis",
+   "pl1": "praũsimės",
+   "pl2": "praũsitės"
+  },
+  "negfut": {
+   "sg1": "nesiprausiu",
+   "sg2": "nesiprausi",
+   "p3": "nesipraus",
+   "pl1": "nesiprausime",
+   "pl2": "nesiprausite"
+  },
+  "negfutA": {
+   "sg1": "nesipraũsiu",
+   "sg2": "nesipraũsi",
+   "p3": "nesipraũs",
+   "pl1": "nesipraũsime",
+   "pl2": "nesipraũsite"
+  },
+  "plainfut": {
+   "sg1": "prausiu",
+   "sg2": "prausi",
+   "p3": "praus",
+   "pl1": "prausime",
+   "pl2": "prausite"
+  },
+  "plainfutA": {
+   "sg1": "praũsiu",
+   "sg2": "praũsi",
+   "p3": "praũs",
+   "pl1": "praũsime",
+   "pl2": "praũsite"
+  },
+  "negplainfut": {
+   "sg1": "neprausiu",
+   "sg2": "neprausi",
+   "p3": "nepraus",
+   "pl1": "neprausime",
+   "pl2": "neprausite"
+  },
+  "negplainfutA": {
+   "sg1": "nepraũsiu",
+   "sg2": "nepraũsi",
+   "p3": "nepraũs",
+   "pl1": "nepraũsime",
+   "pl2": "nepraũsite"
+  }
+ },
+ {
+  "lemma": "rengtis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "rengiuosi",
+   "sg2": "rengiesi",
+   "p3": "rengiasi",
+   "pl1": "rengiamės",
+   "pl2": "rengiatės"
+  },
+  "presA": {
+   "sg1": "rengiúosi",
+   "sg2": "rengíesi",
+   "p3": "reñgiasi",
+   "pl1": "reñgiamės",
+   "pl2": "reñgiatės"
+  },
+  "negpres": {
+   "sg1": "nesirengiu",
+   "sg2": "nesirengi",
+   "p3": "nesirengia",
+   "pl1": "nesirengiame",
+   "pl2": "nesirengiate"
+  },
+  "negpresA": {
+   "sg1": "nesirengiù",
+   "sg2": "nesirengì",
+   "p3": "nesireñgia",
+   "pl1": "nesireñgiame",
+   "pl2": "nesireñgiate"
+  },
+  "plainpres": {
+   "sg1": "rengiu",
+   "sg2": "rengi",
+   "p3": "rengia",
+   "pl1": "rengiame",
+   "pl2": "rengiate"
+  },
+  "plainpresA": {
+   "sg1": "rengiù",
+   "sg2": "rengì",
+   "p3": "reñgia",
+   "pl1": "reñgiame",
+   "pl2": "reñgiate"
+  },
+  "negplainpres": {
+   "sg1": "nerengiu",
+   "sg2": "nerengi",
+   "p3": "nerengia",
+   "pl1": "nerengiame",
+   "pl2": "nerengiate"
+  },
+  "negplainpresA": {
+   "sg1": "nerengiù",
+   "sg2": "nerengì",
+   "p3": "nereñgia",
+   "pl1": "nereñgiame",
+   "pl2": "nereñgiate"
+  },
+  "past": {
+   "sg1": "rengiausi",
+   "sg2": "rengeisi",
+   "p3": "rengėsi",
+   "pl1": "rengėmės",
+   "pl2": "rengėtės"
+  },
+  "pastA": {
+   "sg1": "rengiaũsi",
+   "sg2": "rengeĩsi",
+   "p3": "reñgėsi",
+   "pl1": "reñgėmės",
+   "pl2": "reñgėtės"
+  },
+  "negpast": {
+   "sg1": "nesirengiau",
+   "sg2": "nesirengei",
+   "p3": "nesirengė",
+   "pl1": "nesirengėme",
+   "pl2": "nesirengėte"
+  },
+  "negpastA": {
+   "sg1": "nesìrengiau",
+   "sg2": "nesìrengei",
+   "p3": "nesìrengė",
+   "pl1": "nesìrengėme",
+   "pl2": "nesìrengėte"
+  },
+  "plainpast": {
+   "sg1": "rengiau",
+   "sg2": "rengei",
+   "p3": "rengė",
+   "pl1": "rengėme",
+   "pl2": "rengėte"
+  },
+  "plainpastA": {
+   "sg1": "rengiaũ",
+   "sg2": "rengeĩ",
+   "p3": "reñgė",
+   "pl1": "reñgėme",
+   "pl2": "reñgėte"
+  },
+  "negplainpast": {
+   "sg1": "nerengiau",
+   "sg2": "nerengei",
+   "p3": "nerengė",
+   "pl1": "nerengėme",
+   "pl2": "nerengėte"
+  },
+  "negplainpastA": {
+   "sg1": "nèrengiau",
+   "sg2": "nèrengei",
+   "p3": "nèrengė",
+   "pl1": "nèrengėme",
+   "pl2": "nèrengėte"
+  },
+  "fut": {
+   "sg1": "rengsiuosi",
+   "sg2": "rengsiesi",
+   "p3": "rengsis",
+   "pl1": "rengsimės",
+   "pl2": "rengsitės"
+  },
+  "futA": {
+   "sg1": "reñgsiuosi",
+   "sg2": "reñgsiesi",
+   "p3": "reñgsis",
+   "pl1": "reñgsimės",
+   "pl2": "reñgsitės"
+  },
+  "negfut": {
+   "sg1": "nesirengsiu",
+   "sg2": "nesirengsi",
+   "p3": "nesirengs",
+   "pl1": "nesirengsime",
+   "pl2": "nesirengsite"
+  },
+  "negfutA": {
+   "sg1": "nesireñgsiu",
+   "sg2": "nesireñgsi",
+   "p3": "nesireñgs",
+   "pl1": "nesireñgsime",
+   "pl2": "nesireñgsite"
+  },
+  "plainfut": {
+   "sg1": "rengsiu",
+   "sg2": "rengsi",
+   "p3": "rengs",
+   "pl1": "rengsime",
+   "pl2": "rengsite"
+  },
+  "plainfutA": {
+   "sg1": "reñgsiu",
+   "sg2": "reñgsi",
+   "p3": "reñgs",
+   "pl1": "reñgsime",
+   "pl2": "reñgsite"
+  },
+  "negplainfut": {
+   "sg1": "nerengsiu",
+   "sg2": "nerengsi",
+   "p3": "nerengs",
+   "pl1": "nerengsime",
+   "pl2": "nerengsite"
+  },
+  "negplainfutA": {
+   "sg1": "nereñgsiu",
+   "sg2": "nereñgsi",
+   "p3": "nereñgs",
+   "pl1": "nereñgsime",
+   "pl2": "nereñgsite"
+  }
+ },
+ {
+  "lemma": "maudytis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "maudausi",
+   "sg2": "maudaisi",
+   "p3": "maudosi",
+   "pl1": "maudomės",
+   "pl2": "maudotės"
+  },
+  "presA": {
+   "sg1": "máudausi",
+   "sg2": "máudaisi",
+   "p3": "máudosi",
+   "pl1": "máudomės",
+   "pl2": "máudotės"
+  },
+  "negpres": {
+   "sg1": "nesimaudau",
+   "sg2": "nesimaudai",
+   "p3": "nesimaudo",
+   "pl1": "nesimaudome",
+   "pl2": "nesimaudote"
+  },
+  "negpresA": {
+   "sg1": "nesimáudau",
+   "sg2": "nesimáudai",
+   "p3": "nesimáudo",
+   "pl1": "nesimáudome",
+   "pl2": "nesimáudote"
+  },
+  "plainpres": {
+   "sg1": "maudau",
+   "sg2": "maudai",
+   "p3": "maudo",
+   "pl1": "maudome",
+   "pl2": "maudote"
+  },
+  "plainpresA": {
+   "sg1": "máudau",
+   "sg2": "máudai",
+   "p3": "máudo",
+   "pl1": "máudome",
+   "pl2": "máudote"
+  },
+  "negplainpres": {
+   "sg1": "nemaudau",
+   "sg2": "nemaudai",
+   "p3": "nemaudo",
+   "pl1": "nemaudome",
+   "pl2": "nemaudote"
+  },
+  "negplainpresA": {
+   "sg1": "nemáudau",
+   "sg2": "nemáudai",
+   "p3": "nemáudo",
+   "pl1": "nemáudome",
+   "pl2": "nemáudote"
+  },
+  "past": {
+   "sg1": "maudžiausi",
+   "sg2": "maudeisi",
+   "p3": "maudėsi",
+   "pl1": "maudėmės",
+   "pl2": "maudėtės"
+  },
+  "pastA": {
+   "sg1": "máudžiausi",
+   "sg2": "máudeisi",
+   "p3": "máudėsi",
+   "pl1": "máudėmės",
+   "pl2": "máudėtės"
+  },
+  "negpast": {
+   "sg1": "nesimaudžiau",
+   "sg2": "nesimaudei",
+   "p3": "nesimaudė",
+   "pl1": "nesimaudėme",
+   "pl2": "nesimaudėte"
+  },
+  "negpastA": {
+   "sg1": "nesimáudžiau",
+   "sg2": "nesimáudei",
+   "p3": "nesimáudė",
+   "pl1": "nesimáudėme",
+   "pl2": "nesimáudėte"
+  },
+  "plainpast": {
+   "sg1": "maudžiau",
+   "sg2": "maudei",
+   "p3": "maudė",
+   "pl1": "maudėme",
+   "pl2": "maudėte"
+  },
+  "plainpastA": {
+   "sg1": "máudžiau",
+   "sg2": "máudei",
+   "p3": "máudė",
+   "pl1": "máudėme",
+   "pl2": "máudėte"
+  },
+  "negplainpast": {
+   "sg1": "nemaudžiau",
+   "sg2": "nemaudei",
+   "p3": "nemaudė",
+   "pl1": "nemaudėme",
+   "pl2": "nemaudėte"
+  },
+  "negplainpastA": {
+   "sg1": "nemáudžiau",
+   "sg2": "nemáudei",
+   "p3": "nemáudė",
+   "pl1": "nemáudėme",
+   "pl2": "nemáudėte"
+  },
+  "fut": {
+   "sg1": "maudysiuosi",
+   "sg2": "maudysiesi",
+   "p3": "maudysis",
+   "pl1": "maudysimės",
+   "pl2": "maudysitės"
+  },
+  "futA": {
+   "sg1": "máudysiuosi",
+   "sg2": "máudysiesi",
+   "p3": "máudysis",
+   "pl1": "máudysimės",
+   "pl2": "máudysitės"
+  },
+  "negfut": {
+   "sg1": "nesimaudysiu",
+   "sg2": "nesimaudysi",
+   "p3": "nesimaudys",
+   "pl1": "nesimaudysime",
+   "pl2": "nesimaudysite"
+  },
+  "negfutA": {
+   "sg1": "nesimáudysiu",
+   "sg2": "nesimáudysi",
+   "p3": "nesimáudys",
+   "pl1": "nesimáudysime",
+   "pl2": "nesimáudysite"
+  },
+  "plainfut": {
+   "sg1": "maudysiu",
+   "sg2": "maudysi",
+   "p3": "maudys",
+   "pl1": "maudysime",
+   "pl2": "maudysite"
+  },
+  "plainfutA": {
+   "sg1": "máudysiu",
+   "sg2": "máudysi",
+   "p3": "máudys",
+   "pl1": "máudysime",
+   "pl2": "máudysite"
+  },
+  "negplainfut": {
+   "sg1": "nemaudysiu",
+   "sg2": "nemaudysi",
+   "p3": "nemaudys",
+   "pl1": "nemaudysime",
+   "pl2": "nemaudysite"
+  },
+  "negplainfutA": {
+   "sg1": "nemáudysiu",
+   "sg2": "nemáudysi",
+   "p3": "nemáudys",
+   "pl1": "nemáudysime",
+   "pl2": "nemáudysite"
+  }
+ },
+ {
+  "lemma": "juoktis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "juokiuosi",
+   "sg2": "juokiesi",
+   "p3": "juokiasi",
+   "pl1": "juokiamės",
+   "pl2": "juokiatės"
+  },
+  "presA": {
+   "sg1": "juokiúosi",
+   "sg2": "juokíesi",
+   "p3": "juõkiasi",
+   "pl1": "juõkiamės",
+   "pl2": "juõkiatės"
+  },
+  "negpres": {
+   "sg1": "nesijuokiu",
+   "sg2": "nesijuoki",
+   "p3": "nesijuokia",
+   "pl1": "nesijuokiame",
+   "pl2": "nesijuokiate"
+  },
+  "negpresA": {
+   "sg1": "nesijuokiù",
+   "sg2": "nesijuokì",
+   "p3": "nesijuõkia",
+   "pl1": "nesijuõkiame",
+   "pl2": "nesijuõkiate"
+  },
+  "past": {
+   "sg1": "juokiausi",
+   "sg2": "juokeisi",
+   "p3": "juokėsi",
+   "pl1": "juokėmės",
+   "pl2": "juokėtės"
+  },
+  "pastA": {
+   "sg1": "juokiaũsi",
+   "sg2": "juokeĩsi",
+   "p3": "juõkėsi",
+   "pl1": "juõkėmės",
+   "pl2": "juõkėtės"
+  },
+  "negpast": {
+   "sg1": "nesijuokiau",
+   "sg2": "nesijuokei",
+   "p3": "nesijuokė",
+   "pl1": "nesijuokėme",
+   "pl2": "nesijuokėte"
+  },
+  "negpastA": {
+   "sg1": "nesìjuokiau",
+   "sg2": "nesìjuokei",
+   "p3": "nesìjuokė",
+   "pl1": "nesìjuokėme",
+   "pl2": "nesìjuokėte"
+  },
+  "fut": {
+   "sg1": "juoksiuosi",
+   "sg2": "juoksiesi",
+   "p3": "juoksis",
+   "pl1": "juoksimės",
+   "pl2": "juoksitės"
+  },
+  "futA": {
+   "sg1": "juõksiuosi",
+   "sg2": "juõksiesi",
+   "p3": "juõksis",
+   "pl1": "juõksimės",
+   "pl2": "juõksitės"
+  },
+  "negfut": {
+   "sg1": "nesijuoksiu",
+   "sg2": "nesijuoksi",
+   "p3": "nesijuoks",
+   "pl1": "nesijuoksime",
+   "pl2": "nesijuoksite"
+  },
+  "negfutA": {
+   "sg1": "nesijuõksiu",
+   "sg2": "nesijuõksi",
+   "p3": "nesijuõks",
+   "pl1": "nesijuõksime",
+   "pl2": "nesijuõksite"
+  }
+ },
+ {
+  "lemma": "šypsotis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "šypsausi",
+   "sg2": "šypsaisi",
+   "p3": "šypsosi",
+   "pl1": "šypsomės",
+   "pl2": "šypsotės"
+  },
+  "presA": {
+   "sg1": "šypsaũsi",
+   "sg2": "šypsaĩsi",
+   "p3": "šỹpsosi",
+   "pl1": "šỹpsomės",
+   "pl2": "šỹpsotės"
+  },
+  "negpres": {
+   "sg1": "nesišypsau",
+   "sg2": "nesišypsai",
+   "p3": "nesišypso",
+   "pl1": "nesišypsome",
+   "pl2": "nesišypsote"
+  },
+  "negpresA": {
+   "sg1": "nesišypsaũ",
+   "sg2": "nesišypsaĩ",
+   "p3": "nesišỹpso",
+   "pl1": "nesišỹpsome",
+   "pl2": "nesišỹpsote"
+  },
+  "past": {
+   "sg1": "šypsojausi",
+   "sg2": "šypsojaisi",
+   "p3": "šypsojosi",
+   "pl1": "šypsojomės",
+   "pl2": "šypsojotės"
+  },
+  "pastA": {
+   "sg1": "šypsójausi",
+   "sg2": "šypsójaisi",
+   "p3": "šypsójosi",
+   "pl1": "šypsójomės",
+   "pl2": "šypsójotės"
+  },
+  "negpast": {
+   "sg1": "nesišypsojau",
+   "sg2": "nesišypsojai",
+   "p3": "nesišypsojo",
+   "pl1": "nesišypsojome",
+   "pl2": "nesišypsojote"
+  },
+  "negpastA": {
+   "sg1": "nesišypsójau",
+   "sg2": "nesišypsójai",
+   "p3": "nesišypsójo",
+   "pl1": "nesišypsójome",
+   "pl2": "nesišypsójote"
+  },
+  "fut": {
+   "sg1": "šypsosiuosi",
+   "sg2": "šypsosiesi",
+   "p3": "šypsosis",
+   "pl1": "šypsosimės",
+   "pl2": "šypsositės"
+  },
+  "futA": {
+   "sg1": "šypsósiuosi",
+   "sg2": "šypsósiesi",
+   "p3": "šypsõsis",
+   "pl1": "šypsósimės",
+   "pl2": "šypsósitės"
+  },
+  "negfut": {
+   "sg1": "nesišypsosiu",
+   "sg2": "nesišypsosi",
+   "p3": "nesišypsos",
+   "pl1": "nesišypsosime",
+   "pl2": "nesišypsosite"
+  },
+  "negfutA": {
+   "sg1": "nesišypsósiu",
+   "sg2": "nesišypsósi",
+   "p3": "nesišypsõs",
+   "pl1": "nesišypsósime",
+   "pl2": "nesišypsósite"
+  }
+ },
+ {
+  "lemma": "ilsėtis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "ilsiuosi",
+   "sg2": "ilsiesi",
+   "p3": "ilsisi",
+   "pl1": "ilsimės",
+   "pl2": "ilsitės"
+  },
+  "presA": {
+   "sg1": "ìlsiuosi",
+   "sg2": "ìlsiesi",
+   "p3": "ìlsisi",
+   "pl1": "ìlsimės",
+   "pl2": "ìlsitės"
+  },
+  "negpres": {
+   "sg1": "nesiilsiu",
+   "sg2": "nesiilsi",
+   "p3": "nesiilsi",
+   "pl1": "nesiilsime",
+   "pl2": "nesiilsite"
+  },
+  "negpresA": {
+   "sg1": "nesiìlsiu",
+   "sg2": "nesiìlsi",
+   "p3": "nesiìlsi",
+   "pl1": "nesiìlsime",
+   "pl2": "nesiìlsite"
+  },
+  "past": {
+   "sg1": "ilsėjausi",
+   "sg2": "ilsėjaisi",
+   "p3": "ilsėjosi",
+   "pl1": "ilsėjomės",
+   "pl2": "ilsėjotės"
+  },
+  "pastA": {
+   "sg1": "ilsė́jausi",
+   "sg2": "ilsė́jaisi",
+   "p3": "ilsė́josi",
+   "pl1": "ilsė́jomės",
+   "pl2": "ilsė́jotės"
+  },
+  "negpast": {
+   "sg1": "nesiilsėjau",
+   "sg2": "nesiilsėjai",
+   "p3": "nesiilsėjo",
+   "pl1": "nesiilsėjome",
+   "pl2": "nesiilsėjote"
+  },
+  "negpastA": {
+   "sg1": "nesiilsė́jau",
+   "sg2": "nesiilsė́jai",
+   "p3": "nesiilsė́jo",
+   "pl1": "nesiilsė́jome",
+   "pl2": "nesiilsė́jote"
+  },
+  "fut": {
+   "sg1": "ilsėsiuosi",
+   "sg2": "ilsėsiesi",
+   "p3": "ilsėsis",
+   "pl1": "ilsėsimės",
+   "pl2": "ilsėsitės"
+  },
+  "futA": {
+   "sg1": "ilsė́siuosi",
+   "sg2": "ilsė́siesi",
+   "p3": "ilsė̃sis",
+   "pl1": "ilsė́simės",
+   "pl2": "ilsė́sitės"
+  },
+  "negfut": {
+   "sg1": "nesiilsėsiu",
+   "sg2": "nesiilsėsi",
+   "p3": "nesiilsės",
+   "pl1": "nesiilsėsime",
+   "pl2": "nesiilsėsite"
+  },
+  "negfutA": {
+   "sg1": "nesiilsė́siu",
+   "sg2": "nesiilsė́si",
+   "p3": "nesiilsė̃s",
+   "pl1": "nesiilsė́sime",
+   "pl2": "nesiilsė́site"
+  }
+ },
+ {
+  "lemma": "gailėtis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "gailiuosi",
+   "sg2": "gailiesi",
+   "p3": "gailisi",
+   "pl1": "gailimės",
+   "pl2": "gailitės"
+  },
+  "presA": {
+   "sg1": "gailiúosi",
+   "sg2": "gailíesi",
+   "p3": "gaĩlisi",
+   "pl1": "gaĩlimės",
+   "pl2": "gaĩlitės"
+  },
+  "negpres": {
+   "sg1": "nesigailiu",
+   "sg2": "nesigaili",
+   "p3": "nesigaili",
+   "pl1": "nesigailime",
+   "pl2": "nesigailite"
+  },
+  "negpresA": {
+   "sg1": "nesigailiù",
+   "sg2": "nesigailì",
+   "p3": "nesigaĩli",
+   "pl1": "nesigaĩlime",
+   "pl2": "nesigaĩlite"
+  },
+  "past": {
+   "sg1": "gailėjausi",
+   "sg2": "gailėjaisi",
+   "p3": "gailėjosi",
+   "pl1": "gailėjomės",
+   "pl2": "gailėjotės"
+  },
+  "pastA": {
+   "sg1": "gailė́jausi",
+   "sg2": "gailė́jaisi",
+   "p3": "gailė́josi",
+   "pl1": "gailė́jomės",
+   "pl2": "gailė́jotės"
+  },
+  "negpast": {
+   "sg1": "nesigailėjau",
+   "sg2": "nesigailėjai",
+   "p3": "nesigailėjo",
+   "pl1": "nesigailėjome",
+   "pl2": "nesigailėjote"
+  },
+  "negpastA": {
+   "sg1": "nesigailė́jau",
+   "sg2": "nesigailė́jai",
+   "p3": "nesigailė́jo",
+   "pl1": "nesigailė́jome",
+   "pl2": "nesigailė́jote"
+  },
+  "fut": {
+   "sg1": "gailėsiuosi",
+   "sg2": "gailėsiesi",
+   "p3": "gailėsis",
+   "pl1": "gailėsimės",
+   "pl2": "gailėsitės"
+  },
+  "futA": {
+   "sg1": "gailė́siuosi",
+   "sg2": "gailė́siesi",
+   "p3": "gailė̃sis",
+   "pl1": "gailė́simės",
+   "pl2": "gailė́sitės"
+  },
+  "negfut": {
+   "sg1": "nesigailėsiu",
+   "sg2": "nesigailėsi",
+   "p3": "nesigailės",
+   "pl1": "nesigailėsime",
+   "pl2": "nesigailėsite"
+  },
+  "negfutA": {
+   "sg1": "nesigailė́siu",
+   "sg2": "nesigailė́si",
+   "p3": "nesigailė̃s",
+   "pl1": "nesigailė́sime",
+   "pl2": "nesigailė́site"
+  }
+ },
+ {
+  "lemma": "ruoštis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "ruošiuosi",
+   "sg2": "ruošiesi",
+   "p3": "ruošiasi",
+   "pl1": "ruošiamės",
+   "pl2": "ruošiatės"
+  },
+  "presA": {
+   "sg1": "ruošiúosi",
+   "sg2": "ruošíesi",
+   "p3": "ruõšiasi",
+   "pl1": "ruõšiamės",
+   "pl2": "ruõšiatės"
+  },
+  "negpres": {
+   "sg1": "nesiruošiu",
+   "sg2": "nesiruoši",
+   "p3": "nesiruošia",
+   "pl1": "nesiruošiame",
+   "pl2": "nesiruošiate"
+  },
+  "negpresA": {
+   "sg1": "nesiruošiù",
+   "sg2": "nesiruošì",
+   "p3": "nesiruõšia",
+   "pl1": "nesiruõšiame",
+   "pl2": "nesiruõšiate"
+  },
+  "plainpres": {
+   "sg1": "ruošiu",
+   "sg2": "ruoši",
+   "p3": "ruošia",
+   "pl1": "ruošiame",
+   "pl2": "ruošiate"
+  },
+  "plainpresA": {
+   "sg1": "ruošiù",
+   "sg2": "ruošì",
+   "p3": "ruõšia",
+   "pl1": "ruõšiame",
+   "pl2": "ruõšiate"
+  },
+  "negplainpres": {
+   "sg1": "neruošiu",
+   "sg2": "neruoši",
+   "p3": "neruošia",
+   "pl1": "neruošiame",
+   "pl2": "neruošiate"
+  },
+  "negplainpresA": {
+   "sg1": "neruošiù",
+   "sg2": "neruošì",
+   "p3": "neruõšia",
+   "pl1": "neruõšiame",
+   "pl2": "neruõšiate"
+  },
+  "past": {
+   "sg1": "ruošiausi",
+   "sg2": "ruošeisi",
+   "p3": "ruošėsi",
+   "pl1": "ruošėmės",
+   "pl2": "ruošėtės"
+  },
+  "pastA": {
+   "sg1": "ruošiaũsi",
+   "sg2": "ruošeĩsi",
+   "p3": "ruõšėsi",
+   "pl1": "ruõšėmės",
+   "pl2": "ruõšėtės"
+  },
+  "negpast": {
+   "sg1": "nesiruošiau",
+   "sg2": "nesiruošei",
+   "p3": "nesiruošė",
+   "pl1": "nesiruošėme",
+   "pl2": "nesiruošėte"
+  },
+  "negpastA": {
+   "sg1": "nesìruošiau",
+   "sg2": "nesìruošei",
+   "p3": "nesìruošė",
+   "pl1": "nesìruošėme",
+   "pl2": "nesìruošėte"
+  },
+  "plainpast": {
+   "sg1": "ruošiau",
+   "sg2": "ruošei",
+   "p3": "ruošė",
+   "pl1": "ruošėme",
+   "pl2": "ruošėte"
+  },
+  "plainpastA": {
+   "sg1": "ruošiaũ",
+   "sg2": "ruošeĩ",
+   "p3": "ruõšė",
+   "pl1": "ruõšėme",
+   "pl2": "ruõšėte"
+  },
+  "negplainpast": {
+   "sg1": "neruošiau",
+   "sg2": "neruošei",
+   "p3": "neruošė",
+   "pl1": "neruošėme",
+   "pl2": "neruošėte"
+  },
+  "negplainpastA": {
+   "sg1": "nèruošiau",
+   "sg2": "nèruošei",
+   "p3": "nèruošė",
+   "pl1": "nèruošėme",
+   "pl2": "nèruošėte"
+  },
+  "fut": {
+   "sg1": "ruošiuosi",
+   "sg2": "ruošiesi",
+   "p3": "ruošis",
+   "pl1": "ruošimės",
+   "pl2": "ruošitės"
+  },
+  "futA": {
+   "sg1": "ruõšiuosi",
+   "sg2": "ruõšiesi",
+   "p3": "ruõšis",
+   "pl1": "ruõšimės",
+   "pl2": "ruõšitės"
+  },
+  "negfut": {
+   "sg1": "nesiruošiu",
+   "sg2": "nesiruoši",
+   "p3": "nesiruoš",
+   "pl1": "nesiruošime",
+   "pl2": "nesiruošite"
+  },
+  "negfutA": {
+   "sg1": "nesiruõšiu",
+   "sg2": "nesiruõši",
+   "p3": "nesiruõš",
+   "pl1": "nesiruõšime",
+   "pl2": "nesiruõšite"
+  },
+  "plainfut": {
+   "sg1": "ruošiu",
+   "sg2": "ruoši",
+   "p3": "ruoš",
+   "pl1": "ruošime",
+   "pl2": "ruošite"
+  },
+  "plainfutA": {
+   "sg1": "ruõšiu",
+   "sg2": "ruõši",
+   "p3": "ruõš",
+   "pl1": "ruõšime",
+   "pl2": "ruõšite"
+  },
+  "negplainfut": {
+   "sg1": "neruošiu",
+   "sg2": "neruoši",
+   "p3": "neruoš",
+   "pl1": "neruošime",
+   "pl2": "neruošite"
+  },
+  "negplainfutA": {
+   "sg1": "neruõšiu",
+   "sg2": "neruõši",
+   "p3": "neruõš",
+   "pl1": "neruõšime",
+   "pl2": "neruõšite"
+  }
+ },
+ {
+  "lemma": "skustis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "skutuosi",
+   "sg2": "skutiesi",
+   "p3": "skutasi",
+   "pl1": "skutamės",
+   "pl2": "skutatės"
+  },
+  "presA": {
+   "sg1": "skutúosi",
+   "sg2": "skutíesi",
+   "p3": "skùtasi",
+   "pl1": "skùtamės",
+   "pl2": "skùtatės"
+  },
+  "negpres": {
+   "sg1": "nesiskutu",
+   "sg2": "nesiskuti",
+   "p3": "nesiskuta",
+   "pl1": "nesiskutame",
+   "pl2": "nesiskutate"
+  },
+  "negpresA": {
+   "sg1": "nesìskutu",
+   "sg2": "nesìskuti",
+   "p3": "nesìskuta",
+   "pl1": "nesìskutame",
+   "pl2": "nesìskutate"
+  },
+  "plainpres": {
+   "sg1": "skutu",
+   "sg2": "skuti",
+   "p3": "skuta",
+   "pl1": "skutame",
+   "pl2": "skutate"
+  },
+  "plainpresA": {
+   "sg1": "skutù",
+   "sg2": "skutì",
+   "p3": "skùta",
+   "pl1": "skùtame",
+   "pl2": "skùtate"
+  },
+  "negplainpres": {
+   "sg1": "neskutu",
+   "sg2": "neskuti",
+   "p3": "neskuta",
+   "pl1": "neskutame",
+   "pl2": "neskutate"
+  },
+  "negplainpresA": {
+   "sg1": "nèskutu",
+   "sg2": "nèskuti",
+   "p3": "nèskuta",
+   "pl1": "nèskutame",
+   "pl2": "nèskutate"
+  },
+  "past": {
+   "sg1": "skutausi",
+   "sg2": "skutaisi",
+   "p3": "skutosi",
+   "pl1": "skutomės",
+   "pl2": "skutotės"
+  },
+  "pastA": {
+   "sg1": "skutaũsi",
+   "sg2": "skutaĩsi",
+   "p3": "skùtosi",
+   "pl1": "skùtomės",
+   "pl2": "skùtotės"
+  },
+  "negpast": {
+   "sg1": "nesiskutau",
+   "sg2": "nesiskutai",
+   "p3": "nesiskuto",
+   "pl1": "nesiskutome",
+   "pl2": "nesiskutote"
+  },
+  "negpastA": {
+   "sg1": "nesiskutaũ",
+   "sg2": "nesiskutaĩ",
+   "p3": "nesiskùto",
+   "pl1": "nesiskùtome",
+   "pl2": "nesiskùtote"
+  },
+  "plainpast": {
+   "sg1": "skutau",
+   "sg2": "skutai",
+   "p3": "skuto",
+   "pl1": "skutome",
+   "pl2": "skutote"
+  },
+  "plainpastA": {
+   "sg1": "skutaũ",
+   "sg2": "skutaĩ",
+   "p3": "skùto",
+   "pl1": "skùtome",
+   "pl2": "skùtote"
+  },
+  "negplainpast": {
+   "sg1": "neskutau",
+   "sg2": "neskutai",
+   "p3": "neskuto",
+   "pl1": "neskutome",
+   "pl2": "neskutote"
+  },
+  "negplainpastA": {
+   "sg1": "neskutaũ",
+   "sg2": "neskutaĩ",
+   "p3": "neskùto",
+   "pl1": "neskùtome",
+   "pl2": "neskùtote"
+  },
+  "fut": {
+   "sg1": "skusiuosi",
+   "sg2": "skusiesi",
+   "p3": "skusis",
+   "pl1": "skusimės",
+   "pl2": "skusitės"
+  },
+  "futA": {
+   "sg1": "skùsiuosi",
+   "sg2": "skùsiesi",
+   "p3": "skùsis",
+   "pl1": "skùsimės",
+   "pl2": "skùsitės"
+  },
+  "negfut": {
+   "sg1": "nesiskusiu",
+   "sg2": "nesiskusi",
+   "p3": "nesiskus",
+   "pl1": "nesiskusime",
+   "pl2": "nesiskusite"
+  },
+  "negfutA": {
+   "sg1": "nesiskùsiu",
+   "sg2": "nesiskùsi",
+   "p3": "nesiskùs",
+   "pl1": "nesiskùsime",
+   "pl2": "nesiskùsite"
+  },
+  "plainfut": {
+   "sg1": "skusiu",
+   "sg2": "skusi",
+   "p3": "skus",
+   "pl1": "skusime",
+   "pl2": "skusite"
+  },
+  "plainfutA": {
+   "sg1": "skùsiu",
+   "sg2": "skùsi",
+   "p3": "skùs",
+   "pl1": "skùsime",
+   "pl2": "skùsite"
+  },
+  "negplainfut": {
+   "sg1": "neskusiu",
+   "sg2": "neskusi",
+   "p3": "neskus",
+   "pl1": "neskusime",
+   "pl2": "neskusite"
+  },
+  "negplainfutA": {
+   "sg1": "neskùsiu",
+   "sg2": "neskùsi",
+   "p3": "neskùs",
+   "pl1": "neskùsime",
+   "pl2": "neskùsite"
+  }
+ },
+ {
+  "lemma": "gultis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "guluosi",
+   "sg2": "guliesi",
+   "p3": "gulasi",
+   "pl1": "gulamės",
+   "pl2": "gulatės"
+  },
+  "presA": {
+   "sg1": "gulúosi",
+   "sg2": "gulíesi",
+   "p3": "gùlasi",
+   "pl1": "gùlamės",
+   "pl2": "gùlatės"
+  },
+  "negpres": {
+   "sg1": "nesigulu",
+   "sg2": "nesiguli",
+   "p3": "nesigula",
+   "pl1": "nesigulame",
+   "pl2": "nesigulate"
+  },
+  "negpresA": {
+   "sg1": "nesìgulu",
+   "sg2": "nesìguli",
+   "p3": "nesìgula",
+   "pl1": "nesìgulame",
+   "pl2": "nesìgulate"
+  },
+  "past": {
+   "sg1": "guliausi",
+   "sg2": "guleisi",
+   "p3": "gulėsi",
+   "pl1": "gulėmės",
+   "pl2": "gulėtės"
+  },
+  "pastA": {
+   "sg1": "guliaũsi",
+   "sg2": "guleĩsi",
+   "p3": "gùlėsi",
+   "pl1": "gùlėmės",
+   "pl2": "gùlėtės"
+  },
+  "negpast": {
+   "sg1": "nesiguliau",
+   "sg2": "nesigulei",
+   "p3": "nesigulė",
+   "pl1": "nesigulėme",
+   "pl2": "nesigulėte"
+  },
+  "negpastA": {
+   "sg1": "nesìguliau",
+   "sg2": "nesìgulei",
+   "p3": "nesìgulė",
+   "pl1": "nesìgulėme",
+   "pl2": "nesìgulėte"
+  },
+  "fut": {
+   "sg1": "gulsiuosi",
+   "sg2": "gulsiesi",
+   "p3": "gulsis",
+   "pl1": "gulsimės",
+   "pl2": "gulsitės"
+  },
+  "futA": {
+   "sg1": "gul̃siuosi",
+   "sg2": "gul̃siesi",
+   "p3": "gul̃sis",
+   "pl1": "gul̃simės",
+   "pl2": "gul̃sitės"
+  },
+  "negfut": {
+   "sg1": "nesigulsiu",
+   "sg2": "nesigulsi",
+   "p3": "nesiguls",
+   "pl1": "nesigulsime",
+   "pl2": "nesigulsite"
+  },
+  "negfutA": {
+   "sg1": "nesigul̃siu",
+   "sg2": "nesigul̃si",
+   "p3": "nesigul̃s",
+   "pl1": "nesigul̃sime",
+   "pl2": "nesigul̃site"
+  }
+ },
+ {
+  "lemma": "sveikintis",
+  "found": true,
+  "source": "vdu",
+  "pres": {
+   "sg1": "sveikinuosi",
+   "sg2": "sveikiniesi",
+   "p3": "sveikinasi",
+   "pl1": "sveikinamės",
+   "pl2": "sveikinatės"
+  },
+  "presA": {
+   "sg1": "svéikinuosi",
+   "sg2": "svéikiniesi",
+   "p3": "svéikinasi",
+   "pl1": "svéikinamės",
+   "pl2": "svéikinatės"
+  },
+  "negpres": {
+   "sg1": "nesisveikinu",
+   "sg2": "nesisveikini",
+   "p3": "nesisveikina",
+   "pl1": "nesisveikiname",
+   "pl2": "nesisveikinate"
+  },
+  "negpresA": {
+   "sg1": "nesisvéikinu",
+   "sg2": "nesisvéikini",
+   "p3": "nesisvéikina",
+   "pl1": "nesisvéikiname",
+   "pl2": "nesisvéikinate"
+  },
+  "past": {
+   "sg1": "sveikinausi",
+   "sg2": "sveikinaisi",
+   "p3": "sveikinosi",
+   "pl1": "sveikinomės",
+   "pl2": "sveikinotės"
+  },
+  "pastA": {
+   "sg1": "svéikinausi",
+   "sg2": "svéikinaisi",
+   "p3": "svéikinosi",
+   "pl1": "svéikinomės",
+   "pl2": "svéikinotės"
+  },
+  "negpast": {
+   "sg1": "nesisveikinau",
+   "sg2": "nesisveikinai",
+   "p3": "nesisveikino",
+   "pl1": "nesisveikinome",
+   "pl2": "nesisveikinote"
+  },
+  "negpastA": {
+   "sg1": "nesisvéikinau",
+   "sg2": "nesisvéikinai",
+   "p3": "nesisvéikino",
+   "pl1": "nesisvéikinome",
+   "pl2": "nesisvéikinote"
+  },
+  "fut": {
+   "sg1": "sveikinsiuosi",
+   "sg2": "sveikinsiesi",
+   "p3": "sveikinsis",
+   "pl1": "sveikinsimės",
+   "pl2": "sveikinsitės"
+  },
+  "futA": {
+   "sg1": "svéikinsiuosi",
+   "sg2": "svéikinsiesi",
+   "p3": "svéikinsis",
+   "pl1": "svéikinsimės",
+   "pl2": "svéikinsitės"
+  },
+  "negfut": {
+   "sg1": "nesisveikinsiu",
+   "sg2": "nesisveikinsi",
+   "p3": "nesisveikins",
+   "pl1": "nesisveikinsime",
+   "pl2": "nesisveikinsite"
+  },
+  "negfutA": {
+   "sg1": "nesisvéikinsiu",
+   "sg2": "nesisvéikinsi",
+   "p3": "nesisvéikins",
+   "pl1": "nesisvéikinsime",
+   "pl2": "nesisvéikinsite"
+  }
+ }
+]
