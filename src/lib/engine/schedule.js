@@ -14,12 +14,10 @@ function dayNum(key) {
   return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
 }
 
-export function pickForDay(key, pool, count) {
-  const first = dayNum(DAY0);
-  const today = Math.max(first, dayNum(key));
+function simulate(last, pool, count) {
   const shown = new Map();
   let picked = [];
-  for (let d = first; d <= today; d++) {
+  for (let d = dayNum(DAY0); d <= last; d++) {
     const ranked = pool
       .filter((p) => (!p.since || dayNum(p.since) <= d) && (!p.until || dayNum(p.until) > d))
       .map((p) => ({ p, last: shown.has(p.id) ? shown.get(p.id) : -1, tie: hash(p.id + '|' + d) }))
@@ -38,5 +36,13 @@ export function pickForDay(key, pool, count) {
     picked = spread.concat(rest).slice(0, count).map((x) => x.p);
     for (const p of picked) shown.set(p.id, d);
   }
-  return picked;
+  return { picked, shown };
+}
+
+export function pickForDay(key, pool, count) {
+  return simulate(Math.max(dayNum(DAY0), dayNum(key)), pool, count).picked;
+}
+
+export function shownBefore(key, pool, count) {
+  return new Set(simulate(dayNum(key) - 1, pool, count).shown.keys());
 }

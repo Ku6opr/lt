@@ -6,13 +6,17 @@
   import { masteryOf } from '../stores/mastery.js';
   import DailyTask from './DailyTask.svelte';
   import { pictureStore, dayKey } from '../stores/daily.js';
+  import { vocab, dueCount } from '../stores/vocab.js';
   export let onEnter;
   export let onDaily;
   export let onAd;
   export let onPicture;
+  export let onVocab;
 
   const pictures = pictureStore.state;
   $: pictureDone = !!$pictures.days[dayKey(new Date())];
+  $: vocabSize = Object.keys($vocab.words).length;
+  $: vocabDue = dueCount($vocab.words, dayKey(new Date()));
 
   $: L = UI[$lang];
   $: pctOf = (id) => Math.round(masteryOf($progress, id).pct * 100);
@@ -46,6 +50,12 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 17-5-5-9 8"></path></svg>
         {L.picButton}{#if pictureDone}<span class="pic-ok" title={L.picDone}>✓</span>{/if}
       </button>
+      {#if vocabSize}
+        <button class="btn btn-secondary vocab-btn" type="button" on:click={onVocab}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6.5a2.5 2.5 0 0 0 0 5H20"></path></svg>
+          {L.vocabButton}{#if vocabDue}<span class="vocab-due">{vocabDue}</span>{/if}
+        </button>
+      {/if}
     </div>
     <div class="langsel" role="group" aria-label={L.language}>
       {#each LANGS as lg}
@@ -107,11 +117,14 @@
   .ad-btn { gap: 8px; border-color: var(--color-accent); color: var(--color-accent-700); }
   .pic-btn { gap: 8px; border-color: var(--color-accent); color: var(--color-accent-700); }
   .pic-ok { color: #4a9d5b; margin-left: 2px; }
+  .vocab-btn { gap: 8px; border-color: var(--color-accent); color: var(--color-accent-700); }
+  .vocab-due { min-width: 20px; height: 20px; padding: 0 6px; box-sizing: border-box; border-radius: 999px; background: var(--color-accent); color: #fff; font-size: 12px; line-height: 20px; text-align: center; }
 
   @container (max-width: 599px) {
     .hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'kicker lang' 'title title' 'actions actions' 'daily daily'; row-gap: 14px; }
     .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .actions .btn { min-height: 44px; }
+    .actions .vocab-btn { grid-column: 1 / -1; }
     .daily-slot { justify-self: stretch; margin-left: 0; }
   }
 

@@ -2,11 +2,12 @@
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
   import { simplifyAccent } from '../engine/stem.js';
-  import { saveVocab } from '../stores/vocab.js';
+  import { vocab, saveVocab, dueCount } from '../stores/vocab.js';
 
   export let words;
   export let date;
   export let onBack;
+  export let onReview = null;
 
   let off = {};
   let saved = false;
@@ -15,6 +16,7 @@
   $: pl = (forms, n) => forms[new Intl.PluralRules($lang).select(n)] || forms.other;
   $: picked = words.filter((w) => !off[w.ref]);
   $: all = picked.length === words.length;
+  $: due = onReview ? dueCount($vocab.words, date) : 0;
   $: fill = (s, n, forms = L.wordsPl) => s.replace('{n}', n).replace('{words}', pl(forms, n));
 
   const shown = (w) => simplifyAccent(w.lemmaA || w.lemma);
@@ -22,7 +24,7 @@
   const toggleAll = () => (off = all ? Object.fromEntries(words.map((w) => [w.ref, true])) : {});
 
   function save() {
-    saveVocab(words.map((w) => w.ref), picked.map((w) => w.ref), date);
+    saveVocab(words.map((w) => w.ref), picked, date);
     saved = true;
   }
 </script>
@@ -66,7 +68,8 @@
       <div class="saved-title">{fill(L.savedWords, picked.length)}</div>
       <div class="saved-actions">
         <button class="btn btn-ghost" type="button" on:click={() => (saved = false)}>{L.changePick}</button>
-        <button class="btn btn-primary" type="button" on:click={onBack}>{L.back}</button>
+        <button class="btn" class:btn-primary={!due} class:btn-ghost={due} type="button" on:click={onBack}>{L.back}</button>
+        {#if due}<button class="btn btn-primary" type="button" on:click={onReview}>{fill(L.reviewStart, due)}</button>{/if}
       </div>
     </div>
   {/if}

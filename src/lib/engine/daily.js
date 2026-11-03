@@ -221,7 +221,7 @@ export function hintedWords(entries, known = {}, byId = BY_ID) {
     const t = byId.get(phrase)?.tokens[k];
     if (!t || t.ref !== ref || seen.has(ref) || known[ref]) return [];
     seen.add(ref);
-    return [{ ref, lemma: t.lemma, lemmaA: t.lemmaA, gloss: glossOf(ref) }];
+    return [{ ref, phrase, k, lemma: t.lemma, lemmaA: t.lemmaA, gloss: glossOf(ref) }];
   });
 }
 
@@ -312,7 +312,7 @@ function lexemeForms(kind, id) {
 
 const FORMS = new Map();
 
-function formsOf(t) {
+export function formsOf(t) {
   if (!FORMS.has(t.ref)) {
     const cut = t.ref.indexOf(':');
     FORMS.set(t.ref, new Set(lexemeForms(t.ref.slice(0, cut), t.ref.slice(cut + 1)).filter(Boolean).map(fold)));

@@ -16,6 +16,7 @@
   const today = dayKey(new Date());
 
   export let onBack;
+  export let onReview = null;
   export let tasks = dailyTasks(today);
   export let store = dailyStore;
   export let byId = undefined;
@@ -149,7 +150,7 @@
 </script>
 
 {#if words}
-  <DailyWords {words} date={today} {onBack} />
+  <DailyWords {words} date={today} {onBack} {onReview} />
 {:else}
 <div class="lt-wrap" class:wide={$$slots.media}>
   <div class="head">

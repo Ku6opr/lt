@@ -6,6 +6,7 @@
   import DailyScreen from './DailyScreen.svelte';
 
   export let onBack;
+  export let onReview = null;
 
   const pic = pictureOfDay(dayKey(new Date()));
   const touch = typeof matchMedia === 'function' && matchMedia('(pointer: coarse)').matches;
@@ -16,6 +17,7 @@
 {#if pic}
   <DailyScreen
     {onBack}
+    {onReview}
     tasks={pic.phrases}
     store={pictureStore}
     byId={PICTURE_PHRASES}
