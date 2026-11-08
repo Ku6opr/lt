@@ -217,7 +217,7 @@
   .lexeme .tr { color: var(--color-neutral-700); }
   .big { font-family: var(--font-heading); font-size: clamp(26px, 4.6cqw, 36px); line-height: 1.15; margin-top: 8px; }
   .gap.missed, .big.missed { text-decoration: underline dotted var(--color-accent-500); text-decoration-thickness: 2px; text-underline-offset: 6px; }
-  .typo { text-decoration: underline var(--color-accent-600); text-decoration-thickness: 3px; text-underline-offset: 5px; }
+  .typo { text-decoration: underline dotted var(--color-accent-500); text-decoration-thickness: 2px; text-underline-offset: 6px; }
   .note { font-size: 13px; margin-top: 6px; }
   .example { font-family: var(--font-heading); font-size: 18px; line-height: 1.4; margin-top: var(--space-3); text-wrap: balance; }
   .example b { font-weight: 600; color: var(--color-accent-700); }

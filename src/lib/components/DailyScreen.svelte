@@ -4,7 +4,7 @@
   import { lang } from '../stores/lang.js';
   import { UI } from '../i18n/ui.js';
   import { dailyStore, dayKey } from '../stores/daily.js';
-  import { dailyTasks, checkAnswer, hintedWords, nextHint } from '../engine/daily.js';
+  import { dailyTasks, checkAnswer, hintedWords, nextHint, sourceWords } from '../engine/daily.js';
   import { vocab } from '../stores/vocab.js';
   import { simplifyAccent } from '../engine/stem.js';
   import { fold } from '../stores/progress.js';
@@ -48,6 +48,7 @@
   $: finished = i >= total;
   $: hintAt = task && !revealed ? nextHint(input, task, hinted) : -1;
   $: hintLabel = hinted.length ? L.dailyHintMore : L.dailyHint;
+  $: src = task ? sourceWords(task, $lang) : [];
   $: fresh = finished ? hintedWords(($daily.hinted || []).filter((h) => h.date === today), get(vocab).words, byId) : [];
   $: guessed = results.reduce((n, r) => n + (r || 0), 0);
   $: points = totalWords ? Math.round((guessed / totalWords) * 100) : 0;
@@ -99,12 +100,28 @@
   });
   onDestroy(() => viewport && viewport.removeEventListener('resize', onViewport));
 
+  function give(k) {
+    addHinted({ ref: task.tokens[k].ref, phrase: task.id, k, date: today });
+    hinted = [...hinted, k];
+    saveSession(today, results.slice(), hinted);
+  }
+
   function hint() {
     if (hintAt < 0) return;
-    addHinted({ ref: task.tokens[hintAt].ref, phrase: task.id, k: hintAt, date: today });
-    hinted = [...hinted, hintAt];
-    saveSession(today, results.slice(), hinted);
+    give(hintAt);
     focusInput();
+  }
+
+  function pick(k) {
+    if (revealed || hinted.includes(k)) return;
+    give(k);
+    if (!touch || document.activeElement === inputEl) focusInput();
+  }
+
+  function onWordKey(e, k) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    pick(k);
   }
 
   function primary() {
@@ -178,7 +195,7 @@
   {#if task}
     <div class="card" bind:this={cardEl}>
       {#if hintAt >= 0}<HintButton label={hintLabel} onClick={hint} />{/if}
-      <div class="source">{task[$lang]}</div>
+      <div class="source">{#each src as c}{c.lead}{#if c.k != null && !revealed}<span class="w" class:on={hinted.includes(c.k)} role="button" tabindex="0" on:mousedown|preventDefault on:click={() => pick(c.k)} on:keydown={(e) => onWordKey(e, c.k)}>{c.core}</span>{:else}{c.core}{/if}{c.trail}{c.space}{/each}</div>
 
       {#if hinted.length}
         <div class="hint">
@@ -268,6 +285,16 @@
 
   .source { font-family: var(--font-heading); font-size: clamp(26px, 5cqw, 40px); line-height: 1.15; text-align: center; text-wrap: balance; padding-inline: 40px; }
 
+  .w {
+    cursor: pointer; border-radius: 6px; -webkit-tap-highlight-color: transparent;
+    text-decoration: underline dotted var(--color-neutral-300); text-decoration-thickness: 2px; text-underline-offset: 0.16em;
+    transition: background .15s, color .15s;
+  }
+  .w:hover { background: var(--color-accent-100); }
+  .w:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .w.on { color: var(--color-accent-700); text-decoration-color: var(--color-accent-300); cursor: default; }
+  .w.on:hover { background: transparent; }
+
   .hint { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: var(--space-3) 0 0; }
   .answer-row { margin-top: var(--space-4); }
   .lemma {
@@ -289,7 +316,7 @@
   .tok { display: inline-flex; flex-direction: column; align-items: center; }
   .form { font-family: var(--font-heading); font-size: clamp(24px, 4.4cqw, 34px); line-height: 1.1; }
   .form.missed { text-decoration: underline dotted var(--color-accent-500); text-decoration-thickness: 2px; text-underline-offset: 6px; }
-  .typo { text-decoration: underline var(--color-accent-600); text-decoration-thickness: 3px; text-underline-offset: 5px; }
+  .typo { text-decoration: underline dotted var(--color-accent-500); text-decoration-thickness: 2px; text-underline-offset: 6px; }
   .lem { font-family: var(--font-heading); font-size: 14px; line-height: 18px; min-height: 18px; color: var(--color-neutral-600); margin-top: 4px; }
   .tag { font-size: 10.5px; line-height: 14px; min-height: 14px; letter-spacing: .02em; color: var(--color-accent-700); }
 

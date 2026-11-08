@@ -215,6 +215,180 @@ for (const ref of new Set(DAILY_POOL.flatMap((p) => p.tokens.map((t) => t.ref)))
 
 const BY_ID = new Map(DAILY_POOL.map((p) => [p.id, p]));
 
+const EUPHONY = { uk: { у: ['в'], в: ['у'], і: ['й'], й: ['і'], з: ['із', 'зі'] }, ru: { в: ['во'], с: ['со'], к: ['ко'], о: ['об'] }, en: {} };
+const nat = (s) => s.toLowerCase().normalize('NFC').replace(/[̀́]/g, '').replace(/ё/g, 'е').replace(/[’ʼ`]/g, "'");
+const strings = (x) => (x == null ? [] : typeof x === 'string' ? [x] : Object.values(x).flatMap(strings));
+
+function phrasesOf(s, L) {
+  return s
+    .replace(/\([^)]*\)/g, '')
+    .split(/[,;/]/)
+    .map((x) => nat(L === 'en' ? x.trim().replace(/^to\s+/, '') : x).trim())
+    .filter(Boolean)
+    .map((x) => x.split(/\s+/));
+}
+
+const PATTERNS = new Map();
+
+function nativePatterns(ref, L) {
+  const key = ref + '|' + L;
+  if (PATTERNS.has(key)) return PATTERNS.get(key);
+  const cut = ref.indexOf(':');
+  const kind = ref.slice(0, cut);
+  const id = ref.slice(cut + 1);
+  const lemmas = [];
+  const words = [];
+  const forms = [];
+  const g = glossOf(ref);
+  if (g) lemmas.push(g[L]);
+  if (kind === 'n') {
+    const w = WORDS.find((x) => x.id === id);
+    if (w) {
+      lemmas.push(w[L], w[L + 'Pl']);
+      forms.push(w[L + 'Forms'], w[L + 'PlForms']);
+    }
+  }
+  if (kind === 'a') {
+    const a = ADJECTIVES.find((x) => x.id === id);
+    if (a) lemmas.push(a[L], a[L + 'M'], a[L + 'F'], a[L + 'N'], a[L + 'Pl']);
+  }
+  if (kind === 'v') {
+    const v = VERBS.find((x) => (x.id || x.inf) === id);
+    if (v) {
+      lemmas.push(v[L]);
+      words.push(v.g?.[L], v.gp?.[L]);
+    }
+  }
+  if (kind === 'prep') lemmas.push(PREPS[id]?.[L]);
+  if (kind === 'pr') forms.push(PRONOUNS.find((x) => x.id === id)?.[L]);
+  if (kind === 'd') forms.push(DEM_PRONOUNS.find((x) => x.id === id)?.[L]);
+  if (kind === 'num') forms.push(NUMERALS.find((x) => x.id === id)?.[L]);
+  const heads = strings(lemmas).flatMap((s) => phrasesOf(s, L));
+  const pats = [
+    ...heads,
+    ...strings(words).flatMap((s) => phrasesOf(s, L)),
+    ...strings(forms).flatMap((s) => phrasesOf(s, L).map((p) => p.slice(-1)))
+  ];
+  for (const p of [...pats]) if (p.length === 1) for (const e of EUPHONY[L][p[0]] || []) pats.push([e]);
+  const stems = new Map();
+  if (STEMMED[L].includes(kind)) for (const p of heads) if (p.length === 1) for (const [x, score] of stemsOf(p[0], kind, L)) stems.set(x, Math.max(score, stems.get(x) || 0));
+  const out = { exact: [...new Map(pats.map((p) => [p.join(' '), p])).values()], stems: [...stems] };
+  PATTERNS.set(key, out);
+  return out;
+}
+
+const STEMMED = { uk: ['n', 'a', 'v'], ru: ['n', 'a', 'v'], en: ['n', 'v'] };
+
+const MUTATION = {
+  uk: [['ст', ['щ']], ['к', ['ч', 'ц']], ['г', ['ж', 'з']], ['х', ['ш', 'с']], ['т', ['ч']], ['д', ['дж']], ['с', ['ш']], ['з', ['ж']], ['ц', ['ч']]],
+  ru: [['ст', ['щ']], ['ск', ['щ']], ['к', ['ч']], ['г', ['ж']], ['х', ['ш']], ['т', ['ч', 'щ']], ['д', ['ж']], ['с', ['ш']], ['з', ['ж']], ['ц', ['ч']]]
+};
+const VOWEL_ALT = { uk: { і: ['о', 'е', ''], о: [''], е: [''] }, ru: { о: [''], е: [''] } };
+
+function stemsOf(base, kind, L) {
+  if (L === 'en') return base.length >= 3 ? [[base, base.length]] : [];
+  const s = (kind === 'v' ? base.replace(/(ся|сь)$/, '').replace(/(ти|ть|чь)$/, '') : base).replace(/(?:[аеєиіїоуюяыэ]й|[аеєиіїоуюяыэь])$/, '');
+  const alt = [];
+  for (const [a, bs] of MUTATION[L]) if (s.endsWith(a)) alt.push(...bs.map((b) => s.slice(0, -a.length) + b));
+  const m = s.match(/^(.*[^аеєиіїоуюяыэ])([аеєиіїоуюяыэ])([^аеєиіїоуюяыэ]+)$/);
+  if (m) alt.push(...(VOWEL_ALT[L][m[2]] || []).map((v) => m[1] + v + m[3]));
+  return [[s, s.length], ...alt.map((x) => [x, x.length - 0.5])].filter(([x]) => x.length >= 3);
+}
+
+function inflected(w, stem, kind, L) {
+  if (L !== 'en') return w.startsWith(stem) && w.length - stem.length <= 6;
+  const y = stem.endsWith('y') ? stem.slice(0, -1) : null;
+  const plural = [stem + 's', stem + 'es', ...(y ? [y + 'ies'] : [])];
+  if (kind === 'n') return plural.includes(w);
+  const e = stem.endsWith('e') ? stem.slice(0, -1) : stem;
+  const d = stem + stem.slice(-1);
+  return [...plural, stem + 'd', stem + 'ed', stem + 'ing', e + 'ing', d + 'ing', d + 'ed', ...(y ? [y + 'ied'] : [])].includes(w);
+}
+
+function linkWords(phrase, L) {
+  const parts = phrase[L].split(/(\s+)/);
+  const chunks = [];
+  for (let i = 0; i < parts.length; i += 2) {
+    const [, lead, core, trail] = parts[i].match(/^([^\p{L}\p{N}]*)(.*?)([^\p{L}\p{N}]*)$/su);
+    chunks.push({ lead, core, trail, space: parts[i + 1] || '', k: null });
+  }
+  const words = chunks.filter((c) => c.core);
+  const keys = words.map((c) => nat(c.core));
+  const found = new Map();
+  phrase.tokens.forEach((t, k) => {
+    for (const p of nativePatterns(t.ref, L).exact) {
+      for (let i = 0; i + p.length <= keys.length; i++) {
+        if (!p.every((w, j) => keys[i + j] === w)) continue;
+        const at = i + ':' + p.length;
+        if (!found.has(at)) found.set(at, { i, n: p.length, refs: new Set() });
+        found.get(at).refs.add(t.ref);
+      }
+    }
+  });
+  const covered = new Set([...found.values()].flatMap((o) => keys.slice(o.i, o.i + o.n).map((_, j) => o.i + j)));
+  const linked = new Set([...found.values()].flatMap((o) => [...o.refs]));
+  keys.forEach((w, i) => {
+    if (covered.has(i)) return;
+    let best = 0;
+    let refs = new Set();
+    for (const t of phrase.tokens) {
+      if (linked.has(t.ref)) continue;
+      for (const [s, score] of nativePatterns(t.ref, L).stems) {
+        if (!inflected(w, s, t.kind, L) || score < best) continue;
+        if (score > best) {
+          best = score;
+          refs = new Set();
+        }
+        refs.add(t.ref);
+      }
+    }
+    if (refs.size) found.set(i + ':1', { i, n: 1, refs });
+  });
+  const owner = keys.map(() => null);
+  for (const o of found.values()) if (o.n === 1) owner[o.i] = { ...o, at: [o.i] };
+  for (const o of [...found.values()].filter((o) => o.n > 1).sort((a, b) => b.n - a.n)) {
+    const own = { ...o, at: [] };
+    for (let x = o.i; x < o.i + o.n; x++) {
+      const t = owner[x];
+      if (t && t.n > 1) t.bad = own.bad = true;
+      if (!t || (t.n === 1 && [...t.refs].some((r) => o.refs.has(r)))) own.at.push(x);
+    }
+    for (const x of own.at) owner[x] = own;
+  }
+  const byRef = new Map();
+  for (const o of new Set(owner)) {
+    if (!o || o.bad || o.refs.size !== 1) continue;
+    const ref = [...o.refs][0];
+    if (!byRef.has(ref)) byRef.set(ref, []);
+    byRef.get(ref).push(o);
+  }
+  for (const [ref, occ] of byRef) {
+    const toks = phrase.tokens.map((t, k) => (t.ref === ref ? k : -1)).filter((k) => k >= 0);
+    if (occ.length > toks.length) continue;
+    occ.sort((a, b) => a.at[0] - b.at[0]).forEach((o, j) => {
+      for (const x of o.at) words[x].k = toks[j];
+    });
+  }
+  words.forEach((w, x) => {
+    const t = w.k != null && phrase.tokens[w.k];
+    if (!t || t.kind !== 'prep') return;
+    const head = phrase.tokens.findIndex((h, j) => j > w.k && (h.kind === 'n' || h.kind === 'pr'));
+    let y = x + 1;
+    while (y < words.length && words[y].k === w.k) y++;
+    if (!words.slice(y, y + 4).some((v) => v.k === head)) w.k = null;
+  });
+  return chunks;
+}
+
+const LINKS = new WeakMap();
+
+export function sourceWords(phrase, L) {
+  if (!LINKS.has(phrase)) LINKS.set(phrase, {});
+  const cache = LINKS.get(phrase);
+  if (!cache[L]) cache[L] = linkWords(phrase, L);
+  return cache[L];
+}
+
 export function hintedWords(entries, known = {}, byId = BY_ID) {
   const seen = new Set();
   return entries.flatMap(({ ref, phrase, k }) => {
